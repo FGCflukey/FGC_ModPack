@@ -1,0 +1,27 @@
+module Base
+{
+	
+ 
+	model cfcombataxe
+	{
+		mesh = weapons/1handed/cfcombataxe,
+
+                attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 90.0000,
+		}
+	}
+
+    model  cflongreachaxe
+	{
+	    mesh = weapons/2handed/cflongreachaxe,
+
+                attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 90.0000,
+		}
+	}
+
+}

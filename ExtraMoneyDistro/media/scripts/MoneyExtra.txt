@@ -1,0 +1,117 @@
+module Base
+{
+
+	item MEWallet
+    {
+       	WeightReduction     	= 25,
+       	Weight              	= 0.2,
+       	Type                	= Container,
+       	Capacity            	= 2,
+       	DisplayName        		= Wallet,
+       	Icon                	= Wallet_01,
+    }
+
+	item MEWallet2
+    {
+		WeightReduction     	= 25,
+        Weight              	= 0.2,
+        Type                	= Container,
+        Capacity            	= 2,
+        DisplayName        		= Wallet,
+        Icon                	= Wallet_02,
+    }
+
+	item MEWallet3
+    {
+       	WeightReduction     	= 25,
+       	Weight              	= 0.2,
+       	Type                	= Container,
+       	Capacity            	= 2,
+       	DisplayName        		= Wallet,
+       	Icon                	= Wallet_03,
+    }
+
+	item MEWallet4
+    {
+       	WeightReduction     	= 25,
+       	Weight              	= 0.2,
+       	Type                	= Container,
+       	Capacity            	= 2,
+       	DisplayName        		= Wallet,
+       	Icon                	= Wallet_04,
+    } 
+
+	item MEPurse
+    {
+       	WeightReduction     	= 55,
+       	Weight              	= 0.5,
+       	Type                	= Container,
+       	Capacity            	= 12,
+       	DisplayName        		= Purse,
+       	Icon                	= Purse,
+    } 
+
+	recipe Open Wallet
+    {
+		Wallet,
+		
+		Result:MEWallet,
+		Time:15,
+		OnCreate:recipe_mewalletmoney,
+    }
+
+	recipe Open Wallet
+    {
+		Wallet2,
+    
+		Result:MEWallet2,
+		Time:15,
+		OnCreate:recipe_mewalletmoney,
+    }
+
+	recipe Open Wallet
+    {
+		Wallet3,
+		Result:MEWallet3,
+		Time:15,
+		OnCreate:recipe_mewalletmoney,
+    }
+
+	recipe Open Wallet
+    {
+		Wallet4,
+		Result:MEWallet4,
+		Time:15,
+		OnCreate:recipe_mewalletmoney,
+    }
+
+	recipe Open Purse
+    {
+		Purse,
+		Result:MEPurse,
+		Time:15,
+		OnCreate:recipe_mewalletmoney,
+    }
+	
+	recipe Inspect Old Money
+	{
+		destroy Money,
+		
+		Result:Money,
+		RemoveResultItem: true,
+		Time:90,
+		OnCreate:recipe_mewalletmoney,		
+	}
+	
+	recipe Rip up Wallet
+	{
+		destroy Wallet/Wallet2/Wallet3/Wallet4/MEWallet/MEWallet2/MEWallet3/MEWallet4,
+		keep Scissors,
+
+        Result:LeatherStrips,
+        Sound:ClothesRipping,
+        Time:100.0,
+        AnimNode:RipSheets,
+	}
+	
+}

@@ -1,0 +1,13 @@
+﻿Tooltip_EN = {
+    -- Item tooltip
+	Tooltip_ZombieMeat 			= "Zombie Meat is poisonous, use as Compost or towards a Cure! ",
+	Tooltip_ZBloodCure 			= "A flask containing The Cure for Zombie Infection! ",
+	Tooltip_ZBloodCureResearch 	= "Research material about Zombie Infection and manufacturing a Blood Cure. ",
+	Tooltip_PZGlassTestTube 	= "An empty glass test tube. ",
+	Tooltip_PZGlassFlask 		= "An empty glass flask. ",
+	Tooltip_PZBloodCureKit 		= "A specialized medkit with necessary items to help in making a Cure. ",
+	Tooltip_ZBloodSampleEmpty	= "A sterilized syringe. ",
+	Tooltip_ZBloodSample		= "A sterilized syringe containing a sample of Zombie blood. ",
+	Tooltip_ZBloodSyringeBox	= "A box containing 50 sterilized syringes. ",
+	
+}

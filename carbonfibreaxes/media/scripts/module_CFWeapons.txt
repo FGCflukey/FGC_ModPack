@@ -1,0 +1,122 @@
+module CFWeapons
+{
+	imports
+	{
+		Base,
+	}
+	
+	item cfcombataxe
+	{
+		MaxRange			= 1.3,
+		WeaponSprite		= cfcombataxe,
+		MinAngle			= 0.67,
+		Type				= Weapon,
+		MinimumSwingTime	= 3,
+		KnockBackOnNoDeath	= TRUE,
+		Categories			= Axe,
+		SwingAmountBeforeImpact		= 0.02,
+		ConditionLowerChanceOneIn	= 30,
+		Weight				= 1.2,
+		SplatNumber			= 3,
+		PushBackMod			= 0.5,
+		SubCategory			= Swinging,
+		ConditionMax		= 15,
+		MaxHitCount			= 3,
+		DoorDamage			= 35,
+		SwingAnim			= Bat,
+		DisplayName			= Carbon Fibre Combat Axe,
+		MinRange			= 0.61,
+		SwingTime			= 3,
+		KnockdownMod		= 2,
+		SplatBloodOnNoDeath	= TRUE,
+		Icon				= cfcombataxe,
+        BreakSound  		= HandAxeBreak,
+        DoorHitSound 		= HandAxeHit,
+        HitSound 			= HandAxeHit,
+        HitFloorSound 		= HandAxeHit,
+		SwingSound 			= HandAxeSwing,
+        TreeDamage  		= 35,
+        CriticalChance		= 50,
+        CritDmgMultiplier 	= 12,
+        MinDamage			= 8,
+        MaxDamage			= 8,
+        BaseSpeed 			= 1,
+      	WeaponLength 		= 0.3,
+      	DamageCategory 		= Slash,
+        DamageMakeHole 		= TRUE,
+        AttachmentType 		= Hammer,
+        Tags 				= ChopTree;CutPlant,
+  	}
+
+	fixing Fix Carbon Fibre Combat Axe
+	{
+		Require 			: cfcombataxe,
+		
+		Fixer   			: SheetMetal=1; MetalWelding=2,
+		Fixer   			: SmallSheetMetal=2; MetalWelding=2,
+		Fixer				: cfcombataxe=1,
+		Fixer 				: DuctTape=2,
+		
+	}
+
+	item cflongreachaxe
+	{
+		MaxRange			= 1.6,
+		WeaponSprite		= cflongreachaxe,
+		MinAngle			= 0.72,
+		Type				= Weapon,
+		MinimumSwingTime	= 3,
+		KnockBackOnNoDeath	= TRUE,
+		SwingAmountBeforeImpact		= 0.002,
+		Categories			= Axe,
+		ConditionLowerChanceOneIn	= 30,
+		Weight				= 2.2,
+		SplatNumber			= 3,
+		PushBackMod			= 0.5,
+		SubCategory			= Swinging,
+		ConditionMax		= 15,
+		MaxHitCount			= 3,
+		DoorDamage			= 35,
+		IdleAnim			= Idle_Weapon2,
+		SwingAnim			= Bat,
+		DisplayName			= Carbon Fibre Long-Reach Axe,
+		MinRange			= 0.61,
+		SwingTime			= 3,
+		HitAngleMod			= -30,
+		SplatSize			= 5,
+		KnockdownMod		= 3,
+		SplatBloodOnNoDeath	= TRUE,
+		Icon				= cflongreachaxe,
+		RunAnim				= Run_Weapon2,
+	    TwoHandWeapon 		= TRUE,
+        DoorHitSound 		= AxeHit,
+		HitSound 			= AxeHit,
+		HitFloorSound 		= AxeHit,
+		SwingSound 			= AxeSwing,
+	    BreakSound  		= AxeBreak,
+        TreeDamage  		= 55,
+        MetalValue 			= 120,
+        CriticalChance		= 50,
+	    CritDmgMultiplier 	= 12,
+	    BaseSpeed 			= 1,
+	    MinDamage			= 8,
+	    MaxDamage			= 8,
+		WeaponLength 		= 0.5,
+		DamageCategory 		= Slash,
+		DamageMakeHole 		= TRUE,
+		AttachmentType 		= BigWeapon,
+		Tags 				= ChopTree;CutPlant,
+	}
+
+	fixing Fix Carbon Fibre Long-Reach Axe
+	{
+		Require 			: cflongreachaxe,
+
+		Fixer   			: SheetMetal=1; MetalWelding=2,
+		Fixer   			: SmallSheetMetal=2; MetalWelding=2,
+		Fixer				: cflongreachaxe=1,		
+		Fixer 				: DuctTape=2,
+
+	}
+
+}

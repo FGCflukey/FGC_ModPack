@@ -1,0 +1,4 @@
+﻿ContextMenu_EN = {
+    ContextMenu_Dissect_Corpse = "Dissect Zombie",
+	ContextMenu_BloodCure = "Consume Zombie Blood Cure",
+}
