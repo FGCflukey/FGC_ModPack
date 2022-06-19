@@ -1,5 +1,0 @@
-name=Gunfighter Preset - FGC
-id=GunfighterPresetFGC
-poster=preview.png
-description=OVERRIDE SETTINGS FOR YOUR SERVER
-require=Arsenal(26)GunFighter
