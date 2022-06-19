@@ -1,0 +1,740 @@
+module Base
+{
+	item 5xRopeSpool
+	{
+		Weight				= 1.2,
+		Type				= Drainable,
+		UseDelta 			= 0.2,
+		DisplayName			= 5 x Rope Spool,
+		ReplaceOnDeplete	= 5xRopeSpoolempty,
+		Icon				= 5xRopeSpool,
+	}
+
+	item 10xRopeSpool
+	{
+		Weight				= 2.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10 x Rope Spool,
+		ReplaceOnDeplete	= 10xRopeSpoolempty,
+		Icon				= 10xRopeSpool,
+	}
+
+		recipe Take Rope from Spool
+		{
+			5xRopeSpool/10xRopeSpool,
+
+			Result:Rope=1,
+			Time:50.0,
+		}
+
+		recipe Combine 5 Rope into Spool
+		{
+			destroy Rope=5,
+
+			Result:5xRopeSpool,
+			Time:100.0,
+		}
+
+		recipe Combine 10 Rope into Spool
+		{
+			destroy Rope=10,
+
+			Result:10xRopeSpool,
+			Time:150.0,
+		}
+		
+		
+	item 5xBlowTorchPack
+	{
+		Weight				= 2.0,
+		Type				= Drainable,
+		UseDelta 			= 0.2,
+		DisplayName			= 5-Pack Blow Torches,
+		ReplaceOnDeplete	= 5xBlowTorchPackempty,
+		Icon				= 5xBlowTorchPack,
+	}
+
+	item 10xBlowTorchPack
+	{
+		Weight				= 3.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Blow Torches,
+		ReplaceOnDeplete	= 10xBlowTorchPackempty,
+		Icon				= 10xBlowTorchPack,
+	}
+		
+		recipe Take Propane Torch from Pack
+		{
+			5xBlowTorchPack/10xBlowTorchPack,
+
+			Result:BlowTorch=1,
+			Time:50.0,
+		}
+
+		recipe Package 5 Propane Torches
+		{
+			destroy BlowTorch=5,
+
+			Result:5xBlowTorchPack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:100.0,
+		}
+
+		recipe Package 10 Propane Torches
+		{
+			destroy BlowTorch=10,
+
+			Result:10xBlowTorchPack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:100.0,
+		}
+
+
+	item 5xWeldingRodsPack
+	{
+		Weight				= 3.0,
+		Type				= Drainable,
+		UseDelta 			= 0.2,
+		DisplayName			= 5-Pack Welding Rods,
+		ReplaceOnDeplete	= 5xWeldingRodsPackempty,
+		Icon				= 5xWeldingRodsPack,
+	}
+
+	item 10xWeldingRodsPack
+	{
+		Weight				= 6.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Welding Rods,
+		ReplaceOnDeplete	= 10xWeldingRodsPackempty,
+		Icon				= 10xWeldingRodsPack,
+	}
+		
+		recipe Take Welding Rod from Pack
+		{
+			10xWeldingRodsPack/5xWeldingRodsPack,
+
+			Result:WeldingRods=1,
+			Time:50.0,
+		}
+
+		recipe Package 5 Welding Rods
+		{
+			destroy WeldingRods=5,
+
+			Result:5xWeldingRodsPack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:100.0,
+		}
+
+		recipe Package 10 Welding Rods
+		{
+			destroy WeldingRods=10,
+
+			Result:10xWeldingRodsPack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:100.0,
+		}
+
+	item 5xGluePack
+	{
+		Weight				= 0.5,
+		Type				= Drainable,
+		UseDelta 			= 0.2,
+		DisplayName			= 5-Pack Glue,
+		ReplaceOnDeplete	= 5xGluePackempty,
+		Icon				= 5xGluePack,
+	}
+
+	item 10xGluePack
+	{
+		Weight				= 1.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Glue,
+		ReplaceOnDeplete	= 10xGluePackempty,
+		Icon				= 10xGluePack,
+	}
+		
+		recipe Take Glue from Pack
+		{
+			10xGluePack/5xGluePack,
+
+			Result:Glue=1,
+			Time:50.0,
+		}
+
+		recipe Package 5 Glue
+		{
+			destroy Glue=5,
+
+			Result:5xGluePack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:100.0,
+		}
+
+		recipe Package 10 Glue
+		{
+			destroy Glue=10,
+
+			Result:10xGluePack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:100.0,
+		}
+
+	item 5xWoodgluePack
+	{
+		Weight				= 0.5,
+		Type				= Drainable,
+		UseDelta 			= 0.2,
+		DisplayName			= 5-Pack Woodglue,
+		ReplaceOnDeplete	= 5xWoodgluePackempty,
+		Icon				= 5xWoodgluePack,
+	}
+
+	item 10xWoodgluePack
+	{
+		Weight				= 1.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Woodglue,
+		ReplaceOnDeplete	= 10xWoodgluePackempty,
+		Icon				= 10xWoodgluePack,
+	}
+		
+		recipe Take Woodglue from Pack
+		{
+			10xWoodgluePack/5xWoodgluePack,
+
+			Result:Woodglue=1,
+			Time:50.0,
+		}
+
+		recipe Package 5 Woodglue
+		{
+			destroy Woodglue=5,
+
+			Result:5xWoodgluePack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:100.0,
+		}
+
+		recipe Package 10 Woodglue
+		{
+			destroy Woodglue=10,
+
+			Result:10xWoodgluePack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:100.0,
+		}
+
+	item 5xSoapPack
+	{
+		Weight				= 0.5,
+		Type				= Drainable,
+		UseDelta 			= 0.2,
+		DisplayName			= 5-Pack Soap,
+		ReplaceOnDeplete	= 5xSoapPackempty,
+		Icon				= 5xSoapPack,
+	}
+
+	item 10xSoapPack
+	{
+		Weight				= 1.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Soap,
+		ReplaceOnDeplete	= 10xSoapPackempty,
+		Icon				= 10xSoapPack,
+	}
+		
+		recipe Take Soap from Pack
+		{
+			10xSoapPack/5xSoapPack,
+
+			Result:Soap2=1,
+			Time:50.0,
+		}
+
+		recipe Package 5 Soap
+		{
+			destroy Soap2=5,
+
+			Result:5xSoapPack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:100.0,
+		}
+
+		recipe Package 10 Soap
+		{
+			destroy Soap2=10,
+
+			Result:10xSoapPack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:100.0,
+		}
+
+	item 5xCleaningLiquidPack
+	{
+		Weight				= 3.0,
+		Type				= Drainable,
+		UseDelta 			= 0.2,
+		DisplayName			= 5-Pack Cleaning Liquid,
+		ReplaceOnDeplete	= 5xCleaningLiquidPackempty,
+		Icon				= 5xCleaningLiquidPack,
+	}
+
+	item 10xCleaningLiquidPack
+	{
+		Weight				= 5.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Cleaning Liquid,
+		ReplaceOnDeplete	= 10xCleaningLiquidPackempty,
+		Icon				= 10xCleaningLiquidPack,
+	}
+		
+		recipe Take Cleaning Liquid from Pack
+		{
+			10xCleaningLiquidPack/5xCleaningLiquidPack,
+
+			Result:CleaningLiquid2=1,
+			Time:50.0,
+		}
+
+		recipe Package 5 Cleaning Liquid
+		{
+			destroy CleaningLiquid2=5,
+
+			Result:5xCleaningLiquidPack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:100.0,
+		}
+
+		recipe Package 10 Cleaning Liquid
+		{
+			destroy CleaningLiquid2=10,
+
+			Result:10xCleaningLiquidPack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:100.0,
+		}
+
+	item LightBulbSixPackRed
+	{
+		Weight				= 0.2,
+        DisplayCategory 	= Electronics,
+		Type				= Drainable,
+		UseDelta 			= 0.15,
+		DisplayName			= LightBulbs 6-Pack - Red,
+		ReplaceOnDeplete	= LightBulbSixPackRedempty,
+		Icon				= LightBulbSixPackRed,
+	}
+
+	item LightBulbTwelvePackRed
+	{
+		Weight				= 0.4,
+        DisplayCategory		= Electronics,
+		Type				= Drainable,
+		UseDelta 			= 0.08,
+		DisplayName			= LightBulbs 12-Pack - Red,
+		ReplaceOnDeplete	= LightBulbTwelvePackRedempty,
+		Icon				= LightBulbTwelvePackRed,
+	}
+
+	recipe Take LightBulb From Box
+	{
+		LightBulbSixPackRed/LightBulbTwelvePackRed,
+		
+		Result:LightBulbRed=1,
+		Time:30,
+	}
+
+		recipe Put LightBulbs in 6-Pack
+		{
+			destroy LightBulbRed=6,
+			
+			Result:LightBulbSixPackRed,
+			Time:10,
+		}
+
+		recipe Put LightBulbs in 12-Pack
+		{
+			destroy LightBulbRed=12,
+			
+			Result:LightBulbTwelvePackRed,
+			Time:10,
+		}
+
+	item LightBulbSixPackGreen
+	{
+		Weight				= 0.2,
+        DisplayCategory 	= Electronics,
+		Type				= Drainable,
+		UseDelta 			= 0.15,
+		DisplayName			= LightBulbs 6-Pack - Green,
+		ReplaceOnDeplete	= LightBulbSixPackGreenempty,
+		Icon				= LightBulbSixPackGreen,
+	}
+
+	item LightBulbTwelvePackGreen
+	{
+		Weight				= 0.4,
+        DisplayCategory		= Electronics,
+		Type				= Drainable,
+		UseDelta 			= 0.08,
+		DisplayName			= LightBulbs 12-Pack - Green,
+		ReplaceOnDeplete	= LightBulbTwelvePackGreenempty,
+		Icon				= LightBulbTwelvePackGreen,
+	}
+
+	recipe Take LightBulb From Box
+	{
+		LightBulbSixPackGreen/LightBulbTwelvePackGreen,
+		
+		Result:LightBulbGreen=1,
+		Time:30,
+	}
+
+		recipe Put LightBulbs in 6-Pack
+		{
+			destroy LightBulbGreen=6,
+			
+			Result:LightBulbSixPackGreen,
+			Time:10,
+		}
+
+		recipe Put LightBulbs in 12-Pack
+		{
+			destroy LightBulbGreen=12,
+			
+			Result:LightBulbTwelvePackGreen,
+			Time:10,
+		}
+
+	item LightBulbSixPackBlue
+	{
+		Weight				= 0.2,
+        DisplayCategory 	= Electronics,
+		Type				= Drainable,
+		UseDelta 			= 0.15,
+		DisplayName			= LightBulbs 6-Pack - Blue,
+		ReplaceOnDeplete	= LightBulbSixPackBlueempty,
+		Icon				= LightBulbSixPackBlue,
+	}
+
+	item LightBulbTwelvePackBlue
+	{
+		Weight				= 0.4,
+        DisplayCategory		= Electronics,
+		Type				= Drainable,
+		UseDelta 			= 0.08,
+		DisplayName			= LightBulbs 12-Pack - Blue,
+		ReplaceOnDeplete	= LightBulbTwelvePackBlueempty,
+		Icon				= LightBulbTwelvePackBlue,
+	}
+
+	recipe Take LightBulb From Box
+	{
+		LightBulbSixPackBlue/LightBulbTwelvePackBlue,
+		
+		Result:LightBulbBlue=1,
+		Time:30,
+	}
+
+		recipe Put LightBulbs in 6-Pack
+		{
+			destroy LightBulbBlue=6,
+			
+			Result:LightBulbSixPackBlue,
+			Time:10,
+		}
+
+		recipe Put LightBulbs in 12-Pack
+		{
+			destroy LightBulbBlue=12,
+			
+			Result:LightBulbTwelvePackBlue,
+			Time:10,
+		}
+		
+	item LightBulbSixPackYellow
+	{
+		Weight				= 0.2,
+        DisplayCategory 	= Electronics,
+		Type				= Drainable,
+		UseDelta 			= 0.15,
+		DisplayName			= LightBulbs 6-Pack - Yellow,
+		ReplaceOnDeplete	= LightBulbSixPackYellowempty,
+		Icon				= LightBulbSixPackYellow,
+	}
+
+	item LightBulbTwelvePackYellow
+	{
+		Weight				= 0.4,
+        DisplayCategory		= Electronics,
+		Type				= Drainable,
+		UseDelta 			= 0.08,
+		DisplayName			= LightBulbs 12-Pack - Yellow,
+		ReplaceOnDeplete	= LightBulbTwelvePackYellowempty,
+		Icon				= LightBulbTwelvePackYellow,
+	}
+
+	recipe Take LightBulb From Box
+	{
+		LightBulbSixPackYellow/LightBulbTwelvePackYellow,
+		
+		Result:LightBulbYellow=1,
+		Time:30,
+	}
+
+		recipe Put LightBulbs in 6-Pack
+		{
+			destroy LightBulbYellow=6,
+			
+			Result:LightBulbSixPackYellow,
+			Time:10,
+		}
+
+		recipe Put LightBulbs in 12-Pack
+		{
+			destroy LightBulbYellow=12,
+			
+			Result:LightBulbTwelvePackYellow,
+			Time:10,
+		}
+		
+	item LightBulbSixPackCyan
+	{
+		Weight				= 0.2,
+        DisplayCategory 	= Electronics,
+		Type				= Drainable,
+		UseDelta 			= 0.15,
+		DisplayName			= LightBulbs 6-Pack - Cyan,
+		ReplaceOnDeplete	= LightBulbSixPackCyanempty,
+		Icon				= LightBulbSixPackCyan,
+	}
+
+	item LightBulbTwelvePackCyan
+	{
+		Weight				= 0.4,
+        DisplayCategory		= Electronics,
+		Type				= Drainable,
+		UseDelta 			= 0.08,
+		DisplayName			= LightBulbs 12-Pack - Cyan,
+		ReplaceOnDeplete	= LightBulbTwelvePackCyanempty,
+		Icon				= LightBulbTwelvePackCyan,
+	}
+
+	recipe Take LightBulb From Box
+	{
+		LightBulbSixPackCyan/LightBulbTwelvePackCyan,
+		
+		Result:LightBulbCyan=1,
+		Time:30,
+	}
+
+		recipe Put LightBulbs in 6-Pack
+		{
+			destroy LightBulbCyan=6,
+			
+			Result:LightBulbSixPackCyan,
+			Time:10,
+		}
+
+		recipe Put LightBulbs in 12-Pack
+		{
+			destroy LightBulbCyan=12,
+			
+			Result:LightBulbTwelvePackCyan,
+			Time:10,
+		}
+
+	item LightBulbSixPackMagenta
+	{
+		Weight				= 0.2,
+        DisplayCategory 	= Electronics,
+		Type				= Drainable,
+		UseDelta 			= 0.15,
+		DisplayName			= LightBulbs 6-Pack - Magenta,
+		ReplaceOnDeplete	= LightBulbSixPackMagentaempty,
+		Icon				= LightBulbSixPackMagenta,
+	}
+
+	item LightBulbTwelvePackMagenta
+	{
+		Weight				= 0.4,
+        DisplayCategory		= Electronics,
+		Type				= Drainable,
+		UseDelta 			= 0.08,
+		DisplayName			= LightBulbs 12-Pack - Magenta,
+		ReplaceOnDeplete	= LightBulbTwelvePackMagentaempty,
+		Icon				= LightBulbTwelvePackMagenta,
+	}
+
+	recipe Take LightBulb From Box
+	{
+		LightBulbSixPackMagenta/LightBulbTwelvePackMagenta,
+		
+		Result:LightBulbMagenta=1,
+		Time:30,
+	}
+
+		recipe Put LightBulbs in 6-Pack
+		{
+			destroy LightBulbMagenta=6,
+			
+			Result:LightBulbSixPackMagenta,
+			Time:10,
+		}
+
+		recipe Put LightBulbs in 12-Pack
+		{
+			destroy LightBulbMagenta=12,
+			
+			Result:LightBulbTwelvePackMagenta,
+			Time:10,
+		}
+		
+	item LightBulbSixPackOrange
+	{
+		Weight				= 0.2,
+        DisplayCategory 	= Electronics,
+		Type				= Drainable,
+		UseDelta 			= 0.15,
+		DisplayName			= LightBulbs 6-Pack - Orange,
+		ReplaceOnDeplete	= LightBulbSixPackOrangeempty,
+		Icon				= LightBulbSixPackOrange,
+	}
+
+	item LightBulbTwelvePackOrange
+	{
+		Weight				= 0.4,
+        DisplayCategory		= Electronics,
+		Type				= Drainable,
+		UseDelta 			= 0.08,
+		DisplayName			= LightBulbs 12-Pack - Orange,
+		ReplaceOnDeplete	= LightBulbTwelvePackOrangeempty,
+		Icon				= LightBulbTwelvePackOrange,
+	}
+
+	recipe Take LightBulb From Box
+	{
+		LightBulbSixPackOrange/LightBulbTwelvePackOrange,
+		
+		Result:LightBulbOrange=1,
+		Time:30,
+	}
+
+		recipe Put LightBulbs in 6-Pack
+		{
+			destroy LightBulbOrange=6,
+			
+			Result:LightBulbSixPackOrange,
+			Time:10,
+		}
+
+		recipe Put LightBulbs in 12-Pack
+		{
+			destroy LightBulbOrange=12,
+			
+			Result:LightBulbTwelvePackOrange,
+			Time:10,
+		}
+
+	item LightBulbSixPackPurple
+	{
+		Weight				= 0.2,
+        DisplayCategory 	= Electronics,
+		Type				= Drainable,
+		UseDelta 			= 0.15,
+		DisplayName			= LightBulbs 6-Pack - Purple,
+		ReplaceOnDeplete	= LightBulbSixPackPurpleempty,
+		Icon				= LightBulbSixPackPurple,
+	}
+
+	item LightBulbTwelvePackPurple
+	{
+		Weight				= 0.4,
+        DisplayCategory		= Electronics,
+		Type				= Drainable,
+		UseDelta 			= 0.08,
+		DisplayName			= LightBulbs 12-Pack - Purple,
+		ReplaceOnDeplete	= LightBulbTwelvePackPurpleempty,
+		Icon				= LightBulbTwelvePackPurple,
+	}
+
+	recipe Take LightBulb From Box
+	{
+		LightBulbSixPackPurple/LightBulbTwelvePackPurple,
+		
+		Result:LightBulbPurple=1,
+		Time:30,
+	}
+
+		recipe Put LightBulbs in 6-Pack
+		{
+			destroy LightBulbPurple=6,
+			
+			Result:LightBulbSixPackPurple,
+			Time:10,
+		}
+
+		recipe Put LightBulbs in 12-Pack
+		{
+			destroy LightBulbPurple=12,
+			
+			Result:LightBulbTwelvePackPurple,
+			Time:10,
+		}
+		
+	item LightBulbSixPackPink
+	{
+		Weight				= 0.2,
+        DisplayCategory 	= Electronics,
+		Type				= Drainable,
+		UseDelta 			= 0.15,
+		DisplayName			= LightBulbs 6-Pack - Pink,
+		ReplaceOnDeplete	= LightBulbSixPackPinkempty,
+		Icon				= LightBulbSixPackPink,
+	}
+
+	item LightBulbTwelvePackPink
+	{
+		Weight				= 0.4,
+        DisplayCategory		= Electronics,
+		Type				= Drainable,
+		UseDelta 			= 0.08,
+		DisplayName			= LightBulbs 12-Pack - Pink,
+		ReplaceOnDeplete	= LightBulbTwelvePackPinkempty,
+		Icon				= LightBulbTwelvePackPink,
+	}
+
+	recipe Take LightBulb From Box
+	{
+		LightBulbSixPackPink/LightBulbTwelvePackPink,
+		
+		Result:LightBulbPink=1,
+		Time:30,
+	}
+
+		recipe Put LightBulbs in 6-Pack
+		{
+			destroy LightBulbPink=6,
+			
+			Result:LightBulbSixPackPink,
+			Time:10,
+		}
+
+		recipe Put LightBulbs in 12-Pack
+		{
+			destroy LightBulbPink=12,
+			
+			Result:LightBulbTwelvePackPink,
+			Time:10,
+		}
+
+}
+

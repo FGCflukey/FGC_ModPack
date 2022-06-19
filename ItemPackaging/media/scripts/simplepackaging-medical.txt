@@ -1,0 +1,665 @@
+module Base
+{
+
+	item 10xBandaidPack
+	{
+		Weight				= 0.5,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Bandaids,
+		ReplaceOnDeplete	= 10xBandaidPackempty,
+		Icon				= 10xBandaidPack,
+	}
+
+	item 20xBandaidPack
+	{
+		Weight				= 1.0,
+		Type				= Drainable,
+		UseDelta 			= 0.05,
+		DisplayName			= 20-Pack Bandaids,
+		ReplaceOnDeplete	= 20xBandaidPackempty,
+		Icon				= 20xBandaidPack,
+	}
+
+	item 50xBandaidPack
+	{
+		Weight				= 2.0,
+		Type				= Drainable,
+		UseDelta 			= 0.02,
+		DisplayName			= 50-Pack Bandaids,
+		ReplaceOnDeplete	= 50xBandaidPackempty,
+		Icon				= 50xBandaidPack,
+	}
+
+		recipe Take Bandaid from Pack
+		{
+			10xBandaidPack/20xBandaidPack/50xBandaidPack,
+
+			Result:Bandaid=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Bandaids
+		{
+			destroy Bandaid=10,
+
+			Result:10xBandaidPack,
+			Time:100.0,
+		}
+
+		recipe Pack up 20 Bandaids
+		{
+			destroy Bandaid=20,
+
+			Result:20xBandaidPack,
+			Time:150.0,
+		}
+
+		recipe Pack up 50 Bandaids
+		{
+			destroy Bandaid=50,
+
+			Result:50xBandaidPack,
+			Time:200.0,
+		}
+
+	item 10xBandagePack
+	{
+		Weight				= 0.5,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Bandages,
+		ReplaceOnDeplete	= 10xBandagePackempty,
+		Icon				= 10xBandagePack,
+	}
+
+	item 20xBandagePack
+	{
+		Weight				= 1.0,
+		Type				= Drainable,
+		UseDelta 			= 0.05,
+		DisplayName			= 20-Pack Bandages,
+		ReplaceOnDeplete	= 20xBandagePackempty,
+		Icon				= 20xBandagePack,
+	}
+
+	item 50xBandagePack
+	{
+		Weight				= 2.0,
+		Type				= Drainable,
+		UseDelta 			= 0.02,
+		DisplayName			= 50-Pack Bandages,
+		ReplaceOnDeplete	= 50xBandagePackempty,
+		Icon				= 50xBandagePack,
+	}
+
+		recipe Take Bandage from Pack
+		{
+			10xBandagePack/20xBandagePack/50xBandagePack,
+
+			Result:Bandage=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Bandages
+		{
+			destroy Bandage=10,
+
+			Result:10xBandagePack,
+			Time:100.0,
+		}
+
+		recipe Pack up 20 Bandages
+		{
+			destroy Bandage=20,
+
+			Result:20xBandagePack,
+			Time:150.0,
+		}
+
+		recipe Pack up 50 Bandages
+		{
+			destroy Bandage=50,
+
+			Result:50xBandagePack,
+			Time:200.0,
+		}
+
+	item 10xAlcoholBandagePack
+	{
+		Weight				= 0.5,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Sterilized Bandages,
+		ReplaceOnDeplete	= 10xAlcoholBandagePackempty,
+		Icon				= 10xAlcoholBandagePack,
+	}
+
+	item 20xAlcoholBandagePack
+	{
+		Weight				= 1.0,
+		Type				= Drainable,
+		UseDelta 			= 0.05,
+		DisplayName			= 20-Pack Sterilized Bandages,
+		ReplaceOnDeplete	= 20xAlcoholBandagePackempty,
+		Icon				= 20xAlcoholBandagePack,
+	}
+
+	item 50xAlcoholBandagePack
+	{
+		Weight				= 2.0,
+		Type				= Drainable,
+		UseDelta 			= 0.02,
+		DisplayName			= 50-Pack Sterilized Bandages,
+		ReplaceOnDeplete	= 50xAlcoholBandagePackempty,
+		Icon				= 50xAlcoholBandagePack,
+	}
+
+		recipe Take Sterilized Bandage from Pack
+		{
+			10xAlcoholBandagePack/20xAlcoholBandagePack/50xAlcoholBandagePack,
+
+			Result:AlcoholBandage=1,
+			Time:50.0,
+		}
+
+		recipe Pack 10 up Sterilized Bandages
+		{
+			destroy AlcoholBandage=10,
+
+			Result:10xAlcoholBandagePack,
+			Time:100.0,
+		}
+
+		recipe Pack 20 up Sterilized Bandages
+		{
+			destroy AlcoholBandage=20,
+
+			Result:20xAlcoholBandagePack,
+			Time:150.0,
+		}
+
+
+		recipe Pack up 50 Sterilized Bandages
+		{
+			destroy AlcoholBandage=50,
+
+			Result:50xAlcoholBandagePack,
+			Time:200.0,
+		}
+
+	item 10xSuturePack
+	{
+		Weight				= 0.8,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Sterilized Bandages,
+		ReplaceOnDeplete	= 10xSuturePackempty,
+		Icon				= 10xSuturePack,
+	}
+
+	item 20xSuturePack
+	{
+		Weight				= 1.2,
+		Type				= Drainable,
+		UseDelta 			= 0.05,
+		DisplayName			= 50-Pack Sterilized Bandages,
+		ReplaceOnDeplete	= 20xSuturePackempty,
+		Icon				= 20xSuturePack,
+	}
+
+		recipe Take Suture from Pack
+		{
+			10xSuturePack/20xSuturePack,
+
+			Result:SutureNeedle=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Sutures Needles
+		{
+			destroy SutureNeedle=10,
+
+			Result:10xSuturePack,
+			Time:100.0,
+		}
+
+		recipe Pack up 20 Suture Needles
+		{
+			destroy SutureNeedle=20,
+
+			Result:20xSuturePack,
+			Time:150.0,
+		}
+
+	item 10xTweezerPack
+	{
+		Weight				= 0.8,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Sterilized Bandages,
+		ReplaceOnDeplete	= 10xTweezerPackempty,
+		Icon				= 10xTweezerPack,
+	}
+
+	item 20xTweezerPack
+	{
+		Weight				= 1.2,
+		Type				= Drainable,
+		UseDelta 			= 0.05,
+		DisplayName			= 50-Pack Sterilized Bandages,
+		ReplaceOnDeplete	= 20xTweezerPackempty,
+		Icon				= 20xTweezerPack,
+	}
+
+		recipe Take Tweezer from Pack
+		{
+			10xTweezerPack/20xTweezerPack,
+
+			Result:Tweezers=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Tweezers
+		{
+			destroy Tweezers=10,
+
+			Result:10xTweezerPack,
+			Time:100.0,
+		}
+
+		recipe Pack up 20 Tweezers
+		{
+			destroy Tweezers=20,
+
+			Result:20xTweezerPack,
+			Time:150.0,
+		}
+
+	item 10xAlcoholWipesPack
+	{
+		Weight				= 2.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Alcohol Wipes,
+		ReplaceOnDeplete	= 10xAlcoholWipesPackempty,
+		Icon				= 10xAlcoholWipesPack,
+	}
+
+	item 20xAlcoholWipesPack
+	{
+		Weight				= 3.0,
+		Type				= Drainable,
+		UseDelta 			= 0.05,
+		DisplayName			= 20-Pack Alcohol Wipes,
+		ReplaceOnDeplete	= 20xAlcoholWipesPackempty,
+		Icon				= 20xAlcoholWipesPack,
+	}
+
+	item 50xAlcoholWipesPack
+	{
+		Weight				= 4.0,
+		Type				= Drainable,
+		UseDelta 			= 0.02,
+		DisplayName			= 50-Pack Alcohol Wipes,
+		ReplaceOnDeplete	= 50xAlcoholWipesPackempty,
+		Icon				= 50xAlcoholWipesPack,
+	}
+
+		recipe Take Alocohol Wipe from Pack
+		{
+			10xAlcoholWipesPack/20xAlcoholWipesPack/50xAlcoholWipesPack,
+
+			Result:AlcoholWipes=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Alcohol Wipes
+		{
+			destroy AlcoholWipes=10,
+
+			Result:10xAlcoholWipesPack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:100.0,
+		}
+		
+		recipe Pack up 20 Alcohol Wipes
+		{
+			destroy AlcoholWipes=20,
+
+			Result:20xAlcoholWipesPack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:150.0,
+		}
+
+		recipe Pack up 50 Alcohol Wipes
+		{
+			destroy AlcoholWipes=50,
+
+			Result:50xAlcoholWipesPack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:200.0,
+		}
+
+	item 10xAntiBioticsPack
+	{
+		Weight				= 0.5,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Antibiotics,
+		ReplaceOnDeplete	= 10xAntiBioticsPackempty,
+		Icon				= 10xAntiBioticsPack,
+	}
+
+	item 20xAntiBioticsPack
+	{
+		Weight				= 1.0,
+		Type				= Drainable,
+		UseDelta 			= 0.05,
+		DisplayName			= 20-Pack Antibiotics,
+		ReplaceOnDeplete	= 20xAntiBioticsPackempty,
+		Icon				= 20xAntiBioticsPack,
+	}
+
+		recipe Take Antibiotic from Pack
+		{
+			10xAntiBioticsPack/20xAntiBioticsPack,
+
+			Result:Antibiotics=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Antibiotics
+		{
+			destroy Antibiotics=10,
+
+			Result:10xAntiBioticsPack,
+			Time:100.0,
+		}
+
+		recipe Pack up 20 Antibiotics
+		{
+			destroy Antibiotics=20,
+
+			Result:20xAntiBioticsPack,
+			Time:150.0,
+		}
+
+	item 10xDisinfectantPack
+	{
+		Weight				= 2.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Disinfectant,
+		ReplaceOnDeplete	= 10xDisinfectantPackempty,
+		Icon				= 10xDisinfectantPack,
+	}
+
+	item 20xDisinfectantPack
+	{
+		Weight				= 4.0,
+		Type				= Drainable,
+		UseDelta 			= 0.05,
+		DisplayName			= 20-Pack Disinfectant,
+		ReplaceOnDeplete	= 20xDisinfectantPackempty,
+		Icon				= 20xDisinfectantPack,
+	}
+
+		recipe Take Disinfectant from Pack
+		{
+			10xDisinfectantPack/20xDisinfectantPack,
+
+			Result:Disinfectant=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Disinfectant
+		{
+			destroy Disinfectant=10,
+
+			Result:10xDisinfectantPack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:150.0,
+		}
+
+		recipe Pack up 20 Disinfectant
+		{
+			destroy Disinfectant=20,
+
+			Result:20xDisinfectantPack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:150.0,
+		}
+
+
+	item 10xPillsBox
+	{
+		Weight				= 1.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Painkillers,
+		ReplaceOnDeplete	= 10xPillsBoxempty,
+		Icon				= 10xPillsBox,
+	}
+
+	item 20xPillsBox
+	{
+		Weight				= 2.0,
+		Type				= Drainable,
+		UseDelta 			= 0.05,
+		DisplayName			= 20-Pack Painkillers,
+		ReplaceOnDeplete	= 20xPillsBoxempty,
+		Icon				= 20xPillsBox,
+	}
+
+		recipe Take Painkillers from Pack
+		{
+			10xPillsBox/20xPillsBox,
+
+			Result:Pills=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Painkillers
+		{
+			destroy Pills=10,
+
+			Result:10xPillsBox,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:150.0,
+		}
+
+		recipe Pack up 20 Painkillers
+		{
+			destroy Pills=20,
+
+			Result:20xPillsBox,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:150.0,
+		}
+
+	item 10xPillsSleepingTabletsBox
+	{
+		Weight				= 1.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Sleeping Tablets,
+		ReplaceOnDeplete	= 10xPillsSleepingTabletsBoxempty,
+		Icon				= 10xPillsSleepingTabletsBox,
+	}
+
+	item 20xPillsSleepingTabletsBox
+	{
+		Weight				= 2.0,
+		Type				= Drainable,
+		UseDelta 			= 0.05,
+		DisplayName			= 20-Pack Sleeping Tablets,
+		ReplaceOnDeplete	= 20xPillsSleepingTabletsBoxempty,
+		Icon				= 20xPillsSleepingTabletsBox,
+	}
+
+		recipe Take Sleeping Tablets from Pack
+		{
+			10xPillsSleepingTabletsBox/20xPillsSleepingTabletsBox,
+
+			Result:PillsSleepingTablets=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Sleeping Tablets
+		{
+			destroy PillsSleepingTablets=10,
+
+			Result:10xPillsSleepingTabletsBox,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:150.0,
+		}
+
+		recipe Pack up 20 Sleeping Tablets
+		{
+			destroy PillsSleepingTablets=20,
+
+			Result:20xPillsSleepingTabletsBox,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:150.0,
+		}
+
+	item 10xPillsVitaminsBox
+	{
+		Weight				= 1.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Vitamins,
+		ReplaceOnDeplete	= 10xPillsVitaminsBoxempty,
+		Icon				= 10xPillsVitaminsBox,
+	}
+
+	item 20xPillsVitaminsBox
+	{
+		Weight				= 2.0,
+		Type				= Drainable,
+		UseDelta 			= 0.05,
+		DisplayName			= 20-Pack Vitamins,
+		ReplaceOnDeplete	= 20xPillsVitaminsBoxempty,
+		Icon				= 20xPillsVitaminsBox,
+	}
+
+		recipe Take Vitamins from Pack
+		{
+			10xPillsVitaminsBox/20xPillsVitaminsBox,
+
+			Result:PillsVitamins=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Vitamins
+		{
+			destroy PillsVitamins=10,
+
+			Result:10xPillsVitaminsBox,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:150.0,
+		}
+
+		recipe Pack up 20 Vitamins
+		{
+			destroy PillsVitamins=20,
+
+			Result:20xPillsVitaminsBox,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:150.0,
+		}
+
+	item 10xPillsBetaBox
+	{
+		Weight				= 1.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Beta Blockers,
+		ReplaceOnDeplete	= 10xPillsBetaBoxempty,
+		Icon				= 10xPillsBetaBox,
+	}
+
+	item 20xPillsBetaBox
+	{
+		Weight				= 2.0,
+		Type				= Drainable,
+		UseDelta 			= 0.05,
+		DisplayName			= 20-Pack Beta Blockers,
+		ReplaceOnDeplete	= 20xPillsBetaBoxempty,
+		Icon				= 20xPillsBetaBox,
+	}
+
+		recipe Take Beta Blockers from Pack
+		{
+			10xPillsBetaBox/20xPillsBetaBox,
+
+			Result:PillsBeta=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Beta Blockers
+		{
+			destroy PillsBeta=10,
+
+			Result:10xPillsBetaBox,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:150.0,
+		}
+
+		recipe Pack up 20 Beta Blockers
+		{
+			destroy PillsBeta=20,
+
+			Result:20xPillsBetaBox,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:150.0,
+		}
+
+	item 10xPillsAntiDepBox
+	{
+		Weight				= 1.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Antidepressants,
+		ReplaceOnDeplete	= 10xPillsAntiDepBoxempty,
+		Icon				= 10xPillsAntiDepBox,
+	}
+
+	item 20xPillsAntiDepBox
+	{
+		Weight				= 2.0,
+		Type				= Drainable,
+		UseDelta 			= 0.05,
+		DisplayName			= 20-Pack Antidepressants,
+		ReplaceOnDeplete	= 20xPillsAntiDepBoxempty,
+		Icon				= 20xPillsAntiDepBox,
+	}
+
+		recipe Take Antidepressants from Pack
+		{
+			10xPillsAntiDepBox/20xPillsAntiDepBox,
+
+			Result:PillsAntiDep=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Antidepressants
+		{
+			destroy PillsAntiDep=10,
+
+			Result:10xPillsAntiDepBox,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:150.0,
+		}
+
+		recipe Pack up 20 Antidepressants
+		{
+			destroy PillsAntiDep=20,
+
+			Result:20xPillsAntiDepBox,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:150.0,
+		}
+
+}

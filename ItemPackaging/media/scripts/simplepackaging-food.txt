@@ -1,0 +1,1010 @@
+module Base
+{
+	item 10xCannedBolognesePack
+	{
+		Weight				= 5.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Canned Spaghetti Bolognese,
+		ReplaceOnDeplete	= 10xCannedBolognesePackempty,
+		Icon				= 10xCannedBolognesePack,
+	}
+	
+		recipe Take Can from Pack
+		{
+			10xCannedBolognesePack,
+
+			Result:CannedBolognese=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Cans
+		{
+			destroy CannedBolognese=10,
+
+			Result:10xCannedBolognesePack,
+			Time:150.0,
+		}
+
+	item 10xCannedCarrotsPack
+	{
+		Weight				= 4.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Canned Carrots,
+		ReplaceOnDeplete	= 10xCannedCarrotsPackempty,
+		Icon				= 10xCannedCarrotsPack,
+	}
+	
+		recipe Take Can from Pack
+		{
+			10xCannedCarrotsPack,
+
+			Result:CannedCarrots=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Cans
+		{
+			destroy CannedCarrots=10,
+
+			Result:10xCannedCarrotsPack,
+			Time:150.0,
+		}
+
+
+	item 10xCannedChiliPack
+	{
+		Weight				= 5.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Canned Chili,
+		ReplaceOnDeplete	= 10xCannedChiliPackempty,
+		Icon				= 10xCannedChiliPack,
+	}
+	
+		recipe Take Can from Pack
+		{
+			10xCannedChiliPack,
+
+			Result:CannedChili=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Cans
+		{
+			destroy CannedChili=10,
+
+			Result:10xCannedChiliPack,
+			Time:150.0,
+		}
+
+	item 10xCannedCornPack
+	{
+		Weight				= 4.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Canned Corn,
+		ReplaceOnDeplete	= 10xCannedCornPackempty,
+		Icon				= 10xCannedCornPack,
+	}
+	
+		recipe Take Can from Pack
+		{
+			10xCannedCornPack,
+
+			Result:CannedCorn=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Cans
+		{
+			destroy CannedCorn=10,
+
+			Result:10xCannedCornPack,
+			Time:150.0,
+		}
+
+	item 10xCannedCornedBeefPack
+	{
+		Weight				= 4.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Canned Corned Beef,
+		ReplaceOnDeplete	= 10xCannedCornedBeefPackempty,
+		Icon				= 10xCannedCornedBeefPack,
+	}
+	
+		recipe Take Can from Pack
+		{
+			10xCannedCornedBeefPack,
+
+			Result:CannedCornedBeef=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Cans
+		{
+			destroy CannedCornedBeef=10,
+
+			Result:10xCannedCornedBeefPack,
+			Time:150.0,
+		}
+
+	item 10xCannedMushroomSoupPack
+	{
+		Weight				= 4.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Canned Mushroom Soup,
+		ReplaceOnDeplete	= 10xCannedMushroomSoupPackempty,
+		Icon				= 10xCannedMushroomSoupPack,
+	}
+	
+		recipe Take Can from Pack
+		{
+			10xCannedMushroomSoupPack,
+
+			Result:CannedMushroomSoup=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Cans
+		{
+			destroy CannedMushroomSoup=10,
+
+			Result:10xCannedMushroomSoupPack,
+			Time:150.0,
+		}
+		
+	item 10xCannedPeasPack
+	{
+		Weight				= 5.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Canned Peas,
+		ReplaceOnDeplete	= 10xCannedPeasPackempty,
+		Icon				= 10xCannedPeasPack,
+	}
+	
+		recipe Take Can from Pack
+		{
+			10xCannedPeasPack,
+
+			Result:CannedPeas=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Cans
+		{
+			destroy CannedPeas=10,
+
+			Result:10xCannedPeasPack,
+			Time:150.0,
+		}
+
+	item 10xCannedPotatoPack
+	{
+		Weight				= 4.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Canned Potato,
+		ReplaceOnDeplete	= 10xCannedPotatoPackempty,
+		Icon				= 10xCannedPotatoPack,
+	}
+	
+		recipe Take Can from Pack
+		{
+			10xCannedPotatoPack,
+
+			Result:CannedPotato2=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Cans
+		{
+			destroy CannedPotato2=10,
+
+			Result:10xCannedPotatoPack,
+			Time:150.0,
+		}
+
+	item 10xCannedSardinesPack
+	{
+		Weight				= 4.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Canned Sardines,
+		ReplaceOnDeplete	= 10xCannedSardinesPackempty,
+		Icon				= 10xCannedSardinesPack,
+	}
+	
+		recipe Take Can from Pack
+		{
+			10xCannedSardinesPack,
+
+			Result:CannedSardines=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Cans
+		{
+			destroy CannedSardines=10,
+
+			Result:10xCannedSardinesPack,
+			Time:150.0,
+		}
+
+	item 10xCannedTomatoPack
+	{
+		Weight				= 4.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Canned Tomato,
+		ReplaceOnDeplete	= 10xCannedTomatoPackempty,
+		Icon				= 10xCannedTomatoPack,
+	}
+	
+		recipe Take Can from Pack
+		{
+			10xCannedTomatoPack,
+
+			Result:CannedTomato2=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Cans
+		{
+			destroy CannedTomato2=10,
+
+			Result:10xCannedTomatoPack,
+			Time:150.0,
+		}
+
+	item 10xDogfoodPack
+	{
+		Weight				= 6.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Dogfood,
+		ReplaceOnDeplete	= 10xDogfoodPackempty,
+		Icon				= 10xDogfoodPack,
+	}
+	
+		recipe Take Can from Pack
+		{
+			10xDogfoodPack,
+
+			Result:Dogfood=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Cans
+		{
+			destroy Dogfood=10,
+
+			Result:10xDogfoodPack,
+			Time:150.0,
+		}
+
+	item 10xCannedOatsRawPack
+	{
+		Weight				= 5.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Canned Oats,
+		ReplaceOnDeplete	= 10xCannedOatsRawPackempty,
+		Icon				= 10xCannedOatsRawPack,
+	}
+	
+		recipe Take Can from Pack
+		{
+			10xCannedOatsRawPack,
+
+			Result:OatsRaw=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Cans
+		{
+			destroy OatsRaw=10,
+
+			Result:10xCannedOatsRawPack,
+			Time:150.0,
+		}
+
+	item 10xCannedTinnedBeansPack
+	{
+		Weight				= 5.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Canned Beans,
+		ReplaceOnDeplete	= 10xCannedTinnedBeansPackempty,
+		Icon				= 10xCannedTinnedBeansPack,
+	}
+	
+		recipe Take Can from Pack
+		{
+			10xCannedTinnedBeansPack,
+
+			Result:TinnedBeans=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Cans
+		{
+			destroy TinnedBeans=10,
+
+			Result:10xCannedTinnedBeansPack,
+			Time:150.0,
+		}
+
+	item 10xCannedTunaTinPack
+	{
+		Weight				= 1.5,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Canned Tuna,
+		ReplaceOnDeplete	= 10xCannedTunaTinPackempty,
+		Icon				= 10xCannedTunaTinPack,
+	}
+	
+		recipe Take Can from Pack
+		{
+			10xCannedTunaTinPack,
+
+			Result:TunaTin=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Cans
+		{
+			destroy TunaTin=10,
+
+			Result:10xCannedTunaTinPack,
+			Time:150.0,
+		}
+
+	item 10xWaterBottlePack
+	{
+		Weight				= 5.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Water Bottles,
+		ReplaceOnDeplete	= 10xWaterBottlePackempty,
+		Icon				= 10xWaterBottlePack,
+	}
+
+	item 20xWaterBottlePack
+	{
+		Weight				= 8.0,
+		Type				= Drainable,
+		UseDelta 			= 0.05,
+		DisplayName			= 20-Pack Water Bottles,
+		ReplaceOnDeplete	= 20xWaterBottlePackempty,
+		Icon				= 20xWaterBottlePack,
+	}
+		
+		recipe Take Water Bottle from Pack
+		{
+			10xWaterBottlePack/20xWaterBottlePack,
+
+			Result:WaterBottleFull=1,
+			Time:50.0,
+		}
+
+		recipe Package 10 Water Bottles
+		{
+			destroy WaterBottleFull=10,
+
+			Result:10xWaterBottlePack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:100.0,
+		}
+
+		recipe Package 20 Water Bottles
+		{
+			destroy WaterBottleFull=20,
+
+			Result:20xWaterBottlePack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:200.0,
+		}
+
+	item 10xPopBottlePack
+	{
+		Weight				= 5.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Pop Bottles,
+		ReplaceOnDeplete	= 10xPopBottlePackempty,
+		Icon				= 10xPopBottlePack,
+	}
+
+	item 20xPopBottlePack
+	{
+		Weight				= 8.0,
+		Type				= Drainable,
+		UseDelta 			= 0.05,
+		DisplayName			= 20-Pack Pop Bottles,
+		ReplaceOnDeplete	= 20xPopBottlePackempty,
+		Icon				= 20xPopBottlePack,
+	}
+		
+		recipe Take Pop Bottle from Pack
+		{
+			10xPopBottlePack/20xPopBottlePack,
+
+			Result:PopBottle=1,
+			Time:50.0,
+		}
+
+		recipe Package 10 Pop Bottles
+		{
+			destroy PopBottle=10,
+
+			Result:10xPopBottlePack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:100.0,
+		}
+
+		recipe Package 20 Pop Bottles
+		{
+			destroy PopBottle=20,
+
+			Result:20xPopBottlePack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:200.0,
+		}
+
+	item 10xCannedBellPepperPack
+	{
+		Weight				= 3.5,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Jarred Bell Peppers,
+		ReplaceOnDeplete	= 10xCannedBellPepperPackempty,
+		Icon				= 10xCannedBellPepperPack,
+	}
+
+		recipe Take a Jar from Pack
+		{
+			10xCannedBellPepperPack,
+
+			Result:CannedBellPepper=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Jars
+		{
+			destroy CannedBellPepper=10,
+
+			Result:10xCannedBellPepperPack,
+			Time:200.0,
+		}
+		
+	item 10xCannedBroccoliPack
+	{
+		Weight				= 3.5,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Jarred Broccoli,
+		ReplaceOnDeplete	= 10xCannedBroccoliPackempty,
+		Icon				= 10xCannedBroccoliPack,
+	}
+
+		recipe Take a Jar from Pack
+		{
+			10xCannedBroccoliPack,
+
+			Result:CannedBroccoli=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Jars
+		{
+			destroy CannedBroccoli=10,
+
+			Result:10xCannedBroccoliPack,
+			Time:200.0,
+		}
+
+	item 10xCannedCabbagePack
+	{
+		Weight				= 3.5,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Jarred Cabbage,
+		ReplaceOnDeplete	= 10xCannedCabbagePackempty,
+		Icon				= 10xCannedCabbagePack,
+	}
+
+		recipe Take a Jar from Pack
+		{
+			10xCannedCabbagePack,
+
+			Result:CannedCabbage=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Jars
+		{
+			destroy CannedCabbage=10,
+
+			Result:10xCannedCabbagePack,
+			Time:200.0,
+		}
+
+	item 10xCannedCarrotsPack
+	{
+		Weight				= 3.5,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Jarred Carrots,
+		ReplaceOnDeplete	= 10xCannedCarrotsPackempty,
+		Icon				= 10xCannedCarrotsPack,
+	}
+
+		recipe Take a Jar from Pack
+		{
+			10xCannedCarrotsPack,
+
+			Result:CannedCarrots=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Jars
+		{
+			destroy CannedCarrots=10,
+
+			Result:10xCannedCarrotsPack,
+			Time:200.0,
+		}
+
+	item 10xCannedEggplantPack
+	{
+		Weight				= 3.5,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Jarred Eggplants,
+		ReplaceOnDeplete	= 10xCannedEggplantPackempty,
+		Icon				= 10xCannedEggplantPack,
+	}
+
+		recipe Take a Jar from Pack
+		{
+			10xCannedEggplantPack,
+
+			Result:CannedEggplant=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Jars
+		{
+			destroy CannedEggplant=10,
+
+			Result:10xCannedEggplantPack,
+			Time:200.0,
+		}
+
+	item 10xCannedLeekPack
+	{
+		Weight				= 3.5,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Jarred Leeks,
+		ReplaceOnDeplete	= 10xCannedLeekPackempty,
+		Icon				= 10xCannedLeekPack,
+	}
+
+		recipe Take a Jar from Pack
+		{
+			10xCannedLeekPack,
+
+			Result:CannedLeek=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Jars
+		{
+			destroy CannedLeek=10,
+
+			Result:10xCannedLeekPack,
+			Time:200.0,
+		}
+
+	item 10xCannedRadishPack
+	{
+		Weight				= 3.5,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Jarred Red Radish,
+		ReplaceOnDeplete	= 10xCannedRadishPackempty,
+		Icon				= 10xCannedRadishPack,
+	}
+
+		recipe Take a Jar from Pack
+		{
+			10xCannedRadishPack,
+
+			Result:CannedRedRadish=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Jars
+		{
+			destroy CannedRedRadish=10,
+
+			Result:10xCannedRadishPack,
+			Time:200.0,
+		}
+		
+	item 10xCannedTomatoPack2
+	{
+		Weight				= 3.5,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Jarred Tomato,
+		ReplaceOnDeplete	= 10xCannedTomatoPack2empty,
+		Icon				= 10xCannedTomatoPack2,
+	}
+
+		recipe Take a Jar from Pack
+		{
+			10xCannedTomatoPack2,
+
+			Result:CannedTomato=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Jars
+		{
+			destroy CannedTomato=10,
+
+			Result:10xCannedTomatoPack2,
+			Time:200.0,
+		}
+
+	item 10xCannedPotatoPack2
+	{
+		Weight				= 3.5,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Jarred Potato,
+		ReplaceOnDeplete	= 10xCannedPotatoPack2empty,
+		Icon				= 10xCannedPotatoPack2,
+	}
+
+		recipe Take a Jar from Pack
+		{
+			10xCannedPotatoPack2,
+
+			Result:CannedPotato=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Jars
+		{
+			destroy CannedPotato=10,
+
+			Result:10xCannedPotatoPack2,
+			Time:200.0,
+		}
+
+	item 10xCannedPeachesPack
+	{
+		Weight				= 2.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Canned Peaches,
+		ReplaceOnDeplete	= 10xCannedPeachesPackempty,
+		Icon				= 10xCannedPeachesPack,
+	}
+	
+		recipe Take Can from Pack
+		{
+			10xCannedPeachesPack,
+
+			Result:CannedPeaches=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Cans
+		{
+			destroy CannedPeaches=10,
+
+			Result:10xCannedPeachesPack,
+			Time:150.0,
+		}
+
+	item 10xCannedFruitCocktailPack
+	{
+		Weight				= 5.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Canned Fruit Cocktail,
+		ReplaceOnDeplete	= 10xCannedFruitCocktailPackempty,
+		Icon				= 10xCannedFruitCocktailPack,
+	}
+	
+		recipe Take Can from Pack
+		{
+			10xCannedFruitCocktailPack,
+
+			Result:CannedFruitCocktail=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Cans
+		{
+			destroy CannedFruitCocktail=10,
+
+			Result:10xCannedFruitCocktailPack,
+			Time:150.0,
+		}
+
+	item 10xCannedSoupPack
+	{
+		Weight				= 4.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Canned Soup,
+		ReplaceOnDeplete	= 10xCannedSoupPackempty,
+		Icon				= 10xCannedSoupPack,
+	}
+	
+		recipe Take Can from Pack
+		{
+			10xCannedSoupPack,
+
+			Result:TinnedSoup=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Cans
+		{
+			destroy TinnedSoup=10,
+
+			Result:10xCannedSoupPack,
+			Time:150.0,
+		}
+
+	item 10xCannedPineapplePack
+	{
+		Weight				= 2.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Canned Pineapple,
+		ReplaceOnDeplete	= 10xCannedPineapplePackempty,
+		Icon				= 10xCannedPineapplePack,
+	}
+	
+		recipe Take Can from Pack
+		{
+			10xCannedPineapplePack,
+
+			Result:CannedPineapple=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Cans
+		{
+			destroy CannedPineapple=10,
+
+			Result:10xCannedPineapplePack,
+			Time:150.0,
+		}
+
+	item 10xDietPopPack
+	{
+		Weight				= 2.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Canned Diet Pop,
+		ReplaceOnDeplete	= 10xDietPopPackempty,
+		Icon				= 10xDietPopPack,
+	}
+	
+		recipe Take Can from Pack
+		{
+			10xDietPopPack,
+
+			Result:Pop=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Cans
+		{
+			destroy Pop=10,
+
+			Result:10xDietPopPack,
+			Time:150.0,
+		}
+
+	item 10xColaPopPack
+	{
+		Weight				= 2.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Canned Cola Pop,
+		ReplaceOnDeplete	= 10xColaPopPackempty,
+		Icon				= 10xColaPopPack,
+	}
+	
+		recipe Take Can from Pack
+		{
+			10xColaPopPack,
+
+			Result:Pop2=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Cans
+		{
+			destroy Pop2=10,
+
+			Result:10xColaPopPack,
+			Time:150.0,
+		}
+
+	item 10xFizzPopPack
+	{
+		Weight				= 2.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Canned Fizz Pop,
+		ReplaceOnDeplete	= 10xFizzPopPackempty,
+		Icon				= 10xFizzPopPack,
+	}
+	
+		recipe Take Can from Pack
+		{
+			10xFizzPopPack,
+
+			Result:Pop3=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Cans
+		{
+			destroy Pop3=10,
+
+			Result:10xFizzPopPack,
+			Time:150.0,
+		}
+
+	item 10xMacandCheesePack
+	{
+		Weight				= 3.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Mac and Cheese,
+		ReplaceOnDeplete	= 10xMacandCheesePackempty,
+		Icon				= 10xMacandCheesePack,
+	}
+	
+		recipe Take Mac and Cheese from Pack
+		{
+			10xMacandCheesePack,
+
+			Result:Macandcheese=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Mac and Cheese
+		{
+			destroy Macandcheese=10,
+
+			Result:10xMacandCheesePack,
+			Time:150.0,
+		}
+
+	item 10xFruitJamPack
+	{
+		Weight				= 1.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Fruit Jam,
+		ReplaceOnDeplete	= 10xFruitJamPackempty,
+		Icon				= 10xFruitJamPack,
+	}
+	
+		recipe Take One from Pack
+		{
+			10xFruitJamPack,
+
+			Result:JamFruit=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Fruit Jam
+		{
+			destroy JamFruit=10,
+
+			Result:10xFruitJamPack,
+			Time:150.0,
+		}
+
+	item 10xPeanutButterPack
+	{
+		Weight				= 3.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Peanut Butter,
+		ReplaceOnDeplete	= 10xPeanutButterPackempty,
+		Icon				= 10xPeanutButterPack,
+	}
+	
+		recipe Take One from Pack
+		{
+			10xPeanutButterPack,
+
+			Result:PeanutButter=1,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Peanut Butter
+		{
+			destroy PeanutButter=10,
+
+			Result:10xPeanutButterPack,
+			Time:150.0,
+		}
+
+	item 10xVinegarPack
+	{
+		Weight				= 2.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Vinegar,
+		ReplaceOnDeplete	= 10xVinegarPackempty,
+		Icon				= 10xVinegarPack,
+	}
+	
+		recipe Take One from Pack
+		{
+			10xVinegarPack,
+
+			Result:Vinegar=1,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Vinegar
+		{
+			destroy Vinegar=10,
+
+			Result:10xVinegarPack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:150.0,
+		}
+
+	item 10xSugarPack
+	{
+		Weight				= 4.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Sugar,
+		ReplaceOnDeplete	= 10xSugarPackempty,
+		Icon				= 10xSugarPack,
+	}
+	
+		recipe Take One from Pack
+		{
+			10xSugarPack,
+
+			Result:Sugar=1,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:50.0,
+		}
+
+		recipe Pack up 10 Peanut Butter
+		{
+			destroy Sugar=10,
+
+			Result:10xSugarPack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:150.0,
+		}
+
+}
