@@ -1,0 +1,171 @@
+module Base
+{
+	item ZombieMeat
+	{
+		Type					= Food,
+		DisplayName				= Zombie Meat,
+		Icon					= ZombieMeat,
+		HungerChange			= -50,
+	   	PoisonPower 			= 40,
+	   	UseForPoison 			= 15,
+		PoisonDetectionLevel 	= 7,
+		Weight					= 1,
+		DaysFresh 				= 1,
+		DaysTotallyRotten 		= 2,
+		OnEat 					= OnEat_ZombieMeat,
+		Tooltip 				= Tooltip_ZombieMeat,
+	}
+
+	item BloodCure
+	{
+		Weight					= 0.01,
+		Type					= Normal,
+		DisplayName				= Blood Cure,
+		Icon					= BloodCure,
+		Tooltip					= Tooltip_ZBloodCure,
+	} 
+
+	item BoxedSyringes
+	{
+		Weight					= 0.3,
+		Type					= Normal,
+		DisplayName				= Box of 50 Syringes,
+		Icon					= BoxedSyringes,
+		Tooltip					= Tooltip_ZBloodSyringeBox,
+	}
+	
+	item SyringeZempty
+	{
+		Weight					= 0.01,
+		Type					= Normal,
+		DisplayName				= Syringe,
+		Icon					= SyringeZempty,
+		Tooltip					= Tooltip_ZBloodSampleEmpty,
+	}
+
+	item SyringeZblood
+	{
+		Weight					= 0.01,
+		Type					= Normal,
+		DisplayName				= Syringe with Zombie Blood,
+		Icon					= SyringeZblood,
+		Tooltip					= Tooltip_ZBloodSample,
+	}
+
+	item PZGlassTestTube
+	{
+		Weight					= 0.1,
+		Type					= Normal,
+		DisplayName				= Glass Test Tube,
+		Icon					= PZGlassTestTube,
+		Tooltip					= Tooltip_PZGlassTestTube,
+	}
+
+	item PZGlassFlask
+	{
+		Weight					= 0.3,
+		Type					= Normal,
+		DisplayName				= Glass Flask,
+		Icon					= PZGlassFlask,
+		Tooltip					= Tooltip_PZGlassFlask,
+	}
+
+	item PZBloodCureKit
+	{
+		Weight					= 1.0,
+		Type					= Normal,
+		DisplayName				= Zombie Blood Cure Kit,
+		Icon					= PZBloodCureKit,
+		Tooltip					= Tooltip_PZBloodCureKit,
+	}
+
+	item BloodCureMag
+	{
+		Weight					= 0.1,
+		Type					= Literature,
+		DisplayName				= Zombie Blood Cure Research,
+		Icon					= BloodCureMag,
+		TeachedRecipes  		= Synthesize Zombie Blood Cure;Extract Blood from Zombie Meat;Make Zombie Blood Cure Kit,
+		ReplaceOnUse    		= BloodCureMag,
+		StaticModel				= Magazine,
+		Tooltip					= Tooltip_ZBloodCureResearch,
+	}
+
+	recipe Synthesize Zombie Blood Cure
+	{
+		SyringeZblood=25,
+		destroy PZGlassTestTube,
+		destroy PZGlassFlask,
+		
+		Result:BloodCure,
+		Time:1000.0,
+		NeedToBeLearn:true,
+		Category:PZBloodCure,
+		OnCreate:Return_AllUsedItems,
+	}
+
+	recipe Extract Blood from Zombie Meat
+	{
+		ZombieMeat=10,
+		destroy SyringeZempty,
+		
+		Result:SyringeZblood,
+		Time:50,
+		Category:PZBloodCure
+	}
+
+	recipe Open Zombie Blood Cure Kit
+	{
+		destroy PZBloodCureKit,
+
+		Result:BloodCureMag,
+		Time:50.0,
+		Category:PZBloodCure,
+		OnCreate:Return_PZBloodCureKitItems,
+	}
+
+	recipe Make Zombie Blood Cure Kit
+	{
+		destroy SyringeZempty=50,
+		destroy PZGlassTestTube,
+		destroy PZGlassFlask,
+		destroy BloodCureMag,
+		
+		Result:PZBloodCureKit,
+		Time:150.0,
+		Category:PZBloodCure,
+		NeedToBeLearn:true,
+	}
+
+	recipe Make Zombie Blood Cure Kit
+	{
+		destroy BoxedSyringes,
+		destroy PZGlassTestTube,
+		destroy PZGlassFlask,
+		destroy BloodCureMag,
+		
+		Result:PZBloodCureKit,
+		Time:200.0,
+		Category:PZBloodCure,
+		NeedToBeLearn:true,
+	}
+
+	recipe Open Box of Syringes
+	{
+		destroy BoxedSyringes,
+
+		Result:SyringeZempty=50,	
+		Time:100.0,
+		Category:PZBloodCure,
+	}
+	
+	recipe Make a Box of Syringes
+	{
+		destroy SyringeZempty=50,
+		SheetPaper2=4,
+		
+		Result:BoxedSyringes,	
+		Time:100.0,
+		Category:PZBloodCure,
+	}		
+}
