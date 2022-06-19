@@ -1,0 +1,374 @@
+module Base
+{
+
+    item Ghillie_Top
+    {
+        DisplayCategory = Clothing,
+		Type = Clothing,
+        DisplayName = Ghillie Suit Torso,
+        ClothingItem = Ghillie_Top,
+        BodyLocation = FullTop,
+        BloodLocation = Jacket,
+        Icon = JacketGhillie,
+        RunSpeedModifier = 0.75,
+        CombatSpeedModifier = 0.9,
+        BiteDefense = 10,
+        ScratchDefense = 30,
+        Insulation = 0.70,
+        WindResistance = 0.45,
+		FabricType = leather,
+        WaterResistance = 0.35,
+        Weight = 4,
+		WorldStaticModel = GhillieTop_Ground,
+    }
+    item JacketLong_Santa
+    {
+        DisplayCategory = Clothing,
+		Type = Clothing,
+        DisplayName = Santa Suit Jacket,
+        ClothingItem = JacketLong_Santa,
+        BodyLocation = Jacket,
+        BloodLocation = LongJacket,
+        Icon = JacketSantaRed,
+        RunSpeedModifier = 0.85,
+        CombatSpeedModifier = 0.9,
+        BiteDefense = 10,
+        ScratchDefense = 30,
+        NeckProtectionModifier = 0.5,
+        Insulation = 0.9,
+        WindResistance = 0.6,
+		FabricType = Cotton,
+        Weight = 3,
+		WorldStaticModel = JacketLong_Ground,
+    }
+    item JacketLong_SantaGreen
+    {
+        DisplayCategory = Clothing,
+		Type = Clothing,
+        DisplayName = Green Santa Suit Jacket,
+        ClothingItem = JacketLong_SantaGreen,
+        BodyLocation = Jacket,
+        BloodLocation = LongJacket,
+        Icon = JacketSantaGreen,
+        RunSpeedModifier = 0.85,
+        CombatSpeedModifier = 0.9,
+        BiteDefense = 10,
+        ScratchDefense = 30,
+        NeckProtectionModifier = 0.5,
+        Insulation = 0.9,
+        WindResistance = 0.6,
+		FabricType = Cotton,
+        Weight = 3,
+		WorldStaticModel = JacketLong_Ground,
+    }
+    item Jacket_Fireman
+    {
+		DisplayCategory = Clothing,
+        Type = Clothing,
+        DisplayName = Firefighter Jacket,
+        ClothingItem = Jacket_Fireman,
+        BodyLocation = Jacket,
+        Icon = JacketFireman,
+        BloodLocation = Jacket,
+        RunSpeedModifier = 0.87,
+        CombatSpeedModifier = 0.90,
+        BiteDefense = 50,
+        ScratchDefense = 70,
+        NeckProtectionModifier = 0.5,
+        Insulation = 0.85,
+        WindResistance = 0.85,
+		WaterResistance = 0.8,
+		FabricType = Leather,
+        Weight = 4,
+		WorldStaticModel = Jacket_Ground,
+    }
+    item Jacket_Padded
+    {
+        DisplayCategory = Clothing,
+		Type = Clothing,
+        DisplayName = Padded Jacket,
+        ClothingItem = Jacket_Padded,
+        BodyLocation = JacketHat,
+        Icon = JacketPadded_White,
+        BloodLocation = Jumper;FullHelmet,
+        RunSpeedModifier = 0.89,
+        CombatSpeedModifier = 0.96,
+        ClothingItemExtra = Jacket_PaddedDOWN,
+        ClothingItemExtraOption = DownHoodie,
+        BiteDefense = 10,
+        ScratchDefense = 20,
+        Insulation = 0.95,
+        WindResistance = 0.95,
+		FabricType = Leather,
+        WaterResistance = 0.60,
+        Weight = 3,
+		WorldStaticModel = Hoodie_Ground,
+    }
+    item Jacket_PaddedDOWN
+    {
+        DisplayCategory = Clothing,
+		Type = Clothing,
+        DisplayName = Padded Jacket,
+        ClothingItem = Jacket_PaddedDOWN,
+        BodyLocation = Jacket,
+        Icon = JacketPadded_White,
+        BloodLocation = Jacket,
+        RunSpeedModifier = 0.89,
+        CombatSpeedModifier = 0.96,
+        ClothingItemExtra = Jacket_Padded,
+        ClothingItemExtraOption = UpHoodie,
+        BiteDefense = 10,
+        ScratchDefense = 20,
+        NeckProtectionModifier = 0.5,
+        Insulation = 1.0,
+        WindResistance = 1.0,
+		FabricType = Leather,
+        WaterResistance = 0.60,
+        Weight = 3,
+		WorldStaticModel = Hoodie_Ground,
+    }
+    item PonchoGreen
+    {
+        DisplayCategory = Clothing,
+		Type = Clothing,
+        DisplayName = Poncho,
+        ClothingItem = PonchoGreen,
+        BodyLocation = JacketHat,
+        Icon = HoodieWhite,
+        ColorRed = 69,
+        ColorGreen = 98,
+        ColorBlue = 36,
+        BloodLocation = Shirt;FullHelmet;Trousers,
+        RunSpeedModifier = 0.9,
+        ClothingItemExtra = PonchoGreenDOWN,
+        ClothingItemExtraOption = DownHoodie,
+        clothingExtraSubmenu = UpHoodie,
+        ScratchDefense = 10,
+        Insulation = 0.1,
+        WindResistance = 0.75,
+		FabricType = Leather,
+        WaterResistance = 1.0,
+		WorldStaticModel = Poncho_Ground,
+    }
+    item PonchoGreenDOWN
+    {
+        DisplayCategory = Clothing,
+		Type = Clothing,
+        DisplayName = Poncho,
+        ClothingItem = PonchoGreenDOWN,
+        BodyLocation = Jacket,
+        Icon = HoodieWhite,
+        ColorRed = 69,
+        ColorGreen = 98,
+        ColorBlue = 36,
+        BloodLocation = Shirt;FullHelmet;Trousers,
+        RunSpeedModifier = 0.9,
+        ClothingItemExtra = PonchoGreen,
+        ClothingItemExtraOption = UpHoodie,
+		clothingExtraSubmenu = UpHoodie,
+        ScratchDefense = 10,
+        NeckProtectionModifier = 0.5,
+        Insulation = 0.15,
+        WindResistance = 0.8,
+		FabricType = Leather,
+        WaterResistance = 1.0,
+		WorldStaticModel = Poncho_Ground,
+    }
+    item PonchoYellow
+    {
+        DisplayCategory = Clothing,
+		Type = Clothing,
+        DisplayName = Poncho,
+        ClothingItem = PonchoYellow,
+        BodyLocation = JacketHat,
+        Icon = HoodieWhite,
+        ColorRed = 228,
+        ColorGreen = 195,
+        ColorBlue = 88,
+        BloodLocation = Shirt;FullHelmet;Trousers,
+        RunSpeedModifier = 0.9,
+        ClothingItemExtra = PonchoYellowDOWN,
+        ClothingItemExtraOption = DownHoodie,
+		clothingExtraSubmenu = UpHoodie,
+        ScratchDefense = 10,
+        Insulation = 0.1,
+        WindResistance = 0.75,
+		FabricType = Leather,
+        WaterResistance = 1.0,
+		WorldStaticModel = Poncho_Ground,
+    }
+    item PonchoYellowDOWN
+    {
+        DisplayCategory = Clothing,
+		Type = Clothing,
+        DisplayName = Poncho,
+        ClothingItem = PonchoYellowDOWN,
+        BodyLocation = Jacket,
+        Icon = HoodieWhite,
+        ColorRed = 228,
+        ColorGreen = 195,
+        ColorBlue = 88,
+        BloodLocation = Trousers;Shirt,
+        RunSpeedModifier = 0.9,
+        ClothingItemExtra = PonchoYellow,
+        ClothingItemExtraOption = UpHoodie,
+		clothingExtraSubmenu = UpHoodie,
+        NeckProtectionModifier = 0.5,
+        Insulation = 0.15,
+        WindResistance = 0.8,
+		FabricType = Leather,
+        WaterResistance = 1.0,
+		WorldStaticModel = Poncho_Ground,
+    }
+	
+    item Jacket_Shellsuit_Black
+    {
+        Type = Clothing,
+        DisplayName = Shell Suit Jacket,
+        ClothingItem = Jacket_Shellsuit_Black,
+        BodyLocation = Jacket,
+        Icon = TracksuitBlack,
+        BloodLocation = Jumper,
+        ScratchDefense = 5,
+        Insulation = 0.45,
+        WindResistance = 0.4,
+		FabricType = Denim,
+        Weight = 1,
+        WorldStaticModel = Jacket_Shellsuit_Ground,
+    }
+	
+	item Jacket_Shellsuit_Green
+    {
+        Type = Clothing,
+        DisplayName = Shell Suit Jacket,
+        ClothingItem = Jacket_Shellsuit_Green,
+        BodyLocation = Jacket,
+        Icon = TracksuitGreen,
+        BloodLocation = Jumper,
+        ScratchDefense = 5,
+        Insulation = 0.45,
+        WindResistance = 0.4,
+		FabricType = Denim,
+        Weight = 1,
+        WorldStaticModel = Jacket_Shellsuit_Ground,
+    }
+	
+	item Jacket_Shellsuit_Pink
+    {
+        Type = Clothing,
+        DisplayName = Shell Suit Jacket,
+        ClothingItem = Jacket_Shellsuit_Pink,
+        BodyLocation = Jacket,
+        Icon = TracksuitPink,
+        BloodLocation = Jumper,
+        ScratchDefense = 5,
+        Insulation = 0.45,
+        WindResistance = 0.4,
+		FabricType = Denim,
+        Weight = 1,
+        WorldStaticModel = Jacket_Shellsuit_Ground,
+    }
+	
+	item Jacket_Shellsuit_Teal
+    {
+        Type = Clothing,
+        DisplayName = Shell Suit Jacket,
+        ClothingItem = Jacket_Shellsuit_Teal,
+        BodyLocation = Jacket,
+        Icon = TracksuitTeal,
+        BloodLocation = Jumper,
+        ScratchDefense = 5,
+        Insulation = 0.45,
+        WindResistance = 0.4,
+		FabricType = Denim,
+        Weight = 1,
+        WorldStaticModel = Jacket_Shellsuit_Ground,
+    }
+	
+	item Jacket_Shellsuit_TINT
+    {
+        Type = Clothing,
+        DisplayName = Shell Suit Jacket,
+        ClothingItem = Jacket_Shellsuit_White,
+        BodyLocation = Jacket,
+        Icon = TracksuitGeneric,
+        BloodLocation = Jumper,
+        ScratchDefense = 5,
+        Insulation = 0.45,
+        WindResistance = 0.4,
+		FabricType = Denim,
+        Weight = 1,
+        WorldStaticModel = Jacket_Shellsuit_Ground,
+    }
+
+
+
+
+
+
+
+
+item Jacket_ArmyCamoDesert
+    {
+        DisplayCategory = Clothing,
+        Type = Clothing,
+        DisplayName = Military Desert Camo Jacket,
+        ClothingItem = Jacket_ArmyCamoDesert,
+        BodyLocation = Jacket,
+        BloodLocation = Neck;UpperBody;LowerBody;LowerArms;UpperArms,
+        Icon = ShirtCamoSand,
+        RunSpeedModifier = 0.94,
+        CombatSpeedModifier = 0.97,
+        BiteDefense = 30,
+        ScratchDefense = 50,
+     
+        Insulation = 0.35,
+        WindResistance = 0.1,
+        FabricType = Cotton,
+        WaterResistance = 0.2,
+        Weight = 2,
+        WorldStaticModel = JacketCoat_Ground,
+    }
+    item Jacket_ArmyCamoGreen
+    {
+        DisplayCategory = Clothing,
+        Type = Clothing,
+        DisplayName = Military Green Camo Jacket,
+        ClothingItem = Jacket_ArmyCamoGreen,
+        BodyLocation = Jacket,
+        Icon = ShirtCamoGreen,
+        BloodLocation = Neck;UpperBody;LowerBody;LowerArms;UpperArms,
+        RunSpeedModifier = 0.94,
+        CombatSpeedModifier = 0.97,
+        BiteDefense = 30,
+        ScratchDefense = 50,
+       
+        Insulation = 0.45,
+        WindResistance = 0.3,
+        FabricType = Cotton,
+        WaterResistance = 0.45,
+        Weight = 2,
+        WorldStaticModel = JacketCoat_Ground,
+    }
+ item Jacket_CoatArmy
+    {
+        DisplayCategory = Clothing,
+        Type = Clothing,
+        DisplayName = Army Coat,
+        ClothingItem = Jacket_CoatArmy,
+        BodyLocation = Jacket,
+        Icon = JacketArmyDress,
+        BloodLocation = Neck;UpperBody;LowerBody;UpperLegs;LowerArms;UpperArms;Groin,
+        RunSpeedModifier = 0.95,
+        BiteDefense = 20,
+        ScratchDefense = 40,
+    
+        Insulation = 0.70,
+        WindResistance = 0.45,
+        FabricType = Cotton,
+        WaterResistance = 0.55,
+        WorldStaticModel = JacketCoat_Ground,
+    }
+
+	
+}

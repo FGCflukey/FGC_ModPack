@@ -1,0 +1,136 @@
+module Base
+{
+	template vehicle SeatM113
+	{
+		part SeatFrontLeft
+		{
+			area = SeatFrontLeft,
+	repairMechanic = true,
+			container
+			{
+				seat = FrontLeft,
+			}
+		}
+		
+		part SeatCommander
+		{
+			area = SeatFrontRight,
+	repairMechanic = true,
+			container
+			{
+				seat = Commander,
+			}
+		}
+		
+		part SeatRearFrontLeft
+		{
+			area = TruckBed,
+	repairMechanic = true,
+			container
+			{
+				seat = RearFrontLeft,
+			}
+		}
+		
+		part SeatRearFrontRight
+		{
+			area = TruckBed,
+	repairMechanic = true,
+			container
+			{
+				seat = RearFrontRight,
+			}
+		}
+		
+		part SeatRearMiddleLeft
+		{
+			area = TruckBed,
+	repairMechanic = true,
+			container
+			{
+				seat = RearMiddleLeft,
+			}
+		}
+		
+		part SeatRearMiddleRight
+		{
+			area = TruckBed,
+	repairMechanic = true,
+			container
+			{
+				seat = RearMiddleRight,
+			}
+		}
+		
+		part SeatRearRearLeft
+		{
+			area = TruckBed,
+	repairMechanic = true,
+			container
+			{
+				seat = RearRearLeft,
+			}
+		}
+		
+		part SeatRearRearRight
+		{
+			area = TruckBed,
+	repairMechanic = true,
+			container
+			{
+				seat = RearRearRight,
+			}
+		}
+		
+		part Seat*
+		{
+			category = seat,
+	repairMechanic = true,
+			itemType = Base.NormalCarSeat,
+			mechanicRequireKey = true,
+			container
+			{
+				test = Vehicles.ContainerAccess.Seat,
+			}
+			table install
+			{
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 300,
+				skills = Mechanics:2,
+				recipes = Intermediate Mechanics,
+				test = Vehicles.InstallTest.Default,
+			}
+			table uninstall
+			{
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 300,
+				skills = Mechanics:2,
+				recipes = Intermediate Mechanics,
+				test = Vehicles.UninstallTest.Default,
+				requireEmpty = true,
+			}
+			lua
+			{
+				create = Vehicles.Create.Default,
+			}
+		}
+	}
+}

@@ -1,0 +1,87 @@
+module Base
+{
+	template vehicle SuspensionM113
+	{
+		part SuspensionFrontLeft
+		{
+			area = TireFrontLeft,
+	repairMechanic = true,
+		}
+
+		part SuspensionFrontRight
+		{
+			area = TireFrontRight,
+	repairMechanic = true,
+		}
+
+		part SuspensionRearLeft
+		{
+			area = TireRearLeft,
+	repairMechanic = true,
+		}
+
+		part SuspensionRearRight
+		{
+			area = TireRearRight,
+	repairMechanic = true,
+		}
+
+		part Suspension*
+		{
+			category = suspension,
+	repairMechanic = true,
+			itemType = Base.NormalM113Suspension;Base.ModernM113Suspension,
+			table install
+			{
+				items
+				{
+					1
+					{
+						type = Base.Jack,
+						count = 1,
+						keep = true,
+					}
+					2
+					{
+						type = Base.Wrench,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 300,
+				skills = Mechanics:6,
+				recipes = Intermediate Mechanics,
+				test = Vehicles.InstallTest.Default,
+			}
+			table uninstall
+			{
+				items
+				{
+					1
+					{
+						type = Base.Jack,
+						count = 1,
+						keep = true,
+					}
+					2
+					{
+						type = Base.Wrench,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 300,
+				skills = Mechanics:6,
+				recipes = Intermediate Mechanics,
+				test = Vehicles.UninstallTest.Default,
+			}
+			lua
+			{
+				create = Vehicles.Create.Default,
+				update = Vehicles.Update.Suspension,
+			}
+		}
+	}
+}

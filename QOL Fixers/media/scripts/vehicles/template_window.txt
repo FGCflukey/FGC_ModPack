@@ -1,0 +1,130 @@
+module Base
+{
+	template vehicle Window
+	{
+		part WindowFrontLeft
+		{
+			parent = DoorFrontLeft,
+			area = SeatFrontLeft,
+	repairMechanic = true,
+			itemType = Base.FrontWindow,
+			table install
+			{
+				requireInstalled = DoorFrontLeft,
+			}
+		}
+
+		part WindowFrontRight
+		{
+			parent = DoorFrontRight,
+			area = SeatFrontRight,
+	repairMechanic = true,
+			itemType = Base.FrontWindow,
+			table install
+			{
+				requireInstalled = DoorFrontRight,
+			}
+		}
+
+		part WindowMiddleLeft
+		{
+			parent = DoorMiddleLeft,
+			area = SeatMiddleLeft,
+	repairMechanic = true,
+			itemType = Base.RearWindow,
+			table install
+			{
+				requireInstalled = DoorMiddleLeft,
+			}
+		}
+
+		part WindowMiddleRight
+		{
+			parent = DoorMiddleRight,
+			area = SeatMiddleRight,
+	repairMechanic = true,
+			itemType = Base.RearWindow,
+			table install
+			{
+				requireInstalled = DoorMiddleRight,
+			}
+		}
+
+		part WindowRearLeft
+		{
+			parent = DoorRearLeft,
+			area = SeatRearLeft,
+	repairMechanic = true,
+			itemType = Base.RearWindow,
+			table install
+			{
+				requireInstalled = DoorRearLeft,
+			}
+		}
+
+		part WindowRearRight
+		{
+			parent = DoorRearRight,
+			area = SeatRearRight,
+	repairMechanic = true,
+			itemType = Base.RearWindow,
+			table install
+			{
+				requireInstalled = DoorRearRight,
+			}
+		}
+
+		part Window*
+		{
+			category = door,
+	repairMechanic = true,
+			mechanicRequireKey = true,
+			window
+			{
+				openable = true,
+			}
+			table install
+			{
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 300,
+				skills = Mechanics:3,
+				recipes = Basic Mechanics,
+				test = Vehicles.InstallTest.Default,
+				complete = Vehicles.InstallComplete.Window,
+			}
+			table uninstall
+			{
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 300,
+				skills = Mechanics:3,
+				recipes = Basic Mechanics,
+				test = Vehicles.UninstallTest.Default,
+				complete = Vehicles.UninstallComplete.Default,
+			}
+			lua
+			{
+				create = Vehicles.Create.Window,
+				init = Vehicles.Init.Window,
+			}
+		}
+	}
+}
+

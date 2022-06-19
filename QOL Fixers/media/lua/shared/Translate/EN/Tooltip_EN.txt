@@ -1,0 +1,11 @@
+Tooltip_EN = {
+	Tooltip_Extra_NewCondition = "New Condition",
+	Tooltip_FixGlassItems = "Used for making windshield repairs.",
+	Tooltip_BatteryCleaner = "Used to clean a car battery.",
+	Tooltip_UpholsteryKit = "Rugged Repair Kit for Upholstery.",
+	Tooltip_10EngineParts = "A box with 10 new engine parts.",
+	Tooltip_20EngineParts = "A box with 20 new engine parts.",
+	Tooltip_30EngineParts = "A box with 30 new engine parts.",
+	Tooltip_TubeRubberCement = "A tube of Rubber Cement for repairs.",
+	Tooltip_TubeSuperglue = "A tube of Superglue for repairs.",
+}

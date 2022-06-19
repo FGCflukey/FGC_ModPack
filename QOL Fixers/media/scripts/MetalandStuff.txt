@@ -1,0 +1,307 @@
+module Base
+{
+
+/************************ Organizing Sheet Metal ************************/
+
+	item SmallMetalSheetBox
+	{
+		Weight    			= 6.0,
+		Type   				= Normal,
+		DisplayName     	= Pallet of Small Metal Sheets,
+		icon 				= SmallMetalSheetBox,
+		ScaleWorldIcon 		= 1.0,
+	}
+
+	item SmallMetalSheetStack
+	{
+		Weight    			= 1.5,
+		Type   				= Normal,
+		DisplayName     	= Stack of Small Metal Sheets,
+		icon 				= SmallMetalSheetStack,
+		ScaleWorldIcon 		= 1.0,
+	}
+
+	item MetalSheetBox
+    {
+        Weight    			= 6.0,
+        Type   				= Normal,
+        DisplayName    		= Pallet of Metal Sheets,
+        icon 				= MetalSheetBox,
+		ScaleWorldIcon 		= 1.0,
+    }
+
+	item MetalPipeBox
+    {
+        Weight 				= 6.0,
+        Type 				= Normal,
+        DisplayName 		= Pallet of Metal Pipes,
+        Icon 				= MetalPipeBox,
+		ScaleWorldIcon 		= 1.0,
+    }
+
+	item MetalBarBox
+    {
+        Weight 				= 12,
+        Type 				= Normal,
+        DisplayName 		= Pallet of Metal Bars,
+        Icon 				= MetalBarBox,
+		ScaleWorldIcon 		= 1.0,
+    }
+
+
+/************************ Pack and Unpack Metal ************************/
+
+	recipe Pack Pallet of Metal Bars
+    {
+    	MetalBar=50,
+    	Rope=2,
+		Woodenpallet,
+		
+    	CanBeDoneFromFloor:true,
+    	Result:MetalBarBox,
+    	Time:150.0,
+    }
+	
+	recipe Unpack Pallet of Metal Bars
+    {
+    	MetalBarBox,
+
+		CanBeDoneFromFloor:true,		
+    	Result:MetalBar=50,
+    	Time:150.0,
+    	OnCreate:GiveBack_RopeAndPallet,
+    }
+
+	recipe Unpack Pallet of Metal Pipes
+    {
+    	MetalPipeBox,
+		
+		CanBeDoneFromFloor:true,
+    	Result:MetalPipe=12,
+    	Time:150.0,
+    	OnCreate:GiveBack_RopeAndPallet,
+    }
+
+	recipe Pack Pallet of Metal Pipes
+    {
+    	MetalPipe=12,
+    	Rope=2,
+		Woodenpallet,
+    	
+		CanBeDoneFromFloor:true,
+    	Result:MetalPipeBox,
+    	Time:150.0,
+    }
+
+	recipe Pack Pallet of Metal Sheets
+    {
+    	SheetMetal=10,
+    	Rope=2,
+		Woodenpallet,
+		
+    	CanBeDoneFromFloor:true,
+		Result:MetalSheetBox,
+    	Time:150.0,
+    }
+
+	recipe Unpack Pallet of Metal Sheets
+    {
+    	MetalSheetBox,
+
+		CanBeDoneFromFloor:true,
+    	Result:SheetMetal=10,
+    	Time:150.0,
+    	OnCreate:GiveBack_RopeAndPallet,
+    }
+
+	recipe Pack Pallet of Small Metal Sheets
+	{
+		SmallMetalSheetStack=4,
+		Rope=2,
+		Woodenpallet,
+
+		CanBeDoneFromFloor:true,
+		Result:SmallMetalSheetBox,
+		Time:150.0,
+	}
+
+	recipe Unpack Pallet of Small Metal Sheets
+	{
+		SmallMetalSheetBox,
+
+		CanBeDoneFromFloor:true,
+		Result:SmallMetalSheetStack=4,
+		Time:150.0,
+		OnCreate:GiveBack_RopeAndPallet,
+	}
+
+	recipe Pack Stack of Small Metal Sheets
+	{
+		SmallSheetMetal=8,
+		Rope=1,
+
+		CanBeDoneFromFloor:true,
+		Result:SmallMetalSheetStack,
+		Time:100.0,
+	}
+
+	recipe Unpack Stack of Small Metal Sheets
+	{
+		SmallMetalSheetStack,
+
+		CanBeDoneFromFloor:true,
+		Result:SmallSheetMetal=8,
+		Time:100.0,
+		OnCreate:GiveBack_OneRope,
+	}
+
+/************************ Recycle/Upgrade Car Parts ************************/
+
+	recipe Recycle Hood
+	{
+		destroy EngineDoor1/EngineDoor2/EngineDoor3,
+		BlowTorch=5,
+		keep WeldingMask,
+		
+		Result:SheetMetal=2,
+		Time:150.0,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+
+	recipe Recycle Trunk Lid
+	{
+		destroy TrunkDoor1/TrunkDoor2/TrunkDoor3,
+		BlowTorch=5,
+		keep WeldingMask,
+		
+		Result:SheetMetal=2,
+		Time:150.0,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+
+	recipe Recycle Muffler
+	{
+		destroy OldCarMuffler1/OldCarMuffler2/OldCarMuffler3/NormalCarMuffler1/NormalCarMuffler2/NormalCarMuffler3/ModernCarMuffler1/ModernCarMuffler2/ModernCarMuffler3,
+		BlowTorch=5,
+		keep WeldingMask,
+		
+		Result:SheetMetal=2,
+		Time:150.0,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+
+	recipe Recycle Gas Tank
+	{
+		destroy SmallGasTank1/SmallGasTank2/SmallGasTank3,
+		BlowTorch=5,
+		keep WeldingMask,
+		
+		Result:SheetMetal=1,
+		Time:150.0,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+
+	recipe Recycle Gas Tank
+	{
+		destroy NormalGasTank1/NormalGasTank2/NormalGasTank3/BigGasTank1/BigGasTank2/BigGasTank3,
+		BlowTorch=5,
+		keep WeldingMask,
+		
+		Result:SheetMetal=2,
+		Time:150.0,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+
+	recipe Recycle Suspension
+	{
+		destroy NormalSuspension1/NormalSuspension2/NormalSuspension3/ModernSuspension1/ModernSuspension2/ModernSuspension3,
+		BlowTorch=5,
+		keep WeldingMask,
+		
+		Result:ScrapMetal=4,
+		Time:150.0,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+
+	recipe Recycle Brake
+	{
+		destroy OldBrake1/OldBrake2/OldBrake3/NormalBrake1/NormalBrake2/NormalBrake3/ModernBrake1/ModernBrake2/ModernBrake3,
+		BlowTorch=5,
+		keep WeldingMask,
+		
+		Result:ScrapMetal=2,
+		Time:150.0,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+
+	recipe Recycle Door
+	{
+		destroy FrontCarDoor1/FrontCarDoor2/FrontCarDoor3/RearCarDoor1/RearCarDoor2/RearCarDoor3/RearCarDoorDouble1/RearCarDoorDouble2/RearCarDoorDouble3,
+		BlowTorch=5,
+		keep WeldingMask,
+		
+		Result:SmallSheetMetal=2,
+		Time:150.0,
+		OnCreate:GiveBack_ElectronicScrap,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+	
+	recipe Recycle Car Seat
+	{
+		destroy NormalCarSeat1/NormalCarSeat2/NormalCarSeat3,
+		keep Wrench,
+		keep Screwdriver,
+
+		Result:Thread=2,
+		Time:150.0,
+		OnCreate:GiveBack_CarSeatStuff,
+	}
+	
+	recipe Make Small Metal Sheet
+	{
+		keep WeldingMask,
+		BlowTorch=5,
+		WeldingRods=5,
+		ScrapMetal=5,
+		
+		Result:SmallSheetMetal=1,
+		Time:200.0,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+
+	recipe Make Metal Sheet
+	{
+		keep WeldingMask,
+		BlowTorch=10,
+		WeldingRods=5,
+		ScrapMetal=10,
+		
+		Result:SheetMetal=1,
+		Time:200.0,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+
+}
+
+
+

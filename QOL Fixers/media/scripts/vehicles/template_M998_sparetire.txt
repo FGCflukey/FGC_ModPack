@@ -1,0 +1,80 @@
+module Base
+{
+	model 92amgeneralM998spare
+	{
+		mesh = vehicles/Vehicles_92amgeneralM998_Body|HMMWV_sparetire,
+		texture = Vehicles/Vehicles_92amgeneralM998_Interior_Wheel,
+		shader = vehiclewheel,
+		scale = 0.1,
+	}
+
+	template vehicle M998SpareTire
+		{
+		part M998SpareTire
+        	{
+
+			model SpareTire
+				{
+                		file = 92amgeneralM998spare,
+				}
+
+			category = bodywork,
+			repairMechanic = true,
+			area = SpareTire,
+			specificItem = false,
+			itemType = Base.M998SpareTireMount_Item,
+			mechanicRequireKey = false,
+
+
+			{
+				create = Vehicles.Create.Default,
+			}
+
+			table install
+			{
+                	items
+                	{
+                    	1
+                    		{
+                        	type = Base.Wrench,
+                        	count = 1,
+                        	keep = true,
+				equip = primary,
+                    		}
+                	}
+
+                	time = 1200,
+                	skills = Mechanics:1,
+                	recipes = Intermediate Mechanics,
+                	test = Vehicles.InstallTest.Default,
+            		}
+
+            		table uninstall
+            		{
+                	items
+                	{
+                    	1
+                    		{
+  				type = Base.Wrench,
+				count = 1,
+				keep = true,
+				equip = primary,
+                    		}
+                	}
+
+			time = 1000,
+			skills = Mechanics:1,
+			recipes = Intermediate Mechanics,
+            		test = Vehicles.UninstallTest.Default,
+
+            		}
+
+            lua
+            {
+			create = Vehicles.Create.Default,
+			}
+		}
+	}
+
+		
+}

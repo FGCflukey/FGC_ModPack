@@ -1,0 +1,46 @@
+module Base
+{
+
+	item DozenJarsBox
+	{
+		Weight				= 3.0,
+		Type				= Normal,
+		DisplayName			= 12x Jars Box,
+		Icon				= DozenJarsBox,
+	}
+
+	recipe Make Box of Jars
+	{
+		EmptyJar=6,
+		JarLid=6,
+		
+		Result:BoxOfJars,
+		NeedToBeLearn:false,
+		Time:90.0,
+		Category:Storage,
+	}
+	
+	recipe Make 12-Pack Box of Jars
+	{
+		EmptyJar=12,
+		JarLid=12,
+		
+		Result:DozenJarsBox,
+		NeedToBeLearn:false,
+		Time:90.0,
+		Category:Storage,
+	}
+
+	recipe Open 12-Pack Box of Jars
+	{
+		destroy DozenJarsBox,
+		
+		Result:EmptyJar=12,
+		OnCreate:Give12JarLids_OnCreate,
+		NeedToBeLearn:false,
+		Time:90.0,
+		Category:Storage,
+	}
+
+}
+

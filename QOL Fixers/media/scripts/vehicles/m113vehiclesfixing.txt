@@ -1,0 +1,58 @@
+module Base
+{
+	fixing Fix M113 Door Welding
+	{
+	   Require : FrontM113Door1;FrontM113Door2;FrontM113Door3;RearM113Door1;RearM113Door2;RearM113Door3;EngineM113Door1;EngineM113Door2;EngineM113Door3,
+		   GlobalItem : BlowTorch=5,
+	   ConditionModifier : 1.2,
+
+       Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+       Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+
+	fixing Fix M113 Door
+	{
+	   Require : x,
+	   ConditionModifier : 0.4,
+
+       Fixer : DuctTape=2;Mechanics=3,
+       Fixer : Glue=2;Mechanics=3,
+	}
+
+    fixing Fix M113 Glove box
+	{
+	   Require : M113GloveBox1;M113GloveBox2;M113GloveBox3,
+
+       Fixer : DuctTape=2;Mechanics=4,
+       Fixer : Glue=2;Mechanics=4,
+	}
+	
+	fixing Fix M113 Periscope
+	{
+	   Require : M113FrontWindow1;M113FrontWindow2;M113FrontWindow3,
+	   GlobalItem : BlowTorch=5,
+	   ConditionModifier : 1.2,
+
+       Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+       Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+	
+	fixing Fix M113 Suspension
+	{
+	   Require : NormalM113Suspension1;ModernM113Suspension1;NormalM113Suspension2;ModernM113Suspension2;NormalM113Suspension3;ModernM113Suspension3,
+	   ConditionModifier : 1.2,
+
+       Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+       Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+	
+	fixing Fix M113 Brake
+	{
+	   Require : OldM113Brake1;NormalM113Brake1;ModernM113Brake1;OldM113Brake2;NormalM113Brake2;ModernM113Brake2;OldM113Brake3;NormalM113Brake3;ModernM113Brake3,
+	   GlobalItem : BlowTorch=5,
+   ConditionModifier : 1.2,
+
+       Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+       Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+}

@@ -1,0 +1,78 @@
+module Base
+{
+	template vehicle M911TrunkCompartment
+	{
+		part M911Trunk
+		{
+			category = bodywork,
+			area = TruckBed,
+			itemType = Base.M911Trunk,
+			mechanicRequireKey = true,
+			repairMechanic = true,
+			container
+			{
+				conditionAffectsCapacity = false,
+				test = Vehicles.ContainerAccess.TruckBed,
+			}
+			lua
+			{
+				create = Vehicles.Create.Default,
+			}
+		}
+
+		part M911Toolbox
+		{
+			category = bodywork,
+			area = TruckBed,
+			itemType = Base.M911Toolbox,
+			mechanicRequireKey = true,
+			repairMechanic = true,
+			container
+			{
+				conditionAffectsCapacity = false,
+				test = Vehicles.ContainerAccess.TruckBed,
+			}
+			lua
+			{
+				create = Vehicles.Create.Default,
+			}
+		}
+
+		part M911SpareTire
+		{
+			category = bodywork,
+			area = TruckBed,
+			itemType = Base.M911SpareTire,
+			mechanicRequireKey = true,
+			repairMechanic = true,
+			container
+			{
+				conditionAffectsCapacity = false,
+				test = Vehicles.ContainerAccess.TruckBed,
+			}
+			lua
+			{
+				create = Vehicles.Create.Default,
+			}
+		}
+
+		part TruckBed
+		{
+			category = nodisplay,
+			itemType = Base.M911Extra,
+			mechanicRequireKey = true,
+			repairMechanic = true,
+			container
+			{
+				conditionAffectsCapacity = false,
+				test = Vehicles.ContainerAccess.TruckBed,
+			}
+			lua
+			{
+			}
+		}
+
+	}
+
+}
+

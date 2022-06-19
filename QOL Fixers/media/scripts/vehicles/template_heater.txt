@@ -1,0 +1,16 @@
+module Base
+{
+	template vehicle Heater
+	{
+		part Heater
+		{
+			category = engine,
+	repairMechanic = true,
+			lua
+			{
+				update = Vehicles.Update.Heater,
+			}
+		}
+	}
+}
+

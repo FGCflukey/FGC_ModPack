@@ -1,0 +1,102 @@
+module Base
+{
+
+/************************ Craft House Keys ************************/
+
+	recipe Make Key (Silver)
+	{
+		SkillRequired:MetalWelding=3,
+		keep Screwdriver,
+		keep Saw/Hydrocraft.HCSawmetal,
+		SmallSheetMetal,
+		
+		Result:Key2,
+		Time:300.0,
+		Category:Locksmithing,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+	}
+
+	recipe Make Key (Gold)
+	{
+		SkillRequired:MetalWelding=3,
+		keep Screwdriver,
+		keep Saw/Hydrocraft.HCSawmetal,
+		SmallSheetMetal,
+		
+		Result:Key3,
+		Time:300.0,
+		Category:Locksmithing,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+	}
+
+	recipe Make Key (Copper)
+	{
+		SkillRequired:MetalWelding=3,
+		keep Screwdriver,
+		keep Saw/Hydrocraft.HCSawmetal,
+		SmallSheetMetal,
+		
+		Result:Key4,
+		Time:300.0,
+		Category:Locksmithing,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+	}
+
+/************************ House Key Security ************************/
+
+	recipe Alter Doorknob to Match Key
+    {
+		SkillRequired:Mechanics=1,
+    	destroy Screwdriver,
+		keep Doorknob,
+		keep Key1/Key2/Key3/Key4/Key5,
+		
+    	Result:Screwdriver,
+		OnCreate:matchDoorknobtoKey,
+    	Time:500.0,
+    	Category:Locksmithing,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    }
+
+	recipe Alter Key to Match Doorknob
+    {
+		SkillRequired:Mechanics=1,
+    	destroy Screwdriver,
+		keep Doorknob,
+		keep Key1/Key2/Key3/Key4/Key5,
+		
+    	Result:Screwdriver,
+		OnCreate:matchKeytoDoorknob,
+    	Time:500.0,
+    	Category:Locksmithing,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    }
+
+/************************ Craft Car Keys + Remove Hotwire ************************/
+
+	recipe Make Car key
+	{
+		SkillRequired:MetalWelding=4,
+		keep Screwdriver,
+		SheetMetal,
+		
+		Result:Screwdriver,
+		OnCreate:addKey,
+		RemoveResultItem:true,
+		Time:500,
+		Category:Locksmithing,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+	}
+
+	recipe Unhotwire Vehicle
+	{
+		SkillRequired:Electricity=1,
+		SkillRequired:Mechanics=2,
+		destroy Screwdriver,
+		
+		Result:Screwdriver,
+		OnCreate:unHotwire,
+		Time:200,
+	}
+
+}

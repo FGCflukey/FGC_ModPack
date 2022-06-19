@@ -1,0 +1,50 @@
+module Base
+{
+	template vehicle TireM113Fake
+	{
+		part TireFrontLeft
+		{
+			wheel = FrontLeft,
+	repairMechanic = true,
+		}
+
+		part TireFrontRight
+		{
+			wheel = FrontRight,
+	repairMechanic = true,
+		}
+
+		part TireRearLeft
+		{
+			wheel = RearLeft,
+	repairMechanic = true,
+		}
+
+		part TireRearRight
+		{
+			wheel = RearRight,
+	repairMechanic = true,
+		}
+
+		part Tire*
+		{
+			category = nodisplay,
+			itemType = Base.M113Tire,
+	repairMechanic = true,
+			container
+			{
+				capacity = 35,
+				test = Vehicles.ContainerAccess.Tire,
+				contentType = Air,
+			}
+			
+			lua
+			{
+				create = Vehicles.Create.Tire,
+				init = Vehicles.Init.Tire,
+				checkOperate = Vehicles.CheckOperate.Tire,
+			}
+		}
+	}
+}
+

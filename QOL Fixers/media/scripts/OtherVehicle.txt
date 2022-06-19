@@ -1,0 +1,738 @@
+module Base
+{
+	item BatteryCleaner
+	{
+        Weight				= 0.2,
+        Type	            = Drainable,
+        UseDelta	        = 0.02,
+        UseWhileEquipped	= FALSE,
+		DisplayName	        = Battery Cleaning Kit,
+		DisplayCategory 	= VehicleMaintenance,
+        Icon				= BatteryCleaner,
+        cantBeConsolided    = TRUE,
+		Tooltip             = Tooltip_BatteryCleaner,
+	}
+
+    item BigGlassPanel
+    {
+        Weight				= 1.5,
+        Type				= Normal,
+        DisplayName			= Big Glass Panel,
+		DisplayCategory 	= VehicleMaintenance,
+        Icon				= BigGlassPanel,
+		Tooltip 			= Tooltip_FixGlassItems,
+    }
+
+    item SmallGlassPanel
+    {
+		DisplayCategory 	= VehicleMaintenance,
+        Weight				= 0.4,
+        Type				= Normal,
+        DisplayName			= Small Glass Panel,
+        Icon				= SmallGlassPanel,
+		Tooltip 			= Tooltip_FixGlassItems,
+    }
+
+	item GlassCutter
+	{
+		MaxRange					= 0.8,
+		WeaponSprite				= GlassCutter,
+		MinAngle					= 0.65,
+		Type						= Weapon,
+		MinimumSwingTime			= 2,
+		SwingAmountBeforeImpact		= 0.02,
+		Categories					= SmallBlade,
+		Weight						= 0.3,
+		ConditionLowerChanceOneIn	= 1,
+		PushBackMod					= 0.3,
+		SubCategory					= Swinging,
+		AimingMod					= 0.8,
+		ConditionMax				= 3,
+		MaxHitCount					= 1,
+		IsAimedHandWeapon			= TRUE,
+		DoorDamage					= 1,
+		SwingAnim					= Bat,
+		DisplayName					= Glass Cutter,
+		MinRange					= 0.2,
+		SwingTime					= 2,
+		KnockdownMod				= 0,
+		Icon						= GlassCutter,
+		RunAnim						= Run_Weapon2,
+        IdleAnim					= Idle_Weapon2,
+		TreeDamage  				= 0,
+		EnduranceMod 				= 0.5,
+		MetalValue 					= 5,
+		CriticalChance				= 0,
+		MinDamage					= 0.1,
+        MaxDamage					= 0.1,
+		WeaponLength 				= 0.17,
+		AttachmentType 				= Screwdriver,
+        BreakSound					= BreakMetalItem,
+ 	}
+	
+	recipe Cut Glass Panel in Half
+	{
+		destroy BigGlassPanel,
+		keep GlassCutter,
+		
+		Result:SmallGlassPanel=2,
+		Time:150.0,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,		
+	}
+
+    recipe Make FrontCarDoor1
+    {
+        SheetMetal=4,
+		BlowTorch=14,
+		WeldingRods=4,
+		MetalBar=2,
+		keep WeldingMask,
+		
+		
+        Result:FrontCarDoor1,
+        Time:2500.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make FrontCarDoor2
+    {
+        SheetMetal=6,
+		BlowTorch=16,
+		WeldingRods=4,
+		MetalBar=2,
+		keep WeldingMask,
+		
+		
+        Result:FrontCarDoor2,
+        Time:2500.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make FrontCarDoor3
+    {
+        SheetMetal=3,
+		BlowTorch=12,
+		WeldingRods=3,
+		MetalBar=2,
+		keep WeldingMask,
+		
+		
+        Result:FrontCarDoor3,
+        Time:2500.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make RearCarDoor1
+    {
+        SheetMetal=4,
+		BlowTorch=14,
+		WeldingRods=4,
+		MetalBar=2,
+		keep WeldingMask,
+	
+        Result:RearCarDoor1,
+        Time:2500.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make RearCarDoor2
+    {
+        SheetMetal=6,
+		BlowTorch=16,
+		WeldingRods=5,
+		MetalBar=2,
+		keep WeldingMask,
+		
+        Result:RearCarDoor2,
+        Time:2500.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make RearCarDoor3
+    {
+        SheetMetal=3,
+		BlowTorch=12,
+		WeldingRods=3,
+		MetalBar=2,
+		keep WeldingMask,
+		
+        Result:RearCarDoor3,
+        Time:2500.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make RearCarDoorDouble1
+    {
+        SheetMetal=10,
+		BlowTorch=20,
+		WeldingRods=8,
+		MetalBar=4,
+		keep WeldingMask,
+		
+        Result:RearCarDoorDouble1,
+        Time:2500.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make RearCarDoorDouble2
+    {
+        SheetMetal=12,
+		BlowTorch=25,
+		WeldingRods=10,
+		MetalBar=4,
+		keep WeldingMask,
+		
+        Result:RearCarDoorDouble2,
+        Time:2500.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make RearCarDoorDouble3
+    {
+        SheetMetal=12,
+		BlowTorch=25,
+		WeldingRods=6,
+		MetalBar=4,
+		keep WeldingMask,
+		
+        Result:RearCarDoorDouble3,
+        Time:2500.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make SmallGasTank1
+    {
+        SheetMetal=3,
+		SmallSheetMetal=2,
+		BlowTorch=6,
+		WeldingRods=2,
+		MetalPipe=1,
+		keep WeldingMask,
+		
+        Result:SmallGasTank1,
+        Time:2000.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+    recipe Make SmallGasTank2
+    {
+        SheetMetal=3,
+		SmallSheetMetal=2,
+		BlowTorch=6,
+		WeldingRods=2,
+		MetalPipe=1,
+		keep WeldingMask,
+		
+        Result:SmallGasTank2,
+        Time:2000.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+    recipe Make SmallGasTank3
+    {
+        SheetMetal=3,
+		SmallSheetMetal=2,
+		BlowTorch=6,
+		WeldingRods=2,
+		MetalPipe=1,
+		keep WeldingMask,
+		
+        Result:SmallGasTank3,
+        Time:2000.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make NormalGasTank1
+    {
+        SheetMetal=4,
+		SmallSheetMetal=2,
+		BlowTorch=8,
+		WeldingRods=2,
+		MetalPipe=1,
+		keep WeldingMask,
+		
+        Result:NormalGasTank1,
+        Time:2000.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make NormalGasTank2
+    {
+        SheetMetal=4,
+		SmallSheetMetal=2,
+		BlowTorch=8,
+		WeldingRods=2,
+		MetalPipe=1,
+		keep WeldingMask,
+	
+        Result:NormalGasTank2,
+        Time:2000.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make NormalGasTank3
+    {
+        SheetMetal=4,
+		SmallSheetMetal=2,
+		BlowTorch=8,
+		WeldingRods=2,
+		MetalPipe=1,
+		keep WeldingMask,
+		
+        Result:NormalGasTank3,
+        Time:2000.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make BigGasTank1
+    {
+        SheetMetal=5,
+		SmallSheetMetal=3,
+		BlowTorch=10,
+		WeldingRods=3,
+		MetalPipe=1,
+		keep WeldingMask,
+		
+        Result:BigGasTank1,
+        Time:2000.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make BigGasTank2
+    {
+        SheetMetal=5,
+		SmallSheetMetal=3,
+		BlowTorch=10,
+		WeldingRods=3,
+		MetalPipe=1,
+		keep WeldingMask,
+		
+        Result:BigGasTank2,
+        Time:2000.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make BigGasTank3
+    {
+        SheetMetal=5,
+		SmallSheetMetal=3,
+		BlowTorch=10,
+		WeldingRods=3,
+		MetalPipe=1,
+		keep WeldingMask,
+		
+        Result:BigGasTank3,
+        Time:2000.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make OldCarMuffler1
+    {
+		SmallSheetMetal=3,
+		BlowTorch=5,
+		WeldingRods=2,
+		MetalPipe=1,
+		keep WeldingMask,
+		
+        Result:OldCarMuffler1,
+        Time:2000.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make OldCarMuffler2
+    {
+		SmallSheetMetal=3,
+		BlowTorch=5,
+		WeldingRods=2,
+		MetalPipe=1,
+		keep WeldingMask,
+		
+        Result:OldCarMuffler2,
+        Time:2000.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make OldCarMuffler3
+    {
+		SmallSheetMetal=3,
+		BlowTorch=5,
+		WeldingRods=2,
+		MetalPipe=1,
+		keep WeldingMask,
+		
+        Result:OldCarMuffler3,
+        Time:2000.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make NormalCarMuffler1
+    {
+		SmallSheetMetal=4,
+		BlowTorch=5,
+		WeldingRods=3,
+		MetalPipe=1,
+		keep WeldingMask,
+		
+        Result:NormalCarMuffler1,
+        Time:2000.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make NormalCarMuffler2
+    {
+		SmallSheetMetal=4,
+		BlowTorch=5,
+		WeldingRods=3,
+		MetalPipe=1,
+		keep WeldingMask,
+		
+        Result:NormalCarMuffler2,
+        Time:2000.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make NormalCarMuffler3
+    {
+		SmallSheetMetal=4,
+		BlowTorch=5,
+		WeldingRods=3,
+		MetalPipe=1,
+		keep WeldingMask,
+		
+        Result:NormalCarMuffler3,
+        Time:2000.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make ModernCarMuffler1
+    {
+		SmallSheetMetal=5,
+		BlowTorch=8,
+		WeldingRods=3,
+		MetalPipe=2,
+		keep WeldingMask,
+		
+        Result:ModernCarMuffler1,
+        Time:2000.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make ModernCarMuffler2
+    {
+		SmallSheetMetal=5,
+		BlowTorch=8,
+		WeldingRods=3,
+		MetalPipe=2,
+		keep WeldingMask,
+		
+        Result:ModernCarMuffler2,
+        Time:2000.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make ModernCarMuffler3
+    {
+		SmallSheetMetal=5,
+		BlowTorch=8,
+		WeldingRods=3,
+		MetalPipe=2,
+		keep WeldingMask,
+		
+        Result:ModernCarMuffler3,
+        Time:2000.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make TrunkDoor1
+    {
+		SheetMetal=4,
+		BlowTorch=8,
+		WeldingRods=4,
+		MetalPipe=4,
+		keep WeldingMask,
+		
+        Result:TrunkDoor1,
+        Time:2000.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make TrunkDoor2
+    {
+		SheetMetal=6,
+		BlowTorch=8,
+		WeldingRods=4,
+		MetalPipe=6,
+		keep WeldingMask,
+		
+        Result:TrunkDoor2,
+        Time:2000.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make TrunkDoor3
+    {
+		SheetMetal=4,
+		BlowTorch=8,
+		WeldingRods=4,
+		MetalPipe=4,
+		keep WeldingMask,
+		
+        Result:TrunkDoor3,
+        Time:2000.0,
+		SkillRequired:MetalWelding=10;Mechanics=10;,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make Windshield1
+    {
+		BigGlassPanel=2,
+		keep GlassCutter,
+		
+        Result:Windshield1,
+        Time:2000.0,
+		SkillRequired:Mechanics=10,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make Windshield2
+    {
+		BigGlassPanel=3,
+		keep GlassCutter,
+		
+        Result:Windshield2,
+        Time:2000.0,
+		SkillRequired:Mechanics=10,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make Windshield3
+    {
+		BigGlassPanel=2,
+		keep GlassCutter,
+		
+        Result:Windshield3,
+        Time:2000.0,
+		SkillRequired:Mechanics=10,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make RearWindshield1
+    {
+		BigGlassPanel=2,
+		keep GlassCutter,
+		
+        Result:RearWindshield1,
+        Time:2000.0,
+		SkillRequired:Mechanics=10,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make RearWindshield2
+    {
+		BigGlassPanel=3,
+		keep GlassCutter,
+		
+        Result:RearWindshield2,
+        Time:2000.0,
+		SkillRequired:Mechanics=10,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make RearWindshield3
+    {
+		BigGlassPanel=2,
+		keep GlassCutter,
+		
+        Result:RearWindshield3,
+        Time:2000.0,
+		SkillRequired:Mechanics=10,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make FrontWindow1
+    {
+		SmallGlassPanel=2,
+		keep GlassCutter,
+		
+        Result:FrontWindow1,
+        Time:2000.0,
+		SkillRequired:Mechanics=10,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make FrontWindow2
+    {
+		SmallGlassPanel=3,
+		keep GlassCutter,
+		
+        Result:FrontWindow2,
+        Time:2000.0,
+		SkillRequired:Mechanics=10,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make FrontWindow3
+    {
+		SmallGlassPanel=2,
+		keep GlassCutter,
+		
+        Result:FrontWindow3,
+        Time:2000.0,
+		SkillRequired:Mechanics=10,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make RearWindow1
+    {
+		SmallGlassPanel=2,
+		keep GlassCutter,
+		
+        Result:RearWindow1,
+        Time:2000.0,
+		SkillRequired:Mechanics=10,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make RearWindow2
+    {
+		SmallGlassPanel=3,
+		keep GlassCutter,
+		
+        Result:RearWindow2,
+        Time:2000.0,
+		SkillRequired:Mechanics=10,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make RearWindow3
+    {
+		SmallGlassPanel=2,
+		keep GlassCutter,
+		
+        Result:RearWindow3,
+        Time:2000.0,
+		SkillRequired:Mechanics=10,
+		CanBeDoneFromFloor:true,
+        Category:Mechanics,
+		OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+	fixing Fix Car Battery
+	{
+	   Require : CarBattery1;CarBattery2;CarBattery3,
+	   ConditionModifier : 1.2,
+
+       Fixer : BatteryCleaner=1;Mechanics=1,
+	}
+}

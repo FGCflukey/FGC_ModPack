@@ -1,0 +1,286 @@
+module Autotsar
+{
+    imports
+    {
+        Base
+    }
+
+	fixing Fix Motorbike Tire
+	{
+		Require : ATAMotoHarleyModernTire;ATAMotoHarleyNormalTire;ATAMotoHarleyOldTire;ATAMotoBMWModernTire;ATAMotoBMWNormalTire;ATAMotoBMWOldTire,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=2; Tailoring=3;Mechanics=1,
+		Fixer : Rubbercement=2; Tailoring=3;Mechanics=1,
+	}
+	
+    fixing Fix Motorbike seat 2
+    {
+		Require : ATAMotoBMWSeat;ATAMotoBMWSeatCustom;ATAMotoHarleySeat;ATAMotoQuadSeat,
+		GlobalItem : UpholsteryKit=2,
+		ConditionModifier : 1.2,
+
+		Fixer : LeatherStrips=2;Tailoring=2;Mechanics=2,
+    }
+
+    fixing Fix Standard Seat
+	{
+		Require : NormalCarSeat1;NormalCarSeat2;NormalCarSeat3,
+		GlobalItem : UpholsteryKit=2,
+		ConditionModifier : 1.2,
+
+		Fixer : LeatherStrips=2;Tailoring=2;Mechanics=2,
+	}
+	
+	fixing Motorbike Accessories
+	{
+		Require : ATAMotoBagBMW1;ATAMotoBagBMW2;ATAMotoHarleyBag;ATAMotoHarleyHolster,
+		GlobalItem : UpholsteryKit=2,
+		ConditionModifier : 1.2,
+
+		Fixer : LeatherStrips=2;Tailoring=2;Mechanics=2,
+	}
+	
+	fixing Mustang Bullbar
+	{
+		Require : ATAMustangBullbar3Item;ATAMustangBullbar1Item;ATAMustangBullbar2Item,
+		
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+
+	fixing Mustang Window Protection
+	{
+		Require : ATAMustangProtectionWindowLeftItem;ATAMustangProtectionWindowRightItem;ATAMustangProtectionWindowFrontItem;ATAMustangProtectionWindowRearItem,
+		
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+	
+	fixing Jeep Bumper
+	{
+		Require : ATAJeepBumper1Item;ATAJeepBumper2Item;ATAJeepBumper3Item;ATAJeepBumper4Item,
+		
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+
+	fixing Jeep Window Protection
+	{
+		Require : ATAJeepProtectionWindowItem;ATAJeepProtectionWindowFrontItem;ATAJeepProtectionWindowRearItem,
+		
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+	
+	fixing Jeep Roof Rack
+	{
+		Require : ATAJeepRoofBaseItem;ATAJeepInteractiveTrunkRoofRackItem,
+		
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+
+	fixing Jeep Trunk Wheel
+	{
+		Require : ATAJeepInteractiveTrunkWheelRackItem,
+		
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+	
+	fixing Truck Sleeper
+	{
+		Require : ATAPetyarbuiltProtectionSleeperItem,
+		
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}	
+
+	fixing Truck Rear Wheel Protection
+	{
+		Require : ATAPetyarbuiltProtectionRearWheelsItem,
+		
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}	
+
+	fixing Truck Gas Tank Protection
+	{
+		Require : ATAPetyarbuiltProtectionGasTankItem,
+		
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+
+	fixing Truck Side Protection
+	{
+		Require : ATAPetyarbuiltProtectionSideItem,
+		
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+
+	fixing Truck Side Front Protection
+	{
+		Require : ATAPetyarbuiltProtectionSideFrontItem,
+		
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+
+	fixing Truck Side Top Protection
+	{
+		Require : ATAPetyarbuiltProtectionSideTopItem,
+		
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+
+	fixing Dodge Roof Rack
+	{
+		Require : ATADodgeRoofRackItem,
+		
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+
+	fixing Dodge Window Rack
+	{
+		Require : ATADodgeWindowRackItem,
+		
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+
+	fixing Dodge Bullbar
+	{
+		Require : ATADodgeBullbar1Item;ATADodgeBullbar2Item;ATADodgeBullbar3Item,
+		
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+
+	fixing Dodge Window Protection
+	{
+		Require : ATADodgeProtectionWindowSideItem;ATADodgeProtectionWindowFrontItem,
+		
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+
+	fixing Bus Roof Rack
+	{
+		Require : ATABusRoofRack,
+		
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+
+	fixing Bus Roof Box
+	{
+		Require : ATABusRoofBoxItem,
+		
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+
+	fixing Bus Bullbar
+	{
+		Require : ATABusKengur1Item;ATABusKengur2Item;ATABusKengur3Item,
+		
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+
+	fixing Bus Door Protection
+	{
+		Require : ATABusProtectionDoorItem;ATABusProtectionDoorRearItem,
+		
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+	
+	fixing Bus Wheel Protection
+	{
+		Require : ATABusProtectionWheelsItem,
+		
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+	
+	fixing Bus Window Protection
+	{
+		Require : ATABusProtectionWindowsFrontItem;ATABusProtectionWindowsRightItem;ATABusProtectionWindowsLeftItem,
+		
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+	}
+
+}

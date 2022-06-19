@@ -1,0 +1,184 @@
+module QOLfixers
+{
+	imports
+	{
+		Base,
+	}
+
+	item MySoymilk
+    {
+		DisplayCategory 	= Food,
+		Type				= Food,
+		DisplayName			= Package of Soy Milk,
+		Weight				= 1.0,
+		ThirstChange 		= -50,
+		HungerChange 		= -20,
+		DaysTotallyRotten	= 250,
+		DaysFresh 			= 150,
+		Icon				= MySoymilk,
+		FoodType    		= NoExplicit,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromCarton,
+		Carbohydrates 		= 33,
+        Proteins 			= 29,
+        Lipids 				= 17,
+        Calories 			= 410,
+		CantBeFrozen 		= TRUE,
+		Packaged 			= TRUE,
+        WorldStaticModel 	= JuiceBox,
+    }
+	
+	item MyRicepuddingpot
+	{
+		HungerChange		= -50,
+		Weight				= 4,
+		Type				= Food,
+		IsCookable			= TRUE,
+		UnhappyChange		= -20,
+		MinutesToCook		= 90,
+		MinutesToBurn		= 140,
+		DisplayName			= Pot of Rice Pudding,
+		ReplaceOnUse		= Pot,
+		Icon				= PotFull,
+		BoredomChange		= -20,
+		DaysTotallyRotten	= 7,
+		DaysFresh 			= 3,
+		CustomContextMenu 	= Eat,
+		FoodType    		= NoExplicit,
+		Carbohydrates 		= 500,
+		Proteins 			= 64,
+		Lipids 				= 74,
+		Calories 			= 2920,
+	}
+
+	item MyRicepuddingbowl
+	{
+		HungerChange		= -35,
+		Weight				= 1,
+		Type				= Food,
+		UnhappyChange		= -5,
+		IsCookable			= TRUE,
+		MinutesToCook		= 90,
+		MinutesToBurn		= 140,
+		DisplayName			= Bowl of Rice Pudding,
+		ReplaceOnUse		= Bowl,
+		Icon				= MyRicebowl,
+		BoredomChange		= -5,
+		DaysTotallyRotten	= 7,
+		DaysFresh 			= 3,
+		CustomContextMenu 	= Eat,
+		FoodType    		= NoExplicit,
+		Carbohydrates 		= 125,
+		Proteins 			= 16,
+		Lipids 				= 18.5,
+		Calories 			= 730,
+	}
+
+	item MyCoco
+	{
+		Weight				= 1,
+		Type				= Drainable,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.2,
+		DisplayName			= Cocoa Powder,
+		Icon				= MyCoco,
+	}
+
+	item MyCococup
+	{
+		HungerChange		= -20,
+		UnhappyChange		= -10,
+		StressChange		= -10,
+		Weight				= 0.5,
+		Type				= Food,
+		ThirstChange		= -50,
+		DisplayName			= Cup of Hot Chocolate,
+		ReplaceOnUse		= Mugl,
+		Icon				= MyCococup,
+		CustomContextMenu 	= Drink,
+		FoodType			= NoExplicit,
+        Carbohydrates 		= 225,
+        Proteins 			= 9,
+        Lipids 				= 45,
+        Calories 			= 1200,
+        CantBeFrozen 		= TRUE,
+	}
+
+	item MyBowlofcereal
+	{
+		HungerChange		= -20,
+		ThirstChange		= -20,
+		UnhappyChange		= -10,
+		Weight				= 0.2,
+		Type				= Food,
+		DaysFresh 			= 3,
+		DaysTotallyRotten	= 3,
+		DisplayName			= Bowl of Cereal,
+		ReplaceOnUse		= Bowl,
+		DaysFresh			= 1,
+		Icon				= MyCerealbowl,	
+		FoodType    		= NoExplicit,
+		Carbohydrates 		= 15,
+        Proteins 			= 2,
+        Lipids 				= 2,
+        Calories 			= 255,
+		CantBeFrozen 		= TRUE,
+	}
+	
+	recipe Make Cup of Hot Chocolate
+	{
+		Mugl,
+		Milk/MySoymilk,
+		MyCoco,
+		Result:MyCococup,
+		Time:70.0,
+	   	Category:Cooking,
+       	OnGiveXP:Recipe.OnGiveXP.MyCooking5,	  
+	}
+
+	recipe Make Bowl of Cereal
+	{
+		Cereal,
+		Milk/MySoymilk,
+		Bowl,
+		Result:MyBowlofcereal,
+		Time:50.0,
+	   	Category:Cooking,
+		OnGiveXP:Recipe.OnGiveXP.MyCooking5,
+	}
+	
+	recipe Make Pot of Rice Pudding
+	{
+       	SkillRequired:Cooking=1,
+		destroy WaterPot,
+		Rice,
+		Sugar,
+		Milk/MySoymilk,
+		Result:MyRicepuddingpot,
+		Time:95.0,
+		Category:Cooking,
+		OnGiveXP:Recipe.OnGiveXP.MyCooking5,
+	}
+	
+	recipe Fill Rice Pudding into Bowls
+	{
+		destroy Bowl=4,
+		MyRicepuddingpot,
+		Result:MyRicepuddingbowl=4,
+		Time:50.0,
+		Category:Cooking,
+		OnCreate:recipe_mypot,
+		OnGiveXP:Recipe.OnGiveXP.MyCooking5,
+	}
+
+    	recipe Make Mildew Spray
+	{
+		farming.GardeningSprayEmpty,
+		Base.Milk/MySoymilk,
+
+		Result:farming.GardeningSprayMilk,
+		Time:40.0,
+		Category:Farming,
+	}
+
+}

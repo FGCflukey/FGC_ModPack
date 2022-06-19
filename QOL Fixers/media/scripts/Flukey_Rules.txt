@@ -1,0 +1,14 @@
+module FLUKEY
+{
+        item FlukeysRules
+	{
+		DisplayCategory = Literature,
+		Weight = 0.1,
+		Type = Map,
+		DisplayName = Flukeys Server Rules,
+		Icon = Flyer,
+		Tooltip = Tooltip_FlukeysRules,
+		Map = FLUKEY_rules,
+		WorldStaticModel = EvacuationFlyer,
+	}
+}

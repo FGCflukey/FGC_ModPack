@@ -1,0 +1,81 @@
+module Base
+{
+	template vehicle WindowM113
+	{
+		part WindowFrontLeft
+		{
+			area = SeatFrontLeft,
+	repairMechanic = true,
+		}
+
+		part WindowFrontRight
+		{
+			area = SeatFrontLeft,
+	repairMechanic = true,
+		}
+
+
+		part WindowRearLeft
+		{
+			area = SeatFrontLeft,
+	repairMechanic = true,
+		}
+		
+		part WindowRearRight
+		{
+			area = SeatFrontLeft,
+	repairMechanic = true,
+		}
+
+		part Window*
+		{
+			itemType = Base.M113FrontWindow,
+			category = bodywork,
+	repairMechanic = true,
+			window
+			{
+				openable = false,
+			}
+			table install
+			{
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 300,
+				skills = Mechanics:4,
+				recipes = Intermediate Mechanics,
+				test = Vehicles.InstallTest.Default,
+				complete = Vehicles.InstallComplete.Window,
+			}
+			table uninstall
+			{
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 300,
+				skills = Mechanics:4,
+				recipes = Intermediate Mechanics,
+				test = Vehicles.UninstallTest.Default,
+			}
+			lua
+			{
+				create = Vehicles.Create.Window,
+			}
+		}
+	
+	}
+}

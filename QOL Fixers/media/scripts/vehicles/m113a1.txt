@@ -1,0 +1,399 @@
+module Base
+{
+	model Vehicles_m113_hull
+	{
+		mesh = Vehicles_m113|Hull_Base,
+		shader = vehicle,
+		invertX = FALSE,
+		scale = 0.003,
+	}
+
+    vehicle m113a1
+    {
+        mechanicType = 2,
+        offRoadEfficiency = 4,
+        engineRepairLevel = 5,
+		engineRPMType = van,
+        playerDamageProtection = 4,
+
+      /* The first model is always used as the vehicle's model. */
+
+        model
+        {
+            file = Vehicles_m113_hull,
+            scale = 1.86,
+            offset = 0 0.20 0.0640,
+        }
+
+       /* List the different skins for this vehicle here.
+          A random skin will be chosen when a vehicle is first created.*/
+        
+		
+		/* Plain Olive */
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_olive_01,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_olive_02,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_olive_03,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_olive_04,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_olive_05,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_olive_06,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_olive_07,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_olive_08,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_olive_09,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_olive_10,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_olive_11,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_olive_12,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_olive_13,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_olive_14,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_olive_15,
+        }
+		
+		/* Woodlands Camo */
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_woodlands_01,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_woodlands_02,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_woodlands_03,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_woodlands_04,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_woodlands_05,
+        }
+		
+		/* Medevac */
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_medevac_01,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_medevac_02,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_medevac_03,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_medevac_04,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_medevac_05,
+        }
+		
+		/* Inscriptions */
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_inscription_01,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_inscription_02,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_inscription_03,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_inscription_04,
+        }
+		skin
+        {
+            texture = Vehicles/vehicle_m113shell_inscription_05,
+        }
+		
+		textureMask = Vehicles/vehicle_m113_mask,
+        textureLights = Vehicles/vehicle_m113_lights,	
+        textureRust = Vehicles/vehicle_m113_rust,	
+        textureDamage1Overlay = Vehicles/vehicle_m113overlays_damaged_01,
+        textureDamage1Shell = Vehicles/vehicle_m113shell_damaged_01,
+        textureDamage2Overlay = Vehicles/vehicle_m113overlays_damaged_02,
+        textureDamage2Shell = Vehicles/vehicle_m113shell_damaged_02,
+		
+		
+			
+        sound
+        {
+            horn = vehicle_horn2,
+        }
+
+        extents = 1.011 0.635 1.88,
+		mass = 1300,
+		shadowOffset = 0.1 0.1 0.2 0.2,
+		physicsChassisShape = 1.011 0.635 1.88,
+		centerOfMassOffset = 0.0000 0.3022 0.0850,
+		engineForce = 6000,
+		engineQuality= 80,
+		engineLoudness = 160,
+		gearRatioCount = 4,
+		gearRatioR = 2.7,
+		gearRatio1 = 2.7,
+		gearRatio2 = 2.0,
+		gearRatio3 = 1.5,
+		gearRatio4 = 1.0,
+		maxSpeed = 30f,
+		brakingForce = 40,
+		rollInfluence = 0.5f,
+		steeringIncrement = 0.04,
+		steeringClamp = 0.15,
+		suspensionStiffness = 200,
+		suspensionCompression = 7.83,
+		suspensionDamping = 6.88,
+		maxSuspensionTravelCm = 10,
+		suspensionRestLength = 0.5,
+		wheelFriction = 3.5f,
+		frontEndHealth = 2000,
+		rearEndHealth = 1800,
+		seats = 8,
+
+		wheel FrontLeft
+		{
+			front = true,
+			offset = 0.38 -0.26 0.2382,
+			radius = 0.15f,
+			width = 0.2f,
+		}
+
+		wheel FrontRight
+		{
+			front = true,
+			offset = -0.38 -0.26 0.2382,
+			radius = 0.15f,
+			width = 0.2f,
+		}
+
+		wheel RearLeft
+		{
+			front = false,
+			offset = 0.38 -0.26 -0.3722,
+			radius = 0.15f,
+			width = 0.2f,
+		}
+
+		wheel RearRight
+		{
+			front = false,
+			offset = -0.38 -0.26 -0.3722,
+			radius = 0.15f,
+			width = 0.2f,
+		}
+
+		template = PassengerSeatM113,
+		
+		area Engine
+		{
+			xywh = 0.0000 1.2497 0.8681 0.4725,
+		}
+
+		area TruckBed
+		{
+			xywh = 0.0000 -1.1 0.8 0.5,
+		}
+
+		area SeatFrontLeft
+		{
+			xywh = 0.743 0.413 0.4725 0.4725,
+		}
+		
+		area SeatFrontRight
+		{
+			xywh = -0.743 0.06 0.4725 0.4725,
+		}
+
+		area GasTank
+		{
+			xywh = -0.743 -0.5879 0.4725 0.4725,
+		}
+
+		area TireFrontLeft
+		{
+			xywh = 0.743 0.7582 0.4725 0.4725,
+		}
+
+		area TireFrontRight
+		{
+			xywh = -0.743 0.7582 0.4725 0.4725,
+		}
+
+		area TireRearLeft
+		{
+			xywh = 0.743 -0.5879 0.4725 0.4725,
+		}
+
+		area TireRearRight
+		{
+			xywh = -0.743 -0.5879 0.4725 0.4725,
+		}
+
+		template = SeatM113,
+
+		part GloveBox
+		{
+			area = ,
+			itemType = Base.M113GloveBox,
+			mechanicRequireKey = true,
+
+			container
+			{
+				capacity = 5,
+				test = Vehicles.ContainerAccess.GloveBox,
+			}
+
+			lua
+			{
+				create = Vehicles.Create.Default,
+			}
+		}
+
+		template = GasTankM113,
+		template = Battery,
+		template = Engine,
+		
+		part Engine
+		{
+			category = nodisplay,
+		}
+		
+		template = Muffler,
+
+		part Muffler
+		{
+			area = TireFrontRight,
+		
+			table install
+			{
+				recipes = Intermediate Mechanics,
+			}
+
+			table uninstall
+			{
+				recipes = Intermediate Mechanics,
+			}
+		}
+
+		template = EngineDoorM113,
+
+		part Heater
+		{
+			category = engine,
+
+			lua
+			{
+				update = Vehicles.Update.Heater,
+			}
+		}
+
+		part PassengerCompartment
+		{
+			category = nodisplay,
+
+			lua
+			{
+				update = Vehicles.Update.PassengerCompartment,
+			}
+		}
+
+		template = Windshield/part/Windshield,
+
+		part Windshield
+		{
+			itemType = Base.M113FrontWindow,
+		
+			table install
+			{
+				skills = Mechanics:6,
+				recipes = Intermediate Mechanics,
+			}
+
+			table uninstall
+			{
+				skills = Mechanics:6,
+				recipes = Intermediate Mechanics,
+			}
+		}
+
+		template = WindowM113,
+		template = DoorM113,	
+		template = TireM113Fake,	
+		template = BrakeM113,	
+		template = SuspensionM113,
+		template = Radio,
+		
+		part Radio*
+		{
+			itemType = Radio.HamRadio2,
+		}
+		
+		template = Headlight,
+		
+		attachment trailer
+		{
+			offset = 0.0000 -0.24 -0.95,
+			rotate = 0.0000 0.0000 0.0000,
+			zoffset = -1,
+		}
+
+		attachment trailerfront
+		{
+			offset = 0.0000 -0.24 1.1374,
+			rotate = 0.0000 0.0000 0.0000,
+			zoffset = 1,
+		}
+	}
+
+}﻿

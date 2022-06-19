@@ -1,0 +1,71 @@
+module Base
+{
+
+	fixing Fix Kitchen Knife 
+	{
+	   Require : KitchenKnife,
+	   GlobalItem : BlowTorch=5,
+
+       Fixer : SmallSheetMetal=1;MetalWelding=2;,
+	   Fixer : ScrapMetal=1;MetalWelding=3;,
+	}
+	
+	fixing Fix Axe 
+	{
+	   Require : Axe,
+	   GlobalItem : BlowTorch=5,
+	   ConditionModifier : 1.2,
+	   
+       Fixer : SmallSheetMetal=1;MetalWelding=2;,
+	   Fixer : ScrapMetal=1;MetalWelding=3;,
+	}
+	
+	fixing Fix Hunting Knife 
+	{
+	   Require : HuntingKnife,
+	   GlobalItem : BlowTorch=5,
+
+       Fixer : SmallSheetMetal=1;MetalWelding=2;,
+	   Fixer : ScrapMetal=1;MetalWelding=3;,
+	}
+	
+	fixing Fix Hammer
+	{
+	   Require : Hammer,
+	   GlobalItem : BlowTorch=5,
+
+       Fixer : ScrapMetal=1;MetalWelding=3;,
+	}
+	
+	fixing Fix Screwdriver
+	{
+	   Require : Screwdriver,
+	   GlobalItem : BlowTorch=5,
+
+       Fixer : ScrapMetal=1;MetalWelding=3;,
+	}
+	
+	fixing Fix Crowbar
+	{
+	   Require : Crowbar,
+	   GlobalItem : BlowTorch=5,
+
+       Fixer : ScrapMetal=1;MetalWelding=3;,
+	}
+	
+	recipe Build An Axe
+	{
+	   TreeBranch,
+	   SmallSheetMetal=3,
+	   BlowTorch=5,
+	   keep Saw,
+	   keep WeldingMask,
+
+	   Result:Axe,
+	   SkillRequired:Woodwork=4;MetalWelding=2,
+	   Sound:Hammering,
+	   Time:200.0,
+	   Category:Carpentry,
+	   OnGiveXP:Give10MWXP,
+	}
+}

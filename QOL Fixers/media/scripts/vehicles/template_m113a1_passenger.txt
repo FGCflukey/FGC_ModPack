@@ -1,0 +1,502 @@
+module Base
+{
+	template vehicle PassengerPositionM113
+	{
+		passenger FrontLeft
+		{
+			position inside
+			{
+				offset = 0.25 0.0 0.35,
+				rotate = 0.0000 0.0000 0.0000,
+			}
+
+			position outside
+			{
+				offset = 0.67 -0.42 0.35,
+				rotate = 0.0000 0.0000 0.0000,
+				area = SeatFrontLeft,
+			}
+		}
+		
+		passenger Commander
+		{
+			position inside
+			{
+				offset = 0.0 0.0 -0.1,
+				rotate = 0.0000 0.0000 0.0000,
+			}
+
+			position outside
+			{
+				offset = -0.67 -0.42 0.0,
+				rotate = 0.0000 0.0000 0.0000,
+				area = SeatFrontRight,
+			}
+		}
+		
+		passenger RearFrontLeft
+		{
+			position inside
+			{
+				offset = 0.3 0.0 -0.3,
+				rotate = 0.0000 90 0.0000,
+			}
+
+			position outside
+			{
+				offset = 0.0 -0.42 -1,
+				rotate = 0.0000 0.0000 0.0000,
+				area = TruckBed,
+			}
+		}
+		
+		passenger RearFrontRight
+		{
+			position inside
+			{
+				offset = -0.3 0.0 -0.3,
+				rotate = 0.0000 -90 0.0000,
+			}
+
+			position outside
+			{
+				offset = 0.0 -0.42 -1,
+				rotate = 0.0000 0.0000 0.0000,
+				area = TruckBed,
+			}
+		}
+		
+		passenger RearMiddleLeft
+		{
+			position inside
+			{
+				offset = 0.3 0.0 -0.5,
+				rotate = 0.0000 90 0.0000,
+			}
+
+			position outside
+			{
+				offset = 0.0 -0.42 -1,
+				rotate = 0.0000 0.0000 0.0000,
+				area = TruckBed,
+			}
+		}
+		
+		passenger RearMiddleRight
+		{
+			position inside
+			{
+				offset = -0.3 0.0 -0.5,
+				rotate = 0.0000 -90 0.0000,
+			}
+
+			position outside
+			{
+				offset = 0.0 -0.42 -1,
+				rotate = 0.0000 0.0000 0.0000,
+				area = TruckBed,
+			}
+		}
+		
+		passenger RearRearLeft
+		{
+			position inside
+			{
+				offset = 0.3 0.0 -0.7,
+				rotate = 0.0000 90 0.0000,
+			}
+
+			position outside
+			{
+				offset = 0.0 -0.42 -1,
+				rotate = 0.0000 0.0000 0.0000,
+				area = TruckBed,
+			}
+		}
+		
+		passenger RearRearRight
+		{
+			position inside
+			{
+				offset = -0.3 0.0 -0.7,
+				rotate = 0.0000 -90 0.0000,
+			}
+
+			position outside
+			{
+				offset = 0.0 -0.42 -1,
+				rotate = 0.0000 0.0000 0.0000,
+				area = TruckBed,
+			}
+		}
+	}
+
+	template vehicle PassengerSeatM113
+	{
+		template = PassengerPositionM113,
+		
+		passenger FrontLeft
+		{
+			door = DoorFrontLeft,
+			area = SeatFrontLeft, /* Used for zombie attacks */
+			
+			switchSeat Commander
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+
+		}
+		
+		passenger Commander
+		{
+			door = DoorFrontRight,
+			area = SeatFrontRight,
+			
+			switchSeat FrontLeft
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearFrontLeft
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearFrontRight
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearMiddleLeft
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearMiddleRight
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearRearLeft
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearRearRight
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+
+		}
+		
+		passenger RearFrontLeft
+		{
+			door = ,
+			area = TruckBed,
+			
+			switchSeat Commander
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearFrontRight
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearMiddleLeft
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearMiddleRight
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearRearLeft
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearRearRight
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+
+		}
+		
+		passenger RearFrontRight
+		{
+			door = ,
+			area = TruckBed,
+			
+			switchSeat Commander
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearFrontLeft
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearMiddleLeft
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearMiddleRight
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearRearLeft
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearRearRight
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+		}
+		
+		passenger RearMiddleLeft
+		{
+			door = ,
+			area = TruckBed,
+			
+			switchSeat Commander
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearFrontLeft
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearFrontRight
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearMiddleRight
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearRearLeft
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearRearRight
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+
+		}
+		
+		passenger RearMiddleRight
+		{
+			door = ,
+			area = TruckBed,
+			
+			switchSeat Commander
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearFrontLeft
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearFrontRight
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearMiddleLeft
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearRearLeft
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearRearRight
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+		}
+		
+		passenger RearRearLeft
+		{
+			door = DoorRear,
+			area = TruckBed,
+			
+			switchSeat Commander
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearFrontLeft
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearFrontRight
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearMiddleLeft
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearMiddleRight
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearRearRight
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+
+		}
+		
+		passenger RearRearRight
+		{
+			door = DoorRear,
+			area = TruckBed,
+			
+			switchSeat Commander
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearFrontLeft
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearFrontRight
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearMiddleLeft
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearMiddleRight
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+			
+			switchSeat RearRearLeft
+			{
+				anim = Climb_WindowB,
+				rate = 0.23,
+				sound = ,
+			}
+		}
+		
+		template! = PassengerCommon,
+	
+	}
+}

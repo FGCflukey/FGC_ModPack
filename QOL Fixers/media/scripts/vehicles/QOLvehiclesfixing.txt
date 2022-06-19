@@ -1,0 +1,259 @@
+module Base
+{
+fixing Fix Gas Tank Welding
+{
+		Require : SmallGasTank1;NormalGasTank1;BigGasTank1;SmallGasTank2;NormalGasTank2;BigGasTank2;SmallGasTank3;NormalGasTank3;BigGasTank3;SmallGasTank8;NormalGasTank8;BigGasTank8,
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
+}
+
+fixing Fix Trailer Welding
+{
+		Require : TrailerTrunk1;TrailerTrunk2;TrailerTrunk3;FRTrailerTrunk1;FRTrailerTrunk2;FRTrailerTrunk3,
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
+}
+
+fixing Fix Trunk Welding
+{
+	   Require : SmallTrunk1;NormalTrunk1;BigTrunk1;SmallTrunk2;NormalTrunk2;BigTrunk2;SmallTrunk3;NormalTrunk3;BigTrunk3;FRTinyTrunk1;FRTinyTrunk2;FRTinyTrunk3;FRTinyTrunk8;FRSmallTrunk1;FRSmallTrunk2;FRSmallTrunk3;FRSmallTrunk8;FRNormalTrunk1;FRNormalTrunk2;FRNormalTrunk3;FRNormalTrunk8;FRBigTrunk1;FRBigTrunk2;FRBigTrunk3;FRBigTrunk8;FRLargeTrunk1;FRLargeTrunk2;FRLargeTrunk3;FRLargeTrunk8;FRCargoTrunk1;FRCargoTrunk2;FRCargoTrunk3;FRCargoTrunk8;FRSideContainer1;FRSideContainer2;FRSideContainer3;FRSideContainer8;FRXLCargoTrunk1;FRXLCargoTrunk2;FRXLCargoTrunk3;FRXLCargoTrunk8;FRTrailerTrunk1;FRTrailerTrunk2;FRTrailerTrunk3;M911Trunk2;M911Toolbox2;M911SpareTire2;M911Extra2;M998Trunk2;M998Extra2;M101A3Trunk2;M101A3Extra2,
+	   ConditionModifier : 1.2,
+
+	   Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+	   Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
+}
+
+fixing Fix Hood Welding
+{
+	   Require : EngineDoor1;EngineDoor2;EngineDoor3;EngineDoor8;M998EngineDoor2,
+	   GlobalItem : BlowTorch=5,
+	   ConditionModifier : 1.2,
+
+	   Fixer : SheetMetal; MetalWelding=1;Mechanics=2,
+	   Fixer : SmallSheetMetal=2; MetalWelding=1;Mechanics=2,
+}
+
+fixing Fix Hood
+{
+	   Require : EngineDoor1;EngineDoor2;EngineDoor3;EngineDoor8;M998EngineDoor2,
+	   GlobalItem : Screws=8,
+	   ConditionModifier : 0.5,
+
+	   Fixer : SheetMetal; Mechanics=2,
+}
+
+fixing Fix Trunk Lid Welding
+{
+	   Require : TrunkDoor1;TrunkDoor2;TrunkDoor3;TrunkDoor8;M998TrunkDoor2;M101A3TrunkDoor2;M101A3TrunkDoorTwo2,
+	   GlobalItem : BlowTorch=5,
+	   ConditionModifier : 1.2,
+
+	   Fixer : SheetMetal; MetalWelding=1;Mechanics=2,
+	   Fixer : SmallSheetMetal=2; MetalWelding=1;Mechanics=2,
+}
+
+fixing Fix Trunk Lid
+{
+	   Require : TrunkDoor1;TrunkDoor2;TrunkDoor3;TrunkDoor8;M998TrunkDoor2;M101A3TrunkDoor2;M101A3TrunkDoorTwo2,
+	   GlobalItem : Screws=8,
+	   ConditionModifier : 0.5,
+
+	   Fixer : SheetMetal; Mechanics=2,
+}
+
+fixing Fix Door Welding
+{
+	   Require : FrontCarDoor1;FrontCarDoor2;FrontCarDoor3;RearCarDoor1;RearCarDoor2;RearCarDoor3;RearCarDoorDouble1;RearCarDoorDouble2;RearCarDoorDouble3;FrontCarDoor8;RearCarDoor8;RearCarDoorDouble8;M998CarFrontDoor2;M998CarRearDoor2,
+	   GlobalItem : BlowTorch=5,
+	   ConditionModifier : 1.2,
+
+	   Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+	   Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
+}
+
+fixing Fix Glove box
+{
+	   Require : GloveBox1;GloveBox2;GloveBox3;GloveBox8,
+
+	   Fixer : SmallSheetMetal=1;MetalWelding=3;Mechanics=2,
+	   Fixer : DuctTape=2;Mechanics=1,
+	   Fixer : Glue=2;Mechanics=1,
+}
+
+fixing Fix Car seat
+{
+		Require : NormalCarSeat1;BigCarSeat1;SportCarSeat1;NormalCarSeat2;BigCarSeat2;SportCarSeat2;NormalCarSeat3;BigCarSeat3;SportCarSeat3;NormalCarSeat8;BigCarSeat8;SportCarSeat8;M998CarSeat2,
+		ConditionModifier : 1.2,
+
+	 
+		Fixer : Superglue=2;Tailoring=3;Mechanics=1,
+		Fixer : Rubbercement=2;Tailoring=3;Mechanics=1,
+		Fixer : DuctTape=2;Tailoring=3;Mechanics=1,
+}
+
+fixing Fix Heater
+{
+	   Require : Heater,
+	   ConditionModifier : 1.2,
+
+	   Fixer : ElectronicsScrap=2;Electricity=1,
+}
+
+fixing Fix Tire
+{
+	   Require : OldTire1;NormalTire1;ModernTire1;OldTire2;NormalTire2;ModernTire2;OldTire3;NormalTire3;ModernTire3;OldTire8;NormalTire8;ModernTire8;V100Tire2;V100Tires2;V100SmallTires2;V100Axle2;V100AxleSmall2;V101Tire2,
+	   ConditionModifier : 1.2,
+
+       Fixer : Superglue=2; Tailoring=3;Mechanics=1,
+       Fixer : Rubbercement=2; Tailoring=3;Mechanics=1,
+}
+
+fixing Fix Brake
+{
+	   Require : OldBrake1;NormalBrake1;ModernBrake1;OldBrake2;NormalBrake2;ModernBrake2;OldBrake3;NormalBrake3;ModernBrake3;OldBrake8;NormalBrake8;ModernBrake8,
+	   GlobalItem : BlowTorch=5,
+	   ConditionModifier : 1.2,
+
+       Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+       Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
+}
+
+fixing Fix Battery
+{
+		Require : CarBattery1;CarBattery2;CarBattery3;CarBattery8,
+		
+		Fixer : ElectronicsScrap=6;Electricity=2,
+}
+
+fixing Fix Suspension
+{
+		Require : NormalSuspension1;ModernSuspension1;NormalSuspension2;ModernSuspension2;NormalSuspension3;ModernSuspension3;NormalSuspension8;ModernSuspension8;leafSuspension2,
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
+}
+
+fixing Fix Window
+{
+		Require : FrontWindow1;RearWindow1;FrontWindow2;RearWindow2;FrontWindow3;RearWindow3;FrontWindow8;RearWindow8;M998SideWindow2,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=1;MetalWelding=3;Mechanics=2,
+		Fixer : Rubbercement=2;MetalWelding=3;Mechanics=2,
+}
+
+fixing Fix Windshield
+{
+		Require : Windshield1;RearWindshield1;Windshield2;RearWindshield2;Windshield3;RearWindshield3;Windshield8;RearWindshield8;M998Windshield2,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=2;MetalWelding=3;Mechanics=2,
+		Fixer : Rubbercement=2;MetalWelding=3;Mechanics=2,
+
+}
+
+fixing Fix Headlight
+{
+		Require : LightBulb,
+		
+		Fixer : ElectronicsScrap=1;Electricity=1,
+}
+
+fixing Fix Muffler
+{
+		Require : OldCarMuffler1;NormalCarMuffler1;ModernCarMuffler1;OldCarMuffler2;NormalCarMuffler2;ModernCarMuffler2;OldCarMuffler3;NormalCarMuffler3;ModernCarMuffler3;OldCarMuffler8;NormalCarMuffler8;ModernCarMuffler8;M998Muffler1_Item;M998Muffler2_Item,
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
+}
+
+fixing Fix M998Bullbar
+{
+		Require : M998Bullbar1_Item;M998Bullbar2_Item,
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
+}
+
+fixing Fix M998TrunkbarrierMetal
+{
+		Require : M998TrunkBarrier1_Item,
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
+}
+
+fixing Fix M998TrunkbarrierNet
+{
+		Require : M998TrunkBarrier2_Item,
+
+		Fixer : DuctTape=2;Tailoring=3;Mechanics=1,
+		Fixer : Woodglue=2;Tailoring=3;Mechanics=1,
+		Fixer : Glue=2;Tailoring=3;Mechanics=1,
+}
+
+
+fixing Fix M998Sparemount
+{
+		Require : M998SpareMount_Item;M998SpareTireMount_Item,
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
+}
+
+fixing Fix M998Cover
+{
+		Require : M998BackCover1_Item,
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
+}
+
+fixing Fix M998Interior
+{
+		Require : M998DefaultInterior2,
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
+}
+
+fixing Fix M103Hardcover
+{
+		Require : M101A3Cover1_Item,
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
+}
+
+fixing Fix M103Softcover
+{
+		Require : M101A3Tarp1_Item,
+
+		Fixer : DuctTape=2;Tailoring=3;Mechanics=1,
+		Fixer : Woodglue=2;Tailoring=3;Mechanics=1,
+		Fixer : Glue=2;Tailoring=3;Mechanics=1,
+}
+
+}

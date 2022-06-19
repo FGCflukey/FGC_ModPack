@@ -1,0 +1,78 @@
+module Base
+{
+	model TrailerM101A3sparefront
+	{
+		mesh = vehicles/Trailers_M101A3_Body|M101A3_frontsparetire,
+		texture = vehicles/TrailerM101A3cargo_wheel_extra,
+		shader = vehiclewheel,
+		scale = 0.1,
+	}
+
+	template vehicle M101A3Spares
+		{
+		part M101A3Spare
+        	{
+
+			model Spare1
+				{
+                		file = TrailerM101A3sparefront,
+				}
+
+			area = SpareTireFront,
+repairMechanic = true,
+			category = bodywork,
+			specificItem = false,
+			itemType = Base.M998SpareTireMount_Item,
+			mechanicRequireKey = false,
+
+			table install
+			{
+                	items
+                	{
+                    	1
+                    		{
+                        	type = Base.Wrench,
+                        	count = 1,
+                        	keep = true,
+				equip = primary,
+                    		}
+                	}
+
+                	time = 2000,
+                	skills = Mechanics:4,
+                	recipes = Intermediate Mechanics,
+                	test = Vehicles.InstallTest.Default,
+			complete = M101A3.InstallComplete.Spare,
+            		}
+
+            		table uninstall
+            		{
+                	items
+                	{
+                    	1
+                    		{
+  				type = Base.Wrench,
+				count = 1,
+				keep = true,
+				equip = primary,
+                    		}
+                	}
+
+			time = 2000,
+			skills = Mechanics:4,
+			recipes = Intermediate Mechanics,
+                	test = Vehicles.UninstallTest.Default,
+			complete = M101A3.UninstallComplete.Spare,
+            		}
+
+            		lua
+            		{
+			create = M101A3.Create.Spare,
+			init = M101A3.Init.Spare,
+			}
+		}
+
+	}
+
+		
+}

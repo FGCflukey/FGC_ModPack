@@ -1,0 +1,474 @@
+module Base
+{
+	/* I also defined the parts for "sport" and "standard" because I'm afraid the game might explode if I don't. */
+	
+	/* Spawn the "2" variant of the parts, as that's Heavy-Duty. */
+	
+	
+	/************************ "Tires" ************************/
+
+	
+	/* Invincible as the player cannot service them */
+	/* Tire pressure is considered max for friction 10 below max, and naturally spawns at 3/4, so by setting max to 11 tires will always have perfect pressure. */
+	
+    item M113Tire1
+    {
+        Weight	=	15.0,
+        Type	=	Normal,
+        DisplayName	=	M113 Clutch,
+        Icon	=	CarTire,
+        VehicleType =   1,
+        MaxCapacity = 11,
+        ChanceToSpawnDamaged = 0,
+        WheelFriction = 1.6,
+        ConditionMax = 100,
+        ConditionLowerStandard = 0.0,
+        ConditionLowerOffroad = 0.0,
+        MechanicsItem = TRUE,
+    }
+
+    item M113Tire2
+    {
+        Weight	=	15.0,
+        Type	=	Normal,
+        DisplayName	=	M113 Clutch,
+        Icon	=	CarTire,
+        VehicleType =   2,
+        MaxCapacity = 11,
+        ChanceToSpawnDamaged = 0,
+        WheelFriction = 1.6,
+        ConditionMax = 100,
+        ConditionLowerStandard = 0.0,
+        ConditionLowerOffroad = 0.0,
+        MechanicsItem = TRUE,
+    }
+
+    item M113Tire3
+    {
+        Weight	=	15.0,
+        Type	=	Normal,
+        DisplayName	=	M113 Clutch,
+        Icon	=	CarTire,
+        VehicleType =   3,
+        MaxCapacity = 11,
+        ConditionMax = 100,
+        ChanceToSpawnDamaged = 0,
+        ConditionLowerStandard = 0.0,
+        ConditionLowerOffroad = 0.0,
+        WheelFriction = 1.8,
+        MechanicsItem = TRUE,
+    }
+	
+	
+	/************************ Brake ************************/
+	
+	item OldM113Brake1
+    {
+        Weight	=	5.0,
+        Type	=	Normal,
+        DisplayName	=	Old M113 Brake,
+        Icon	=	CarBrakes,
+        VehicleType =   3,
+        MaxCapacity = 30,
+        ConditionMax = 100,
+        brakeForce = 25,
+        ChanceToSpawnDamaged = 70,
+        MechanicsItem = TRUE,
+    }
+
+    item NormalM113Brake1
+    {
+        Weight	=	5.0,
+        Type	=	Normal,
+        DisplayName	=	Regular M113 Brake,
+        Icon	=	CarBrakes,
+        VehicleType =   1,
+        MaxCapacity = 52,
+        ConditionMax = 100,
+        brakeForce = 20,
+        ChanceToSpawnDamaged = 50,
+        MechanicsItem = TRUE,
+    }
+
+    item ModernM113Brake1
+    {
+        Weight	=	5.0,
+        Type	=	Normal,
+        DisplayName	=	Upgraded M113 Brake,
+        Icon	=	CarBrakes,
+        VehicleType =   1,
+        MaxCapacity = 40,
+        ConditionMax = 100,
+        brakeForce = 37,
+        ChanceToSpawnDamaged = 30,
+        MechanicsItem = TRUE,
+    }
+
+    item OldM113Brake2
+    {
+        Weight	=	5.0,
+        Type	=	Normal,
+        DisplayName	=	Old M113 Brake,
+        Icon	=	CarBrakes,
+        VehicleType =   2,
+        MaxCapacity = 30,
+        ConditionMax = 100,
+        brakeForce = 30,
+        ChanceToSpawnDamaged = 70,
+        MechanicsItem = TRUE,
+    }
+
+    item NormalM113Brake2
+    {
+        Weight	=	5.0,
+        Type	=	Normal,
+        DisplayName	=	Regular M113 Brake,
+        Icon	=	CarBrakes,
+        VehicleType =   2,
+        MaxCapacity = 35,
+        ConditionMax = 100,
+        brakeForce = 35,
+        ChanceToSpawnDamaged = 50,
+        MechanicsItem = TRUE,
+    }
+
+    item ModernM113Brake2
+    {
+        Weight	=	5.0,
+        Type	=	Normal,
+        DisplayName	=	Upgraded M113 Brake,
+        Icon	=	CarBrakes,
+        VehicleType =   2,
+        MaxCapacity = 40,
+        ConditionMax = 100,
+        brakeForce = 45,
+        ChanceToSpawnDamaged = 30,
+        MechanicsItem = TRUE,
+    }
+
+    item OldM113Brake3
+    {
+        Weight	=	5.0,
+        Type	=	Normal,
+        DisplayName	=	Old M113 Brake,
+        Icon	=	CarBrakes,
+        VehicleType =   3,
+        MaxCapacity = 30,
+        ConditionMax = 100,
+        brakeForce = 30,
+        ChanceToSpawnDamaged = 70,
+        MechanicsItem = TRUE,
+    }
+
+    item NormalM113Brake3
+    {
+        Weight	=	5.0,
+        Type	=	Normal,
+        DisplayName	=	Regular M113 Brake,
+        Icon	=	CarBrakes,
+        VehicleType =   3,
+        MaxCapacity = 35,
+        ConditionMax = 100,
+        brakeForce = 35,
+        ChanceToSpawnDamaged = 50,
+        MechanicsItem = TRUE,
+    }
+
+    item ModernM113Brake3
+    {
+        Weight	=	5.0,
+        Type	=	Normal,
+        DisplayName	=	Upgraded M113 Brake,
+        Icon	=	CarBrakes,
+        VehicleType =   3,
+        MaxCapacity = 40,
+        ConditionMax = 100,
+        brakeForce = 45,
+        ChanceToSpawnDamaged = 30,
+        MechanicsItem = TRUE,
+    }
+	
+	/************************ Suspension ************************/
+
+    item NormalM113Suspension1
+    {
+        Weight	=	2.0,
+        Type	=	Normal,
+        DisplayName	=	Regular M113 Suspension,
+        Icon	=	CarSuspension,
+        VehicleType =   1,
+        ChanceToSpawnDamaged = 30,
+        SuspensionDamping = 5.88,
+        SuspensionCompression = 6.83,
+        ConditionMax = 100,
+        ConditionLowerStandard = 0.03,
+        ConditionLowerOffroad = 0.05,
+        MechanicsItem = TRUE,
+    }
+
+    item ModernM113Suspension1
+    {
+        Weight	=	3.0,
+        Type	=	Normal,
+        DisplayName	=	Upgraded m113 Suspension,
+        Icon	=	CarSuspension,
+        VehicleType =   1,
+        ChanceToSpawnDamaged = 20,
+        SuspensionDamping = 5.88,
+        SuspensionCompression = 6.83,
+        ConditionMax = 100,
+        ConditionLowerStandard = 0.02,
+        ConditionLowerOffroad = 0.04,
+        MechanicsItem = TRUE,
+    }
+
+    item NormalM113Suspension2
+    {
+        Weight	=	2.0,
+        Type	=	Normal,
+        DisplayName	=	Regular M113 Suspension,
+        Icon	=	CarSuspension,
+        VehicleType =   2,
+        ChanceToSpawnDamaged = 30,
+        SuspensionDamping = 5.88,
+        SuspensionCompression = 6.83,
+        ConditionMax = 100,
+        ConditionLowerStandard = 0.03,
+        ConditionLowerOffroad = 0.05,
+        MechanicsItem = TRUE,
+    }
+
+    item ModernM113Suspension2
+    {
+        Weight	=	3.0,
+        Type	=	Normal,
+        DisplayName	=	Upgraded M113 Suspension,
+        Icon	=	CarSuspension,
+        VehicleType =   2,
+        ChanceToSpawnDamaged = 20,
+        SuspensionDamping = 5.88,
+        SuspensionCompression = 6.83,
+        ConditionMax = 100,
+        ConditionLowerStandard = 0.02,
+        ConditionLowerOffroad = 0.04,
+        MechanicsItem = TRUE,
+    }
+
+    item NormalM113Suspension3
+    {
+        Weight	=	2.0,
+        Type	=	Normal,
+        DisplayName	=	Regular M113 Suspension,
+        Icon	=	CarSuspension,
+        VehicleType =   3,
+        ChanceToSpawnDamaged = 30,
+        SuspensionDamping = 5.4,
+        SuspensionCompression = 6.1,
+        ConditionMax = 100,
+        ConditionLowerStandard = 0.03,
+        ConditionLowerOffroad = 0.06,
+        MechanicsItem = TRUE,
+    }
+
+    item ModernM113Suspension3
+    {
+        Weight	=	3.0,
+        Type	=	Normal,
+        DisplayName	=	Upgraded M113 Suspension,
+        Icon	=	CarSuspension,
+        VehicleType =   3,
+        ChanceToSpawnDamaged = 20,
+        SuspensionDamping = 5.4,
+        SuspensionCompression = 6.1,
+        ConditionMax = 100,
+        ConditionLowerStandard = 0.02,
+        ConditionLowerOffroad = 0.05,
+        MechanicsItem = TRUE,
+    }
+	
+	/************************ Doors ************************/
+	item FrontM113Door1
+    {
+        Weight	=	20.0,
+        Type	=	Normal,
+        DisplayName	=	M113 Hatch,
+        Icon	=	CarDoorFront,
+        VehicleType =   1,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+
+    item RearM113Door1
+    {
+        Weight	=	30.0,
+        Type	=	Normal,
+        DisplayName	=	M113 Rear Door,
+        Icon	=	CarDoorRear,
+        VehicleType =   1,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+	
+	item FrontM113Door2
+    {
+        Weight	=	20.0,
+        Type	=	Normal,
+        DisplayName	=	M113 Hatch,
+        Icon	=	CarDoorFront,
+        VehicleType =   2,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+
+    item RearM113Door2
+    {
+        Weight	=	30.0,
+        Type	=	Normal,
+        DisplayName	=	M113 Rear Door,
+        Icon	=	CarDoorRear,
+        VehicleType =   2,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+	
+	item FrontM113Door3
+    {
+        Weight	=	20.0,
+        Type	=	Normal,
+        DisplayName	=	M113 Hatch,
+        Icon	=	CarDoorFront,
+        VehicleType =   3,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+
+    item RearM113Door3
+    {
+        Weight	=	30.0,
+        Type	=	Normal,
+        DisplayName	=	M113 Rear Door,
+        Icon	=	CarDoorRear,
+        VehicleType =   3,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+	
+	/************************ Hood ************************/
+    item EngineM113Door1
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	M113 Hood,
+        Icon	=	EngineDoor,
+        VehicleType =   1,
+        ChanceToSpawnDamaged = 25,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+
+    item EngineM113Door2
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	M113 Hood,
+        Icon	=	EngineDoor,
+        VehicleType =   2,
+        ChanceToSpawnDamaged = 25,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+
+    item EngineM113Door3
+    {
+        Weight	=	25.0,
+        Type	=	Normal,
+        DisplayName	=	M113 Hood,
+        Icon	=	EngineDoor,
+        VehicleType =   3,
+        ChanceToSpawnDamaged = 25,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+	
+	/************************ Windows ************************/
+
+    item M113FrontWindow1
+    {
+        Weight	=	3.0,
+        Type	=	Normal,
+        DisplayName	=	M113 Periscope,
+        Icon	=	SideWindow,
+        VehicleType =   1,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+	
+	item M113FrontWindow2
+    {
+        Weight	=	3.0,
+        Type	=	Normal,
+        DisplayName	=	M113 Periscope,
+        Icon	=	SideWindow,
+        VehicleType =   2,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+	
+	item M113FrontWindow3
+    {
+        Weight	=	3.0,
+        Type	=	Normal,
+        DisplayName	=	M113 Periscope,
+        Icon	=	SideWindow,
+        VehicleType =   3,
+        ChanceToSpawnDamaged = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+	
+	/************************ Glove Boxes ************************/
+    item M113GloveBox1
+    {
+        Weight	=	3.0,
+        Type	=	Normal,
+        DisplayName	=	Glove Box,
+        Icon	=	GloveBox,
+        VehicleType =   1,
+        MaxCapacity = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+
+    item M113GloveBox2
+    {
+        Weight	=	4.0,
+        Type	=	Normal,
+        DisplayName	=	Glove Box,
+        Icon	=	GloveBox,
+        VehicleType =   1,
+        MaxCapacity = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+
+    item M113GloveBox3
+    {
+        Weight	=	2.0,
+        Type	=	Normal,
+        DisplayName	=	Glove Box,
+        Icon	=	GloveBox,
+        VehicleType =   3,
+        MaxCapacity = 20,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+
+}

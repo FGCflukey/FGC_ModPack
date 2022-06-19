@@ -1,0 +1,204 @@
+module Base
+{
+
+	model 92amgeneralM998windowfl
+	{
+		mesh = vehicles/Vehicles_92amgeneralM998_Body|window_fl,
+		shader = vehicle,
+		static = FALSE,
+		scale = 0.1,
+		boneWeight = window_fl_bone 1.0,
+	}
+
+	model 92amgeneralM998windowfr
+	{
+		mesh = vehicles/Vehicles_92amgeneralM998_Body|window_fr,
+		shader = vehicle,
+		static = FALSE,
+		scale = 0.1,
+		boneWeight = window_fr_bone 1.0,
+	}
+
+	model 92amgeneralM998windowrl
+	{
+		mesh = vehicles/Vehicles_92amgeneralM998_Body|window_rl,
+		shader = vehicle,
+		static = FALSE,
+		scale = 0.1,
+		boneWeight = window_rl_bone 1.0,
+	}
+
+	model 92amgeneralM998windowrr
+	{
+		mesh = vehicles/Vehicles_92amgeneralM998_Body|window_rr,
+		shader = vehicle,
+		static = FALSE,
+		scale = 0.1,
+		boneWeight = window_rr_bone 1.0,
+	}
+
+	template vehicle M998Windows
+	{
+		part WindowFrontLeft
+		{
+			model windowFL
+			{
+				file = 92amgeneralM998windowfl,
+			}
+
+			anim ClosedToOpen
+			{
+				anim = Window_fl_opening,
+				animate = FALSE,
+			}
+
+			parent = DoorFrontLeft,
+			area = SeatFrontLeft,
+			repairMechanic = true,
+			itemType = Base.M998SideWindow,
+			table install
+			{
+				requireInstalled = DoorFrontLeft,
+			}
+			table uninstall
+				{
+				requireUninstalled = M998DoorFrontLeftArmor,
+				}
+		}
+
+		part WindowFrontRight
+		{
+			model windowFR
+			{
+				file = 92amgeneralM998windowfr,
+			}
+
+			anim ClosedToOpen
+			{
+				anim = Window_fr_opening,
+				animate = FALSE,
+			}
+
+			parent = DoorFrontRight,
+			area = SeatFrontRight,
+			repairMechanic = true,
+			itemType = Base.M998SideWindow,
+			table install
+			{
+				requireInstalled = DoorFrontRight,
+			}
+			table uninstall
+				{
+				requireUninstalled = M998DoorFrontRightArmor,
+				}
+		}
+
+		part WindowRearLeft
+		{
+			model windowRL
+			{
+				file = 92amgeneralM998windowrl,
+			}
+
+			anim ClosedToOpen
+			{
+				anim = Window_rl_opening,
+				animate = FALSE,
+				rotate = 60 0 0,
+			}
+
+			parent = DoorRearLeft,
+			area = SeatRearLeft,
+			repairMechanic = true,
+			itemType = Base.M998SideWindow,
+			table install
+			{
+				requireInstalled = DoorRearLeft,
+			}
+			table uninstall
+				{
+				requireUninstalled = M998DoorRearLeftArmor,
+				}
+		}
+
+		part WindowRearRight
+		{
+			model windowRR
+			{
+				file = 92amgeneralM998windowrr,
+			}
+
+			anim ClosedToOpen
+			{
+				anim = Window_rr_opening,
+				animate = FALSE,
+			}
+
+			parent = DoorRearRight,
+			area = SeatRearRight,
+			repairMechanic = true,
+			itemType = Base.M998SideWindow,
+			table install
+			{
+				requireInstalled = DoorRearRight,
+			}
+			table uninstall
+				{
+				requireUninstalled = M998DoorRearRightArmor,
+				}
+		}
+
+		part Window*
+		{
+			category = door,
+			repairMechanic = true,
+			mechanicRequireKey = true,
+			window
+			{
+				openable = true,
+			}
+			table install
+			{
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 500,
+				skills = Mechanics:3,
+				recipes = Intermediate Mechanics,
+				test = Vehicles.InstallTest.Default,
+				complete = Vehicles.InstallComplete.Window,
+			}
+			table uninstall
+			{
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 500,
+				skills = Mechanics:3,
+				recipes = Intermediate Mechanics,
+				test = Vehicles.UninstallTest.Default,
+				complete = Vehicles.UninstallComplete.Default,
+			}
+			lua
+			{
+				create = Vehicles.Create.Window,
+				init = Vehicles.Init.Window,
+			}
+		}
+	}
+}
+

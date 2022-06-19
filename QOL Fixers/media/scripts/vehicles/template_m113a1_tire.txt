@@ -1,0 +1,101 @@
+module Base
+{
+
+	/* This was an attempt at a set of "tires" that were named differently, but they didn't really work. Oh well. */
+
+	template vehicle TireM113
+	{
+		part TireFrontLeft
+		{
+			wheel = FrontLeft,
+			table install
+			{
+				requireInstalled = SuspensionFrontLeft,
+			}
+		}
+
+		part TireFrontRight
+		{
+			wheel = FrontRight,
+			table install
+			{
+				requireInstalled = SuspensionFrontRight,
+			}
+		}
+
+		part TireRearLeft
+		{
+			wheel = RearLeft,
+			table install
+			{
+				requireInstalled = SuspensionRearLeft,
+			}
+		}
+
+		part TireRearRight
+		{
+			wheel = RearRight,
+			table install
+			{
+				requireInstalled = SuspensionRearRight,
+			}
+		}
+
+		part Tire*
+		{
+			area = Engine,
+			category = tire,
+			itemType = Base.OldTire;Base.NormalTire;Base.ModernTire,
+			container
+			{
+				capacity = 35,
+				test = Vehicles.ContainerAccess.Tire,
+				contentType = Air,
+			}
+			table install
+			{
+				items
+				{
+					1
+					{
+						type = Base.Wrench,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 100,
+				skills = Mechanics:6,
+				recipes = Intermediate Mechanics,
+				test = Vehicles.InstallTest.Default,
+				complete = Vehicles.InstallComplete.Tire,
+			}
+			table uninstall
+			{
+				items
+				{
+					1
+					{
+						type = Base.Wrench,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 100,
+				skills = Mechanics:6,
+				recipes = Intermediate Mechanics,
+				test = Vehicles.UninstallTest.Default,
+				complete = Vehicles.UninstallComplete.Tire,
+			}
+			lua
+			{
+				create = Vehicles.Create.Tire,
+				init = Vehicles.Init.Tire,
+				checkOperate = Vehicles.CheckOperate.Tire,
+				update = Vehicles.Update.Tire,
+			}
+		}
+	}
+}
+

@@ -1,0 +1,63 @@
+module Base
+{
+	template vehicle BrakeM113
+	{
+		part BrakeLeftM113
+		{		
+
+		}
+
+		part BrakeRightM113
+		{
+
+		}
+
+
+		part Brake*
+		{
+			area = Engine,
+	repairMechanic = true,
+			category = brakes,
+			itemType = Base.OldM113Brake;Base.NormalM113Brake;Base.ModernM113Brake,
+			table install
+			{
+				items
+				{
+					1
+					{
+						type = Base.Wrench,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 300,
+				skills = Mechanics:6,
+				recipes = Intermediate Mechanics,
+				test = Vehicles.InstallTest.Default,
+			}
+			table uninstall
+			{
+				items
+				{
+					1
+					{
+						type = Base.Wrench,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 300,
+				skills = Mechanics:6,
+				recipes = Intermediate Mechanics,
+				test = Vehicles.UninstallTest.Default,
+			}
+			lua
+			{
+				create = Vehicles.Create.Brake,
+				update = Vehicles.Update.Brakes,
+			}
+		}
+	}
+}

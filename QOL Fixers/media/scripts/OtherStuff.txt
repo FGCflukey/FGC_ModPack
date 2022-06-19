@@ -1,0 +1,388 @@
+module Base
+{
+
+	item MyCanteen
+    {
+       	Weight    			= 1,
+		CanStoreWater		= TRUE,
+	    	DisplayCategory 		= WaterContainer,
+       	Type    			= Normal,
+		DisplayName     	= Canteen,
+		ReplaceOnUseOn		= WaterSource-MyCanteenfull,
+		Icon 				= MyCanteen,
+		RainFactor 			= 1,
+		Tooltip 			= Tooltip_item_RainFromGround,
+    }
+
+	item MyCanteenfull
+    {
+		IsWaterSource		= TRUE,
+		Weight				= 2,
+		CanStoreWater		= TRUE,
+	    	DisplayCategory 		= WaterContainer,
+		Type				= Drainable,
+		UseWhileEquipped	= FALSE,
+		IsCookable			= TRUE,
+		UseDelta			= 0.07,
+		DisplayName			= Canteen with Water,
+		ReplaceOnDeplete	= MyCanteen,
+		ReplaceOnUseOn		= WaterSource-MyCanteenfull,
+		Icon				= MyCanteenfull,
+		RainFactor 			= 1,
+		Tooltip 			= Tooltip_item_RainFromGround,
+    }
+
+	item MyStrappedcanteen
+    {
+		Weight    			= 1,
+		CanStoreWater		= TRUE,
+	    	DisplayCategory 		= WaterContainer,
+		Type    			= Normal,
+		DisplayName         = Strapped Canteens,
+		ReplaceOnUseOn		= WaterSource-MyStrappedcanteenfull,
+		Icon 				= MyStrappedcanteen,
+		RainFactor 			= 1,
+		Tooltip 			= Tooltip_item_RainFromGround,
+    }
+
+	item MyStrappedcanteenfull
+    {
+		IsWaterSource		= TRUE,
+		Weight				= 2,
+		CanStoreWater		= TRUE,
+		Type				= Drainable,
+		UseWhileEquipped	= FALSE,
+		IsCookable			= TRUE,
+		UseDelta			= 0.035,
+		DisplayName			= Strapped Canteens with Water,
+		ReplaceOnDeplete	= MyStrappedcanteen,
+		ReplaceOnUseOn		= WaterSource-MyStrappedcanteenfull,
+		Icon				= MyStrappedcanteen,
+		RainFactor 			= 1,
+		Tooltip 			= Tooltip_item_RainFromGround,
+    }
+	
+
+	item MyGarbagebagbox
+	{
+		Weight				= 0.8,
+		Type				= Drainable,
+		UseDelta 			= 0.05,
+		DisplayName			= Box of Garbage Bags,
+		ReplaceOnDeplete	= MyGarbagebagboxempty,
+		Icon				= MyGarbagebagbox,
+	}
+
+	item LightBulbSixPack
+	{
+		Weight				= 0.2,
+        	DisplayCategory 		= Electronics,
+		Type				= Drainable,
+		UseDelta 			= 0.15,
+		DisplayName			= LightBulbs 6-Pack,
+		ReplaceOnDeplete	= LightBulbSixPackempty,
+		Icon				= LightBulbSixPack,
+	}
+
+	item LightBulbTwelvePack
+	{
+		Weight				= 0.4,
+        	DisplayCategory 		= Electronics,
+		Type				= Drainable,
+		UseDelta 			= 0.08,
+		DisplayName			= LightBulbs 12-Pack,
+		ReplaceOnDeplete	= LightBulbTwelvePackempty,
+		Icon				= LightBulbTwelvePack,
+	}
+
+
+     item Note_Flukey
+    {
+        Type = Normal,
+        DisplayName = Note,
+        Icon = Map,
+        Weight = 0.1,
+        Map = media/ui/LootableMaps/Note_Flukey.png,
+    }
+
+	item DoorHingesBox
+	{
+		Weight				= 0.5,
+	    	DisplayCategory 		= Material,
+		Type				= Drainable,
+		UseDelta 			= 0.15,
+		DisplayName			= Package of 6 Door Hinges,
+		ReplaceOnDeplete	= DoorHingesBoxempty,
+		Icon				= DoorHingesBox,	
+	}
+
+	item DoorknobsBox
+	{
+		Weight				= 0.8,
+	    	DisplayCategory 		= Material,
+		Type				= Drainable,
+		UseDelta 			= 0.25,
+		DisplayName			= Package of 4 Doorknobs,
+		ReplaceOnDeplete	= DoorknobsBoxempty,
+		Icon				= DoorknobsBox,	
+	}
+	
+	item PropaneTank
+	{
+	    DisplayCategory = Material,
+		Weight	=	10.0,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.125,
+		DisplayName	=	Propane Tank,
+		Icon	=	PropaneTank,
+		UseWorldItem = TRUE,
+		ScaleWorldIcon = 2.0,
+		WeightEmpty = 5.0,
+		KeepOnDeplete = true,
+		WorldStaticModel = PropaneTank,
+	}
+
+	recipe Take LightBulb From Box
+	{
+		LightBulbSixPack/LightBulbTwelvePack,
+		
+		Result:LightBulb=1,
+		Time:30,
+	}
+
+	recipe Put LightBulbs in 6-Pack
+	{
+		destroy LightBulb=6,
+		
+		Result:LightBulbSixPack,
+		Time:10,
+	}
+
+	recipe Put LightBulbs in 12-Pack
+	{
+		destroy LightBulb=12,
+		
+		Result:LightBulbTwelvePack,
+		Time:10,
+	}
+
+
+	recipe Take Hinge From Box
+	{
+		DoorHingesBox,
+		
+		Result:Hinge=1,
+		Time:30,
+	}
+
+	recipe Put Hinges in a Box
+	{
+		destroy Hinge=6,
+		
+		Result:DoorHingesBox,
+		Time:10,
+	}
+
+	recipe Take Doorknob From Box
+	{
+		DoorknobsBox,
+		
+		Result:Doorknob=1,
+		Time:30,
+	}
+
+	recipe Put Doorknobs in a Box
+	{
+		destroy Doorknob=4,
+		
+		Result:DoorknobsBox,
+		Time:10,
+	}
+
+	recipe Take Garbage Bag From Box
+    {
+		MyGarbagebagbox,
+		
+		Result:Garbagebag=1,
+		Time:10,
+    }
+	
+	recipe Put Garbage Bags In Box
+	{
+		destroy Garbagebag=20,
+		
+		Result:MyGarbagebagbox,
+		Time:30,
+	}
+	
+	recipe Attatch Canteens
+    {
+    	MyCanteen=2,
+		Belt2/Sling,
+    	Result:MyStrappedcanteen,
+    	Time:30,
+		Category:Health,
+    }
+	
+	recipe Reclaim Thread
+	{
+		Sheet=1,
+
+		Result:Thread=1,
+		Sound:PZ_ClothesRipping,
+		Time:300.0,
+		Category:Survivalist,
+	}
+	
+	recipe Reclaim Thread
+	{
+		RippedSheets=2,
+
+		Result:Thread=1,
+		Sound:PZ_ClothesRipping,
+		Time:300.0,
+		Category:Survivalist,
+	}
+
+	recipe Twist Twine
+	{
+		Thread=4,
+
+		Result:Twine=1,
+		Time:240.0,
+		Category:Survivalist,
+	}
+
+	recipe Make Rope
+	{
+		Twine=6,
+
+		Result:Rope,
+		Time:240.0,
+		Category:Survivalist,
+	}
+
+	recipe Make Wood Glue
+	{
+		Plank,
+		keep Saw,
+		keep Hammer,
+		Charcoal,
+		keep Lighter/Matches,
+		Flour,
+		Water=3,
+		Vinegar=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:Woodglue,
+		NeedToBeLearn:false,
+		Time:300,
+		Category:Survivalist,
+	}
+
+	recipe Make Super Glue
+	{
+		Plank,
+		keep Saw,
+		keep Hammer,
+		Flour,
+		keep Lighter/Matches,
+		Water=2,
+		Glue=1,
+		Vinegar=1,
+		
+		CanBeDoneFromFloor:true,
+		Result:Superglue,
+		NeedToBeLearn:false,
+		Time:300,
+		Category:Survivalist,
+	}
+
+	recipe Make Scrap Metal
+	{
+		keep KitchenKnife/HuntingKnife/Saw,
+		TinCanEmpty=2,
+
+		CanBeDoneFromFloor:true,
+		Result:ScrapMetal,
+		Time:180.0,
+		Category:Survivalist,
+	}
+
+	recipe Break Shovel Into Trowel
+	{
+		destroy Shovel,
+		keep Hammer,
+
+		Result:HandShovel,
+		Sound:PZ_Hammer,
+		Time:120.0,
+		Category:Survivalist,
+	}
+
+	recipe Make Sack
+	{
+		Sheet,
+		keep Needle/SutureNeedle/Nails,
+		Thread=2,
+
+		Result:EmptySandbag,
+		Sound:PZ_ClothesRipping,
+		Time:300.0,
+		Category:Survivalist,
+	}
+	
+	recipe Make Sheet
+	{
+		RippedSheets=4,
+		keep Needle/SutureNeedle/Nails,
+		Thread=2,
+		
+		Result:Sheet,
+		Time:180.0,
+		Category:Survivalist,
+	}
+
+	recipe Make Sheet
+	{
+		AlcoholRippedSheets=4,
+		keep Needle/SutureNeedle/Nails,
+		Thread=2,
+		
+		Result:Sheet,
+		Time:180.0,
+		Category:Survivalist,
+	}
+
+	recipe Make Vinegar
+	{
+		WhiskeyFull/Wine/Wine2;10,
+		keep TinCanEmpty,
+		Water=10,
+		WaterBottleEmpty/PopBottleEmpty,
+		keep RippedSheets/DishCloth,
+		NeedToBeLearn:false,
+				
+		Result:Vinegar,
+		Time:600.0,
+		Category:Survivalist,
+		SkillRequired:Cooking=4, 
+	}
+
+	recipe Make Sugar
+	{
+		Carrots=10,
+		keep RippedSheets/DishCloth,
+		keep KitchenKnife/ButterKnife/BreadKnife/HuntingKnife/MeatCleaver/FlintKnife/Machete,
+		WhiskeyFull/Wine/Wine2;10,
+		NeedToBeLearn:false,
+						
+		Result:Sugar,
+		Time:600.0,
+		Category:Survivalist,
+		OnCreate:DullTool_OnCreate,
+		SkillRequired:Cooking=4, 
+	}
+
+}

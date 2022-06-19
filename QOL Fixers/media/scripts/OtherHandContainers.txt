@@ -1,0 +1,50 @@
+module Base
+{
+
+/************************ 2nd Hand Equipable ************************/
+
+	item Toywagon
+   	{
+		WeightReduction     = 100,
+		Weight             	= 6,
+		Type                = Container,
+		Capacity            = 100,
+		DisplayName         = Toy Wagon,
+		Icon				= Toywagon,
+		ScaleWorldIcon		= 2.0,
+   	}
+	
+	item Shoppingcart
+	{
+		WeightReduction		= 100,
+		Weight				= 7,
+		Type				= Container,
+		Capacity 			= 110,
+		DisplayName 		= Shopping Cart,
+		Icon				= Shoppingcart,
+		ScaleWorldIcon		= 2.0,
+	}
+
+	item Handdolly
+	{
+		WeightReduction 	= 100,
+		Weight 				= 7,
+		Type				= Container,
+		Capacity 			= 120,
+		DisplayName 		= Hand Dolly,
+		Icon				= Handdolly,
+		ScaleWorldIcon		= 1.0,
+	}
+
+	item Pushcart
+	{
+		WeightReduction 	= 100,
+		Weight 				= 10,
+		Type				= Container,
+		Capacity 			= 140,
+		DisplayName 		= Push Cart,
+		Icon				= Pushcart,
+		ScaleWorldIcon		= 1.0,
+	 }
+
+}
