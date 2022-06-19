@@ -1,0 +1,18 @@
+Tooltip_EN = {
+  Tooltip_Small_White_Garage_Door = "A Smaller Sized White Garage Door",
+  Tooltip_Small_Green_Garage_Door = "A Smaller Sized Green Garage Door",
+  Tooltip_Small_Grey_Garage_Door = "A Smaller Sized Grey Garage Door",
+  Tooltip_Small_Rolling_Garage_Door = "A Smaller Sized Rolling Garage Door",
+  Tooltip_Small_Red_Window_Garage_Door = "A Smaller Sized Red Garage Door",
+  Tooltip_Small_Gray_Window_Garage_Door = "A Smaller Sized Grey Windowed Garage Door",
+  Tooltip_Large_White_Garage_Door = "Slightly Larger White Garage Door",
+  Tooltip_Large_Green_Garage_Door = "Slightly Larger Green Garage Door",
+  Tooltip_Large_Grey_Garage_Door = "Slightly Larger Grey Garage Door",
+  Tooltip_Large_Rolling_Garage_Door = "Slightly Larger Rolling Garage Door",
+  Tooltip_Large_Red_Window_Garage_Door = "Slightly Larger Red Garage Door",
+  Tooltip_Large_Gray_Window_Garage_Door = "Slightly Larger Grey Windowed Garage Door",
+  Tooltip_Fancy_Cheese_Door = "A Cheesy Garage Door",
+  Tooltip_Fancy_Falafel_Door = "Create a Garage Door... Responsibly of course",
+  Tooltip_Fancy_xCudi_Door = "Take Me To Your Leader...",
+  Tooltip_Fancy_Spiffo_Door = "Factory Fresh!",
+}

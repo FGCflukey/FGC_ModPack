@@ -1,0 +1,6 @@
+name=Greggies Garage Doors
+poster=poster.png
+id=GreggiesGarageDoors
+description=Adds the ability to create 3 and 4 tile garage doors. <BR> author: Greggie<BR> Date: February 02, 2022<BR> Contact: wellhungchubbydudes.com
+tiledef=GreggiesGarageDoors 6987
+pack=GreggiesGarageDoors
