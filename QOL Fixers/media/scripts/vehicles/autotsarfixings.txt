@@ -283,4 +283,70 @@ module Autotsar
 		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
 	}
 
+	recipe Convert Tire To BMW Tire
+	{
+		NormalTire1,
+		BlowTorch=5,
+		
+		Result:ATAMotoBMWNormalTire,
+		CanBeDoneFromFloor:true,
+		Category:Welding,
+		Time:500.0,
+	}
+
+	recipe Convert Tire To BMW Tire
+	{
+		ModernTire1,
+		BlowTorch=5,
+		
+		Result:ATAMotoBMWModernTire,
+		CanBeDoneFromFloor:true,
+		Category:Welding,
+		Time:500.0,
+	}
+
+	recipe Convert Tire To BMW Tire
+	{
+		OldTire1,
+		BlowTorch=5,
+		
+		Result:ATAMotoBMWOldTire,
+		CanBeDoneFromFloor:true,
+		Category:Welding,
+		Time:500.0,
+	}
+
+	recipe Convert Tire To Harley Tire
+	{
+		NormalTire1,
+		BlowTorch=5,
+		
+		Result:ATAMotoHarleyNormalTire,
+		CanBeDoneFromFloor:true,
+		Category:Welding,
+		Time:500.0,
+	}
+
+	recipe Convert Tire To Harley Tire
+	{
+		ModernTire1,
+		BlowTorch=5,
+		
+		Result:ATAMotoHarleyModernTire,
+		CanBeDoneFromFloor:true,
+		Category:Welding,
+		Time:500.0,
+	}
+
+	recipe Convert Tire To Harley Tire
+	{
+		OldTire1,
+		BlowTorch=5,
+		
+		Result:ATAMotoHarleyOldTire,
+		CanBeDoneFromFloor:true,
+		Category:Welding,
+		Time:500.0,
+	}
+
 }
