@@ -1,0 +1,11 @@
+LightPartsDef = {};
+LightPartsDef.loaded = 0;
+LightPartsDef["TacticalLight"] = {};
+LightPartsDef["LaserLight"] = {};
+LightPartsDef["StealthTacticalScope2"] = {};
+LightPartsDef["TacticalLaserLight2"] = {};
+LightPartsDef["TacticalLight2"] = {};
+LightPartsDef["AKTL"] = {};
+LightPartsDef["M16LaserLight"] = {};
+LightPartsDef["M16TL"] = {};
+LightPartsDef["AKTacticalLight"] = {};

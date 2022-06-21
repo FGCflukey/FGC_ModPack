@@ -1,0 +1,15 @@
+-- require "ISUI/ISCollapsableWindow"
+-- require "ISUI/ISLayoutManager"
+-- require "XpSystem/ISUI/ISCharacterInfoWindow"
+
+-- function ISCharacterInfoWindow:close()
+	-- self:setVisible(false)
+	-- if ISSkillProgressBar.Activate == 1 and ISSkillProgressBar.Timer == 1 then
+		-- ISSkillProgressBar.Timer = 0;
+		-- ISSkillProgressBar.Activate = 0;
+	-- end
+	-- self:removeFromUIManager() -- so update() isn't called
+	-- if JoypadState.players[self.playerNum+1] then
+		-- setJoypadFocus(self.playerNum, nil)
+	-- end
+-- end

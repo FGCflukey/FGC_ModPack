@@ -1,0 +1,8 @@
+Moveables_EN = {	
+	Mounted_Cow_Trophy = "Mounted Cow Trophy",
+	Mounted_Bear_Trophy = "Mounted Bear Trophy",
+	Mounted_Boar_Trophy = "Mounted Boar Trophy",
+	Mounted_Bison_Trophy = "Mounted Bison Trophy",
+	Mounted_Moose_Trophy = "Mounted Moose Trophy",
+	Ball_Wilson = "Wilson",
+}

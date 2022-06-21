@@ -1,0 +1,13 @@
+IGUI_EN = {
+
+	IGUI_ScavengeUI_Metals = "Metals",
+	IGUI_ScavengeUI_Seeds = "Seeds",
+	IGUI_ScavengeUI_Dyes = "Dyes",
+	IGUI_ScavengeUI_Mining = "Mining",
+	IGUI_TraitInfoNeg = "(Negative)",
+	IGUI_TraitInfoPos = "(Positive)",
+	IGUI_TraitInfoProf = "(Linked to Profession)",
+	IGUI_CustomSkillCursorTitle = "Custom Skill Box",
+	IGUI_CustomSkillCursorDesc = "Activates a Custom Icon in Skill Panel. \nWhen leveling up, only the last skill box will light up with an animated cursor.",
+	IGUI_NeedPickaxe = "I need to equip a pickaxe to obtain this resource.",
+}

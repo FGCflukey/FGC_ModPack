@@ -1,0 +1,16 @@
+ContextMenu_RU = {
+	ContextMenu_FireMode = "Режим огня:    ",
+	ContextMenu_Full-Auto = "Автомат",
+	ContextMenu_Semi-Auto = "Полуавтомат",
+	ContextMenu_LoadedMixed = "Заряженные патроны:    смешанные",
+	ContextMenu_LoadedAmmo = "Заряженные патроны:    ",
+	ContextMenu_Extra_Building = "Продвинутые постройки",
+	ContextMenu_FireModeBinding = "Нажмите'Alt' для смены режима огня.",
+	ContextMenu_SilencerD = "Состояние глушителя:",
+	ContextMenu_SlingshotD = "Состояние рогатки:",
+	ContextMenu_StoneD = "Состояние:",
+	ContextMenu_Pry_Open_Locked_Container = "Вскрыть запертый контейнер",
+	ContextMenu_Unlock_Container = "Разблокировать контейнер",
+	ContextMenu_Enter_Combination = "Ввести комбинацию",
+	ContextMenu_Cut_Padlock = "Перекусить навесной замок",
+}

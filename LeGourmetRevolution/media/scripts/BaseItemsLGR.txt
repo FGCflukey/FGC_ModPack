@@ -1,0 +1,128 @@
+module Base
+{
+	item Wine
+	{
+		DisplayCategory = Food,
+	    Weight	=	1,
+		Type	=	Food,
+		DisplayName	=	Chardonnay Closed,
+		Icon	=	WineFull,
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 481,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+		Tooltip = Tooltip_Wine,
+		StaticModel = WhiteWineBottle,
+		WorldStaticModel = WineWhiteGround,
+	}
+
+    item Wine2
+	{
+		DisplayCategory = Food,
+	    Weight	=	1,
+		Type	=	Food,
+		DisplayName	=	Red Wine Closed,
+		Icon	=	Wine2Full,
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 510,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+		Tooltip = Tooltip_Wine,
+		StaticModel = RedWineBottle,
+        WorldStaticModel = WineRedGround,
+	}
+
+	item Beans
+	{
+		DisplayCategory = Food,
+		HungerChange		=	-10,
+		Weight				=	0.3,
+		Type				=	Food,
+		DaysTotallyRotten	=	10,
+		DisplayName			=	Beans,
+		Icon				=	LgBeans,
+		DaysFresh			=	7,
+		EvolvedRecipe 		=	Soup:10;Stew:10;Stir fry:10;Salad:5;Roasted Vegetables:10;Taco:5,
+		FoodType    		=	Vegetables,
+        Carbohydrates = 33,
+        Proteins = 7,
+        Lipids = 1,
+        Calories = 170,
+		Packaged = FALSE,
+	}
+
+    item CoffeeEmpty
+	{
+		DisplayCategory = Material,
+		Weight			= 0.1,
+		Type			= Normal,
+		DisplayName		= Coffee Empty,
+		Icon			= InstantCoffeeEmpty,
+	}
+
+    item HoneyEmpty
+    {
+		DisplayCategory = Material,
+        Type				=		Normal,
+        DisplayName			=		Honey Empty,
+        Icon				=		Honeybottle,
+        Weight				=		0.1,
+		Tooltip             =       Tooltip_HoneyEmpty,
+    }
+
+	item CigarettesPack
+	{
+		DisplayCategory = Junk,
+		Weight	=	0.05,
+		Type	=	Normal,
+		DisplayName	=	Cigarettes Pack,
+		Icon	=	IckySticks,
+		Tooltip = Tooltip_CigarettesPack,
+		WorldStaticModel = CigarettePack_Ground,
+	}
+
+    item MustardEmpty
+	{
+		DisplayCategory = Material,
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Mustard Empty,
+		Icon	=	MustardEmpty,
+		Tooltip = Tooltip_MustardEmpty,
+	}
+
+    item KetchupEmpty
+	{
+		DisplayCategory = Material,
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Ketchup Empty,
+		Icon	=	KetchupEmpty,
+		Tooltip = Tooltip_KetchupEmpty,
+	}
+
+    item MarinaraEmpty
+	{
+		DisplayCategory = Material,
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Marinara Empty,
+		Icon	=	MarinaraEmpty,
+		Tooltip = Tooltip_MarinaraEmpty,
+	}
+
+	item PeanutButterEmpty
+	{
+		DisplayCategory = Material,
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Peanut Butter Empty,
+		Icon	=	PeanutButterEmpty,
+		Tooltip = Tooltip_PeanutButterEmpty,
+	}
+
+}

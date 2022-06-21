@@ -1,0 +1,10 @@
+Moveables_ES = {	
+	Mounted_Cow_Trophy = "Trofeo de pared (Vaca)",
+	Mounted_Bear_Trophy = "Trofeo de pared (Oso)",
+	Mounted_Boar_Trophy = "Trofeo de pared (Jabalí)",
+	Mounted_Bison_Trophy = "Trofeo de pared (Bisonte)",
+	Mounted_Moose_Trophy = "Trofeo de pared (Alce)",
+	Ball_Wilson = "Wilson",
+	Animal_Cow_Rug = "Alfombra de cuero vacuno",
+	Animal_Deer_Rug = "Alfombra de piel de venado",
+}

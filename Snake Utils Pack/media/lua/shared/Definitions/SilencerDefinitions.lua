@@ -1,0 +1,13 @@
+SilencerDefinitions = {};
+SilencerDefinitions.loaded = 0;
+SilencerDefinitions.loadedWeapon = nil;
+SilencerDefinitions["Silencer1"] = {Pistol = { Sound = "WPAsh2", SoundVolume = 0.1, SoundRadius = 0.1, CondModifier = 0.5, handmade = false}, Pistol2 = { Sound = "WPAsh2", SoundVolume = 0.1, SoundRadius = 0.1, CondModifier = 0.5, handmade = false}}
+SilencerDefinitions["Silencer2"] = {Pistol = { Sound = "WPASupressedShot", SoundVolume = 0.15, SoundRadius = 0.15, CondModifier = 0.25, handmade = true}, Pistol2 = { Sound = "WPASupressedShot", SoundVolume = 0.15, SoundRadius = 0.15, CondModifier = 0.25, handmade = true}}
+SilencerDefinitions["Supressor1"] = {Pistol = { Sound = "WPASupressedShot", SoundVolume = 0.12, SoundRadius = 0.1, CondModifier = 0.5, handmade = false}, Pistol2 = { Sound = "WPASupressedShot", SoundVolume = 0.12, SoundRadius = 0.1, CondModifier = 0.5, handmade = false}}
+SilencerDefinitions["PHeavyBarrel"] = {Pistol = { Sound = "WPAHeavyBarrel1", SoundVolume = 2, SoundRadius = 2, CondModifier = nil, handmade = false}, Pistol2 = { Sound = "WPAHeavyBarrel1", SoundVolume = 2, SoundRadius = 2, CondModifier = nil, handmade = false}}
+SilencerDefinitions["RHeavyBarrel"] = {VarmintRifle = { Sound = "WPAHbarrelR", SoundVolume = 2.5, SoundRadius = 2.5, CondModifier = nil, handmade = false}, HuntingRifle = { Sound = "WPAHbarrelR", SoundVolume = 2.5, SoundRadius = 2.5, CondModifier = nil, handmade = false}}
+SilencerDefinitions["Silencer3"] = {VarmintRifle = { Sound = "WPARSilencedShot", SoundVolume = 0.05, SoundRadius = 0.1, CondModifier = 0.5, handmade = false}, HuntingRifle = { Sound = "WPARSilencedShot", SoundVolume = 0.5, SoundRadius = 0.1, CondModifier = 0.5, handmade = false}}
+SilencerDefinitions["Silencer5"] = {Shotgun = { Sound = "WPASilencedShotgun", SoundVolume = 0.05, SoundRadius = 0.075, CondModifier = 0.25, handmade = true}}
+SilencerDefinitions["Silencer6"] = {VarmintRifle = { Sound = "WPARSilencedShot", SoundVolume = 0.1, SoundRadius = 0.1, CondModifier = 0.25, handmade = true}, HuntingRifle = { Sound = "WPARSilencedShot", SoundVolume = 0.75, SoundRadius = 0.1, CondModifier = 0.25, handmade = true}}
+SilencerDefinitions["Silencerm16"] = {AssaultRifle = { Sound = "AM_M16Supressed2", SoundVolume = 0.2, SoundRadius = 0.05, CondModifier = 0.5, handmade = false}, AssaultRifle2 = { Sound = "AM_M16Supressed2", SoundVolume = 0.1, SoundRadius = 0.1, CondModifier = 0.5, handmade = false}}
+SilencerDefinitions["SilencerAK"] = {AK47 = { Sound = "AMAK47S", SoundVolume = 0.2, SoundRadius = 0.05, CondModifier = 0.5, handmade = false}}

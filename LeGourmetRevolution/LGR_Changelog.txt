@@ -1,0 +1,277 @@
+Le Gourmet Revolution Changelog V-1.9 (Exclusivo para build de animaciones)
+*Reparado modelo 3D de la mantequilla.
+*Agregado nuevo modelo 3D del detector de metales.
+*Agregado modelo 3D para WorldItem del detector de metales.
+*Aumentado el spawn de sacacorchos.
+
+Le Gourmet Revolution Changelog V-1.8 (Exclusivo para build de animaciones)
+Farming:
+*Reparación del cursor vanilla cuando se quiere curar una planta con aerosoles (Esperando Fix Oficial).
+*Reparado sistema de fertilizado de plantas del vanilla (Esperando Fix Oficial).
+
+Pesca:
+*Reparadas recetas de cortar filetes.
+*Balance de escalado de peces como WorldItem (Surubí)
+*Inserción de tablas de escalado de peces del mod por separado segun su porte.
+
+Recetas y otras mecánicas:
+*Reparadas algunas recetas de cortar filetes.
+*Reparado despostar animales podridos.
+*Reparado picar carne podrida.
+*Reparadas todas las recetas que setean el estado de un ingrediente a un resultante.
+*Reparado trozar pollo (No otorgaba las partes cocinadas, quemadas o podridas si el pollo tenía dicha condicion)
+
+Le Gourmet Revolution Changelog V-1.7 (Exclusivo para build de animaciones)
+*Reparado error al regar plantaciones.
+*Reparado sonido del tirachinas al romperse.
+*Agregados mas items 3D.
+*Actualizados sonidos de cuchillos despostadores y lanzas del mod.
+*Cambio en el sistema de pesca con lanza:
+	-Pescar un pez con lanza nos dará un pez muerto siempre. (No es considerado como pesca deportiva)
+	-Disminuida las chances de pescar peces de especies de gran porte utilizando lanzas.
+*Reparados modelos de latas del juego base.
+*Cambio de modelo 3D de paquete de cigarrillos.
+*Reparado modelo estático de cigarrillos y animación al fumar.
+
+Le Gourmet Revolution Changelog V-1.6 (Exclusivo para build de animaciones)
+*Agregadas recetas para preparar Aceite de girasol y aceite de maiz.
+*Agregada Nueva revista de aprendizaje de receta Le Gourmet N8.
+*Agregados modelos 3D custom de todas las revistas de Le Gourmet(Cocina)
+*Agregados modelos 3D custom de revista de climatología.
+*Agregados modelos 3D de semillas y sus respectivos paquetes.
+*Agregados modelos 3D de Asado, Patí y Surubí (Gracias Truji, Fede)
+
+Le Gourmet Revolution Changelog V-1.5 (Exclusivo para build de animaciones)
+*Actualización exclusiva para build 41.54.
+*Agregada trampa para osos(Rota) - Al romperse una trampa para osos ya no dejará Unusable Metal sinó que dejará una trampa para osos rota la cual podremos reparar con cierta habilidad.
+*Cambio en el sistema de caza con tirachinas:
+	-Ahora como munición se utilizan piedras pequeñas, las cuales se pueden obtener rebuscando o bien rompiendo piedras o piedras filosas. (La receta otorga 2 unidades + una chance random de que nos entregue entre 0 y 3 piedras pequeñas mas)
+
+Le Gourmet Revolution Changelog V-1.4 (Exclusivo para build de animaciones)
+*Actualizada tabla de loot (Eliminados aparejos de pesca del juego base en los procedural)
+
+Le Gourmet Revolution Changelog V-1.3 (Exclusivo para build de animaciones)
+*Actualizado para Build 41.51
+*Cambio en el sistema de saquear tumbas (Reescrito el código), ahora se utiliza el cursor de celda.
+*Quitados de la lista de junk al pescar los tubos de plástico.
+*Ahora se puede pescar utilizando lombriz colorada sin necesidad de armar un aparejo de pesca.
+*Removida la receta de forzar lata de atún. (Tiene abre facil)
+*Se eliminaron recetas de almohadas.
+*Balance de cuchillos y de spawn clavados en los zombies.
+*Arreglo de algunas traducciones.
+*Cambios en el sistema de farming para compatibilidad con el juego base 41.51.
+
+Le Gourmet Revolution Changelog V-1.2 (Exclusivo para build de animaciones)
+*Agregados nuevos cebos para aves y cuervos.
+*Actualizadas ficheros de caza para aves y cuervos.
+*Cambio en la lectura de zonas para cazar con tirachinas y rifle (Ahora el sistema de caza lee adecuadamente la generación de zonas automáticas del juego base).
+
+Le Gourmet Revolution Changelog V-1.19 (Exclusivo para build de animaciones)
+*Agregado Halo Note al leer las instrucciones de los paquetes de semillas.
+
+Le Gourmet Revolution Changelog V-1.18 (Exclusivo para build de animaciones)
+*Agregado pico rudimentario.
+*Agregada receta para hacer pico rudimentario a la revista del superviviente N5.
+
+Le Gourmet Revolution Changelog V-1.17 (Exclusivo para build de animaciones)
+*Agregado item Ajo (Rebuscar)
+*Agregada receta para hacer salsa marinera (Revista Le Gourmet N2)
+*Agregado tarro de salsa marinera.
+*Agregado frasco de salsa marinera vacío.
+
+Le Gourmet Revolution Changelog V-1.16 (Exclusivo para build de animaciones)
+*Agregadas mecánicas para extraer Acido Clorhidrico de tanques y barriles en mapas custom.
+*Agregada lanza con cuchillo despostador.
+*Agregada receta para fabricar lanza utilizando cuchillo despostador.
+*Balance: Reducción de xp ganada al rasgar y deshilachar.
+*Balance: Afilar cuchillos ahora destruye la piedra usada.
+
+Le Gourmet Revolution Changelog V-1.15 (Exclusivo para build de animaciones)
+*Agregado Easter Egg!
+*Cambio en caza con tirachinas y rifles:
+	-Si se equipa el set de indumentaria completa "Ghillie" obtendremos un 20% mas de chances de hallar animales.
+*Actualizada información del Manual de Aprendizaje Le Gourmet.
+*Reparado bug (Gracias NICOLAX) al querer picar filetes que se encuentran dentro de mochilas con la picadora manual o electrica. (Ahora se transfieren primero automáticamente al inventario principal)
+
+Le Gourmet Revolution Changelog V-1.14 (Exclusivo para build de animaciones)
+*Actualizado sistema de pesca a la Build 41.44
+*Cambios en caza con rifle:
+Disminución de apariciones de osos de un 80% a un 30%.
+Disminución de apariciones de alces de un 85% a un 25%.
+Ahora al acertar en un objetivo pueden pasar dos cosas.
+1-Acertar y matar al animal (obtener las bonificaciones de xp)
+Tendremos una base de chance de matar al animal de 25% la cual irá subiendo un 7.5% por cada nivel de puntería que tenga el personaje. Llegando asi a un 100% de chance de matarlo a nivel 10 de punteria.
+2-Acertar y herir al animal (No consigues el animal pero si las bonificaciones de xp)
+*Agregado rasgo Cazador Aficionado(Mas chances de encontrar animales cazando con rifle (50%+) y si se acierta en el objetivo 100% de probabilidad de matarlo.)
+*Agregado factor suerte (rasgos) para acertar o no a un animal cuando se caza con rifle.
+*Reparada escala del bisonte cuando se encuentra en el suelo.
+*Agregado nuevo icono de item para el detector de metales.
+*Cambio en los usos del acido clorhidrico, antes tenían 20 usos, ahora 50 usos maximos por c/u.
+*Modelos 3D nuevos: Gracias @elnegrotruji!!!
+*Agregado modelo 3D para el detector de metales!
+*Agregado nuevo modelo 3D para el cuchillo despostador!
+*Agregado modelo 3D para Tacos!
+*Agregado modelo 3D para horma de queso.
+*Agregado modelo 3D para horma de queso rojo.
+*Agregado modelo 3D para barra de queso.
+*Agregado modelo 3D para queso mozzarella.
+*Agregado modelo 3D pincel de cocina.
+*Agregado modelo 3D para hebras de queso.
+
+
+Le Gourmet Revolution Changelog V-1.13 (Exclusivo para build de animaciones)
+*Agregado Molino de café como worldobject y funciones lua para poder moler semillas de café tostado. (Requiere Custom Map Bridge V3.26)
+*Agregadas texturas de hongos podridos.
+*Agregado tiempo correcto para las pilas de ramas y ramitas para encender la hoguera.
+*Agregada nueva categoría al rebuscar: Minería.
+*Agregadas piedras y minerales para poder fabricar yeso y pólvora.
+
+Le Gourmet Revolution Changelog V-1.12 (Exclusivo para build de animaciones)
+*Reparación del cursor de cazar con rifle cuando lo llevamos a una zona y lo colocamos en arboles no compatibles.
+*Agregada traducción de las semillas de girasol.
+*Las picadoras de carne reducen en un 20% la alimentación y los valores nutricionales de la carne que se puede picar.
+*Cambios en depostar:
+*Al obtener comida los valores de alimentación y nutricionales de los cortes dependerán del nivel de cocina del personaje (Valor base del corte al 50% + 5% de alimentacion por nivel de cocina, llegando así a un 100% en lvl 10)
+*Agregado trozo de oso al despostar.
+*Agregado trozo de alce al despostar.
+*Agregado trozo de venado al despostar.
+*Agregado trozo de bisonte al despostar.
+*Agregadas recetas para ablandar los trozos de carne de los animales despostados.
+*Ya no aparecerá el mensaje halo de ganancia de xp cuando tenemos lvl 10 de puntería al cazar con rifle.
+
+Le Gourmet Revolution Changelog V-1.11 (Exclusivo para build de animaciones)
+Cambios de balance en el sistema de trampas:
+Se redujo la alimentación maxima que dan los animales por trampas:
+Rata: de 25(Base) a 20.
+Conejo: de 100(Base) a 50.
+Ardilla: de 60(Base) a 40.
+Pajaro: de 32(Base) a 20.
+Los demás animales sin cambios.
+Se corrigió el peso máximo que podemos obtener de un Conejo por trampas a 2.7kg.
+Se corrigió de que al despellejar un animal multiplicara su alimentacion x1.05. (Ahora 0.95).
+Se agregaron funciones para que al obtener el animal de una trampa tambien varíe su valor nutricional: Carbohidratos, Calorias, Proteinas, Lipidos. Segun su tamaño.
+Se agregó la posibilidad de que los jugadores con mayor habilidad trampas puedan tener mas chances de atrapar un animal mas grande.
+Agregadas recetas para desmantelar picadoras de carne eléctricas y máquinas de salchichas eléctricas.
+Se agregó traducción para picadora de carne eléctrica y máquina de salchichas eléctrica.
+Se agregó revista del superviviente N6.
+Se agregarón marcos de puerta de troncos, puertas dobles de troncos, refuerzos de troncos (Simples y para esquinas) a la revista del superviviente N6.
+
+
+Le Gourmet Revolution Changelog V-1.10 (Exclusivo para build de animaciones)
+*Quitado archivo LeGourmetEvolutionPlusInfo(Obsoleto).
+*Agregadas cajas de trozos de hilo fino y grueso y sus respectivas recetas (Contienen 50 trozos).
+*Quitada de las tablas de loot el item plumas.
+*Cambio en el sistema de caza con tirachinas y rifles, ahora solo ganaremos puntos de rebuscar al atinarle al objetivo (Golpeandolo o no).
+
+Le Gourmet Revolution Changelog V-1.09 (Exclusivo para build de animaciones)
+*Reparada tooltip de caza con tirachinas y rifle.
+*Quitada la receta para hacer hilo de la revista de superviviente N2 (El personaje ya se sabe la receta)
+*Actualizado sistema de trampas acorde a la Build 41.41
+
+Le Gourmet Revolution Changelog V-1.08 (Exclusivo para build de animaciones)
+*Optimización de codigo en funciones de aprendizaje de recetas al leer paquetes de semillas.
+*Reparada receta aprendida desde el paquete de semillas de fresas.
+*Reparada receta aprendida desde el paquete de semillas de zanahorias.
+*Cambio en el sistema de rasgar telas: 
+	-Ahora en vez de dar hilo en carrete el sistema da trozos de hilo o cordel segun el tipo de indumentaria y la condicion de la misma.
+	-Por contraparte ahora el personaje recibe 0.25 xp de sastrería al rasgar prendas.
+*Cambio en el sistema de deshilachado: 
+	-Ahora el sistema pasa a ser receta gracias a los updates en el sistema de scripts.
+	-Solo aparecerá la opción de deshilachar en aquellas prendas que no se pueden rasgar.
+	-El personaje recibe xp de sastrería al deshilachar prendas.
+
+Le Gourmet Revolution Changelog V-1.07 (Exclusivo para build de animaciones)
+*Reparado sistema de Farming.
+*Adaptación de traducciones (Build 41.40).
+*Agregadas nuevamente recetas para romper botellas de vidrio vacías.
+
+Le Gourmet Revolution Changelog V-1.06 (Exclusivo para build de animaciones)
+*Unificación de la ventana de información de hoguera con la implementada en el juego base.(Build 41.40)
+*Agregados (En parte) archivos de traducciones nuevos para aquellos items del mod que dejarán de tener soporte de traducción desde el juego base.
+
+Le Gourmet Revolution Changelog V-1.05 (Exclusivo para build de animaciones)
+*Removidos momentaneamente sonidos del mod extra al pescar.
+
+Le Gourmet Revolution Changelog V-1.04 (Exclusivo para build de animaciones)
+*Actualizada tabla de loot para build 41.35.
+
+Le Gourmet Revolution Changelog V-1.03 (Exclusivo para build de animaciones)
+*Actualizado para Build 41.34
+
+Le Gourmet Revolution Changelog V-1.02 (Exclusivo para build de animaciones)
+(Requiere Snake Utils Pack V1.05)
+*Actualizado para la build 41.30
+
+Le Gourmet Revolution Changelog V-1.01 (Exclusivo para build de animaciones)
+(Requiere Snake Utils Pack V1.04)
+*Reparada bebida Vodka que daba sed.
+*Reparada funcion de ganancia de xp al quitar chicles de su paquete.
+*Reparada funcion de caza con tirachinas cuando no tenemos en el inventario los binoculares.
+*Quitadas las zonas de FarmLand y Vegitation de las zonas de caza con tirachinas.
+-Mejoras en el sistema de caza con tirachinas: Agregado sistema para trabajar con items dentro de la mochila.
+	-El sistema detecta si tenemos binoculares en la mochila, al elegir la opcion de observar un arbol, el item pasa de la mochila al inventario y luego el personaje se equipa los binoculares.
+	-El sistema detecta si tenemos tirachinas en el la mochila (Prioridad tirachinas de carpintero en el caso de tener los dos tipos) si es necesario lo saca de la mochila y se lo equipa en mano primaria.
+	-El sistema detecta si tenemos piedras en la mochila, al seleccionar "arrojar piedra" tomará los items de la misma y se equipará uno en mano secundaria.
+	-Sistema adaptado con interface de selección de arboles (Build 41.29)
+*Agregado WorldObject para picadora de carne a manivela y eléctrica, ahora se interactua con el objeto (Requiere Custom map Bridge V3.21).
+*Agregada mas indumentaria para deshilachar (Corbatas, chalecos, etc.)
+*Agregadas las latas de energizante vacías como contenedor de agua en exteriores cuando hay precipitaciones. (Gracias TwoPala por el reporte!)
+*Nuevo sistema de depostar (Todavía trabajando en ello).
+*Actualizados los sistemas de rebuscar y pesca para builds superiores a 41.27.
+
+
+Le Gourmet Revolution Changelog V-1.0 (Exclusivo para build de animaciones)
+Agregados:
+-Agregados modelos 3D de botellas de refresco, latas de bebidas y botellas de bebidas alcoholicas.
+-Agregado Fernet.
+-Sistema de pesca cambios:
+	-Cambios en los tiempos de ejecuciones de los sonidos, ahora el sonido de lanzar y la caida del cebo al agua son acordes a los tiempos en que se ejecutan las animaciones para esta acción.
+	-Se agrego una categoría nueva de tamaño de pez: de trofeo, los peces de esta categoría van a tener mayor peso que los grandes (Muy pocas chances de capturar un pez de trofeo y mayores chances de rotura de línea)
+	-Se corrigió el orden en que aparece el nombre de un pez luego de haberlo capturado para lenguaje ES y AR (Antes: Mediano Barbo - 22 cms. Ahora: Barbo mediano - 22 cms.)
+	-Se agregó texto informativo cuando se pierde algun aparejo ya sea por quedar atascado o por rotura del sedal al clavar un pez demasiado grande.
+	-Se anuló la posibilidad de conseguir chapas metálicas pequeñas y grandes usando lanza.
+	-Sonidos nuevos: 
+		*Mientras se pesca se escuchará el sonido del reel cuando el personaje recoge el sedal.
+		*Sonido al romperse el cebo por tensión.
+-Agregadas animaciones para acciones custom que agrega el mod (Abrir estuches de pesca, cajas antiguas, leer enciclopedias, manual de Le Gourmet, etc)
+-Readaptación total de las tablas de loot para compatibilidad con esta nueva build.
+
+-Corrección de sonidos al realizar acciones de abrir cajas antiguas/estuches de pesca.
+-Agregadas posibilidades de agregar la comida de este mod a las nuevas recetas evolved.
+-Agregado modelo 3D para el cuchillo depostador.
+-Nueva acción de saquear tumbas con animación incluida, ahora se pueden utilizar diferentes tipos de palas y veremos la barra verde de progreso de trabajo sobre el item en el inventario.
+-Nueva animación al identificar semillas si el personaje no es granjero y requiere el libro de semillas veremos como busca información en él. El granjero no necesita libro de semillas para identificarlas.
+-Readaptación del sistema de farming.
+-Agregada plantas de tabaco.
+-Los menúes contextuales de cheat ahora tienen soporte de lenguaje.
+-Agregado el requerimiento del Horquilla de jardín para obtener alfalfa.
+-Traslado total de las recetas de deshilachado de indumentaria a lenguaje lua (Ya no apareceran como recetas en el ayudante de recetas).
+-Ampliada la cantidad necesaria de trozos de hilo fino/grueso en las recetas (de 50 a 100) para fabricar carretes de hilo y cordel.
+-Agregada validación al forzar latas de conservas, ahora no nos desplegará el menu contextual si tenemos un abrelatas en la mochila o en el inventario principal.
+-Agregados modelos 3D de paquetes de semillas las cuales veremos al leer las instrucciones.
+-Agregados modelos 3D de fichas de caza.
+-Retexturizados todos los iconos de items de los peces del mod.
+-Reparado el texto en la ventana de arrojar piedra con los pajaros (Tirachinas).
+-Cambio en los nombres de las revistas de Le Gourmet (Ahora no se stackean).
+-Agregadas dos revistas de le gourmet nuevas (Una que agrega la fabricación de harinas, otra que agrega comida mexicana).
+-Agregada textura podrida para los hotdogs del juego base.
+-Agregada textura podrida para las papas fritas del juego base.
+-Agregada salsa tabasco.
+-Agregada receta para cortar calabacines (Recetas Evolved)
+-Agregadas recetas para hacer pilas de ramas/ramitas con trozos de tela.
+-Agregadas recetas aprendidas de comidas mexicanas a la profesión chef.
+-Agregada receta para trenzar trozos de hilo fino para generar trozos de cordel.
+-Agregada posibilidad de sacrificar la cosecha de vainas de trigo para poder obtener mas semillas.
+-Agregadas bolsitas de papel filtro y cajas de papel filtro para preparar infusiones de hierbas medicinales.
+-Agregadas infusiones medicinales.
+-Corregida la información de cálculo de tiempo de hogueras.
+-Reparadas latas de gaseosas vacías que no se podían cargar con agua.
+-Incrementado el tiempo de combustible que otorgan las pilas de ramas y ramitas a las hogueras.
+
+Eliminaciones:
+-Eliminado el loot de libros al abrir cajas antiguas.
+-Eliminado tridente de granja (Ya lo trae el juego base)
+-Eliminado cuchillo de superviviente (Ya lo trae el juego base)
+-Eliminada receta de desmantelar linternas (Ya la trae el juego base)
+-Removido el arco, la ballesta y sus recetas momentaneamente hasta que se estabilice la build.
+-Removido el rasgo de arquero.

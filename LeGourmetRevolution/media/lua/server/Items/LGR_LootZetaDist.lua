@@ -1,0 +1,110 @@
+require "Items/LZEEFunction"
+
+-- Formato (Indumentaria, Item, Chance, Script Count, Nombre del mod)
+LGRLZ = {};
+LGRLZ.initTable = function()
+	if LZFunc then
+		local modname = "Le Gourmet Revolution";
+		LZFunc.LootZetaAddItemTable("Camper","TeaBagBox",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Survivalist","AdvancedFishing.MetalDetector",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Survivalist","AdvancedFishing.WoodenFishingNet",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Camper","magnifyingglass",10,false,modname);
+		LZFunc.LootZetaAddItemTable("MetalWorker","AdvancedFishing.AcidC",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Fisherman","AdvancedFishing.Fishinglurebox",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Fisherman","AdvancedFishing.FishingLine2",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Fisherman","AdvancedFishing.FishingLine3",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Fisherman","AdvancedFishing.RedWorm",35,false,modname);
+		LZFunc.LootZetaAddItemTable("Fisherman","AdvancedFishing.RedWorm",35,false,modname);
+		LZFunc.LootZetaAddItemTable("Fisherman","AdvancedFishing.RedWorm",35,false,modname);
+		LZFunc.LootZetaAddItemTable("Fisherman","AdvancedFishing.WoodenFishingNet",20,false,modname);
+		LZFunc.LootZetaAddItemTable("Raider","Mining.MiningMag1",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Farmer","legourmetfarming.UnknownSeed",30,false,modname);
+		LZFunc.LootZetaAddItemTable("Farmer","legourmetfarming.UnknownSeed",20,false,modname);
+		LZFunc.LootZetaAddItemTable("Farmer","legourmetfarming.UnknownSeed",15,false,modname);
+		LZFunc.LootZetaAddItemTable("Farmer","legourmetfarming.UnknownSeed",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Farmer","legourmetfarming.UnknownSeed",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Farmer","legourmetfarming.LgFarmMag1",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Farmer","legourmetfarming.BSodium",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Farmer","legourmetfarming.SeedBook",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Doctor","MedicalHose",10,false,modname);
+		LZFunc.LootZetaAddItemTable("HospitalPatient","MedicalHose",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Nurse","MedicalHose",15,false,modname);
+		LZFunc.LootZetaAddItemTable("AmbulanceDriver","MedicalHose",10,false,modname);
+		LZFunc.LootZetaAddItemTable("ArmyCamoDesert","LgBinoculars",5,false,modname);
+		LZFunc.LootZetaAddItemTable("ArmyCamoGreen","LgBinoculars",5,false,modname);
+		LZFunc.LootZetaAddItemTable("ArmyInstructor","LgBinoculars",5,false,modname);
+		LZFunc.LootZetaAddItemTable("ArmyServiceUniform","LgBinoculars",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Hunter","LgBinoculars",8,false,modname);
+		LZFunc.LootZetaAddItemTable("Hunter","HuntingCard1",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Hunter","HuntingCard2",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Hunter","HuntingCard3",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Hunter","HuntingCard4",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Hunter","HuntingCard5",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Hunter","HuntingCard6",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Hunter","HuntingCard7",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Hunter","HuntingCard8",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Hunter","HuntingCard9",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Hunter","HuntingCard10",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Hunter","DeerCall",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Ranger","LgBinoculars",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Ranger","DeerCall",8,false,modname);
+		LZFunc.LootZetaAddItemTable("Ranger","AdvancedFishing.WoodenFishingNet",5,false,modname);
+		LZFunc.LootZetaAddItemTable("PrivateMilitia","LgBinoculars",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_Market","CheeseMoldEmpty",8,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_Market","EdibleDyeYellow",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_Market","EdibleDyeRed",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_Market","EdibleDyeOrange",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Chef","CheeseMoldEmpty2",8,false,modname);
+		LZFunc.LootZetaAddItemTable("Chef","MilkPowder",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Chef","Oil",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_PileOCrepe","CheeseMoldEmpty3",8,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_PileOCrepe","LacticFerment",15,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_PileOCrepe","CitricAcid",15,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_PileOCrepe","Gelatine",15,false,modname);
+		LZFunc.LootZetaAddItemTable("Chef","KitchenBrush",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Chef","CitricAcid",8,false,modname);
+		LZFunc.LootZetaAddItemTable("Chef","LacticFerment",8,false,modname);
+		LZFunc.LootZetaAddItemTable("Chef","EdibleDyeYellow",8,false,modname);
+		LZFunc.LootZetaAddItemTable("Chef","EdibleDyeRed",8,false,modname);
+		LZFunc.LootZetaAddItemTable("Chef","EdibleDyeOrange",8,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_Spiffo","MilkPowder",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_Spiffo","Cornflour",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_Spiffo","CornOil",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_Spiffo","PackSalchichas",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_Diner","MilkPowder",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_Restaurant","legourmet.Wine3",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_PizzaWhirled","Oil",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_PizzaWhirled","CornOil",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_TachoDelPancho","Tabasco",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_TachoDelPancho","Cornflour",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_TachoDelPancho","PackSalchichas",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Bandit","legourmet.VodkaFull",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Punk","legourmet.VodkaFull",10,false,modname);
+		LZFunc.LootZetaAddItemTable("InmateEscaped","legourmet.VodkaFull",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Tourist","legourmet.EnergyDrinkBottle",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Tourist","legourmet.GumPack",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Tourist","legourmet.Glass",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Tourist","legourmet.MartiniGlass",15,false,modname);
+		LZFunc.LootZetaAddItemTable("Rocker","legourmet.Gum",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Raider","legourmet.Gum1",10,false,modname);
+		LZFunc.LootZetaAddItemTable("SportsFan","legourmet.Gum2",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Party","MoldesMagBox",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Party","legourmet.GummyBears",10,false,modname);
+		LZFunc.LootZetaAddItemTable("Party","legourmet.JuiceBox2",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Party","legourmet.JuiceBox3",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Party","legourmet.JuiceBox4",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Party","legourmet.JuiceBox5",5,false,modname);
+		LZFunc.LootZetaAddItemTable("OfficeWorker","RubberBandsBox",3,false,modname);
+		LZFunc.LootZetaAddItemTable("OfficeWorkerSkirt","RubberBandsBox",3,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_Restaurant","legourmet.MargaritaGlass",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_Restaurant","legourmet.Glass",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_Restaurant","legourmet.MartiniGlass",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_Restaurant","legourmet.CocktailSpoon",5,false,modname);
+		LZFunc.LootZetaAddItemTable("Waiter_Restaurant","legourmet.Wine3",8,false,modname);
+	end
+end
+
+function LGRDoLZTable()
+	LGRLZ.initTable();
+end
+LGRDoLZTable()

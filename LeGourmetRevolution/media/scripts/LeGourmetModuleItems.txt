@@ -1,0 +1,3234 @@
+module legourmet
+{
+	imports
+	{
+		Base
+	}
+
+	item MatePreparationSweet
+	{
+		DisplayName = Mate,
+		DisplayCategory = Food,
+		Type = Food,
+		Weight = 0.2,
+		Icon = MateEmpty,
+		ReplaceOnUse = MateEmpty,
+		HungerChange = -4,
+		ThirstChange = -20,
+		UnhappyChange = -10,
+		FatigueChange = -10,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkMate,
+		WorldStaticModel = Mate_Ground,
+	}
+
+	item MatePreparation
+	{
+		DisplayName = Mate,
+		DisplayCategory = Food,
+		Type = Food,
+		Weight = 0.2,
+		Icon = MateEmpty,
+		ReplaceOnUse = MateEmpty,
+		HungerChange = -2,
+		ThirstChange = -20,
+		UnhappyChange = -10,
+		FatigueChange = -10,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkMate,
+		WorldStaticModel = Mate_Ground,
+	}
+	
+	item YerbaMate
+	{
+		DisplayCategory = Food,
+		Weight			=	1.5,
+		Type			=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta			=	0.05,
+		DisplayName		=	Yerba Mate,
+		Icon			=	YerbaMate,
+		WorldStaticModel = YerbaMate_Ground,
+	}
+
+	item MateEmpty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			=	0.05,
+		Type			=	Normal,
+		DisplayName		=	Mate,
+		Icon			=	MateEmpty,
+		WorldStaticModel = Mate_Ground,
+	}
+	
+	item VacuumFlaskEmpty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			=	0.1,
+		CanStoreWater	=	TRUE,
+		Type			=	Normal,
+		DisplayName		=	Empty Vacuum Flask,
+		ReplaceOnUseOn	=	WaterSource-VacuumFlaskFull,
+		Icon			=	VacuumFlask,
+		WorldStaticModel = VacuumFlask_Ground,
+	}
+
+	item VacuumFlaskFull
+	{
+		DisplayCategory = Water,
+		IsWaterSource		=	TRUE,
+		Weight				=	0.8,
+		CanStoreWater		=	TRUE,
+		FillFromDispenserSound = GetWaterFromDispenserPlasticMedium,
+		FillFromTapSound = GetWaterFromTapPlasticMedium,
+		Type				=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta			=	0.1,
+		DisplayName			=	Water Vacuum Flask,
+		ReplaceOnDeplete	=	VacuumFlaskEmpty,
+		ReplaceOnUseOn		=	WaterSource-VacuumFlaskFull,
+		Icon				=	VacuumFlask,
+		CustomContextMenu 	= 	Drink,
+		CustomEatSound 		= 	DrinkingFromBottlePlastic,
+		WorldStaticModel = VacuumFlask_Ground,
+	}
+
+	item VacuumFlaskFullHot
+	{
+		DisplayCategory = Water,
+		IsWaterSource		=	TRUE,
+		Weight				=	0.8,
+		Type				=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta			=	0.1,
+		DisplayName			=	Hot Water Vacuum Flask,
+		ReplaceOnDeplete	=	VacuumFlaskEmpty,
+		Icon				=	VacuumFlask,
+		CustomContextMenu 	= 	Drink,
+		CustomEatSound 		= 	DrinkingFromBottlePlastic,
+		WorldStaticModel = VacuumFlask_Ground,
+	}
+	
+    item Garlic
+    {
+		DisplayCategory = Food,
+	    Weight	=	0.1,
+	    HungerChange	=	-3,
+	    UnhappyChange	=	15,
+        ReduceInfectionPower     =   30,
+		ReduceFoodSickness = 10,
+        Tooltip = Tooltip_Garlic,
+	    Type	=	Food,
+	    DisplayName	=	Garlic,
+	    Icon	=	RHP_KI03Garlic,
+		DaysFresh	=	8,
+		DaysTotallyRotten	=	10,
+	    Carbohydrates = 1,
+	    Proteins = 0,
+	    Lipids = 0,
+	    Calories = 4,
+    }
+
+    item EnergyMagazine
+    {
+		DisplayCategory = SkillBook,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Energy Drinks Magazine,
+        Icon	=	EnergyMag,
+        TeachedRecipes  =   Make energy drink1;Make energy drink2;Make energy drink3;Make energy drink4;Make energy drink5;Make natural energy drink,
+        ReplaceOnUse    =   EnergyMagazine,
+		StaticModel = LGEnergyMagazine1,
+		WorldStaticModel = LGEnergyMagazine1_Ground,
+	}
+
+    item DrinksMag2
+    {
+		DisplayCategory = SkillBook,
+	    Weight	=	0.1,
+	    Type	=	Literature,
+	    DisplayName	=	Drinks Magazine,
+	    Icon	=	RHP_BM02DrinksMagazine,
+	    TeachedRecipes  =   Make Margarita Cocktail;Make Martini Cocktail;Make Mojito Cocktail;Make Cosmopolitan Cocktail,
+	    ReplaceOnUse    =   DrinksMag2,
+		StaticModel = LGDrinksMag2,
+		WorldStaticModel = LGDrinksMag2_Ground,
+    }
+
+/************************Custom Edibles************************/
+    item FernetCola
+    {
+		DisplayCategory = Food,
+        HungerChange	=	-5,
+        Weight	=	1,
+        Type	=	Food,
+		StressChange		=	-5,
+        ThirstChange	=	-10,
+		FatigueChange		=	-8,
+        UnhappyChange	=	-15,
+        DisplayName	=	FernetCola,
+        Alcoholic	=	TRUE,
+        ReplaceOnUse	=	GlassTumbler,
+        Icon	=	FernetCola,
+        CustomContextMenu = Drink,
+        CustomEatSound = DrinkingFromBottle,
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 481,
+        CantBeFrozen = TRUE,
+        StaticModel = GlassTumbler_Ground,
+        EatType = bottle,
+		WorldStaticModel = GlassTumbler_Ground,
+    }
+
+    item FernetFull
+    {
+		DisplayCategory = Food,
+        HungerChange	=	-10,
+        Weight	=	1,
+        Type	=	Food,
+        ThirstChange	=	-20,
+        UnhappyChange	=	-20,
+        DisplayName	=	Fernet,
+        Alcoholic	=	TRUE,
+        ReplaceOnUse	=	FernetEmpty,
+        Icon	=	FernetFull,
+        CustomContextMenu = Drink,
+        CustomEatSound = DrinkingFromBottle,
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 481,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+        StaticModel = FernetBottle,
+		WorldStaticModel = FernetBottle,
+    }
+
+	item FernetEmpty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			=	0.2,
+		CanStoreWater	=	TRUE,
+		Type			=	Normal,
+		DisplayName		=	Empty Bottle,
+		ReplaceOnUseOn	=	WaterSource-FernetWaterFull,
+		Icon			=	FernetEmpty,
+		WorldStaticModel = FernetBottle,
+	}
+
+	item VodkaFull
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-10,
+		Weight			=	1.2,
+		Type			=	Food,
+		ThirstChange	=	-15,
+		DisplayName		=	Vodka,
+		Alcoholic		=	TRUE,
+        UnhappyChange	=	-30,
+		ReplaceOnUse	=	VodkaEmpty,
+		Icon			=	VodkaFull,
+		CustomContextMenu = Drink,
+		CustomEatSound 	= DrinkingFromBottle,
+		AlcoholPower 	= 4,
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 1000,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+		StaticModel = VodkaBottle,
+	}
+
+	item EnergyDrink
+	{
+		DisplayCategory = Food,
+		HungerChange		=	-8,
+		Weight				=	0.3,
+		AlwaysWelcomeGift	=	TRUE,
+		Type				=	Food,
+		ThirstChange		=	-30,
+		EnduranceChange		=	10,
+        FatigueChange		=	-15,
+		StressChange	    =	50,
+		DisplayName			=	Energy Drink,
+		Icon				=	EnergyDrink,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromCan,
+        Carbohydrates = 60,
+        Proteins = 1.5,
+        Lipids = 0.1,
+        Calories = 225,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+		ReplaceOnUse = EnergyDrinkEmpty,
+		StaticModel = EnergyCan01,
+        EatType = popcan,
+		WorldStaticModel = EnergyCan01,
+	}
+
+	item EnergyDrink2
+	{
+		DisplayCategory = Food,
+		HungerChange		=	-8,
+		Weight				=	0.3,
+		AlwaysWelcomeGift	=	TRUE,
+		Type				=	Food,
+		ThirstChange		=	-30,
+		EnduranceChange		=	10,
+        FatigueChange		=	-15,
+		StressChange	    =	50,
+		DisplayName			=	Energy Drink,
+		Icon				=	EnergyDrink2,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromCan,
+        Carbohydrates = 60,
+        Proteins = 1.5,
+        Lipids = 0.1,
+        Calories = 225,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+		ReplaceOnUse = EnergyDrink2Empty,
+		StaticModel = EnergyCan02,
+        EatType = popcan,
+		WorldStaticModel = EnergyCan02,
+	}
+
+	item EnergyDrink3
+	{
+		DisplayCategory = Food,
+		HungerChange		=	-8,
+		Weight				=	0.3,
+		AlwaysWelcomeGift	=	TRUE,
+		Type				=	Food,
+		ThirstChange		=	-30,
+		EnduranceChange		=	10,
+        FatigueChange		=	-15,
+		StressChange	    =	50,
+		DisplayName			=	Energy Drink,
+		Icon				=	EnergyDrink3,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromCan,
+        Carbohydrates = 60,
+        Proteins = 1.5,
+        Lipids = 0.1,
+        Calories = 225,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+		ReplaceOnUse = EnergyDrink3Empty,
+		StaticModel = EnergyCan03,
+        EatType = popcan,
+		WorldStaticModel = EnergyCan03,
+	}
+
+	item EnergyDrink4
+	{
+		DisplayCategory = Food,
+		HungerChange		=	-8,
+		Weight				=	0.3,
+		AlwaysWelcomeGift	=	TRUE,
+		Type				=	Food,
+		ThirstChange		=	-30,
+		EnduranceChange		=	10,
+        FatigueChange		=	-15,
+		StressChange	    =	50,
+		DisplayName			=	Energy Drink,
+		Icon				=	EnergyDrink4,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromCan,
+        Carbohydrates = 60,
+        Proteins = 1.5,
+        Lipids = 0.1,
+        Calories = 225,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+		ReplaceOnUse = EnergyDrink4Empty,
+		StaticModel = EnergyCan04,
+        EatType = popcan,
+		WorldStaticModel = EnergyCan04,
+	}
+
+	item EnergyDrink5
+	{
+		DisplayCategory = Food,
+		HungerChange		=	-8,
+		Weight				=	0.3,
+		AlwaysWelcomeGift	=	TRUE,
+		Type				=	Food,
+		ThirstChange		=	-30,
+		EnduranceChange		=	10,
+        FatigueChange		=	-15,
+		StressChange	    =	50,
+		DisplayName			=	Energy Drink,
+		Icon				=	EnergyDrink5,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromCan,
+        Carbohydrates = 60,
+        Proteins = 1.5,
+        Lipids = 0.1,
+        Calories = 225,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+		ReplaceOnUse = EnergyDrink5Empty,
+		StaticModel = EnergyCan05,
+        EatType = popcan,
+		WorldStaticModel = EnergyCan05,
+	}
+
+	item EnergyDrinkEmpty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			= 0.1,
+		Type			= Normal,
+		DisplayName		= Empty can,
+		Icon			= EnergyDrink,
+
+		CanStoreWater	= TRUE,
+		ReplaceOnUseOn	= WaterSource-EnergyDrinkFull,
+		MetalValue = 10,
+		WorldStaticModel = EnergyCan01,
+	}
+
+	item EnergyDrinkFull
+	{
+		DisplayCategory = Water,
+		Weight				= 0.3,
+		DisplayName			= Water can,
+		Icon				= EnergyDrinkW,
+
+		CanStoreWater		= TRUE,
+		IsWaterSource		= TRUE,
+		Type				= Drainable,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.5,
+		ReplaceOnDeplete	= EnergyDrinkEmpty,
+		ReplaceOnUseOn		= WaterSource-EnergyDrinkFull,
+		IsCookable	=	TRUE,
+    	CustomContextMenu 	= 	Drink,
+	    CustomEatSound 		= 	DrinkingFromCan,
+		StaticModel = EnergyCan01,
+		RainFactor = 0.25,
+        Tooltip = Tooltip_item_RainFromGround,
+		WorldStaticModel = EnergyCan01,
+	}
+
+	item EnergyDrink2Empty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			= 0.1,
+		Type			= Normal,
+		DisplayName		= Empty can,
+		Icon			= EnergyDrink2,
+
+		CanStoreWater	= TRUE,
+		ReplaceOnUseOn	= WaterSource-EnergyDrink2Full,
+		MetalValue = 10,
+		WorldStaticModel = EnergyCan02,
+	}
+
+	item EnergyDrink2Full
+	{
+		DisplayCategory = Water,
+		Weight				= 0.3,
+		DisplayName			= Water can,
+		Icon				= EnergyDrink2W,
+
+		CanStoreWater		= TRUE,
+		IsWaterSource		= TRUE,
+		Type				= Drainable,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.5,
+		ReplaceOnDeplete	= EnergyDrink2Empty,
+		ReplaceOnUseOn		= WaterSource-EnergyDrink2Full,
+		IsCookable	=	TRUE,
+    	CustomContextMenu 	= 	Drink,
+	    CustomEatSound 		= 	DrinkingFromCan,
+		StaticModel = EnergyCan02,
+		RainFactor = 0.25,
+        Tooltip = Tooltip_item_RainFromGround,
+		WorldStaticModel = EnergyCan02,
+	}
+
+	item EnergyDrink3Empty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			= 0.1,
+		Type			= Normal,
+		DisplayName		= Empty can,
+		Icon			= EnergyDrink3,
+
+		CanStoreWater	= TRUE,
+		ReplaceOnUseOn	= WaterSource-EnergyDrink3Full,
+		MetalValue = 10,
+		WorldStaticModel = EnergyCan03,
+	}
+
+	item EnergyDrink3Full
+	{
+		DisplayCategory = Water,
+		Weight				= 0.3,
+		DisplayName			= Water can,
+		Icon				= EnergyDrink3W,
+
+		CanStoreWater		= TRUE,
+		IsWaterSource		= TRUE,
+		Type				= Drainable,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.5,
+		ReplaceOnDeplete	= EnergyDrink3Empty,
+		ReplaceOnUseOn		= WaterSource-EnergyDrink3Full,
+		IsCookable	=	TRUE,
+    	CustomContextMenu 	= 	Drink,
+	    CustomEatSound 		= 	DrinkingFromCan,
+		StaticModel = EnergyCan03,
+		RainFactor = 0.25,
+        Tooltip = Tooltip_item_RainFromGround,
+		WorldStaticModel = EnergyCan03,
+	}
+
+	item EnergyDrink4Empty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			= 0.1,
+		Type			= Normal,
+		DisplayName		= Empty can,
+		Icon			= EnergyDrink4,
+
+		CanStoreWater	= TRUE,
+		ReplaceOnUseOn	= WaterSource-EnergyDrink4Full,
+		MetalValue = 10,
+		WorldStaticModel = EnergyCan04,
+	}
+
+	item EnergyDrink4Full
+	{
+		DisplayCategory = Water,
+		Weight				= 0.3,
+		DisplayName			= Water can,
+		Icon				= EnergyDrink4W,
+
+		CanStoreWater		= TRUE,
+		IsWaterSource		= TRUE,
+		Type				= Drainable,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.5,
+		ReplaceOnDeplete	= EnergyDrink4Empty,
+		ReplaceOnUseOn		= WaterSource-EnergyDrink4Full,
+		IsCookable	=	TRUE,
+    	CustomContextMenu 	= 	Drink,
+	    CustomEatSound 		= 	DrinkingFromCan,
+		StaticModel = EnergyCan04,
+		RainFactor = 0.25,
+        Tooltip = Tooltip_item_RainFromGround,
+		WorldStaticModel = EnergyCan04,
+	}
+
+	item EnergyDrink5Empty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			= 0.1,
+		Type			= Normal,
+		DisplayName		= Empty can,
+		Icon			= EnergyDrink5,
+
+		CanStoreWater	= TRUE,
+		ReplaceOnUseOn	= WaterSource-EnergyDrink5Full,
+		MetalValue = 10,
+		WorldStaticModel = EnergyCan05,
+	}
+
+	item EnergyDrink5Full
+	{
+		DisplayCategory = Water,
+		Weight				= 0.3,
+		DisplayName			= Water can,
+		Icon				= EnergyDrink5W,
+
+		CanStoreWater		= TRUE,
+		IsWaterSource		= TRUE,
+		Type				= Drainable,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.5,
+		ReplaceOnDeplete	= EnergyDrink5Empty,
+		ReplaceOnUseOn		= WaterSource-EnergyDrink5Full,
+		IsCookable	=	TRUE,
+    	CustomContextMenu 	= 	Drink,
+	    CustomEatSound 		= 	DrinkingFromCan,
+		StaticModel = EnergyCan05,
+		RainFactor = 0.25,
+        Tooltip = Tooltip_item_RainFromGround,
+		WorldStaticModel = EnergyCan05,
+	}
+
+	item ColaBottle
+	{
+		DisplayCategory = Food,
+		HungerChange		=	-10,
+		Weight				=	0.8,
+		Type				=	Food,
+		StressChange		=	-5,
+		UnhappyChange		=	-5,
+		ThirstChange		=	-65,
+		FatigueChange		=	-8,
+		DisplayName			=	Cola,
+		ReplaceOnUse		=	ColaBottleEmpty,
+		Icon				=	Cola,
+		CustomContextMenu 	= 	Drink,
+		CustomEatSound 		= 	DrinkingFromBottlePlastic,
+        Carbohydrates = 104,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 400,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+		StaticModel = Cola01,
+        EatType = bottle,
+	}
+
+	item EnergyDrinkBottle
+	{
+		DisplayCategory = Food,
+		HungerChange		=	-15,
+		Weight				=	0.8,
+		Type				=	Food,
+		StressChange		=	-10,
+		UnhappyChange		=	-10,
+		ThirstChange		=	-65,
+		EnduranceChange		=	40,
+        FatigueChange		=	-50,
+		StressChange	    =	75,
+		DisplayName			=	Maximum Energy,
+		ReplaceOnUse		=	EnergyDrinkBottleEmpty,
+		Icon				=	EnergyDrinkBottle,
+		CustomContextMenu 	= 	Drink,
+		CustomEatSound 		= 	DrinkingFromBottlePlastic,
+        Carbohydrates = 104,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 200,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+		StaticModel = EnergyBottle,
+        EatType = bottle,
+	}
+
+	item NaturalEnergyDrinkBottle
+	{
+		DisplayCategory = Food,
+		HungerChange		=	-10,
+		Weight				=	0.8,
+		Type				=	Food,
+		StressChange		=	-15,
+		UnhappyChange		=	-15,
+		ThirstChange		=	-50,
+		EnduranceChange		=	50,
+        FatigueChange		=	-60,
+		DisplayName			=	Natural Maximum Energy,
+		ReplaceOnUse		=	EnergyDrinkBottleEmpty,
+		Icon				=	EnergyDrinkBottle,
+		CustomContextMenu 	= 	Drink,
+		CustomEatSound 		= 	DrinkingFromBottlePlastic,
+        Carbohydrates = 104,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 150,
+        CantBeFrozen = TRUE,
+		StaticModel = EnergyBottle,
+        EatType = bottle,
+	}
+
+	item EnergyDrinkBottleEmpty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			=	0.1,
+		CanStoreWater	=	TRUE,
+		Type			=	Normal,
+		DisplayName		=	Empty Bottle,
+		ReplaceOnUseOn	=	WaterSource-EnergyDrinkBottleFull,
+		Icon			=	EnergyDrinkBottleEmpty,
+	}
+
+	item EnergyDrinkBottleFull
+	{
+		DisplayCategory = Water,
+		IsWaterSource		=	TRUE,
+		Weight				=	0.8,
+		CanStoreWater		=	TRUE,
+		Type				=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta			=	0.1,
+		DisplayName			=	Water Bottle,
+		ReplaceOnDeplete	=	EnergyDrinkBottleEmpty,
+		ReplaceOnUseOn		=	WaterSource-EnergyDrinkBottleFull,
+		Icon				=	EnergyDrinkBottleWater,
+		CustomContextMenu 	= 	Drink,
+		CustomEatSound 		= 	DrinkingFromBottlePlastic,
+		StaticModel = EnergyBottleWater,
+	}
+
+	/************************Chewing Gum************************/
+	item GumPack
+	{
+		DisplayCategory = Food,
+		Weight				=	0.1,
+		Type				=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta    		=   0.20,
+		DisplayName			=	Pack of Chewing Gum,
+		Icon				=	GumPack,
+        Carbohydrates = 3.6,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 10,
+        Packaged = TRUE,
+        CantBeFrozen = FALSE,
+	}
+	item Gum
+    {
+		DisplayCategory = Food,
+        Type				=		Food,
+        DisplayName			=		Chewing Gum,
+        Icon				=		GumSingle,
+        Weight				=		0.02,
+        HungerChange 		=		-1,
+        UnhappyChange	    =	    -5,
+		BoredomChange		=		-2,
+		StressChange	    =	-2,
+        Carbohydrates = 3.6,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 10,
+        Packaged = TRUE,
+        CantBeFrozen = FALSE,
+		OnEat = OnEat_Gum,
+    }
+	item GumPack1
+	{
+		DisplayCategory = Food,
+		Weight				=	0.1,
+		Type				=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta    		=   0.20,
+		DisplayName			=	Pack of Chewing Gum,
+		Icon				=	GumPack1,
+        Carbohydrates = 3.6,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 10,
+        Packaged = TRUE,
+        CantBeFrozen = FALSE,
+	}
+	item Gum1
+    {
+		DisplayCategory = Food,
+        Type				=		Food,
+        DisplayName			=		Chewing Gum,
+        Icon				=		GumSingle1,
+        Weight				=		0.02,
+        HungerChange 		=		-1,
+        UnhappyChange	    =	    -5,
+		BoredomChange		=		-2,
+		StressChange	    =	-2,
+        Carbohydrates = 3.6,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 10,
+        Packaged = TRUE,
+        CantBeFrozen = FALSE,
+		OnEat = OnEat_Gum,
+    }
+	item GumPack2
+	{
+		DisplayCategory = Food,
+		Weight				=	0.1,
+		Type				=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta    		=   0.20,
+		DisplayName			=	Pack of Chewing Gum,
+		Icon				=	GumPack2,
+        Carbohydrates = 3.6,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 10,
+        Packaged = TRUE,
+        CantBeFrozen = FALSE,
+	}
+	item Gum2
+    {
+		DisplayCategory = Food,
+        Type				=		Food,
+        DisplayName			=		Chewing Gum,
+        Icon				=		GumSingle2,
+        Weight				=		0.02,
+        HungerChange 		=		-1,
+        UnhappyChange	    =	    -5,
+		BoredomChange		=		-2,
+		StressChange		=		-2,
+        Carbohydrates = 3.6,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 10,
+        Packaged = TRUE,
+        CantBeFrozen = FALSE,
+		OnEat = OnEat_Gum,
+    }
+	/************************Misc Candy************************/
+	item GummyBears
+    {
+		DisplayCategory = Food,
+        Type				=		Food,
+        DisplayName			=		Gummy Bears,
+        Icon				=		GummyBears,
+        Weight				=		0.3,
+        HungerChange 		=		-5,
+        UnhappyChange	    =	    -10,
+		BoredomChange		=		-5,
+        Carbohydrates = 18,
+        Proteins = 10,
+        Lipids = 0,
+        Calories = 76,
+        Packaged = TRUE,
+        CantBeFrozen = FALSE,
+    }
+	item CornCandy
+    {
+		DisplayCategory = Food,
+        Type				=		Food,
+        DisplayName			=		Corn Candy,
+        Icon				=		CandyCorn,
+        Weight				=		0.3,
+        HungerChange 		=		-5,
+        UnhappyChange	    =	    -10,
+        Carbohydrates = 18,
+        Proteins = 10,
+        Lipids = 0,
+        Calories = 76,
+        Packaged = TRUE,
+        CantBeFrozen = FALSE,
+    }
+	item GummyWorms
+    {
+		DisplayCategory = Food,
+        Type				=		Food,
+        DisplayName			=		Gummy Worms,
+        Icon				=		GummyWorms,
+        Weight				=		0.3,
+        HungerChange 		=		-5,
+        UnhappyChange	    =	    -10,
+		BoredomChange		=		-5,
+        Carbohydrates = 18,
+        Proteins = 10,
+        Lipids = 0,
+        Calories = 76,
+        Packaged = TRUE,
+        CantBeFrozen = FALSE,
+    }
+	item CandySkil
+    {
+		DisplayCategory = Food,
+        Type				=		Food,
+        DisplayName			=		Skil Candy,
+        Icon				=		CandySkil,
+        Weight				=		0.3,
+        HungerChange 		=		-5,
+        UnhappyChange	    =	    -10,
+		EvolvedRecipe = Cake:5;Cupcake:5,
+		FoodType    =   NoExplicit,
+        Carbohydrates = 1.8,
+        Proteins = 1,
+        Lipids = 0,
+        Calories = 76,
+        Packaged = TRUE,
+        CantBeFrozen = FALSE,
+    }
+	item MixCandy
+    {
+		DisplayCategory = Food,
+        Type				=		Food,
+        DisplayName			=		Mix Candy,
+        Icon				=		CandyColors,
+        Weight				=		0.3,
+        HungerChange 		=		-5,
+        UnhappyChange	    =	    -10,
+		EvolvedRecipe = Cake:5;Cupcake:5,
+		FoodType    =   NoExplicit,
+        Carbohydrates = 1.8,
+        Proteins = 1,
+        Lipids = 0,
+        Calories = 76,
+        Packaged = TRUE,
+        CantBeFrozen = FALSE,
+    }
+	item JellyBeans
+    {
+		DisplayCategory = Food,
+        Type				=		Food,
+        DisplayName			=		Jelly Beans,
+        Icon				=		JellyBeans,
+        Weight				=		0.3,
+        HungerChange 		=		-5,
+        UnhappyChange	    =	    -10,
+        Carbohydrates = 18,
+        Proteins = 10,
+        Lipids = 0,
+        Calories = 76,
+        Packaged = TRUE,
+        CantBeFrozen = FALSE,
+    }
+
+	item WChocolate
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-20,
+		Weight	=	0.2,
+		Type	=	Food,
+		UnhappyChange	=	-20,
+		DisplayName	=	White Chocolate,
+		Icon	=	WChocolate,
+		EvolvedRecipe = Cake:10,
+		FoodType    =   NoExplicit,
+        Carbohydrates = 110,
+        Proteins = 10,
+        Lipids = 66,
+        Calories = 850,
+        Packaged = TRUE,
+	}
+
+	/************************Classic Canned Soup************************/
+	item CannedSoupClassic
+    {
+		DisplayCategory = Food,
+        Weight				=	0.8,
+        Type				=	Food,
+        DisplayName			=	Canned Soup Classic,
+        Icon				=	CannedSoupClassic,
+        Carbohydrates = 20,
+        Proteins = 7.5,
+        Lipids = 2.5,
+        Calories = 125,
+        Packaged = TRUE,
+		StaticModel = CanClosed,
+    }
+	item CannedSoupClassicOpen
+	{
+		DisplayCategory = Food,
+		HungerChange		=	-30,
+		Weight				=	0.8,
+		Type				=	Food,
+		DisplayName			=	Open Canned Soup Classic,
+		Icon				=	CannedSoupClassicOpen,
+		CustomContextMenu 	= 	Drink,
+		CustomEatSound		= 	DrinkingFromBottle,
+		DaysTotallyRotten	=	4,
+        DaysFresh 			= 	2,
+        Carbohydrates = 20,
+        Proteins = 7.5,
+        Lipids = 2.5,
+        Calories = 125,
+        Packaged = TRUE,
+		ReplaceOnUse = CannedSoupClassicEmpty,
+		StaticModel = CanOpen,
+        EatType = can,
+	}
+
+	item CannedSoupClassicEmpty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			= 0.1,
+		Type			= Normal,
+		DisplayName		= Empty can,
+		Icon			= CannedSoupClassicEmpty,
+
+		CanStoreWater	= TRUE,
+		ReplaceOnUseOn	= WaterSource-CannedSoupClassicFull,
+		StaticModel = CanOpen,
+	}
+
+	item CannedSoupClassicFull
+	{
+		DisplayCategory = Water,
+		Weight				= 0.8,
+		DisplayName			= Water can,
+		Icon				= CannedSoupClassicFull,
+
+		CanStoreWater		= TRUE,
+		IsWaterSource		= TRUE,
+		Type				= Drainable,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.5,
+		ReplaceOnDeplete	= CannedSoupClassicEmpty,
+		ReplaceOnUseOn		= WaterSource-CannedSoupClassicFull,
+		IsCookable	=	TRUE,
+    	CustomContextMenu 	= 	Drink,
+	    CustomEatSound 		= 	DrinkingFromBottle,
+		StaticModel = CanOpen,
+		IsCookable	=	TRUE,
+		RainFactor = 0.25,
+        Tooltip = Tooltip_item_RainFromGround,
+	}
+
+	/************************Custom Pop************************/
+	item PopLemon
+	{
+		DisplayCategory = Food,
+		HungerChange		=	-8,
+		Weight				=	0.3,
+		AlwaysWelcomeGift	=	TRUE,
+		Type				=	Food,
+		UnhappyChange		=	-10,
+		ThirstChange		=	-60,
+		DisplayName			=	Pop,
+		Icon				=	PopLemon,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromCan,
+        Carbohydrates = 104,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 150,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+		ReplaceOnUse = PopEmptyLemon,
+        StaticModel = PopCanLemon,
+        EatType = popcan,
+        WorldStaticModel = PopCanLemon,
+	}
+
+	item PopLemonFull
+	{
+		DisplayCategory = Water,
+		IsWaterSource	=	TRUE,
+		Weight	=	0.3,
+		CanStoreWater	=	TRUE,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.5,
+		DisplayName	=	Water Pop Can,
+		ReplaceOnDeplete	=	PopEmptyLemon,
+		ReplaceOnUseOn	=	WaterSource-PopLemonFull,
+		Icon	=	PopLemon,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		StaticModel = PopCanLemon,
+		IsCookable	=	TRUE,
+		RainFactor = 0.25,
+        Tooltip = Tooltip_item_RainFromGround,
+		WorldStaticModel = PopCanLemon,
+	}
+	
+    item PopEmptyLemon
+    {
+		DisplayCategory = WaterContainer,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Empty Pop Can,
+        Icon	=	PopLemon,
+        MetalValue = 10,
+
+		CanStoreWater	= TRUE,
+		ReplaceOnUseOn	= WaterSource-PopLemonFull,
+		RainFactor = 0.25,
+        Tooltip = Tooltip_item_RainFromGround,
+		WorldStaticModel = PopCanLemon,
+    }
+
+	item PopOrange
+	{
+		DisplayCategory = Food,
+		HungerChange		=	-8,
+		Weight				=	0.3,
+		AlwaysWelcomeGift	=	TRUE,
+		Type				=	Food,
+		UnhappyChange		=	-10,
+		ThirstChange		=	-60,
+		DisplayName			=	Pop,
+		Icon				=	PopOrange,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromCan,
+        Carbohydrates = 104,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 150,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+		ReplaceOnUse = PopOrangeEmpty,
+		StaticModel = PopCanOrange,
+        EatType = popcan,
+		WorldStaticModel = PopCanOrange,
+	}
+
+	item PopOrangeFull
+	{
+		DisplayCategory = Water,
+		IsWaterSource	=	TRUE,
+		Weight	=	0.3,
+		CanStoreWater	=	TRUE,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.5,
+		DisplayName	=	Water Pop Can,
+		ReplaceOnDeplete	=	PopOrangeEmpty,
+		ReplaceOnUseOn	=	WaterSource-PopOrangeFull,
+		Icon	=	PopOrange,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+		StaticModel = PopCanOrange,
+		IsCookable	=	TRUE,
+		RainFactor = 0.25,
+        Tooltip = Tooltip_item_RainFromGround,
+		WorldStaticModel = PopCanOrange,
+	}
+	
+    item PopOrangeEmpty
+    {
+		DisplayCategory = WaterContainer,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Empty Pop Can,
+        Icon	=	PopOrange,
+        MetalValue = 10,
+
+		CanStoreWater	= TRUE,
+		ReplaceOnUseOn	= WaterSource-PopOrangeFull,
+		RainFactor = 0.25,
+        Tooltip = Tooltip_item_RainFromGround,
+		WorldStaticModel = PopCanOrange,
+    }
+
+	/************************Custom Crisps************************/
+	item Crisps5
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-15,
+		Weight	=	0.2,
+		Type	=	Food,
+		DisplayName	=	Chips,
+		Icon	=	Crisps5,
+        Carbohydrates = 72,
+        Proteins = 4.5,
+        Lipids = 45,
+        Calories = 720,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+	}
+	item Crisps6
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-15,
+		Weight	=	0.2,
+		Type	=	Food,
+		DisplayName	=	Chips,
+		Icon	=	Crisps6,
+        Carbohydrates = 72,
+        Proteins = 4.5,
+        Lipids = 45,
+        Calories = 720,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+	}
+	item Crisps7
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-15,
+		Weight	=	0.2,
+		Type	=	Food,
+		DisplayName	=	Chips,
+		Icon	=	Crisps7,
+        Carbohydrates = 72,
+        Proteins = 4.5,
+        Lipids = 45,
+        Calories = 720,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+	}
+	item Crisps8
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-15,
+		Weight	=	0.2,
+		Type	=	Food,
+		DisplayName	=	Chips,
+		Icon	=	Crisps8,
+        Carbohydrates = 72,
+        Proteins = 4.5,
+        Lipids = 45,
+        Calories = 720,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+	}
+	item Crisps9
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-15,
+		Weight	=	0.2,
+		Type	=	Food,
+		DisplayName	=	Chips,
+		Icon	=	Crisps9,
+        Carbohydrates = 72,
+        Proteins = 4.5,
+        Lipids = 45,
+        Calories = 720,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+	}
+	/************************Misc Sodas************************/
+	
+	item Soda01
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-10,
+		Weight	=	0.8,
+		Type	=	Food,
+		UnhappyChange	=	-10,
+		ThirstChange	=	-85,
+		DisplayName	=	Soda (Cherry),
+		ReplaceOnUse	=	Soda01Empty,
+		Icon	=	Soda01,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottlePlastic,
+        Carbohydrates = 104,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 400,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+        StaticModel = Soda01,
+		EatType = bottle,
+        WorldStaticModel = PopBottleWorld01,
+	}
+
+	item Soda02
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-12,
+		Weight	=	0.8,
+		Type	=	Food,
+		UnhappyChange	=	-10,
+		ThirstChange	=	-85,
+		FatigueChange		=	-5,
+		DisplayName	=	Soda (Cola),
+		ReplaceOnUse	=	Soda02Empty,
+		Icon	=	Soda02,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottlePlastic,
+        Carbohydrates = 104,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 400,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+        StaticModel = Soda02,
+        EatType = bottle,
+		WorldStaticModel = PopBottleWorld02,
+	}
+
+	item Soda03
+	{
+		DisplayCategory = Food,
+		HungerChange		=	-10,
+		Weight				=	0.8,
+		Type				=	Food,
+		UnhappyChange		=	-10,
+		ThirstChange		=	-80,
+		DisplayName			=	Soda (Cream),
+		ReplaceOnUse		=	Soda03Empty,
+		Icon				=	Soda03,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromBottlePlastic,
+        Carbohydrates = 104,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 400,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+        StaticModel = Soda03,
+        EatType = bottle,
+		WorldStaticModel = PopBottleWorld03,
+	}
+	item Soda04
+	{
+		DisplayCategory = Food,
+		HungerChange		=	-10,
+		Weight				=	0.8,
+		Type				=	Food,
+		UnhappyChange		=	-10,
+		ThirstChange		=	-80,
+		DisplayName			=	Soda (Dr. Prepper),
+		ReplaceOnUse		=	Soda04Empty,
+		Icon				=	Soda04,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromBottlePlastic,
+        Carbohydrates = 104,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 400,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+        StaticModel = Soda04,
+        EatType = bottle,
+		WorldStaticModel = PopBottleWorld04,
+	}
+	item Soda05
+	{
+		DisplayCategory = Food,
+		HungerChange		=	-10,
+		Weight				=	0.8,
+		Type				=	Food,
+		UnhappyChange		=	-10,
+		ThirstChange		=	-80,
+		DisplayName			=	Soda (Ginger Ale),
+		ReplaceOnUse		=	Soda05Empty,
+		Icon				=	Soda05,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromBottlePlastic,
+        Carbohydrates = 104,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 400,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+	    StaticModel = Soda05,
+        EatType = bottle,
+		WorldStaticModel = PopBottleWorld05,
+	}
+	item Soda06
+	{
+		DisplayCategory = Food,
+		HungerChange		=	-10,
+		Weight				=	0.8,
+		Type				=	Food,
+		UnhappyChange		=	-10,
+		ThirstChange		=	-80,
+		DisplayName			=	Soda (Grape),
+		ReplaceOnUse		=	Soda06Empty,
+		Icon				=	Soda06,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromBottlePlastic,
+        Carbohydrates = 104,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 400,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+	    StaticModel = Soda06,
+        EatType = bottle,
+		WorldStaticModel = PopBottleWorld06,
+	}
+	item Soda07
+	{
+		DisplayCategory = Food,
+		HungerChange		=	-10,
+		Weight				=	0.8,
+		Type				=	Food,
+		UnhappyChange		=	-10,
+		ThirstChange		=	-80,
+		DisplayName			=	Soda (Grapefruit),
+		ReplaceOnUse		=	Soda07Empty,
+		Icon				=	Soda07,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromBottlePlastic,
+        Carbohydrates = 104,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 400,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+	    StaticModel = Soda07,
+        EatType = bottle,
+		WorldStaticModel = PopBottleWorld07,
+	}
+	item Soda08
+	{
+		DisplayCategory = Food,
+		HungerChange		=	-10,
+		Weight				=	0.8,
+		Type				=	Food,
+		UnhappyChange		=	-10,
+		ThirstChange		=	-80,
+		DisplayName			=	Soda (Lemon Lime),
+		ReplaceOnUse		=	Soda08Empty,
+		Icon				=	Soda08,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromBottlePlastic,
+        Carbohydrates = 104,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 400,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+	    StaticModel = Soda08,
+        EatType = bottle,
+		WorldStaticModel = PopBottleWorld08,
+	}
+	item Soda09
+	{
+		DisplayCategory = Food,
+		HungerChange		=	-10,
+		Weight				=	0.8,
+		Type				=	Food,
+		UnhappyChange		=	-10,
+		ThirstChange		=	-80,
+		DisplayName			=	Soda (Pineapple),
+		ReplaceOnUse		=	Soda09Empty,
+		Icon				=	Soda09,
+		CustomContextMenu 	= Drink,
+		CustomEatSound 		= DrinkingFromBottlePlastic,
+        Carbohydrates = 104,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 400,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+	    StaticModel = Soda09,
+        EatType = bottle,
+		WorldStaticModel = PopBottleWorld09,
+	}
+	item Soda10
+	{
+		DisplayCategory = Food,
+		HungerChange		= -10,
+		Weight				= 0.8,
+		Type				= Food,
+		UnhappyChange		= -10,
+		ThirstChange		= -80,
+		DisplayName			= Soda (Root Beer),
+		ReplaceOnUse		= Soda10Empty,
+		Icon				= Soda10,
+		CustomContextMenu	= Drink,
+		CustomEatSound 		= DrinkingFromBottlePlastic,
+        Carbohydrates = 104,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 400,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+	    StaticModel = Soda10,
+        EatType = bottle,
+		WorldStaticModel = PopBottleWorld10,
+	}
+	item Soda11
+	{
+		DisplayCategory = Food,
+		HungerChange		= -10,
+		Weight				= 0.8,
+		Type				= Food,
+		UnhappyChange		= -10,
+		ThirstChange		= -80,
+		DisplayName			= Soda (Orange),
+		ReplaceOnUse		= Soda11Empty,
+		Icon				= Soda11,
+		CustomContextMenu	= Drink,
+		CustomEatSound 		= DrinkingFromBottlePlastic,
+        Carbohydrates = 104,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 400,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+	    StaticModel = Soda11,
+        EatType = bottle,
+		WorldStaticModel = PopBottleWorld11,
+	}
+	item Soda12
+	{
+		DisplayCategory = Food,
+		HungerChange		= -10,
+		Weight				= 0.8,
+		Type				= Food,
+		UnhappyChange		= -10,
+		ThirstChange		= -80,
+		DisplayName			= Soda (Blueberry),
+		ReplaceOnUse		= Soda12Empty,
+		Icon				= Soda12,
+		CustomContextMenu	= Drink,
+		CustomEatSound 		= DrinkingFromBottlePlastic,
+        Carbohydrates = 104,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 400,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+	    StaticModel = Soda12,
+        EatType = bottle,
+		WorldStaticModel = PopBottleWorld12,
+	}
+	/************************Misc Sodas Empty************************/
+	item Soda01Empty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			=	0.1,
+		CanStoreWater	=	TRUE,
+		Type			=	Normal,
+		DisplayName		=	Empty Pop Bottle,
+		ReplaceOnUseOn	=	WaterSource-Soda01Water,
+		Icon			=	Soda01Empty,
+	}
+	item Soda02Empty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			=	0.1,
+		CanStoreWater	=	TRUE,
+		Type			=	Normal,
+		DisplayName		=	Empty Pop Bottle,
+		ReplaceOnUseOn	=	WaterSource-Soda02Water,
+		Icon			=	Soda02Empty,
+	}
+	item Soda03Empty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			=	0.1,
+		CanStoreWater	=	TRUE,
+		Type			=	Normal,
+		DisplayName		=	Empty Pop Bottle,
+		ReplaceOnUseOn	=	WaterSource-Soda03Water,
+		Icon			=	Soda03Empty,
+	}
+	item Soda04Empty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			=	0.1,
+		CanStoreWater	=	TRUE,
+		Type			=	Normal,
+		DisplayName		=	Empty Pop Bottle,
+		ReplaceOnUseOn	=	WaterSource-Soda04Water,
+		Icon			=	Soda04Empty,
+	}
+	item Soda05Empty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			=	0.1,
+		CanStoreWater	=	TRUE,
+		Type			=	Normal,
+		DisplayName		=	Empty Pop Bottle,
+		ReplaceOnUseOn	=	WaterSource-Soda05Water,
+		Icon			=	Soda05Empty,
+	}
+	item Soda06Empty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			=	0.1,
+		CanStoreWater	=	TRUE,
+		Type			=	Normal,
+		DisplayName		=	Empty Pop Bottle,
+		ReplaceOnUseOn	=	WaterSource-Soda06Water,
+		Icon			=	Soda06Empty,
+	}
+	item Soda07Empty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			=	0.1,
+		CanStoreWater	=	TRUE,
+		Type			=	Normal,
+		DisplayName		=	Empty Pop Bottle,
+		ReplaceOnUseOn	=	WaterSource-Soda07Water,
+		Icon			=	Soda07Empty,
+	}
+	item Soda08Empty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			=	0.1,
+		CanStoreWater	=	TRUE,
+		Type			=	Normal,
+		DisplayName		=	Empty Pop Bottle,
+		ReplaceOnUseOn	=	WaterSource-Soda08Water,
+		Icon			=	Soda08Empty,
+	}
+	item Soda09Empty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			=	0.1,
+		CanStoreWater	=	TRUE,
+		Type			=	Normal,
+		DisplayName		=	Empty Pop Bottle,
+		ReplaceOnUseOn	=	WaterSource-Soda09Water,
+		Icon			=	Soda09Empty,
+	}
+	item Soda10Empty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			=	0.1,
+		CanStoreWater	=	TRUE,
+		Type			=	Normal,
+		DisplayName		=	Empty Pop Bottle,
+		ReplaceOnUseOn	=	WaterSource-Soda10Water,
+		Icon			=	Soda10Empty,
+	}
+	item Soda11Empty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			=	0.1,
+		CanStoreWater	=	TRUE,
+		Type			=	Normal,
+		DisplayName		=	Empty Pop Bottle,
+		ReplaceOnUseOn	=	WaterSource-Soda11Water,
+		Icon			=	Soda11Empty,
+	}
+	item Soda12Empty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			=	0.1,
+		CanStoreWater	=	TRUE,
+		Type			=	Normal,
+		DisplayName		=	Empty Pop Bottle,
+		ReplaceOnUseOn	=	WaterSource-Soda12Water,
+		Icon			=	Soda12Empty,
+	}
+	/************************Misc Sodas Water************************/
+	item Soda01Water
+	{
+		DisplayCategory = Water,
+		IsWaterSource		=	TRUE,
+		Weight				=	0.8,
+		CanStoreWater		=	TRUE,
+		Type				=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta			=	0.1,
+		DisplayName			=	Water Bottle,
+		ReplaceOnDeplete	=	Soda01Empty,
+		ReplaceOnUseOn		=	WaterSource-Soda01Water,
+		Icon				=	Soda01Water,
+		CustomContextMenu 	= 	Drink,
+		CustomEatSound 		= 	DrinkingFromBottlePlastic,
+		StaticModel = WaterSoda01,
+	}
+	item Soda02Water
+	{
+		DisplayCategory = Water,
+		IsWaterSource		=	TRUE,
+		Weight				=	0.8,
+		CanStoreWater		=	TRUE,
+		Type				=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta			=	0.1,
+		DisplayName			=	Water Bottle,
+		ReplaceOnDeplete	=	Soda02Empty,
+		ReplaceOnUseOn		=	WaterSource-Soda02Water,
+		Icon				=	Soda02Water,
+		CustomContextMenu 	= 	Drink,
+		CustomEatSound 		= 	DrinkingFromBottlePlastic,
+		StaticModel = WaterSoda02,
+	}
+	item Soda03Water
+	{
+		DisplayCategory = Water,
+		IsWaterSource		=	TRUE,
+		Weight				=	0.8,
+		CanStoreWater		=	TRUE,
+		Type				=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta			=	0.1,
+		DisplayName			=	Water Bottle,
+		ReplaceOnDeplete	=	Soda03Empty,
+		ReplaceOnUseOn		=	WaterSource-Soda03Water,
+		Icon				=	Soda03Water,
+		CustomContextMenu 	= 	Drink,
+		CustomEatSound 		= 	DrinkingFromBottlePlastic,
+		StaticModel = WaterSoda03,
+	}
+	item Soda04Water
+	{
+		DisplayCategory = Water,
+		IsWaterSource		=	TRUE,
+		Weight				=	0.8,
+		CanStoreWater		=	TRUE,
+		Type				=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta			=	0.1,
+		DisplayName			=	Water Bottle,
+		ReplaceOnDeplete	=	Soda04Empty,
+		ReplaceOnUseOn		=	WaterSource-Soda04Water,
+		Icon				=	Soda04Water,
+		CustomContextMenu 	= 	Drink,
+		CustomEatSound 		= 	DrinkingFromBottlePlastic,
+		StaticModel = WaterSoda04,
+	}
+	item Soda05Water
+	{
+		DisplayCategory = Water,
+		IsWaterSource		=	TRUE,
+		Weight				=	0.8,
+		CanStoreWater		=	TRUE,
+		Type				=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta			=	0.1,
+		DisplayName			=	Water Bottle,
+		ReplaceOnDeplete	=	Soda05Empty,
+		ReplaceOnUseOn		=	WaterSource-Soda05Water,
+		Icon				=	Soda05Water,
+		CustomContextMenu 	= 	Drink,
+		CustomEatSound 		= 	DrinkingFromBottlePlastic,
+		StaticModel = WaterSoda05,
+	}
+	item Soda06Water
+	{
+		DisplayCategory = Water,
+		IsWaterSource		=	TRUE,
+		Weight				=	0.8,
+		CanStoreWater		=	TRUE,
+		Type				=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta			=	0.1,
+		DisplayName			=	Water Bottle,
+		ReplaceOnDeplete	=	Soda06Empty,
+		ReplaceOnUseOn		=	WaterSource-Soda06Water,
+		Icon				=	Soda06Water,
+		CustomContextMenu 	= 	Drink,
+		CustomEatSound 		= 	DrinkingFromBottlePlastic,
+		StaticModel = WaterSoda06,
+	}
+	item Soda07Water
+	{
+		DisplayCategory = Water,
+		IsWaterSource		=	TRUE,
+		Weight				=	0.8,
+		CanStoreWater		=	TRUE,
+		Type				=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta			=	0.1,
+		DisplayName			=	Water Bottle,
+		ReplaceOnDeplete	=	Soda07Empty,
+		ReplaceOnUseOn		=	WaterSource-Soda07Water,
+		Icon				=	Soda07Water,
+		CustomContextMenu 	= 	Drink,
+		CustomEatSound 		= 	DrinkingFromBottlePlastic,
+		StaticModel = WaterSoda07,
+	}
+	item Soda08Water
+	{
+		DisplayCategory = Water,
+		IsWaterSource		=	TRUE,
+		Weight				=	0.8,
+		CanStoreWater		=	TRUE,
+		Type				=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta			=	0.1,
+		DisplayName			=	Water Bottle,
+		ReplaceOnDeplete	=	Soda08Empty,
+		ReplaceOnUseOn		=	WaterSource-Soda08Water,
+		Icon				=	Soda08Water,
+		CustomContextMenu 	= 	Drink,
+		CustomEatSound 		= 	DrinkingFromBottlePlastic,
+		StaticModel = WaterSoda08,
+	}
+	item Soda09Water
+	{
+		DisplayCategory = Water,
+		IsWaterSource		=	TRUE,
+		Weight				=	0.8,
+		CanStoreWater		=	TRUE,
+		Type				=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta			=	0.1,
+		DisplayName			=	Water Bottle,
+		ReplaceOnDeplete	=	Soda09Empty,
+		ReplaceOnUseOn		=	WaterSource-Soda09Water,
+		Icon				=	Soda09Water,
+		CustomContextMenu 	= 	Drink,
+		CustomEatSound 		= 	DrinkingFromBottlePlastic,
+		StaticModel = WaterSoda09,
+	}
+	item Soda10Water
+	{
+		DisplayCategory = Water,
+		IsWaterSource		=	TRUE,
+		Weight				=	0.8,
+		CanStoreWater		=	TRUE,
+		Type				=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta			=	0.1,
+		DisplayName			=	Water Bottle,
+		ReplaceOnDeplete	=	Soda10Empty,
+		ReplaceOnUseOn		=	WaterSource-Soda10Water,
+		Icon				=	Soda10Water,
+		CustomContextMenu 	= 	Drink,
+		CustomEatSound 		= 	DrinkingFromBottlePlastic,
+		StaticModel = WaterSoda10,
+	}
+	item Soda11Water
+	{
+		DisplayCategory = Water,
+		IsWaterSource		=	TRUE,
+		Weight				=	0.8,
+		CanStoreWater		=	TRUE,
+		Type				=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta			=	0.1,
+		DisplayName			=	Water Bottle,
+		ReplaceOnDeplete	=	Soda11Empty,
+		ReplaceOnUseOn		=	WaterSource-Soda11Water,
+		Icon				=	Soda11Water,
+		CustomContextMenu 	= 	Drink,
+		CustomEatSound 		= 	DrinkingFromBottlePlastic,
+		StaticModel = WaterSoda11,
+	}
+	item Soda12Water
+	{
+		DisplayCategory = Water,
+		IsWaterSource		=	TRUE,
+		Weight				=	0.8,
+		CanStoreWater		=	TRUE,
+		Type				=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta			=	0.1,
+		DisplayName			=	Water Bottle,
+		ReplaceOnDeplete	=	Soda12Empty,
+		ReplaceOnUseOn		=	WaterSource-Soda12Water,
+		Icon				=	Soda12Water,
+		CustomContextMenu 	= 	Drink,
+		CustomEatSound 		= 	DrinkingFromBottlePlastic,
+		StaticModel = WaterSoda12,
+	}
+	item VodkaEmpty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			=	0.2,
+		CanStoreWater	=	TRUE,
+		Type			=	Normal,
+		DisplayName		=	Empty Bottle,
+		ReplaceOnUseOn	=	WaterSource-VodkaWaterFull,
+		Icon			=	VodkaEmpty,
+	}
+	item ColaBottleEmpty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			=	0.1,
+		CanStoreWater	=	TRUE,
+		Type			=	Normal,
+		DisplayName		=	Empty Bottle,
+		ReplaceOnUseOn	=	WaterSource-ColaBottleWater,
+		Icon			=	ColaEmpty,
+	}
+	/************************Custom Water Bottles************************/
+	item FernetWaterFull
+	{
+		DisplayCategory = Water,
+		IsWaterSource		=	TRUE,
+		Weight				=	1.2,
+		CanStoreWater		=	TRUE,
+		Type				=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta			=	0.1,
+		DisplayName			=	Water Bottle,
+		ReplaceOnDeplete	=	FernetEmpty,
+		ReplaceOnUseOn		=	WaterSource-FernetWaterFull,
+		Icon				=	FernetWater,
+		StaticModel = FernetWaterBottle,
+		WorldStaticModel = FernetWaterBottle,
+	}
+
+	item VodkaWaterFull
+	{
+		DisplayCategory = Water,
+		IsWaterSource		=	TRUE,
+		Weight				=	1.2,
+		CanStoreWater		=	TRUE,
+		Type				=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta			=	0.1,
+		DisplayName			=	Water Bottle,
+		ReplaceOnDeplete	=	VodkaEmpty,
+		ReplaceOnUseOn		=	WaterSource-VodkaWaterFull,
+		Icon				=	VodkaWater,
+		StaticModel = VodkaWaterBottle,
+	}
+	item ColaBottleWater
+	{
+		DisplayCategory = Water,
+		IsWaterSource		=	TRUE,
+		Weight				=	0.8,
+		CanStoreWater		=	TRUE,
+		Type				=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta			=	0.1,
+		DisplayName			=	Water Bottle,
+		ReplaceOnDeplete	=	ColaBottleEmpty,
+		ReplaceOnUseOn		=	WaterSource-ColaBottleWater,
+		Icon				=	ColaWater,
+		CustomContextMenu 	= 	Drink,
+		CustomEatSound 		= 	DrinkingFromBottlePlastic,
+		StaticModel = ColaWater,
+	}
+
+	item Winea
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-20,
+	    Weight	=	1,
+		Type	=	Food,
+		ThirstChange	=	-20,
+        UnhappyChange	=	-20,
+		DisplayName	=	Chardonnay Open,
+		Alcoholic	=	TRUE,
+		ReplaceOnUse	=	WineEmpty,
+		Icon	=	OpenWineFull,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottle,
+		EvolvedRecipe = Stir fry:15;Roasted Vegetables:15;Cake:5;Cupcake:5,
+		FoodType    =   NoExplicit,
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 481,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+		StaticModel = WhiteWineBottle,
+		WorldStaticModel = WineWhiteGround,
+	}
+
+    item Wine2a
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-20,
+	    Weight	=	1,
+		Type	=	Food,
+		ThirstChange	=	-20,
+        UnhappyChange	=	-20,
+		DisplayName	=	Red Wine Open,
+		Alcoholic	=	TRUE,
+		ReplaceOnUse	=	WineEmpty2,
+		Icon	=	OpenWine2Full,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottle,
+		EvolvedRecipe = Stir fry:15;Roasted Vegetables:15,
+		FoodType    =   NoExplicit,
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 510,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+		StaticModel = RedWineBottle,
+		WorldStaticModel = WineRedGround,
+	}
+
+    item Wine3
+	{
+		DisplayCategory = Food,
+	    Weight	=	1,
+		Type	=	Food,
+		DisplayName	=	Rose Wine Closed,
+		Icon	=	WineRoseClosed,
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 500,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+		Tooltip = Tooltip_Wine,
+	}
+
+    item Wine3a
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-20,
+	    Weight	=	1,
+		Type	=	Food,
+		ThirstChange	=	-20,
+        UnhappyChange	=	-20,
+		DisplayName	=	Rose Wine Open,
+		Alcoholic	=	TRUE,
+		ReplaceOnUse	=	WineEmpty3,
+		Icon	=	WineRoseOpen,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottle,
+		EvolvedRecipe = Stir fry:15;Roasted Vegetables:15,
+		FoodType    =   NoExplicit,
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 500,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+		StaticModel = RoseWineBottle,
+	}
+
+    item WineEmpty3
+	{
+		DisplayCategory = WaterContainer,
+		Weight			= 0.3,
+		Type			= Normal,
+		DisplayName		= Empty Bottle,
+		Icon			= WineEmpty3,
+		CanStoreWater	= TRUE,
+		ReplaceOnUseOn	= WaterSource-WineFull3,
+	}
+
+    item WineFull3
+	{
+		DisplayCategory = Water,
+		Weight				= 0.8,
+		DisplayName			= Water Bottle,
+		Icon				= WineWFull3,
+
+		CanStoreWater		= TRUE,
+		IsWaterSource		= TRUE,
+		Type				= Drainable,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.1,
+		ReplaceOnDeplete	= legourmet.WineEmpty3,
+		ReplaceOnUseOn		= WaterSource-WineFull3,
+		IsCookable	=	TRUE,
+    	CustomContextMenu 	= 	Drink,
+	    CustomEatSound 		= 	DrinkingFromBottle,
+	}
+
+	/************************ Jugos ************************/
+    item JuiceBox2
+	{
+		DisplayCategory = Food,
+		Type				=		Food,
+		DisplayName			=		Juice Box (Orange),
+		Icon				=		JuiceOrangeBox,
+		Weight				=		0.1,
+		HungerChange 		=		-2,
+		ThirstChange		=		-13,
+		UnhappyChange	    =	    -10,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCarton,
+        Carbohydrates = 14,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 60,
+        Packaged = TRUE,
+		WorldStaticModel = JuiceBox2,
+	}
+
+    item JuiceBox3
+	{
+		DisplayCategory = Food,
+		Type				=		Food,
+		DisplayName			=		Juice Box (Apple),
+		Icon				=		JuiceAppleBox,
+		Weight				=		0.1,
+		HungerChange 		=		-2,
+		ThirstChange		=		-13,
+		UnhappyChange	    =	    -10,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCarton,
+        Carbohydrates = 14,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 60,
+        Packaged = TRUE,
+		WorldStaticModel = JuiceBox3,
+	}
+
+    item JuiceBox4
+	{
+		DisplayCategory = Food,
+		Type				=		Food,
+		DisplayName			=		Juice Box (Peaches),
+		Icon				=		JuicePeachesBox,
+		Weight				=		0.1,
+		HungerChange 		=		-2,
+		ThirstChange		=		-13,
+		UnhappyChange	    =	    -10,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCarton,
+        Carbohydrates = 14,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 60,
+        Packaged = TRUE,
+		WorldStaticModel = JuiceBox4,
+	}
+
+    item JuiceBox5
+	{
+		DisplayCategory = Food,
+		Type				=		Food,
+		DisplayName			=		Juice Box (Banana),
+		Icon				=		JuiceBananaBox,
+		Weight				=		0.1,
+		HungerChange 		=		-2,
+		ThirstChange		=		-13,
+		UnhappyChange	    =	    -10,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCarton,
+        Carbohydrates = 14,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 60,
+        Packaged = TRUE,
+		WorldStaticModel = JuiceBox5,
+	}
+
+	item BeerBottleEmpty
+	{
+		DisplayCategory = WaterContainer,
+		Weight	=	0.2,
+		CanStoreWater	=	TRUE,
+		Type	=	Normal,
+		DisplayName	=	Empty Bottle,
+		ReplaceOnUseOn	=	WaterSource-BeerBottleFull,
+		Icon	=	RHP_BA17CrystalBottle,
+	}
+
+	item BeerBottleFull
+	{
+		DisplayCategory = Water,
+		IsWaterSource	=	TRUE,
+		Weight	=	0.6,
+		CanStoreWater	=	TRUE,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.1,
+		DisplayName	=	Water Bottle,
+		ReplaceOnDeplete	=	BeerBottleEmpty,
+		ReplaceOnUseOn	=	WaterSource-BeerBottleFull,
+		Icon	=	RHP_BA17CrystalBottleFull,
+	}
+
+    item Beer1
+    {
+		DisplayCategory = Food,
+	    HungerChange	=	-8,
+        ThirstChange	=	-60,
+        UnhappyChange	=	-20,
+	    Weight	=	0.6,
+	    Type	=	Food,
+        CustomContextMenu = Drink,
+        CustomEatSound		= DrinkingFromBottle,
+        Alcoholic	=	TRUE,
+        AlcoholPower = 2,
+        ReplaceOnUse	=	legourmet.BeerBottleEmpty,
+	    DisplayName	=	Black Beer Bottle,
+	    Icon	=	RHP_BA09Beer1,
+	    Calories = 148,
+	    Proteins = 1,
+	    Lipids = 0,
+	    Carbohydrates = 16,
+        Packaged = TRUE,
+    }
+
+    item Beer2
+    {
+		DisplayCategory = Food,
+	    HungerChange	=	-8,
+        ThirstChange	=	-60,
+        UnhappyChange	=	-15,
+	    Weight	=	0.6,
+	    Type	=	Food,
+        CustomContextMenu = Drink,
+        CustomEatSound		= DrinkingFromBottle,
+        Alcoholic	=	TRUE,
+        AlcoholPower = 1,
+        ReplaceOnUse	=	legourmet.BeerBottleEmpty,
+	    DisplayName	=	Lemon Beer Bottle,
+	    Icon	=	RHP_BA10Beer2,
+	    Calories = 92,
+	    Proteins = 0,
+	    Lipids = 0,
+	    Carbohydrates = 0,
+        Packaged = TRUE,
+    }
+
+    item Beer3
+    {
+		DisplayCategory = Food,
+	    HungerChange	=	-8,
+        ThirstChange	=	-60,
+        UnhappyChange	=	-15,
+	    Weight	=	0.6,
+	    Type	=	Food,
+        CustomContextMenu = Drink,
+        CustomEatSound		= DrinkingFromBottle,
+        Alcoholic	=	TRUE,
+        AlcoholPower = 1,
+        ReplaceOnUse	=	legourmet.BeerBottleEmpty,
+	    DisplayName	=	Amber Beer Bottle,
+	    Icon	=	RHP_BA11Beer3,
+	    Calories = 110,
+	    Proteins = 0,
+	    Lipids = 0,
+	    Carbohydrates = 0,
+        Packaged = TRUE,
+    }
+
+    item BeerSixPack1
+    {
+		DisplayCategory = Food,
+	    Weight	=	3.8,
+	    Type	=	Food,
+	    DisplayName	=	Black Beer Six Pack,
+	    Icon	=	RHP_BA12Beersixpack1,
+        Carbohydrates = 64,
+        Proteins = 4,
+        Lipids = 0,
+        Calories = 888,
+        PAckaged = TRUE,
+		Tooltip = Tooltip_SixPack,
+    }
+
+    item BeerSixPack2
+    {
+		DisplayCategory = Food,
+	    Weight	=	3.8,
+	    Type	=	Food,
+	    DisplayName	=	Lemon Beer Six Pack,
+	    Icon	=	RHP_BA13Beersixpack2,
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 368,
+        PAckaged = TRUE,
+		Tooltip = Tooltip_SixPack,
+    }
+
+    item BeerSixPack3
+    {
+		DisplayCategory = Food,
+	    Weight	=	3.8,
+	    Type	=	Food,
+	    DisplayName	=	Amber Beer Six Pack,
+	    Icon	=	RHP_BA14Beersixpack3,
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 440,
+        PAckaged = TRUE,
+		Tooltip = Tooltip_SixPack,
+    }
+
+    item Beercan1
+    {
+		DisplayCategory = Food,
+	    HungerChange	=	-5,
+        ThirstChange	=	-50,
+        UnhappyChange	=	-15,
+	    Weight	=	0.4,
+	    Type	=	Food,
+        CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+        Alcoholic	=	TRUE,
+        AlcoholPower = 1,
+        ReplaceOnUse	=	legourmet.EmptyBeerCan,
+	    DisplayName	=	Beer Can,
+	    Icon	=	RHP_BA18Beercan1,
+	    Calories = 109,
+	    Proteins = 0,
+	    Lipids = 0,
+	    Carbohydrates = 0,
+        Packaged = TRUE,
+		StaticModel = Beercan1,
+        EatType = popcan,
+		WorldStaticModel = Beercan1,
+    }
+
+	item EmptyBeerCan
+	{
+		DisplayCategory = WaterContainer,
+		Weight			= 0.1,
+		Type			= Normal,
+		DisplayName		= Empty can,
+		Icon			= RHP_BA18Beercan1,
+
+		CanStoreWater	= TRUE,
+		ReplaceOnUseOn	= WaterSource-FullBeerCan,
+		MetalValue = 10,
+		WorldStaticModel = Beercan1,
+	}
+
+	item FullBeerCan
+	{
+		DisplayCategory = Water,
+		Weight				= 0.3,
+		DisplayName			= Water can,
+		Icon				= RHP_BA18Beercan1Full,
+
+		CanStoreWater		= TRUE,
+		IsWaterSource		= TRUE,
+		Type				= Drainable,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.5,
+		ReplaceOnDeplete	= legourmet.EmptyBeerCan,
+		ReplaceOnUseOn		= WaterSource-FullBeerCan,
+		IsCookable	=	TRUE,
+    	CustomContextMenu 	= 	Drink,
+	    CustomEatSound 		= 	DrinkingFromCan,
+		StaticModel = Beercan1,
+		RainFactor = 0.25,
+        Tooltip = Tooltip_item_RainFromGround,
+		WorldStaticModel = Beercan1,
+	}
+
+    item Beercan2
+    {
+		DisplayCategory = Food,
+	    HungerChange	=	-5,
+        ThirstChange	=	-50,
+        UnhappyChange	=	-15,
+	    Weight	=	0.4,
+	    Type	=	Food,
+        CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+        Alcoholic	=	TRUE,
+        AlcoholPower = 1,
+        ReplaceOnUse	=	legourmet.EmptyBeerCan2,
+	    DisplayName	=	Beer Can,
+	    Icon	=	RHP_BA19Beercan2,
+	    Calories = 118,
+	    Proteins = 1,
+	    Lipids = 0,
+	    Carbohydrates = 10,
+        Packaged = TRUE,
+		StaticModel = Beercan2,
+        EatType = popcan,
+		WorldStaticModel = Beercan2,
+    }
+
+
+	item EmptyBeerCan2
+	{
+		DisplayCategory = WaterContainer,
+		Weight			= 0.1,
+		Type			= Normal,
+		DisplayName		= Empty can,
+		Icon			= RHP_BA19Beercan2,
+
+		CanStoreWater	= TRUE,
+		ReplaceOnUseOn	= WaterSource-FullBeerCan2,
+		MetalValue = 10,
+		WorldStaticModel = Beercan2,
+	}
+
+	item FullBeerCan2
+	{
+		DisplayCategory = Water,
+		Weight				= 0.3,
+		DisplayName			= Water can,
+		Icon				= RHP_BA19Beercan2Full,
+
+		CanStoreWater		= TRUE,
+		IsWaterSource		= TRUE,
+		Type				= Drainable,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.5,
+		ReplaceOnDeplete	= legourmet.EmptyBeerCan2,
+		ReplaceOnUseOn		= WaterSource-FullBeerCan2,
+		IsCookable	=	TRUE,
+    	CustomContextMenu 	= 	Drink,
+	    CustomEatSound 		= 	DrinkingFromCan,
+		StaticModel = Beercan2,
+		RainFactor = 0.25,
+        Tooltip = Tooltip_item_RainFromGround,
+		WorldStaticModel = Beercan2,
+	}
+
+    item Beercan3
+    {
+		DisplayCategory = Food,
+	    HungerChange	=	-5,
+        ThirstChange	=	-50,
+        UnhappyChange	=	-15,
+	    Weight	=	0.4,
+	    Type	=	Food,
+        CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+        Alcoholic	=	TRUE,
+        AlcoholPower = 1,
+        ReplaceOnUse	=	legourmet.EmptyBeerCan3,
+	    DisplayName	=	Beer Can,
+	    Icon	=	RHP_BA20Beercan3,
+	    Calories = 132,
+	    Proteins = 1,
+	    Lipids = 0,
+	    Carbohydrates = 19,
+        Packaged = TRUE,
+		StaticModel = Beercan3,
+        EatType = popcan,
+		WorldStaticModel = Beercan3,
+    }
+
+	item EmptyBeerCan3
+	{
+		DisplayCategory = WaterContainer,
+		Weight			= 0.1,
+		Type			= Normal,
+		DisplayName		= Empty can,
+		Icon			= RHP_BA20Beercan3,
+
+		CanStoreWater	= TRUE,
+		ReplaceOnUseOn	= WaterSource-FullBeerCan3,
+		MetalValue = 10,
+		WorldStaticModel = Beercan3,
+	}
+
+	item FullBeerCan3
+	{
+		DisplayCategory = Water,
+		Weight				= 0.3,
+		DisplayName			= Water can,
+		Icon				= RHP_BA20Beercan3Full,
+
+		CanStoreWater		= TRUE,
+		IsWaterSource		= TRUE,
+		Type				= Drainable,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.5,
+		ReplaceOnDeplete	= legourmet.EmptyBeerCan3,
+		ReplaceOnUseOn		= WaterSource-FullBeerCan3,
+		IsCookable	=	TRUE,
+    	CustomContextMenu 	= 	Drink,
+	    CustomEatSound 		= 	DrinkingFromCan,
+		StaticModel = Beercan3,
+		RainFactor = 0.25,
+        Tooltip = Tooltip_item_RainFromGround,
+		WorldStaticModel = Beercan3,
+	}
+
+    item Beercan4
+    {
+		DisplayCategory = Food,
+	    HungerChange	=	-5,
+        ThirstChange	=	-50,
+        UnhappyChange	=	-15,
+	    Weight	=	0.4,
+	    Type	=	Food,
+        CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromCan,
+        Alcoholic	=	TRUE,
+        AlcoholPower = 1,
+        ReplaceOnUse	=	legourmet.EmptyBeerCan4,
+	    DisplayName	=	Beer Can,
+	    Icon	=	RHP_BA21Beercan4,
+	    Calories = 132,
+	    Proteins = 1,
+	    Lipids = 0,
+	    Carbohydrates = 19,
+        Packaged = TRUE,
+		StaticModel = Beercan4,
+        EatType = popcan,
+		WorldStaticModel = Beercan4,
+    }
+
+	item EmptyBeerCan4
+	{
+		DisplayCategory = WaterContainer,
+		Weight			= 0.1,
+		Type			= Normal,
+		DisplayName		= Empty can,
+		Icon			= RHP_BA21Beercan4,
+
+		CanStoreWater	= TRUE,
+		ReplaceOnUseOn	= WaterSource-FullBeerCan4,
+		MetalValue = 10,
+		WorldStaticModel = Beercan4,
+	}
+
+	item FullBeerCan4
+	{
+		DisplayCategory = Water,
+		Weight				= 0.3,
+		DisplayName			= Water can,
+		Icon				= RHP_BA21Beercan4Full,
+
+		CanStoreWater		= TRUE,
+		IsWaterSource		= TRUE,
+		Type				= Drainable,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.5,
+		ReplaceOnDeplete	= legourmet.EmptyBeerCan4,
+		ReplaceOnUseOn		= WaterSource-FullBeerCan4,
+		IsCookable	=	TRUE,
+    	CustomContextMenu 	= 	Drink,
+	    CustomEatSound 		= 	DrinkingFromCan,
+		StaticModel = Beercan4,
+		RainFactor = 0.25,
+        Tooltip = Tooltip_item_RainFromGround,
+		WorldStaticModel = Beercan4,
+	}
+
+	item BeerCanEmpty
+	{
+		DisplayCategory = WaterContainer,
+		Weight			= 0.1,
+		Type			= Normal,
+		DisplayName		= Empty can,
+		Icon			= RHP_BA22Can,
+
+		CanStoreWater	= TRUE,
+		ReplaceOnUseOn	= WaterSource-BeerCanFull,
+		MetalValue = 10,
+		OBSOLETE = true,
+	}
+
+	item BeerCanFull
+	{
+		DisplayCategory = Water,
+		Weight				= 0.8,
+		DisplayName			= Water can,
+		Icon				= RHP_BA22CanFull,
+
+		CanStoreWater		= TRUE,
+		IsWaterSource		= TRUE,
+		Type				= Drainable,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.1,
+		ReplaceOnDeplete	= BeerCanEmpty,
+		ReplaceOnUseOn		= WaterSource-BeerCanFull,
+		IsCookable	=	TRUE,
+    	CustomContextMenu 	= 	Drink,
+	    CustomEatSound 		= 	DrinkingFromBottle,
+		OBSOLETE = true,
+	}
+
+    item Shaker
+    {
+		DisplayCategory = Cooking,
+	    Weight	=	0.2,
+	    Type	=	Normal,
+	    DisplayName	=	Shaker,
+	    Icon	=	RHP_KU07Shaker,
+        MetalValue = 80,
+		Tooltip = Tooltip_Shaker,
+    }
+
+    item MargaritaGlass
+    {
+		DisplayCategory = Junk,
+	    Weight	=	0.1,
+	    Type	=	Normal,
+	    DisplayName	=	Margarita Glass,
+	    Icon	=	RHP_BG01MargaritaGlass,
+    }
+
+    item MartiniGlass
+    {
+		DisplayCategory = Junk,
+	    Weight	=	0.1,
+	    Type	=	Normal,
+	    DisplayName	=	Martini Glass,
+	    Icon	=	RHP_BG02MartiniGlass,
+    }
+
+	item IceCubes
+	{
+		DisplayCategory = Food,
+	    Weight	=	0.01,
+        ThirstChange	=	-1,
+	    Type	=	Food,
+	    DisplayName	=	Ice Cubes,
+	    Icon	=	RHP_KI01IceCubes,
+        DaysTotallyRotten	=	1,
+		DaysFresh	=	1,
+        ReplaceOnRotten = legourmet.IceMelted,
+		CustomContextMenu = Drink,
+		AlwaysWelcomeGift	=	true,
+		OnEat = OnEat_IceCubes,
+	}
+
+    item IceMelted
+    {
+		DisplayCategory = Food,
+	    Weight	=	0.01,
+        ThirstChange	=	-1,
+	    Type	=	Food,
+	    DisplayName	=	Melted Ice,
+	    Icon	=	RHP_KI02IceCubesMelted,
+        CustomContextMenu = Drink,
+        CustomEatSound		= DrinkingFromBottle,
+    }
+
+    item SodaBottleEmpty
+    {
+		DisplayCategory = WaterContainer,
+	    Weight	=	0.1,
+	    CanStoreWater	=	TRUE,
+        Type	=	Normal,
+	    DisplayName	=	Empty Soda Bottle,
+	    ReplaceOnUseOn	=	WaterSource-WaterSodaBottle,
+	    Icon	=	RHP_KI13SodaBottleEmpty,
+    }
+
+    item SodaBottle
+    {
+		DisplayCategory = Food,
+        HungerChange	=	-8,
+	    ThirstChange	=	-60,
+        Weight	=	0.8,
+        Type	=	Food,
+        CustomContextMenu = Drink,
+        CustomEatSound		= DrinkingFromBottlePlastic,
+	    ReplaceOnUse	=	legourmet.SodaBottleEmpty,
+	    Icon	=	RHP_KI13SodaBottleFull,
+	    DisplayName	=	Soda Bottle,
+    }
+
+    item WaterSodaBottle
+    {
+		DisplayCategory = Water,
+	    IsWaterSource	=	TRUE,
+	    Weight	=	0.8,
+	    CanStoreWater	=	TRUE,
+	    Type	=	Drainable,
+	    UseWhileEquipped	=	FALSE,
+	    UseDelta	=	0.1,
+	    DisplayName	=	Water Bottle,
+	    ReplaceOnDeplete	=	legourmet.SodaBottleEmpty,
+	    ReplaceOnUseOn	=	WaterSource-WaterSodaBottle,
+	    Icon	=	RHP_KI13WaterSodaBottle,
+    }
+
+    item WhiteTequila
+    {
+		DisplayCategory = Food,
+	    HungerChange	=	-20,
+        ThirstChange		= -30,
+        UnhappyChange	=	-30,
+	    Weight	=	1.0,
+	    Type	=	Food,
+        CustomContextMenu = Drink,
+        CustomEatSound		= DrinkingFromBottle,
+        Alcoholic	=	TRUE,
+        AlcoholPower = 5,
+        ReplaceOnUse	=	legourmet.WhiteTequilaEmpty,
+	    DisplayName	=	White Tequila Bottle,
+	    Icon	=	RHP_BA07WhiteTequila,
+	    Calories = 2425,
+	    Proteins = 0,
+	    Lipids = 0,
+	    Carbohydrates = 100,
+        Packaged = TRUE,
+		StaticModel = WhiteTequilaBottle,
+		WorldStaticModel = WhiteTequilaBottle,
+    }
+
+	item WhiteTequilaEmpty
+	{
+		DisplayCategory = WaterContainer,
+		Weight	=	0.3,
+		CanStoreWater	=	TRUE,
+		Type	=	Normal,
+		DisplayName	=	Empty Bottle,
+		ReplaceOnUseOn	=	WaterSource-WhiteTequilaWaterFull,
+		Icon	=	WhiteTequilaEmpty,
+		WorldStaticModel = WhiteTequilaBottle,
+	}
+
+	item WhiteTequilaWaterFull
+	{
+		DisplayCategory = Water,
+		IsWaterSource	=	TRUE,
+		Weight	=	1.0,
+		CanStoreWater	=	TRUE,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.08,
+		DisplayName	=	Water Bottle,
+		ReplaceOnDeplete	=	legourmet.WhiteTequilaEmpty,
+		ReplaceOnUseOn	=	WaterSource-WhiteTequilaWaterFull,
+		Icon	=	WhiteTequilaWFull,
+		StaticModel = WhiteTequilaBottle,
+		WorldStaticModel = WhiteTequilaBottle,
+	}
+
+    item TripleSec
+    {
+		DisplayCategory = Food,
+	    HungerChange	=	-10,
+        ThirstChange		= -15,
+        UnhappyChange	=	-15,
+	    Weight	=	0.8,
+	    Type	=	Food,
+        CustomContextMenu = Drink,
+        CustomEatSound		= DrinkingFromBottle,
+        Alcoholic	=	TRUE,
+        AlcoholPower = 2,
+        ReplaceOnUse	=	legourmet.TripleSecEmpty,
+	    DisplayName	=	Triple Sec Bottle,
+	    Icon	=	RHP_BA06TripleSec,
+	    Calories = 1500,
+	    Proteins = 0,
+	    Lipids = 0,
+	    Carbohydrates = 84,
+        Packaged = TRUE,
+		StaticModel = TripleSecBottle,
+		WorldStaticModel = TripleSecBottle,
+    }
+
+	item TripleSecEmpty
+	{
+		DisplayCategory = WaterContainer,
+		Weight	=	0.3,
+		CanStoreWater	=	TRUE,
+		Type	=	Normal,
+		DisplayName	=	Empty Bottle,
+		ReplaceOnUseOn	=	WaterSource-TripleSecWaterFull,
+		Icon	=	TriplesecEmpty,
+		WorldStaticModel = TripleSecBottle,
+	}
+
+	item TripleSecWaterFull
+	{
+		DisplayCategory = Water,
+		IsWaterSource	=	TRUE,
+		Weight	=	0.8,
+		CanStoreWater	=	TRUE,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.08,
+		DisplayName	=	Water Bottle,
+		ReplaceOnDeplete	=	legourmet.TripleSecEmpty,
+		ReplaceOnUseOn	=	WaterSource-TripleSecWaterFull,
+		Icon	=	TriplesecWFull,
+		StaticModel = TripleSecBottle,
+		WorldStaticModel = TripleSecBottle,
+	}
+
+    item Lime
+    {
+		DisplayCategory = Food,
+	    Weight	=	0.2,
+	    HungerChange	=	-5,
+	    ThirstChange	=	-2,
+	    Type	=	Food,
+	    DisplayName	=	Lime,
+	    Icon	=	RHP_KI09Lime,
+		EvolvedRecipe = Cake:5;FruitSalad:5,
+		FoodType    =   Fruits,
+        DaysTotallyRotten	=	9,
+	    DaysFresh = 7,
+	    Carbohydrates = 3.90,
+	    Proteins = 0.58,
+	    Lipids = 0.41,
+	    Calories = 18,
+    }
+
+    item MargaritaCocktail
+    {
+		DisplayCategory = Food,
+	    Weight	=	0.4,
+        ThirstChange		= -45,
+        HungerChange		= -15,
+	    UnhappyChange	=	-70,
+	    StressChange	=	-42,
+	    Type	=	Food,
+        CustomContextMenu = Drink,
+        CustomEatSound		= DrinkingFromBottle,
+	    DisplayName	=	Margarita Cocktail,
+	    Icon	=	RHP_BD06Margarita,
+	    ReplaceOnUse    =	legourmet.MargaritaGlass,
+        Alcoholic	=	TRUE,
+        AlcoholPower = 3,
+	    Calories = 416,
+	    Proteins = 0,
+	    Lipids = 0,
+	    Carbohydrates = 27,
+		Tooltip = Tooltip_Tragos,
+		OnEat = OnEat_Tragos,
+    }
+
+    item MartiniCocktail
+    {
+		DisplayCategory = Food,
+	    Weight	=	0.4,
+        ThirstChange		= -30,
+        HungerChange		= -10,
+	    UnhappyChange	=	-55,
+	    StressChange	=	-35,
+	    Type	=	Food,
+        CustomContextMenu = Drink,
+        CustomEatSound		= DrinkingFromBottle,
+	    DisplayName	=	Martini Cocktail,
+	    Icon	=	RHP_BD04Martini,
+	    ReplaceOnUse    =	legourmet.MartiniGlass,
+        Alcoholic	=	TRUE,
+        AlcoholPower = 1,
+	    Calories = 270,
+	    Proteins = 0,
+	    Lipids = 0,
+	    Carbohydrates = 0,
+		Tooltip = Tooltip_Tragos,
+		OnEat = OnEat_Tragos,
+    }
+
+    item Ginebra
+    {
+		DisplayCategory = Food,
+	    HungerChange	=	-7,
+        ThirstChange		= -40,
+        UnhappyChange	=	-15,
+	    Weight	=	0.7,
+	    DisplayName	=	Gin Bottle,
+	    Icon	=	RHP_BA01Gin,
+        Type	=	Food,
+        CustomContextMenu = Drink,
+		CustomEatSound 	= DrinkingFromBottle,
+        Alcoholic	=	TRUE,
+        AlcoholPower = 3,
+        ReplaceOnUse	=	legourmet.GinebraEmpty,
+	    Calories = 2200,
+	    Proteins = 0,
+	    Lipids = 0,
+	    Carbohydrates = 0,
+        Packaged = TRUE,
+		StaticModel = GinebraBottle,
+		WorldStaticModel = GinebraBottle,
+    }
+
+	item GinebraEmpty
+	{
+		DisplayCategory = WaterContainer,
+		Weight	=	0.3,
+		CanStoreWater	=	TRUE,
+		Type	=	Normal,
+		DisplayName	=	Empty Bottle,
+		ReplaceOnUseOn	=	WaterSource-GinebraWaterFull,
+		Icon	=	GinEmpty,
+		WorldStaticModel = GinebraBottle,
+	}
+
+	item GinebraWaterFull
+	{
+		DisplayCategory = Water,
+		IsWaterSource	=	TRUE,
+		Weight	=	0.7,
+		CanStoreWater	=	TRUE,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.08,
+		DisplayName	=	Water Bottle,
+		ReplaceOnDeplete	=	legourmet.GinebraEmpty,
+		ReplaceOnUseOn	=	WaterSource-GinebraWaterFull,
+		Icon	=	GinFull,
+		StaticModel = GinebraBottle,
+		WorldStaticModel = GinebraBottle,
+	}
+
+    item DryVermouth
+    {
+		DisplayCategory = Food,
+	    HungerChange	=	-10,
+        ThirstChange		= -25,
+        UnhappyChange	=	-15,
+	    Weight	=	0.6,
+	    DisplayName	=	Dry Vermouth,
+	    Icon	=	RHP_BA02DryVermouth,
+	    Type	=	Food,
+        CustomContextMenu = Drink,
+        CustomEatSound		= DrinkingFromBottle,
+        Alcoholic	=	TRUE,
+        AlcoholPower = 2,
+        ReplaceOnUse	=	legourmet.DryVermouthEmpty,
+	    Calories = 1450,
+	    Proteins = 0,
+	    Lipids = 0,
+	    Carbohydrates = 0,
+        Packaged = TRUE,
+		StaticModel = DryVermouthBottle,
+		WorldStaticModel = DryVermouthBottle,
+    }
+
+	item DryVermouthEmpty
+	{
+		DisplayCategory = WaterContainer,
+		Weight	=	0.3,
+		CanStoreWater	=	TRUE,
+		Type	=	Normal,
+		DisplayName	=	Empty Bottle,
+		ReplaceOnUseOn	=	WaterSource-DryVermouthWaterFull,
+		Icon	=	DryVermouthEmpty,
+		WorldStaticModel = DryVermouthBottle,
+	}
+
+	item DryVermouthWaterFull
+	{
+		DisplayCategory = Water,
+		IsWaterSource	=	TRUE,
+		Weight	=	0.6,
+		CanStoreWater	=	TRUE,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.08,
+		DisplayName	=	Water Bottle,
+		ReplaceOnDeplete	=	legourmet.DryVermouthEmpty,
+		ReplaceOnUseOn	=	WaterSource-DryVermouthWaterFull,
+		Icon	=	DryVermouthFull,
+		StaticModel = DryVermouthBottle,
+		WorldStaticModel = DryVermouthBottle,
+	}
+
+    item WhiteRum
+    {
+		DisplayCategory = Food,
+	    HungerChange	=	-10,
+        ThirstChange		= -40,
+        UnhappyChange	=	-30,
+	    Weight	=	0.8,
+	    DisplayName	=	White Rum Bottle,
+	    Icon	=	RHP_BA03WhiteRum,
+        Type	=	Food,
+	    UseWhileEquipped	=	FALSE,
+        CustomContextMenu = Drink,
+        CustomEatSound		= DrinkingFromBottle,
+        Alcoholic	=	TRUE,
+        AlcoholPower = 4,
+        ReplaceOnUse	=	legourmet.WhiteRumEmpty,
+	    Calories = 2340,
+	    Proteins = 0,
+	    Lipids = 0,
+	    Carbohydrates = 210,
+        Packaged = TRUE,
+    }
+
+	item WhiteRumEmpty
+	{
+		DisplayCategory = WaterContainer,
+		Weight	=	0.3,
+		CanStoreWater	=	TRUE,
+		Type	=	Normal,
+		DisplayName	=	Empty Bottle,
+		ReplaceOnUseOn	=	WaterSource-WhiteRumWaterFull,
+		Icon	=	WhiteRumEmpty,
+	}
+
+	item WhiteRumWaterFull
+	{
+		DisplayCategory = Water,
+		IsWaterSource	=	TRUE,
+		Weight	=	0.6,
+		CanStoreWater	=	TRUE,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.08,
+		DisplayName	=	Water Bottle,
+		ReplaceOnDeplete	=	legourmet.WhiteRumEmpty,
+		ReplaceOnUseOn	=	WaterSource-WhiteRumWaterFull,
+		Icon	=	WhiteRumFull,
+	}
+
+    item Rum
+    {
+		DisplayCategory = Food,
+	    HungerChange	=	-10,
+        ThirstChange		= -40,
+        UnhappyChange	=	-30,
+	    Weight	=	0.8,
+        Type	=	Food,
+        CustomContextMenu = Drink,
+        CustomEatSound		= DrinkingFromBottle,
+        Alcoholic	=	TRUE,
+        AlcoholPower = 4,
+        ReplaceOnUse	=	legourmet.RumEmpty,
+	    DisplayName	=	Rum Bottle,
+	    Icon	=	RHP_BA04Rum,
+	    Calories = 2340,
+	    Proteins = 0,
+	    Lipids = 0,
+	    Carbohydrates = 210,
+        Packaged = TRUE,
+    }
+
+	item RumEmpty
+	{
+		DisplayCategory = WaterContainer,
+		Weight	=	0.3,
+		CanStoreWater	=	TRUE,
+		Type	=	Normal,
+		DisplayName	=	Empty Bottle,
+		ReplaceOnUseOn	=	WaterSource-RumWaterFull,
+		Icon	=	RumEmpty,
+	}
+
+	item RumWaterFull
+	{
+		DisplayCategory = Water,
+		IsWaterSource	=	TRUE,
+		Weight	=	0.8,
+		CanStoreWater	=	TRUE,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.08,
+		DisplayName	=	Water Bottle,
+		ReplaceOnDeplete	=	legourmet.RumEmpty,
+		ReplaceOnUseOn	=	WaterSource-RumWaterFull,
+		Icon	=	RumFull,
+	}
+
+    item Aguaardiente
+    {
+		DisplayCategory = Food,
+	    HungerChange	=	-10,
+        ThirstChange		= -25,
+	    UnhappyChange	=	-50,
+	    StressChange	=	-30,
+	    Weight	=	0.9,
+	    Type	=	Food,
+	    DisplayName	=	Agua Ardiente Bottle,
+	    Icon	=	RHP_BA05Aguaardiente,
+        CustomContextMenu = Drink,
+        CustomEatSound		= DrinkingFromBottle,
+        Alcoholic	=	TRUE,
+        AlcoholPower = 6,
+        ReplaceOnUse	=	legourmet.AguaardienteEmpty,
+	    Calories = 2150,
+	    Proteins = 0,
+	    Lipids = 0,
+	    Carbohydrates = 180,
+        Packaged = TRUE,
+		StaticModel = AguaardienteBottle,
+		WorldStaticModel = AguaardienteBottle,
+    }
+
+	item AguaardienteEmpty
+	{
+		DisplayCategory = WaterContainer,
+		Weight	=	0.3,
+		CanStoreWater	=	TRUE,
+		Type	=	Normal,
+		DisplayName	=	Empty Bottle,
+		ReplaceOnUseOn	=	WaterSource-AguaardienteWaterFull,
+		Icon	=	AguaardienteEmpty,
+		WorldStaticModel = AguaardienteBottle,
+	}
+
+	item AguaardienteWaterFull
+	{
+		DisplayCategory = Water,
+		IsWaterSource	=	TRUE,
+		Weight	=	0.9,
+		CanStoreWater	=	TRUE,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.08,
+		DisplayName	=	Water Bottle,
+		ReplaceOnDeplete	=	legourmet.AguaardienteEmpty,
+		ReplaceOnUseOn	=	WaterSource-AguaardienteWaterFull,
+		Icon	=	AguaardienteFull,
+		WorldStaticModel = AguaardienteBottle,
+	}
+
+    item CocktailSpoon
+    {
+		MaxRange	=	0.9,
+		WeaponSprite	=	Spoon,
+		MinAngle	=	0.65,
+		Type	=	Weapon,
+		MinimumSwingTime	=	2,
+		SwingAmountBeforeImpact	=	0.02,
+		Categories	=	SmallBlade,
+		Weight	=	0.3,
+		ConditionLowerChanceOneIn	=	1,
+		PushBackMod	=	0.3,
+		SubCategory	=	Stab,
+		AimingMod	=	0.8,
+		ConditionMax	=	3,
+		MaxHitCount	=	1,
+		IsAimedHandWeapon	=	TRUE,
+		DoorDamage	=	1,
+		SwingAnim	=	Stab,
+		DisplayName	=	Cocktail Spoon,
+		MinRange	=	0.3,
+		SwingTime	=	2,
+		KnockdownMod	=	0,
+		Icon	=	RHP_KU08CocktailSpoon,
+		TreeDamage  =   0,
+		EnduranceMod = 0.5,
+		MetalValue = 5,
+		CriticalChance	=	0,
+		MinDamage	=	0.1,
+        MaxDamage	=	0.1,
+		WeaponLength = 0.17,
+		AttachmentType = Screwdriver,
+        BreakSound	=	BreakMetalItem,
+	}
+
+    item GreenOlives
+    {
+		DisplayCategory = Food,
+	    Weight	=	0.1,
+	    HungerChange	=	-5,
+	    Type	=	Food,
+	    DisplayName	=	Green Olives,
+	    Icon	=	Greenolives,
+		UnhappyChange	=	-2,
+		BoredomChange		=		-2,
+		DaysTotallyRotten	=	10,
+		DaysFresh 			= 	5,
+	    Carbohydrates = 0,
+	    Proteins = 0,
+	    Lipids = 3,
+	    Calories = 27,
+    }
+
+    item GreenOlives2
+    {
+		DisplayCategory = Food,
+	    Weight	=	0.1,
+	    HungerChange	=	-3,
+		UnhappyChange	=	-2,
+	    Type	=	Food,
+	    DisplayName	=	Simple Green Olives,
+	    Icon	=	Simplegreenolives,
+		DaysTotallyRotten	=	10,
+		DaysFresh 			= 	5,
+	    Carbohydrates = 0,
+	    Proteins = 0,
+	    Lipids = 3,
+	    Calories = 27,
+    }
+
+    item JarOlives
+    {
+		DisplayCategory = Food,
+	    Weight	=	0.5,
+	    Type	=	Food,
+	    DisplayName	=	Green Olives Jar,
+	    Icon	=	JarOlives2,
+	    Carbohydrates = 0,
+	    Proteins = 0,
+	    Lipids = 60,
+	    Calories = 540,
+		Packaged = TRUE,
+        CantBeFrozen = TRUE,
+    }
+
+    item JarOlives2
+    {
+		DisplayCategory = Food,
+	    Weight	=	0.5,
+	    Type	=	Food,
+	    DisplayName	=	Green Olives Jar,
+	    Icon	=	JarOlives,
+		DaysTotallyRotten	=	90,
+		DaysFresh 			= 	60,
+	    Carbohydrates = 0,
+	    Proteins = 0,
+	    Lipids = 60,
+	    Calories = 540,
+		Packaged = FALSE,
+        CantBeFrozen = TRUE,
+    }
+
+    item JarOlives3
+    {
+		DisplayCategory = Food,
+	    Weight	=	0.5,
+	    Type	=	Food,
+	    DisplayName	=	Simple Green Olives Jar,
+	    Icon	=	JarOlives3,
+	    Carbohydrates = 0,
+	    Proteins = 0,
+	    Lipids = 60,
+	    Calories = 540,
+		Packaged = TRUE,
+        CantBeFrozen = TRUE,
+    }
+
+    item JarOlives4
+    {
+		DisplayCategory = Food,
+	    Weight	=	0.5,
+	    Type	=	Food,
+	    DisplayName	=	Simple Green Olives Jar,
+	    Icon	=	JarOlives4,
+		DaysTotallyRotten	=	90,
+		DaysFresh 			= 	60,
+	    Carbohydrates = 0,
+	    Proteins = 0,
+	    Lipids = 60,
+	    Calories = 540,
+		Packaged = FALSE,
+        CantBeFrozen = TRUE,
+    }
+
+    item Glass
+    {
+		DisplayCategory = WaterContainer,
+	    Weight	=	0.1,
+	    Type	=	Normal,
+	    CanStoreWater	=	TRUE,
+	    DisplayName	=	Crystal Glass,
+	    Icon	=	RHP_KU03Glass,
+	    ReplaceOnUseOn	=	WaterSource-WaterGlass,
+        RainFactor = 0.2,
+        Tooltip = Tooltip_item_RainFromGround,
+    }
+
+    item WaterGlass
+    {
+		DisplayCategory = Water,
+	    IsWaterSource	=	TRUE,
+	    Weight	=	0.6,
+	    CanStoreWater	=	TRUE,
+	    Type	=	Drainable,
+	    UseDelta	=	1,
+	    DisplayName	=	Glass Of Water,
+	    ReplaceOnDeplete	=	legourmet.Glass,
+	    UseWhileEquipped	=	FALSE,
+	    ReplaceOnUseOn	=	WaterSource-WaterGlass,
+	    Icon	=	RHP_BD01WaterGlass,
+        CustomContextMenu = Drink,
+        IsCookable	=	TRUE,
+        CustomEatSound		= DrinkingFromBottle,
+        RainFactor = 0.2,
+        Tooltip = Tooltip_item_RainFromGround,
+    }
+
+    item Mint
+    {
+		DisplayCategory = Food,
+	    Weight	=	0.1,
+	    HungerChange	=	-2,
+	    UnhappyChange	=	-2,
+	    Type	=	Food,
+	    DisplayName	=	Mint,
+	    Icon	=	Mint,
+	    DaysTotallyRotten	=	13,
+	    DaysFresh = 9,
+	    Carbohydrates = 1,
+	    Proteins = 0,
+	    Lipids = 0,
+	    Calories = 4,
+    }
+
+    item MojitoCocktail
+    {
+		DisplayCategory = Food,
+	    Weight	=	0.4,
+        ThirstChange		= -50,
+        HungerChange		= -5,
+	    UnhappyChange	=	-60,
+	    StressChange	=	-40,
+	    Type	=	Food,
+        CustomContextMenu = Drink,
+        CustomEatSound		= DrinkingFromBottle,
+	    DisplayName	=	Mojito Cocktail,
+	    Icon	=	RHP_BD05Mojito,
+	    ReplaceOnUse    =	legourmet.Glass,
+        Alcoholic	=	TRUE,
+        AlcoholPower = 2,
+	    Calories = 329,
+	    Proteins = 0,
+	    Lipids = 0,
+	    Carbohydrates = 41,
+		Tooltip = Tooltip_Tragos,
+		OnEat = OnEat_Tragos,
+    }
+
+    item CosmopolitanCocktail
+    {
+		DisplayCategory = Food,
+	    Weight	=	0.4,
+        HungerChange		= -20,
+        ThirstChange		= -45,
+	    UnhappyChange	=	-30,
+	    StressChange	=	-30,
+	    Type	=	Food,
+        CustomContextMenu = Drink,
+        CustomEatSound		= DrinkingFromBottle,
+	    DisplayName	=	Cosmopolitan Cocktail,
+	    Icon	=	RHP_BD07Cosmopolitan,
+	    ReplaceOnUse    =	legourmet.MartiniGlass,
+        Alcoholic	=	TRUE,
+        AlcoholPower = 2,
+	    Calories = 186,
+	    Proteins = 0,
+	    Lipids = 0,
+	    Carbohydrates = 35,
+		Tooltip = Tooltip_Tragos,
+		OnEat = OnEat_Tragos,
+    }
+}

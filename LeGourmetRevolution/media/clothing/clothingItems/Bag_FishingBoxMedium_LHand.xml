@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>media\models_X\Skinned\BackPacks\FishingBoxMedium_LHand.fbx</m_MaleModel>
+	<m_FemaleModel>media\models_X\Skinned\BackPacks\FishingBoxMedium_LHand.fbx</m_FemaleModel>
+	<m_GUID>cb012b4b-1f71-4a3d-b038-47e8a48fboxm</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomHue>false</m_AllowRandomHue>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone></m_AttachBone>
+	<textureChoices>fishingboxm</textureChoices>
+</clothingItem>
