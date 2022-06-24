@@ -1,0 +1,6 @@
+UGSandbox_EN = {
+	Sandbox_WildSafehouses = "Wild Safe Houses",
+	Sandbox_UG_Diameter = "Safehouse Diameter"
+	Sandbox_UG_Buffer = "Buffer Zone"
+	Sandbox_UG_MaxHouse = "Maximum number of player safe houses"
+}

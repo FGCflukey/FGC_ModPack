@@ -1,0 +1,9 @@
+UGWildSafeHouse_EN = {
+
+	UG_CreateSafeHouse = "Create Safe House",
+	UG_EOnlyOneHouse = "You can't have any more safe houses",
+	UG_ENearSafeHouse = "There is another safe house nearby",
+	UG_ENearBuilding = "You are too close to another building to setup a safe house",
+	UG_ENearRoad = "You are too close to a road to setup a safe house",
+	UG_GoodToGo = "You're good to go!"
+}
