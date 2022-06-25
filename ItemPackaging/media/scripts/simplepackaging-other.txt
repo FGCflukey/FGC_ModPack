@@ -736,5 +736,97 @@ module Base
 			Time:10,
 		}
 
+	item 10xDuctTapePack
+	{
+        DisplayCategory 	= Material,
+		Weight				= 2.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Duct Tape,
+		Icon				= 10xDuctTapePack,
+	}
+
+	item 20xDuctTapePack
+	{
+        DisplayCategory 	= Material,
+		Weight				= 4.0,
+		Type				= Drainable,
+		UseDelta 			= 0.05,
+		DisplayName			= 20-Pack Duct Tape,
+		Icon				= 20xDuctTapePack,
+	}
+		
+		recipe Take Duct Tape from Pack
+		{
+			10xDuctTapePack/20xDuctTapePack,
+
+			Result:DuctTape=1,
+			Time:50.0,
+		}
+
+		recipe Package 10 Duct Tape
+		{
+			destroy DuctTape=10,
+
+			Result:10xDuctTapePack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:100.0,
+		}
+
+		recipe Package 20 Duct Tape
+		{
+			destroy DuctTape=20,
+
+			Result:20xDuctTapePack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:100.0,
+		}
+
+	item 10xBatteryPack
+	{
+        DisplayCategory  	= Electronics,
+		Weight				= 3.0,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack Batteries,
+		Icon				= 10xBatteryPack,
+	}
+
+	item 20xBatteryPack
+	{
+        DisplayCategory  	= Electronics,
+		Weight				= 5.0,
+		Type				= Drainable,
+		UseDelta 			= 0.05,
+		DisplayName			= 20-Pack Batteries,
+		Icon				= 20xBatteryPack,
+	}
+		
+		recipe Take Battery from Pack
+		{
+			10xBatteryPack/20xBatteryPack,
+
+			Result:Battery=1,
+			Time:50.0,
+		}
+
+		recipe Package 10 Batteries
+		{
+			destroy Battery=10,
+
+			Result:10xBatteryPack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:100.0,
+		}
+
+		recipe Package 20 Batteries
+		{
+			destroy Battery=20,
+
+			Result:20xBatteryPack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:100.0,
+		}
+
 }
 
