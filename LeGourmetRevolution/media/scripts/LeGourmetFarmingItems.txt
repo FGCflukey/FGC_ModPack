@@ -1,0 +1,1458 @@
+module legourmetfarming
+{
+	imports
+    {
+        Base,
+    }
+	
+	/************Farming Items************/
+
+	item BSodium
+	{
+		DisplayCategory = Gardening,
+		Weight			=	0.1,
+		Type			=	Drainable,
+		DisplayName		=	Bicarbonate Soda,
+		Icon			=	BicarbonateSodium,
+		Tooltip         =   Tooltip_BSodium,
+		UseDelta	=	0.1,
+		UseWhileEquipped	=	FALSE,
+		ReplaceOnDeplete	=	BSodiumEmpty,
+		SurvivalGear = TRUE,
+	}
+
+	item BSodiumEmpty
+	{
+		DisplayCategory = Gardening,
+		Weight			=	0.1,
+		Type			=	Normal,
+		DisplayName		=	Bicarbonate Soda Empty,
+		Icon			=	BicarbonateSodium,
+	}
+
+	item LgFarmMag1
+	{
+		DisplayCategory = SkillBook,
+		Weight			=	0.1,
+		Type			=	Literature,
+		DisplayName		=	The Farming Magazine,
+		Icon			=	InGarMag2,
+		TeachedRecipes  =   Make Aphids Cure,
+        ReplaceOnUse    =   LgFarmMag1,
+		StaticModel = Magazine,
+        WorldStaticModel = MagazineGround,
+	}
+
+    item GardeningSprayAphids
+ 	{
+		DisplayCategory = Gardening,
+    	Type				=		Drainable,
+		DisplayName			=		DevilFungi Spray,
+		Icon				=		TZ_GardeningSprayCan,
+		Weight				=		1.0,
+    	UseDelta			=		0.025,
+    	ReplaceOnDeplete 	= 		farming.GardeningSprayEmpty,
+	    UseWhileEquipped 	=		false,
+    	IsWaterSource		=		true,
+		StaticModel = GardenSpray,
+    	WorldStaticModel = GardenSprayGround,
+  	}
+
+	item Pumpkin
+	{
+		DisplayCategory = Food,
+		HungerChange		=	-60,
+		Weight				=	1,
+		Type				=	Food,
+		DaysTotallyRotten	=	3,
+		ThirstChange		=	-24,
+		DisplayName			=	Pumpkin,
+		Icon				=	Pumpkin,
+		DaysFresh			=	2,
+		OBSOLETE            = true,
+	}
+
+	item PumpkinSliced
+	{
+		DisplayCategory = Food,
+		HungerChange		=	-8,
+		Weight				=	0.1,
+		Type				=	Food,
+		DaysTotallyRotten	=	3,
+		ThirstChange		=	-5,
+		DisplayName			=	Pumpkin Slice,
+		Icon				=	PumpSlice,
+		DaysFresh			=	2,
+		EvolvedRecipe 		=	Soup:8;Pie:8,
+		FoodType    		=	Vegetables,
+		StaticModel = PumpkinSlice,
+	}
+
+	item PumpkinSmashed
+	{
+		DisplayCategory = Food,
+		HungerChange		=	-5,
+		Weight				=	0.3,
+		Type				=	Food,
+		DaysTotallyRotten	=	3,
+		ThirstChange		=	-3,
+		DisplayName			=	Pumpkin Chunks,
+		Icon				=	PumpChunk,
+		DaysFresh			=	2,
+		EvolvedRecipe 		=	Soup:5;Pie:5,
+		FoodType    		=	Vegetables,
+	}
+
+	item NaturalLemon
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-15,
+		Weight	=	0.2,
+		Type	=	Food,
+		DaysTotallyRotten	=	15,
+		DisplayName	=	Farm Lemon,
+		Icon	=	Naturallemon,
+		DaysFresh	=	12,
+		EvolvedRecipe = Cake:15;FruitSalad:15;Pancakes:15;Waffles:15;Muffin:15,
+		FoodType    =   Fruits,
+		ThirstChange	=	-5,
+        Carbohydrates = 5.41,
+        Proteins = 0.64,
+        Lipids = 0.17,
+        Calories = 17,
+		StaticModel = RoundFood_Yellow,
+		WorldStaticModel = Lemon_Ground,
+		CustomEatSound = EatingFruit,
+	}
+
+	item NaturalLime
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-10,
+		Weight	=	0.2,
+		Type	=	Food,
+		DaysTotallyRotten	=	15,
+		DisplayName	=	Farm Lime,
+		Icon	=	Naturallime,
+		DaysFresh	=	12,
+		EvolvedRecipe = Cake:10;FruitSalad:10;Pancakes:10;Waffles:10;Muffin:10,
+		FoodType    =   Fruits,
+		ThirstChange	=	-5,
+        Carbohydrates = 5.41,
+        Proteins = 0.64,
+        Lipids = 0.17,
+        Calories = 17,
+		StaticModel = RoundFood_Green,
+		WorldStaticModel = NaturalLime,
+		CustomEatSound = EatingFruit,
+	}
+
+	item NaturalOrange
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-16,
+		Weight	=	0.2,
+		Type	=	Food,
+		DaysTotallyRotten	=	15,
+		ThirstChange	=	-20,
+		DisplayName	=	Farm Orange,
+		Icon	=	Orange,
+		DaysFresh	=	12,
+		EvolvedRecipe = Cake:8;FruitSalad:8;Pancakes:8;Waffles:8;Muffin:8,
+		FoodType    =   Fruits,
+		ThirstChange	=	-8,
+        Carbohydrates = 16.27,
+        Proteins = 1,
+        Lipids = 0.3,
+        Calories = 65,
+		WorldStaticModel = Orange_Ground,
+        CustomEatSound = EatingFruit,
+	}
+
+	item NaturalApple
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-18,
+		Weight	=	0.2,
+		Type	=	Food,
+		DaysTotallyRotten	=	15,
+		DisplayName	=	Farm Apple,
+		Icon	=	Apple,
+		DaysFresh	=	12,
+		EvolvedRecipe = Cake:8;FruitSalad:8;Pancakes:8;Waffles:8;Muffin:8,
+		FoodType    =   Fruits,
+		ThirstChange	=	-7,
+        Carbohydrates = 25.13,
+        Proteins = 0.47,
+        Lipids = 0.31,
+        Calories = 95,
+		StaticModel = RoundFood_Red,
+		WorldStaticModel = Apple_Ground,
+        CustomEatSound = EatingFruit,
+	}
+
+	item NaturalPeach
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-18,
+		Weight	=	0.2,
+		Type	=	Food,
+		DaysTotallyRotten	=	13,
+		DisplayName	=	Farm Peach,
+		Icon	=	Peach,
+		DaysFresh	=	10,
+		EvolvedRecipe = Cake:6;FruitSalad:6;Pancakes:6;Waffles:6;Muffin:6,
+		FoodType    =   Fruits,
+		ThirstChange	=	-5,
+        Carbohydrates = 14.31,
+        Proteins = 1.36,
+        Lipids = 0.38,
+        Calories = 58,
+		StaticModel = RoundFood_Peach,
+		WorldStaticModel = Peach_Ground,
+        CustomEatSound = EatingFruit,
+	}
+
+	item NaturalBanana
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-20,
+		Weight	=	0.2,
+		Type	=	Food,
+		DaysTotallyRotten	=	13,
+		DisplayName	=	Farm Banana,
+		Icon	=	Banana,
+		DaysFresh	=	10,
+		EvolvedRecipe = Cake:10;FruitSalad:10;Pancakes:10;Waffles:10;Muffin:10,
+		FoodType    =   Fruits,
+		ThirstChange	=	-5,
+        Carbohydrates = 26.95,
+        Proteins = 1.29,
+        Lipids = 0.39,
+        Calories = 105,
+		StaticModel = CylinderFood_Yellow,
+		WorldStaticModel = Banana_Ground,
+        CustomEatSound = EatingMushy,
+	}
+
+    item NaturalPineapple
+    {
+		DisplayCategory = Food,
+        Type				=		Food,
+        DisplayName			=		Farm Pineapple,
+        Icon				=		Pineapple,
+        Weight				=		0.3,
+        HungerChange 		=		-30,
+        DaysFresh 			=		12,
+        DaysTotallyRotten 	=	 	18,
+        EvolvedRecipe       =       Cake:15;FruitSalad:15;Pancakes:15;Waffles:15;Muffin:15,
+        FoodType            =       Fruits,
+        ThirstChange	=	-13,
+        Carbohydrates = 118.7,
+        Proteins = 4.89,
+        Lipids = 1.09,
+        Calories = 452,
+		WorldStaticModel = Pineapple_Ground,
+        StaticModel = Pineapple,
+        CustomEatSound = EatingFruit,
+    }
+
+    item NaturalCherry
+    {
+		DisplayCategory = Food,
+        Type				=		Food,
+        DisplayName			=		Farm Cherry,
+        Icon				=		Cherry,
+        Weight				=		0.3,
+        HungerChange 		=		-6,
+        DaysFresh 			=		10,
+        DaysTotallyRotten 	=	 	13,
+        EvolvedRecipe       =       Cake:6;FruitSalad:6;Pancakes:6;Waffles:6;Muffin:6,
+        FoodType            =       Fruits,
+        ThirstChange	=	-3,
+        Carbohydrates = 1.31,
+        Proteins = 0.09,
+        Lipids = 0,
+        Calories = 5,
+		StaticModel = RoundFood_Red,
+		WorldStaticModel = Cherry_Ground,
+        CustomEatSound = EatingFruit,
+    }
+
+    item NaturalAvocado
+    {
+		DisplayCategory = Food,
+        Type				=		Food,
+        DisplayName			=		Farm Avocado,
+        Icon				=		Naturalavocado,
+        Weight				=		0.3,
+        HungerChange 		=		-15,
+        DaysFresh 			=		6,
+        DaysTotallyRotten 	=	 	14,
+        EvolvedRecipe       =       Omelette:7;Soup:15;Stew:15;Pie:15;Stir fry:15;Sandwich:8;Sandwich Baguette:8;Salad:15;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15;Taco:8;Burrito:8,
+        FoodType            =       Vegetables,
+        ThirstChange	=	-7,
+        Carbohydrates = 11.75,
+        Proteins = 2.67,
+        Lipids = 20.96,
+        Calories = 227,
+		StaticModel = RoundFood_Green,
+        WorldStaticModel = Avocado_Ground,
+    }
+
+	item UnknownSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Unknown Seeds,
+		Tooltip = Tooltip_UnknownSeed,
+		Icon		=	RiceSeeds,
+		Weight		=	0.009,
+		SurvivalGear = TRUE,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item SunFlowerSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Food,
+		DisplayName	=	Sunflower Seeds,
+		Icon		=	SunflowerSeeds,
+		Weight		=	0.009,
+        HungerChange 		=		-1,
+        ThirstChange		=		5,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item SunFlowerBagSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Sunflower Seeds Packet,
+		Icon		=	SunflowerBagSeed,
+		Weight		=	0.1,
+		Tooltip     = 	Tooltip_LearnSow,
+		StaticModel = SeedPacket,
+		SurvivalGear = TRUE,
+		WorldStaticModel = SunFlowerSeedBag_Ground,
+	}
+
+	item SugarcaneSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Sugarcane Seeds,
+		Icon		=	SugarcaneSeeds,
+		Weight		=	0.009,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item SugarcaneBagSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Sugarcane Seeds Packet,
+		Icon		=	SugarcaneBagSeed,
+		Weight		=	0.1,
+		Tooltip     = 	Tooltip_LearnSow,
+		StaticModel = SeedPacket,
+		SurvivalGear = TRUE,
+		WorldStaticModel = SugarcaneSeedBag_Ground,
+	}
+
+	item WheatSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Wheat Seeds,
+		Icon		=	WheatSeeds,
+		Weight		=	0.009,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item WheatBagSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Wheat Seeds Packet,
+		Icon		=	WheatBagSeed,
+		Weight		=	0.1,
+		Tooltip     = 	Tooltip_LearnSow,
+		StaticModel = SeedPacket,
+		SurvivalGear = TRUE,
+		WorldStaticModel = WheatSeedBag_Ground,
+	}
+
+	item RiceSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Rice Seeds,
+		Icon		=	RiceSeeds,
+		Weight		=	0.009,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item RiceBagSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Rice Seeds Packet,
+		Icon		=	RiceBagSeed,
+		Weight		=	0.1,
+		Tooltip     = 	Tooltip_LearnSow,
+		StaticModel = SeedPacket,
+		SurvivalGear = TRUE,
+		WorldStaticModel = RiceSeedBag_Ground,
+	}
+
+	item BeanSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Bean Seeds,
+		Icon		=	TZ_TomatoSeeds,
+		Weight		=	0.009,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item BeanBagSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Bean Seeds Packet,
+		Icon		=	BeanBagSeed,
+		Weight		=	0.1,
+		Tooltip     = 	Tooltip_LearnSow,
+		StaticModel = SeedPacket,
+		SurvivalGear = TRUE,
+		WorldStaticModel = BeanSeedBag_Ground,
+	}
+
+	item CornSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Corn Seeds,
+		Icon		=	TZ_TomatoSeeds,
+		Weight		=	0.009,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item CornBagSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Corn Seeds Packet,
+		Icon		=	CornBagSeed,
+		Weight		=	0.1,
+		Tooltip     = 	Tooltip_LearnSow,
+		StaticModel = SeedPacket,
+		SurvivalGear = TRUE,
+		WorldStaticModel = CornSeedBag_Ground,
+	} 
+    
+	item BellPepperSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Bell Pepper Seeds,
+		Icon		=	TZ_TomatoSeeds,
+		Weight		=	0.009,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item BellPepperBagSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Bell Pepper Seeds Packet,
+		Icon		=	BellPepperBagSeed,
+		Weight		=	0.1,
+		Tooltip     = 	Tooltip_LearnSow,
+		StaticModel = SeedPacket,
+		SurvivalGear = TRUE,
+		WorldStaticModel = BellPepperSeedBag_Ground,
+	}  
+
+	
+	item EggplantSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Eggplant Seeds,
+		Icon		=	TZ_TomatoSeeds,
+		Weight		=	0.009,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item EggplantBagSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Eggplant Seeds Packet,
+		Icon		=	EggplantBagSeed,
+		Weight		=	0.1,
+		Tooltip     = 	Tooltip_LearnSow,
+		StaticModel = SeedPacket,
+		SurvivalGear = TRUE,
+		WorldStaticModel = EggplantSeedBag_Ground,
+	}
+
+	item GrapeSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Grape Seeds,
+		Icon		=	TZ_TomatoSeeds,
+		Weight		=	0.009,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item GrapeBagSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Grape Seeds Packet,
+		Icon		=	GrapeBagSeed,
+		Weight		=	0.1,
+		Tooltip     = 	Tooltip_LearnSow,
+		StaticModel = SeedPacket,
+		SurvivalGear = TRUE,
+		WorldStaticModel = GrapeSeedBag_Ground,
+	}
+
+	item LeekSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Leek Seeds,
+		Icon		=	TZ_CabbageLettuceSeeds,
+		Weight		=	0.009,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item LeekBagSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Leek Seeds Packet,
+		Icon		=	LeekBagSeed,
+		Weight		=	0.1,
+		Tooltip     = 	Tooltip_LearnSow,
+		StaticModel = SeedPacket,
+		SurvivalGear = TRUE,
+		WorldStaticModel = LeekSeedBag_Ground,
+	}
+
+	item LettuceSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Lettuce Seeds,
+		Icon		=	TZ_CabbageLettuceSeeds,
+		Weight		=	0.009,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item LettuceBagSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Lettuce Seeds Packet,
+		Icon		=	LettuceBagSeed,
+		Weight		=	0.1,
+		Tooltip     = 	Tooltip_LearnSow,
+		StaticModel = SeedPacket,
+		SurvivalGear = TRUE,
+		WorldStaticModel = LettuceSeedBag_Ground,
+	}
+
+	item OnionSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Onion Seeds,
+		Icon		=	TZ_PotatoSeeds,
+		Weight		=	0.009,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item OnionBagSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Onion Seeds Packet,
+		Icon		=	OnionBagSeed,
+		Weight		=	0.1,
+		Tooltip     = 	Tooltip_LearnSow,
+		StaticModel = SeedPacket,
+		SurvivalGear = TRUE,
+		WorldStaticModel = OnionSeedBag_Ground,
+	}  
+
+	item PeaSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Pea Seeds,
+		Icon		=	TZ_PotatoSeeds,
+		Weight		=	0.009,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item PeaBagSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Pea Seeds Packet,
+		Icon		=	PeaBagSeed,
+		Weight		=	0.1,
+		Tooltip     = 	Tooltip_LearnSow,
+		StaticModel = SeedPacket,
+		SurvivalGear = TRUE,
+		WorldStaticModel = PeaSeedBag_Ground,
+	}
+
+	item PeanutSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Peanut Seeds,
+		Icon		=	TZ_PotatoSeeds,
+		Weight		=	0.009,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item PeanutBagSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Peanut Seeds Packet,
+		Icon		=	PeanutBagSeed,
+		Weight		=	0.1,
+		Tooltip     = 	Tooltip_LearnSow,
+		StaticModel = SeedPacket,
+		SurvivalGear = TRUE,
+		WorldStaticModel = PeanutSeedBag_Ground,
+	}
+
+	item PumpkinSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Pumpkin Seeds,
+		Icon		=	TZ_TomatoSeeds,
+		Weight		=	0.009,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item PumpkinBagSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Pumpkin Seeds Packet,
+		Icon		=	PumpkinBagSeed,
+		Weight		=	0.1,
+		Tooltip     = 	Tooltip_LearnSow,
+		StaticModel = SeedPacket,
+		SurvivalGear = TRUE,
+		WorldStaticModel = PumpkinSeedBag_Ground,
+	}
+
+	item WatermelonSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Watermelon Seeds,
+		Icon		=	TZ_PotatoSeeds,
+		Weight		=	0.009,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item WatermelonBagSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Watermelon Seeds Packet,
+		Icon		=	WatermelonBagSeed,
+		Weight		=	0.1,
+		Tooltip     = 	Tooltip_LearnSow,
+		StaticModel = SeedPacket,
+		SurvivalGear = TRUE,
+		WorldStaticModel = WatermelonSeedBag_Ground,
+	}	
+
+	item ZucchiniSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Zucchini Seeds,
+		Icon		=	TZ_PotatoSeeds,
+		Weight		=	0.009,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item ZucchiniBagSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Zucchini Seeds Packet,
+		Icon		=	ZucchiniBagSeed,
+		Weight		=	0.1,
+		Tooltip     = 	Tooltip_LearnSow,
+		StaticModel = SeedPacket,
+		SurvivalGear = TRUE,
+		WorldStaticModel = ZucchiniSeedBag_Ground,
+	}
+
+	item LemonSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Lemon Seeds,
+		Icon		=	LemonSeeds,
+		Weight		=	0.009,
+		Tooltip     = 	Tooltip_SpecialSeed,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item LimeSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Lime Seeds,
+		Icon		=	LemonSeeds,
+		Weight		=	0.009,
+		Tooltip     = 	Tooltip_SpecialSeed,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item OrangeSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Orange Seeds,
+		Icon		=	OrangeSeeds,
+		Weight		=	0.009,
+		Tooltip     = 	Tooltip_SpecialSeed,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item AppleSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Apple Seeds,
+		Icon		=	AppleSeeds,
+		Weight		=	0.009,
+		Tooltip     = 	Tooltip_SpecialSeed,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item PearSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Pear Seeds,
+		Icon		=	PearSeeds,
+		Weight		=	0.009,
+		Tooltip     = 	Tooltip_SpecialSeed,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item PeachSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Peach Seeds,
+		Icon		=	PeachSeeds,
+		Weight		=	0.009,
+		Tooltip     = 	Tooltip_SpecialSeed,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item BananaSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Banana Seeds,
+		Icon		=	BananaSeeds,
+		Weight		=	0.009,
+		Tooltip     = 	Tooltip_SpecialSeed,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item CherrySeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Cherry Seeds,
+		Icon		=	TZ_LRRadishSeeds,
+		Weight		=	0.009,
+		Tooltip     = 	Tooltip_SpecialSeed,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item AvocadoSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Avocado Seeds,
+		Icon		=	AvocadoSeeds,
+		Weight		=	0.009,
+		Tooltip     = 	Tooltip_SpecialSeed,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item PineappleSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Pineapple Seeds,
+		Icon		=	PineappleSeeds,
+		Weight		=	0.009,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item PineappleBagSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Pineapple Seeds Packet,
+		Icon		=	PineappleBagSeed,
+		Weight		=	0.1,
+		Tooltip     = 	Tooltip_LearnSow,
+		SurvivalGear = TRUE,
+		WorldStaticModel = PineappleSeedBag_Ground,
+	}
+
+	item ChiliSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Chili Seeds,
+		Icon		=	ChiliSeeds,
+		Weight		=	0.009,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item ChiliBagSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Chili Seeds Packet,
+		Icon		=	ChiliBagSeed,
+		Weight		=	0.1,
+		Tooltip     = 	Tooltip_LearnSow,
+		StaticModel = SeedPacket,
+		SurvivalGear = TRUE,
+		WorldStaticModel = ChiliSeedBag_Ground,
+	}
+
+	item JalapenoSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Jalapeno Seeds,
+		Icon		=	ChiliSeeds,
+		Weight		=	0.009,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item JalapenoBagSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Jalapeno Seeds Packet,
+		Icon		=	JalapenoBagSeed,
+		Weight		=	0.1,
+		Tooltip     = 	Tooltip_LearnSow,
+		StaticModel = SeedPacket,
+		SurvivalGear = TRUE,
+		WorldStaticModel = JalapenoSeedBag_Ground,
+	}
+
+	item HabaneroSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Habanero Seeds,
+		Icon		=	ChiliSeeds,
+		Weight		=	0.009,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item HabaneroBagSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Habanero Seeds Packet,
+		Icon		=	HabaneroBagSeed,
+		Weight		=	0.1,
+		Tooltip     = 	Tooltip_LearnSow,
+		StaticModel = SeedPacket,
+		SurvivalGear = TRUE,
+		WorldStaticModel = HabaneroSeedBag_Ground,
+	}
+
+	item CafeSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Food,
+		DisplayName	=	Coffee Seeds,
+		Icon		=	Cafeseeds,
+		Weight		=	0.009,
+		DangerousUncooked	=	TRUE,
+        HungerChange 		=		-1,
+        UnhappyChange	    =	    10,
+        ThirstChange		=		10,
+		FatigueChange		=	-1,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item TobaccoSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Tobacco Seeds,
+		Icon		=	TobaccoSeeds,
+		Weight		=	0.009,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item TobaccoBagSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Tobacco Seeds Packet,
+		Icon		=	TobaccoBagSeed,
+		Weight		=	0.1,
+		Tooltip     = 	Tooltip_LearnSow,
+		StaticModel = SeedPacket,
+		SurvivalGear = TRUE,
+		WorldStaticModel = TobaccoSeedBag_Ground,
+	}
+
+    item Tobacco
+    {
+		DisplayCategory = Food,
+        Type				=		Food,
+        DisplayName			=		Farm Tobacco,
+        Icon				=		Tobacco,
+        Weight				=		0.1,
+        HungerChange 		=		-5,
+        DaysFresh 			=		10,
+        DaysTotallyRotten 	=	 	13,
+		StressChange	    =	-5,
+        ThirstChange	=	2,
+        Carbohydrates = 1.31,
+        Proteins = 0.09,
+        Lipids = 0,
+        Calories = 5,
+		OnEat = OnEat_Tobacco,
+    }
+
+    item SeedBook
+    {
+		DisplayCategory = SkillBook,
+        Weight	=	0.8,
+        Type	=	Normal,
+        DisplayName	=	Seed Book,
+		Tooltip = Tooltip_SeedBook,
+        Icon	=	SeedBook,
+		StaticModel = SeedBook,
+		WorldStaticModel = SeedBookClosedGround,
+    }
+
+	item GrapeFruitSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	GrapeFruit Seeds,
+		Icon		=	GrapeFruitSeeds,
+		Weight		=	0.009,
+		Tooltip     = 	Tooltip_SpecialSeed,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item MangoSeed
+	{
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Mango Seeds,
+		Icon		=	MangoSeeds,
+		Weight		=	0.009,
+		Tooltip     = 	Tooltip_SpecialSeed,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	/**** Recipes ****/
+
+	recipe Open Packet of Tobacco Seeds
+	{
+		TobaccoBagSeed,
+  
+      	Result:TobaccoSeed=50,
+        Time:20.0,
+	  	Category:Farming,
+	}
+
+	recipe Put Tobacco Seeds in Packet
+	{
+        TobaccoSeed=50,
+
+        Result:TobaccoBagSeed,
+        Time:30.0,
+	  	Category:Farming,
+	}
+
+	recipe Open Packet of Bean Seeds
+	{
+		BeanBagSeed,
+  
+      	Result:BeanSeed=50,
+        Time:20.0,
+	  	Category:Farming,
+	}
+
+	recipe Put Bean Seeds in Packet
+	{
+        BeanSeed=50,
+
+        Result:BeanBagSeed,
+        Time:30.0,
+	  	Category:Farming,
+	}
+	
+	recipe Open Packet of Bellpepper Seeds
+	{
+		BellPepperBagSeed,
+  
+      	Result:BellPepperSeed=50,
+       	Time:20.0,
+	  	Category:Farming,
+	}
+    
+	recipe Put Bellpepper Seeds in Packet
+	{
+        BellPepperSeed=50,
+
+        Result:BellPepperBagSeed,
+        Time:30.0,
+	  	Category:Farming,
+	}
+
+	recipe Open Packet of Eggplant Seeds
+	{
+		EggplantBagSeed,
+
+      	Result:EggplantSeed=50,
+        Time:20.0,
+	  	Category:Farming,
+	}
+  
+	recipe Put Eggplant Seeds in Packet
+	{
+        EggplantSeed=50,
+
+        Result:EggplantBagSeed,
+        Time:30.0,
+	  	Category:Farming,
+	}
+
+	recipe Open Packet of Grape Seeds
+	{
+		GrapeBagSeed,
+  
+      	Result:GrapeSeed=50,
+        Time:20.0,
+	  	Category:Farming,
+	}
+
+	recipe Put Grape Seeds in Packet
+	{
+        GrapeSeed=50,
+
+        Result:GrapeBagSeed,
+       	Time:30.0,
+	  	Category:Farming,
+	}
+
+	recipe Open Packet of Leek Seeds
+	{
+		LeekBagSeed,
+
+      	Result:LeekSeed=50,
+        Time:20.0,
+	  	Category:Farming,
+	}
+ 
+	recipe Put Leek Seeds in Packet
+	{
+        LeekSeed=50,
+
+        Result:LeekBagSeed,
+        Time:30.0,
+	  	Category:Farming,
+	}
+
+	recipe Open Packet of Lettuce Seeds
+	{
+		LettuceBagSeed,
+  
+      	Result:LettuceSeed=50,
+        Time:20.0,
+	  	Category:Farming,
+	}
+    
+	recipe Put Lettuce Seeds in Packet
+	{
+        LettuceSeed=50,
+
+        Result:LettuceBagSeed,
+        Time:30.0,
+	  	Category:Farming,
+	}
+
+	recipe Open Packet of Onion Seeds
+	{
+		OnionBagSeed,
+  
+      	Result:OnionSeed=50,
+       	Time:20.0,
+	  	Category:Farming,
+	}
+   
+	recipe Put Onion Seeds in Packet
+	{
+        OnionSeed=50,
+
+        Result:OnionBagSeed,
+        Time:30.0,
+	  	Category:Farming,
+	}
+
+	recipe Open Packet of Pea Seeds
+	{
+		PeaBagSeed,
+  
+      	Result:PeaSeed=50,
+        Time:20.0,
+	  	Category:Farming,
+	}
+
+	recipe Put Pea Seeds in Packet
+	{
+        PeaSeed=50,
+
+        Result:PeaBagSeed,
+        Time:30.0,
+	  	Category:Farming,
+	}
+
+	recipe Open Packet of Peanut Seeds
+	{
+		PeanutBagSeed,
+  
+      	Result:PeanutSeed=50,
+        Time:20.0,
+	  	Category:Farming,
+	}
+   
+	recipe Put Peanut Seeds in Packet
+	{
+        PeanutSeed=50,
+
+        Result:PeanutBagSeed,
+        Time:30.0,
+	  	Category:Farming,
+	}
+
+	recipe Open Packet of Pumpkin Seeds
+	{
+		PumpkinBagSeed,
+
+      	Result:PumpkinSeed=50,
+        Time:20.0,
+	  	Category:Farming,
+	}
+ 
+	recipe Put Pumpkin Seeds in Packet
+	{
+        PumpkinSeed=50,
+
+        Result:PumpkinBagSeed,
+        Time:30.0,
+	  	Category:Farming,
+	}
+
+	recipe Open Packet of Watermelon Seeds
+	{
+		WatermelonBagSeed,
+      	Result:WatermelonSeed=50,
+ 	    Time:20.0,
+	  	Category:Farming,
+	}
+  
+	recipe Put Watermelon Seeds in Packet
+	{
+        WatermelonSeed=50,
+		
+        Result:WatermelonBagSeed,
+        Time:30.0,
+	  	Category:Farming,
+	}
+	
+	recipe Open Packet of Zucchini Seeds
+	{
+		ZucchiniBagSeed,
+  
+      	Result:ZucchiniSeed=50,
+        Time:20.0,
+	  	Category:Farming,
+	}
+ 
+	recipe Put Zucchini Seeds in Packet
+	{
+        ZucchiniSeed=50,
+
+        Result:ZucchiniBagSeed,
+        Time:30.0,
+	  	Category:Farming,
+	}
+
+	recipe Open Packet of Corn Seeds
+	{
+		CornBagSeed,
+  
+      	Result:CornSeed=50,
+        Time:20.0,
+	  	Category:Farming,
+	}
+ 
+	recipe Put Corn Seeds in Packet
+	{
+        CornSeed=50,
+
+        Result:CornBagSeed,
+        Time:30.0,
+	  	Category:Farming,
+	}
+
+	recipe Open Packet of Rice Seeds
+	{
+		RiceBagSeed,
+  
+      	Result:RiceSeed=50,
+        Time:20.0,
+	  	Category:Farming,
+	}
+ 
+	recipe Put Rice Seeds in Packet
+	{
+        RiceSeed=50,
+
+        Result:RiceBagSeed,
+        Time:30.0,
+	  	Category:Farming,
+	}
+
+	recipe Open Packet of Pineapple Seeds
+	{
+		PineappleBagSeed,
+  
+      	Result:PineappleSeed=50,
+        Time:20.0,
+	  	Category:Farming,
+	}
+ 
+	recipe Put Pineapple Seeds in Packet
+	{
+        PineappleSeed=50,
+
+        Result:PineappleBagSeed,
+        Time:30.0,
+	  	Category:Farming,
+	}
+
+	recipe Open Packet of Chili Seeds
+	{
+		ChiliBagSeed,
+  
+      	Result:ChiliSeed=50,
+        Time:20.0,
+	  	Category:Farming,
+	}
+ 
+	recipe Put Chili Seeds in Packet
+	{
+        ChiliSeed=50,
+
+        Result:ChiliBagSeed,
+        Time:30.0,
+	  	Category:Farming,
+	}
+
+	recipe Open Packet of Jalapeno Seeds
+	{
+		JalapenoBagSeed,
+  
+      	Result:JalapenoSeed=50,
+        Time:20.0,
+	  	Category:Farming,
+	}
+ 
+	recipe Put Jalapeno Seeds in Packet
+	{
+        JalapenoSeed=50,
+
+        Result:JalapenoBagSeed,
+        Time:30.0,
+	  	Category:Farming,
+	}
+
+	recipe Open Packet of Habanero Seeds
+	{
+		HabaneroBagSeed,
+  
+      	Result:HabaneroSeed=50,
+        Time:20.0,
+	  	Category:Farming,
+	}
+ 
+	recipe Put Habanero Seeds in Packet
+	{
+        HabaneroSeed=50,
+
+        Result:HabaneroBagSeed,
+        Time:30.0,
+	  	Category:Farming,
+	}
+
+	recipe Open Packet of Wheat Seeds
+	{
+		WheatBagSeed,
+  
+      	Result:WheatSeed=50,
+        Time:20.0,
+	  	Category:Farming,
+	}
+ 
+	recipe Put Wheat Seeds in Packet
+	{
+        WheatSeed=50,
+
+        Result:WheatBagSeed,
+        Time:30.0,
+	  	Category:Farming,
+	}
+
+	recipe Open Packet of Sugarcane Seeds
+	{
+		SugarcaneBagSeed,
+  
+      	Result:SugarcaneSeed=50,
+        Time:20.0,
+	  	Category:Farming,
+	}
+ 
+	recipe Put Sugarcane Seeds in Packet
+	{
+        SugarcaneSeed=50,
+
+        Result:SugarcaneBagSeed,
+        Time:30.0,
+	  	Category:Farming,
+	}
+
+	recipe Open Packet of Sunflower Seeds
+	{
+		SunFlowerBagSeed,
+  
+      	Result:SunFlowerSeed=50,
+        Time:20.0,
+	  	Category:Farming,
+	}
+ 
+	recipe Put Sunflower Seeds in Packet
+	{
+        SunFlowerSeed=50,
+
+        Result:SunFlowerBagSeed,
+        Time:30.0,
+	  	Category:Farming,
+	}
+
+	recipe Slice Pumpkin
+	{
+	   Pumpkin,
+	   keep KitchenKnife/ButterKnife/BreadKnife/HuntingKnife/MeatCleaver/FlintKnife/Machete,
+	   
+	   Result:PumpkinSliced=4,
+	   Sound:SliceMeat,
+	   Time:70.0,
+	   Category:Cooking,
+	}
+
+	recipe Smash Pumpkin
+	{
+	   Pumpkin,
+	   keep Hammer/HammerStone/Sledgehammer/Sledgehammer2/Log/Plank/BaseballBat/BaseballBatNails,
+	   
+	   Result:PumpkinSmashed=2,
+	   Sound:HeadSmash,
+	   Time:50.0,
+	   Category:Cooking,
+	}
+
+    recipe Slice Lemon
+    {
+        keep KitchenKnife/HuntingKnife,
+        NaturalLemon,
+
+        Result:Lemon,
+        Sound:SliceMeat,
+        Time:50.0,
+        Category:Cooking,
+        OnGiveXP:Give3CookingXP,
+    }
+
+    recipe Slice Lime
+    {
+        keep KitchenKnife/HuntingKnife,
+        NaturalLime/Lime,
+
+        Result:legourmet.Lime,
+        Sound:SliceMeat,
+        Time:50.0,
+        Category:Cooking,
+        OnGiveXP:Give3CookingXP,
+    }
+
+    recipe Slice Avocado
+    {
+        keep KitchenKnife/HuntingKnife,
+        NaturalAvocado,
+
+        Result:Avocado,
+        Sound:SliceMeat,
+        Time:50.0,
+        Category:Cooking,
+        OnGiveXP:Give3CookingXP,
+    }
+
+    recipe Make Aphids Cure
+	{	
+		keep Spoon,
+        farming.GardeningSprayEmpty,
+        Water=3,
+		BSodium=1,
+
+		Result:GardeningSprayAphids,
+		Time:40.0,
+		Category:Farming,
+		NeedToBeLearn:true,
+	}
+
+}

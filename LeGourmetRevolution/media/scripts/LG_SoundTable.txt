@@ -1,0 +1,560 @@
+module Base
+{
+
+	sound EasterEgg
+	{
+		category = World,
+		clip
+		{
+			file = media/sound/EasterEggDiscovered.ogg,
+			volume = 1.0,
+		}
+	}
+
+
+	sound shakebowl
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/shake.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound shaker
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/Shaker.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound sharpstone
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/Sharpenstone.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound sharpstone2
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/Sharpenstone2.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound hitslingshot
+	{
+		category = Object,
+		clip
+		{
+			file = media/sound/SlingshotHit.ogg,
+		}
+	}
+
+	sound shootslingshot
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/SlingshotShoot.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound waffles
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/wafflemachine.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound openfishingbox
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/FishingBoxOpen.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound closefishingbox
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/FishingBoxClose.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound putinfishingbox
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/FishingBoxPutIn.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound openwine
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/Corkscrew.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound emincer
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/EMincer.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound mmincer
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/MMincer.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound browselurebox
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/FishingLureBrowse.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound openlurebox
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/FishingLureOpen.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound openhiddenbox
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/HiddenboxOpen.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound woodgrip
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/woodengrip.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound deadbear
+	{
+		category = Object,
+		clip
+		{
+			file = media/sound/BearDead.ogg,
+		}
+	}
+
+	sound deadbee
+	{
+		category = Object,
+		clip
+		{
+			file = media/sound/BeeDead.ogg,
+		}
+	}
+
+	sound deadsheep
+	{
+		category = Object,
+		clip
+		{
+			file = media/sound/SheepDead.ogg,
+		}
+	}
+
+	sound deadbird
+	{
+		category = Object,
+		clip
+		{
+			file = media/sound/BirdDead.ogg,
+		}
+	}
+
+	sound deadbird2
+	{
+		category = Object,
+		clip
+		{
+			file = media/sound/BirdDead2.ogg,
+		}
+	}
+
+	sound deadbison
+	{
+		category = Object,
+		clip
+		{
+			file = media/sound/BisonDead.ogg,
+		}
+	}
+
+	sound deadboar
+	{
+		category = Object,
+		clip
+		{
+			file = media/sound/BoarDead.ogg,
+		}
+	}
+
+	sound deadchicken
+	{
+		category = Object,
+		clip
+		{
+			file = media/sound/ChickenDead.ogg,
+		}
+	}
+
+	sound deadcow
+	{
+		category = Object,
+		clip
+		{
+			file = media/sound/CowDead.ogg,
+		}
+	}
+
+	sound deadcrow
+	{
+		category = Object,
+		clip
+		{
+			file = media/sound/CrowDead.ogg,
+		}
+	}
+
+	sound deaddeer
+	{
+		category = Object,
+		clip
+		{
+			file = media/sound/DeerDead.ogg,
+		}
+	}
+
+	sound deadmoose
+	{
+		category = Object,
+		clip
+		{
+			file = media/sound/MooseDead.ogg,
+		}
+	}
+
+	sound deadmouse
+	{
+		category = Object,
+		clip
+		{
+			file = media/sound/MouseDead.ogg,
+		}
+	}
+
+	sound deadrat
+	{
+		category = Object,
+		clip
+		{
+			file = media/sound/RatDead.ogg,
+		}
+	}
+
+	sound deadsquirrel
+	{
+		category = Object,
+		clip
+		{
+			file = media/sound/SquirrelDead.ogg,
+		}
+	}
+
+	sound ShootBow
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/BowShoot.ogg,
+		}
+	}
+
+	sound StretchBow
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/BowStretch.ogg,
+		}
+	}
+
+	sound ArrowTake
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/TakeArrow.ogg,
+		}
+	}
+
+	sound ArrowPut
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/PutArrow.ogg,
+		}
+	}
+
+	sound ImpactArrow
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/ArrowImpact.ogg,
+		}
+	}
+	
+	sound ShootArrow
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/Arrow_Shoot.ogg,
+		}
+	}
+
+	sound BowCrack
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/CrackBow.ogg,
+		}
+	}
+
+	sound CrossbowReload
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/Crossbow_Reload.ogg,
+		}
+	}
+
+	sound CrossbowShoot
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/Crossbow_Shoot.ogg,
+		}
+	}
+
+	sound CrossbowLoadBolt
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/Load_Bolt.ogg,
+		}
+	}
+
+	sound BrokenBottle
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/Broken_Bottle.ogg,
+		}
+	}
+
+	sound TrapBearDie
+	{
+		category = Object,
+		clip
+		{
+			file = media/sound/TrapBearDead.ogg,
+		}
+	}
+	sound TrapBoarDie
+	{
+		category = Object,
+		clip
+		{
+			file = media/sound/TrapBoarDead.ogg,
+		}
+	}
+	sound TrapCowDie
+	{
+		category = Object,
+		clip
+		{
+			file = media/sound/TrapCowDead.ogg,
+		}
+	}
+	sound FishingSnapping
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/Fishing_Snap.ogg,
+			volume = 1.0,
+		}
+	}
+	sound FishingReel
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/Fishing_reel.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound SlapMeat
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/MeatHammerSlap.ogg,
+		}
+	}
+
+	sound GrindCoffee
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/CoffeeGrinder.ogg,
+		}
+	}
+
+	sound AcidCl
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/AcidBurn.ogg,
+		}
+	}
+	sound FillAcidC
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/AcidFill.ogg,
+		}
+	}
+
+	sound SpottedDeer
+	{
+		category = World,
+		clip
+		{
+			file = media/sound/DeerSpotted.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound DeerCall1
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/CDeer1.ogg,
+		}
+	}
+
+	sound DeerCall2
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/CDeer2.ogg,
+		}
+	}
+
+	sound DeerCall3
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/CDeer3.ogg,
+		}
+	}
+
+	sound Mining
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/PickaxeMining.ogg,
+		}
+	}
+	
+	sound FillMate
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/MateFill.ogg,
+		}
+	}
+
+	sound DrinkMate
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/MateDrink.ogg,
+		}
+	}
+}
+

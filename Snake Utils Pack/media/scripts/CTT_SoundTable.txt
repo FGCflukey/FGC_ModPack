@@ -1,0 +1,112 @@
+module Base
+{
+	sound AM_BrokenSilencer
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/BrokenSilencer.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound Blowtorch
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/Blowtorch2.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound casedrop1
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/CaseDrop1.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound casedrop2
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/CaseDrop2.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound casedrop3
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/CaseDrop3.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound casedrop4
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/CaseDrop4.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound casedrop5
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/CaseDrop5.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound Screwdriveraction
+	{
+		category = Object,
+		clip
+		{
+			file = media/sound/ScrewdriverAction.ogg,
+		}
+	}
+
+	sound pageflip
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/Fishingpageflip.ogg,
+			volume = 1.0,
+		}
+	}
+	
+	sound detectorbeeping
+	{
+		category = Item,
+		clip
+		{
+			file = media/sound/MetalDetectorBeep.ogg,
+			volume = 1.0,
+		}
+	}
+
+	sound xfiles
+	{
+		category = Music,
+		clip
+		{
+			file = media/sound/xfile.ogg,
+			volume = 1.0,
+		}
+	}
+}
+

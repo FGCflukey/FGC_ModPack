@@ -1,0 +1,13 @@
+IGUI_RU = {
+
+	IGUI_ScavengeUI_Metals = "Металлы",
+	IGUI_ScavengeUI_Seeds = "Семена",
+	IGUI_ScavengeUI_Dyes = "Красители",
+	IGUI_ScavengeUI_Mining = "Ископаемые",
+	IGUI_TraitInfoNeg = "(Негативное)",
+	IGUI_TraitInfoPos = "(Позитивное)",
+	IGUI_TraitInfoProf = "(Привязано к профессии)",
+	IGUI_CustomSkillCursorTitle = "Пользовательский набор навыков",
+	IGUI_CustomSkillCursorDesc = "Активирует пользовательский значок на панели навыков. \nПри повышении уровня только поле последнего навыка будет загораться анимированным курсором.",
+	IGUI_NeedPickaxe = "Мне нужно экипировать кирку, чтобы получить этот ресурс.",
+}

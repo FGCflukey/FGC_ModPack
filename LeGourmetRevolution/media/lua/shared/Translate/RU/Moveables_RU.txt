@@ -1,0 +1,10 @@
+Moveables_RU = {	
+	Mounted_Cow_Trophy = "Настенный трофей коровы",
+	Mounted_Bear_Trophy = "Настенный трофей медведя",
+	Mounted_Boar_Trophy = "Настенный трофей кабана",
+	Mounted_Bison_Trophy = "Настенный трофей бизона",
+	Mounted_Moose_Trophy = "Настенный трофей лося",
+	Ball_Wilson = "«Уилсон»",
+	Animal_Cow_Rug = "Коврик из коровы",
+	Animal_Deer_Rug = "Коврик из оленя",
+}

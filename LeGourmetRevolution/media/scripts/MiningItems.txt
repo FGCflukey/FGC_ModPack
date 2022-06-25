@@ -1,0 +1,120 @@
+module Mining
+{
+    imports
+    {
+        Base
+
+    }
+
+    item StonePickaxe
+    {
+        MaxRange	=	1.4,
+        WeaponSprite	=	StonePickaxe,
+        MinAngle	=	0.65,
+        Type	=	Weapon,
+        MinimumSwingTime	=	3.0,
+        KnockBackOnNoDeath	=	TRUE,
+        SwingAmountBeforeImpact	=	0.002,
+        Categories	=	Axe,
+        ConditionLowerChanceOneIn	=	10,
+        Weight	=	2.5,
+        SplatNumber	=	3,
+        PushBackMod	=	0.3,
+        SubCategory	=	Swinging,
+        ConditionMax	=	13,
+        MaxHitCount	=	2,
+        DoorDamage	=	30,
+        IdleAnim	=	Idle_Weapon2,
+        SwingAnim	=	Bat,
+        DisplayName	=	Stone PickAxe,
+        MinRange	=	0.61,
+        SwingTime	=	3.0,
+        HitAngleMod	=	-30,
+        SplatSize	=	5,
+        KnockdownMod	=	2,
+        SplatBloodOnNoDeath	=	TRUE,
+        Icon	=	StonePickaxe,
+        RunAnim	=	Run_Weapon2,
+        TwoHandWeapon = TRUE,
+        BreakSound  =   BreakWoodItem,
+        TreeDamage  =   30,
+        CriticalChance	=	10,
+        CritDmgMultiplier = 5,
+        MinDamage	=	0.8,
+        MaxDamage	=	1.6,
+        BaseSpeed = 0.8,
+        DamageCategory = Slash,
+        DamageMakeHole = TRUE,
+        AttachmentType = BigBlade,
+        Tags = DigPlow,
+    }
+
+    item MiningMag1
+    {
+		DisplayCategory = SkillBook,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	The Mining Magazine,
+        Icon	=	MiningMag1,
+        TeachedRecipes  =   Make Bag of Plaster Powder;Make GunPowder,
+        ReplaceOnUse    =   MiningMag1,
+        StaticModel = LGMiningMag1,
+		WorldStaticModel = LGMiningMag1_Ground,
+    }
+
+	item Gypsum1
+	{
+		DisplayCategory = Material,
+		Weight	=	0.5,
+		Type	=	Normal,
+		DisplayName	=	Gypsum Stone,
+		Icon	=	Gypsum1,
+		Tooltip = Tooltip_Gypsum,
+	}
+
+	item SulfurStone
+	{
+		DisplayCategory = Material,
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Sulfur Stone,
+		Icon	=	SulfurStone,
+		Tooltip = Tooltip_MakeGunPowder,
+	}
+
+	item PotassiumNitrate
+	{
+		DisplayCategory = Material,
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Potassium Nitrate,
+		Icon	=	potassiumnitrate,
+		Tooltip = Tooltip_MakeGunPowder,
+	}
+
+	recipe Make Bag of Plaster Powder
+	{
+	    Mining.Gypsum1=5,
+		keep ClubHammer,  
+
+	    Result:PlasterPowder,
+	    OnGiveXP:Recipe.OnGiveXP.None,
+	    Time:250.0,
+		NeedToBeLearn:true,
+	    Category:Survivalist,
+	}
+
+	recipe Make GunPowder
+	{
+	    Mining.PotassiumNitrate=3,
+		Mining.SulfurStone=1,
+		Charcoal=1,
+		keep ClubHammer,  
+
+	    Result:GunPowder=10,
+	    OnGiveXP:Recipe.OnGiveXP.None,
+	    Time:250.0,
+		NeedToBeLearn:true,
+	    Category:Survivalist,
+	}
+}

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileGuidTable>
+	<files>
+		<path>media/clothing/clothingItems/Bag_FishingBox_RHand.xml</path>
+		<guid>bc23ca45-d327-41e0-8247-cf57c4afboxs</guid>
+	</files>
+	<files>
+		<path>media/clothing/clothingItems/Bag_FishingBox_LHand.xml</path>
+		<guid>cb012b4b-1f71-4a3d-b038-47e8a48fboxs</guid>
+	</files>
+	<files>
+		<path>media/clothing/clothingItems/Bag_FishingBoxBig_RHand.xml</path>
+		<guid>bc23ca45-d327-41e0-8247-cf57c4afboxb</guid>
+	</files>
+	<files>
+		<path>media/clothing/clothingItems/Bag_FishingBoxBig_LHand.xml</path>
+		<guid>cb012b4b-1f71-4a3d-b038-47e8a48fboxb</guid>
+	</files>
+	<files>
+		<path>media/clothing/clothingItems/Bag_FishingBoxMedium_RHand.xml</path>
+		<guid>bc23ca45-d327-41e0-8247-cf57c4afboxm</guid>
+	</files>
+	<files>
+		<path>media/clothing/clothingItems/Bag_FishingBoxMedium_LHand.xml</path>
+		<guid>cb012b4b-1f71-4a3d-b038-47e8a48fboxm</guid>
+	</files>
+</fileGuidTable>

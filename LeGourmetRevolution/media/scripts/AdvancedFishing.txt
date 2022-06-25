@@ -1,0 +1,3755 @@
+module AdvancedFishing
+{
+
+    imports
+    {
+        Base
+
+    }
+
+    item WoodenFishingNet
+    {
+        DisplayCategory = Fishing,
+        Type = Normal,
+        DisplayName = Wooden Fishing Net Trap,
+        Icon = WoodenFishTrap,
+        Weight = 2.5,
+        SurvivalGear = TRUE,
+		WorldStaticModel = WoodenFishingNet,
+    }
+
+    /************** Algas **************/
+
+    item Algae
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-2,
+		ThirstChange	=	-2,
+		Weight	=	0.2,
+		Type	=	Food,
+		DisplayName	=	Algae,
+		IsCookable	        =	    FALSE,
+		Icon	=	Algae,
+		EvolvedRecipe = Sandwich:1;Burger:1;Salad:1;RicePot:1;RicePan:1;PastaPot:1;PastaPan:1,
+		FoodType    =   Vegetables,
+		EvolvedRecipeName = Algae,
+        DaysTotallyRotten	=	4,
+        DaysFresh	=	2,
+		StaticModel = Algae_a,
+		WorldStaticModel = Algae_a,
+	}
+
+    item Algae2
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-2,
+		ThirstChange	=	-2,
+		Weight	=	0.2,
+		Type	=	Food,
+		DisplayName	=	Algae,
+		IsCookable	        =	    FALSE,
+		Icon	=	Algaeb,
+		EvolvedRecipe = Sandwich:1;Burger:1;Salad:1;RicePot:1;RicePan:1;PastaPot:1;PastaPan:1,
+		FoodType    =   Vegetables,
+		EvolvedRecipeName = Algae,
+        DaysTotallyRotten	=	4,
+        DaysFresh	=	2,
+		StaticModel = Algae_b,
+		WorldStaticModel = Algae_b,
+	}
+
+    /************** Contenedores **************/
+	
+	item LeadFishingbox
+	{
+		DisplayCategory = Material,
+		Weight	=	1,
+		Type	=	Normal,
+		DisplayName	=	Lead fishing box,
+		Icon	=	FishingLeadBox,
+		Tooltip = Tooltip_LeadFishingbox,
+		MetalValue = 5,
+	}
+
+	item LeadFishingbox2
+	{
+		DisplayCategory = Material,
+		Weight	=	1,
+		Type	=	Normal,
+		DisplayName	=	Lead fishing box,
+		Icon	=	FishingLeadBox2,
+		Tooltip = Tooltip_LeadFishingbox,
+		MetalValue = 5,
+	}
+
+	item LeadFishingbox3
+	{
+		DisplayCategory = Material,
+		Weight	=	1,
+		Type	=	Normal,
+		DisplayName	=	Lead fishing box,
+		Icon	=	FishingLeadBox3,
+		Tooltip = Tooltip_LeadFishingbox,
+		MetalValue = 5,
+	}
+
+	item LeadFishingbox4
+	{
+		DisplayCategory = Material,
+		Weight	=	1,
+		Type	=	Normal,
+		DisplayName	=	Lead fishing box,
+		Icon	=	FishingLeadBox4,
+		Tooltip = Tooltip_LeadFishingbox,
+		MetalValue = 5,
+	}
+
+	item LeadFishingbox5
+	{
+		DisplayCategory = Material,
+		Weight	=	1,
+		Type	=	Normal,
+		DisplayName	=	Lead fishing box,
+		Icon	=	FishingLeadBox5,
+		Tooltip = Tooltip_LeadFishingbox,
+		MetalValue = 5,
+	}
+
+	item Fishinglurebox
+	{
+		DisplayCategory = Material,
+		Weight	=	1,
+		Type	=	Normal,
+		DisplayName	=	Fishing lure box,
+		Icon	=	FishingLureBox,
+		Tooltip = Tooltip_Fishinglurebox,
+		WorldStaticModel = Fishinglurebox_Ground,
+		MetalValue = 1,
+	}
+
+	item HiddenBox
+	{
+		DisplayCategory = Material,
+		Weight	=	1,
+		Type	=	Normal,
+		DisplayName	=	Hidden box,
+		Icon	=	HiddenBox,
+		Tooltip = Tooltip_HiddenBox,
+		MetalValue = 1,
+		WorldStaticModel = HiddenBox_Ground,
+	}
+
+	item FishingBox
+	{
+		DisplayCategory = Container,
+		WeightReduction	=	50,
+		Weight			=	1,
+		Type			=	Container,
+		Capacity		=	8,
+		DisplayName		=	Fishing tackle box,
+		Icon			=	FishingTackleBox,
+        OpenSound   	=   openfishingbox,
+        CloseSound   	=   closefishingbox,
+        PutInSound   	=   putinfishingbox,
+		ReplaceInSecondHand = Bag_FishingBox_LHand holdingbagleft,
+        ReplaceInPrimaryHand = Bag_FishingBox_RHand holdingbagright,
+        WorldStaticModel = FishingBoxS_Ground,
+	}
+	
+	item FishingBox2
+	{
+		DisplayCategory = Container,
+		WeightReduction	=	60,
+		Weight			=	1.5,
+		Type			=	Container,
+		Capacity		=	8,
+		DisplayName		=	Fishing tackle box2,
+		Icon			=	FishingTackleBox2,
+        OpenSound   	=   openfishingbox,
+        CloseSound   	=   closefishingbox,
+        PutInSound   	=   putinfishingbox,
+		ReplaceInSecondHand = Bag_FishingBoxMedium_LHand holdingbagleft,
+        ReplaceInPrimaryHand = Bag_FishingBoxMedium_RHand holdingbagright,
+        WorldStaticModel = FishingBoxM_Ground,
+	}
+
+	item FishingBox3
+	{
+		DisplayCategory = Container,
+		WeightReduction	=	70,
+		Weight			=	2,
+		Type			=	Container,
+		Capacity		=	8,
+		DisplayName		=	Fishing tackle box3,
+		Icon			=	FishingTackleBox3,
+        OpenSound   	=   openfishingbox,
+        CloseSound   	=   closefishingbox,
+        PutInSound   	=   putinfishingbox,
+		ReplaceInSecondHand = Bag_FishingBoxBig_LHand holdingbagleft,
+        ReplaceInPrimaryHand = Bag_FishingBoxBig_RHand holdingbagright,
+        WorldStaticModel = FishingBoxB_Ground,
+	}
+	
+    /************** Peces **************/
+
+    item Dorado
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-15,
+    	UnhappyChange		=	-3,
+    	Weight				=	0.4,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+        MinutesToCook		=	60,
+    	MinutesToBurn		=	90,
+    	DangerousUncooked	=	TRUE,
+    	DisplayName			=	Dorado,
+    	Icon				=	FishDorado,
+    	DaysFresh			=	5,
+    	DaysTotallyRotten	=	8,
+    	Tooltip             =   Tooltip_Dorado,
+        Carbohydrates = 0,
+        Proteins = 28.19,
+        Lipids = 3.7,
+        Calories = 174,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+		WorldStaticModel = FishDorado,
+    }
+
+    item Arowana
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-15,
+    	UnhappyChange		=	-5,
+    	Weight				=	0.2,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+        MinutesToCook		=	60,
+    	MinutesToBurn		=	90,
+    	DangerousUncooked	=	TRUE,
+    	DisplayName			=	Arowana,
+    	Icon				=	FishArowana,
+    	DaysFresh			=	5,
+    	DaysTotallyRotten	=	8,
+    	Tooltip             =   Tooltip_Arowana,
+        Carbohydrates = 0,
+        Proteins = 28.19,
+        Lipids = 3.7,
+        Calories = 174,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item Tucunare
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-15,
+    	UnhappyChange		=	-4,
+    	Weight				=	0.4,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+        MinutesToCook		=	60,
+    	MinutesToBurn		=	90,
+    	DangerousUncooked	=	TRUE,
+    	DisplayName			=	Tucunare,
+    	Icon				=	FishTucu,
+    	DaysFresh			=	5,
+    	DaysTotallyRotten	=	8,
+    	Tooltip             =   Tooltip_Tucunare,
+        Carbohydrates = 0,
+        Proteins = 28.19,
+        Lipids = 3.7,
+        Calories = 174,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item Pacu
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-15,
+    	UnhappyChange		=	-3,
+    	Weight				=	0.4,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+        MinutesToCook		=	60,
+    	MinutesToBurn		=	90,
+    	DangerousUncooked	=	TRUE,
+    	DisplayName			=	Pacu,
+    	Icon				=	FishPacu,
+    	DaysFresh			=	5,
+    	DaysTotallyRotten	=	8,
+    	Tooltip             =   Tooltip_Pacu,
+        Carbohydrates = 0,
+        Proteins = 25.1,
+        Lipids = 3.5,
+        Calories = 200,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+		WorldStaticModel = FishPacu,
+    }
+
+    item Tararira
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-15,
+    	UnhappyChange		=	-3,
+    	Weight				=	0.4,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+        MinutesToCook		=	60,
+    	MinutesToBurn		=	90,
+    	DangerousUncooked	=	TRUE,
+    	DisplayName			=	Tararira,
+    	Icon				=	FishTara,
+    	DaysFresh			=	5,
+    	DaysTotallyRotten	=	8,
+    	Tooltip             =   Tooltip_Tararira,
+        Carbohydrates = 0,
+        Proteins = 28.19,
+        Lipids = 3.7,
+        Calories = 174,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+		WorldStaticModel = Tararira,
+    }
+
+    item Walleye
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-10,
+    	UnhappyChange		=	-3,
+    	Weight				=	0.3,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+        MinutesToCook		=	60,
+    	MinutesToBurn		=	90,
+    	DangerousUncooked	=	TRUE,
+    	DisplayName			=	Walleye,
+    	Icon				=	FishWalleye,
+    	DaysFresh			=	4,
+    	DaysTotallyRotten	=	6,
+    	Tooltip             =   Tooltip_Walleye,
+        Carbohydrates = 0,
+        Proteins = 28.19,
+        Lipids = 3.7,
+        Calories = 174,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item Piranha
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-2,
+    	UnhappyChange		=	15,
+    	Weight				=	0.1,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+        MinutesToCook		=	30,
+    	MinutesToBurn		=	60,
+    	DisplayName			=	Piranha,
+    	DangerousUncooked	=	TRUE,
+    	Icon				=	FishRedpiranha,
+    	DaysFresh			=	3,
+    	DaysTotallyRotten	=	6,
+    	Tooltip             =   Tooltip_Piranha,
+        Carbohydrates = 0,
+        Proteins = 14.2,
+        Lipids = 1.0,
+        Calories = 50,
+		ScaleWorldIcon 	=   0.8,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+		WorldStaticModel = FishPiranha,
+    }
+
+    item Palometa
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-2,
+    	UnhappyChange		=	15,
+    	Weight				=	0.1,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+    	DangerousUncooked	=	TRUE,
+        MinutesToCook		=	30,
+    	MinutesToBurn		=	60,
+    	DisplayName			=	Palometa,
+    	Icon				=	FishPiranha,
+    	DaysFresh			=	3,
+    	DaysTotallyRotten	=	6,
+    	Tooltip             =   Tooltip_Piranha,
+        Carbohydrates = 0,
+        Proteins = 14.2,
+        Lipids = 1.0,
+        Calories = 50,
+		ScaleWorldIcon 	=   0.8,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+		WorldStaticModel = FishPalometa,
+    }
+
+    item Dentudo
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-5,
+    	UnhappyChange		=	15,
+    	Weight				=	0.1,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+    	DangerousUncooked	=	TRUE,
+        MinutesToCook		=	30,
+    	MinutesToBurn		=	60,
+    	DisplayName			=	Dentudo,
+    	Icon				=	FishDentudo,
+    	DaysFresh			=	3,
+    	DaysTotallyRotten	=	6,
+    	Tooltip             =   Tooltip_Dentudo,
+        Carbohydrates = 0,
+        Proteins = 15.0,
+        Lipids = 1.0,
+        Calories = 20,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item Payara
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-8,
+    	UnhappyChange		=	5,
+    	Weight				=	0.3,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+    	DangerousUncooked	=	TRUE,
+        MinutesToCook		=	60,
+    	MinutesToBurn		=	90,
+    	DisplayName			=	Payara,
+    	Icon				=	FishPayara,
+    	DaysFresh			=	4,
+    	DaysTotallyRotten	=	6,
+    	Tooltip             =   Tooltip_Payara,
+        Carbohydrates = 0,
+        Proteins = 25,
+        Lipids = 4,
+        Calories = 100,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item Carp
+    {
+		DisplayCategory = Food,
+        Type				=			Food,
+        DisplayName			=		    Carp,
+        Icon				=			FishCarp,
+		DangerousUncooked	=	        TRUE,
+        Weight				=			0.4,
+        HungerChange 		=		    -20,
+        DaysFresh 			=		    6,
+        DaysTotallyRotten 	=	 	    10,
+        IsCookable	        =	        true,
+        MinutesToBurn	    =	        60,
+        MinutesToCook	    =	        20,
+        Carbohydrates = 0,
+        Proteins = 38.25,
+        Lipids = 1.42,
+        Calories = 210,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item Peje
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-15,
+    	UnhappyChange		=	-1,
+    	Weight				=	0.1,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+    	DangerousUncooked	=	TRUE,
+        MinutesToCook		=	30,
+    	MinutesToBurn		=	60,
+    	DisplayName			=	Pejerrey,
+    	Icon				=	FishPeje,
+    	DaysFresh			=	4,
+    	DaysTotallyRotten	=	7,
+    	Tooltip             =   Tooltip_Pejerrey,
+        Carbohydrates = 0,
+        Proteins = 15.0,
+        Lipids = 1.0,
+        Calories = 20,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item RainbowTrout
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-20,
+    	UnhappyChange		=	-5,
+    	Weight				=	0.4,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+        MinutesToCook		=	60,
+    	MinutesToBurn		=	90,
+    	DangerousUncooked	=	TRUE,
+    	DisplayName			=	Rainbow trout,
+    	Icon				=	FishRainbowtrout,
+    	DaysFresh			=	5,
+    	DaysTotallyRotten	=	8,
+    	Tooltip             =   Tooltip_Rainbowtrout,
+        Carbohydrates = 0,
+        Proteins = 28.19,
+        Lipids = 3.7,
+        Calories = 174,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item FSalmon
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-25,
+    	UnhappyChange		=	-5,
+    	Weight				=	0.4,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+        MinutesToCook		=	60,
+    	MinutesToBurn		=	90,
+    	DangerousUncooked	=	TRUE,
+    	DisplayName			=	Salmon,
+    	Icon				=	FishSalmon,
+    	DaysFresh			=	6,
+    	DaysTotallyRotten	=	9,
+    	Tooltip             =   Tooltip_Salmon,
+        Carbohydrates = 0,
+        Proteins = 30.19,
+        Lipids = 4.7,
+        Calories = 134,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item Snakehead
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-25,
+    	UnhappyChange		=	-5,
+    	Weight				=	0.4,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+        MinutesToCook		=	60,
+    	MinutesToBurn		=	90,
+    	DangerousUncooked	=	TRUE,
+    	DisplayName			=	Giant Snakehead,
+    	Icon				=	FishSnakehead,
+    	DaysFresh			=	6,
+    	DaysTotallyRotten	=	9,
+    	Tooltip             =   Tooltip_GSnakehead,
+        Carbohydrates = 0,
+        Proteins = 30.19,
+        Lipids = 4.7,
+        Calories = 134,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item Crab
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-2,
+    	UnhappyChange		=	5,
+    	Weight				=	0.1,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+    	DangerousUncooked	=	TRUE,
+        MinutesToCook		=	30,
+    	MinutesToBurn		=	60,
+    	DisplayName			=	Crab,
+    	Icon				=	FishCrab,
+    	DaysFresh			=	3,
+    	DaysTotallyRotten	=	6,
+    	Tooltip             =   Tooltip_Crab,
+        Carbohydrates = 0,
+        Proteins = 14.2,
+        Lipids = 1.0,
+        Calories = 50,
+		ScaleWorldIcon 	=   0.8,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+		EvolvedRecipe 		=	Stir fry Griddle Pan:1;Soup:1;Stew:1,
+		FoodType    		=	Meat,
+		WorldStaticModel = RiverCrab,
+    }
+
+    item Rtcatfish
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-25,
+    	UnhappyChange		=	-5,
+    	Weight				=	1,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+        MinutesToCook		=	60,
+    	MinutesToBurn		=	90,
+    	DangerousUncooked	=	TRUE,
+    	DisplayName			=	Red tail catfish,
+    	Icon				=	FishRtcatfish,
+    	DaysFresh			=	6,
+    	DaysTotallyRotten	=	9,
+    	Tooltip             =   Tooltip_Rtcatfish,
+        Carbohydrates = 0,
+        Proteins = 30.19,
+        Lipids = 4.7,
+        Calories = 134,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item Piraiba
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-30,
+    	UnhappyChange		=	-5,
+    	Weight				=	1,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+        MinutesToCook		=	60,
+    	MinutesToBurn		=	90,
+    	DangerousUncooked	=	TRUE,
+    	DisplayName			=	Piraiba,
+    	Icon				=	FishPiraiba,
+    	DaysFresh			=	6,
+    	DaysTotallyRotten	=	9,
+    	Tooltip             =   Tooltip_Piraiba,
+        Carbohydrates = 0,
+        Proteins = 28.22,
+        Lipids = 4.7,
+        Calories = 150,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item Arapaima
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-30,
+    	UnhappyChange		=	-15,
+    	Weight				=	1,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+        MinutesToCook		=	60,
+    	MinutesToBurn		=	90,
+    	DangerousUncooked	=	TRUE,
+    	DisplayName			=	Arapaima,
+    	Icon				=	FishArapaima,
+    	DaysFresh			=	6,
+    	DaysTotallyRotten	=	9,
+    	Tooltip             =   Tooltip_Arapaima,
+        Carbohydrates = 0,
+        Proteins = 28.22,
+        Lipids = 4.7,
+        Calories = 150,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+		WorldStaticModel = Arapaima,
+    }
+
+    item Tarpon
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-40,
+    	UnhappyChange		=	-5,
+    	Weight				=	1,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+        MinutesToCook		=	60,
+    	MinutesToBurn		=	90,
+    	DangerousUncooked	=	TRUE,
+    	DisplayName			=	Tarpon,
+    	Icon				=	FishTarpon,
+    	DaysFresh			=	6,
+    	DaysTotallyRotten	=	9,
+    	Tooltip             =   Tooltip_Tarpon,
+        Carbohydrates = 0,
+        Proteins = 28.22,
+        Lipids = 4.7,
+        Calories = 150,
+		ScaleWorldIcon 	=   2.0,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item Surubi
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-18,
+    	UnhappyChange		=	1,
+    	Weight				=	0.3,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+        MinutesToCook		=	60,
+    	MinutesToBurn		=	90,
+    	DangerousUncooked	=	TRUE,
+    	DisplayName			=	Surubi,
+    	Icon				=	FishSuru,
+    	DaysFresh			=	6,
+    	DaysTotallyRotten	=	9,
+    	Tooltip             =   Tooltip_Surubi,
+        Carbohydrates = 0,
+        Proteins = 18.4,
+        Lipids = 4.7,
+        Calories = 90,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+		WorldStaticModel = FishSurubi,
+    }
+
+    item Pati
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-10,
+    	UnhappyChange		=	1,
+    	Weight				=	0.3,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+        MinutesToCook		=	60,
+    	MinutesToBurn		=	90,
+    	DangerousUncooked	=	TRUE,
+    	DisplayName			=	Pati,
+    	Icon				=	FishPati,
+    	DaysFresh			=	5,
+    	DaysTotallyRotten	=	7,
+    	Tooltip             =   Tooltip_Pati,
+        Carbohydrates = 0,
+        Proteins = 18.4,
+        Lipids = 4.7,
+        Calories = 90,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+		WorldStaticModel = FishPati,
+    }
+
+    item Anguila
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-3,
+    	UnhappyChange		=	5,
+    	Weight				=	0.3,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+        MinutesToCook		=	60,
+    	MinutesToBurn		=	90,
+    	DangerousUncooked	=	TRUE,
+    	DisplayName			=	Anguila,
+    	Icon				=	FishAnguila,
+    	DaysFresh			=	4,
+    	DaysTotallyRotten	=	6,
+		FishingLure  =  true,
+    	Tooltip             =   Tooltip_Anguila,
+        Carbohydrates = 0,
+        Proteins = 6.5,
+        Lipids = 2.3,
+        Calories = 40,
+		ScaleWorldIcon 	=   0.8,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+		WorldStaticModel = FishAnguila,
+    }
+
+    item Waterturtle
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-5,
+    	UnhappyChange		=	-2,
+    	Weight				=	0.1,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+    	DangerousUncooked	=	TRUE,
+        MinutesToCook		=	30,
+    	MinutesToBurn		=	60,
+    	DisplayName			=	Water Turtle,
+    	Icon				=	FishTurtle,
+    	DaysFresh			=	3,
+    	DaysTotallyRotten	=	6,
+    	Tooltip             =   Tooltip_Wturtle,
+        Carbohydrates = 0,
+        Proteins = 14.2,
+        Lipids = 1.0,
+        Calories = 100,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+    item Ray
+    {
+		DisplayCategory = Food,
+        HungerChange		=	-40,
+    	UnhappyChange		=	-3,
+    	Weight				=	1,
+    	Type				=	Food,
+    	IsCookable			=	TRUE,
+        MinutesToCook		=	60,
+    	MinutesToBurn		=	90,
+    	DangerousUncooked	=	TRUE,
+    	DisplayName			=	Ray,
+    	Icon				=	FishRay,
+    	DaysFresh			=	6,
+    	DaysTotallyRotten	=	9,
+    	Tooltip             =   Tooltip_Ray,
+        Carbohydrates = 0,
+        Proteins = 38.22,
+        Lipids = 5.7,
+        Calories = 200,
+		ScaleWorldIcon 	=   1.5,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+		WorldStaticModel = RiverRay,
+    }
+
+    /************** Filetes **************/
+
+	item SuruFillet
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-30,
+		Weight	=	0.3,
+		Type	=	Food,
+		IsCookable	=	TRUE,
+		DangerousUncooked	=	TRUE,
+		DaysTotallyRotten	=	5,
+		MinutesToBurn	=	120,
+		DisplayName	=	Surubi fillet,
+		Icon	=	FishSurufillet,
+		DaysFresh	=	3,
+		MinutesToCook	=	90,
+		EvolvedRecipe = Stir fry Griddle Pan:15;Soup:15;Stew:15;Sandwich:5|Cooked;Salad:10|Cooked;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+		FoodType    =   Fish,
+        Carbohydrates = 0,
+        Proteins = 34.28,
+        Lipids = 10.55,
+        Calories = 270,
+		RemoveNegativeEffectOnCooked    =   TRUE,
+        Packaged = FALSE,
+        BadInMicrowave = true,
+        GoodHot = true,
+	}
+
+	item RayFillet
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-30,
+		Weight	=	0.3,
+		Type	=	Food,
+		IsCookable	=	TRUE,
+		DangerousUncooked	=	TRUE,
+		DaysTotallyRotten	=	5,
+		MinutesToBurn	=	120,
+		DisplayName	=	Ray fillet,
+		Icon	=	FishRayfillet,
+		DaysFresh	=	3,
+		MinutesToCook	=	90,
+		EvolvedRecipe = Stir fry Griddle Pan:25;Soup:25;Stew:25;Sandwich:15|Cooked;Salad:20|Cooked;RicePot:25;RicePan:25;PastaPot:25;PastaPan:25,
+		FoodType    =   Fish,
+        Carbohydrates = 0,
+        Proteins = 34.28,
+        Lipids = 10.55,
+        Calories = 270,
+		RemoveNegativeEffectOnCooked    =   TRUE,
+        Packaged = FALSE,
+        BadInMicrowave = true,
+        GoodHot = true,
+	}
+
+	item TarponFillet
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-30,
+		Weight	=	0.3,
+		Type	=	Food,
+		IsCookable	=	TRUE,
+		DangerousUncooked	=	TRUE,
+		DaysTotallyRotten	=	6,
+		MinutesToBurn	=	120,
+		DisplayName	=	Tarpon fillet,
+		Icon	=	Fishtarponfillet,
+		DaysFresh	=	4,
+		MinutesToCook	=	90,
+		EvolvedRecipe = Stir fry Griddle Pan:15;Soup:15;Stew:15;Sandwich:5|Cooked;Salad:10|Cooked;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+		FoodType    =   Fish,
+        Carbohydrates = 0,
+        Proteins = 34.28,
+        Lipids = 10.55,
+        Calories = 270,
+        Packaged = FALSE,
+        BadInMicrowave = true,
+        GoodHot = true,
+	}
+
+	item PiraibaFillet
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-30,
+		Weight	=	0.3,
+		Type	=	Food,
+		IsCookable	=	TRUE,
+		DangerousUncooked	=	TRUE,
+		DaysTotallyRotten	=	6,
+		MinutesToBurn	=	120,
+		DisplayName	=	Piraiba fillet,
+		Icon	=	FishPiraibafillet,
+		DaysFresh	=	4,
+		MinutesToCook	=	90,
+		EvolvedRecipe = Stir fry Griddle Pan:20;Soup:20;Stew:20;Sandwich:10|Cooked;Salad:15|Cooked;RicePot:20;RicePan:20;PastaPot:20;PastaPan:20,
+		FoodType    =   Fish,
+        Carbohydrates = 0,
+        Proteins = 34.28,
+        Lipids = 10.55,
+        Calories = 270,
+        Packaged = FALSE,
+        BadInMicrowave = true,
+        GoodHot = true,
+	}
+
+	item RTCatFillet
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-30,
+		Weight	=	0.3,
+		Type	=	Food,
+		IsCookable	=	TRUE,
+		DangerousUncooked	=	TRUE,
+		DaysTotallyRotten	=	6,
+		MinutesToBurn	=	120,
+		DisplayName	=	Red tail catfish fillet,
+		Icon	=	FishRtcfillet,
+		DaysFresh	=	4,
+		MinutesToCook	=	90,
+		EvolvedRecipe = Stir fry Griddle Pan:20;Soup:20;Stew:20;Sandwich:10|Cooked;Salad:15|Cooked;RicePot:20;RicePan:20;PastaPot:20;PastaPan:20,
+		FoodType    =   Fish,
+        Carbohydrates = 0,
+        Proteins = 34.28,
+        Lipids = 10.55,
+        Calories = 270,
+        Packaged = FALSE,
+        BadInMicrowave = true,
+        GoodHot = true,
+	}
+
+	item WturtlePiece
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-15,
+		Weight	=	0.1,
+		Type	=	Food,
+		IsCookable	=	TRUE,
+		DangerousUncooked	=	TRUE,
+		DaysTotallyRotten	=	6,
+		MinutesToBurn	=	120,
+		DisplayName	=	Water turtle piece,
+		Icon	=	FishTurtlebit,
+		DaysFresh	=	4,
+		MinutesToCook	=	30,
+		EvolvedRecipe = Soup:15;Stew:15,
+		FoodType    =   Fish,
+        Carbohydrates = 0,
+        Proteins = 34.28,
+        Lipids = 10.55,
+        Calories = 270,
+		FishingLure  =  true,
+        BadInMicrowave = true,
+        GoodHot = true,
+	}
+    /************** Wilson **************/
+	item WilsonBall
+	{
+		DisplayCategory = Furniture,
+		Weight	=	1,
+		Type	=	Moveable,
+		DisplayName	=	Wilson Ball,
+		Icon	=	Wilson,
+		WorldObjectSprite	= camping_02_10,
+		Tooltip = Tooltip_Wilson,
+	}
+    /************** Señuelos **************/
+
+    item StormFlutterstick
+    {
+		DisplayCategory = Fishing,
+        Type				=			Normal,
+        DisplayName			=		    Storm Flutterstick,
+        Icon				=			StormFlutterstickMadflash,
+        Weight				=			0.1,
+        FishingLure         =           true,
+		Tooltip             =           Tooltip_StormFlutterstick,
+		MetalValue = 1,
+    }
+
+    item RattlinRap
+    {
+		DisplayCategory = Fishing,
+        Type				=			Normal,
+        DisplayName			=		    Rapala rattlin,
+        Icon				=			RattlinRap,
+        Weight				=			0.1,
+        FishingLure         =           true,
+		Tooltip             =           Tooltip_RattlinRap,
+		MetalValue = 1,
+    }
+
+    item SwimJig
+    {
+		DisplayCategory = Fishing,
+        Type				=			Normal,
+        DisplayName			=		    Swim Jig,
+        Icon				=			Jig1,
+        Weight				=			0.1,
+        FishingLure         =           true,
+		Tooltip             =           Tooltip_SwimJig,
+		MetalValue = 1,
+    }
+
+    item SwimJig2
+    {
+		DisplayCategory = Fishing,
+        Type				=			Normal,
+        DisplayName			=		    Swim Jig,
+        Icon				=			Jig2,
+        Weight				=			0.1,
+        FishingLure         =           true,
+		Tooltip             =           Tooltip_SwimJig,
+		MetalValue = 1,
+    }
+
+    item SwimJig3
+    {
+		DisplayCategory = Fishing,
+        Type				=			Normal,
+        DisplayName			=		    Swim Jig,
+        Icon				=			Jig3,
+        Weight				=			0.1,
+        FishingLure         =           true,
+		Tooltip             =           Tooltip_SwimJig,
+		MetalValue = 1,
+    }
+
+    item GTPopper
+    {
+		DisplayCategory = Fishing,
+        Type				=			Normal,
+        DisplayName			=		    GT Popper,
+        Icon				=			GTPopper,
+        Weight				=			0.1,
+        FishingLure         =           true,
+		Tooltip             =           Tooltip_GTPopper,
+		MetalValue = 1,
+    }
+
+    item SpoonLure1
+    {
+		DisplayCategory = Fishing,
+        Type				=			Normal,
+        DisplayName			=		    Storm Spoon,
+        Icon				=			Spoon1,
+        Weight				=			0.1,
+        FishingLure         =           true,
+		Tooltip             =           Tooltip_SpoonLure,
+		MetalValue = 1,
+    }
+
+    item SpoonLure2
+    {
+		DisplayCategory = Fishing,
+        Type				=			Normal,
+        DisplayName			=		    Storm Spoon,
+        Icon				=			Spoon2,
+        Weight				=			0.1,
+        FishingLure         =           true,
+		Tooltip             =           Tooltip_SpoonLure,
+		MetalValue = 1,
+    }
+
+    item SpoonLure3
+    {
+		DisplayCategory = Fishing,
+        Type				=			Normal,
+        DisplayName			=		    Storm Spoon,
+        Icon				=			Spoon3,
+        Weight				=			0.1,
+        FishingLure         =           true,
+		Tooltip             =           Tooltip_SpoonLure,
+		MetalValue = 1,
+    }
+
+    item JitterBug
+    {
+		DisplayCategory = Fishing,
+        Type				=			Normal,
+        DisplayName			=		    Jitterbug,
+        Icon				=			Jitterbug,
+        Weight				=			0.1,
+        FishingLure         =           true,
+		Tooltip             =           Tooltip_Jitterbug,
+		MetalValue = 1,
+    }
+
+    item Crankbait
+    {
+		DisplayCategory = Fishing,
+        Type				=			Normal,
+        DisplayName			=		    Evergreen crankbait,
+        Icon				=			EverGreenCrankbait,
+        Weight				=			0.1,
+        FishingLure         =           true,
+		Tooltip             =           Tooltip_Crankbait,
+		MetalValue = 1,
+    }
+
+    item SwimShad
+    {
+		DisplayCategory = Fishing,
+        Type				=			Normal,
+        DisplayName			=		    SwimShad,
+        Icon				=			SwimShad,
+        Weight				=			0.1,
+        FishingLure         =           true,
+		Tooltip             =           Tooltip_SwimShad,
+		MetalValue = 1,
+    }
+
+    item Alfers
+    {
+		DisplayCategory = Fishing,
+        Type				=			Normal,
+        DisplayName			=		    Mojarra Alfers,
+        Icon				=			Alfers,
+        Weight				=			0.1,
+        FishingLure         =           true,
+		Tooltip             =           Tooltip_Alfers,
+		MetalValue = 1,
+    }
+
+    item Spinnerbait
+    {
+		DisplayCategory = Fishing,
+        Type				=			Normal,
+        DisplayName			=		    Spinnerbait,
+        Icon				=			Spinnerbait,
+        Weight				=			0.1,
+        FishingLure         =           true,
+		Tooltip             =           Tooltip_Spinnerbait,
+		MetalValue = 1,
+    }
+
+    /************** Lineas sin carnada **************/
+
+    item 0Smallfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	0Floating line,
+		FishingLure  =  true,
+        Icon	=	Tackle1,
+		Tooltip  =  Tooltip_Smallfloaterline,
+    }
+
+    item Mediumfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Medium floating line,
+		FishingLure  =  true,
+        Icon	=	Tackle2,
+		Tooltip  =  Tooltip_Mediumfloaterline,
+    }
+
+    item Bigfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Big floating line,
+		FishingLure  =  true,
+        Icon	=	Tackle3,
+		Tooltip  =  Tooltip_Bigfloaterline,
+    }
+
+    item SmallDeepline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Small deep line,
+		FishingLure  =  true,
+		Tooltip  =  Tooltip_SmallDeepline,
+        Icon	=	Tackle4,
+    }
+
+    item MediumDeepline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Medium deep line,
+		FishingLure  =  true,
+		Tooltip  =  Tooltip_MediumDeepline,
+        Icon	=	Tackle5,
+    }
+
+    item HeavyDeepline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Heavy deep line,
+		FishingLure  =  true,
+		Tooltip  =  Tooltip_HeavyDeepline,
+        Icon	=	Tackle6,
+    }
+
+    /************** Carnadas **************/
+
+    item WormsPacket
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Worm Packet,
+        Icon	=	WormsPack,
+    }
+
+    item RedWorm
+    {
+		DisplayCategory = Fishing,
+        HungerChange	=	-5,
+        Weight	=	0.01,
+        Type	=	Food,
+        DisplayName	=	Red Worm,
+        Icon	=	RedWorm,
+		FishingLure     =   true,
+        UnhappyChange	=	20,
+        Carbohydrates = 0,
+        Proteins = 0.5,
+        Lipids = 0.1,
+        Calories = 3,
+		WorldStaticModel = RedWorm_Ground,
+    }
+
+    item FishingDough
+    {
+		DisplayCategory = Fishing,
+        Type				=			Food,
+        DisplayName			=		    Fishing dough,
+        Icon				=			Fishingdough,
+		DangerousUncooked	=	        TRUE,
+        Weight				=			0.1,
+        HungerChange 		=		    -3,
+		UnhappyChange		=	        7,
+        DaysFresh 			=		    2,
+        DaysTotallyRotten 	=	 	    4,
+        FishingLure         =           true,
+        IsCookable	        =	        true,
+        MinutesToBurn	    =	        20,
+        MinutesToCook	    =	        10,
+    }
+
+    item StrongFishingDough
+    {
+		DisplayCategory = Fishing,
+        Type				=			Food,
+        DisplayName			=		    Strong fishing dough,
+        Icon				=			Fishingdoughf,
+		DangerousUncooked	=	        TRUE,
+        Weight				=			0.1,
+        HungerChange 		=		    -5,
+		UnhappyChange		=	        7,
+        DaysFresh 			=		    2,
+        DaysTotallyRotten 	=	 	    4,
+        FishingLure         =           true,
+        IsCookable	        =	        true,
+        MinutesToBurn	    =	        20,
+        MinutesToCook	    =	        10,
+    }
+
+    /************** Anzuelos **************/
+	
+    item RustySmallHook
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Rusty Small Hook,
+        Icon	=	RustyHookS,
+		Tooltip =   Tooltip_Rusty,
+		MetalValue = 1,
+		WorldStaticModel = RustySmallHook,
+    }
+
+    item SmallHook
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Small Hook,
+		Tooltip = Tooltip_Fishingpart,
+        Icon	=	HookS,
+		MetalValue = 1,
+		WorldStaticModel = SmallHook,
+    }
+	
+    item RustyMediumHook
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Rusty Medium Hook,
+        Icon	=	RustyHookM,
+		Tooltip =   Tooltip_Rusty,
+		MetalValue = 1,
+		WorldStaticModel = RustyMediumHook,
+    }
+
+    item MediumHook
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Medium Hook,
+		Tooltip = Tooltip_Fishingpart,
+        Icon	=	HookM,
+		MetalValue = 1,
+		WorldStaticModel = MediumHook,
+    }
+
+    item RustyBigHook
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Rusty Big Hook,
+        Icon	=	RustyHookB,
+		Tooltip =   Tooltip_Rusty,
+		MetalValue = 1,
+		WorldStaticModel = RustyBigHook,
+    }
+
+    item BigHook
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Big Hook,
+		Tooltip = Tooltip_Fishingpart,
+        Icon	=	HookB,
+		MetalValue = 1,
+		WorldStaticModel = BigHook,
+    }
+
+    item CarpHook
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Carp Hook,
+		Tooltip = Tooltip_Fishingpart,
+        Icon	=	Bras1,
+		MetalValue = 1,
+    }
+
+    item SmallHookPacket
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Small Hook Packet,
+		Tooltip = Tooltip_SmallHookPacket,
+        Icon	=	HookPacket,
+		MetalValue = 1,
+    }
+
+    item MediumHookPacket
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Medium Hook Packet,
+		Tooltip = Tooltip_MediumHookPacket,
+        Icon	=	HookPacket,
+		MetalValue = 1,
+    }
+
+    item BigHookPacket
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Big Hook Packet,
+		Tooltip = Tooltip_BigHookPacket,
+        Icon	=	HookPacket,
+		MetalValue = 1,
+    }
+
+    item GoldenHook
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Golden Hook,
+        Icon	=	HookG,
+		Tooltip = Tooltip_Fishingpart,
+		FishingLure = true,
+		MetalValue = 1,
+    }
+
+    /************** Boyas **************/
+
+    item Boya1
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Boya,
+		Tooltip = Tooltip_Fishingpart,
+        Icon	=	Boya1,
+    }
+
+    item Boya2
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Boya2,
+		Tooltip = Tooltip_Fishingpart,
+        Icon	=	Boya2,
+    }
+
+    item Boya3
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Boya3,
+		Tooltip = Tooltip_Fishingpart,
+        Icon	=	Boya3,
+    }
+
+    /************** Pack de Boyas **************/
+
+    item BoyaPack1
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Bobber Pack 1,
+		Tooltip = Tooltip_BobberPack1,
+        Icon	=	PackBoya1,
+    }
+
+    item BoyaPack2
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Bobber Pack 2,
+		Tooltip = Tooltip_BobberPack2,
+        Icon	=	PackBoya2,
+    }
+
+    item BoyaPack3
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Bobber Pack 3,
+		Tooltip = Tooltip_BobberPack3,
+        Icon	=	PackBoya3,
+    }
+
+    /************** Items **************/
+	
+	item OldMagazine
+	{
+		DisplayCategory = Literature,
+		Weight	=	0.2,
+		Type	=	Literature,
+		DisplayName	=	Old magazine,
+		StressChange	=	-5,
+		Icon	=	OldMagazine,
+		BoredomChange	=	-5,
+		StaticModel = LGFOldMag1,
+		WorldStaticModel = LGFOldMag1_Ground,
+	}
+
+	item OldMagazine2
+	{
+		DisplayCategory = Literature,
+		Weight	=	0.2,
+		Type	=	Literature,
+		DisplayName	=	Old magazine,
+		StressChange	=	-5,
+		Icon	=	OldMagazine2,
+		BoredomChange	=	-5,
+		StaticModel = LGFOldMag2,
+		WorldStaticModel = LGFOldMag2_Ground,
+	}
+
+	item OldMagazine3
+	{
+		DisplayCategory = Literature,
+		Weight	=	0.2,
+		Type	=	Literature,
+		DisplayName	=	Old magazine,
+		StressChange	=	-5,
+		Icon	=	OldMagazine3,
+		BoredomChange	=	-5,
+		StaticModel = LGFOldMag3,
+		WorldStaticModel = LGFOldMag3_Ground,
+	}
+
+    item Leader
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.05,
+        Type	=	Normal,
+        DisplayName	=	Fishing leader,
+		Tooltip = Tooltip_Leader,
+        Icon	=	Leader,
+		MetalValue = 1,
+    }
+
+    item LeaderPacket
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Fishing leader packet,
+		Tooltip = Tooltip_LeaderP,
+        Icon	=	LeaderP,
+		MetalValue = 2,
+    }
+
+    item FishingLead1
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Fishing lead,
+		Tooltip = Tooltip_Fishingpart,
+        Icon	=	FLead1,
+		MetalValue = 1,
+    }
+
+    item FishingLead2
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Fishing lead,
+		Tooltip = Tooltip_Fishingpart,
+        Icon	=	FLead2,
+		MetalValue = 1,
+    }
+
+    item FishingLead3
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Fishing lead,
+		Tooltip = Tooltip_Fishingpart,
+        Icon	=	FLead3,
+		MetalValue = 1,
+    }
+
+    item OldBottle
+    {
+        Weight	=	1,
+        Type	=	Food,
+        DisplayName	=	Old bottle,
+        Icon	=	OldBottle,
+		ThirstChange	=	-30,
+        UnhappyChange	=	-30,
+		Alcoholic	=	TRUE,
+		AlcoholPower = 2,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottle,
+		ReplaceOnUse	=	OldBottleEmpty,
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 2000,
+		Packaged = TRUE,
+		CantBeFrozen = TRUE,
+    }
+
+    item FishingLine2
+    {
+		DisplayCategory = Fishing,
+        Type	            =	        Drainable,
+        UseDelta	        =	        0.1,
+        UseWhileEquipped	=           FALSE,
+        DisplayName			=		    Fishing Line (0.40 mm),
+        Icon				=			FishingLine2,
+		Tooltip             =           Tooltip_FishingLine2,
+        Weight				=			0.2,
+		WorldStaticModel = FishingLine2,
+    }
+
+    item FishingLine3
+    {
+		DisplayCategory = Fishing,
+        Type	            =	        Drainable,
+        UseDelta	        =	        0.1,
+        UseWhileEquipped	=           FALSE,
+        DisplayName			=		    Fishing Line (0.80 mm),
+        Icon				=			FishingLine3,
+		Tooltip             =           Tooltip_FishingLine3,
+        Weight				=			0.3,
+		WorldStaticModel = FishingLine3,
+    }
+	
+	item MetalDetector
+	{
+		DisplayCategory = Tool,
+		Type				= Drainable,
+		Tooltip             = Tooltip_MetalDetector,
+		DisappearOnUse	    = FALSE,
+		UseDelta	        = 0.0006,
+		DisplayName			= Metal detector,
+		Weight				= 4,
+		Icon				= MetalDetector,
+		cantBeConsolided    = TRUE,
+		ActivatedItem	    = TRUE,
+		StaticModel = MetalDetectorA,
+        primaryAnimMask = HoldingTorchRight,
+        secondaryAnimMask = HoldingTorchLeft,
+		WorldStaticModel = MetalDetectorA_Ground,
+		MetalValue = 3,
+	}
+
+	item RustyNails
+	{
+		DisplayCategory = Material,
+		Count	=	5,
+		Weight	=	0.003,
+		AlwaysWelcomeGift	=	TRUE,
+		Type	=	Normal,
+		DisplayName	=	Rusty Nails,
+		Icon	=	RustyNails,
+		Tooltip =   Tooltip_Rusty,
+		MetalValue = 1,
+	}
+
+    item RustyWire
+    {
+		DisplayCategory = Material,
+        Weight	            =	        0.2,
+        Type	            =	        Drainable,
+        DisplayName	        =	        Rusty Wire,
+        Icon	            =	        RustyWire,
+        UseWhileEquipped	=           FALSE,
+        UseDelta	        =	        0.2,
+        MetalValue = 20,
+        cantBeConsolided = TRUE,
+		Tooltip =   Tooltip_Rusty,
+		MetalValue = 5,
+		WorldStaticModel = RustyWire,
+    }
+
+	item RustyBarbedWire
+	{
+		DisplayCategory = Material,
+		Weight	=	1,
+		Type	=	Normal,
+		DisplayName	=	Rusty Barbed Wire,
+		Icon	=	RustyBarbedWire,
+		MetalValue = 20,
+		Tooltip =   Tooltip_Rusty,
+		MetalValue = 5,
+		WorldStaticModel = RustyBarbedWire,
+	}
+
+    item RustyPaperclip
+    {
+		DisplayCategory = Material,
+        Type				=			Normal,
+        DisplayName			=		    Rusty Paperclip,
+        Icon				=			RustyPaperclip,
+        Weight				=			0.003,
+        MetalValue = 1,
+		Tooltip =   Tooltip_Rusty,
+		MetalValue = 1,
+		WorldStaticModel = RustyPaperclip,
+    }
+
+    item RustyMetalPipe
+    {
+		DisplayCategory = Material,
+        Weight = 1,
+        Type = Normal,
+        DisplayName	= Rusty Metal Tube,
+        Icon = RustyMetalTube,
+        MetalValue = 30,
+		Tooltip =   Tooltip_Rusty,
+		MetalValue = 5,
+		WorldStaticModel = RustyMetalPipe,
+    }
+
+    item RustySheetMetal
+    {
+		DisplayCategory = Material,
+        Weight	=	1.5,
+        Type	=	Normal,
+        DisplayName	=	Rusty Metal Sheet,
+        Icon	=	RustySheetMetal,
+		Tooltip =   Tooltip_Rusty,
+        MetalValue = 80,
+		WorldStaticModel = RustyMetalSheet,
+    }
+
+    item RustyMetalBar
+    {
+		DisplayCategory = Material,
+        Weight = 1.5,
+        Type = Normal,
+        DisplayName	= Rusty Metal Bar,
+        Icon = RustyMetalBar,
+		Tooltip =   Tooltip_Rusty,
+        MetalValue = 40,
+		WorldStaticModel = RustyMetalBar,
+    }
+
+    item RustySmallSheetMetal
+    {
+		DisplayCategory = Material,
+        Weight	=	0.4,
+        Type	=	Normal,
+        DisplayName	=	Rusty Small Metal Sheet,
+        Icon	=	RustyMetalSheetSmall,
+		Tooltip =   Tooltip_Rusty,
+        MetalValue = 20,
+		WorldStaticModel = RustyMetalSheetSmall,
+    }
+
+    item AcidCEmpty
+    {
+		DisplayCategory = Material,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Acid Clorhidric Bottle,
+        Icon	=	AcidClEmpty,
+    }
+
+	item AcidC
+	{
+		DisplayCategory = Material,
+        Type	            =	        Drainable,
+        UseDelta	        =	        0.02,
+        UseWhileEquipped	=	        FALSE,
+        DisplayName			=		    Acid Clorhidric,
+        Icon				=			AcidCl,
+        Weight				=			0.3,
+		KeepOnDeplete = true,
+		Tooltip =   Tooltip_AcidCFull,
+		WeightEmpty = 0.01
+	}
+	
+    item RustyEngineParts
+    {
+		DisplayCategory = VehicleMaintenance,
+        Weight	=	0.5,
+        Type	=	Normal,
+        DisplayName	=	Rusty Spare Engine Parts,
+        Icon	=	RustyEngineParts,
+        MetalValue = 30,
+		WorldStaticModel = RustyEngineParts,
+    }
+
+	/************** Libros **************/
+
+    item FishingAnglerBook1
+    {
+		DisplayCategory = SkillBook,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Angler USA Book1,
+        Icon	=	FishingHBook1,
+        TeachedRecipes  =   Make fishing tackle;Add cricket on fishing tackle;Add worm on fishing tackle;Add red worm on fishing tackle;Add grasshopper on fishing tackle;Add cockroach on fishing tackle;Add baitfish on fishing tackle,
+		ReplaceOnUse    =   FishingAnglerBook1,
+		StaticModel = FHBookA,
+		WorldStaticModel = FHBookClosedGroundA,
+    }
+
+    item FishingAnglerBook2
+    {
+		DisplayCategory = SkillBook,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Angler USA Book2,
+        Icon	=	FishingHBook2,
+        TeachedRecipes  =   Make fishing tackle2;Add cricket on fishing tackle2;Add worm on fishing tackle2;Add red worm on fishing tackle2;Add grasshopper on fishing tackle2;Add cockroach on fishing tackle2;Add baitfish on fishing tackle2;Add dentudo on fishing tackle2;Add anguila on fishing tackle2,
+		ReplaceOnUse    =   FishingAnglerBook2,
+		StaticModel = FHBookB,
+		WorldStaticModel = FHBookClosedGroundB,
+	}
+
+    item FishingAnglerBook3
+    {
+		DisplayCategory = SkillBook,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Angler USA Book3,
+        Icon	=	FishingHBook3,
+        TeachedRecipes  =   Make fishing tackle3;Add anguila on fishing tackle3;Add dentudo on fishing tackle3;Add crab on fishing tackle3;Add pejerrey on fishing tackle3;Add rat on fishing tackle3;Add mouse on fishing tackle3;Add frog on fishing tackle3,
+		ReplaceOnUse    =   FishingAnglerBook3,
+		StaticModel = FHBookC,
+		WorldStaticModel = FHBookClosedGroundC,
+	}
+
+    item FishingAnglerBook4
+    {
+		DisplayCategory = SkillBook,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Angler USA Book4,
+        Icon	=	FishingHBook4,
+        TeachedRecipes  =  Make fishing dough;Make strong fishing dough;Add dough on fishing tackle;Add strong dough on fishing tackle;Add dough on fishing tackle2;Add strong dough on fishing tackle2,
+		ReplaceOnUse    =   FishingAnglerBook4,
+		StaticModel = FHBookD,
+		WorldStaticModel = FHBookClosedGroundD,
+	}
+
+    item FishingAnglerBook5
+    {
+		DisplayCategory = SkillBook,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Angler USA Book5,
+        Icon	=	FishingHBook5,
+        TeachedRecipes  =  Make fishing tackle4;Add dough on fishing tackle4;Add strong dough on fishing tackle4;Add cricket on fishing tackle4;Add worm on fishing tackle4;Add red worm on fishing tackle4;Add grasshopper on fishing tackle4;Add cockroach on fishing tackle4;Add baitfish on fishing tackle4,
+		ReplaceOnUse    =   FishingAnglerBook5,
+		StaticModel = FHBookE,
+		WorldStaticModel = FHBookClosedGroundE,
+	}
+
+    item FishingAnglerBook6
+    {
+		DisplayCategory = SkillBook,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Angler USA Book6,
+        Icon	=	FishingHBook6,
+        TeachedRecipes  =  Make fishing tackle5;Add Dentudo on fishing tackle5;Add Pejerrey on fishing tackle5;Add Peach on fishing tackle5;Add dough on fishing tackle5;Add strong dough on fishing tackle5;Add turtle on fishing tackle5;Add anguila on fishing tackle5,
+		ReplaceOnUse    =   FishingAnglerBook6,
+		StaticModel = FHBookF,
+		WorldStaticModel = FHBookClosedGroundF,
+	}
+
+    item FishingAnglerBook7
+    {
+		DisplayCategory = SkillBook,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Angler USA Book7,
+        Icon	=	FishingHBook7,
+        TeachedRecipes  =  Make fishing tackle6;Add anguila on fishing tackle6;Add rat on fishing tackle6;Add frog on fishing tackle6;Add mouse on fishing tackle6,
+		ReplaceOnUse    =   FishingAnglerBook7,
+		StaticModel = FHBookG,
+		WorldStaticModel = FHBookClosedGroundG,
+	}
+
+    item FishingEncyclopedia
+    {
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Fishing Encyclopedia1,
+		DisplayCategory = Literature,
+        Icon	=	FishingEncyclopedia,
+		StaticModel = FishBook,
+		WorldStaticModel = FishBookClosedGroundA,
+    }
+
+    item FishingEncyclopedia2
+    {
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Fishing Encyclopedia2,
+		DisplayCategory = Literature,
+        Icon	=	FishingEncyclopedia,
+		StaticModel = FishBook,
+		WorldStaticModel = FishBookClosedGroundB,
+    }
+	
+    item FishingEncyclopedia3
+    {
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Fishing Encyclopedia3,
+		DisplayCategory = Literature,
+        Icon	=	FishingEncyclopedia,
+		StaticModel = FishBook,
+		WorldStaticModel = FishBookClosedGroundC,
+    }
+
+    item FishingEncyclopedia4
+    {
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Fishing Encyclopedia4,
+		DisplayCategory = Literature,
+        Icon	=	FishingEncyclopedia,
+		StaticModel = FishBook,
+		WorldStaticModel = FishBookClosedGroundD,
+    }
+
+    item FishingEncyclopedia5
+    {
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Fishing Encyclopedia5,
+		DisplayCategory = Literature,
+        Icon	=	FishingEncyclopedia,
+		StaticModel = FishBook,
+		WorldStaticModel = FishBookClosedGroundE,
+    }
+
+    item SportFishingBook
+    {
+		DisplayCategory = SkillBook,
+        Weight	=	0.2,
+        Type	=	Literature,
+        DisplayName	=	Sport Fishing Book,
+        Icon	=	FishingEncyclopedia2,
+		TeachedRecipes  =  Sport Fishing,
+		StaticModel = SportFishBook,
+		WorldStaticModel = SportFishBookClosedGround,
+    }
+
+    /************** Lineas Completas **************/
+	
+    /**Tier1**/
+
+    item DoughSmallfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Floating line (Dough),
+        Icon	=	FullTackleDough,
+		FishingLure  =  true,
+		ReplaceOnUse    =   0Smallfloaterline,
+    }
+
+    item FDoughSmallfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Floating line (Fortified Dough),
+        Icon	=	FullTackleDough,
+		FishingLure  =  true,
+		ReplaceOnUse    =   0Smallfloaterline,
+    }
+
+    item CricketSmallfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Floating line (Cricket),
+        Icon	=	FullTackleCricket,
+		FishingLure  =  true,
+		ReplaceOnUse    =   0Smallfloaterline,
+    }
+
+    item WormSmallfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Floating line (Worm),
+        Icon	=	FullTackleWorm,
+		FishingLure  =  true,
+		ReplaceOnUse    =   0Smallfloaterline,
+    }
+
+    item RWormSmallfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Floating line (Red Worm),
+        Icon	=	FullTackleRWorm,
+		FishingLure  =  true,
+		ReplaceOnUse    =   0Smallfloaterline,
+    }
+
+    item GHopperSmallfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Floating line (GrassHopper),
+        Icon	=	FullTackleGHopper,
+		FishingLure  =  true,
+		ReplaceOnUse    =   0Smallfloaterline,
+    }
+
+    item RoachSmallfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Floating line (Cockroach),
+        Icon	=	FullTackleRoach,
+		FishingLure  =  true,
+		ReplaceOnUse    =   0Smallfloaterline,
+    }
+
+    item BfishSmallfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Floating line (Baitfish),
+        Icon	=	FullTackleBfish,
+		FishingLure  =  true,
+		ReplaceOnUse    =   0Smallfloaterline,
+    }
+	
+    /**Tier2**/
+
+    item DoughMediumfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Floating line (Dough),
+        Icon	=	FullTackle2Dough,
+		FishingLure  =  true,
+		ReplaceOnUse    =   Mediumfloaterline,
+    }
+
+    item FDoughMediumfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Floating line (Fortified Dough),
+        Icon	=	FullTackle2Dough,
+		FishingLure  =  true,
+		ReplaceOnUse    =   Mediumfloaterline,
+    }
+
+    item CricketMediumfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Floating line (Cricket),
+        Icon	=	FullTackle2Cricket,
+		FishingLure  =  true,
+		ReplaceOnUse    =   Mediumfloaterline,
+    }
+
+    item WormMediumfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Floating line (Worm),
+        Icon	=	FullTackle2Worm,
+		FishingLure  =  true,
+		ReplaceOnUse    =   Mediumfloaterline,
+    }
+
+    item RWormMediumfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Floating line (Red Worm),
+        Icon	=	FullTackle2RWorm,
+		FishingLure  =  true,
+		ReplaceOnUse    =   Mediumfloaterline,
+    }
+
+    item GHopperMediumfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Floating line (GrassHopper),
+        Icon	=	FullTackle2GHopper,
+		FishingLure  =  true,
+		ReplaceOnUse    =   Mediumfloaterline,
+    }
+
+    item RoachMediumfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Floating line (Cockroach),
+        Icon	=	FullTackle2Roach,
+		FishingLure  =  true,
+		ReplaceOnUse    =   Mediumfloaterline,
+    }
+
+    item BfishMediumfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Floating line (Baitfish),
+        Icon	=	FullTackle2Bfish,
+		FishingLure  =  true,
+		ReplaceOnUse    =   Mediumfloaterline,
+    }
+
+    item DentMediumfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Floating line (Dentudo),
+        Icon	=	FullTackle2Dentudo,
+		FishingLure  =  true,
+		ReplaceOnUse    =   Mediumfloaterline,
+    }
+
+    item AngMediumfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Floating line (Anguila),
+        Icon	=	FullTackle2Ang,
+		FishingLure  =  true,
+		ReplaceOnUse    =   Mediumfloaterline,
+    }
+
+    /**Tier3**/
+
+    item AngBigfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.5,
+        Type	=	Normal,
+        DisplayName	=	Floating line (Anguila),
+        Icon	=	FullTackle3Ang,
+		FishingLure  =  true,
+		ReplaceOnUse    =   Bigfloaterline,
+    }
+
+    item DentBigfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.5,
+        Type	=	Normal,
+        DisplayName	=	Floating line (Dentudo),
+        Icon	=	FullTackle3Dentudo,
+		FishingLure  =  true,
+		ReplaceOnUse    =   Bigfloaterline,
+    }
+
+    item FrogBigfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.5,
+        Type	=	Normal,
+        DisplayName	=	Floating line (Frog),
+        Icon	=	FullTackle3Frog,
+		FishingLure  =  true,
+		ReplaceOnUse    =   Bigfloaterline,
+    }
+
+    item RatBigfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.5,
+        Type	=	Normal,
+        DisplayName	=	Floating line (Rat),
+        Icon	=	FullTackle3Rat,
+		FishingLure  =  true,
+		ReplaceOnUse    =   Bigfloaterline,
+    }
+
+    item MouseBigfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.5,
+        Type	=	Normal,
+        DisplayName	=	Floating line (Mouse),
+        Icon	=	FullTackle3Mouse,
+		FishingLure  =  true,
+		ReplaceOnUse    =   Bigfloaterline,
+    }
+
+    item CrabBigfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.5,
+        Type	=	Normal,
+        DisplayName	=	Floating line (Crab),
+        Icon	=	FullTackle3Crab,
+		FishingLure  =  true,
+		ReplaceOnUse    =   Bigfloaterline,
+    }
+
+    item PejeBigfloaterline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.5,
+        Type	=	Normal,
+        DisplayName	=	Floating line (Peje),
+        Icon	=	FullTackle3Peje,
+		FishingLure  =  true,
+		ReplaceOnUse    =   Bigfloaterline,
+    }
+
+    /**Tier1 Lead Line**/
+
+    item DoughSmalldeepline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Deep line (Dough),
+        Icon	=	FullTackle4Dough,
+		FishingLure  =  true,
+		ReplaceOnUse    =   SmallDeepline,
+    }
+
+    item FDoughSmalldeepline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Deep line (Fortified Dough),
+        Icon	=	FullTackle4Dough,
+		FishingLure  =  true,
+		ReplaceOnUse    =   SmallDeepline,
+    }
+
+    item CricketSmalldeepline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Deep line (Cricket),
+        Icon	=	FullTackle4Cricket,
+		FishingLure  =  true,
+		ReplaceOnUse    =   SmallDeepline,
+    }
+
+    item WormSmalldeepline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Deep line (Worm),
+        Icon	=	FullTackle4Worm,
+		FishingLure  =  true,
+		ReplaceOnUse    =   SmallDeepline,
+    }
+
+    item RWormSmalldeepline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Deep line (Red Worm),
+        Icon	=	FullTackle4RWorm,
+		FishingLure  =  true,
+		ReplaceOnUse    =   SmallDeepline,
+    }
+
+    item GHopperSmalldeepline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Deep line (GrassHopper),
+        Icon	=	FullTackle4GHopper,
+		FishingLure  =  true,
+		ReplaceOnUse    =   SmallDeepline,
+    }
+
+    item RoachSmalldeepline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Deep line (Cockroach),
+        Icon	=	FullTackle4Roach,
+		FishingLure  =  true,
+		ReplaceOnUse    =   SmallDeepline,
+    }
+
+    item BfishSmalldeepline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Deep line (Baitfish),
+        Icon	=	FullTackle4Bfish,
+		FishingLure  =  true,
+		ReplaceOnUse    =   SmallDeepline,
+    }
+
+    /**Tier2 Lead Line**/
+
+    item DentMediumdeepline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Deep line M (Dentudo),
+        Icon	=	FullTackle5Dentudo,
+		FishingLure  =  true,
+		ReplaceOnUse    =   MediumDeepline,
+    }
+
+    item PejeMediumdeepline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Deep line M (Peje),
+        Icon	=	FullTackle5Peje,
+		FishingLure  =  true,
+		ReplaceOnUse    =   MediumDeepline,
+    }
+
+    item PeachMediumdeepline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Deep line M (Peach),
+        Icon	=	FullTackle5Peach,
+		FishingLure  =  true,
+		ReplaceOnUse    =   MediumDeepline,
+    }
+
+    item DoughMediumdeepline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Deep line M (Dough),
+        Icon	=	FullTackle5Dough,
+		FishingLure  =  true,
+		ReplaceOnUse    =   MediumDeepline,
+    }
+
+    item FDoughMediumdeepline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Deep line M (Fortified Dough),
+        Icon	=	FullTackle5Dough,
+		FishingLure  =  true,
+		ReplaceOnUse    =   MediumDeepline,
+    }
+
+    item TurtleMediumdeepline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Deep line M (Turtle),
+        Icon	=	FullTackle5Turtle,
+		FishingLure  =  true,
+		ReplaceOnUse    =   MediumDeepline,
+    }
+
+    item AngMediumdeepline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Deep line M (Anguila),
+        Icon	=	FullTackle5Ang,
+		FishingLure  =  true,
+		ReplaceOnUse    =   MediumDeepline,
+    }
+
+    /**Tier3 Lead Line**/
+
+    item AngHeavydeepline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Deep line G (Anguila),
+        Icon	=	FullTackle6Ang,
+		FishingLure  =  true,
+		ReplaceOnUse    =   HeavyDeepline,
+    }
+
+    item RatHeavydeepline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Deep line G (Rata),
+        Icon	=	FullTackle6Rat,
+		FishingLure  =  true,
+		ReplaceOnUse    =   HeavyDeepline,
+    }
+
+    item FrogHeavydeepline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Deep line G (Rana),
+        Icon	=	FullTackle6Frog,
+		FishingLure  =  true,
+		ReplaceOnUse    =   HeavyDeepline,
+    }
+
+    item MouseHeavydeepline
+    {
+		DisplayCategory = Fishing,
+        Weight	=	0.3,
+        Type	=	Normal,
+        DisplayName	=	Deep line G (Mouse),
+        Icon	=	FullTackle6Mouse,
+		FishingLure  =  true,
+		ReplaceOnUse    =   HeavyDeepline,
+    }
+
+    /************** Boyas Pack **************/
+
+    recipe Put small bobbers in a packet
+    {
+        Boya1=6,
+        
+        Result:BoyaPack1,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:50.0,
+        Category:Fishing,
+    }
+
+    recipe Take small bobbers from packet
+    {
+        BoyaPack1,
+        
+        Result:Boya1=6,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:50.0,
+        Category:Fishing,
+    }
+
+    recipe Put medium bobbers in a packet
+    {
+        Boya2=6,
+        
+        Result:BoyaPack2,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:50.0,
+        Category:Fishing,
+    }
+
+    recipe Take medium bobbers from packet
+    {
+        BoyaPack2,
+        
+        Result:Boya2=6,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:50.0,
+        Category:Fishing,
+    }
+
+    recipe Put big bobbers in a packet
+    {
+        Boya3=6,
+        
+        Result:BoyaPack3,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:50.0,
+        Category:Fishing,
+    }
+
+    recipe Take big bobbers from packet
+    {
+        BoyaPack3,
+        
+        Result:Boya3=6,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:50.0,
+        Category:Fishing,
+    }
+
+    /************** Lombrices **************/
+    recipe Put worms in a packet
+    {
+        Worm=25,
+        Newspaper,
+        
+        Result:WormsPacket,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Take worms from packet
+    {
+        WormsPacket,
+        
+        Result:Worm=25,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:OpenWormsPacket_OnCreate,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    /************** Recetas **************/
+    recipe Slice Fillet
+    {
+        Dorado/RainbowTrout/Tucunare/Payara/Arowana,
+		keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+
+        Result:FishFillet,
+        Sound:SliceMeat,
+        Time:50.0,
+        OnCreate:Recipe.OnCreate.NewCutFish,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Category:Cooking,
+    }
+
+    recipe Slice Fillet
+    {
+        keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+        Walleye/Tararira,
+
+        Result:FishFillet,
+        Sound:SliceMeat,
+        Time:50.0,
+        OnCreate:Recipe.OnCreate.NewCutFish,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Category:Cooking,
+    }
+
+    recipe Slice Fillet
+    {
+        keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+        Snakehead/Pacu/Pati,
+
+        Result:FishFillet,
+        Sound:SliceMeat,
+        Time:50.0,
+        OnCreate:Recipe.OnCreate.NewCutFish,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Category:Cooking,
+    }
+
+    recipe Slice Fillet
+    {
+        keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+        Carp,
+
+        Result:FishFillet,
+        Sound:SliceMeat,
+        Time:50.0,
+        OnCreate:Recipe.OnCreate.NewCutFish,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Category:Cooking,
+    }
+
+    recipe Slice Red Tail Catfish Fillet
+    {
+        keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+        Rtcatfish,
+
+        Result:RTCatFillet,
+        Sound:SliceMeat,
+        Time:50.0,
+        OnCreate:Recipe.OnCreate.NewCutFish,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Category:Cooking,
+    }
+
+    recipe Slice Piraiba Fillet
+    {
+        keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+        Piraiba,
+
+        Result:PiraibaFillet,
+        Sound:SliceMeat,
+        Time:50.0,
+        OnCreate:Recipe.OnCreate.NewCutFish,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Category:Cooking,
+    }
+
+    recipe Slice Salmon Fillet
+    {
+        keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+        AdvancedFishing.FSalmon,
+
+        Result:Base.Salmon,
+        Sound:SliceMeat,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.NewCutFish,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Category:Cooking,
+    }
+
+    recipe Slice Arapaima Fillet
+    {
+        keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+        Arapaima,
+
+        Result:FishFillet,
+        Sound:SliceMeat,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.NewCutFish,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Category:Cooking,
+    }
+
+    recipe Slice Surubi Fillet
+    {
+        keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+        Surubi,
+
+        Result:SuruFillet,
+        Sound:SliceMeat,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.NewCutFish,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Category:Cooking,
+    }
+
+    recipe Slice Tarpon Fillet
+    {
+        keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+        Tarpon,
+
+        Result:TarponFillet,
+        Sound:SliceMeat,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.NewCutFish,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Category:Cooking,
+    }
+
+    recipe Slice water turtle
+    {
+        keep KitchenKnife/HuntingKnife/KnifeDepostador/MeatCleaver/FlintKnife,
+        Waterturtle,
+
+        Result:WturtlePiece=6,
+        Sound:SliceMeat,
+        Time:20.0,
+        OnCreate:CutTurtle_OnCreate,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Category:Cooking,
+    }
+
+    recipe Slice Ray Fillet
+    {
+        keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+        Ray,
+
+        Result:RayFillet,
+        Sound:SliceMeat,
+        Time:100.0,
+        OnCreate:Recipe.OnCreate.NewCutFish,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Category:Cooking,
+    }
+
+    recipe Make fishing dough
+    {
+        Cornflour=2,
+        Flour=2,
+		Water=10,
+		[Recipe.GetItemTypes.Sugar];1,
+		Salt;1,
+
+		SkillRequired:Fishing=5;Cooking=2,
+        Result:FishingDough=10,
+		OnGiveXP:AFishingCxp2,
+		NeedToBeLearn:true,
+        Time:10.0,
+        Category:Fishing,
+    }
+
+    recipe Make strong fishing dough
+    {
+        FishingDough=10,
+        [Recipe.GetItemTypes.Egg];2,
+
+		Result:StrongFishingDough=10,
+		SkillRequired:Fishing=7;Cooking=2,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:AFishingCxp2,
+		NeedToBeLearn:true,
+        Time:10.0,
+        Category:Fishing,
+    }
+	
+    recipe Open Leader packet
+    {
+        LeaderPacket,
+
+        Result:Leader=5,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:10.0,
+        Category:Fishing,
+    }
+
+    recipe Put Leaders on a packet
+    {
+		Leader=5,
+
+        Result:LeaderPacket,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:10.0,
+        Category:Fishing,
+    }
+
+/****    recipe Clean Nails ****/
+/****     {  ****/
+/****         RustyNails=10, ****/
+/**** 		AcidC=1, ****/
+/**** ****/
+/****         Result:Base.Nails=2, ****/
+/**** 		OnGiveXP:Recipe.OnGiveXP.None, ****/
+/****         Time:100.0, ****/
+/****         Category:Welding, ****/
+/****     } ****/
+
+    recipe Clean RustyEngineParts
+    {
+        RustyEngineParts=1,
+		AcidC=1,
+
+        Result:Base.EngineParts=1,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:100.0,
+        Category:Welding,
+    }
+
+    recipe Clean Paperclips
+    {
+        RustyPaperclip=1,
+		AcidC=1,
+
+        Result:Base.Paperclip=1,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:100.0,
+        Category:Welding,
+    }
+
+    recipe Clean MetalBar
+    {
+        RustyMetalBar,
+		AcidC=1,
+
+        Result:Base.MetalBar=1,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:100.0,
+        Category:Welding,
+    }
+
+    recipe Clean MetalPipe
+    {
+        RustyMetalPipe,
+		AcidC=1,
+
+        Result:Base.MetalPipe=1,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:100.0,
+        Category:Welding,
+    }
+
+    recipe Clean BarbedWire
+    {
+        RustyBarbedWire,
+		AcidC=1,
+
+        Result:Base.BarbedWire=1,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:100.0,
+        Category:Welding,
+    }
+
+    recipe Clean Wire
+    {
+        destroy RustyWire,
+		AcidC=1,
+
+        Result:Base.Wire=1,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:CleanWire_OnCreate,
+        Time:200.0,
+        Category:Welding,
+    }
+
+    recipe Clean Metal Sheet
+    {
+        RustySheetMetal,
+		AcidC=1,
+
+        Result:Base.SheetMetal=1,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:200.0,
+        Category:Welding,
+    }
+
+    recipe Clean Small Metal Sheet
+    {
+        RustySmallSheetMetal,
+		AcidC=1,
+
+        Result:Base.SmallSheetMetal=1,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:100.0,
+        Category:Welding,
+    }
+
+    recipe Clean Hooks
+    {
+        RustySmallHook,
+		AcidC=1,
+
+        Result:SmallHook,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:100.0,
+        Category:Welding,
+    }
+
+    recipe Clean Hooks
+    {
+        RustyMediumHook,
+		AcidC=1,
+
+        Result:MediumHook,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:100.0,
+        Category:Welding,
+    }
+
+    recipe Clean Hooks
+    {
+        RustyBigHook,
+		AcidC=1,
+
+        Result:BigHook,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:100.0,
+        Category:Welding,
+    }
+
+    recipe Remove Battery
+    {
+       keep MetalDetector,
+
+        Result:Battery,
+        Time:30,
+        OnTest:MDBatteryRemoval_TestIsValid,
+        OnCreate:MDBatteryRemoval_OnCreate,
+    }
+
+    recipe Insert Battery into Metal Detector
+    {
+        destroy MetalDetector,
+        destroy Battery,
+
+        Result:MetalDetector,
+        Time:30,
+        OnTest:MDBatteryInsert_TestIsValid,
+        OnCreate:MDBatteryInsert_OnCreate,
+    }
+
+    recipe Open small hooks packet
+    {
+		SmallHookPacket,
+
+        Result:SmallHook=5,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:10.0,
+        Category:Fishing,
+    }
+
+    recipe Put small hooks on a packet
+    {
+		SmallHook=5,
+
+        Result:SmallHookPacket,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:10.0,
+        Category:Fishing,
+    }
+
+    recipe Open medium hooks packet
+    {
+		MediumHookPacket,
+
+        Result:MediumHook=5,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:10.0,
+        Category:Fishing,
+    }
+
+    recipe Put medium hooks on a packet
+    {
+		MediumHook=5,
+
+        Result:MediumHookPacket,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:10.0,
+        Category:Fishing,
+    }
+
+    recipe Open big hooks packet
+    {
+		BigHookPacket,
+
+        Result:BigHook=5,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:10.0,
+        Category:Fishing,
+    }
+
+    recipe Put big hooks on a packet
+    {
+		BigHook=5,
+
+        Result:BigHookPacket,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:10.0,
+        Category:Fishing,
+    }
+
+    /********** Recipes Tier 1 **********/
+	
+    recipe Make fishing tackle
+    {
+        Boya1,
+		SmallHook,
+        FishingLine=1,
+        
+
+        Result:0Smallfloaterline,
+		OnGiveXP:AFishingxp2,
+		SkillRequired:Fishing=4,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:Fishing,
+    }
+
+    recipe Add dough on fishing tackle
+    {
+        0Smallfloaterline,
+        FishingDough,
+        
+
+        Result:DoughSmallfloaterline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=4,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add strong dough on fishing tackle
+    {
+        0Smallfloaterline,
+        StrongFishingDough,
+        
+
+        Result:FDoughSmallfloaterline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=4,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add cricket on fishing tackle
+    {
+        0Smallfloaterline,
+        Cricket,
+        
+
+        Result:CricketSmallfloaterline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=4,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add worm on fishing tackle
+    {
+        0Smallfloaterline,
+        Worm,
+        
+
+        Result:WormSmallfloaterline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=4,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add red worm on fishing tackle
+    {
+        0Smallfloaterline,
+        RedWorm,
+        
+
+        Result:RWormSmallfloaterline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=4,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add grasshopper on fishing tackle
+    {
+        0Smallfloaterline,
+        Grasshopper,
+        
+
+        Result:GHopperSmallfloaterline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=4,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add cockroach on fishing tackle
+    {
+        0Smallfloaterline,
+        Cockroach,
+        
+
+        Result:RoachSmallfloaterline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=4,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add baitfish on fishing tackle
+    {
+        0Smallfloaterline,
+        BaitFish,
+        
+
+        Result:BfishSmallfloaterline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=4,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+	/********** Recipes Tier 2 **********/
+
+    recipe Make fishing tackle2
+    {
+        Boya2,
+		MediumHook,
+		Leader,
+        FishingLine2=2,
+        
+
+        Result:Mediumfloaterline,
+		OnGiveXP:AFishingxp2,
+		NeedToBeLearn:true,
+		SkillRequired:Fishing=6,
+        Time:100.0,
+        Category:Fishing,
+    }
+
+    recipe Add dough on fishing tackle2
+    {
+        Mediumfloaterline,
+        FishingDough,
+        
+
+        Result:DoughMediumfloaterline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=6,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add strong dough on fishing tackle2
+    {
+        Mediumfloaterline,
+        StrongFishingDough,
+        
+
+        Result:FDoughMediumfloaterline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=6,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add cricket on fishing tackle2
+    {
+        Mediumfloaterline,
+        Cricket,
+        
+
+        Result:CricketMediumfloaterline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=6,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add worm on fishing tackle2
+    {
+        Mediumfloaterline,
+        Worm,
+        
+
+        Result:WormMediumfloaterline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=6,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add red worm on fishing tackle2
+    {
+        Mediumfloaterline,
+        RedWorm,
+        
+
+        Result:RWormMediumfloaterline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=6,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add grasshopper on fishing tackle2
+    {
+        Mediumfloaterline,
+        Grasshopper,
+        
+
+        Result:GHopperMediumfloaterline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=6,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add cockroach on fishing tackle2
+    {
+        Mediumfloaterline,
+        Cockroach,
+        
+
+        Result:RoachMediumfloaterline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=6,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add baitfish on fishing tackle2
+    {
+        Mediumfloaterline,
+        BaitFish,
+        
+
+        Result:BfishMediumfloaterline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=6,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add dentudo on fishing tackle2
+    {
+        Mediumfloaterline,
+        Dentudo,
+        
+
+        Result:DentMediumfloaterline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=6,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add anguila on fishing tackle2
+    {
+        Mediumfloaterline,
+        Anguila,
+        
+
+        Result:AngMediumfloaterline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=6,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+	/********** Recipes Tier 3 **********/
+
+    recipe Make fishing tackle3
+    {
+        FishingLine3=2,
+        Boya3,
+		BigHook,
+		Leader,
+        
+        Result:Bigfloaterline,
+		OnGiveXP:AFishingxp2,
+		NeedToBeLearn:true,
+		SkillRequired:Fishing=8,
+        Time:100.0,
+        Category:Fishing,
+    }
+
+    recipe Add anguila on fishing tackle3
+    {
+        Bigfloaterline,
+        Anguila,
+        
+        Result:AngBigfloaterline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=8,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add dentudo on fishing tackle3
+    {
+        Bigfloaterline,
+        Dentudo,
+
+        Result:DentBigfloaterline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=8,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add crab on fishing tackle3
+    {
+        Bigfloaterline,
+        Crab,
+
+        Result:CrabBigfloaterline,
+		OnTest:Addbait_TestIsValid,	
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=8,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add pejerrey on fishing tackle3
+    {
+        Bigfloaterline,
+        Peje,
+ 
+        Result:PejeBigfloaterline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=8,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add rat on fishing tackle3
+    {
+        Bigfloaterline,
+        DeadRat,
+
+        Result:RatBigfloaterline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=8,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add mouse on fishing tackle3
+    {
+        Bigfloaterline,
+        DeadMouse,
+        
+        Result:MouseBigfloaterline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=8,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add frog on fishing tackle3
+    {
+        Bigfloaterline,
+        Frog,
+        
+        Result:FrogBigfloaterline,
+		SkillRequired:Fishing=8,
+		NeedToBeLearn:true,
+		OnTest:Addbait_TestIsValid,	
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:100.0,
+        Category:FBait,
+    }
+
+	/********** Recipes Tier 1 Lead **********/
+
+    recipe Make fishing tackle4
+    {
+        FishingLead1,
+		SmallHook,
+        FishingLine=2,
+        
+
+        Result:SmallDeepline,
+		OnGiveXP:AFishingxp2,
+		NeedToBeLearn:true,
+		SkillRequired:Fishing=3,
+        Time:100.0,
+        Category:Fishing,
+    }
+
+    recipe Add dough on fishing tackle4
+    {
+        SmallDeepline,
+        FishingDough,
+        
+
+        Result:DoughSmalldeepline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=4,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add strong dough on fishing tackle4
+    {
+        SmallDeepline,
+        StrongFishingDough,
+        
+
+        Result:FDoughSmalldeepline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=4,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add cricket on fishing tackle4
+    {
+        SmallDeepline,
+        Cricket,
+        
+
+        Result:CricketSmalldeepline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=4,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add worm on fishing tackle4
+    {
+        SmallDeepline,
+        Worm,
+        
+
+        Result:WormSmalldeepline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=4,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add red worm on fishing tackle4
+    {
+        SmallDeepline,
+        RedWorm,
+        
+
+        Result:RWormSmalldeepline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=4,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add grasshopper on fishing tackle4
+    {
+        SmallDeepline,
+        Grasshopper,
+        
+
+        Result:GHopperSmalldeepline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=4,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add cockroach on fishing tackle4
+    {
+        SmallDeepline,
+        Cockroach,
+        
+
+        Result:RoachSmalldeepline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=4,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add baitfish on fishing tackle4
+    {
+        SmallDeepline,
+        BaitFish,
+        
+
+        Result:BfishSmalldeepline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=4,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+	/********** Recipes Tier 2 Lead **********/
+
+    recipe Make fishing tackle5
+    {
+        FishingLead2,
+		MediumHook,
+		Leader,
+        FishingLine2=2,
+        
+
+        Result:MediumDeepline,
+		OnGiveXP:AFishingxp2,
+		NeedToBeLearn:true,
+		SkillRequired:Fishing=5,
+        Time:100.0,
+        Category:Fishing,
+    }
+
+    recipe Add Dentudo on fishing tackle5
+    {
+        MediumDeepline,
+        Dentudo,
+        
+
+        Result:DentMediumdeepline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=5,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add Pejerrey on fishing tackle5
+    {
+        MediumDeepline,
+        Peje,
+        
+
+        Result:PejeMediumdeepline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=5,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add Peach on fishing tackle5
+    {
+        MediumDeepline,
+        Peach,
+        
+
+        Result:PeachMediumdeepline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=5,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add dough on fishing tackle5
+    {
+        MediumDeepline,
+        FishingDough,
+        
+
+        Result:DoughMediumdeepline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=5,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add strong dough on fishing tackle5
+    {
+        MediumDeepline,
+        StrongFishingDough,
+        
+
+        Result:FDoughMediumdeepline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=5,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add turtle on fishing tackle5
+    {
+        MediumDeepline,
+        WturtlePiece,
+        
+
+        Result:TurtleMediumdeepline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=5,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add anguila on fishing tackle5
+    {
+        MediumDeepline,
+        Anguila,
+        
+
+        Result:AngMediumdeepline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=5,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+	/********** Recipes Tier 3 Lead **********/
+
+    recipe Make fishing tackle6
+    {
+        FishingLead3,
+		BigHook,
+		Leader,
+        FishingLine3=2,
+        
+
+        Result:HeavyDeepline,
+		OnGiveXP:AFishingxp2,
+		NeedToBeLearn:true,
+		SkillRequired:Fishing=8,
+        Time:100.0,
+        Category:Fishing,
+    }
+
+    recipe Add anguila on fishing tackle6
+    {
+        HeavyDeepline,
+        Anguila,
+        
+
+        Result:AngHeavydeepline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=8,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add rat on fishing tackle6
+    {
+        HeavyDeepline,
+        DeadRat,
+        
+
+        Result:RatHeavydeepline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=8,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add frog on fishing tackle6
+    {
+        HeavyDeepline,
+        Frog,
+        
+
+        Result:FrogHeavydeepline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=8,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Add mouse on fishing tackle6
+    {
+        HeavyDeepline,
+        DeadMouse,
+        
+
+        Result:MouseHeavydeepline,
+		OnTest:Addbait_TestIsValid,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Fishing=8,
+		NeedToBeLearn:true,
+        Time:100.0,
+        Category:FBait,
+    }
+
+    recipe Dismantle metal detector
+    {
+        destroy MetalDetector,
+        keep Screwdriver,
+
+        Result:ElectronicsScrap=2,
+		OnGiveXP:DismantleElectronics_OnGiveXP5,
+		OnCreate:MDDismantle_OnCreate,
+        Time:30.0,
+        Category:Electrical,
+    }
+
+    recipe Make Wooden Fishing Net
+    {
+        TreeBranch=1,
+        Twigs=10,
+		Stone=1,
+
+        Result:WoodenFishingNet,
+		SkillRequired:Fishing=2,
+        Time:150.0,
+        Category:Fishing,
+    }
+}

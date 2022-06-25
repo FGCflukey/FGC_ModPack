@@ -1,0 +1,2040 @@
+module legourmet
+{
+	imports
+	{
+		Base
+	}
+
+    /************Recipes************/
+
+	recipe Take honey
+	{
+	    BeeNest,
+        EmptyJar,           
+	    JarLid,
+		keep Spoon/WoodenStick/TreeBranch,  
+
+	    Result:HoneyJar,
+	    OnGiveXP:Give3CookingXP,
+	    Time:30.0,
+	    Category:Survivalist,
+	}
+	recipe Put rice in a packet
+	{
+	   RicePlant=10,
+
+	   Result:Rice,
+	   OnTest:riceplantrotten_TestIsValid,
+	   Time:50.0,
+	   Category:Cooking,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	}
+
+	recipe Put peas in a packet
+	{
+	   Peas2=2,
+
+	   Result:Peas,
+	   OnCreate:putpeasinpackets_OnCreate,
+	   Time:50.0,
+	   Category:Cooking,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	}
+
+	recipe Make Flour
+	{
+	   keep [Recipe.GetItemTypes.MortarPestle],
+	   Wheat=25,
+	   EmptySandbag=1,
+
+	   Result:Flour,
+	   OnTest:wheatrotten_TestIsValid,
+	   Time:500.0,
+	   Category:Cooking,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   NeedToBeLearn:true,
+	}
+
+	recipe Make CornFlour
+	{
+	   keep [Recipe.GetItemTypes.MortarPestle],
+	   Corn=25,
+
+	   Result:Cornflour,
+	   OnTest:Cornflour_TestIsValid,
+	   Time:500.0,
+	   Category:Cooking,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   NeedToBeLearn:true,
+	}
+
+	recipe Take Wheat Seeds
+	{
+	   Wheat=1,
+
+	   Result:legourmetfarming.WheatSeed=5,
+	   OnTest:wheatrotten_TestIsValid,
+	   Time:20.0,
+	   Category:Farming,
+	   OnGiveXP:OneFarmXP_OnGiveXP,
+	}
+
+	recipe Open empty jar
+	{
+	   EmptyJar2,
+
+	   Result:EmptyJar,
+	   OnCreate:ReturnJarLid_OnCreate,
+	   Time:50.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	}
+
+	recipe Make peanut powder
+	{
+	   Peanuts=10,
+	   MortarPestle,
+
+	   Result:Peanutpowder,
+	   Time:100.0,
+	   Category:Cooking,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	}
+
+	recipe Make homemade peanut butter
+	{
+	   EmptyJar,
+	   JarLid,
+	   Peanutpowder,
+	   Oil;2,
+	   Honey;5,
+	   Salt;1,
+
+	   Result:HMPeanutButter,
+	   OnCreate:Onmakepeanutbutter_OnCreate,
+	   Time:300.0,
+	   Category:Cooking,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   NeedToBeLearn:true,
+	}
+
+	recipe Make brine
+	{
+	   Salt;5,
+	   destroy WaterPot,
+
+	   Result:Brine,
+	   Time:150.0,
+	   Category:Cooking,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	}
+
+	recipe Pour milk in Saucepan
+	{
+	   [Recipe.GetItemTypes.Milk];10,
+	   Saucepan,
+
+	   Result:SaucepanMilk,
+	   Sound:GetWater,
+	   Time:50.0,
+	   Category:Cooking,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	}
+
+	recipe Make cheese preparation
+	{
+	   SaucepanMilk,
+	   LacticFerment=1,
+	   EdibleDyeYellow=1,
+	   keep Spoon,
+
+	   Result:CheesePreparation,
+	   SkillRequired:Cooking=5,
+	   OnTest:Cheeseprep_TestIsValid,
+	   Time:500.0,
+	   Category:Cooking,
+	   OnGiveXP:Give3CookingXP,
+	   NeedToBeLearn:true,
+	   Tooltip:Tooltip_Recipe_SaucepanMilk,
+	}
+
+	recipe Make cheese preparation2
+	{
+	   SaucepanMilk,
+	   LacticFerment=1,
+	   EdibleDyeOrange=1,
+	   keep Spoon,
+
+	   Result:CheesePreparation2,
+	   SkillRequired:Cooking=4,
+	   OnTest:Cheeseprep_TestIsValid,
+	   Time:500.0,
+	   Category:Cooking,
+	   OnGiveXP:Give3CookingXP,
+	   NeedToBeLearn:true,
+	   Tooltip:Tooltip_Recipe_SaucepanMilk,
+	}
+
+	recipe Rest and make cheese
+	{
+	   CheesePreparation,
+	   CheeseMoldEmpty,
+	   Brine,
+
+	   Result:CheeseMoldFull,
+	   SkillRequired:Cooking=5,
+	   OnCreate:Returnpotsaucepan_OnCreate,
+	   Time:5000.0,
+	   Category:Cooking,
+	   OnGiveXP:Give10CookingXP,
+	}
+
+	recipe Rest and make cheese in bar
+	{
+	   CheesePreparation2,
+	   CheeseMoldEmpty2,
+	   Brine,
+
+	   Result:CheeseMoldFull2,
+	   SkillRequired:Cooking=4,
+	   OnCreate:Returnpotsaucepan_OnCreate,
+	   Time:5000.0,
+	   Category:Cooking,
+	   OnGiveXP:Give10CookingXP,
+	}
+
+	recipe Take cheese from mold
+	{
+	   CheeseMoldFull,
+	   keep KitchenKnife/HuntingKnife,
+
+	   Result:RCheese1,
+	   OnTest:CheeseFinish_TestIsValid,
+	   OnCreate:Returncheesemold_OnCreate,
+	   Time:100.0,
+	   Category:Cooking,
+	   OnGiveXP:Give10CookingXP,
+	}
+
+	recipe Take barcheese from mold
+	{
+	   CheeseMoldFull2,
+	   keep KitchenKnife/HuntingKnife,
+
+	   Result:RCheese2,
+	   OnTest:CheeseFinish_TestIsValid,
+	   OnCreate:Returncheesemold2_OnCreate,
+	   Time:100.0,
+	   Category:Cooking,
+	   OnGiveXP:Give10CookingXP,
+	}
+
+	recipe Paint cheese
+	{
+	   RCheese1,
+	   EdibleDyeRed=1,
+	   Water,
+	   keep KitchenBrush,
+
+	   Result:HandmadeCheese,
+	   OnCreate:Paintcheese_OnCreate,
+	   Time:500.0,
+	   Category:Cooking,
+	   OnGiveXP:Give10CookingXP,
+	   NeedToBeLearn:true,
+	   AnimNode:Disassemble,
+       Prop1:KitchenBrush,
+       Prop2:RCheese1,
+	}
+
+    recipe Cut cheese
+    {
+        keep KitchenKnife/HuntingKnife,
+        HandmadeCheese,
+
+        Result:Cheese=10,
+        Sound:SliceMeat,
+        Time:250.0,
+        OnCreate:CutCheese_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Cut cheese2
+    {
+        keep KitchenKnife/HuntingKnife,
+        RCheese2,
+
+        Result:Processedcheese=10,
+        Sound:SliceMeat,
+        Time:250.0,
+        OnCreate:CutCheese2_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+    }
+
+	/*** Cheese3 ***/
+
+    recipe Make Citric Mug
+    {
+        keep Spoon,
+        destroy WaterMug,
+		CitricAcid=1,
+
+        Result:CitricMug,
+        Time:100.0,
+        Category:Cooking,
+        OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make Citric Mug
+    {
+        keep Spoon,
+        destroy WaterMugRed,
+		CitricAcid=1,
+
+        Result:CitricMugRed,
+        Time:100.0,
+        Category:Cooking,
+        OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make Citric Mug
+    {
+        keep Spoon,
+        destroy WaterMugWhite,
+		CitricAcid=1,
+
+        Result:CitricMugWhite,
+        Time:100.0,
+        Category:Cooking,
+        OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make Citric Mug
+    {
+        keep Spoon,
+        destroy WaterMugSpiffo,
+		CitricAcid=1,
+
+        Result:CitricMugSpiffo,
+        Time:100.0,
+        Category:Cooking,
+        OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make Citric Mug
+    {
+        keep Spoon,
+        destroy WaterTeacup,
+		CitricAcid=1,
+
+        Result:CitricMugTea,
+        Time:100.0,
+        Category:Cooking,
+        OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+	recipe Make cheese preparation3
+	{
+	   SaucepanMilk,
+	   LacticFerment=1,
+	   CitricMug/CitricMugRed/CitricMugWhite/CitricMugSpiffo/CitricMugTea,
+	   EdibleDyeYellow=1,
+	   keep Spoon,
+
+	   Result:CheesePreparation3,
+	   SkillRequired:Cooking=5,
+	   OnTest:Cheeseprep_TestIsValid,
+	   Time:500.0,
+	   Category:Cooking,
+	   OnGiveXP:Give3CookingXP,
+	   NeedToBeLearn:true,
+	   Tooltip:Tooltip_Recipe_SaucepanMilk,
+	}
+
+	recipe Rest and make cheese 3
+	{
+	   CheesePreparation3,
+	   CheeseMoldEmpty3,
+	   Brine,
+
+	   Result:CheeseMoldFull3,
+	   SkillRequired:Cooking=5,
+	   OnCreate:Returnpotsaucepan_OnCreate,
+	   Time:500.0,
+	   Category:Cooking,
+	   OnGiveXP:Give3CookingXP,
+	}
+
+	recipe Take mozzarella from mold
+	{
+	   CheeseMoldFull3,
+	   keep KitchenKnife/HuntingKnife,
+
+	   Result:RCheese3,
+	   OnCreate:Returncheesemold3_OnCreate,
+	   OnTest:CheeseFinish_TestIsValid,
+	   Time:100.0,
+	   Category:Cooking,
+	   OnGiveXP:Give10CookingXP,
+	}
+
+    recipe Chop mozzarella
+    {
+        keep KitchenKnife/HuntingKnife,
+        RCheese3;20,
+
+        Result:ChoppedCheese,
+        Sound:SliceMeat,
+        Time:50.0,
+        Category:Cooking,
+        OnGiveXP:Give3CookingXP,
+    }
+
+    recipe Make tomato sauce
+    {
+        keep KitchenKnife/HuntingKnife,
+		keep Spoon,
+		Saucepan,
+        farming.Tomato=3,
+		Oil;1,
+		Water=2,
+
+        Result:Tomatosauce,
+		OnTest:tomatorotten_TestIsValid,
+        Time:100.0,
+        Category:Cooking,
+        OnGiveXP:Give3CookingXP,
+    }
+
+    recipe Make tomato sauce 2
+    {
+		keep Spoon,
+		Saucepan,
+        CannedTomatoOpen=2,
+		Oil;1,
+		Water=2,
+
+        Result:Tomatosauce,
+		OnTest:tomato2rotten_TestIsValid,
+        Time:100.0,
+        Category:Cooking,
+        OnGiveXP:Give3CookingXP,
+    }
+
+    recipe Fill Honey
+    {
+		keep Spoon,
+		HoneyEmpty,
+        HoneyJar,
+
+        Result:Honey,
+		OnTest:Honeyrotten_TestIsValid,
+		OnCreate:ReturnCompleteJar_Oncreate,
+        Time:100.0,
+        Category:Cooking,
+        OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Fill Ketchup
+    {
+		keep Spoon,
+		KetchupEmpty,
+        HandmadeKetchup,
+
+        Result:Ketchup,
+		OnTest:Ketchuprotten_TestIsValid,
+		OnCreate:ReturnCompleteJar_Oncreate,
+        Time:100.0,
+        Category:Cooking,
+        OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Fill Marinara
+    {
+		keep Spoon,
+		MarinaraEmpty,
+        HandmadeMarinara,
+
+        Result:Marinara,
+		OnTest:Marinararotten_TestIsValid,
+		OnCreate:ReturnCompleteJar_Oncreate,
+        Time:100.0,
+        Category:Cooking,
+        OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Fill Mustard
+    {
+		keep Spoon,
+		MustardEmpty,
+        Homemademustard,
+
+        Result:Mustard,
+		OnTest:Mustardrotten_TestIsValid,
+		OnCreate:ReturnCompleteJar_Oncreate,
+        Time:100.0,
+        Category:Cooking,
+        OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Fill Mayonnaise
+    {
+		keep Spoon,
+		farming.MayonnaiseEmpty,
+        HandmadeMayonnaise,
+
+        Result:farming.MayonnaiseFull,
+		OnTest:Mayonnaiserotten_TestIsValid,
+		OnCreate:ReturnCompleteJar_Oncreate,
+        Time:100.0,
+        Category:Cooking,
+        OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Fill PeanutButter
+    {
+		keep Spoon,
+		PeanutButterEmpty,
+        HMPeanutButter,
+
+        Result:PeanutButter,
+		OnTest:PeanutButterrotten_TestIsValid,
+		OnCreate:ReturnCompleteJar_Oncreate,
+        Time:100.0,
+        Category:Cooking,
+        OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make Pizza Dough
+    {
+       Water=2,
+       Flour=4,
+       Yeast=1,
+	   Oil;1,
+       Salt;2,
+
+       Result:PizzaDough,
+       NeedToBeLearn:true,
+       Time:50.0,
+       Category:Cooking,
+       OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Make Pizza Preparation
+    {
+	   keep RollingPin,
+       PizzaDough,
+	   BakingPan,
+       Tomatosauce,
+       ChoppedCheese,
+	   Oil;1,
+
+       Result:PizzaPrep,
+       NeedToBeLearn:true,
+	   OnCreate:MakePizza_OnCreate,
+       Time:200.0,
+       Category:Cooking,
+       OnGiveXP:Give20CookingXP,
+    }
+
+    recipe Cut pizza
+    {
+        keep KitchenKnife/HuntingKnife,
+        PizzaRaw,
+
+        Result:Pizza=8,
+        Sound:SliceMeat,
+		OnTest:CutPizza_TestIsValid,
+		OnCreate:CutPizza_OnCreate,
+        Time:200.0,
+        Category:Cooking,
+        OnGiveXP:Give3CookingXP,
+    }
+
+    recipe Make Jar of Onions
+    {
+        EmptyJar,
+        JarLid,
+        Onion=5,
+        Water=10,
+        Vinegar=2,
+        [Recipe.GetItemTypes.Sugar];1,
+
+        Result:CannedOnion,
+        Time:100.0,
+        OnCreate:CannedFood_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Open Jar of Onions
+    {
+        CannedOnion,
+
+        Result:Onion=5,
+        Time:30.0,
+        OnCreate:OpenCannedFood_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Recipe.OnGiveXP.None,
+    }
+	
+    recipe Open box of Cupcakes molds
+    {
+        MoldesMagBox,
+
+        Result:Cupcakeenv=10,
+        Sound:PutItemInBag,
+        Time:5.0,
+		Category:Cooking,
+    }
+
+    recipe Put Cupcakes molds in a box
+    {
+        Cupcakeenv=10,
+
+        Result:MoldesMagBox,
+        Sound:PutItemInBag,
+        Time:5.0,
+		Category:Cooking,
+    }
+
+    recipe Open salchicha pack
+    {
+        PackSalchichas,
+
+        Result:Salchicha=6,
+        Sound:PutItemInBag,
+        Time:50.0,
+		Category:Cooking,
+    }
+
+    recipe Put Salchicha in pack
+    {
+		Salchicha=6,
+
+        Result:PackSalchichas,
+		OnTest:boilsausages_TestIsValid,
+        Sound:PutItemInBag,
+        Time:50.0,
+		Category:Cooking,
+    }
+
+    recipe Slice Salchicha
+    {
+        keep KitchenKnife/HuntingKnife,
+        Salchicha,
+
+        Result:Salchichabits,
+        Sound:AddItemInRecipe,
+        Time:100.0,
+		OnGiveXP:Give1or3CookingXP,
+		Category:Cooking,
+    }
+
+    recipe Craft Manual Sausage Maker
+    {
+        keep [Recipe.GetItemTypes.Screwdriver],
+        ManualMeatMincer,
+		MetalPipe,
+
+        Result:ManualMeatMincerS,
+		OnCreate:OnSavePipeCondition,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:100.0,
+		Category:Cooking,
+    }
+
+    recipe Take pipe from manual mincer
+    {
+		keep [Recipe.GetItemTypes.Screwdriver],
+        ManualMeatMincerS,
+
+        Result:ManualMeatMincer,
+		OnCreate:Ontakepipe,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:100.0,
+		Category:Cooking,
+    }
+
+    recipe Craft Electric Sausage Maker
+    {
+        keep [Recipe.GetItemTypes.Screwdriver],
+        ElectricMeatMincer,
+		MetalPipe,
+
+        Result:ElectricMeatMincerS,
+		OnCreate:OnSavePipeCondition,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:100.0,
+		Category:Cooking,
+    }
+
+    recipe Take pipe from electric mincer
+    {
+		keep [Recipe.GetItemTypes.Screwdriver],
+        ElectricMeatMincerS,
+
+        Result:ElectricMeatMincer,
+		OnCreate:Ontakepipe,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:100.0,
+		Category:Cooking,
+    }
+
+
+    /************ Cupcake ************/
+
+    recipe Make CupCake Batter
+    {
+	   keep Spoon,
+       Bowl,
+       Flour=2,
+       Butter;5,
+       [Recipe.GetItemTypes.Sugar];2,
+       [Recipe.GetItemTypes.Egg],
+       [Recipe.GetItemTypes.Milk];2,
+
+       Result:CupcakeBatter,
+	   Sound:shakebowl,
+       Time:500.0,
+       Category:Cooking,
+       OnGiveXP:Give10CookingXP,
+	   NeedToBeLearn:true,
+    }
+
+    recipe Place Cupcake in Baking Pan
+    {
+	   keep Spoon,
+       CupcakeBatter,
+	   Cupcakeenv=6,
+       RoastingPan,
+
+       Result:CupcakePrep,
+	   OnTest:Cupcakebatterrotten_TestIsValid,
+       OnCreate:OnPutCupCakeBatterInRoasting,
+       Time:30.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Take Cupcakes
+    {
+        CupcakeRaw,
+
+        Result:HandMadeCupcake=6,
+        Time:50.0,
+		OnTest:Cupcakerawcooked_TestIsValid,
+        OnCreate:SliceCupcake_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give1or3CookingXP,
+    }
+
+    /************ Waffle ************/
+
+    recipe Make Waffle Batter
+    {
+	   keep Spoon,
+       Bowl,
+       Flour=2,
+       Butter;3,
+       Salt;1,
+       [Recipe.GetItemTypes.Egg],
+       [Recipe.GetItemTypes.Milk];2,
+
+       Result:WafflesBatter,
+	   Sound:shakebowl,
+       Time:500.0,
+       Category:Cooking,
+       OnGiveXP:Give10CookingXP,
+	   NeedToBeLearn:true,
+    }
+
+    recipe Add Waffle Batter
+    {
+	   keep Spoon,
+       WafflesBatter;2,
+       WaffleMachine,
+
+       Result:WafflesPrep,
+       Time:10.0,
+       Category:Cooking,
+       OnGiveXP:Give1or3CookingXP,
+	   NeedToBeLearn:false,
+    }
+
+    recipe Cut Chocolate
+    {
+        keep KitchenKnife/HuntingKnife,
+        Chocolate,
+
+        Result:ChocolateChips=10,
+		Sound:AddItemInRecipe,
+        Time:20.0,
+		OnCreate:SliceChocolate_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make Whipped Cream
+    {
+        keep Spoon,
+		Bowl,
+		Butter;2,
+		[Recipe.GetItemTypes.Sugar];1,
+        [Recipe.GetItemTypes.Milk];2,
+
+        Result:WhippedCream,
+		Sound:shakebowl,
+        Time:500.0,
+        Category:Cooking,
+        OnGiveXP:Give1or3CookingXP,
+		NeedToBeLearn:true,
+    }
+
+    recipe Make Milk
+    {
+        keep Spoon,
+		MilkPowder,
+		Water=2,
+
+        Result:Milk,
+        Time:100.0,
+        Category:Cooking,
+        OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make Ketchup
+    {
+	    keep Spoon,
+        EmptyJar,
+        JarLid,
+        farming.Tomato=5,
+        Water=5,
+        Vinegar=1,
+        [Recipe.GetItemTypes.Sugar];1,
+		Salt;2,
+
+        Result:HandmadeKetchup,
+		OnTest:tomatorotten_TestIsValid,
+        Time:500.0,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+		NeedToBeLearn:true,
+    }
+
+    recipe Make Marinara
+    {
+	    keep Spoon,
+        EmptyJar,
+        JarLid,
+		Onion=1,
+        farming.Tomato=4,
+		legourmet.Garlic;2,
+        legourmet.Winea;1,
+		Salt;2,
+
+        Result:HandmadeMarinara,
+		OnTest:tomatorotten_TestIsValid,
+        Time:500.0,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+		NeedToBeLearn:true,
+    }
+
+    recipe Make Mayonnaise
+    {
+	    keep Spoon,
+        EmptyJar,
+        JarLid,
+        [Recipe.GetItemTypes.Egg],
+		Lemon=1,
+		Oil;2,
+		Salt;2,
+
+        Result:HandmadeMayonnaise,
+        Time:500.0,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+		NeedToBeLearn:true,
+    }
+
+    recipe Make Mustard
+    {
+	    keep Spoon,
+		EmptyJar,
+        JarLid,
+		MustardSeeds=5,
+        Vinegar=2,
+		Honey;5,
+		legourmet.Winea;2,
+		Salt;2,
+
+        Result:Homemademustard,
+        Time:500.0,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+		NeedToBeLearn:true,
+    }
+
+    recipe Make Cookie Chips
+    {
+	    keep KitchenKnife/HuntingKnife,
+        CookieChocolateChip/CookieJelly,
+
+        Result:CookieChips,
+		Sound:AddItemInRecipe,
+        Time:50.0,
+        Category:Cooking,
+        OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+	recipe Make fried chicken
+    {
+	    Chicken=2,
+		Pan,
+		Oil;2,
+		Flour=1,
+
+        Result:ChickenPan,
+        Time:100.0,
+		OnCreate:OnPutChickenInPan,
+        Category:Cooking,
+        OnGiveXP:Give1or3CookingXP,
+    }
+
+	recipe Take fried chicken
+    {
+	    ChickenPan,
+
+        Result:ChickenFried=2,
+        Time:100.0,
+		OnTest:ChickenPan_TestIsValid,
+		OnCreate:OnTakeChickenPan,
+        Category:Cooking,
+        OnGiveXP:Give1or3CookingXP,
+    }
+
+    /************ Sausage ************/
+
+	recipe Make sausages
+    {
+	    keep ManualMeatMincerS,
+		sausagepreparationRaw,
+        HogCasings,
+
+        Result:Salchicha=6,
+		OnCreate:OnPutCakeBatterInBaking,
+		Sound:AddItemInRecipe,
+        Time:250.0,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+		NeedToBeLearn:true,
+    }
+
+	recipe Make meatpatty
+    {
+	    MincedMeat,
+
+        Result:MeatPatty=2,
+		OnCreate:OnmakePatty,
+		Sound:AddItemInRecipe,
+        Time:250.0,
+        Category:Cooking,
+/**        OnGiveXP:Give10CookingXP, **/
+/**		NeedToBeLearn:true, **/
+    }
+
+    recipe Make Hotdog Bread Dough
+    {
+       keep RollingPin,
+       Water=1,
+       Flour=1,
+	   SaucepanMilk;5,
+	   Oil;2,
+       Salt;1,
+       Yeast,
+
+       Result:Hotdogbreaddough=6,
+	   OnTest:Cheeseprep_TestIsValid,
+       NeedToBeLearn:true,
+       Time:500.0,
+       Category:Cooking,
+       OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Make sausages for boil
+    {
+       Salchicha=6,
+	   destroy WaterSaucepan,
+
+       Result:SaucepanSalchicha,
+	   OnTest:boilsausages_TestIsValid,
+       Time:50.0,
+       Category:Cooking,
+       OnGiveXP:Give1or3CookingXP,
+    }
+
+    recipe Make Hotdog
+    {
+       Hotdogbreaddough,
+       Salchicha,
+
+       Result:Hotdog,
+	   OnTest:Hotdog_TestIsValid,
+       Time:100.0,
+       Category:Cooking,
+       OnGiveXP:Give1CookingXP,
+    }
+
+    recipe Make Hotdogs
+    {
+       Hotdogbreaddough=6,
+       SaucepanSalchicha,
+
+       Result:Hotdog=6,
+	   OnTest:Hotdog_TestIsValid,
+	   OnCreate:Returnsaucepan_OnCreate,
+       Time:100.0,
+       Category:Cooking,
+       OnGiveXP:Give10CookingXP,
+    }
+
+	recipe Open Marshmallow Package
+	{
+	   destroy MarshmallowPackage,
+
+	   Result:Marshmallows=10,
+	   Time:5.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   Category:Cooking,
+	}
+
+	recipe Make caramel
+	{
+       Saucepan,
+	   [Recipe.GetItemTypes.Sugar];3,
+	   Water=3,
+
+	   Result:Saucepancaramel,
+	   Time:5.0,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   Category:Cooking,
+	}
+
+	recipe Make marshmallows
+	{
+	   destroy Gelatine,
+	   destroy Saucepancaramel,
+	   Bowl,
+	   Salt;2,
+	   keep Spoon,
+
+	   Result:MarshmallowBowl,
+	   NeedToBeLearn:true,
+	   OnTest:marshmallow_TestIsValid,
+	   OnCreate:MakePizza_OnCreate,
+	   Time:150.0,
+	   OnGiveXP:Give10CookingXP,
+	   Category:Cooking,
+	}
+
+	recipe cut marshmallows
+	{
+	   keep KitchenKnife/HuntingKnife,
+	   MarshmallowBowl,
+
+	   Result:Marshmallows=10,
+	   OnCreate:ReturnBowl_OnCreate,
+	   Time:150.0,
+	   OnGiveXP:Give1CookingXP,
+	   Category:Cooking,
+	}
+
+	recipe Make modjeska
+	{
+	   Marshmallows,
+	   Saucepancaramel;1,
+
+	   Result:HomemadeModjeska,
+	   NeedToBeLearn:true,
+	   OnTest:marshmallow_TestIsValid,
+	   Time:150.0,
+	   OnGiveXP:Give3CookingXP,
+	   Category:Cooking,
+	}
+
+	/************Recipes 2************/
+
+	recipe Grab a Strip
+    {
+        GumPack=1,
+
+        Result:legourmet.Gum=1,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:5.0,
+    }
+
+	recipe Grab a Strip
+    {
+        GumPack1=1,
+
+        Result:legourmet.Gum1=1,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:5.0,
+    }
+
+	recipe Grab a Strip
+    {
+        GumPack2=1,
+
+        Result:legourmet.Gum2=1,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:5.0,
+    }
+
+	/************************Classic Soup************************/
+
+	recipe Open Canned Soup
+    {
+       CannedSoupClassic,
+       keep TinOpener,
+
+       Result:legourmet.CannedSoupClassicOpen,
+       Time:10.0,
+	   Category:Cooking,
+    }
+
+    recipe Disinfect Bandage
+    {
+        destroy RippedSheets,
+        VodkaFull;10,
+
+        Result:AlcoholRippedSheets,
+        Time:40.0,
+        Category:Health,
+    }
+
+    recipe Disinfect Bandage
+    {
+        destroy Bandage,
+        VodkaFull;10,
+
+        Result:AlcoholBandage,
+        Time:40.0,
+        Category:Health,
+    }
+
+	recipe Open Wine
+	{
+	   Wine,
+	   keep Corkscrew,
+
+	   Result:legourmet.Winea,
+       OnGiveXP:LGNoExpGain,
+	   OnCreate:LGReturnCork,
+	   Sound:openwine,
+	   Time:70.0,
+	   Category:Cooking,
+	}
+
+	recipe Open Wine
+	{
+	   Wine2,
+	   keep Corkscrew,
+
+	   Result:legourmet.Wine2a,
+       OnGiveXP:LGNoExpGain,
+	   OnCreate:LGReturnCork,
+	   Sound:openwine,
+	   Time:70.0,
+	   Category:Cooking,
+	}
+
+	recipe Open Wine
+	{
+	   Wine3,
+	   keep Corkscrew,
+
+	   Result:legourmet.Wine3a,
+       OnGiveXP:LGNoExpGain,
+	   OnCreate:LGReturnCork,
+	   Sound:openwine,
+	   Time:70.0,
+	   Category:Cooking,
+	}
+
+	recipe Make energy drink1
+	{
+	   EnergyDrinkEmpty,
+	   legourmet.ColaBottle;2,
+	   Coffee2;6,
+	   [Recipe.GetItemTypes.Sugar];1,
+	   [Recipe.GetItemTypes.Milk];5,
+	   keep Spoon,
+
+	   Result:legourmet.EnergyDrink,
+       OnGiveXP:LG_ThreeXP_Cooking,
+	   SkillRequired:Cooking=2,
+	   Time:200.0,
+	   Category:Drinks,
+	   NeedToBeLearn:true,
+	}
+
+	recipe Make energy drink2
+	{
+	   EnergyDrink2Empty,
+	   legourmet.ColaBottle;2,
+	   Coffee2;6,
+	   Sugar=1,
+	   [Recipe.GetItemTypes.Milk];5,
+	   keep Spoon,
+
+	   Result:legourmet.EnergyDrink2,
+       OnGiveXP:LG_ThreeXP_Cooking,
+	   SkillRequired:Cooking=2,
+	   Time:200.0,
+	   Category:Drinks,
+	   NeedToBeLearn:true,
+	}
+
+	recipe Make energy drink3
+	{
+       EnergyDrink3Empty,
+	   legourmet.ColaBottle;2,
+	   Coffee2;6,
+	   [Recipe.GetItemTypes.Sugar];1,
+	   [Recipe.GetItemTypes.Milk];5,
+	   keep Spoon,
+
+	   Result:legourmet.EnergyDrink3,
+       OnGiveXP:LG_ThreeXP_Cooking,
+	   SkillRequired:Cooking=2,
+	   Time:200.0,
+	   Category:Drinks,
+	   NeedToBeLearn:true,
+	}
+
+	recipe Make energy drink4
+	{
+	   EnergyDrink4Empty,
+	   legourmet.ColaBottle;2,
+	   Coffee2;6,
+	   [Recipe.GetItemTypes.Sugar];1,
+	   [Recipe.GetItemTypes.Milk];5,
+	   keep Spoon,
+
+	   Result:legourmet.EnergyDrink4,
+       OnGiveXP:LG_ThreeXP_Cooking,
+	   SkillRequired:Cooking=2,
+	   Time:200.0,
+	   Category:Drinks,
+	   NeedToBeLearn:true,
+	}
+
+	recipe Make energy drink5
+	{
+	   EnergyDrink5Empty,
+	   legourmet.ColaBottle;2,
+       Coffee2;6,
+	   [Recipe.GetItemTypes.Sugar];1,
+	   [Recipe.GetItemTypes.Milk];5,
+	   keep Spoon,
+
+	   Result:legourmet.EnergyDrink5,
+       OnGiveXP:LG_ThreeXP_Cooking,
+	   SkillRequired:Cooking=2,
+	   Time:200.0,
+	   Category:Drinks,
+	   NeedToBeLearn:true,
+	}
+
+	recipe Make natural energy drink
+	{
+	   EnergyDrinkBottleEmpty,
+	   Ginseng=3,
+       Coffee2;6,
+	   [Recipe.GetItemTypes.Sugar];1,
+	   [Recipe.GetItemTypes.Milk];5,
+	   keep Spoon,
+
+	   Result:legourmet.NaturalEnergyDrinkBottle,
+       OnGiveXP:LG_ThreeXP_Cooking,
+	   SkillRequired:Cooking=5,
+	   Time:200.0,
+	   Category:Drinks,
+	   NeedToBeLearn:true,
+	}
+
+    recipe Make Milk Cream
+    {
+        keep Spoon,
+		Bowl,
+		[Recipe.GetItemTypes.Sugar];1,
+        [Recipe.GetItemTypes.Milk];4,
+
+        Result:MilkCream,
+		Sound:shakebowl,
+        Time:500.0,
+        Category:Cooking,
+        OnGiveXP:Give1or3CookingXP,
+		NeedToBeLearn:true,
+    }
+
+    recipe Make Homemade Butter
+    {
+        keep Spoon,
+        MilkCream,
+
+        Result:Butter,
+		Sound:shakebowl,
+        Time:500.0,
+		OnCreate:Butter_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give1or3CookingXP,
+		NeedToBeLearn:true,
+    }
+
+    recipe Make Salt
+    {
+        keep [Recipe.GetItemTypes.MortarPestle],
+        SaltStone=5,
+		SaltEmpty/PepperEmpty,
+
+        Result:Salt,
+        Time:60.0,
+        Category:Cooking,
+    }
+
+    recipe Make Pepper
+    {
+        keep [Recipe.GetItemTypes.MortarPestle],
+        Pepperplant=5,
+		SaltEmpty/PepperEmpty,
+
+        Result:Pepper,
+        Time:60.0,
+        Category:Cooking,
+    }
+	
+/****** Cafe ******/
+
+    recipe Put coffee seeds in baking pan
+    {
+       legourmetfarming.CafeSeed=100,
+	   BakingPan,
+
+       Result:CoffeePan,
+       Time:50.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Take toasted coffee seeds
+    {
+	   CoffeePan,
+
+       Result:ToastedCafeSeeds,
+	   OnTest:LgGrindCoffee_TestIsValid,
+	   OnCreate:LgTakeCoffee_OnCreate,
+       Time:50.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+/****** Latas ******/
+	
+	recipe Force Canned Soup
+    {
+       TinnedSoup,
+       keep HuntingKnife/KitchenKnife/Screwdriver/Axe,
+
+       Result:TinnedSoupOpen,
+	   OnTest:LgCanned_TestIsValid,
+	   OnCreate:LGOpenCannedFood2_OnCreate,
+       Time:160.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+	recipe Force Canned Beans
+	{
+	   TinnedBeans,
+	   keep HuntingKnife/KitchenKnife/Screwdriver/Axe,
+
+	   Result:OpenBeans,
+	   OnTest:LgCanned_TestIsValid,
+	   OnCreate:LGOpenCannedFood2_OnCreate,
+	   Time:160.0,
+	   Category:Cooking,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	}
+
+	recipe Force Dog Food
+	{
+	   Dogfood,
+	   keep HuntingKnife/KitchenKnife/Screwdriver/Axe,
+
+	   Result:DogfoodOpen,
+	   OnTest:LgCanned_TestIsValid,
+	   OnCreate:LGOpenCannedFood2_OnCreate,
+	   Time:160.0,
+	   Category:Cooking,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	}
+
+    recipe Force Canned Corn
+    {
+       CannedCorn,
+       keep HuntingKnife/KitchenKnife/Screwdriver/Axe,
+
+       Result:CannedCornOpen,
+	   OnTest:LgCanned_TestIsValid,
+	   OnCreate:LGOpenCannedFood2_OnCreate,
+       Time:160.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Force Canned Bolognese
+    {
+       CannedBolognese,
+       keep HuntingKnife/KitchenKnife/Screwdriver/Axe,
+
+       Result:CannedBologneseOpen,
+	   OnTest:LgCanned_TestIsValid,
+	   OnCreate:LGOpenCannedFood2_OnCreate,
+       Time:160.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Force Canned Chili
+    {
+       CannedChili,
+       keep HuntingKnife/KitchenKnife/Screwdriver/Axe,
+
+       Result:CannedChiliOpen,
+	   OnTest:LgCanned_TestIsValid,
+	   OnCreate:LGOpenCannedFood2_OnCreate,
+       Time:160.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Force Canned Mushroom Soup
+    {
+       CannedMushroomSoup,
+       keep HuntingKnife/KitchenKnife/Screwdriver/Axe,
+
+       Result:CannedMushroomSoupOpen,
+	   OnTest:LgCanned_TestIsValid,
+	   OnCreate:LGOpenCannedFood2_OnCreate,
+       Time:160.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Force Canned Peas
+    {
+       CannedPeas,
+       keep HuntingKnife/KitchenKnife/Screwdriver/Axe,
+
+       Result:CannedPeasOpen,
+	   OnTest:LgCanned_TestIsValid,
+	   OnCreate:LGOpenCannedFood2_OnCreate,
+       Time:160.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Force Canned Potato
+    {
+       CannedPotato2,
+       keep HuntingKnife/KitchenKnife/Screwdriver/Axe,
+
+       Result:CannedPotatoOpen,
+	   OnTest:LgCanned_TestIsValid,
+	   OnCreate:LGOpenCannedFood2_OnCreate,
+       Time:160.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Force Canned Tomato
+    {
+       CannedTomato2,
+       keep HuntingKnife/KitchenKnife/Screwdriver/Axe,
+
+       Result:CannedTomatoOpen,
+	   OnTest:LgCanned_TestIsValid,
+	   OnCreate:LGOpenCannedFood2_OnCreate,
+       Time:160.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Force Canned Carrots
+    {
+       CannedCarrots2,
+       keep HuntingKnife/KitchenKnife/Screwdriver/Axe,
+
+       Result:CannedCarrotsOpen,
+	   OnTest:LgCanned_TestIsValid,
+	   OnCreate:LGOpenCannedFood2_OnCreate,
+       Time:160.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Force Canned Fruit Cocktail
+    {
+       CannedFruitCocktail,
+       keep HuntingKnife/KitchenKnife/Screwdriver/Axe,
+
+       Result:CannedFruitCocktailOpen,
+	   OnTest:LgCanned_TestIsValid,
+	   OnCreate:LGOpenCannedFood2_OnCreate,
+       Time:160.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Force Canned Peaches
+    {
+       CannedPeaches,
+       keep HuntingKnife/KitchenKnife/Screwdriver/Axe,
+
+       Result:CannedPeachesOpen,
+	   OnTest:LgCanned_TestIsValid,
+	   OnCreate:LGOpenCannedFood2_OnCreate,
+       Time:160.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Force Canned Pineapple
+    {
+       CannedPineapple,
+       keep HuntingKnife/KitchenKnife/Screwdriver/Axe,
+
+       Result:CannedPineappleOpen,
+	   OnTest:LgCanned_TestIsValid,
+	   OnCreate:LGOpenCannedFood2_OnCreate,
+       Time:160.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+	recipe Put Cigarretes in a Box
+	{
+	   Cigarettes=20,
+
+	   Result:CigarettesPack,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   Time:30.0,
+	}
+
+	recipe Open Cigarretes Box
+	{
+	   CigarettesPack,
+	   Result:Cigarettes=1,
+		
+	   OnCreate:CigarretesPack_OnCreate,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   Time:30.0,
+	}
+
+    recipe Make Cane Pile
+    {
+		Sugarcane=20,
+		SheetRope=2,
+
+        Result:SugarcanePile,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:200.0,
+		Category:Survivalist,
+    }
+
+    recipe Take Canes from Pile
+    {
+		SugarcanePile/SugarcanePileDry,
+
+        Result:SugarcaneDry=20,
+		OnCreate:Returnsheetrope_OnCreate,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnTest:TakeCanes_TestIsValid,
+        Time:200.0,
+		Category:Survivalist,
+    }
+
+    recipe Make Dry Cane Pile
+    {
+		SugarcaneDry=20,
+		SheetRope=2,
+
+        Result:SugarcanePileDry,
+		OnCreate:AddDryData_OnCreate,
+		OnGiveXP:Recipe.OnGiveXP.None,
+        Time:200.0,
+		Category:Survivalist,
+    }
+
+/****** RHP Mod ******/
+
+	recipe Open Six Pack Beer
+	{
+	   BeerSixPack1,
+
+	   Result:Beer1=6,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   Time:60.0,
+	   Category:Cooking,
+	}
+
+	recipe Open Six Pack Beer
+	{
+	   BeerSixPack2,
+
+	   Result:Beer2=6,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   Time:60.0,
+	   Category:Cooking,
+	}
+
+	recipe Open Six Pack Beer
+	{
+	   BeerSixPack3,
+
+	   Result:Beer3=6,
+	   OnGiveXP:Recipe.OnGiveXP.None,
+	   Time:60.0,
+	   Category:Cooking,
+	}
+
+    recipe Make Margarita Cocktail
+	{
+	    keep Shaker,
+        MargaritaGlass,  
+        IceCubes,           
+	    SodaBottle;2,
+        WhiteTequila;2,
+        TripleSec;1,
+        Lime,
+        Salt;1,
+
+	    Result:MargaritaCocktail,
+	    OnGiveXP:Give3CookingXP,
+        SkillRequired:Cooking=3,
+        NeedToBeLearn:true,
+		Sound:shaker,
+	    Time:150.0,
+	    Category:Drinks,
+    }
+
+    recipe Make Martini Cocktail
+	{
+	    keep Shaker,
+	    keep CocktailSpoon,
+        MartiniGlass,
+        IceCubes,
+	    Ginebra;2,
+        DryVermouth;1,
+        GreenOlives/GreenOlives2,
+
+	    Result:MartiniCocktail,
+	    OnGiveXP:Give3CookingXP,
+        SkillRequired:Cooking=2,
+        NeedToBeLearn:true,
+		Sound:shaker,
+	    Time:150.0,
+	    Category:Drinks,
+    }
+
+    recipe Open Jar of Olives
+	{
+	    JarOlives/JarOlives2,
+
+	    Result:GreenOlives=20,
+	    OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:OpenCannedFoodOlives_OnCreate,
+	    Time:30.0,
+	    Category:Cooking,
+    }
+
+    recipe Make Jar of Olives
+    {
+        EmptyJar,
+        JarLid,
+        GreenOlives=20,
+        Oil;4,
+        Salt;3,
+
+        Result:JarOlives2,
+        Time:100.0,
+        OnCreate:CannedFood_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Open Jar of Simple Olives
+	{
+	    JarOlives3/JarOlives4,
+
+	    Result:GreenOlives2=20,
+	    OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:OpenCannedFoodOlives2_OnCreate,
+	    Time:30.0,
+	    Category:Cooking,
+    }
+
+    recipe Make Jar of Simple Olives
+    {
+        EmptyJar,
+        JarLid,
+        GreenOlives2=20,
+        Oil;4,
+        Salt;3,
+
+        Result:JarOlives4,
+        Time:100.0,
+        OnCreate:CannedFood_OnCreate,
+        Category:Cooking,
+        OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Make Mojito Cocktail
+	{
+	    keep Shaker,
+        Glass,
+        IceCubes,      
+	    SodaBottle;2,
+        WhiteRum;4,
+        [Recipe.GetItemTypes.Sugar];2,
+        Lime,
+        Mint,
+
+	    Result:MojitoCocktail,
+	    OnGiveXP:Give3CookingXP,
+        SkillRequired:Cooking=2,
+        NeedToBeLearn:true,
+		Sound:shaker,
+	    Time:150.0,
+	    Category:Drinks,
+    }
+
+    recipe Make Cosmopolitan Cocktail
+	{
+	    keep Shaker,
+        keep CocktailSpoon,
+        keep KitchenKnife/ButterKnife/HuntingKnife,
+        MargaritaGlass,  
+        IceCubes,           
+        VodkaFull;2,
+        TripleSec;1,
+        BerryBlack/BerryBlue/BerryGeneric2/BerryGeneric5,
+        Base.Orange/legourmetfarming.NaturalOrange,
+
+	    Result:CosmopolitanCocktail,
+	    OnGiveXP:Give3CookingXP,
+        SkillRequired:Cooking=3,
+        NeedToBeLearn:true,
+		Sound:shaker,
+	    Time:150.0,
+	    Category:Drinks,
+    }
+
+    recipe Make Potato Pan
+    {
+        keep KitchenKnife/HuntingKnife,
+		Pan,
+        farming.Potato=6,
+		Oil;3,
+
+        Result:Potatopan,
+		OnTest:potatorotten_TestIsValid,
+        Time:100.0,
+        Category:Cooking,
+        OnGiveXP:Give3CookingXP,
+    }
+
+    recipe Take fried potatos
+    {
+		keep KitchenKnife/HuntingKnife,
+        Potatopan,
+
+        Result:Fries=6,
+		OnTest:friespotatorotten_TestIsValid,
+		OnCreate:Takefriedpotatos_OnCreate,
+        Time:100.0,
+        Category:Cooking,
+        OnGiveXP:Give3CookingXP,
+    }
+
+    recipe Dismantle WaffleMachine
+    {
+       WaffleMachine,
+       keep Screwdriver,
+
+       Result:ElectronicsScrap=3,
+       Time:30.0,
+       OnGiveXP:DismantleElectronics_OnGiveXP,
+       Category:Electrical,
+    }
+
+    recipe Dismantle ElectricMeatMincer
+    {
+       ElectricMeatMincer,
+       keep Screwdriver,
+
+       Result:ElectronicsScrap=3,
+       Time:30.0,
+       OnGiveXP:DismantleElectronics_OnGiveXP,
+       Category:Electrical,
+    }
+
+    recipe Dismantle ElectricMeatMincerS
+    {
+       ElectricMeatMincerS,
+       keep Screwdriver,
+
+       Result:ElectronicsScrap=3,
+       Time:30.0,
+       OnGiveXP:DismantleElectronics_OnGiveXP,
+       Category:Electrical,
+    }
+
+    recipe Fill cubebox
+    {
+        CubeboxEmpty,
+		Water=3,
+
+        Result:WaterCubebox,
+        Time:100.0,
+        Category:Drinks,
+        OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make Taco Shell
+    {
+       keep RollingPin,
+       Water=1,
+       Cornflour=1,
+	   Pan,
+
+       Result:TacoShellpan,
+       NeedToBeLearn:true,
+       Time:50.0,
+       Category:Cooking,
+       OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Take Taco Shell From Pan
+    {
+       TacoShellpan,
+
+       Result:TacoShell,
+	   OnTest:tacoshellcooked_TestIsValid,
+	   OnCreate:TakeTacoShell_OnCreate,
+       Time:20.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make Tortilla
+    {
+       keep RollingPin,
+       Water=1,
+       Flour=1,
+	   Pan,
+
+       Result:Tortillapan,
+       NeedToBeLearn:true,
+       Time:50.0,
+       Category:Cooking,
+       OnGiveXP:Give10CookingXP,
+    }
+
+    recipe Take Tortilla From Pan
+    {
+       Tortillapan,
+
+       Result:Tortilla,
+	   OnTest:Tortillacooked_TestIsValid,
+	   OnCreate:TakeTortilla_OnCreate,
+       Time:20.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Slice Zucchini
+    {
+	   keep KitchenKnife/HuntingKnife,
+       Zucchini,
+
+       Result:ZucchiniSlice=3,
+
+       Time:20.0,
+       Category:Cooking,
+       OnGiveXP:Give1or3CookingXP,
+    }
+
+    recipe Open box of paper filters
+    {
+        TeaBagBox,
+
+        Result:TeaBagEmpty=50,
+        Sound:PutItemInBag,
+        Time:5.0,
+		Category:Cooking,
+    }
+
+    recipe Put paper filters in a box
+    {
+        TeaBagEmpty=50,
+
+        Result:TeaBagBox,
+        Sound:PutItemInBag,
+        Time:5.0,
+		Category:Cooking,
+    }
+
+    recipe Make Melisa Tea Bag
+    {
+        keep [Recipe.GetItemTypes.MortarPestle],
+		TeaBagEmpty,
+        MelisaHerb=5,
+
+        Result:MelisaTeabag,
+        Time:60.0,
+        Category:Health,
+    }
+
+    recipe Take Sunflower seeds
+    {
+       SunFlower,
+
+       Result:legourmetfarming.SunFlowerSeed=5,
+       Time:50.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.None,
+    }
+
+    recipe Make SunFlower Oil
+    {
+        keep [Recipe.GetItemTypes.MortarPestle],
+		keep Bowl,
+		Water=2,
+		legourmetfarming.SunFlowerSeed=50,
+		OilEmpty,
+
+        Result:Oil,
+		SkillRequired:Cooking=3,
+        Time:1000.0,
+        Category:Cooking,
+        OnGiveXP:Give1or3CookingXP,
+		NeedToBeLearn:true,
+    }
+
+    recipe Make Corn Oil
+    {
+        keep [Recipe.GetItemTypes.MortarPestle],
+		keep Bowl,
+		Water=2,
+		legourmetfarming.CornSeed=50,
+		CornOilEmpty,
+
+        Result:CornOil,
+		SkillRequired:Cooking=3,
+        Time:1000.0,
+        Category:Cooking,
+        OnGiveXP:Give1or3CookingXP,
+		NeedToBeLearn:true,
+    }
+
+	recipe Make Fernet Cola
+	{
+	   GlassTumbler,
+	   legourmet.ColaBottle;2,
+	   legourmet.FernetFull;1,
+
+	   Result:legourmet.FernetCola,
+       OnGiveXP:Recipe.OnGiveXP.None,
+	   Time:100.0,
+	   Category:Drinks,
+	}
+
+    recipe Fill Hot Vacuum Flask
+    {
+        legourmet.VacuumFlaskEmpty,
+		FullKettle=10,
+
+        Result:legourmet.VacuumFlaskFullHot,
+		CanBeDoneFromFloor:true,
+        Time:100.0,
+		Sound:GetWaterFromTapPlasticMedium,
+		Heat:-0.22,
+        OnGiveXP:Recipe.OnGiveXP.None,
+		Tooltip:Tooltip_Recipe_NeedHotWater,
+    }
+
+    recipe Fill Hot Vacuum Flask
+    {
+        legourmet.VacuumFlaskEmpty,
+		WaterPot=10,
+
+        Result:legourmet.VacuumFlaskFullHot,
+		CanBeDoneFromFloor:true,
+        Time:100.0,
+		Sound:GetWaterFromTapPlasticMedium,
+		Heat:-0.22,
+        OnGiveXP:Recipe.OnGiveXP.None,
+		Tooltip:Tooltip_Recipe_NeedHotWater,
+    }
+
+    recipe Fill Hot Vacuum Flask
+    {
+        legourmet.VacuumFlaskEmpty,
+		WaterSaucepan=10,
+
+        Result:legourmet.VacuumFlaskFullHot,
+		CanBeDoneFromFloor:true,
+        Time:100.0,
+		Sound:GetWaterFromTapPlasticMedium,
+		Heat:-0.22,
+        OnGiveXP:Recipe.OnGiveXP.None,
+		Tooltip:Tooltip_Recipe_NeedHotWater,
+    }
+
+	recipe Prepare Mate
+	{
+	   legourmet.MateEmpty,
+	   legourmet.YerbaMate;1,
+	   legourmet.VacuumFlaskFullHot,
+
+	   Result:legourmet.MatePreparation,
+       OnGiveXP:Recipe.OnGiveXP.None,
+	   Sound:FillMate,
+	   Time:100.0,
+	   Category:Cooking,
+	   NeedToBeLearn:true,
+	}
+
+	recipe Prepare Sweet Mate
+	{
+	   legourmet.MateEmpty,
+	   legourmet.YerbaMate;1,
+	   legourmet.VacuumFlaskFullHot,
+	   [Recipe.GetItemTypes.Sugar];1,
+
+	   Result:legourmet.MatePreparationSweet,
+       OnGiveXP:Recipe.OnGiveXP.None,
+	   Sound:FillMate,
+	   Time:100.0,
+	   Category:Cooking,
+	   NeedToBeLearn:true,
+	}
+}

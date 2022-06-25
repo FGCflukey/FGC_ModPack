@@ -1,0 +1,15 @@
+Stash_ES = {
+    Stash_LGRMulMap1_Text1 = "El precio ha subido al doble...",
+    Stash_LGRMulMap1_Text2 = "Mike ha muerto",
+    Stash_LGRMulMap1_Text3 = "Su cadaver fué enterrado con todo su equipo.",
+    Stash_LGRMulMap1_Text4 = "Al parecer escondió la mercancía en un aljibe",
+	Stash_LGRMulMap1_Text5 = "Recuperaré el artefacto pero te costará Caro!",
+	Stash_LGRMulMap2_Text1 = "Jack, soy Mike!",
+	Stash_LGRMulMap2_Text2 = "Aquí el asesino perderá mi rastro.",
+	Stash_LGRMulMap2_Text3 = "Lo distraeré para que puedas llevar",
+	Stash_LGRMulMap2_Text4 = "la mercancía al punto de entrega.",
+	Stash_LGRMulMap2_Text5 = "Recuerda que la entrega es en",
+	Stash_LGRMulMap2_Text6 = "el lugar de siempre!!",
+	Stash_LGRMulMap2_Text7 = "El gancho lo llevo yo!",
+	Stash_LGRMulMap2_Text8 = "Dejaré unas cosas útiles aquí.",
+}

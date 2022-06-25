@@ -1,0 +1,15 @@
+Stash_EN = {
+    Stash_LGRMulMap1_Text1 = "The price has raised",
+    Stash_LGRMulMap1_Text2 = "Mike is dead",
+    Stash_LGRMulMap1_Text3 = "His body was buried with all his equipment.",
+    Stash_LGRMulMap1_Text4 = "Apparently he hid the artifact in a water well",
+	Stash_LGRMulMap1_Text5 = "I will recover the artifact but it will cost you Expensive!",
+	Stash_LGRMulMap2_Text1 = "Jack, it's mike!",
+	Stash_LGRMulMap2_Text2 = "Here the murderer will lose my trail.",
+	Stash_LGRMulMap2_Text3 = "I'll distract him so you can carry",
+	Stash_LGRMulMap2_Text4 = "the goods to the point of delivery.",
+	Stash_LGRMulMap2_Text5 = "Remember that the delivery is in",
+	Stash_LGRMulMap2_Text6 = "the usual place!",
+	Stash_LGRMulMap2_Text7 = "I carry the GrapplingHook!",
+	Stash_LGRMulMap2_Text8 = "I'll leave some useful things here.",
+}

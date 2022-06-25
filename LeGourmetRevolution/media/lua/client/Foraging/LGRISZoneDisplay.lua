@@ -1,0 +1,11 @@
+-- require "Foraging/ISZoneDisplay"
+
+-- if ISZoneDisplay and ISZoneDisplay.tips then
+	-- MetalTip = {
+		-- level = 1,
+		-- title = getText("IGUI_SearchMode_Tip_Metals_Title"), 
+		-- text = getText("IGUI_SearchMode_Tip_Metals_Text"), 
+		-- shown = false,
+	-- }
+	-- table.insert(ISZoneDisplay.tips, MetalTip);
+-- end

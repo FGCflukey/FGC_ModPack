@@ -1,0 +1,349 @@
+module Base
+{
+	/************************ Cane Wall Exterior ************************/
+    multistagebuild CreateCaneWall_1
+    {
+        PreviousStage:NewWoodenWallFrame,
+        Name:CaneWallLvl1,
+        TimeNeeded:250,
+        BonusHealth:50,
+        SkillRequired:Woodwork=3,
+        ItemsRequired:Base.SugarcaneDry=3;Base.Nails=4,
+        ItemsToKeep:Base.Hammer,
+        Sprite:walls_exterior_legourmet_01_28,
+        NorthSprite:walls_exterior_legourmet_01_29,
+        CraftingSound:Hammering,
+        ID:Create Cane Wall Lvl 1,
+        XP:Woodwork=5,
+    }
+
+    multistagebuild CreateCaneWall_2
+    {
+        PreviousStage:CaneWallLvl1,
+        Name:CaneWallLvl2,
+        TimeNeeded:250,
+        BonusHealth:50,
+        SkillRequired:Woodwork=3,
+        ItemsRequired:Base.SugarcaneDry=5;Base.Nails=4,
+        ItemsToKeep:Base.Hammer,
+        Sprite:walls_exterior_legourmet_01_32,
+        NorthSprite:walls_exterior_legourmet_01_33,
+        CraftingSound:Hammering,
+        ID:Create Cane Wall Lvl 2,
+        XP:Woodwork=5,
+    }
+
+    multistagebuild CreateCaneWall_3
+    {
+        PreviousStage:CaneWallLvl2,
+        Name:CaneWallLvl3,
+        TimeNeeded:250,
+        BonusHealth:500,
+        SkillRequired:Woodwork=3,
+        ItemsRequired:Base.SugarcaneDry=5;Base.Nails=4,
+        ItemsToKeep:Base.Hammer,
+        Sprite:walls_exterior_legourmet_01_0,
+        NorthSprite:walls_exterior_legourmet_01_1,
+        CraftingSound:Hammering,
+        ID:Create Cane Wall Lvl 3,
+        XP:Woodwork=20,
+    }
+
+	/************************ Cane Wall Interior ************************/
+
+    multistagebuild CreateCaneWallInterior_1
+    {
+        PreviousStage:NewWoodenWallFrame,
+        Name:CaneWallInteriorLvl1,
+        TimeNeeded:250,
+        BonusHealth:50,
+        SkillRequired:Woodwork=3,
+        ItemsRequired:Base.SugarcaneDry=3;Base.Nails=4,
+        ItemsToKeep:Base.Hammer,
+        Sprite:walls_exterior_legourmet_01_55,
+        NorthSprite:walls_exterior_legourmet_01_56,
+        CraftingSound:Hammering,
+        ID:Create Cane Wall Interior Lvl 1,
+        XP:Woodwork=5,
+    }
+
+    multistagebuild CreateCaneWallInterior_2
+    {
+        PreviousStage:CaneWallInteriorLvl1,
+        Name:CaneWallInteriorLvl2,
+        TimeNeeded:250,
+        BonusHealth:50,
+        SkillRequired:Woodwork=3,
+        ItemsRequired:Base.SugarcaneDry=5;Base.Nails=4,
+        ItemsToKeep:Base.Hammer,
+        Sprite:walls_exterior_legourmet_01_58,
+        NorthSprite:walls_exterior_legourmet_01_59,
+        CraftingSound:Hammering,
+        ID:Create Cane Wall Interior Lvl 2,
+        XP:Woodwork=5,
+    }
+
+    multistagebuild CreateCaneWallInterior_3
+    {
+        PreviousStage:CaneWallInteriorLvl2,
+        Name:CaneWallInteriorLvl3,
+        TimeNeeded:250,
+        BonusHealth:500,
+        SkillRequired:Woodwork=3,
+        ItemsRequired:Base.SugarcaneDry=5;Base.Nails=4,
+        ItemsToKeep:Base.Hammer,
+        Sprite:walls_exterior_legourmet_01_48,
+        NorthSprite:walls_exterior_legourmet_01_49,
+        CraftingSound:Hammering,
+        ID:Create Cane Wall Interior Lvl 3,
+        XP:Woodwork=20,
+    }
+	
+	/************************ Cane Door Frame Exterior ************************/
+	
+    multistagebuild CaneDoorFrame_1
+    {
+        PreviousStage:AdvancedDoorFrame,
+        Name:CaneDoorFrameLvl1,
+        TimeNeeded:200,
+        BonusHealth:25,
+        SkillRequired:Woodwork=4,
+        ItemsRequired:Base.SugarcaneDry=3;Base.Nails=4,
+        ItemsToKeep:Base.Hammer;Base.Saw,
+        WallType:doorframe,
+        Sprite:walls_exterior_legourmet_01_37,
+        NorthSprite:walls_exterior_legourmet_01_38,
+        CraftingSound:Hammering,
+        ID:Create Cane Door Frame Lvl 1,
+        XP:Woodwork=5,
+    }
+
+    multistagebuild CaneDoorFrame_2
+    {
+        PreviousStage:CaneDoorFrameLvl1,
+        Name:CaneDoorFrameLvl2,
+        TimeNeeded:200,
+        BonusHealth:100,
+        SkillRequired:Woodwork=4,
+        ItemsRequired:Base.SugarcaneDry=3;Base.Nails=4,
+        ItemsToKeep:Base.Hammer;Base.Saw,
+        WallType:doorframe,
+        Sprite:walls_exterior_legourmet_01_3,
+        NorthSprite:walls_exterior_legourmet_01_4,
+        CraftingSound:Hammering,
+        ID:Create Cane Door Frame Lvl 2,
+        XP:Woodwork=5,
+    }
+
+    multistagebuild CaneDoorFrame_3
+    {
+        PreviousStage:CaneDoorFrameLvl2,
+        Name:CaneDoorFrameLvl3,
+        TimeNeeded:200,
+        BonusHealth:500,
+        SkillRequired:Woodwork=4,
+        ItemsRequired:Base.TreeBranch=5;Base.Nails=10,
+        ItemsToKeep:Base.Hammer;Base.Saw,
+        WallType:doorframe,
+        Sprite:walls_exterior_legourmet_01_12,
+        NorthSprite:walls_exterior_legourmet_01_13,
+        CraftingSound:Hammering,
+        ID:Create Cane Door Frame Lvl 3,
+        XP:Woodwork=5,
+    }
+
+	/************************ Cane Door Frame Interior ************************/
+	
+    multistagebuild CaneDoorFrameInterior_1
+    {
+        PreviousStage:AdvancedDoorFrame,
+        Name:CaneDoorFrameInteriorLvl1,
+        TimeNeeded:200,
+        BonusHealth:25,
+        SkillRequired:Woodwork=4,
+        ItemsRequired:Base.SugarcaneDry=3;Base.Nails=4,
+        ItemsToKeep:Base.Hammer;Base.Saw,
+        WallType:doorframe,
+        Sprite:walls_exterior_legourmet_01_65,
+        NorthSprite:walls_exterior_legourmet_01_66,
+        CraftingSound:Hammering,
+        ID:Create Cane Door Frame Interior Lvl 1,
+        XP:Woodwork=5,
+    }
+
+    multistagebuild CaneDoorFrameInterior_2
+    {
+        PreviousStage:CaneDoorFrameInteriorLvl1,
+        Name:CaneDoorFrameInteriorLvl2,
+        TimeNeeded:200,
+        BonusHealth:100,
+        SkillRequired:Woodwork=4,
+        ItemsRequired:Base.SugarcaneDry=3;Base.Nails=4,
+        ItemsToKeep:Base.Hammer;Base.Saw,
+        WallType:doorframe,
+        Sprite:walls_exterior_legourmet_01_67,
+        NorthSprite:walls_exterior_legourmet_01_68,
+        CraftingSound:Hammering,
+        ID:Create Cane Door Frame Interior Lvl 2,
+        XP:Woodwork=5,
+    }
+
+    multistagebuild CaneDoorFrameInterior_3
+    {
+        PreviousStage:CaneDoorFrameInteriorLvl2,
+        Name:CaneDoorFrameInteriorLvl3,
+        TimeNeeded:200,
+        BonusHealth:500,
+        SkillRequired:Woodwork=4,
+        ItemsRequired:Base.TreeBranch=5;Base.Nails=10,
+        ItemsToKeep:Base.Hammer;Base.Saw,
+        WallType:doorframe,
+        Sprite:walls_exterior_legourmet_01_53,
+        NorthSprite:walls_exterior_legourmet_01_54,
+        CraftingSound:Hammering,
+        ID:Create Cane Door Frame Interior Lvl 3,
+        XP:Woodwork=5,
+    }
+
+	/************************ Cane Window Frame Exterior ************************/
+
+    multistagebuild CaneWindowFrame_1
+    {
+        PreviousStage:AdvancedWindowFrame,
+        Name:CaneWindowFrameLvl1,
+        TimeNeeded:250,
+        BonusHealth:100,
+        SkillRequired:Woodwork=4,
+        ItemsRequired:Base.SugarcaneDry=3;Base.Nails=4,
+        ItemsToKeep:Base.Hammer;Base.Saw,
+        Sprite:walls_exterior_legourmet_01_41,
+        NorthSprite:walls_exterior_legourmet_01_42,
+        CraftingSound:Hammering,
+        ID:Create Cane Window Frame Lvl 1,
+        XP:Woodwork=10,
+        CanBarricade:false,
+    }
+
+    multistagebuild CaneWindowFrame_2
+    {
+        PreviousStage:CaneWindowFrameLvl1,
+        Name:CaneWindowFrameLvl2,
+        TimeNeeded:250,
+        BonusHealth:150,
+        SkillRequired:Woodwork=4,
+        ItemsRequired:Base.SugarcaneDry=5;Base.Nails=4,
+        ItemsToKeep:Base.Hammer;Base.Saw,
+        Sprite:walls_exterior_legourmet_01_43,
+        NorthSprite:walls_exterior_legourmet_01_44,
+        CraftingSound:Hammering,
+        ID:Create Cane Window Frame Lvl 2,
+        XP:Woodwork=10,
+        CanBarricade:true,
+    }
+
+    multistagebuild CaneWindowFrame_3
+    {
+        PreviousStage:CaneWindowFrameLvl2,
+        Name:CaneWindowFrameLvl3,
+        TimeNeeded:250,
+        BonusHealth:500,
+        SkillRequired:Woodwork=4,
+        ItemsRequired:Base.SugarcaneDry=5;Base.Nails=4,
+        ItemsToKeep:Base.Hammer;Base.Saw,
+        Sprite:walls_exterior_legourmet_01_5,
+        NorthSprite:walls_exterior_legourmet_01_6,
+        CraftingSound:Hammering,
+        ID:Create Cane Window Frame Lvl 3,
+        XP:Woodwork=10,
+        CanBarricade:true,
+    }
+
+	/************************ Cane Window Frame Interior ************************/
+
+    multistagebuild CaneWindowFrameInterior_1
+    {
+        PreviousStage:AdvancedWindowFrame,
+        Name:CaneWindowFrameInteriorLvl1,
+        TimeNeeded:250,
+        BonusHealth:100,
+        SkillRequired:Woodwork=4,
+        ItemsRequired:Base.SugarcaneDry=3;Base.Nails=4,
+        ItemsToKeep:Base.Hammer;Base.Saw,
+        Sprite:walls_exterior_legourmet_01_61,
+        NorthSprite:walls_exterior_legourmet_01_62,
+        CraftingSound:Hammering,
+        ID:Create Cane Window Frame Interior Lvl 1,
+        XP:Woodwork=10,
+        CanBarricade:false,
+    }
+
+    multistagebuild CaneWindowFrameInterior_2
+    {
+        PreviousStage:CaneWindowFrameInteriorLvl1,
+        Name:CaneWindowFrameInteriorLvl2,
+        TimeNeeded:250,
+        BonusHealth:150,
+        SkillRequired:Woodwork=4,
+        ItemsRequired:Base.SugarcaneDry=5;Base.Nails=4,
+        ItemsToKeep:Base.Hammer;Base.Saw,
+        Sprite:walls_exterior_legourmet_01_63,
+        NorthSprite:walls_exterior_legourmet_01_64,
+        CraftingSound:Hammering,
+        ID:Create Cane Window Frame Interior Lvl 2,
+        XP:Woodwork=10,
+        CanBarricade:true,
+    }
+
+    multistagebuild CaneWindowFrameInterior_3
+    {
+        PreviousStage:CaneWindowFrameInteriorLvl2,
+        Name:CaneWindowFrameInteriorLvl3,
+        TimeNeeded:250,
+        BonusHealth:500,
+        SkillRequired:Woodwork=4,
+        ItemsRequired:Base.SugarcaneDry=5;Base.Nails=4,
+        ItemsToKeep:Base.Hammer;Base.Saw,
+        Sprite:walls_exterior_legourmet_01_51,
+        NorthSprite:walls_exterior_legourmet_01_52,
+        CraftingSound:Hammering,
+        ID:Create Cane Window Frame Interior Lvl 3,
+        XP:Woodwork=10,
+        CanBarricade:true,
+    }
+	
+	/************************ Cane Fence Exterior ************************/
+
+    multistagebuild CaneFence_1
+    {
+        PreviousStage:AdvancedFenceFrame,
+        Name:CaneFenceLvl1,
+        TimeNeeded:250,
+        BonusHealth:500,
+        SkillRequired:Woodwork=4,
+        ItemsRequired:Base.SugarcaneDry=5;Base.Nails=4,
+        ItemsToKeep:Base.Hammer;Base.Saw,
+        Sprite:walls_exterior_legourmet_01_20,
+        NorthSprite:walls_exterior_legourmet_01_21,
+        CraftingSound:Hammering,
+        ID:Create Cane Fence Lvl 1,
+        XP:Woodwork=10,
+    }
+
+	/************************ Cane Fence Interior ************************/
+	
+    multistagebuild CaneFenceInterior_1
+    {
+        PreviousStage:AdvancedFenceFrame,
+        Name:CaneFenceInteriorLvl1,
+        TimeNeeded:250,
+        BonusHealth:500,
+        SkillRequired:Woodwork=4,
+        ItemsRequired:Base.SugarcaneDry=5;Base.Nails=4,
+        ItemsToKeep:Base.Hammer;Base.Saw,
+        Sprite:walls_exterior_legourmet_01_69,
+        NorthSprite:walls_exterior_legourmet_01_70,
+        CraftingSound:Hammering,
+        ID:Create Cane Fence Interior Lvl 1,
+        XP:Woodwork=10,
+    }
+}

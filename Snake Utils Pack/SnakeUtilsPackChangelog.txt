@@ -1,0 +1,74 @@
+Versión 1.2
+*Actualización para build 41.54.
+
+Versión 1.19
+Cambio de ruta de almacenamiento de archivo de opciones del mod.
+
+Versión 1.18
+Modificación del panel de habilidades: Ahora se remarcará el último recuadro de nivel ganado con animación incluida. (Chequeará a cada hora de reloj del juego si está activada la animación o bien al cerrar la ventana se desactivará)
+Agregado nuevo menú de opciones "Snake Utils Pack": Aquí se podrá activar o desactivar la modificación aplicada al panel de habilidades.
+
+Versión 1.17
+*Agregada compatibilidad para build 41.51
+*Agregado archivo de balance para AttachedWeaponDefinitions.
+
+Versión 1.16
+*Agregado soporte de traducciones para el mod Even Worse Looting de Blair Algol.
+*Agregadas tablas de spawn de llaves de mis mapas custom para el Even Worse Looting de Blair Algol.
+*Agregado soporte para Le Gourmet Revolution, Ammo Maker y Table Saw al fabricar contenedores (sin simbolos de pregunta) para el mod Even Worse Looting de Blair Algol.
+*Agregada validación para transferencias de items desde el inventario principal hacia un contenedor no revistado para el mod Even Worse Looting de Blair Algol.
+
+Versión 1.15
+*Reparada visualización del cargador en la ak-47 cuando se extrae mediante menu radial o contextual.
+
+Versión 1.14
+*Agregada compatibilidad para build 41.50
+
+Versión 1.13
+*Agregada descripción de rasgos en la ventana de información de personaje.
+*Agregado al sistema de rebuscar minería el pico rudimentario de Le Gourmet Revolution V.1.18
+
+Versión 1.12
+*Agregada validación para wpa (Apagar la linterna del arma antes de equipar un item diferente en mano primara, secundaria o en ambas manos)
+
+Versión 1.11
+*Actualización para Build 41.46
+*Agregada la posibilidad de transferir generadores hacia los asientos grandes de vehiculos.
+
+Versión 1.10
+*Actualizada acción de recarga para la build 41.44
+
+Versión 1.09
+*Funcionalidad con build 41.43
+*Reparada la carga del sonido de silenciador ante circunstancia rara.
+
+Versión 1.08
+*Funcionalidad con Build 41.41 
+*Se agregó función de ejecución de datos de profesiones de los mods al morir y seleccionar la opción "Nuevo Personaje"
+
+Versión 1.07
+*Funcionalidad con Build 41.35
+
+Versión 1.06
+*Funcionalidad con Build 41.34
+
+Versión 1.05
+*Funcionalidad con Build 41.30
+Archivos actualizados: Rebuscar(Interface, acción), Recarga(Acción), Transferencia de items(Acción)
+
+Versión 1.04
+*Funcionalidad con Build 41.29
+*Se agregaron los archivos de rebuscar que contenía Le Gourmet Revolution para soporte del mod Table Saw.
+
+Versión 1.03
+*Funcionalidad con Build 41.23b
+
+Versión 1.02
+*Corregido Items Blooo
+
+Versión 1.01
+*Funcionalidad con Build 41.21
+*Corregido bug de tootlips de pila de cañas y pieles no curtidas.
+
+Versión 1.0
+*Funcionalidad con Build 41.20

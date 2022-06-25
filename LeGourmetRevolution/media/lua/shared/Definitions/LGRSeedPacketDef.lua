@@ -1,0 +1,33 @@
+LGRSeedPacketDef = {};
+
+--Sistema de aprendizaje de recetas.
+LGRSeedPacketDef["CarrotBagSeed"] = {recipetolearn="Sow Carrots", translation= "Tooltip_Sow_CarrotSeed"};
+LGRSeedPacketDef["BroccoliBagSeed"] = {recipetolearn="Sow Broccoli", translation="Tooltip_Sow_Broccoli"};
+LGRSeedPacketDef["LeekBagSeed"] = {recipetolearn="Sow Leek", translation="Tooltip_Sow_Leek"};
+LGRSeedPacketDef["LettuceBagSeed"] = {recipetolearn="Sow Lettuce", translation="Tooltip_Sow_Lettuce"};
+LGRSeedPacketDef["OnionBagSeed"] = {recipetolearn="Sow Onion", translation="Tooltip_Sow_Onion"};
+LGRSeedPacketDef["PeanutBagSeed"] = {recipetolearn="Sow Peanut", translation="Tooltip_Sow_Peanut"};
+LGRSeedPacketDef["RedRadishBagSeed"] = {recipetolearn="Sow Radishes", translation="Tooltip_Sow_Radishes"};
+LGRSeedPacketDef["StrewberrieBagSeed"] = {recipetolearn="Sow Strawberry plant", translation="Tooltip_Sow_Strawberry"};
+LGRSeedPacketDef["TomatoBagSeed"] = {recipetolearn="Sow Tomato", translation="Tooltip_Sow_Tomato"};
+LGRSeedPacketDef["CoffeeBag"] = {recipetolearn="Sow Coffee", translation="Tooltip_Sow_Coffee"};
+LGRSeedPacketDef["PotatoBagSeed"] = {recipetolearn="Sow Potatoes", translation="Tooltip_Sow_Potatoes"};
+LGRSeedPacketDef["CabbageBagSeed"] = {recipetolearn="Sow Cabbages", translation="Tooltip_Sow_Cabbages"};
+LGRSeedPacketDef["PumpkinBagSeed"] = {recipetolearn="Sow Pumpkin", translation="Tooltip_Sow_Pumpkin"};
+LGRSeedPacketDef["WatermelonBagSeed"] = {recipetolearn="Sow Watermelon", translation="Tooltip_Sow_Watermelon"};
+LGRSeedPacketDef["ZucchiniBagSeed"] = {recipetolearn="Sow Zucchini", translation="Tooltip_Sow_Zucchini"};
+LGRSeedPacketDef["CornBagSeed"] = {recipetolearn="Sow Corn", translation="Tooltip_Sow_Corn"};
+LGRSeedPacketDef["RiceBagSeed"] = {recipetolearn="Sow Rice", translation="Tooltip_Sow_Rice"};
+LGRSeedPacketDef["PineappleBagSeed"] = {recipetolearn="Sow Pineapple", translation="Tooltip_Sow_Pineapple"};
+LGRSeedPacketDef["BeanBagSeed"] = {recipetolearn="Sow Bean", translation="Tooltip_Sow_Bean"};
+LGRSeedPacketDef["BellPepperBagSeed"] = {recipetolearn="Sow BellPepper", translation="Tooltip_Sow_BellPepper"};
+LGRSeedPacketDef["EggplantBagSeed"] = {recipetolearn="Sow Eggplant", translation="Tooltip_Sow_Eggplant"};
+LGRSeedPacketDef["GrapeBagSeed"] = {recipetolearn="Sow Grape", translation="Tooltip_Sow_Grape"};
+LGRSeedPacketDef["PeaBagSeed"] = {recipetolearn="Sow Pea", translation="Tooltip_Sow_Pea"};
+LGRSeedPacketDef["ChiliBagSeed"] = {recipetolearn="Sow Chili", translation="Tooltip_Sow_Chili"};
+LGRSeedPacketDef["WheatBagSeed"] = {recipetolearn="Sow Wheat", translation="Tooltip_Sow_Wheat"};
+LGRSeedPacketDef["SugarcaneBagSeed"] = {recipetolearn="Sow Sugarcane", translation="Tooltip_Sow_Sugarcane"};
+LGRSeedPacketDef["SunFlowerBagSeed"] = {recipetolearn="Sow Sunflower", translation="Tooltip_Sow_Sunflower"};
+LGRSeedPacketDef["TobaccoBagSeed"] = {recipetolearn="Sow Tobacco", translation="Tooltip_Sow_Tobacco"};
+LGRSeedPacketDef["HabaneroBagSeed"] = {recipetolearn="Sow Habanero", translation="Tooltip_Sow_Habanero"};
+LGRSeedPacketDef["JalapenoBagSeed"] = {recipetolearn="Sow Jalapeno", translation="Tooltip_Sow_Jalapeno"};

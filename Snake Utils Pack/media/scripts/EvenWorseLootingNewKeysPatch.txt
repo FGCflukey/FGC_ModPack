@@ -1,0 +1,85 @@
+module Base
+
+{
+	
+ item Key_56
+	{
+		Weight	=	0,
+		Type	=	Key,
+		DisplayName	=	Military Complex Army Key,
+		Icon	=	Key_MilitaryComplex1,
+		MetalValue = 5,
+		keyId = 56,
+	}
+
+ item Key_156
+	{
+		Weight	=	0,
+		Type	=	Key,
+		DisplayName	=	Military Complex Arsenal Key,
+		Icon	=	Key_MilitaryComplex2,
+		MetalValue = 5,
+		keyId = 156,
+	}
+
+ item Key_256
+	{
+		Weight	=	0,
+		Type	=	Key,
+		DisplayName	=	Military Complex Hospital Key,
+		Icon	=	Key_MilitaryComplex3,
+		MetalValue = 5,
+		keyId = 256,
+	}
+
+ item Key_163
+	{
+		Weight	=	0,
+		Type	=	Key,
+		DisplayName	=	Ship Security Key,
+		Icon	=	Key_Ship2,
+		MetalValue = 5,
+		keyId = 163,
+	}
+
+ item Key_263
+	{
+		Weight	=	0,
+		Type	=	Key,
+		DisplayName	=	Ship Storage Key,
+		Icon	=	Key_Ship1,
+		MetalValue = 5,
+		keyId = 263,
+	}
+
+ item Key_251
+	{
+		Weight	=	0,
+		Type	=	Key,
+		DisplayName	=	Riverside Gunstore Key,
+		Icon	=	Key_RiversideGunstore1,
+		MetalValue = 5,
+		keyId = 251,
+	}
+
+ item Key_270
+	{
+		Weight	=	0,
+		Type	=	Key,
+		DisplayName	=	Mansion Key,
+		Icon	=	Key_Mansion1,
+		MetalValue = 5,
+		keyId = 270,
+	}
+
+ item Key_172
+	{
+		Weight	=	0,
+		Type	=	Key,
+		DisplayName	=	Factory Security Key,
+		Icon	=	Key_Factory1,
+		MetalValue = 5,
+		keyId = 172,
+	}
+
+}

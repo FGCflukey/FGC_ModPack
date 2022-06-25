@@ -1,0 +1,16 @@
+ContextMenu_EN = {
+	ContextMenu_FireMode = "Fire mode:    ",
+	ContextMenu_Full-Auto = "Full-Auto",
+	ContextMenu_Semi-Auto = "Semi-Auto",
+	ContextMenu_LoadedMixed = "Load Ammo:    Mixed",
+	ContextMenu_LoadedAmmo = "Load Ammo:    ",
+	ContextMenu_Extra_Building = "Extended Building",
+	ContextMenu_FireModeBinding = "Press 'Alt' key to change firemode.",
+	ContextMenu_SilencerD = "Silencer condition:",
+	ContextMenu_SlingshotD = "Slingshot condition:",
+	ContextMenu_StoneD = "Condition:",
+	ContextMenu_Pry_Open_Locked_Container = "Pry Open Locked Container",
+	ContextMenu_Unlock_Container = "Unlock Container",
+	ContextMenu_Enter_Combination = "Enter Combination",
+	ContextMenu_Cut_Padlock = "Cut Padlock",
+}

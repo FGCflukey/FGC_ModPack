@@ -1,0 +1,112 @@
+module Base
+{
+
+    recipe Make AguaArdienteKnife
+    {
+		legourmet.AguaardienteEmpty,
+
+		Result: SmashedBottle,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:CrashBottles_OnCreate,
+		Time: 15.0,
+		Sound:BrokenBottle,
+		Category: Survivalist,
+    }
+
+    recipe Make DryVermouthKnife
+    {
+		legourmet.DryVermouthEmpty,
+
+		Result: SmashedBottle,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:CrashBottles_OnCreate,
+		Time: 15.0,
+		Sound:BrokenBottle,
+		Category: Survivalist,
+    }
+
+    recipe Make GinKnife
+    {
+		legourmet.GinebraEmpty,
+
+		Result: SmashedBottle,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:CrashBottles_OnCreate,
+		Time: 15.0,
+		Sound:BrokenBottle,
+		Category: Survivalist,
+    }
+
+    recipe Make TriplesecWeapon
+    {
+		legourmet.TripleSecEmpty,
+
+		Result: SmashedBottle,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:CrashBottles_OnCreate,
+		Time: 15.0,
+		Sound:BrokenBottle,
+		Category: Survivalist,
+    }
+
+    recipe Make WhiteTequilaWeapon
+    {
+		legourmet.WhiteTequilaEmpty,
+
+		Result: SmashedBottle,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:CrashBottles_OnCreate,
+		Time: 15.0,
+		Sound:BrokenBottle,
+		Category: Survivalist,
+    }
+
+    recipe Make CrystalBottleWeapon
+    {
+		legourmet.BeerBottleEmpty,
+
+		Result: SmashedBottle,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:CrashBottles_OnCreate,
+		Time: 15.0,
+		Sound:BrokenBottle,
+		Category: Survivalist,
+    }
+
+    recipe Make WineWeapon3
+    {
+		legourmet.WineEmpty3/WineEmpty,
+
+		Result: SmashedBottle,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:CrashBottles_OnCreate,
+		Time: 15.0,
+		Sound:BrokenBottle,
+		Category: Survivalist,
+    }
+
+    recipe Make WineWeapon2
+    {
+		Base.WineEmpty2,
+
+		Result: SmashedBottle,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:CrashBottles_OnCreate,
+		Time: 15.0,
+		Sound:BrokenBottle,
+		Category: Survivalist,
+    }
+
+    recipe Make VodkaWeapon
+    {
+		legourmet.VodkaEmpty,
+
+		Result: SmashedBottle,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:CrashBottles_OnCreate,
+		Time: 15.0,
+		Sound:BrokenBottle,
+		Category: Survivalist,
+    }
+
+}

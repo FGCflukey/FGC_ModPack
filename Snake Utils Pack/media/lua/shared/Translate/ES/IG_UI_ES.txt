@@ -1,0 +1,13 @@
+IGUI_ES = {
+
+	IGUI_ScavengeUI_Metals = "Metales",
+	IGUI_ScavengeUI_Seeds = "Semillas",
+	IGUI_ScavengeUI_Dyes = "Pigmentos",
+	IGUI_ScavengeUI_Mining = "Minería",
+	IGUI_TraitInfoNeg = "(Negativo)",
+	IGUI_TraitInfoPos = "(Positivo)",
+	IGUI_TraitInfoProf = "(Ligado a profesión)",
+	IGUI_CustomSkillCursorTitle = "Cursor de skill modificado",
+	IGUI_CustomSkillCursorDesc = "Activa el cursor modificado. Al subir de nivel se iluminará sólo el último recuadro de habilidad con un cursor animado.",
+	IGUI_NeedPickaxe = "Necesito equiparme un pico en las manos para poder obtener este recurso.",
+}

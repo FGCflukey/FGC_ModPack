@@ -1,0 +1,86 @@
+-- Conversationtable2 = {
+    -- ConvA = {
+        -- A = {
+			-- name = "HelloW",
+			-- surname = "B",
+        -- },
+        -- B = {
+            -- name = "Aloooo"
+        -- },
+    -- },
+-- };
+
+
+-- Conversationtable = {};
+-- Conversationtable["ConvA"] = {};
+-- Conversationtable["ConvB"] = {};
+-- Conversationtable["ConvC"] = {};
+
+-- local HelloW = {};
+-- HelloW.name = "HelloW";
+-- HelloW.sound = nil;
+-- HelloW.stat = nil;
+-- HelloW.value = nil;
+
+-- local HowAreYouW = {};
+-- HowAreYouW.name = "HowAreYouW";
+-- HowAreYouW.sound = nil;
+-- HowAreYouW.stat = nil;
+-- HowAreYouW.value = nil;
+-- table.insert(Conversationtable["ConvA"], HelloW);
+-- table.insert(Conversationtable["ConvA"], HowAreYouW);
+
+--	convA = {
+--		HelloW = {
+--			name = "HelloW",
+--			sound = nil,
+			-- stat = nil,
+			-- value = nil,
+		-- },
+		-- HowAreYouW = {
+			-- name = "HowAreYouW",
+			-- sound = nil,
+			-- stat = nil,
+			-- value = nil,
+		-- },
+		-- HarddayA = {
+			-- name = "Hardday",
+			-- sound = nil,
+			-- stat = nil,
+			-- value = nil,
+		-- },
+		-- HarddayB = {
+			-- name = "Hardday2",
+			-- sound = nil,
+			-- stat = nil,
+			-- value = nil,
+		-- },
+		-- HarddayC = {
+			-- name = "Hardday3",
+			-- sound = nil,
+			-- stat = "Fatigue",
+			-- value = 0.15,
+		-- },
+		-- HarddayD = {
+			-- name = "Hardday4",
+			-- sound = nil,
+			-- stat = nil,
+			-- value = nil,
+		-- },
+		-- What = {
+			-- name = "What",
+			-- sound = "ZombieSurprisedPlayer",
+			-- stat = "Panic",
+			-- value = 30,
+		-- },
+		-- Hey = {
+			-- name = "Hey",
+			-- sound = nil,
+			-- stat = nil,
+			-- value = nil,
+		-- },
+	-- },
+	-- convB = {
+	
+	-- },
+
