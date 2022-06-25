@@ -1,3 +1,21 @@
+function isTrailer( vehicle)
+
+	if not vehicle then return false end
+	
+	local ScriptName = vehicle:getScript():getName()
+	if ScriptName == nil or ScriptName == "" then return false end
+	
+	--if it has a trunk lid, but no engine then it must be a trailer?
+	if vehicle:getPartById("TrunkDoor") ~= nil and vehicle:getPartById("Engine") == nil then
+		return true
+	end
+
+	-- if ScriptName == "isoContainer2" then
+		-- return true
+	-- else
+		-- return false
+	-- end	
+end
 
 function addKey()
 
@@ -12,7 +30,7 @@ function addKey()
 	end
 
 	--make the valhalla check dependent on the mod being installed!
-	if not car and container and container:getScript():getName() == "isoContainer2" and Valhalla.VehicleClaims:playerCanEnterVehicle( player, container) then --not sitting in a car, but there is a container near by.
+	if not car and container and isTrailer( container) and Valhalla.VehicleClaims:playerCanEnterVehicle( player, container) then --not sitting in a car, but there is a container near by.
 		inv:AddItem( container:createVehicleKey());
 		return;
 	end
