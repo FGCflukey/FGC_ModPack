@@ -9,8 +9,17 @@ Commands.Automaker.CreateVehicle = function( player, args)
 	
 		vehicle:repair()		
 		vehicle:putKeyInIgnition( vehicle:createVehicleKey())
-		vehicle:getPartById("DoorFrontLeft"):setLockBroken( false)
-		vehicle:getPartById("DoorFrontLeft"):setLocked( false)
+		
+		local gastank = vehicle:getPartById("GasTank")
+		if gastank ~= nil then
+			gastank:setContainerContentAmount( 0.0)
+		end
+		
+		local thedoor = vehicle:getPartById("DoorFrontLeft")
+		if thedoor ~= nil then
+			thedoor:getDoor():setLocked( false)
+			thedoor:getDoor():setLockBroken( false)
+		end
 	end
 end
 
