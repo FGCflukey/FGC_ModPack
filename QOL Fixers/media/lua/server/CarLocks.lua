@@ -6,7 +6,7 @@ function isTrailer( vehicle)
 	if ScriptName == nil or ScriptName == "" then return false end
 	
 	--if it has a trunk lid, but no engine then it must be a trailer?
-	if vehicle:getPartById("TrunkDoor") ~= nil and vehicle:getPartById("Engine") == nil then
+	if (vehicle:getPartById("TrunkDoor") ~= nil orvehicle:getPartById("RearCarDoor8") ~= nil or vehicle:getPartById("RearCarDoorDouble8") ~= nil) and vehicle:getPartById("Engine") == nil then
 		return true
 	end
 
