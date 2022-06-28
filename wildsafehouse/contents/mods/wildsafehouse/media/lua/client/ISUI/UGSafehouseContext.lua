@@ -135,15 +135,17 @@ UGSafehouse.CanSafehouse = function( player)
 				return false, "There is another safe house nearby", false
 			end
 			
-			for i=1,square:getObjects():size() do
-			
-				local obj = square:getObjects():get(i-1)
-				local oTN = obj:getTextureName()
+			if square then  --prevent errors when searcing near the edge of the map
+				for i=1,square:getObjects():size() do
 				
-				if oTN ~= nil and luautils.stringStarts( oTN, "blends_street") then
-				
-					--print( " keyword: can not create safe house, can not overlap a road")
-					return false, "You are too close to a road to setup a safe house", false
+					local obj = square:getObjects():get(i-1)
+					local oTN = obj:getTextureName()
+					
+					if oTN ~= nil and luautils.stringStarts( oTN, "blends_street") then
+					
+						--print( " keyword: can not create safe house, can not overlap a road")
+						return false, "You are too close to a road to setup a safe house", false
+					end
 				end
 			end
 		end
