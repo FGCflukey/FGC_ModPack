@@ -82,26 +82,37 @@ end
 function UG_Automaker.takeMaterials( mechanictype)
 
 	local materials = UG_Automaker.getMaterialReq( mechanictype)
+	local materialOnGround = buildUtil.checkMaterialOnGround( getPlayer():getSquare())	
 	local playerInv = getPlayer():getInventory()
 	
+	
+	--buildUtil.consumeMaterial     USE THIS!!!!
+	local ISItem = {}
+	ISItem.player = getPlayer():getPlayerNum()
+	ISItem.sq = getPlayer():getSquare()
+	ISItem.modData = {}	
+	
 	for m,c in pairs( materials) do -- m is the materialID, c is the number required
+		ISItem.modData["need:Base.".. tostring( m)] = c		
 		
-		local mats = playerInv:getAllTypeRecurse( m)
-		local cont = true
+		-- local mats = playerInv:getAllTypeRecurse( m)
+		-- local cont = true
 		
-		while ( c > 0 and cont) do
+		-- while ( c > 0 and cont) do
 		
-			if playerInv:RemoveOneOf( m) then
-				cont = false
-			else
-				c = c-1
-			end
-		end
+			-- if playerInv:RemoveOneOf( m) then
+				-- cont = false
+			-- else
+				-- c = c-1
+			-- end
+		-- end
 		
-		if c > 0 then
-			getPlayer():Say("still more stuff")
-		end
+		-- if c > 0 then
+			
+		-- end
 	end
+	
+	buildUtil.consumeMaterial(ISItem)
 end
 
 function UG_Automaker.buildMaterialList( context, toolTip, mechanictype, player)
@@ -132,7 +143,7 @@ function UG_Automaker.buildMaterialList( context, toolTip, mechanictype, player)
 		context.notAvailable = true;
 	else
 		toolTip.description = toolTip.description .. " <LINE> <RGB:1,1,1> Metal Bars " .. tostring( totalMetalBars) .. "/" .. tostring( requirements["MetalBar"])
-	end	
+	end
 
 	
 	local totalScrapElectronics = materialOnGround["ElectronicsScrap"]
