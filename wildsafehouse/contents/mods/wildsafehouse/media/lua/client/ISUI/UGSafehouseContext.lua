@@ -68,7 +68,7 @@ end
 
 UGSafehouse.SetupSafehouse = function( player, procede)  --claim a wild safehouse
 
-	print( "keyword: UGSafehouse.SetupSafehouse called")
+	--print( "keyword: UGSafehouse.SetupSafehouse called")
 	
 	if not procede then return end
 	
@@ -82,13 +82,13 @@ end
 
 UGSafehouse.CanSafehouse = function( player)
 	
-	print( "keyword: UGSafehouse.CanSafeHouse called")
+	--print( "keyword: UGSafehouse.CanSafeHouse called")
 	local cansafehouse = true
 	local playerObj = getSpecificPlayer( player)
 	local safehouselist = SafeHouse.getSafehouseList()
 	local howmany = 0
 	
-	print( "keyword: Checking safe house list") 
+	--print( "keyword: Checking safe house list") 
 	if safehouselist:size() > 0 then
 	
 		--print( "List is good: ")
@@ -102,7 +102,7 @@ UGSafehouse.CanSafehouse = function( player)
 		end
 	end
 	
-	print( "Found ", howmany, " houses")
+	--print( "Found ", howmany, " houses")
 	if howmany >= UGSafehouse.maxhouses then
 		return false, getText("IGUI_Safehouse_AlreadyHaveSafehouse"), true
 	end
