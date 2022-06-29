@@ -55,25 +55,25 @@ function UG_Automaker.getMaterialReq( mechanictype)
 	-- Script:getMechanicType()    1=standard 2=heavy duty 3=sports	
 	if mechanictype == 1 then
 	
-		ret["SheetMetal"] = 5--0
-		ret["MetalBar"] = 3--5
-		ret["ElectronicsScrap"] = 3--0
-		ret["ElectricWire"] = 3--0
-		ret["EngineParts"] = 4--0
+		ret["SheetMetal"] = 50
+		ret["MetalBar"] = 35
+		ret["ElectronicsScrap"] = 30
+		ret["ElectricWire"] = 30
+		ret["EngineParts"] = 40
 	elseif mechanictype == 2 then
 	
-		ret["SheetMetal"] = 8--0
-		ret["MetalBar"] = 4--5
-		ret["ElectronicsScrap"] = 3--0
-		ret["ElectricWire"] = 3--5
-		ret["EngineParts"] = 5--0
+		ret["SheetMetal"] = 80
+		ret["MetalBar"] = 45
+		ret["ElectronicsScrap"] = 30
+		ret["ElectricWire"] = 35
+		ret["EngineParts"] = 50
 	elseif mechanictype == 3 then
 	
-		ret["SheetMetal"] = 6--0
-		ret["MetalBar"] = 4--0
-		ret["ElectronicsScrap"] = 4--0
-		ret["ElectricWire"] = 3--5
-		ret["EngineParts"] = 6--0
+		ret["SheetMetal"] = 60
+		ret["MetalBar"] = 40
+		ret["ElectronicsScrap"] = 40
+		ret["ElectricWire"] = 35
+		ret["EngineParts"] = 60
 	end	
 	
 	return ret
@@ -84,34 +84,16 @@ function UG_Automaker.takeMaterials( mechanictype)
 	local materials = UG_Automaker.getMaterialReq( mechanictype)
 	local materialOnGround = buildUtil.checkMaterialOnGround( getPlayer():getSquare())	
 	local playerInv = getPlayer():getInventory()
-	
-	
-	--buildUtil.consumeMaterial     USE THIS!!!!
+
 	local ISItem = {}
 	ISItem.player = getPlayer():getPlayerNum()
 	ISItem.sq = getPlayer():getSquare()
 	ISItem.modData = {}	
 	
 	for m,c in pairs( materials) do -- m is the materialID, c is the number required
-		ISItem.modData["need:Base.".. tostring( m)] = c		
-		
-		-- local mats = playerInv:getAllTypeRecurse( m)
-		-- local cont = true
-		
-		-- while ( c > 0 and cont) do
-		
-			-- if playerInv:RemoveOneOf( m) then
-				-- cont = false
-			-- else
-				-- c = c-1
-			-- end
-		-- end
-		
-		-- if c > 0 then
-			
-		-- end
+		ISItem.modData["need:Base.".. tostring( m)] = c
 	end
-	
+
 	buildUtil.consumeMaterial(ISItem)
 end
 
@@ -191,8 +173,8 @@ function UG_Automaker.initTooltip( context, vehicle, mechanictype, player)
 	-- add it to our current option
 	context.toolTip = toolTip
 	toolTip:setName( "Build a new car")
-	toolTip.description = "Description" .. " <LINE> Let's but a car!"
-	toolTip:setTexture("crafted_01_16")
+	toolTip.description = "Automaker:" .. " <LINE> Let's build a car!"
+	--toolTip:setTexture("crafted_01_16")  --figure out a way to get images of each car.
 	
 	UG_Automaker.buildSkillList( context, toolTip, mechanictype, player)
 	UG_Automaker.buildMaterialList( context, toolTip, mechanictype, player)
