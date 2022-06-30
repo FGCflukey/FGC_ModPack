@@ -1,0 +1,2446 @@
+module Base
+{
+
+	item ToastedCafeSeeds
+	{
+		DisplayCategory = Food,
+		Type		=	Food,
+		DisplayName	=	Toasted Coffee Seeds,
+		Icon		=	ToastedCafeseeds,
+		Weight		=	0.9,
+        HungerChange 		=		-10,
+        UnhappyChange	    =	    10,
+        ThirstChange		=		20,
+		FatigueChange		=	-10,
+		Tooltip = Tooltip_ToastedCafeSeed,
+		WorldStaticModel = ToastedCafeSeeds_Ground,
+	}
+
+    item TeaBagBox
+	{
+		DisplayCategory = Material,
+		Weight	=	0.25,
+		Type	=	Normal,
+		DisplayName	=	Box Filter Paper Bag,
+		Icon	=	TeaBagEmptyBox,
+		Tooltip = Tooltip_TeaBagEmptyBox,
+		WorldStaticModel = TeaBagBox_Ground,
+	}
+
+    item TeaBagEmpty
+	{
+		DisplayCategory = Material,
+		Weight	=	0.01,
+		Type	=	Normal,
+		DisplayName	=	Filter Paper Bag,
+		Icon	=	TeaBagEmpty,
+		Tooltip = Tooltip_TeaBagEmpty,
+		WorldStaticModel = TeaBagEmpty_Ground,
+	}
+
+    item MelisaHerb
+    {
+		DisplayCategory = FirstAid,
+        HungerChange	=	-1,
+        Weight	=	0.1,
+        Type	=	Food,
+        DisplayName	=	Melisa Herb,
+        Icon	=	MelisaHerb,
+        FluReduction    =   8,
+        Tooltip = Tooltip_Melisaherb,
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 0.1,
+    }
+
+    item FluHotDrink
+    {
+		DisplayCategory = FirstAid,
+        Weight	=	0.5,
+        Type	=	Food,
+        DisplayName	=	Flu Hot Drink,
+        Icon	=	MugFulll,
+        IsCookable	=	    true,
+        MinutesToBurn   =   50,
+        MinutesToCook   =   10,
+        UnhappyChange   =   10,
+        ThirstChange    =   -20,
+		FluReduction    =   50,
+        ReplaceOnUse    =   Mugl,
+        CustomContextMenu	=  Drink,
+		CustomEatSound = DrinkingFromMug,
+        GoodHot = true,
+		Tooltip = Tooltip_Mallow3,
+		StaticModel = Mug,
+        WorldStaticModel = Mug,
+    }
+
+    item FluHotDrinkRed
+    {
+		DisplayCategory = FirstAid,
+        Weight	=	0.5,
+        Type	=	Food,
+        DisplayName	=	Flu Hot Drink,
+        Icon	=	MugRedFull,
+        IsCookable	=	    true,
+        MinutesToBurn   =   50,
+        MinutesToCook   =   10,
+        UnhappyChange   =   10,
+        ThirstChange    =   -20,
+		FluReduction    =   50,
+        ReplaceOnUse    =   MugRed,
+        CustomContextMenu	=  Drink,
+		CustomEatSound = DrinkingFromMug,
+        GoodHot = true,
+		Tooltip = Tooltip_Mallow3,
+		StaticModel = MugRed,
+        WorldStaticModel = MugRed,
+    }
+
+    item FluHotDrinkWhite
+    {
+		DisplayCategory = FirstAid,
+        Weight	=	0.5,
+        Type	=	Food,
+        DisplayName	=	Flu Hot Drink,
+        Icon	=	MugWhiteFull,
+        IsCookable	=	    true,
+        MinutesToBurn   =   50,
+        MinutesToCook   =   10,
+        UnhappyChange   =   10,
+        ThirstChange    =   -20,
+		FluReduction    =   50,
+        ReplaceOnUse    =   MugWhite,
+        CustomContextMenu	=  Drink,
+		CustomEatSound = DrinkingFromMug,
+        GoodHot = true,
+		Tooltip = Tooltip_Mallow3,
+		StaticModel = MugWhite,
+        WorldStaticModel = MugWhite,
+    }
+
+    item FluHotDrinkSpiffo
+    {
+		DisplayCategory = FirstAid,
+        Weight	=	0.5,
+        Type	=	Food,
+        DisplayName	=	Flu Hot Drink,
+        Icon	=	MugSpiffoFull,
+        IsCookable	=	    true,
+        MinutesToBurn   =   50,
+        MinutesToCook   =   10,
+        UnhappyChange   =   10,
+        ThirstChange    =   -20,
+		FluReduction    =   50,
+        ReplaceOnUse    =   MugSpiffo,
+        CustomContextMenu	=  Drink,
+		CustomEatSound = DrinkingFromMug,
+        GoodHot = true,
+		Tooltip = Tooltip_Mallow3,
+		StaticModel = MugSpiffo,
+        WorldStaticModel = MugSpiffo,
+    }
+
+    item FluHotDrinkTea
+    {
+		DisplayCategory = FirstAid,
+        Weight	=	0.5,
+        Type	=	Food,
+        DisplayName	=	Flu Hot Drink,
+        Icon	=	Teacup,
+        IsCookable	=	    true,
+        MinutesToBurn   =   50,
+        MinutesToCook   =   10,
+        UnhappyChange   =   10,
+        ThirstChange    =   -20,
+		FluReduction    =   50,
+        ReplaceOnUse    =   Teacup,
+        CustomContextMenu	=  Drink,
+		CustomEatSound = DrinkingFromMug,
+        GoodHot = true,
+		Tooltip = Tooltip_Mallow3,
+		StaticModel = Mug,
+    }
+
+    item MelisaTeabag
+    {
+		DisplayCategory = FirstAid,
+        Weight	=	0.1,
+        Type	=	Food,
+        HungerChange    =   -5,
+        UnhappyChange   =   10,
+        ThirstChange    =   10,
+        FluReduction    =   8,
+        DisplayName	=	Melisa Tea Bag,
+        Icon	=	Teabag,
+        EvolvedRecipe   =   FluHotDrink:5;FluHotDrinkRed:5;FluHotDrinkWhite:5;FluHotDrinkSpiffo:5;FluHotDrinkTea:5,
+        FoodType    =   HerbTea,
+        EvolvedRecipeName = HerbTea,
+		Tooltip = Tooltip_Mallow2,
+		WorldStaticModel = TeaBag,
+    }
+
+    item ZucchiniSlice
+    {
+		DisplayCategory = Food,
+        Type				=		Food,
+        DisplayName			=		Zucchini Slice,
+        Icon				=		Zucchinislice,
+        Weight				=		0.1,
+        HungerChange 		=		-5,
+        DaysFresh 			=		6,
+        DaysTotallyRotten 	=	 	14,
+        EvolvedRecipe       =       Soup:5;Stew:5;Pie:5;Stir fry Griddle Pan:5;Stir fry:5;Salad:5;Roasted Vegetables:5;RicePot:5;RicePan:5;PastaPot:5;PastaPan:5;Taco:5,
+        FoodType            =       Vegetables,
+        ThirstChange	=	-5,
+        Carbohydrates = 2,
+        Proteins = 0.8,
+        Lipids = 0.31,
+        Calories = 11,
+    }
+
+    item Tabasco
+    {
+		DisplayCategory = Food,
+        HungerChange	=	-20,
+        Weight	=	0.2,
+        Type	=	Food,
+        UnhappyChange	=	30,
+        DisplayName	=	Tabasco,
+        Icon	=	Tabasco,
+        EvolvedRecipe = Sandwich:2;Sandwich Baguette:2;Burger:2;Stir fry:2;Stir fry Griddle Pan:2;Pizza:2;Roasted Vegetables:2;Taco:2;Burrito:2,
+        Spice   =   true,
+        Carbohydrates = 1.6,
+        Proteins = 1,
+        Lipids = 0.7,
+        Calories = 804,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+		ReplaceOnUse    =   TabascoEmpty,
+		WorldStaticModel = Tabasco_Ground,
+    }
+
+    item TabascoEmpty
+	{
+		DisplayCategory = Material,
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Tabasco Empty,
+		Icon	=	TabascoEmpty,
+		Tooltip = Tooltip_TabascoEmpty,
+		WorldStaticModel = TabascoEmpty_Ground,
+	}
+
+    item TacoShellpan
+    {
+		DisplayCategory = Food,
+        Weight	=	2,
+        Type	=	Food,
+        DisplayName	=	Taco Shell Pan,
+        Icon	=	PanTortilla,
+        HungerChange    =   -5,
+		UnhappyChange       =       10,
+        IsCookable	=	    true,
+		DaysFresh 			=		2,
+		DaysTotallyRotten 	=	 	4,
+		RemoveNegativeEffectOnCooked    =   TRUE,
+        MinutesToBurn   =   20,
+        MinutesToCook   =   10,
+        ReplaceOnUse    =   Pan,
+        Carbohydrates = 13.6,
+        Proteins = 1.4,
+        Lipids = 0.5,
+        Calories = 64,
+        BadInMicrowave = true,
+        GoodHot = true,
+		WorldStaticModel = TacoShellpan_Ground,
+        CookingSound = FryingFood,
+    }
+
+    item Tortillapan
+    {
+		DisplayCategory = Food,
+        Weight	=	2,
+        Type	=	Food,
+        DisplayName	=	Tortilla Pan,
+        Icon	=	PanTBurrito,
+        HungerChange    =   -5,
+		UnhappyChange       =       10,
+        IsCookable	=	    true,
+		DaysFresh 			=		2,
+		DaysTotallyRotten 	=	 	4,
+		RemoveNegativeEffectOnCooked    =   TRUE,
+        MinutesToBurn   =   20,
+        MinutesToCook   =   10,
+        ReplaceOnUse    =   Pan,
+        Carbohydrates = 13.6,
+        Proteins = 1.4,
+        Lipids = 0.5,
+        Calories = 64,
+        BadInMicrowave = true,
+        GoodHot = true,
+		WorldStaticModel = Tortillapan_Ground,
+        CookingSound = FryingFood,
+    }
+
+    item ManualLG
+    {
+        Type				=		Normal,
+        DisplayName			=		Le Gourmet Manual,
+        Icon				=		LGManualBook,
+        Weight				=		0.8,
+		DisplayCategory     =       Literature,
+		Tooltip             =       Tooltip_LGManual,
+		StaticModel = ManualLG,
+		WorldStaticModel = ManualLGGround,
+    }
+
+    item Sugarcane
+    {
+		DisplayCategory = Material,
+        Type				=		Food,
+        DisplayName			=		Sugarcane,
+        Icon				=		Sugarcane,
+        Weight				=		0.8,
+		WorldStaticModel = SugarCane_Ground,
+    }
+	
+	item SugarcanePile
+    {
+		DisplayCategory = Material,
+        Type				=		Food,
+        DisplayName			=		Sugarcane Pile,
+        Icon				=		CanePile,
+        Weight				=		15,
+		Tooltip             =       Tooltip_SugarcanePile,
+		WorldStaticModel = SugarCanePile_Ground,
+    }
+
+    item SugarcaneDry
+    {
+		DisplayCategory = Material,
+        Type				=		Normal,
+        DisplayName			=		Dry Sugarcane,
+        Icon				=		DrySugarcane,
+        Weight				=		0.8,
+		Tooltip             =       Tooltip_DrySugarcane,
+		WorldStaticModel = SugarCaneDry_Ground,
+    }
+
+	item SugarcanePileDry
+    {
+		DisplayCategory = Material,
+        Type				=		Normal,
+        DisplayName			=		Dry Sugarcane Pile,
+        Icon				=		CanePileDry,
+        Weight				=		15,
+		Tooltip             =       Tooltip_DrySugarcane,
+		WorldStaticModel = SugarCanePileDry_Ground,
+    }
+
+    item SunFlower
+    {
+		DisplayCategory = Material,
+        Type				=		Food,
+        DisplayName			=		Sunflower,
+        Icon				=		Sunflower,
+        Weight				=		0.05,
+    }
+
+	item CubeboxEmpty
+	{
+		DisplayCategory = Junk,
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Empty cube box,
+		Icon	=	cubebox,
+	}
+
+	item WaterCubebox
+	{
+		DisplayCategory = Water,
+	    Weight	=	0.1,
+	    HungerChange	=	0,
+        ThirstChange	=	-15,
+	    Type	=	Food,
+	    DisplayName	=	Water cube box,
+		CustomContextMenu = Drink,
+		ReplaceOnUse = CubeboxEmpty,
+	    Icon	=	cubeboxfull,
+	}
+
+    item BirdNest
+    {
+		DisplayCategory = Material,
+        Type				=		Normal,
+        DisplayName			=		Bird Nest,
+        Icon				=		BirdNest,
+        Weight				=		0.2,
+		Tooltip             =       Tooltip_BirdNest,
+		WorldStaticModel = BirdNest,
+    }
+
+    item Potatopan
+    {
+		DisplayCategory = Food,
+        Weight	=	3,
+        Type	=	Food,
+        DisplayName	=	Potato Pan,
+        Icon	=	Potatopan,
+        HungerChange    =   -50,
+		ThirstChange		=		-5,
+        Carbohydrates = 58.08,
+        Proteins = 11.52,
+        Lipids = 1.2,
+        Calories = 256,
+        IsCookable	=	    true,
+		DaysFresh 			=		2,
+		DaysTotallyRotten 	=	 	4,
+		RemoveNegativeEffectOnCooked    =   TRUE,
+        MinutesToBurn   =   50,
+        MinutesToCook   =   30,
+        UnhappyChange   =   15,
+        ReplaceOnUse    =   Pan,
+        BadInMicrowave = true,
+        GoodHot = true,
+		WorldStaticModel = Potatopan_Ground,
+    }
+
+    item Chili
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-10,
+        Weight	=	0.2,
+        Type	=	Food,
+        DaysTotallyRotten	=	8,
+        DisplayName	=	Chili,
+        Icon	=	Chili,
+        DaysFresh	=	5,
+        EvolvedRecipe = Stir fry Griddle Pan:10;Soup:10;Pie:10;Stir fry:10;Sandwich:10;Burger:10;Salad:10;Roasted Vegetables:10;RicePot:10;RicePan:10;PastaPot:10;PastaPan:10;Taco:10,
+        ThirstChange	=	10,
+        FoodType    =   Vegetables,
+        Carbohydrates = 9,
+        Proteins = 10,
+        Lipids = 0.53,
+        Calories = 110,
+		OnEat = OnEat_Chili,
+		WorldStaticModel = PepperJalapeno_Ground,
+	}
+
+	item MolinoCoffee
+	{
+		DisplayCategory = Material,
+		Weight	=	0.5,
+		Type	=	Moveable,
+		DisplayName	=	Coffee Grinder,
+		Icon	=	Molino,
+		WorldObjectSprite	= carpentry_04_57,
+		Tooltip = Tooltip_MolinoCoffee,
+	}
+
+    item CoffeePan
+    {
+		DisplayCategory = Food,
+        HungerChange	=	-20,
+        UnhappyChange	    =	    20,
+        ThirstChange		=		35,
+		FatigueChange		=	-25,
+        Weight	=	0.1,
+        Type	=	Food,
+		DangerousUncooked	=	TRUE,
+        DisplayName	=	Coffee Pan,
+        Icon	=	Coffeebaking,
+        IsCookable	=	    true,
+        MinutesToBurn   =   40,
+        MinutesToCook   =   20,
+		ReplaceOnUse = Pan,
+		CantBeFrozen = TRUE,
+		Tooltip = Tooltip_CoffeePan,
+		WorldStaticModel = CoffeePan_Ground,
+    }
+
+    item Pepperplant
+    {
+		DisplayCategory = Material,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Pepper Plant,
+        Icon	=	pepperplant,
+        Tooltip = Tooltip_SaltStone,
+    }
+
+    item SaltStone
+	{
+		DisplayCategory = Material,
+		Weight			= 0.8,
+		Type			= Normal,
+		DisplayName		= Salt Stone,
+		Icon			= SaltStone,
+		Tooltip         = Tooltip_SaltStone,
+		WorldStaticModel = SaltStone_Ground,
+	}
+
+    item BeeNest
+	{
+		DisplayCategory = Food,
+		Weight			= 0.8,
+		Type			= Normal,
+		DisplayName		= Bee Nest,
+		Icon			= BeeNest,
+		WorldStaticModel = BeeNest,
+	}
+
+    item HoneyJar
+    {
+		DisplayCategory = Food,
+        Type				=		Food,
+        DisplayName			=		Jar of Honey,
+        Icon				=		Honeyjar,
+        Weight				=		0.4,
+		ReplaceOnUse 	    = 		EmptyJar2,
+        Carbohydrates = 187,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 660,
+        Packaged = FALSE,
+        CantBeFrozen = TRUE,
+		WorldStaticModel = JarFoodHoney_Ground,
+    }
+
+    item WineFull
+	{
+		DisplayCategory = Water,
+		Weight				= 0.8,
+		DisplayName			= Water Bottle,
+		Icon				= WineWFull3,
+
+		CanStoreWater		= TRUE,
+		IsWaterSource		= TRUE,
+		Type				= Drainable,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.1,
+		ReplaceOnDeplete	= WineEmpty,
+		ReplaceOnUseOn		= WaterSource-WineFull,
+		IsCookable	=	TRUE,
+    	CustomContextMenu 	= 	Drink,
+		CustomEatSound = DrinkingFromBottleGlass,
+    	StaticModel = WhiteWineBottle,
+    	WorldStaticModel = WineWhiteGround,
+    	EatType = Bourbon,
+	}
+
+    item WineFull2
+	{
+		DisplayCategory = Water,
+		Weight				= 0.8,
+		DisplayName			= Water Bottle,
+		Icon				= WineWFull2,
+
+		CanStoreWater		= TRUE,
+		IsWaterSource		= TRUE,
+		Type				= Drainable,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.1,
+		ReplaceOnDeplete	= WineEmpty2,
+		ReplaceOnUseOn		= WaterSource-WineFull2,
+		IsCookable	=	TRUE,
+    	CustomContextMenu 	= 	Drink,
+		StaticModel = RedWineBottle,
+		CustomEatSound = DrinkingFromBottleGlass,
+    	WorldStaticModel = WineRedGround,
+    	EatType = Bourbon,
+	}
+
+	item Peas2
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-15,
+		Weight	=	0.6,
+		Type	=	Food,
+		DaysTotallyRotten	=	5,
+		DisplayName	=	Farm Peas,
+		Icon	=	Peas2,
+		DaysFresh	=	3,
+		EvolvedRecipe = Omelette:5;Soup:5;Stew:5;Stir fry:5;Stir fry Griddle Pan:5;Roasted Vegetables:5;RicePot:5;RicePan:5,
+		FoodType    =   Vegetables,
+		ThirstChange	=	-5,
+        Carbohydrates = 20.45,
+        Proteins = 7.95,
+        Lipids = 0.85,
+        Calories = 119,
+		Packaged = FALSE,
+		WorldStaticModel = Peas,
+	}
+
+    item RicePlant
+    {
+		DisplayCategory = Food,
+        Weight	=	0.2,
+        Type	=	Food,
+        DisplayName	=	Rice Plant,
+        Icon	=	Riceplant,
+        HungerChange    =   -6,
+        UnhappyChange   =   10,
+        ThirstChange    =   10,
+		DaysFresh			=	10,
+		DaysTotallyRotten	=	15,
+        Carbohydrates = 64,
+        Proteins = 7,
+        Lipids = 0,
+        Calories = 288,
+        Packaged = FALSE,
+    }
+
+    item Hotdogbreaddough
+    {
+		DisplayCategory = Food,
+        Type				=			Food,
+        DisplayName			=		    Hot Dog Bread,
+        Icon				=			Breadhotdog,
+        Weight				=			0.3,
+        HungerChange 		=		-10,
+        UnhappyChange	    =	    10,
+        ThirstChange		=		15,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        IsCookable	=	TRUE,
+        DaysTotallyRotten	=	9,
+        MinutesToBurn	=	50,
+        MinutesToCook	=	20,
+        Carbohydrates = 99,
+        Proteins = 17.7,
+        Lipids = 6.66,
+        Calories = 532,
+        DaysFresh	=	4,
+		Tooltip = Tooltip_Hotdog,
+		WorldStaticModel = BreadDough,
+    }
+
+    item Homemademustard
+	{
+		DisplayCategory = Food,
+		Weight	=	0.2,
+		Type	=	Food,
+		DisplayName	=	Homemade Mustard,
+		Icon	=	MustardJar,
+		DaysFresh 			=		10,
+		DaysTotallyRotten 	=	 	13,
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 510,
+        Packaged = FALSE,
+        CantBeFrozen = TRUE,
+		ReplaceOnUse = EmptyJar2,
+		WorldStaticModel = JarFoodMustard_Ground,
+	}
+
+    item ChickenPan
+    {
+		DisplayCategory = Food,
+        HungerChange	=	-10,
+        Weight	=	0.1,
+        Type	=	Food,
+		DangerousUncooked	=	TRUE,
+        DisplayName	=	Chicken Pan,
+        Icon	=	Chickenpan,
+		DaysFresh	=	3,
+        DaysTotallyRotten	=	5,
+        IsCookable	=	    true,
+        MinutesToBurn   =   50,
+        MinutesToCook   =   20,
+        Carbohydrates = 8,
+        Proteins = 8,
+        Lipids = 10,
+        Calories = 160,
+		ReplaceOnUse = Pan,
+        BadInMicrowave = true,
+		CantBeFrozen = TRUE,
+		GoodHot = true,
+    }
+
+    item MustardSeeds
+    {
+		DisplayCategory = Material,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Mustard Seeds,
+        Icon	=	Mostaza,
+        Tooltip = Tooltip_Mostaza,
+    }
+
+    item EmptyJar2
+	{
+		DisplayCategory = Cooking,
+		Type				=		Normal,
+		DisplayName			=		Empty Jar,
+		Icon				=		JarlidEmpty,
+		Weight				=		0.3,
+		WorldStaticModel    =       JarLGR_Ground,
+	}
+
+    item Peanutpowder
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-10,
+		ThirstChange		=	50,
+		Weight	=	2.0,
+		Type	=	Food,
+		DisplayName	=	Peanut powder,
+		Icon	=	Peanutpowder,
+		DaysTotallyRotten	=	7,
+		DaysFresh	=	5,
+        Carbohydrates = 45.7,
+        Proteins = 73.1,
+        Lipids = 139.6,
+        Calories = 1610,
+        CantBeFrozen = TRUE,
+		ReplaceOnUse = MortarPestle,
+	}
+
+	item HMPeanutButter
+	{
+		DisplayCategory = Food,
+		Weight	=	0.3,
+		Type	=	Food,
+		DisplayName	=	Homemade Peanut Butter,
+		Icon	=	PeanutJar,
+		FoodType    =   NoExplicit,
+		DaysTotallyRotten	=	10,
+		DaysFresh	=	7,
+        Carbohydrates = 128,
+        Proteins = 84,
+        Lipids = 224,
+        Calories = 2660,
+		ReplaceOnUse = EmptyJar2,
+		WorldStaticModel = JarFoodPeanutbutter_Ground,
+	}
+
+	item HandmadeCheese
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-150,
+		UnhappyChange		=	-25,
+		BoredomChange		=		-25,
+		Weight	=	2.0,
+		Type	=	Food,
+		DaysTotallyRotten	=	30,
+		DisplayName	=	Homemade Cheese,
+		Icon	=	CheeseBig,
+		DaysFresh	=	26,
+		EvolvedRecipe = Soup:25;Sandwich:15;Burger:15;Salad:15;PastaPot:25;PastaPan:25,
+		FoodType    =   NoExplicit,
+        Carbohydrates = 8.7,
+        Proteins = 64.0,
+        Lipids = 93.3,
+        Calories = 1130,
+		StaticModel = HandmadeCheese,
+		EatType = 2hand,
+	}
+
+	item Brine
+    {
+		DisplayCategory = Food,
+        Weight	=	3,
+		HungerChange		=	-2,
+		Type				=	Food,
+		ThirstChange		=	-10,
+		UnhappyChange		=	80,
+		BoredomChange		=		80,
+        DisplayName	=	Brine,
+        Icon	=	Pot_Water,
+		CustomContextMenu 	= Drink,
+		CustomEatSound = EatingSoup,
+		ReplaceOnUse	=	Pot,
+		CantBeFrozen = TRUE,
+		Tooltip = Tooltip_Brine,
+		StaticModel = CookingPot,
+		WorldStaticModel = CookingPotWater_Ground,
+		EatType = Pot,
+    }
+
+	item KitchenBrush
+    {
+		DisplayCategory = Cooking,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Kitchen Brush,
+		Tooltip = Tooltip_KitchenBrush,
+        Icon	=	KitchenBrush,
+		StaticModel = KitchenBrush,
+    }
+
+	item CheeseMoldEmpty
+    {
+		DisplayCategory = Cooking,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Cheese Mold,
+		Tooltip = Tooltip_CheeseMoldEmpty,
+        Icon	=	CheeseMold,
+    }
+
+	item CheeseMoldEmpty2
+    {
+		DisplayCategory = Cooking,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Cheese Mold 2,
+		Tooltip = Tooltip_CheeseMoldEmpty2,
+        Icon	=	CheeseMold3,
+    }
+
+	item CheeseMoldEmpty3
+    {
+		DisplayCategory = Cooking,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Cheese Mold 3,
+		Tooltip = Tooltip_CheeseMoldEmpty3,
+        Icon	=	CheeseMold4,
+    }
+
+	item CheeseMoldFull
+    {
+		DisplayCategory = Food,
+        Weight	=	2,
+        Type	=	Food,
+        DisplayName	=	Cheese in Mold,
+        Icon	=	CheeseMoldfull1,
+        HungerChange    =   -15,
+		ThirstChange		=	10,
+		DaysFresh	=	4,
+		DaysTotallyRotten	=	5,
+        Carbohydrates = 3.48,
+        Proteins = 25.6,
+        Lipids = 37.32,
+        Calories = 452,
+        ReplaceOnUse    =   CheeseMoldEmpty,
+		Tooltip = Tooltip_NeedCheeseTable,
+    }
+
+	item CheeseMoldFull2
+    {
+		DisplayCategory = Food,
+        Weight	=	2,
+        Type	=	Food,
+        DisplayName	=	BarCheese in Mold,
+        Icon	=	CheeseMold3full,
+        HungerChange    =   -25,
+		ThirstChange		=	10,
+		DaysFresh	=	4,
+		DaysTotallyRotten	=	5,
+        Carbohydrates = 0,
+        Proteins = 20,
+        Lipids = 30,
+        Calories = 350,
+        ReplaceOnUse    =   CheeseMoldEmpty2,
+		Tooltip = Tooltip_NeedCheeseTable,
+    }
+
+	item RCheese1
+    {
+		DisplayCategory = Food,
+        Weight	=	2,
+        Type	=	Food,
+        DisplayName	=	Homemade Cheese,
+        Icon	=	CheeseR1,
+        HungerChange    =   -25,
+		ThirstChange		=	10,
+		DaysFresh	=	5,
+		DaysTotallyRotten	=	7,
+		EvolvedRecipe = Soup:15;Sandwich:5;Burger:5;Salad:5;PastaPot:15;PastaPan:15,
+		FoodType    =   NoExplicit,
+        Carbohydrates = 3.48,
+        Proteins = 25.6,
+        Lipids = 37.32,
+        Calories = 452,
+		Tooltip = Tooltip_Rcheese,
+		StaticModel = RCheese1,
+		EatType = 2hand,
+    }
+
+	item RCheese2
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-50,
+		Weight	=	2,
+		Type	=	Food,
+		DaysTotallyRotten	=	30,
+		DisplayName	=	Bar of cheese,
+		Icon	=	CheeseR2,
+		DaysFresh	=	25,
+		EvolvedRecipe = Sandwich:5;Burger:5;RicePot:5;RicePan:5;PastaPot:5;PastaPan:5,
+		FoodType = NoExplicit,
+        Carbohydrates = 0,
+        Proteins = 40,
+        Lipids = 60,
+        Calories = 700,
+		StaticModel = RCheese2,
+		EatType = 2hand,
+	}
+
+	item LacticFerment
+	{
+		DisplayCategory = Cooking,
+		Weight	=	0.02,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.1,
+		DisplayName	=	Lactic ferment,
+		Tooltip = Tooltip_LacticFerment,
+		Icon	=	LacticPacket1,
+		WorldStaticModel = LacticFerment_Ground,
+	}
+
+	item CitricAcid
+	{
+		DisplayCategory = Cooking,
+		Weight	=	0.02,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.1,
+		DisplayName	=	Citric Acid,
+		Tooltip = Tooltip_CitricAcid,
+		Icon	=	CitricAcid,
+		WorldStaticModel = CitricAcid_Ground,
+	}
+
+	item EdibleDyeYellow
+	{
+		DisplayCategory = Cooking,
+		Weight	=	0.02,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.1,
+		DisplayName	=	Edible Yellow Dye,
+		Tooltip = Tooltip_DyeYellow,
+		Icon	=	Colorante1,
+		WorldStaticModel = EdibleDyeYellow_Ground,
+	}
+
+	item EdibleDyeRed
+	{
+		DisplayCategory = Cooking,
+		Weight	=	0.02,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.1,
+		DisplayName	=	Edible Red Dye,
+		Tooltip = Tooltip_DyeRed,
+		Icon	=	Colorante2,
+		WorldStaticModel = EdibleDyeRed_Ground,
+	}
+
+	item EdibleDyeOrange
+	{
+		DisplayCategory = Cooking,
+		Weight	=	0.02,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.1,
+		DisplayName	=	Edible Orange Dye,
+		Tooltip = Tooltip_DyeOrange,
+		Icon	=	Colorante3,
+		WorldStaticModel = EdibleDyeOrange_Ground,
+	}
+
+    item Gelatine
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-5,
+		UnhappyChange	=	15,
+		Weight	=	0.2,
+		Type	=	Food,
+		DisplayName	=	Gelatine,
+		Icon	=	Gelatine,
+        Carbohydrates = 0,
+        Proteins = 87,
+        Lipids = 0,
+        Calories = 348,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+		WorldStaticModel = Gelatine_Ground,
+	}
+
+    item Marshmallow
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-5,
+		UnhappyChange	=	-15,
+		Weight	=	0.1,
+		Type	=	Food,
+		DisplayName	=	Marshmallow,
+		Icon	=	Marshmallow,
+        Carbohydrates = 8,
+        Proteins = 1,
+        Lipids = 6.8,
+        Calories = 33,
+        Packaged = False,
+        CantBeFrozen = TRUE,
+		OBSOLETE = true,
+	}
+
+    item MarshmallowPackage
+    {
+		DisplayCategory = Food,
+        Type				=		Food,
+        DisplayName			=		Marshmallow Package,
+        Icon				=		Marshmallowpacket,
+        Weight				=		0.6,
+        Carbohydrates = 80,
+        Proteins = 3,
+        Lipids = 68,
+        Calories = 330,
+        Packaged = TRUE,
+    }
+
+    item MarshmallowBowl
+    {
+		DisplayCategory = Food,
+        Type				=		Food,
+        DisplayName			=		Marshmallow Bowl,
+        Icon				=		Marshmallowbowl,
+        Weight				=		0.6,
+        Carbohydrates = 80,
+        Proteins = 3,
+        Lipids = 68,
+        Calories = 330,
+        Packaged = false,
+		StaticModel = Bowl,
+		EatType = 2hand,
+		WorldStaticModel = MarshmallowBowl_Ground,
+    }
+
+	item Saucepancaramel
+	{
+		DisplayCategory = Food,
+        Weight	=	2,
+        Type	=	Food,
+        DisplayName	=	Saucepan caramel,
+        Icon	=	Saucepancaramel,
+        HungerChange    =   -10,
+		ThirstChange		=		10,
+		DaysFresh	=	3,
+		DaysTotallyRotten	=	5,
+        Carbohydrates = 84,
+        Proteins = 0.1,
+        Lipids = 0.1,
+        Calories = 339,
+        IsCookable	=	    true,
+        MinutesToBurn   =   20,
+        MinutesToCook   =   10,
+        ReplaceOnUse    =   Saucepan,
+        BadInMicrowave = true,
+		CantBeFrozen = TRUE,
+		GoodHot = true,
+		StaticModel = SaucePan,
+		EatType = Kettle,
+		WorldStaticModel = SaucePanCaramel_Ground,
+	}
+
+	item HomemadeModjeska
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-10,
+		UnhappyChange	=	-20,
+		Weight	=	0.1,
+		Type	=	Food,
+		DisplayName	=	Modjeska,
+		Icon	=	Modjeska,
+		DaysFresh	=	5,
+		DaysTotallyRotten	=	8,
+		Carbohydrates = 15,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 60,
+		WorldStaticModel = Modjeska,
+	}
+
+	item SaucepanMilk
+	{
+		DisplayCategory = Food,
+        Weight	=	2,
+        Type	=	Food,
+        DisplayName	=	Saucepan with Milk,
+        Icon	=	Saucepanmilk,
+		CustomContextMenu	=		Drink,
+		CustomEatSound		=		DrinkingFromBottle,
+        HungerChange    =   -10,
+		ThirstChange	=	-100,
+		DaysFresh	=	1,
+		DaysTotallyRotten	=	2,
+        Carbohydrates = 13,
+        Proteins = 8,
+        Lipids = 2.5,
+        Calories = 110,
+        IsCookable	=	    true,
+        MinutesToBurn   =   50,
+        MinutesToCook   =   20,
+        ReplaceOnUse    =   Saucepan,
+        BadInMicrowave = true,
+		CantBeFrozen = TRUE,
+		GoodHot = true,
+		StaticModel = SaucePan,
+		EatType = Kettle,
+		WorldStaticModel = SaucepanMilk_Ground,
+	}
+
+	item CheesePreparation
+	{
+		DisplayCategory = Food,
+        Weight	=	2,
+        Type	=	Food,
+        DisplayName	=	Cheese preparation,
+        Icon	=	Saucepancheese,
+        HungerChange    =   -25,
+		ThirstChange	=	-10,
+		DaysFresh	=	2,
+		DaysTotallyRotten	=	3,
+        Carbohydrates = 13,
+        Proteins = 8,
+        Lipids = 2.5,
+        Calories = 110,
+        UnhappyChange   =   20,
+		BoredomChange   =   20,
+        ReplaceOnUse    =   Saucepan,
+		CantBeFrozen = TRUE,
+		StaticModel = SaucePan,
+		EatType = Kettle,
+		WorldStaticModel = SaucepanCheese_Ground,
+	}
+
+	item CheesePreparation2
+	{
+		DisplayCategory = Food,
+        Weight	=	2,
+        Type	=	Food,
+        DisplayName	=	Cheese in bar preparation,
+        Icon	=	Saucepancheese,
+        HungerChange    =   -25,
+		ThirstChange	=	-10,
+		DaysFresh	=	2,
+		DaysTotallyRotten	=	3,
+        Carbohydrates = 13,
+        Proteins = 8,
+        Lipids = 2.5,
+        Calories = 110,
+        UnhappyChange   =   20,
+		BoredomChange   =   20,
+        ReplaceOnUse    =   Saucepan,
+		CantBeFrozen = TRUE,
+		StaticModel = SaucePan,
+		EatType = Kettle,
+		WorldStaticModel = SaucepanCheese2_Ground,
+	}
+
+	item CitricMug
+	{
+		DisplayCategory = Food,
+		IsWaterSource	=	TRUE,
+		Weight	=	0.8,
+		CanStoreWater	=	TRUE,
+		FillFromDispenserSound = GetWaterFromDispenserCeramic,
+		FillFromTapSound = GetWaterFromTapCeramic,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	1,
+		DisplayName	=	Mug of Citric Water,
+		ReplaceOnDeplete	=	Mugl,
+		ReplaceOnUseOn	=	WaterSource-WaterMug,
+		Icon	=	CitricMugFulll,
+		IsCookable	=	TRUE,
+		RainFactor = 0.2,
+		Tooltip = Tooltip_item_CitricMug,
+		StaticModel = Mug,
+        EatType = Mug,
+		WorldStaticModel = Mug,
+	}
+
+	item CitricMugRed
+	{
+		DisplayCategory = Food,
+		IsWaterSource	=	TRUE,
+		Weight	=	0.8,
+		CanStoreWater	=	TRUE,
+		FillFromDispenserSound = GetWaterFromDispenserCeramic,
+		FillFromTapSound = GetWaterFromTapCeramic,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	1,
+		DisplayName	=	Mug of Citric Water,
+		ReplaceOnDeplete	=	MugRed,
+		ReplaceOnUseOn	=	WaterSource-WaterMugRed,
+		Icon	=	MugRed,
+		IsCookable	=	TRUE,
+		RainFactor = 0.2,
+		Tooltip = Tooltip_item_CitricMug,
+        StaticModel = MugRed,
+		EatType = Mug,
+		WorldStaticModel = MugRed,
+	}
+
+	item CitricMugWhite
+	{
+		DisplayCategory = Food,
+		IsWaterSource	=	TRUE,
+		Weight	=	0.8,
+		CanStoreWater	=	TRUE,
+		FillFromDispenserSound = GetWaterFromDispenserCeramic,
+		FillFromTapSound = GetWaterFromTapCeramic,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	1,
+		DisplayName	=	Mug of Citric Water,
+		ReplaceOnDeplete	=	MugWhite,
+		ReplaceOnUseOn	=	WaterSource-WaterMugWhite,
+		Icon	=	MugWhite,
+		IsCookable	=	TRUE,
+		RainFactor = 0.2,
+		Tooltip = Tooltip_item_CitricMug,
+        StaticModel = MugWhite,
+		EatType = Mug,
+		WorldStaticModel = MugWhite,
+	}
+
+	item CitricMugSpiffo
+	{
+		DisplayCategory = Food,
+		IsWaterSource	=	TRUE,
+		Weight	=	0.8,
+		CanStoreWater	=	TRUE,
+		FillFromDispenserSound = GetWaterFromDispenserCeramic,
+		FillFromTapSound = GetWaterFromTapCeramic,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	1,
+		DisplayName	=	Mug of Citric Water,
+		ReplaceOnDeplete	=	MugSpiffo,
+		ReplaceOnUseOn	=	WaterSource-WaterMugSpiffo,
+		Icon	=	MugSpiffo,
+		IsCookable	=	TRUE,
+		RainFactor = 0.2,
+		Tooltip = Tooltip_item_CitricMug,
+        StaticModel = MugSpiffo,
+		EatType = Mug,
+		WorldStaticModel = MugSpiffo,
+	}
+
+	item CitricMugTea
+	{
+		DisplayCategory = Food,
+		IsWaterSource	=	TRUE,
+		Weight	=	0.8,
+		CanStoreWater	=	TRUE,
+		FillFromDispenserSound = GetWaterFromDispenserCeramic,
+		FillFromTapSound = GetWaterFromTapCeramic,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	1,
+		DisplayName	=	Mug of Citric Water,
+		ReplaceOnDeplete	=	Teacup,
+		ReplaceOnUseOn	=	WaterSource-WaterTeacup,
+		Icon	=	Teacup,
+		IsCookable	=	TRUE,
+		RainFactor = 0.2,
+		Tooltip = Tooltip_item_CitricMug,
+        StaticModel = Mug,
+		EatType = Mug,
+	}
+
+	item CheesePreparation3
+	{
+		DisplayCategory = Food,
+        Weight	=	2,
+        Type	=	Food,
+        DisplayName	=	Mozzarella cheese preparation,
+        Icon	=	Saucepancheese,
+        HungerChange    =   -25,
+		ThirstChange	=	-10,
+		DaysFresh	=	2,
+		DaysTotallyRotten	=	3,
+        Carbohydrates = 13,
+        Proteins = 8,
+        Lipids = 2.5,
+        Calories = 110,
+        UnhappyChange   =   20,
+		BoredomChange   =   20,
+        ReplaceOnUse    =   Saucepan,
+		CantBeFrozen = TRUE,
+		StaticModel = SaucePan,
+		EatType = Kettle,
+		WorldStaticModel = SaucepanCheese3_Ground,
+	}
+	
+	item CheeseMoldFull3
+    {
+		DisplayCategory = Food,
+        Weight	=	2,
+        Type	=	Food,
+        DisplayName	=	Mozzarella in Mold,
+        Icon	=	CheeseMoldfull4,
+        HungerChange    =   -15,
+		ThirstChange		=	10,
+		DaysFresh	=	4,
+		DaysTotallyRotten	=	5,
+        Carbohydrates = 3.48,
+        Proteins = 25.6,
+        Lipids = 37.32,
+        Calories = 452,
+        ReplaceOnUse    =   CheeseMoldEmpty3,
+		Tooltip = Tooltip_NeedCheeseTable,
+    }
+
+	item RCheese3
+    {
+		DisplayCategory = Food,
+        Weight	=	2,
+        Type	=	Food,
+        DisplayName	=	Homemade Mozzarella,
+        Icon	=	CheeseR3,
+        HungerChange    =   -25,
+		ThirstChange		=	10,
+		DaysFresh	=	5,
+		DaysTotallyRotten	=	7,
+		EvolvedRecipe = Soup:15;Sandwich:5;Burger:5;Salad:5;PastaPot:15;PastaPan:15,
+		FoodType    =   NoExplicit,
+        Carbohydrates = 3.48,
+        Proteins = 25.6,
+        Lipids = 37.32,
+        Calories = 452,
+		Tooltip = Tooltip_Rcheese3,
+		StaticModel = RCheese3,
+		EatType = 2hand,
+    }
+
+	item ChoppedCheese
+    {
+		DisplayCategory = Food,
+        Weight	=	2,
+        Type	=	Food,
+        DisplayName	=	Chopped cheese,
+        Icon	=	Choppedcheese,
+        HungerChange    =   -20,
+		ThirstChange		=	2,
+		DaysFresh	=	5,
+		DaysTotallyRotten	=	7,
+		EvolvedRecipe = Omelette:5;Soup:10;Sandwich:5;Sandwich Baguette:5;Burger:5;Salad:5;PastaPot:10;PastaPan:10;Pizza:20;Taco:5;Burrito:5,
+		FoodType    =   NoExplicit,
+        Carbohydrates = 3.48,
+        Proteins = 25.6,
+        Lipids = 37.32,
+        Calories = 452,
+		StaticModel = ChoppedCheese,
+    }
+
+    item CannedOnion
+	{
+		DisplayCategory = Food,
+		Type				=		Food,
+		DisplayName			=		Jar of Onions,
+		Icon				=		JarWhite,
+		Weight				=		0.5,
+		DaysFresh 			=		60,
+		DaysTotallyRotten 	=	 	90,
+		OnCooked            =       CannedFood_OnCooked,
+		IsCookable	        =	    TRUE,
+        MinutesToBurn	    =	    120,
+        MinutesToCook	    =	    60,
+		StaticModel = CanClosed,
+		WorldStaticModel = JarFoodOnion_Ground,
+	}
+
+    item Tomatosauce
+    {
+		DisplayCategory = Food,
+        Weight	=	3,
+        Type	=	Food,
+        DisplayName	=	Saucepan with Tomato sauce,
+        Icon	=	Saucepantomato,
+        HungerChange    =   -10,
+		ThirstChange		=		-5,
+        Carbohydrates = 10.59,
+        Proteins = 3.87,
+        Lipids = 0.63,
+        Calories = 64,
+        IsCookable	=	    true,
+		DaysFresh 			=		4,
+		DaysTotallyRotten 	=	 	7,
+		EvolvedRecipe = Soup:10;Sandwich:5;Burger:5;Salad:5;PastaPot:10;PastaPan:10;Pizza:10;Taco:5|Cooked,
+		FoodType    =   NoExplicit,
+		RemoveNegativeEffectOnCooked    =   TRUE,
+        MinutesToBurn   =   50,
+        MinutesToCook   =   20,
+        UnhappyChange   =   10,
+        ReplaceOnUse    =   Saucepan,
+        BadInMicrowave = true,
+        GoodHot = true,
+		StaticModel = SaucePan,
+		EatType = Kettle,
+		WorldStaticModel = Tomatosauce_Ground,
+    }
+
+    item PizzaDough
+    {
+		DisplayCategory = Food,
+        Type				=			Food,
+        DisplayName			=		    Pizza Dough,
+        Icon				=			Dough,
+        Weight				=			0.3,
+        HungerChange 		=		-15,
+        UnhappyChange	    =	    10,
+        ThirstChange		=		15,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        IsCookable	=	TRUE,
+        DaysTotallyRotten	=	9,
+        MinutesToBurn	=	50,
+        MinutesToCook	=	20,
+        Carbohydrates = 120,
+        Proteins = 17.7,
+        Lipids = 6.66,
+        Calories = 532,
+        DaysFresh	=	4,
+		WorldStaticModel = BreadDough,
+    }
+
+	item PizzaPrep
+	{
+		DisplayCategory = Food,
+		Weight	=	0.5,
+		Type	=	Food,
+		DisplayName	=	Pizza Preparation,
+		Icon	=	Pizzapan1,
+		HungerChange    =   -30,
+		IsCookable	=	TRUE,
+		ReplaceOnUse	=	BakingPan,
+		MinutesToBurn	=	110,
+        MinutesToCook	=	50,
+		UnhappyChange   =   -20,
+		DaysTotallyRotten	=	9,
+		DaysFresh	=	4,
+        Carbohydrates = 120,
+        Proteins = 42,
+        Lipids = 39,
+        Calories = 500,
+        BadInMicrowave = true,
+		WorldStaticModel = PizzaPrep_Ground,
+	}
+
+    item PizzaRaw
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-50,
+		Weight	=	0.2,
+		Type	=	Food,
+		UnhappyChange	=	-20,
+		DisplayName	=	Homemade Pizza,
+		Icon	=	Pizzapan2,
+        IsCookable	=	TRUE,
+		DaysTotallyRotten	=	9,
+		MinutesToBurn	=	110,
+        MinutesToCook	=	50,
+        ReplaceOnUse	=	BakingPan,
+		DaysFresh	=	4,
+        Carbohydrates = 120,
+        Proteins = 42,
+        Lipids = 39,
+        Calories = 1000,
+        BadInMicrowave = true,
+		WorldStaticModel = PizzaPrep_Ground,
+	}
+
+    item SaltEmpty
+	{
+		DisplayCategory = Material,
+		Weight			= 0.1,
+		Type			= Normal,
+		DisplayName		= Salt Empty,
+		Icon			= SaltEmpty,
+		WorldStaticModel = SaltEmpty,
+	}
+
+    item PepperEmpty
+	{
+		DisplayCategory = Material,
+		Weight			= 0.1,
+		Type			= Normal,
+		DisplayName		= Pepper Empty,
+		Icon			= SaltEmpty,
+		WorldStaticModel = PepperEmpty,
+	}
+
+    item Corks
+    {
+		DisplayCategory = Junk,
+        Type				=			Normal,
+        DisplayName			=		    Cork,
+        Icon				=			Cork,
+        Weight				=			0.1,
+    }
+
+	item TinCanFull
+	{
+		DisplayCategory = Water,
+		IsWaterSource	=	TRUE,
+		Weight	=	0.8,
+		CanStoreWater	=	TRUE,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.5,
+		DisplayName	=	Water Tin Can,
+		ReplaceOnDeplete	=	TinCanEmpty,
+		ReplaceOnUseOn	=	WaterSource-TinCanFull,
+		Icon	=	TinCanFull,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottle,
+		StaticModel = CanOpen,
+		IsCookable	=	TRUE,
+		RainFactor = 0.25,
+        Tooltip = Tooltip_item_RainFromGround,
+		WorldStaticModel = TinCanFull_Ground,
+	}
+
+	item PopCanFull
+	{
+		DisplayCategory = Water,
+		IsWaterSource	=	TRUE,
+		Weight	=	0.3,
+		CanStoreWater	=	TRUE,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.5,
+		DisplayName	=	Water Pop Can,
+		ReplaceOnDeplete	=	PopEmpty,
+		ReplaceOnUseOn	=	WaterSource-PopCanFull,
+		Icon	=	Pop,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottle,
+		StaticModel = PopCanDiet,
+		IsCookable	=	TRUE,
+		RainFactor = 0.25,
+        Tooltip = Tooltip_item_RainFromGround,
+		WorldStaticModel = PopCanDietWorld,
+	}
+
+    item PopEmpty2
+    {
+		DisplayCategory = WaterContainer,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Empty Pop Can,
+        Icon	=	Pop2,
+        MetalValue = 10,
+
+		CanStoreWater	= TRUE,
+		ReplaceOnUseOn	= WaterSource-PopCan2Full,
+		RainFactor = 0.25,
+        Tooltip = Tooltip_item_RainFromGround,
+		WorldStaticModel = PopCanRedWorld,
+    }
+
+	item PopCan2Full
+	{
+		DisplayCategory = Water,
+		IsWaterSource	=	TRUE,
+		Weight	=	0.3,
+		CanStoreWater	=	TRUE,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.5,
+		DisplayName	=	Water Pop Can,
+		ReplaceOnDeplete	=	PopEmpty2,
+		ReplaceOnUseOn	=	WaterSource-PopCan2Full,
+		Icon	=	Pop2,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottle,
+		StaticModel = PopCanDiet,
+		IsCookable	=	TRUE,
+		RainFactor = 0.25,
+        Tooltip = Tooltip_item_RainFromGround,
+		WorldStaticModel = PopCanRedWorld,
+	}
+
+    item PopEmpty3
+    {
+		DisplayCategory = WaterContainer,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	Empty Pop Can,
+        Icon	=	Pop3,
+        MetalValue = 10,
+
+		CanStoreWater	= TRUE,
+		ReplaceOnUseOn	= WaterSource-PopCan3Full,
+		RainFactor = 0.25,
+        Tooltip = Tooltip_item_RainFromGround,
+		WorldStaticModel = PopCanFizzWorld,
+    }
+
+	item PopCan3Full
+	{
+		DisplayCategory = Water,
+		IsWaterSource	=	TRUE,
+		Weight	=	0.3,
+		CanStoreWater	=	TRUE,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.5,
+		DisplayName	=	Water Pop Can,
+		ReplaceOnDeplete	=	PopEmpty3,
+		ReplaceOnUseOn	=	WaterSource-PopCan3Full,
+		Icon	=	Pop3,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottle,
+		StaticModel = PopCanDiet,
+		IsCookable	=	TRUE,
+		RainFactor = 0.25,
+        Tooltip = Tooltip_item_RainFromGround,
+		WorldStaticModel = PopCanFizzWorld,
+	}
+
+    item LGCookingMag
+    {
+		DisplayCategory = SkillBook,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Le Gourmet Cooking Magazine Vol1,
+        Icon	=	GMagazineFood1,
+        TeachedRecipes  =   Make Whipped Cream;Make CupCake Batter;Make Waffle Batter;Make marshmallows;Make modjeska;Make Milk Cream;Make Homemade Butter,
+        ReplaceOnUse    =  LGCookingMag,
+		StaticModel = LGCookingMag,
+        WorldStaticModel = MagazineGroundLG1,
+    }
+
+    item LGCookingMag2
+    {
+		DisplayCategory = SkillBook,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Le Gourmet Cooking Magazine Vol2,
+        Icon	=	GMagazineFood2,
+        TeachedRecipes  =   Make Ketchup;Make Mayonnaise;Make Mustard;Make Marinara,
+        ReplaceOnUse    =  LGCookingMag2,
+		StaticModel = LGCookingMag2,
+        WorldStaticModel = MagazineGroundLG2,
+    }
+
+    item LGCookingMag3
+    {
+		DisplayCategory = SkillBook,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Le Gourmet Cooking Magazine Vol3,
+        Icon	=	GMagazineFood3,
+        TeachedRecipes  =   Make sausages;Make homemade peanut butter;Make Pizza Dough;Make Pizza Preparation;Make Hotdog Bread Dough,
+        ReplaceOnUse    =  LGCookingMag3,
+		StaticModel = LGCookingMag3,
+        WorldStaticModel = MagazineGroundLG3,
+    }
+
+    item LGCookingMag4
+    {
+		DisplayCategory = SkillBook,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Le Gourmet Cooking Magazine Vol4,
+        Icon	=	GMagazineFood4,
+        TeachedRecipes  =  Butcher Chicken Meat;Tenderize Bison meat;Tenderize Pork meat;Tenderize Cow meat;Tenderize Moose meat;Tenderize Deer meat;Tenderize Mutton meat;Tenderize Bear meat,
+        ReplaceOnUse    =  LGCookingMag4,
+		StaticModel = LGCookingMag4,
+        WorldStaticModel = MagazineGroundLG4,
+    }
+
+    item LGCookingMag5
+    {
+		DisplayCategory = SkillBook,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Le Gourmet Cooking Magazine Vol5,
+        Icon	=	GMagazineFood5,
+        TeachedRecipes  =   Make cheese preparation;Paint cheese;Make cheese preparation2;Make cheese preparation3,
+        ReplaceOnUse    =  LGCookingMag5,
+		StaticModel = LGCookingMag5,
+        WorldStaticModel = MagazineGroundLG5,
+    }
+
+    item LGCookingMag6
+    {
+		DisplayCategory = SkillBook,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Le Gourmet Cooking Magazine Vol6,
+        Icon	=	GMagazineFood6,
+        TeachedRecipes  =   Make Flour;Make CornFlour,
+        ReplaceOnUse    =  LGCookingMag6,
+		StaticModel = LGCookingMag6,
+        WorldStaticModel = MagazineGroundLG6,
+    }
+
+    item LGCookingMag7
+    {
+		DisplayCategory = SkillBook,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Le Gourmet Cooking Magazine Vol7,
+        Icon	=	MagazineFoodMexican,
+        TeachedRecipes  =   Make Taco Shell;Make Tortilla,
+        ReplaceOnUse    =  LGCookingMag7,
+		StaticModel = LGCookingMag7,
+        WorldStaticModel = MagazineGroundLG7,
+    }
+
+    item LGCookingMag8
+    {
+		DisplayCategory = SkillBook,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Le Gourmet Cooking Magazine Vol8,
+        Icon	=	GMagazineFood8,
+        TeachedRecipes  =   Make SunFlower Oil;Make Corn Oil,
+        ReplaceOnUse    =  LGCookingMag8,
+		StaticModel = LGCookingMag8,
+        WorldStaticModel = MagazineGroundLG8,
+    }
+
+    item LGCookingMag9
+    {
+		DisplayCategory = SkillBook,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Le Gourmet Cooking Magazine Vol9,
+        Icon	=	GMagazineFood9,
+        TeachedRecipes  =   Prepare Mate;Prepare Sweet Mate,
+        ReplaceOnUse    =  LGCookingMag9,
+		StaticModel = LGCookingMag9,
+        WorldStaticModel = MagazineGroundLG9,
+    }
+
+    item LGClimatologyMag
+    {
+		DisplayCategory = SkillBook,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Climatology Magazine,
+        Icon	=	ClimatologyMag1,
+        TeachedRecipes  =   Advanced Climatology,
+        ReplaceOnUse    =  LGClimatologyMag,
+		StaticModel = LGClimaMag,
+        WorldStaticModel = LGClimaMagGround,
+    }
+
+    item CoffeeBag
+    {
+		DisplayCategory = Gardening,
+		Type		=	Normal,
+		DisplayName	=	Coffee Seeds Packet,
+		Icon		=	CafeBag,
+		Weight		=	0.1,
+		Tooltip     = 	Tooltip_LearnSow,
+		StaticModel = SeedPacket,
+		WorldStaticModel = CoffeeBag_Ground,
+    }
+
+    item WaffleMachine
+    {
+		DisplayCategory = Cooking,
+        Weight	=	1.0,
+        Type	=	Normal,
+        DisplayName	=	Waffle Maker Empty,
+        Icon	=	Wafflerab,
+		Tooltip = Tooltip_WaffleMachine,
+        MetalValue = 5,
+    }
+
+    item ManualMeatMincer
+    {
+		DisplayCategory = Cooking,
+        Weight	=	5.0,
+        Type	=	Moveable,
+        DisplayName	=	Manual Meat Mincer,
+        Icon	=	MeatGrinder1,
+		Tooltip = Tooltip_ManualMeatMincer,
+		WorldObjectSprite	= carpentry_04_16,
+        MetalValue = 10,
+    }
+
+    item ManualMeatMincerS
+    {
+		DisplayCategory = Cooking,
+        Weight	=	5.0,
+        Type	=	Normal,
+        DisplayName	=	Manual Sausage Maker,
+        Icon	=	PicadoramanualS,
+		Tooltip = Tooltip_ManualSausageMaker,
+        MetalValue = 10,
+    }
+
+    item ElectricMeatMincer
+    {
+		DisplayCategory = Cooking,
+        Weight	=	5.0,
+        Type	=	Moveable,
+        DisplayName	= LGR Electric Meat Grinder,
+        Icon	=	MeatGrinder2,
+		Tooltip = Tooltip_ElectricMeatMincer,
+        WorldObjectSprite	= carpentry_04_24,
+		MetalValue = 10,
+    }
+
+    item ElectricMeatMincerS
+    {
+		DisplayCategory = Cooking,
+        Weight	=	5.0,
+        Type	=	Moveable,
+        DisplayName	=	Electrical Sausage Maker,
+        Icon	=	Picadorasausageempty,
+		Tooltip = Tooltip_ElectricSausageMaker,
+		WorldObjectSprite	= carpentry_04_28,
+        MetalValue = 10,
+    }
+
+	item CookieChips
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-4,
+		Weight	=	0.2,
+		Type	=	Food,
+		AlwaysWelcomeGift	=	TRUE,
+		UnhappyChange	=	-10,
+		DisplayName	=	Cookie Chips,
+		Icon	=	CookieChips,
+		EvolvedRecipe = Cake:4;Cupcake:4,
+		FoodType    =   NoExplicit,
+        Carbohydrates = 22,
+        Proteins = 1,
+        Lipids = 8,
+        Calories = 160,
+	}
+
+	item Alfalfa
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-15,
+		ThirstChange	=	10,
+		Weight	=	0.5,
+		Type	=	Food,
+		AlwaysWelcomeGift	=	TRUE,
+		BoredomChange	=	25,
+		UnhappyChange	=	25,
+		DisplayName	=	Alfalfa,
+		Icon	=	Alfalfa,
+        Carbohydrates = 22,
+        Proteins = 1,
+        Lipids = 8,
+        Calories = 160,
+	}
+
+    item HandmadeMarinara
+    {
+		DisplayCategory = Food,
+        Weight	=	0.5,
+        Type	=	Food,
+        DisplayName	=	Handmade Marinara,
+        Icon	=	MarinaraJar,
+        DaysFresh 			=		60,
+        DaysTotallyRotten 	=	 	90,
+		ReplaceOnUse 	    = 		EmptyJar2,
+        Carbohydrates = 55,
+        Proteins = 10,
+        Lipids = 7.5,
+        Calories = 350,
+		StaticModel = CanClosed,
+		WorldStaticModel = JarFoodMarinara_Ground,
+    }
+
+    item HandmadeKetchup
+	{
+		DisplayCategory = Food,
+		Weight	=	0.5,
+		Type	=	Food,
+		DisplayName	=	Handmade Ketchup,
+		Icon	=	KetchupJar,
+        DaysFresh 			=		60,
+        DaysTotallyRotten 	=	 	90,
+		ReplaceOnUse 	    = 		EmptyJar2,
+        Carbohydrates = 370,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 1480,
+		StaticModel = CanClosed,
+		WorldStaticModel = JarFoodKetchup_Ground,
+	}
+
+    item HandmadeMayonnaise
+	{
+		DisplayCategory = Food,
+		Type				=		Food,
+		DisplayName			=		Handmade Mayonnaise,
+		Icon				=		MayoJar,
+		Weight				=		0.5,
+		DaysFresh 			=		10,
+		DaysTotallyRotten 	=	 	13,
+		ReplaceOnUse 	    = 		EmptyJar2,
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 330,
+        Calories = 3000,
+		StaticModel = CanClosed,
+		WorldStaticModel = JarFoodMayonnaise_Ground,
+	}
+
+    item HandmadeWaffles
+    {
+		DisplayCategory = Food,
+        HungerChange	=	-15,
+        Weight	=	0.3,
+        Type	=	Food,
+        UnhappyChange	=	-10,
+        DisplayName	=	Waffles,
+        DaysTotallyRotten	=	5,
+        DaysFresh = 3,
+        Icon	=	Waffles,
+        Carbohydrates = 13,
+        Proteins = 3,
+        Lipids = 4,
+        Calories = 80,
+		WorldStaticModel = Waffles,
+    }
+
+	item MilkPowder
+	{
+		DisplayCategory = Food,
+		Weight	=	0.2,
+		Type	=	Food,
+		HungerChange	=	-5,
+		ThirstChange	=	25,
+		DisplayName	=	Milk Powder,
+		AlwaysWelcomeGift	=	TRUE,
+		Icon	=	MilkPowder,
+        Carbohydrates = 13,
+        Proteins = 8,
+        Lipids = 2.5,
+        Calories = 110,
+		Packaged = TRUE,
+		WorldStaticModel = MilkPowder_Ground,
+	}
+
+	item HandMadeCupcake
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-20,
+		Weight	=	0.2,
+		Type	=	Food,
+		DisplayName	=	Cupcake,
+		Icon	=	Cupcake,
+		DaysFresh	=	4,
+		DaysTotallyRotten	=	6,
+        Carbohydrates = 67,
+        Proteins = 4,
+        Lipids = 4,
+        Calories = 305,
+		WorldStaticModel = Cupcake,
+	}
+	
+	item Cupcakeenv
+	{
+		DisplayCategory = Cooking,
+		Weight		= 0.1,
+		Type		= Normal,
+		DisplayName	= Cupcake Mold,
+		Icon		= Cupcakeenv,
+	}
+
+	item MoldesMagBox
+	{
+		DisplayCategory = Cooking,
+		Weight		= 0.5,
+		Type		= Normal,
+		DisplayName	= Cupcake Mold Box,
+		Icon		= CupClosedbox,
+	}
+
+    item Choppedporkmeat
+    {
+		DisplayCategory = Food,
+        HungerChange	=	-40,
+        Weight	=	0.3,
+        Type	=	Food,
+        IsCookable	=	TRUE,
+        DangerousUncooked	=	TRUE,
+        DaysTotallyRotten	=	4,
+        MinutesToBurn	=	70,
+        DisplayName	=	Chopped meat (Pork),
+        Icon	=	Choppedporkmeat,
+        DaysFresh	=	2,
+        MinutesToCook	=	50,
+        EvolvedRecipe = Stew:15;Pie:15;Burger:10;Sandwich:10|Cooked;Sausages:15;Taco:10|Cooked,
+        FoodType    =   Meat,
+        Carbohydrates = 0,
+        Proteins = 26,
+        Lipids = 30,
+        Calories = 380,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+    }
+
+	item PackSalchichas
+	{
+		DisplayCategory = Food,
+		Weight		= 0.3,
+		Type		= Food,
+		DisplayName	= Salchicha Pack,
+		Icon		= SalchichaPack,
+		DaysTotallyRotten	=	14,
+		DaysFresh	=	10,
+		Tooltip = Tooltip_PackSalchichas,
+        Carbohydrates = 18,
+        Proteins = 24,
+        Lipids = 40,
+        Calories = 528,
+        Packaged = TRUE,
+	}
+
+	item Salchicha
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-20,
+		Weight		= 0.1,
+		Type		= Food,
+		DaysTotallyRotten	=	6,
+		DisplayName	= Salchicha,
+		Icon		= Salchicha,
+        UnhappyChange	    =	    30,
+		BoredomChange	=	15,
+        ThirstChange		=		15,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        IsCookable	=	TRUE,
+		MinutesToBurn	=	30,
+        MinutesToCook	=	15,
+        DangerousUncooked	=	TRUE,
+        DaysFresh	=	3,
+        Carbohydrates = 3,
+        Proteins = 4,
+        Lipids = 6,
+        Calories = 88,
+		EvolvedRecipe = Soup:15;Stew:20;Stir fry:15;Stir fry Griddle Pan:15;Sandwich:10|Cooked;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+        FoodType    =   Salchicha,
+        GoodHot = true,
+		Tooltip = Tooltip_Hotdog,
+	}
+
+	item SaucepanSalchicha
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-30,
+		Weight		= 0.1,
+		Type		= Food,
+		DaysTotallyRotten	=	4,
+		DisplayName	= Sausage saucepan,
+		Icon		= Saucepansalchicha,
+        UnhappyChange	    =	    25,
+        ThirstChange		=		15,
+		BoredomChange	=	15,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        IsCookable	=	TRUE,
+		MinutesToBurn	=	60,
+        MinutesToCook	=	40,
+        DangerousUncooked	=	TRUE,
+        DaysFresh	=	2,
+        Carbohydrates = 18,
+        Proteins = 24,
+        Lipids = 36,
+        Calories = 528,
+        GoodHot = true,
+		Tooltip = Tooltip_Hotdog,
+		StaticModel = SaucePan,
+		EatType = Kettle,
+		ReplaceOnUse    =   Saucepan,
+		WorldStaticModel = SaucepanSausage_Ground,
+	}
+
+	item Salchichabits
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-10,
+		Weight		= 0.02,
+		Type		= Food,
+		DaysTotallyRotten	=	5,
+		DisplayName	= Salchicha bits,
+		Icon		= Salchichabits,
+        DaysFresh	=	2,
+        Carbohydrates = 3,
+        Proteins = 4,
+        Lipids = 6,
+        Calories = 88,
+		EvolvedRecipe = Soup:10;Stew:15;Pie:10;Stir fry:10;Stir fry Griddle Pan:10;Sandwich:5|Cooked;Burger:10;Salad:10|Cooked;Roasted Vegetables:10;RicePot:10;RicePan:10;PastaPot:10;PastaPan:10;Pizza:10;Taco:10|Cooked,
+        FoodType    =   Salchicha,
+	}
+
+	item HogCasings
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-10,
+		UnhappyChange	=	20,
+		Weight		= 0.1,
+		Type		= Food,
+		DaysTotallyRotten	=	5,
+		DisplayName	= Hog casings,
+		Icon		= Hogcasings,
+        DaysFresh	=	3,
+        IsCookable	=	TRUE,
+		DangerousUncooked	=	TRUE,
+        BadInMicrowave = true,
+        GoodHot = true,
+        BadCold = true,
+        Carbohydrates = 3,
+        Proteins = 4,
+        Lipids = 6,
+        Calories = 88,
+		EvolvedRecipe = Soup:10;Stew:10;Stir fry:5;Stir fry Griddle Pan:10;Sandwich:5|Cooked;RicePot:10;RicePan:10;PastaPot:10;PastaPan:10;Taco:10|Cooked,
+        FoodType    =   NoExplicit,
+		WorldStaticModel = HogCasings_Ground,
+	}
+
+    item sausagepreparation
+	{
+		DisplayCategory = Food,
+		HungerChange    =   -40,
+		Type	=	Food,
+        DaysFresh	=	2,
+		DaysTotallyRotten	=	4,
+		DisplayName			=		    Sausage Preparation,
+		Icon				=			SausageBatter,
+		Weight				=			0.3,
+		DangerousUncooked	=	TRUE,
+		ThirstChange	=	10,
+		UnhappyChange	=	10,
+        Carbohydrates = 50,
+        Proteins = 8,
+        Lipids = 48,
+        Calories = 600,
+		ReplaceOnUse	=	Bowl,
+		StaticModel = Bowl,
+		EatType = 2hand,
+		WorldStaticModel = sausagepreparation_Ground,
+	}
+
+    item sausagepreparationRaw
+	{
+		DisplayCategory = Food,
+		HungerChange    =   -40,
+		Type	=	Food,
+        DaysFresh	=	2,
+		DaysTotallyRotten	=	4,
+		DisplayName			=		    Sausage Preparation,
+		Icon				=			SausageBatter,
+		Weight				=			0.3,
+		DangerousUncooked	=	TRUE,
+		ThirstChange	=	10,
+		UnhappyChange	=	10,
+        Carbohydrates = 50,
+        Proteins = 8,
+        Lipids = 48,
+        Calories = 600,
+		ReplaceOnUse	=	Bowl,
+		StaticModel = Bowl,
+		EatType = 2hand,
+		WorldStaticModel = sausagepreparation_Ground,
+	}
+
+    item Oil
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-5,
+		Weight	=	0.3,
+		AlwaysWelcomeGift	=	TRUE,
+		Type	=	Food,
+		UnhappyChange	=	20,
+		ThirstChange	=	-10,
+		DisplayName	=	Oil,
+		Icon	=	VegetableOil,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottle,
+		ReplaceOnUse = OilEmpty,
+	}
+
+    item OilEmpty
+	{
+		DisplayCategory = Cooking,
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Oil Empty,
+		Icon	=	VegetableOilEmpty,
+	}
+
+    item CornOil
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-8,
+		Weight	=	0.3,
+		AlwaysWelcomeGift	=	TRUE,
+		Type	=	Food,
+		UnhappyChange	=	20,
+		ThirstChange	=	-10,
+		DisplayName	=	Corn Oil,
+		Icon	=	CornOil,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottle,
+		ReplaceOnUse = CornOilEmpty,
+	}
+
+    item CornOilEmpty
+	{
+		DisplayCategory = Cooking,
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	=	Corn Oil Empty,
+		Icon	=	CornOilEmpty,
+	}
+
+    item WhippedCream
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-25,
+		Type				=			Food,
+		DaysFresh	=	2,
+		DaysTotallyRotten	=	4,
+		DisplayName			=		    Whipped Cream,
+		Icon				=			Creambatter,
+		Weight				=			0.3,
+		ThirstChange	=	10,
+        Carbohydrates = 12,
+        Proteins = 3,
+        Lipids = 22,
+        Calories = 500,
+		ReplaceOnUse	=	Bowl,
+		EvolvedRecipe = Cake:10;Cupcake:10,
+		FoodType    =   NoExplicit,
+		StaticModel = Bowl,
+		EatType = 2hand,
+		WorldStaticModel = WhippedCream_Ground,
+	}
+
+    item MilkCream
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-10,
+		Type				=			Food,
+		DaysFresh	=	2,
+		DaysTotallyRotten	=	4,
+		DisplayName			=		    Milk Cream,
+		Icon				=			Creambatter,
+		Weight				=			0.3,
+		ThirstChange	=	10,
+        Carbohydrates = 12,
+        Proteins = 3,
+        Lipids = 22,
+        Calories = 200,
+		ReplaceOnUse	=	Bowl,
+		EvolvedRecipe = Cake:5;Cupcake:5,
+		FoodType    =   NoExplicit,
+		StaticModel = Bowl,
+		EatType = 2hand,
+		WorldStaticModel = MilkCream_Ground,
+	}
+
+    item CupcakeBatter
+	{
+		DisplayCategory = Food,
+		HungerChange    =   -10,
+		Type	=	Food,
+        DaysFresh	=	2,
+		DaysTotallyRotten	=	4,
+		DisplayName			=		    Cupcake Batter,
+		Icon				=			CakeBatter,
+		Weight				=			0.3,
+		ThirstChange	=	25,
+		UnhappyChange	=	10,
+        Carbohydrates = 50,
+        Proteins = 8,
+        Lipids = 48,
+        Calories = 600,
+		FoodType    =   NoExplicit,
+		ReplaceOnUse	=	Bowl,
+		StaticModel = Bowl,
+		EatType = 2hand,
+		WorldStaticModel = CupcakeBatter_Ground,
+	}
+
+	item CupcakePrep
+	{
+		DisplayCategory = Food,
+		Weight	=	0.5,
+		Type	=	Food,
+		DisplayName	=	Cupcake Preparation,
+		Icon	=	Roastingcupcake,
+		UnhappyChange   =   5,
+		HungerChange    =   -115,
+		ThirstChange	=	20,
+		DaysFresh	=	4,
+		DaysTotallyRotten	=	9,
+        Carbohydrates = 40,
+        Proteins = 2,
+        Lipids = 2,
+        Calories = 800,
+		FoodType    =   NoExplicit,
+	}
+
+    item CupcakeRaw
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-115,
+		Weight	=	0.2,
+		Type	=	Food,
+		ThirstChange	=	25,
+		UnhappyChange	=	-10,
+		DisplayName	=	CupCakes,
+		Icon	=	Roastingcupcake,
+        IsCookable	=	TRUE,
+		DangerousUncooked	=	TRUE,
+		DaysTotallyRotten	=	9,
+		MinutesToBurn	=	110,
+        MinutesToCook	=	40,
+        ReplaceOnUse	=	RoastingPan,
+		DaysFresh	=	4,
+        BadInMicrowave = true,
+        Carbohydrates = 40,
+        Proteins = 2,
+        Lipids = 2,
+        Calories = 800,
+	}
+
+    item WafflesBatter
+	{
+		DisplayCategory = Food,
+		HungerChange    =   -10,
+		Type	=	Food,
+        DaysFresh	=	2,
+		DaysTotallyRotten	=	4,
+		DisplayName			=		    Waffle Batter,
+		Icon				=			WaffleBatter,
+		Weight				=			0.3,
+		ThirstChange	=	25,
+		UnhappyChange	=	10,
+        Carbohydrates = 50,
+        Proteins = 8,
+        Lipids = 48,
+        Calories = 600,
+		ReplaceOnUse	=	Bowl,
+		FoodType    =   NoExplicit,
+		StaticModel = Bowl,
+		EatType = 2hand,
+		WorldStaticModel = WafflesBatter_Ground,
+	}
+
+    item WafflesPrep
+	{
+		DisplayCategory = Food,
+		Type	=	Normal,
+		DisplayName			=		    Waffle Maker Full,
+		Icon				=			Waffleraprep,
+		Weight				=			0.4,
+		ReplaceOnUse	=	WaffleMachine,
+		Tooltip = Tooltip_WafflesPrep,
+	}
+
+	item Wheat
+	{
+		DisplayCategory = Food,
+		HungerChange	=	-2,
+		Weight	=	0.05,
+		Type	=	Food,
+		DaysTotallyRotten	=	5,
+		DisplayName	=	Wheat,
+		Icon	=	Wheat,
+		DaysFresh	=	3,
+		ThirstChange	=	5,
+        Carbohydrates = 10.2,
+        Proteins = 3.45,
+        Lipids = 0.42,
+        Calories = 59,
+		Packaged = FALSE,
+	}
+
+    evolvedrecipe Cupcake
+    {
+        BaseItem:CupcakePrep,
+        MaxItems:4,
+        ResultItem:CupcakeRaw,
+        Cookable:true,
+        Name:Prepare CupCake,
+    }
+
+    evolvedrecipe Sausages
+    {
+        BaseItem:Bowl,
+        MaxItems:4,
+        ResultItem:sausagepreparationRaw,
+        Cookable:true,
+        Name:Prepare Sausages,
+    }
+
+    evolvedrecipe Pizza
+    {
+        BaseItem:PizzaPrep,
+        MaxItems:5,
+        ResultItem:PizzaRaw,
+        Cookable:true,
+        Name:Prepare Pizza,
+    }
+
+    evolvedrecipe FluHotDrink
+    {
+       BaseItem:WaterMug,
+       MaxItems:1,
+       ResultItem:FluHotDrink,
+       Cookable:true,
+       AddIngredientIfCooked:true,
+	   AddIngredientSound:AddItemInBeverage,
+       Name:Prepare Beverage,
+    }
+
+    evolvedrecipe FluHotDrinkRed
+    {
+       BaseItem:WaterMugRed,
+       MaxItems:1,
+       ResultItem:FluHotDrinkRed,
+       Cookable:true,
+       AddIngredientIfCooked:true,
+	   AddIngredientSound:AddItemInBeverage,
+       Name:Prepare Beverage,
+    }
+
+    evolvedrecipe FluHotDrinkWhite
+    {
+       BaseItem:WaterMugWhite,
+       MaxItems:1,
+       ResultItem:FluHotDrinkWhite,
+       Cookable:true,
+       AddIngredientIfCooked:true,
+	   AddIngredientSound:AddItemInBeverage,
+       Name:Prepare Beverage,
+    }
+
+    evolvedrecipe FluHotDrinkSpiffo
+    {
+       BaseItem:WaterMugSpiffo,
+       MaxItems:1,
+       ResultItem:FluHotDrinkSpiffo,
+       Cookable:true,
+       AddIngredientIfCooked:true,
+	   AddIngredientSound:AddItemInBeverage,
+       Name:Prepare Beverage,
+    }
+
+    evolvedrecipe FluHotDrinkTea
+    {
+       BaseItem:WaterTeacup,
+       MaxItems:1,
+       ResultItem:FluHotDrinkTea,
+       Cookable:true,
+       AddIngredientIfCooked:true,
+	   AddIngredientSound:AddItemInBeverage,
+       Name:Prepare Beverage,
+    }
+}

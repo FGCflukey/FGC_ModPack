@@ -1,0 +1,7 @@
+name=Greenfire LGR Patch
+poster=poster.png
+description= Patch for Greenfire + LGR farming
+require=LeGourmetRevolution,jiggasGreenfireMod
+id=GreenfireLGR
+pack=GFtextures
+pack=GFtextures2x
