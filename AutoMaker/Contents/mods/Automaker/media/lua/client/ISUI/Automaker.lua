@@ -1,5 +1,76 @@
 UG_Automaker = {}
 
+function UG_Automaker.getVehicleRealName( VehicleID)
+
+	if VehicleID == "CarTaxi" then
+		return "Yellow Taxi"
+	elseif VehicleID == "CarTaxi2" then
+		return "Green Taxi"	
+	elseif VehicleID == "CarLightsPolice" then
+		return "Chevalier Nyala: Police"
+	elseif VehicleID == "TrailerAdvert" then
+		return "Advert Trailer"
+	elseif VehicleID == "TrailerCover" then
+		return "Small Covered Trailer"	
+	elseif VehicleID == "92crownvicRavenCreek" then
+		return "1992 Crown Vic Raven Creek PD"	
+	elseif VehicleID == "92crownvicMetroAirport" then
+		return "1992 Crown Vic Metro Airport PD "	
+	elseif VehicleID == "85vicKnoxSheriff" then
+		return "1985 Crown Vic Knox County Sheriff "	
+	elseif VehicleID == "92crownvicMatthews" then
+		return "1992 Crown Vic St. Matthews PD"	
+	elseif VehicleID == "92crownvicUSAF" then
+		return "1992 Crown Vic USAF"	
+	elseif VehicleID == "Trailer" then
+		return "Small Open Trailer"	
+	elseif VehicleID == "92crownvicLDOC" then
+		return "1992 Crown Vic Louisville Corrections"	
+	elseif VehicleID == "CarLights" then
+		return "Kentucky Ranger"	
+	elseif VehicleID == "92crownvicWestPointSpecial" then
+		return "1992 Crown Vic West Point PD 'special'"	
+	elseif VehicleID == "92crownvicWestPoint" then
+		return "1992 Crown Vic West Point PD"	
+	elseif VehicleID == "92crownvicBlackwood" then
+		return "1992 Crown Vic Blackwood PD"	
+	elseif VehicleID == "92crownvicRavenCreekTransit" then
+		return "1992 Crown Vic Raven Creek Transit PD"	
+	elseif VehicleID == "92crownvicLynnview" then
+		return "1992 Crown Vic Lynnview PD"	
+	elseif VehicleID == "85vicUK" then
+		return "1985 Crown Vic University of Kentucky "	
+	-- elseif VehicleID == "Car2" then
+		-- return "Green "	
+	-- elseif VehicleID == "Car2" then
+		-- return "Green "	
+	-- elseif VehicleID == "Car2" then
+		-- return "Green "	
+	-- elseif VehicleID == "Car2" then
+		-- return "Green "	
+	-- elseif VehicleID == "Car2" then
+		-- return "Green "	
+	-- elseif VehicleID == "Car2" then
+		-- return "Green "	
+	-- elseif VehicleID == "Car2" then
+		-- return "Green "	
+	-- elseif VehicleID == "Car2" then
+		-- return "Green "	
+	-- elseif VehicleID == "Car2" then
+		-- return "Green "	
+	-- elseif VehicleID == "Car2" then
+		-- return "Green "	
+	-- elseif VehicleID == "Car2" then
+		-- return "Green "	
+	-- elseif VehicleID == "Car2" then
+		-- return "Green "	
+	-- elseif VehicleID == "Car2" then
+		-- return "Green "	
+		else
+			return getText("IGUI_VehicleName" .. VehicleID)
+	end
+end
+
 function UG_Automaker.buildSkillList( context, toolTip, mechanictype, player)
 
 	local mechanicSkill = player:getPerkLevel( Perks.Mechanics)
@@ -51,32 +122,39 @@ end
 
 function UG_Automaker.getMaterialReq( mechanictype)
 	local ret = {}
+	
+	ret["SheetMetal"] = 1
+	ret["MetalBar"] = 1
+	ret["ElectronicsScrap"] = 1
+	ret["ElectricWire"] = 1
+	ret["EngineParts"] = 1
+	return ret
 
 	-- Script:getMechanicType()    1=standard 2=heavy duty 3=sports	
-	if mechanictype == 1 then
+	-- if mechanictype == 1 then
 	
-		ret["SheetMetal"] = 50
-		ret["MetalBar"] = 35
-		ret["ElectronicsScrap"] = 30
-		ret["ElectricWire"] = 30
-		ret["EngineParts"] = 40
-	elseif mechanictype == 2 then
+		-- ret["SheetMetal"] = 50
+		-- ret["MetalBar"] = 35
+		-- ret["ElectronicsScrap"] = 30
+		-- ret["ElectricWire"] = 30
+		-- ret["EngineParts"] = 40
+	-- elseif mechanictype == 2 then
 	
-		ret["SheetMetal"] = 80
-		ret["MetalBar"] = 45
-		ret["ElectronicsScrap"] = 30
-		ret["ElectricWire"] = 35
-		ret["EngineParts"] = 50
-	elseif mechanictype == 3 then
+		-- ret["SheetMetal"] = 80
+		-- ret["MetalBar"] = 45
+		-- ret["ElectronicsScrap"] = 30
+		-- ret["ElectricWire"] = 35
+		-- ret["EngineParts"] = 50
+	-- elseif mechanictype == 3 then
 	
-		ret["SheetMetal"] = 60
-		ret["MetalBar"] = 40
-		ret["ElectronicsScrap"] = 40
-		ret["ElectricWire"] = 35
-		ret["EngineParts"] = 60
-	end	
+		-- ret["SheetMetal"] = 60
+		-- ret["MetalBar"] = 40
+		-- ret["ElectronicsScrap"] = 40
+		-- ret["ElectricWire"] = 35
+		-- ret["EngineParts"] = 60
+	-- end	
 	
-	return ret
+	-- return ret
 end
 
 function UG_Automaker.takeMaterials( mechanictype)
@@ -173,7 +251,7 @@ function UG_Automaker.initTooltip( context, vehicle, mechanictype, player)
 	-- add it to our current option
 	context.toolTip = toolTip
 	toolTip:setName( "Build a new car")
-	toolTip.description = "Automaker:" .. " <LINE> Let's build a car!"
+	toolTip.description = tostring(vehicle:getName()) .. "<LINE>Automaker:" .. "<LINE>Let's build a car!<LINE>"
 	--toolTip:setTexture("crafted_01_16")  --figure out a way to get images of each car.
 	
 	UG_Automaker.buildSkillList( context, toolTip, mechanictype, player)
@@ -217,7 +295,7 @@ function UG_Automaker.FillWorldContextMenu( player, context, worldobjects, test)
 			
 			if mt == 1 then
 			
-				ModelContext = subMenuStandardModels:addOption( getText("IGUI_VehicleName" .. v:getName()), worldobjects, UG_Automaker.onNewVehicle, v:getFullName(), mt)
+				ModelContext = subMenuStandardModels:addOption( UG_Automaker.getVehicleRealName( v:getName()), worldobjects, UG_Automaker.onNewVehicle, v:getFullName(), mt)
 				UG_Automaker.initTooltip( ModelContext, v, mt, player)
 			elseif mt == 2 then
 

@@ -2,6 +2,8 @@ local Commands = {}
 Commands.Automaker = {}
 
 Commands.Automaker.CreateVehicle = function( player, args)
+
+	if isClient() then return end
 	
 	local vehicle = addVehicleDebug( tostring( args.VehicleID), IsoDirections.E, nil, player:getSquare())
 	
