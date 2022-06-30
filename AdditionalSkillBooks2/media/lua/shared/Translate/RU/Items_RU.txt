@@ -1,0 +1,86 @@
+Items_RU = {
+	
+    DisplayName_AB2_Guns_Aim_1                 = "Огнестрельное оружие. Том 1. Точность",
+	DisplayName_AB2_Guns_Aim_2                 = "Огнестрельное оружие. Том 2. Точность",
+	DisplayName_AB2_Guns_Aim_3                 = "Огнестрельное оружие. Том 3. Точность",
+	DisplayName_AB2_Guns_Aim_4                 = "Огнестрельное оружие. Том 4. Точность",
+	DisplayName_AB2_Guns_Aim_5                 = "Огнестрельное оружие. Том 5. Точность",
+	
+    DisplayName_AB2_Guns_Rel_1                 = "Огнестрельное оружие. Том 1. Перезарядка",
+	DisplayName_AB2_Guns_Rel_2                 = "Огнестрельное оружие. Том 2. Перезарядка",
+	DisplayName_AB2_Guns_Rel_3                 = "Огнестрельное оружие. Том 3. Перезарядка",
+	DisplayName_AB2_Guns_Rel_4                 = "Огнестрельное оружие. Том 4. Перезарядка",
+	DisplayName_AB2_Guns_Rel_5                 = "Огнестрельное оружие. Том 5. Перезарядка",
+
+
+	
+    DisplayName_AB2_Melee_Axe_1                = "Холодное оружие. Том 1. Топоры",
+	DisplayName_AB2_Melee_Axe_2                = "Холодное оружие. Том 2. Топоры",
+	DisplayName_AB2_Melee_Axe_3                = "Холодное оружие. Том 3. Топоры",
+	DisplayName_AB2_Melee_Axe_4                = "Холодное оружие. Том 4. Топоры",
+	DisplayName_AB2_Melee_Axe_5                = "Холодное оружие. Том 5. Топоры",
+	
+    DisplayName_AB2_Melee_Blunt_1              = "Холодное оружие. Том 1. Длин. дробящее",
+	DisplayName_AB2_Melee_Blunt_2              = "Холодное оружие. Том 2. Длин. дробящее",
+	DisplayName_AB2_Melee_Blunt_3              = "Холодное оружие. Том 3. Длин. дробящее",
+	DisplayName_AB2_Melee_Blunt_4              = "Холодное оружие. Том 4. Длин. дробящее",
+	DisplayName_AB2_Melee_Blunt_5              = "Холодное оружие. Том 5. Длин. дробящее",
+	
+    DisplayName_AB2_Melee_SmallBlunt_1         = "Холодное оружие. Том 1. Коротк. дробящее",
+	DisplayName_AB2_Melee_SmallBlunt_2         = "Холодное оружие. Том 2. Коротк. дробящее",
+	DisplayName_AB2_Melee_SmallBlunt_3         = "Холодное оружие. Том 3. Коротк. дробящее",
+	DisplayName_AB2_Melee_SmallBlunt_4         = "Холодное оружие. Том 4. Коротк. дробящее",
+	DisplayName_AB2_Melee_SmallBlunt_5         = "Холодное оружие. Том 5. Коротк. дробящее",	
+
+	DisplayName_AB2_Melee_LongBlade_1          = "Холодное оружие. Том 1. Длин. режущее",
+	DisplayName_AB2_Melee_LongBlade_2          = "Холодное оружие. Том 2. Длин. режущее",
+	DisplayName_AB2_Melee_LongBlade_3          = "Холодное оружие. Том 3. Длин. режущее",
+	DisplayName_AB2_Melee_LongBlade_4          = "Холодное оружие. Том 4. Длин. режущее",
+	DisplayName_AB2_Melee_LongBlade_5          = "Холодное оружие. Том 5. Длин. режущее",	
+	
+    DisplayName_AB2_Melee_SmallBlade_1         = "Холодное оружие. Том 1. Коротк. режущее",
+	DisplayName_AB2_Melee_SmallBlade_2         = "Холодное оружие. Том 2. Коротк. режущее",
+	DisplayName_AB2_Melee_SmallBlade_3         = "Холодное оружие. Том 3. Коротк. режущее",
+	DisplayName_AB2_Melee_SmallBlade_4         = "Холодное оружие. Том 4. Коротк. режущее",
+	DisplayName_AB2_Melee_SmallBlade_5         = "Холодное оружие. Том 5. Коротк. режущее",	
+
+	DisplayName_AB2_Melee_Spear_1              = "Холодное оружие. Том 1. Копья",
+	DisplayName_AB2_Melee_Spear_2              = "Холодное оружие. Том 2. Копья",
+	DisplayName_AB2_Melee_Spear_3              = "Холодное оружие. Том 3. Копья",
+	DisplayName_AB2_Melee_Spear_4              = "Холодное оружие. Том 4. Копья",
+	DisplayName_AB2_Melee_Spear_5              = "Холодное оружие. Том 5. Копья",	
+	
+	DisplayName_AB2_Melee_Mai_1                = "Холодное оружие. Том 1. Прочность",
+	DisplayName_AB2_Melee_Mai_2                = "Холодное оружие. Том 2. Прочность",
+	DisplayName_AB2_Melee_Mai_3                = "Холодное оружие. Том 3. Прочность",
+	DisplayName_AB2_Melee_Mai_4                = "Холодное оружие. Том 4. Прочность",
+	DisplayName_AB2_Melee_Mai_5                = "Холодное оружие. Том 5. Прочность",
+
+
+	
+	DisplayName_AB2_Athl_Spr_1                 = "Атлетика. Том 1. Скорость бега",
+	DisplayName_AB2_Athl_Spr_2                 = "Атлетика. Том 2. Скорость бега",
+	DisplayName_AB2_Athl_Spr_3                 = "Атлетика. Том 3. Скорость бега",
+	DisplayName_AB2_Athl_Spr_4                 = "Атлетика. Том 4. Скорость бега",
+	DisplayName_AB2_Athl_Spr_5                 = "Атлетика. Том 5. Скорость бега",
+	
+	DisplayName_AB2_Athl_Nim_1                 = "Атлетика. Том 1. Проворность",
+	DisplayName_AB2_Athl_Nim_2                 = "Атлетика. Том 2. Проворность",
+	DisplayName_AB2_Athl_Nim_3                 = "Атлетика. Том 3. Проворность",
+	DisplayName_AB2_Athl_Nim_4                 = "Атлетика. Том 4. Проворность",
+	DisplayName_AB2_Athl_Nim_5                 = "Атлетика. Том 5. Проворность",
+	
+	DisplayName_AB2_Stea_Sne_1                 = "Незаметность. Том 1. Скрытность",
+	DisplayName_AB2_Stea_Sne_2                 = "Незаметность. Том 2. Скрытность",
+	DisplayName_AB2_Stea_Sne_3                 = "Незаметность. Том 3. Скрытность",
+	DisplayName_AB2_Stea_Sne_4                 = "Незаметность. Том 4. Скрытность",
+	DisplayName_AB2_Stea_Sne_5                 = "Незаметность. Том 5. Скрытность",
+	
+	DisplayName_AB2_Stea_Lig_1                 = "Незаметность. Том 1. Легкий шаг",
+	DisplayName_AB2_Stea_Lig_2                 = "Незаметность. Том 2. Легкий шаг",
+	DisplayName_AB2_Stea_Lig_3                 = "Незаметность. Том 3. Легкий шаг",
+	DisplayName_AB2_Stea_Lig_4                 = "Незаметность. Том 4. Легкий шаг",
+	DisplayName_AB2_Stea_Lig_5                 = "Незаметность. Том 5. Легкий шаг",
+
+
+}

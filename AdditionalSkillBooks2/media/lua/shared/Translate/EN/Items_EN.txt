@@ -1,0 +1,85 @@
+Items_EN = {
+    DisplayName_AB2_Guns_Aim_1                 = "Guns Vol. 1. (Aiming) - Beginner",
+	DisplayName_AB2_Guns_Aim_2                 = "Guns Vol. 2. (Aiming) - Intermediate",
+	DisplayName_AB2_Guns_Aim_3                 = "Guns Vol. 3. (Aiming) - Advanced",
+	DisplayName_AB2_Guns_Aim_4                 = "Guns Vol. 4. (Aiming) - Expert",
+	DisplayName_AB2_Guns_Aim_5                 = "Guns Vol. 5. (Aiming) - Master",
+	
+    DisplayName_AB2_Guns_Rel_1                 = "Guns Vol. 1. (Reloading) - Beginner",
+	DisplayName_AB2_Guns_Rel_2                 = "Guns Vol. 2. (Reloading) - Intermediate",
+	DisplayName_AB2_Guns_Rel_3                 = "Guns Vol. 3. (Reloading) - Advanced",
+	DisplayName_AB2_Guns_Rel_4                 = "Guns Vol. 4. (Reloading) - Expert",
+	DisplayName_AB2_Guns_Rel_5                 = "Guns Vol. 5. (Reloading) - Master",
+
+
+	
+    DisplayName_AB2_Melee_Axe_1                = "Melee Weapons Vol. 1. (Axe) - Beginner",
+	DisplayName_AB2_Melee_Axe_2                = "Melee Weapons Vol. 2. (Axe) - Intermediate",
+	DisplayName_AB2_Melee_Axe_3                = "Melee Weapons Vol. 3. (Axe) - Advanced",
+	DisplayName_AB2_Melee_Axe_4                = "Melee Weapons Vol. 4. (Axe) - Expert",
+	DisplayName_AB2_Melee_Axe_5                = "Melee Weapons Vol. 5. (Axe) - Master",
+	
+    DisplayName_AB2_Melee_Blunt_1              = "Melee Weapons Vol. 1. (Long Blunt) - Beginner",
+	DisplayName_AB2_Melee_Blunt_2              = "Melee Weapons Vol. 2. (Long Blunt) - Intermediate",
+	DisplayName_AB2_Melee_Blunt_3              = "Melee Weapons Vol. 3. (Long Blunt) - Advanced",
+	DisplayName_AB2_Melee_Blunt_4              = "Melee Weapons Vol. 4. (Long Blunt) - Expert",
+	DisplayName_AB2_Melee_Blunt_5              = "Melee Weapons Vol. 5. (Long Blunt) - Master",
+	
+    DisplayName_AB2_Melee_SmallBlunt_1         = "Melee Weapons Vol. 1. (Short Blunt) - Beginner",
+	DisplayName_AB2_Melee_SmallBlunt_2         = "Melee Weapons Vol. 2. (Short Blunt) - Intermediate",
+	DisplayName_AB2_Melee_SmallBlunt_3         = "Melee Weapons Vol. 3. (Short Blunt) - Advanced",
+	DisplayName_AB2_Melee_SmallBlunt_4         = "Melee Weapons Vol. 4. (Short Blunt) - Expert",
+	DisplayName_AB2_Melee_SmallBlunt_5         = "Melee Weapons Vol. 5. (Short Blunt) - Master",	
+
+	DisplayName_AB2_Melee_LongBlade_1          = "Melee Weapons Vol. 1. (Long Blade) - Beginner",
+	DisplayName_AB2_Melee_LongBlade_2          = "Melee Weapons Vol. 2. (Long Blade) - Intermediate",
+	DisplayName_AB2_Melee_LongBlade_3          = "Melee Weapons Vol. 3. (Long Blade) - Advanced",
+	DisplayName_AB2_Melee_LongBlade_4          = "Melee Weapons Vol. 4. (Long Blade) - Expert",
+	DisplayName_AB2_Melee_LongBlade_5          = "Melee Weapons Vol. 5. (Long Blade) - Master",	
+	
+    DisplayName_AB2_Melee_SmallBlade_1         = "Melee Weapons Vol. 1. (Short Blade) - Beginner",
+	DisplayName_AB2_Melee_SmallBlade_2         = "Melee Weapons Vol. 2. (Short Blade) - Intermediate",
+	DisplayName_AB2_Melee_SmallBlade_3         = "Melee Weapons Vol. 3. (Short Blade) - Advanced",
+	DisplayName_AB2_Melee_SmallBlade_4         = "Melee Weapons Vol. 4. (Short Blade) - Expert",
+	DisplayName_AB2_Melee_SmallBlade_5         = "Melee Weapons Vol. 5. (Short Blade) - Master",	
+
+	DisplayName_AB2_Melee_Spear_1              = "Melee Weapons Vol. 1. (Spear) - Beginner",
+	DisplayName_AB2_Melee_Spear_2              = "Melee Weapons Vol. 2. (Spear) - Intermediate",
+	DisplayName_AB2_Melee_Spear_3              = "Melee Weapons Vol. 3. (Spear) - Advanced",
+	DisplayName_AB2_Melee_Spear_4              = "Melee Weapons Vol. 4. (Spear) - Expert",
+	DisplayName_AB2_Melee_Spear_5              = "Melee Weapons Vol. 5. (Spear) - Master",	
+	
+	DisplayName_AB2_Melee_Mai_1                = "Melee Weapons Vol. 1. (Maintenance) - Beginner",
+	DisplayName_AB2_Melee_Mai_2                = "Melee Weapons Vol. 2. (Maintenance) - Intermediate",
+	DisplayName_AB2_Melee_Mai_3                = "Melee Weapons Vol. 3. (Maintenance) - Advanced",
+	DisplayName_AB2_Melee_Mai_4                = "Melee Weapons Vol. 4. (Maintenance) - Expert",
+	DisplayName_AB2_Melee_Mai_5                = "Melee Weapons Vol. 5. (Maintenance) - Master",
+
+
+	
+	DisplayName_AB2_Athl_Spr_1                 = "Athletics Vol. 1. (Sprinting) - Beginner",
+	DisplayName_AB2_Athl_Spr_2                 = "Athletics Vol. 2. (Sprinting) - Intermediate",
+	DisplayName_AB2_Athl_Spr_3                 = "Athletics Vol. 3. (Sprinting) - Advanced",
+	DisplayName_AB2_Athl_Spr_4                 = "Athletics Vol. 4. (Sprinting) - Expert",
+	DisplayName_AB2_Athl_Spr_5                 = "Athletics Vol. 5. (Sprinting) - Master",
+	
+	DisplayName_AB2_Athl_Nim_1                 = "Athletics Vol. 1. (Nimble) - Beginner",
+	DisplayName_AB2_Athl_Nim_2                 = "Athletics Vol. 2. (Nimble) - Intermediate",
+	DisplayName_AB2_Athl_Nim_3                 = "Athletics Vol. 3. (Nimble) - Advanced",
+	DisplayName_AB2_Athl_Nim_4                 = "Athletics Vol. 4. (Nimble) - Expert",
+	DisplayName_AB2_Athl_Nim_5                 = "Athletics Vol. 5. (Nimble) - Master",
+	
+	DisplayName_AB2_Stea_Sne_1                 = "Stealth Vol. 1. (Sneaking) - Beginner",
+	DisplayName_AB2_Stea_Sne_2                 = "Stealth Vol. 2. (Sneaking) - Intermediate",
+	DisplayName_AB2_Stea_Sne_3                 = "Stealth Vol. 3. (Sneaking) - Advanced",
+	DisplayName_AB2_Stea_Sne_4                 = "Stealth Vol. 4. (Sneaking) - Expert",
+	DisplayName_AB2_Stea_Sne_5                 = "Stealth Vol. 5. (Sneaking) - Master",
+	
+	DisplayName_AB2_Stea_Lig_1                 = "Stealth Vol. 1. (Lightfooted) - Beginner",
+	DisplayName_AB2_Stea_Lig_2                 = "Stealth Vol. 2. (Lightfooted) - Intermediate",
+	DisplayName_AB2_Stea_Lig_3                 = "Stealth Vol. 3. (Lightfooted) - Advanced",
+	DisplayName_AB2_Stea_Lig_4                 = "Stealth Vol. 4. (Lightfooted) - Expert",
+	DisplayName_AB2_Stea_Lig_5                 = "Stealth Vol. 5. (Lightfooted) - Master",
+	
+	
+}

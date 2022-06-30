@@ -1,0 +1,86 @@
+Items_DE = {
+	
+    DisplayName_AB2_Guns_Aim_1                 = "Schusswaffen Bd.1: Zielen",
+	DisplayName_AB2_Guns_Aim_2                 = "Schusswaffen Bd.2: Zielen",
+	DisplayName_AB2_Guns_Aim_3                 = "Schusswaffen Bd.3: Zielen",
+	DisplayName_AB2_Guns_Aim_4                 = "Schusswaffen Bd.4: Zielen",
+	DisplayName_AB2_Guns_Aim_5                 = "Schusswaffen Bd.5: Zielen",
+	
+    DisplayName_AB2_Guns_Rel_1                 = "Schusswaffen Bd.1: Nachladen",
+	DisplayName_AB2_Guns_Rel_2                 = "Schusswaffen Bd.2: Nachladen",
+	DisplayName_AB2_Guns_Rel_3                 = "Schusswaffen Bd.3: Nachladen",
+	DisplayName_AB2_Guns_Rel_4                 = "Schusswaffen Bd.4: Nachladen",
+	DisplayName_AB2_Guns_Rel_5                 = "Schusswaffen Bd.5: Nachladen",
+
+
+	
+    DisplayName_AB2_Melee_Axe_1                = "Kampf Bd.1: Axt",
+	DisplayName_AB2_Melee_Axe_2                = "Kampf Bd.2: Axt",
+	DisplayName_AB2_Melee_Axe_3                = "Kampf Bd.3: Axt",
+	DisplayName_AB2_Melee_Axe_4                = "Kampf Bd.4: Axt",
+	DisplayName_AB2_Melee_Axe_5                = "Kampf Bd.5: Axt",
+	
+    DisplayName_AB2_Melee_Blunt_1              = "Kampf Bd.1: Stumpfwaffe",
+	DisplayName_AB2_Melee_Blunt_2              = "Kampf Bd.2: Stumpfwaffe",
+	DisplayName_AB2_Melee_Blunt_3              = "Kampf Bd.3: Stumpfwaffe",
+	DisplayName_AB2_Melee_Blunt_4              = "Kampf Bd.4: Stumpfwaffe",
+	DisplayName_AB2_Melee_Blunt_5              = "Kampf Bd.5: Stumpfwaffe",
+	
+    DisplayName_AB2_Melee_SmallBlunt_1         = "Kampf Bd.1: Kurze Stumpfwaffe",
+	DisplayName_AB2_Melee_SmallBlunt_2         = "Kampf Bd.2: Kurze Stumpfwaffe",
+	DisplayName_AB2_Melee_SmallBlunt_3         = "Kampf Bd.3: Kurze Stumpfwaffe",
+	DisplayName_AB2_Melee_SmallBlunt_4         = "Kampf Bd.4: Kurze Stumpfwaffe",
+	DisplayName_AB2_Melee_SmallBlunt_5         = "Kampf Bd.5: Kurze Stumpfwaffe",	
+
+	DisplayName_AB2_Melee_LongBlade_1          = "Kampf Bd.1: Lange Klingenwaffe",
+	DisplayName_AB2_Melee_LongBlade_2          = "Kampf Bd.2: Lange Klingenwaffe",
+	DisplayName_AB2_Melee_LongBlade_3          = "Kampf Bd.3: Lange Klingenwaffe",
+	DisplayName_AB2_Melee_LongBlade_4          = "Kampf Bd.4: Lange Klingenwaffe",
+	DisplayName_AB2_Melee_LongBlade_5          = "Kampf Bd.5: Lange Klingenwaffe",	
+	
+    DisplayName_AB2_Melee_SmallBlade_1         = "Kampf Bd.1: Kurze Klingenwaffe",
+	DisplayName_AB2_Melee_SmallBlade_2         = "Kampf Bd.2: Kurze Klingenwaffe",
+	DisplayName_AB2_Melee_SmallBlade_3         = "Kampf Bd.3: Kurze Klingenwaffe",
+	DisplayName_AB2_Melee_SmallBlade_4         = "Kampf Bd.4: Kurze Klingenwaffe",
+	DisplayName_AB2_Melee_SmallBlade_5         = "Kampf Bd.5: Kurze Klingenwaffe",	
+
+	DisplayName_AB2_Melee_Spear_1              = "Kampf Bd.1: Speer",
+	DisplayName_AB2_Melee_Spear_2              = "Kampf Bd.2: Speer",
+	DisplayName_AB2_Melee_Spear_3              = "Kampf Bd.3: Speer",
+	DisplayName_AB2_Melee_Spear_4              = "Kampf Bd.4: Speer",
+	DisplayName_AB2_Melee_Spear_5              = "Kampf Bd.5: Speer",	
+	
+	DisplayName_AB2_Melee_Mai_1                = "Kampf Bd.1: Instandhaltung",
+	DisplayName_AB2_Melee_Mai_2                = "Kampf Bd.2: Instandhaltung",
+	DisplayName_AB2_Melee_Mai_3                = "Kampf Bd.3: Instandhaltung",
+	DisplayName_AB2_Melee_Mai_4                = "Kampf Bd.4: Instandhaltung",
+	DisplayName_AB2_Melee_Mai_5                = "Kampf Bd.5: Instandhaltung",
+
+
+	
+	DisplayName_AB2_Athl_Spr_1                 = "Agilität Bd.1: Sprinten",
+	DisplayName_AB2_Athl_Spr_2                 = "Agilität Bd.2: Sprinten",
+	DisplayName_AB2_Athl_Spr_3                 = "Agilität Bd.3: Sprinten",
+	DisplayName_AB2_Athl_Spr_4                 = "Agilität Bd.4: Sprinten",
+	DisplayName_AB2_Athl_Spr_5                 = "Agilität Bd.5: Sprinten",
+	
+	DisplayName_AB2_Athl_Nim_1                 = "Agilität Bd.1: Flink",
+	DisplayName_AB2_Athl_Nim_2                 = "Agilität Bd.2: Flink",
+	DisplayName_AB2_Athl_Nim_3                 = "Agilität Bd.3: Flink",
+	DisplayName_AB2_Athl_Nim_4                 = "Agilität Bd.4: Flink",
+	DisplayName_AB2_Athl_Nim_5                 = "Agilität Bd.5: Flink",
+	
+	DisplayName_AB2_Stea_Sne_1                 = "Agilität Bd.1: Schleichen",
+	DisplayName_AB2_Stea_Sne_2                 = "Agilität Bd.2: Schleichen",
+	DisplayName_AB2_Stea_Sne_3                 = "Agilität Bd.3: Schleichen",
+	DisplayName_AB2_Stea_Sne_4                 = "Agilität Bd.4: Schleichen",
+	DisplayName_AB2_Stea_Sne_5                 = "Agilität Bd.5: Schleichen",
+	
+	DisplayName_AB2_Stea_Lig_1                 = "Agilität Bd.1: Leichtfüssig",
+	DisplayName_AB2_Stea_Lig_2                 = "Agilität Bd.2: Leichtfüssig",
+	DisplayName_AB2_Stea_Lig_3                 = "Agilität Bd.3: Leichtfüssig",
+	DisplayName_AB2_Stea_Lig_4                 = "Agilität Bd.4: Leichtfüssig",
+	DisplayName_AB2_Stea_Lig_5                 = "Agilität Bd.5: Leichtfüssig",
+
+
+}

@@ -1,0 +1,15 @@
+Recipes_RU = {
+Recipe_Open_Chapter_Aiming = "Открыть главу: Точность",
+Recipe_Open_Chapter_Reloading = "Открыть главу: Перезарядка",
+Recipe_Open_Chapter_Axe = "Открыть главу: Топоры",
+Recipe_Open_Chapter_Long_Blunt = "Открыть главу: Длин. дробящее",
+Recipe_Open_Chapter_Short_Blunt = "Открыть главу: Коротк. дробящее",
+Recipe_Open_Chapter_Long_Blade = "Открыть главу: Длин. режущее",
+Recipe_Open_Chapter_Short_Blade = "Открыть главу: Коротк. режущее",
+Recipe_Open_Chapter_Spear = "Открыть главу: Копья",
+Recipe_Open_Chapter_Maintenance = "Открыть главу: Прочность",
+Recipe_Open_Chapter_Sprinting = "Открыть главу: Скорость бега",
+Recipe_Open_Chapter_Nimble = "Открыть главу: Проворность",
+Recipe_Open_Chapter_Lightfooted = "Открыть главу: Легкий шаг",
+Recipe_Open_Chapter_Sneaking = "Открыть главу: Скрытность",
+}
