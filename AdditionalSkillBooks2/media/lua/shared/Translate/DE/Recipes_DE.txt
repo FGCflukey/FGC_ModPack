@@ -1,0 +1,15 @@
+Recipes_DE = {
+Recipe_Open_Chapter_Aiming = "Kapitel öffnen: Zielen",
+Recipe_Open_Chapter_Reloading = "Kapitel öffnen: Nachladen",
+Recipe_Open_Chapter_Axe = "Kapitel öffnen: Axt",
+Recipe_Open_Chapter_Long_Blunt = "Kapitel öffnen: Stumpfwaffe",
+Recipe_Open_Chapter_Short_Blunt = "Kapitel öffnen: Kurze Stumpfwaffe",
+Recipe_Open_Chapter_Long_Blade = "Kapitel öffnen: Lange Klingenwaffe",
+Recipe_Open_Chapter_Short_Blade = "Kapitel öffnen: Kurze Klingenwaffe",
+Recipe_Open_Chapter_Spear = "Kapitel öffnen: Speer",
+Recipe_Open_Chapter_Maintenance = "Kapitel öffnen: Instandhaltung",
+Recipe_Open_Chapter_Sprinting = "Kapitel öffnen: Sprinten",
+Recipe_Open_Chapter_Nimble = "Kapitel öffnen: Flink",
+Recipe_Open_Chapter_Lightfooted = "Kapitel öffnen: Leichtfüssig",
+Recipe_Open_Chapter_Sneaking = "Kapitel öffnen: Schleichen",
+}

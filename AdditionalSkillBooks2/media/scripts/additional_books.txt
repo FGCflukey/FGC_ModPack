@@ -1,0 +1,948 @@
+module AdditionalBooks2
+{
+imports
+	{
+		Base
+	}
+
+/* FIREARMS */
+
+	item BookAiming1
+    {
+        NumberOfPages	=	220,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Guns_Aim_1,
+        Icon	=	ABBookgun,
+        SkillTrained = Aiming,
+        LvlSkillTrained = 1,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedGrey_Ground, 
+    }
+
+	item BookAiming2
+    {
+        NumberOfPages	=	260,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Guns_Aim_2,
+        Icon	=	ABBookgun,
+        SkillTrained = Aiming,
+        LvlSkillTrained = 3,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedGrey_Ground, 
+    }
+
+	item BookAiming3
+    {
+        NumberOfPages	=	300,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Guns_Aim_3,
+        Icon	=	ABBookgun,
+        SkillTrained = Aiming,
+        LvlSkillTrained = 5,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedGrey_Ground, 
+    }
+
+	item BookAiming4
+    {
+        NumberOfPages	=	340,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Guns_Aim_4,
+        Icon	=	ABBookgun,
+        SkillTrained = Aiming,
+        LvlSkillTrained = 7,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedGrey_Ground, 
+    }
+
+	item BookAiming5
+    {
+        NumberOfPages	=	380,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Guns_Aim_5,
+        Icon	=	ABBookgun,
+        SkillTrained = Aiming,
+        LvlSkillTrained = 9,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedGrey_Ground, 
+     }	
+
+	item BookReloading1
+    {
+        NumberOfPages	=	220,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Guns_Rel_1,
+        Icon	=	ABBookgun,
+        SkillTrained = Reloading,
+        LvlSkillTrained = 1,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedGrey_Ground, 
+    }
+
+	item BookReloading2
+    {
+        NumberOfPages	=	260,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Guns_Rel_2,
+        Icon	=	ABBookgun,
+        SkillTrained = Reloading,
+        LvlSkillTrained = 3,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedGrey_Ground, 
+    }
+
+	item BookReloading3
+    {
+        NumberOfPages	=	300,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Guns_Rel_3,
+        Icon	=	ABBookgun,
+        SkillTrained = Reloading,
+        LvlSkillTrained = 5,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedGrey_Ground, 
+    }
+
+	item BookReloading4
+    {
+        NumberOfPages	=	340,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Guns_Rel_4,
+        Icon	=	ABBookgun,
+        SkillTrained = Reloading,
+        LvlSkillTrained = 7,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedGrey_Ground, 
+    }
+
+	item BookReloading5
+    {
+        NumberOfPages	=	380,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Guns_Rel_5,
+        Icon	=	ABBookgun,
+        SkillTrained = Reloading,
+        LvlSkillTrained = 9,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedGrey_Ground, 
+     }
+
+	
+
+
+
+/* MELEE WEAPONS */
+
+
+	item BookAxe1
+    {
+        NumberOfPages	=	220,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_Axe_1,
+        Icon	=	ABBookmelee,
+        SkillTrained = Axe,
+        LvlSkillTrained = 1,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookAxe2
+    {
+        NumberOfPages	=	260,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_Axe_2,
+        Icon	=	ABBookmelee,
+        SkillTrained = Axe,
+        LvlSkillTrained = 3,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookAxe3
+    {
+        NumberOfPages	=	300,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_Axe_3,
+        Icon	=	ABBookmelee,
+        SkillTrained = Axe,
+        LvlSkillTrained = 5,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookAxe4
+    {
+        NumberOfPages	=	340,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_Axe_4,
+        Icon	=	ABBookmelee,
+        SkillTrained = Axe,
+        LvlSkillTrained = 7,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookAxe5
+    {
+        NumberOfPages	=	380,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_Axe_5,
+        Icon	=	ABBookmelee,
+        SkillTrained = Axe,
+        LvlSkillTrained = 9,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }	
+
+
+	 
+	item BookBlunt1
+    {
+        NumberOfPages	=	220,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_Blunt_1,
+        Icon	=	ABBookmelee,
+        SkillTrained = Blunt,
+        LvlSkillTrained = 1,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookBlunt2
+    {
+        NumberOfPages	=	260,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_Blunt_2,
+        Icon	=	ABBookmelee,
+        SkillTrained = Blunt,
+        LvlSkillTrained = 3,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookBlunt3
+    {
+        NumberOfPages	=	300,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_Blunt_3,
+        Icon	=	ABBookmelee,
+        SkillTrained = Blunt,
+        LvlSkillTrained = 5,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookBlunt4
+    {
+        NumberOfPages	=	340,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_Blunt_4,
+        Icon	=	ABBookmelee,
+        SkillTrained = Blunt,
+        LvlSkillTrained = 7,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookBlunt5
+    {
+        NumberOfPages	=	380,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_Blunt_5,
+        Icon	=	ABBookmelee,
+        SkillTrained = Blunt,
+        LvlSkillTrained = 9,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }	 
+ 
+ 
+	item BookSmallBlunt1
+    {
+        NumberOfPages	=	220,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_SmallBlunt_1,
+        Icon	=	ABBookmelee,
+        SkillTrained = SmallBlunt,
+        LvlSkillTrained = 1,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookSmallBlunt2
+    {
+        NumberOfPages	=	260,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_SmallBlunt_2,
+        Icon	=	ABBookmelee,
+        SkillTrained = SmallBlunt,
+        LvlSkillTrained = 3,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookSmallBlunt3
+    {
+        NumberOfPages	=	300,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_SmallBlunt_3,
+        Icon	=	ABBookmelee,
+        SkillTrained = SmallBlunt,
+        LvlSkillTrained = 5,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookSmallBlunt4
+    {
+        NumberOfPages	=	340,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_SmallBlunt_4,
+        Icon	=	ABBookmelee,
+        SkillTrained = SmallBlunt,
+        LvlSkillTrained = 7,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookSmallBlunt5
+    {
+        NumberOfPages	=	380,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_SmallBlunt_5,
+        Icon	=	ABBookmelee,
+        SkillTrained = SmallBlunt,
+        LvlSkillTrained = 9,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }	
+
+
+
+	item BookLongBlade1
+    {
+        NumberOfPages	=	220,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_LongBlade_1,
+        Icon	=	ABBookmelee,
+        SkillTrained = LongBlade,
+        LvlSkillTrained = 1,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookLongBlade2
+    {
+        NumberOfPages	=	260,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_LongBlade_2,
+        Icon	=	ABBookmelee,
+        SkillTrained = LongBlade,
+        LvlSkillTrained = 3,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookLongBlade3
+    {
+        NumberOfPages	=	300,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_LongBlade_3,
+        Icon	=	ABBookmelee,
+        SkillTrained = LongBlade,
+        LvlSkillTrained = 5,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookLongBlade4
+    {
+        NumberOfPages	=	340,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_LongBlade_4,
+        Icon	=	ABBookmelee,
+        SkillTrained = LongBlade,
+        LvlSkillTrained = 7,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookLongBlade5
+    {
+        NumberOfPages	=	380,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_LongBlade_5,
+        Icon	=	ABBookmelee,
+        SkillTrained = LongBlade,
+        LvlSkillTrained = 9,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }	
+
+
+
+	item BookSmallBlade1
+    {
+        NumberOfPages	=	220,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_SmallBlade_1,
+        Icon	=	ABBookmelee,
+        SkillTrained = SmallBlade,
+        LvlSkillTrained = 1,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookSmallBlade2
+    {
+        NumberOfPages	=	260,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_SmallBlade_2,
+        Icon	=	ABBookmelee,
+        SkillTrained = SmallBlade,
+        LvlSkillTrained = 3,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookSmallBlade3
+    {
+        NumberOfPages	=	300,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_SmallBlade_3,
+        Icon	=	ABBookmelee,
+        SkillTrained = SmallBlade,
+        LvlSkillTrained = 5,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookSmallBlade4
+    {
+        NumberOfPages	=	340,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_SmallBlade_4,
+        Icon	=	ABBookmelee,
+        SkillTrained = SmallBlade,
+        LvlSkillTrained = 7,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookSmallBlade5
+    {
+        NumberOfPages	=	380,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_SmallBlade_5,
+        Icon	=	ABBookmelee,
+        SkillTrained = SmallBlade,
+        LvlSkillTrained = 9,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }	
+	
+	
+	
+	item BookSpear1
+    {
+        NumberOfPages	=	220,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_Spear_1,
+        Icon	=	ABBookmelee,
+        SkillTrained = Spear,
+        LvlSkillTrained = 1,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookSpear2
+    {
+        NumberOfPages	=	260,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_Spear_2,
+        Icon	=	ABBookmelee,
+        SkillTrained = Spear,
+        LvlSkillTrained = 3,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookSpear3
+    {
+        NumberOfPages	=	300,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_Spear_3,
+        Icon	=	ABBookmelee,
+        SkillTrained = Spear,
+        LvlSkillTrained = 5,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookSpear4
+    {
+        NumberOfPages	=	340,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_Spear_4,
+        Icon	=	ABBookmelee,
+        SkillTrained = Spear,
+        LvlSkillTrained = 7,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookSpear5
+    {
+        NumberOfPages	=	380,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_Spear_5,
+        Icon	=	ABBookmelee,
+        SkillTrained = Spear,
+        LvlSkillTrained = 9,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }		
+	
+	
+	
+	item BookMaintenance1
+    {
+        NumberOfPages	=	220,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_Mai_1,
+        Icon	=	ABBookmelee,
+        SkillTrained = Maintenance,
+        LvlSkillTrained = 1,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookMaintenance2
+    {
+        NumberOfPages	=	260,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_Mai_2,
+        Icon	=	ABBookmelee,
+        SkillTrained = Maintenance,
+        LvlSkillTrained = 3,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookMaintenance3
+    {
+        NumberOfPages	=	300,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_Mai_3,
+        Icon	=	ABBookmelee,
+        SkillTrained = Maintenance,
+        LvlSkillTrained = 5,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookMaintenance4
+    {
+        NumberOfPages	=	340,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_Mai_4,
+        Icon	=	ABBookmelee,
+        SkillTrained = Maintenance,
+        LvlSkillTrained = 7,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }
+
+	item BookMaintenance5
+    {
+        NumberOfPages	=	380,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Melee_Mai_5,
+        Icon	=	ABBookmelee,
+        SkillTrained = Maintenance,
+        LvlSkillTrained = 9,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedDarkCyan_Ground, 
+    }	
+
+	
+
+/* ATHLETICS */
+
+	item BookSprinting1
+    {
+        NumberOfPages	=	220,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Athl_Spr_1,
+        Icon	=	ABBookathletic,
+        SkillTrained = Sprinting,
+        LvlSkillTrained = 1,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedBrown_Ground, 
+    }
+
+	item BookSprinting2
+    {
+        NumberOfPages	=	260,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Athl_Spr_2,
+        Icon	=	ABBookathletic,
+        SkillTrained = Sprinting,
+        LvlSkillTrained = 3,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedBrown_Ground, 
+    }
+
+	item BookSprinting3
+    {
+        NumberOfPages	=	300,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Athl_Spr_3,
+        Icon	=	ABBookathletic,
+        SkillTrained = Sprinting,
+        LvlSkillTrained = 5,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedBrown_Ground, 
+    }
+
+	item BookSprinting4
+    {
+        NumberOfPages	=	340,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Athl_Spr_4,
+        Icon	=	ABBookathletic,
+        SkillTrained = Sprinting,
+        LvlSkillTrained = 7,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedBrown_Ground, 
+    }
+
+	item BookSprinting5
+    {
+        NumberOfPages	=	380,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Athl_Spr_5,
+        Icon	=	ABBookathletic,
+        SkillTrained = Sprinting,
+        LvlSkillTrained = 9,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedBrown_Ground, 
+    }
+
+	item BookNimble1
+    {
+        NumberOfPages	=	220,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Athl_Nim_1,
+        Icon	=	ABBookathletic,
+        SkillTrained = Nimble,
+        LvlSkillTrained = 1,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedBrown_Ground, 
+    }
+
+	item BookNimble2
+    {
+        NumberOfPages	=	260,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Athl_Nim_2,
+        Icon	=	ABBookathletic,
+        SkillTrained = Nimble,
+        LvlSkillTrained = 3,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedBrown_Ground, 
+    }
+
+	item BookNimble3
+    {
+        NumberOfPages	=	300,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Athl_Nim_3,
+        Icon	=	ABBookathletic,
+        SkillTrained = Nimble,
+        LvlSkillTrained = 5,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedBrown_Ground, 
+    }
+
+	item BookNimble4
+    {
+        NumberOfPages	=	340,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Athl_Nim_4,
+        Icon	=	ABBookathletic,
+        SkillTrained = Nimble,
+        LvlSkillTrained = 7,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedBrown_Ground, 
+    }
+
+	item BookNimble5
+    {
+        NumberOfPages	=	380,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Athl_Nim_5,
+        Icon	=	ABBookathletic,
+        SkillTrained = Nimble,
+        LvlSkillTrained = 9,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedBrown_Ground, 
+    }	
+
+	
+	
+/* STEALTH */
+	
+
+	item BookSneaking1
+    {
+        NumberOfPages	=	220,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Stea_Sne_1,
+        Icon	=	ABBookstealth,
+        SkillTrained = Sneaking,
+        LvlSkillTrained = 1,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedLightBlue_Ground, 
+    }
+
+	item BookSneaking2
+    {
+        NumberOfPages	=	260,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Stea_Sne_2,
+        Icon	=	ABBookstealth,
+        SkillTrained = Sneaking,
+        LvlSkillTrained = 3,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedLightBlue_Ground, 
+    }
+
+	item BookSneaking3
+    {
+        NumberOfPages	=	300,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Stea_Sne_3,
+        Icon	=	ABBookstealth,
+        SkillTrained = Sneaking,
+        LvlSkillTrained = 5,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedLightBlue_Ground, 
+    }
+
+	item BookSneaking4
+    {
+        NumberOfPages	=	340,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Stea_Sne_4,
+        Icon	=	ABBookstealth,
+        SkillTrained = Sneaking,
+        LvlSkillTrained = 7,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedLightBlue_Ground, 
+    }
+
+	item BookSneaking5
+    {
+        NumberOfPages	=	380,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Stea_Sne_5,
+        Icon	=	ABBookstealth,
+        SkillTrained = Sneaking,
+        LvlSkillTrained = 9,
+		NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedLightBlue_Ground, 
+    }
+
+	item BookLightfooted1
+    {
+        NumberOfPages	=	220,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Stea_Lig_1,
+        Icon	=	ABBookstealth,
+        SkillTrained = Lightfooted,
+        LvlSkillTrained = 1,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedLightBlue_Ground, 
+    }
+
+	item BookLightfooted2
+    {
+        NumberOfPages	=	260,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Stea_Lig_2,
+        Icon	=	ABBookstealth,
+        SkillTrained = Lightfooted,
+        LvlSkillTrained = 3,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedLightBlue_Ground, 
+    }
+
+	item BookLightfooted3
+    {
+        NumberOfPages	=	300,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Stea_Lig_3,
+        Icon	=	ABBookstealth,
+        SkillTrained = Lightfooted,
+        LvlSkillTrained = 5,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedLightBlue_Ground, 
+    }
+
+	item BookLightfooted4
+    {
+        NumberOfPages	=	340,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Stea_Lig_4,
+        Icon	=	ABBookstealth,
+        SkillTrained = Lightfooted,
+        LvlSkillTrained = 7,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedLightBlue_Ground, 
+    }
+
+	item BookLightfooted5
+    {
+        NumberOfPages	=	380,
+        Weight	=	0.8,
+        Type	=	Literature,
+        DisplayName	=	AB2_Stea_Lig_5,
+        Icon	=	ABBookstealth,
+        SkillTrained = Lightfooted,
+        LvlSkillTrained = 9,
+        NumLevelsTrained = 2,
+        StaticModel = Book,
+		WorldStaticModel = BookClosedLightBlue_Ground, 
+    }	
+	
+	
+}
