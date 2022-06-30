@@ -349,4 +349,56 @@ module Autotsar
 		Time:500.0,
 	}
 
+	recipe Make BMW Moto Bag Left-Side
+	{
+		destroy Handbag/Purse,
+		destroy LeatherStrips=5,
+		Thread=5,
+		keep Scissors,
+		keep Needle,
+		
+		Result:ATAMotoBagBMW2,
+		CanBeDoneFromFloor:true,
+		Time:500.0,	
+	}
+
+	recipe Make BMW Moto Bag Right-Side
+	{
+		destroy Handbag/Purse,
+		destroy LeatherStrips=5,
+		Thread=5,
+		keep Scissors,
+		keep Needle,
+		
+		Result:ATAMotoBagBMW1,
+		CanBeDoneFromFloor:true,
+		Time:500.0,	
+	}	
+
+	recipe Make Harley Moto Bag Left-Side
+	{
+		destroy Handbag/Purse,
+		destroy LeatherStrips=5,
+		Thread=5,
+		keep Scissors,
+		keep Needle,
+		
+		Result:ATAMotoHarleyBag,
+		CanBeDoneFromFloor:true,
+		Time:500.0,	
+	}	
+
+	recipe Make Harley Moto Bag Holster
+	{
+		destroy Handbag/Purse,
+		destroy LeatherStrips=5,
+		Thread=5,
+		keep Scissors,
+		keep Needle,
+		
+		Result:ATAMotoHarleyHolster,
+		CanBeDoneFromFloor:true,
+		Time:500.0,	
+	}	
+
 }
