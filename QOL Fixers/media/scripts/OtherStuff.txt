@@ -385,4 +385,48 @@ module Base
 		SkillRequired:Cooking=4, 
 	}
 
+	recipe Dismantle Radio Transmitter
+	{
+		destroy Radio.Transmitter,
+		keep [Recipe.GetItemTypes.Screwdriver],
+		
+		Result:ElectronicsScrap,
+		Time:30.0,	
+		OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
+		Category:Electrical,
+		AnimNode:Disassemble,
+		Prop1:Screwdriver,
+		Prop2:CDplayer,
+		Sound:Dismantle,		
+	}
+
+	recipe Dismantle Radio Receiver
+	{
+		destroy Radio.RadioReceiver,
+		keep [Recipe.GetItemTypes.Screwdriver],
+		
+		Result:ElectronicsScrap,
+		Time:30.0,	
+		OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
+		Category:Electrical,
+		AnimNode:Disassemble,
+		Prop1:Screwdriver,
+		Prop2:CDplayer,
+		Sound:Dismantle,		
+	}
+
+    recipe Dismantle Alarm Clock
+    {
+       destroy AlarmClock2,
+       keep [Recipe.GetItemTypes.Screwdriver],
+
+       Result:ElectronicsScrap,
+       Time:30.0,
+       OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
+       Category:Electrical,
+       AnimNode:Disassemble,
+       Prop1:Screwdriver,
+       Prop2:CDplayer,
+    }
+
 }
