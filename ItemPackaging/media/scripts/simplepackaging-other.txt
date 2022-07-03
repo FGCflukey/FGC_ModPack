@@ -785,7 +785,7 @@ module Base
 	item 10xBatteryPack
 	{
         DisplayCategory  	= Electronics,
-		Weight				= 3.0,
+		Weight				= 0.5,
 		Type				= Drainable,
 		UseDelta 			= 0.1,
 		DisplayName			= 10-Pack Batteries,
@@ -795,7 +795,7 @@ module Base
 	item 20xBatteryPack
 	{
         DisplayCategory  	= Electronics,
-		Weight				= 5.0,
+		Weight				= 1.0,
 		Type				= Drainable,
 		UseDelta 			= 0.05,
 		DisplayName			= 20-Pack Batteries,
