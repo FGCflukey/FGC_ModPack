@@ -81,7 +81,12 @@ function UG_Automaker.buildSkillList( context, toolTip, mechanictype, player)
 	local electricalReq = 5
 	
 	-- Script:getMechanicType()    1=standard 2=heavy duty 3=sports	
-	if mechanictype == 1 then
+	if isAdmin() and player:isBuildCheat() then
+		
+		mechanicReq = 0
+		metalworkReq = 0
+		electricalReq = 0
+	elseif mechanictype == 1 then
 	
 		mechanicReq = 5
 		metalworkReq = 5
@@ -105,14 +110,14 @@ function UG_Automaker.buildSkillList( context, toolTip, mechanictype, player)
 		toolTip.description = toolTip.description .. " <LINE> <RGB:1,1,1> Mechanic skill " .. tostring( mechanicSkill) .. "/" .. tostring( mechanicReq)
 	end
 	
-	if metalworkSkill < metalworkReq then
+	if metalworkSkill < metalworkReq and not( isAdmin() and getPlayer():isBuildCheat()) then
 		toolTip.description = toolTip.description .. " <LINE> <RGB:1,0,0> Metalwork skill " .. tostring( metalworkSkill) .. "/" .. tostring( metalworkReq)
 		context.notAvailable = true
 	else
 		toolTip.description = toolTip.description .. " <LINE> <RGB:1,1,1> Metalwork skill " .. tostring( metalworkSkill) .. "/" .. tostring( metalworkReq)
 	end
 	
-	if electricalSkill < electricalReq then
+	if electricalSkill < electricalReq and not( isAdmin() and getPlayer():isBuildCheat()) then
 		toolTip.description = toolTip.description .. " <LINE> <RGB:1,0,0> Electrical skill " .. tostring( electricalSkill) .. "/" .. tostring( electricalReq)
 		context.notAvailable = true
 	else
@@ -123,38 +128,40 @@ end
 function UG_Automaker.getMaterialReq( mechanictype)
 	local ret = {}
 	
-	ret["SheetMetal"] = 1
-	ret["MetalBar"] = 1
-	ret["ElectronicsScrap"] = 1
-	ret["ElectricWire"] = 1
-	ret["EngineParts"] = 1
-	return ret
+	if isAdmin() and getPlayer():isBuildCheat() then
+		ret["SheetMetal"] = 0
+		ret["MetalBar"] = 0
+		ret["ElectronicsScrap"] = 0
+		ret["ElectricWire"] = 0
+		ret["EngineParts"] = 0
+		return ret
+	end
 
-	-- Script:getMechanicType()    1=standard 2=heavy duty 3=sports	
-	-- if mechanictype == 1 then
+	--Script:getMechanicType()    1=standard 2=heavy duty 3=sports	
+	if mechanictype == 1 then
 	
-		-- ret["SheetMetal"] = 50
-		-- ret["MetalBar"] = 35
-		-- ret["ElectronicsScrap"] = 30
-		-- ret["ElectricWire"] = 30
-		-- ret["EngineParts"] = 40
-	-- elseif mechanictype == 2 then
+		ret["SheetMetal"] = 50
+		ret["MetalBar"] = 35
+		ret["ElectronicsScrap"] = 30
+		ret["ElectricWire"] = 30
+		ret["EngineParts"] = 40
+	elseif mechanictype == 2 then
 	
-		-- ret["SheetMetal"] = 80
-		-- ret["MetalBar"] = 45
-		-- ret["ElectronicsScrap"] = 30
-		-- ret["ElectricWire"] = 35
-		-- ret["EngineParts"] = 50
-	-- elseif mechanictype == 3 then
+		ret["SheetMetal"] = 80
+		ret["MetalBar"] = 45
+		ret["ElectronicsScrap"] = 30
+		ret["ElectricWire"] = 35
+		ret["EngineParts"] = 50
+	elseif mechanictype == 3 then
 	
-		-- ret["SheetMetal"] = 60
-		-- ret["MetalBar"] = 40
-		-- ret["ElectronicsScrap"] = 40
-		-- ret["ElectricWire"] = 35
-		-- ret["EngineParts"] = 60
-	-- end	
+		ret["SheetMetal"] = 60
+		ret["MetalBar"] = 40
+		ret["ElectronicsScrap"] = 40
+		ret["ElectricWire"] = 35
+		ret["EngineParts"] = 60
+	end	
 	
-	-- return ret
+	return ret
 end
 
 function UG_Automaker.takeMaterials( mechanictype)
@@ -295,27 +302,32 @@ function UG_Automaker.FillWorldContextMenu( player, context, worldobjects, test)
 			
 			if mt == 1 then
 			
-				ModelContext = subMenuStandardModels:addOption( UG_Automaker.getVehicleRealName( v:getName()), worldobjects, UG_Automaker.onNewVehicle, v:getFullName(), mt)
+				ModelContext = subMenuStandardModels:addOption( UG_Automaker.getVehicleRealName( v:getName()), worldobjects, UG_Automaker.onNewVehicle, v:getFullName(), mt, subMenuVehicles)
 				UG_Automaker.initTooltip( ModelContext, v, mt, player)
 			elseif mt == 2 then
 
-				ModelContext = subMenuHeavyDutyModels:addOption( getText("IGUI_VehicleName" .. v:getName()), worldobjects, UG_Automaker.onNewVehicle, v:getFullName(), mt)
+				ModelContext = subMenuHeavyDutyModels:addOption( getText("IGUI_VehicleName" .. v:getName()), worldobjects, UG_Automaker.onNewVehicle, v:getFullName(), mt, subMenuVehicles)
 				UG_Automaker.initTooltip( ModelContext, v, mt, player)
 			elseif mt == 3 then
 
-				ModelContext = subMenuSportModels:addOption( getText("IGUI_VehicleName" .. v:getName()), worldobjects, UG_Automaker.onNewVehicle, v:getFullName(), mt)
+				ModelContext = subMenuSportModels:addOption( getText("IGUI_VehicleName" .. v:getName()), worldobjects, UG_Automaker.onNewVehicle, v:getFullName(), mt, subMenuVehicles)
 				UG_Automaker.initTooltip( ModelContext, v, mt, player)
 			else
 			
-				ModelContext = subMenuOtherModels:addOption( getText("IGUI_VehicleName" .. v:getName()), worldobjects, UG_Automaker.onNewVehicle, v:getFullName(), mt)
+				ModelContext = subMenuOtherModels:addOption( getText("IGUI_VehicleName" .. v:getName()), worldobjects, UG_Automaker.onNewVehicle, v:getFullName(), mt, subMenuVehicles)
 				UG_Automaker.initTooltip( ModelContext, v, mt, player)
 			end		
 		end
 	end
 end
 
-function UG_Automaker.onNewVehicle( worldobjects, vehiclescript, mechanictype)
+function UG_Automaker.onNewVehicle( worldobjects, vehiclescript, mechanictype, context)
 
+	if context then
+		context:closeAll()
+		context:setVisible(false)
+	end --for some reason the context menu stays open.
+	
 	UG_Automaker.takeMaterials( mechanictype)
 	sendClientCommand( getPlayer(), "Automaker", "CreateVehicle", { VehicleID = vehiclescript})
 end
