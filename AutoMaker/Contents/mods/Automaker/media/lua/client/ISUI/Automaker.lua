@@ -1,5 +1,56 @@
 UG_Automaker = {}
 
+function UG_Automaker.VehicleBlackList( VehicleID)
+	--any VehicleID in this list will return True (as in it's blacklisted don't make it)
+	if VehicleID == "ATAArmyBus" then
+		return true
+	elseif VehicleID == "ATAPrisonBus" then
+		return true
+	elseif VehicleID == "ATASchoolBus" then
+		return true
+	elseif VehicleID == "BoatMotor" then
+		return true
+	elseif VehicleID == "BoatMotor_Ground" then
+		return true		
+	elseif VehicleID == "BoatSailingYacht" then
+		return true
+	elseif VehicleID == "BoatSailingYacht_Ground" then
+		return true
+	elseif VehicleID == "86bounder" then
+		return true
+	elseif VehicleID == "86econolinerv" then
+		return true
+	elseif VehicleID == "schoolbus" then
+		return true		
+	elseif VehicleID == "schoolbusshort" then
+		return true
+	elseif VehicleID == "Trailercamperscamp" then
+		return true
+	elseif VehicleID == "TrailerHome" then
+		return true
+	elseif VehicleID == "TrailerHomeExplorer" then
+		return true
+	elseif VehicleID == "TrailerHomeHartman" then
+		return true
+	elseif VehicleID == "TrailerWithBoatMotor" then
+		return true
+	elseif VehicleID == "TrailerWithBoatSailingYacht" then
+		return true
+	elseif VehicleID == "BoatZeroPatient" then
+		return true
+	elseif VehicleID == "TrailerAMCWaverunner" then
+		return true
+	elseif VehicleID == "AMC_Waverunner" then
+		return true
+	elseif VehicleID == "TrailerAMCWaverunnerWithBody" then
+		return true
+	elseif VehicleID == "TrailerWithBoat" then
+		return true
+	else
+		return false
+	end
+end
+
 function UG_Automaker.getVehicleRealName( VehicleID)
 
 	if VehicleID == "CarTaxi" then
@@ -101,6 +152,11 @@ function UG_Automaker.buildSkillList( context, toolTip, mechanictype, player)
 		mechanicReq = 9
 		metalworkReq = 9
 		electricalReq = 6
+	else
+	
+		mechanicReq = 11
+		metalworkReq = 11
+		electricalReq = 11
 	end
 
 	if mechanicSkill < mechanicReq then
@@ -159,7 +215,14 @@ function UG_Automaker.getMaterialReq( mechanictype)
 		ret["ElectronicsScrap"] = 40
 		ret["ElectricWire"] = 35
 		ret["EngineParts"] = 60
-	end	
+	else
+	
+		ret["SheetMetal"] = 80
+		ret["MetalBar"] = 80
+		ret["ElectronicsScrap"] = 80
+		ret["ElectricWire"] = 80
+		ret["EngineParts"] = 80	
+	end
 	
 	return ret
 end
@@ -198,7 +261,7 @@ function UG_Automaker.buildMaterialList( context, toolTip, mechanictype, player)
 		context.notAvailable = true;
 	else
 		toolTip.description = toolTip.description .. " <LINE> <RGB:1,1,1> Metal Sheets " .. tostring( totalMetalSheets) .. "/" .. tostring( requirements["SheetMetal"])
-	end	
+	end
 
 	
 	local totalMetalBars = materialOnGround["MetalBar"]
@@ -295,7 +358,7 @@ function UG_Automaker.FillWorldContextMenu( player, context, worldobjects, test)
 	for i=1, AllScripts:size() do
 	
 		local v = AllScripts:get( i-1)
-		if string.find( v:getName(), "Smashed") == nil and string.find( v:getName(), "Burnt") == nil then
+		if UG_Automaker.VehicleBlackList( v:getName()) == false and string.find( v:getName(), "Smashed") == nil and string.find( v:getName(), "Burnt") == nil and string.find( v:getName(), "shipwreck") == nil then
 		
 			local mt = v:getMechanicType()  -- Script:getMechanicType()    1=standard 2=heavy duty 3=sports	
 			local ModelContext
