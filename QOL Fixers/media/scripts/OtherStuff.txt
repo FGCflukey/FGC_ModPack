@@ -387,7 +387,7 @@ module Base
 
 	recipe Dismantle Radio Transmitter
 	{
-		destroy Radio.Transmitter,
+		destroy Radio.RadioTransmitter,
 		keep [Recipe.GetItemTypes.Screwdriver],
 		
 		Result:ElectronicsScrap,
