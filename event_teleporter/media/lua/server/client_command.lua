@@ -6,6 +6,11 @@ Commands.Event_Teleporter.OnGameStart = function(player, args)
     if getGameTime():getModData().serverPlayerOriginPos == nil then
         getGameTime():getModData().serverPlayerOriginPos = {}
     end
+
+    if getGameTime():getModData().serverPlayerAtEvent == nil then
+        getGameTime():getModData().serverPlayerAtEvent = {}
+    end
+
     local player_at_event = false
     if getGameTime():getModData().serverPlayerAtEvent[player:getUsername()] ~=
         nil then
