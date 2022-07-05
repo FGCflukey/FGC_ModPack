@@ -189,16 +189,14 @@ function UG_Automaker.getMaterialReq( mechanictype)
 	local ret = {}
 	
 	if isAdmin() and getPlayer():isBuildCheat() then
+	
 		ret["SheetMetal"] = 0
 		ret["MetalBar"] = 0
 		ret["ElectronicsScrap"] = 0
 		ret["ElectricWire"] = 0
 		ret["EngineParts"] = 0
-		return ret
-	end
-
 	--Script:getMechanicType()    1=standard 2=heavy duty 3=sports	
-	if mechanictype == 1 then
+	elseif mechanictype == 1 then
 	
 		ret["SheetMetal"] = 50
 		ret["MetalBar"] = 35
