@@ -46,6 +46,10 @@ function UG_Automaker.VehicleBlackList( VehicleID)
 		return true
 	elseif VehicleID == "TrailerWithBoat" then
 		return true
+	elseif VehicleID == "BoatSailingYacht_shipwreckwater" then
+		return true
+	elseif VehicleID == "BoatSailingYacht_shipwreckland" then
+		return true
 	else
 		return false
 	end
