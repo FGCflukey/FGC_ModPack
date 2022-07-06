@@ -1,7 +1,0 @@
-version=1
-title=Auto Maker Development
-description=This mod allow players to make new vehicles.
-description=
-description=Please feel free to add this to mod packs or to include the script in your own mods as well.  Credit where credit is due would be appreciated.
-tags=Build 41
-visibility=public
