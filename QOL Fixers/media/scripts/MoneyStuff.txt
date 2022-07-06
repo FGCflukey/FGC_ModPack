@@ -1,0 +1,278 @@
+module Base
+{
+		recipe Make 1K Dollar Stack
+		{
+			destroy BMSATM.100Dollar=10,
+
+			Result:BMSATM.1KDollar,
+			Time:50.0,
+		}
+
+		recipe Make 1K Dollar Stack
+		{
+			destroy BMSATM.50Dollar=20,
+
+			Result:BMSATM.1KDollar,
+			Time:50.0,
+		}
+
+		recipe Make 1K Dollar Stack
+		{
+			destroy BMSATM.20Dollar=50,
+
+			Result:BMSATM.1KDollar,
+			Time:75.0,
+		}
+
+		recipe Make 1K Dollar Stack
+		{
+			destroy BMSATM.10Dollar=100,
+
+			Result:BMSATM.1KDollar,
+			Time:75.0,
+		}
+
+		recipe Make 2K Dollar Stack
+		{
+			destroy BMSATM.100Dollar=20,
+
+			Result:BMSATM.2KDollar,
+			Time:50.0,
+		}
+
+		recipe Make 2K Dollar Stack
+		{
+			destroy BMSATM.50Dollar=40,
+
+			Result:BMSATM.2KDollar,
+			Time:50.0,
+		}
+
+		recipe Make 2K Dollar Stack
+		{
+			destroy BMSATM.20Dollar=100,
+
+			Result:BMSATM.2KDollar,
+			Time:75.0,
+		}
+
+		recipe Make 2K Dollar Stack
+		{
+			destroy BMSATM.10Dollar=200,
+
+			Result:BMSATM.2KDollar,
+			Time:100.0,
+		}
+
+		recipe Make 5K Dollar Stack
+		{
+			destroy BMSATM.100Dollar=50,
+
+			Result:BMSATM.5KDollar,
+			Time:75.0,
+		}
+
+		recipe Make 5K Dollar Stack
+		{
+			destroy BMSATM.1KDollar=5,
+
+			Result:BMSATM.5KDollar,
+			Time:75.0,
+		}
+
+		recipe Make 5K Dollar Stack
+		{
+			destroy BMSATM.2KDollar=2,
+			destroy BMSATM.1KDollar=1,
+
+			Result:BMSATM.5KDollar,
+			Time:75.0,
+		}
+
+		recipe Make 10K Dollar Stack
+		{
+			destroy BMSATM.100Dollar=100,
+
+			Result:BMSATM.10KDollar,
+			Time:100.0,
+		}
+
+		recipe Make 10K Dollar Stack
+		{
+			destroy BMSATM.1KDollar=10,
+
+			Result:BMSATM.10KDollar,
+			Time:75.0,
+		}
+
+		recipe Make 10K Dollar Stack
+		{
+			destroy BMSATM.2KDollar=5,
+
+			Result:BMSATM.10KDollar,
+			Time:50.0,
+		}
+
+		recipe Make 10K Dollar Stack
+		{
+			destroy BMSATM.5KDollar=2,
+
+			Result:BMSATM.10KDollar,
+			Time:50.0,
+		}
+
+		recipe Make 20K Dollar Stack
+		{
+			destroy BMSATM.100Dollar=200,
+
+			Result:BMSATM.20KDollar,
+			Time:120.0,
+		}
+
+		recipe Make 20K Dollar Stack
+		{
+			destroy BMSATM.1KDollar=20,
+
+			Result:BMSATM.20KDollar,
+			Time:75.0,
+		}
+
+		recipe Make 20K Dollar Stack
+		{
+			destroy BMSATM.2KDollar=10,
+
+			Result:BMSATM.20KDollar,
+			Time:75.0,
+		}
+
+		recipe Make 20K Dollar Stack
+		{
+			destroy BMSATM.5KDollar=4,
+
+			Result:BMSATM.20KDollar,
+			Time:50.0,
+		}
+
+		recipe Make 20K Dollar Stack
+		{
+			destroy BMSATM.10KDollar=2,
+
+			Result:BMSATM.20KDollar,
+			Time:50.0,
+		}
+
+		recipe Make 50K Dollar Stack
+		{
+			destroy BMSATM.100Dollar=500,
+
+			Result:BMSATM.50KDollar,
+			Time:150.0,
+		}
+
+		recipe Make 50K Dollar Stack
+		{
+			destroy BMSATM.20KDollar=2,
+			destroy BMSATM.10KDollar,
+
+			Result:BMSATM.50KDollar,
+			Time:50.0,
+		}
+
+		recipe Make 50K Dollar Stack
+		{
+			destroy BMSATM.20KDollar,
+			destroy BMSATM.10KDollar=3,
+
+			Result:BMSATM.50KDollar,
+			Time:50.0,
+		}
+
+		recipe Make 50K Dollar Stack
+		{
+			destroy BMSATM.10KDollar=5,
+
+			Result:BMSATM.50KDollar,
+			Time:50.0,
+		}
+
+		recipe Make 50K Dollar Stack
+		{
+			destroy BMSATM.5KDollar=10,
+
+			Result:BMSATM.50KDollar,
+			Time:50.0,
+		}
+
+		recipe Make 50K Dollar Stack
+		{
+			destroy BMSATM.2KDollar=25,
+
+			Result:BMSATM.50KDollar,
+			Time:75.0,
+		}
+
+		recipe Make 50K Dollar Stack
+		{
+			destroy BMSATM.1KDollar=50,
+
+			Result:BMSATM.50KDollar,
+			Time:75.0,
+		}
+
+		recipe Make 100K Dollar Stack
+		{
+			destroy BMSATM.100Dollar=1000,
+
+			Result:BMSATM.100KDollar,
+			Time:200.0,
+		}
+
+		recipe Make 100K Dollar Stack
+		{
+			destroy BMSATM.50KDollar=2,
+
+			Result:BMSATM.100KDollar,
+			Time:50.0,
+		}
+
+		recipe Make 100K Dollar Stack
+		{
+			destroy BMSATM.20KDollar=5,
+
+			Result:BMSATM.100KDollar,
+			Time:50.0,
+		}
+
+		recipe Make 100K Dollar Stack
+		{
+			destroy BMSATM.10KDollar=10,
+
+			Result:BMSATM.100KDollar,
+			Time:50.0,
+		}
+
+		recipe Make 100K Dollar Stack
+		{
+			destroy BMSATM.5KDollar=20,
+
+			Result:BMSATM.100KDollar,
+			Time:75.0,
+		}
+
+		recipe Make 100K Dollar Stack
+		{
+			destroy BMSATM.2KDollar=50,
+
+			Result:BMSATM.100KDollar,
+			Time:100.0,
+		}
+
+		recipe Make 100K Dollar Stack
+		{
+			destroy BMSATM.1KDollar=100,
+
+			Result:BMSATM.100KDollar,
+			Time:100.0,
+		}
+
+}
