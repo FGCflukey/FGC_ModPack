@@ -3,6 +3,7 @@ local function OnGameStart()
     sendClientCommand(getPlayer(), "Event_Teleporter", "OnGameStart", {
         getPlayer():getOnlineID()
     });
+    Events.OnTick.Remove(OnGameStart)
 end
 
 local Commands = {}
@@ -33,7 +34,6 @@ Commands.Event_Teleporter.Update_Player = function(arguments)
     player:getModData().playerOriginPos = arguments[1]
     player:getModData().eventTeleportPos = arguments[2]
     player:getModData().playerAtEvent = arguments[3]
-    Events.OnTick.Remove(OnGameStart);
 end
 
 local function OnServerCommand(module, command, arguments)
@@ -43,4 +43,4 @@ local function OnServerCommand(module, command, arguments)
 end
 
 Events.OnServerCommand.Add(OnServerCommand)
-Events.OnTick.Add(OnGameStart);
+Events.OnTick.Add(OnGameStart)

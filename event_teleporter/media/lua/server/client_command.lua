@@ -92,9 +92,7 @@ Commands.Event_Teleporter.SetTeleportEvent =
             getGameTime():getModData().serverPlayerOriginPos = {}
         end
 
-        if getGameTime():getModData().serverPlayerAtEvent == nil then
-            getGameTime():getModData().serverPlayerAtEvent = {}
-        end
+        getGameTime():getModData().serverPlayerAtEvent = {}
 
         local players = getOnlinePlayers();
         local array_size = players:size();
