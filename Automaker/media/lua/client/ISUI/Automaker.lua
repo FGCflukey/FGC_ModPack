@@ -8,12 +8,12 @@ function UG_Automaker.VehicleBlackList( VehicleID)
 		return true
 	elseif VehicleID == "ATASchoolBus" then
 		return true
-	elseif VehicleID == "BoatMotor" then
-		return true
+	--elseif VehicleID == "BoatMotor" then
+		--return true
 	elseif VehicleID == "BoatMotor_Ground" then
 		return true		
-	elseif VehicleID == "BoatSailingYacht" then
-		return true
+	--elseif VehicleID == "BoatSailingYacht" then
+		--return true
 	elseif VehicleID == "BoatSailingYacht_Ground" then
 		return true
 	elseif VehicleID == "86bounder" then
@@ -334,6 +334,11 @@ end
 function UG_Automaker.FillWorldContextMenu( player, context, worldobjects, test)
 
 	player = getPlayer()
+	
+	if isAdmin() then
+		local movevehicleOption = context:addOption( "Bring Vehicle Here", worldobjects, UG_Automaker.MoveVehicle)
+	end
+	
 	local automakerOption = context:addOption( "Build New Vehicle", worldobjects, nil)	
 
 	local subMenuVehicles = ISContextMenu:getNew(context)
@@ -395,6 +400,32 @@ function UG_Automaker.onNewVehicle( worldobjects, vehiclescript, mechanictype, c
 	
 	UG_Automaker.takeMaterials( mechanictype)
 	sendClientCommand( getPlayer(), "Automaker", "CreateVehicle", { VehicleID = vehiclescript})
+end
+
+function UG_Automaker.MoveVehicle( worldobjects)
+	print( "keyword: moving vehicle")
+	local vehicle = nil
+	
+    for i,v in ipairs(worldobjects) do
+		if instanceof(v, "IsoVehicle") then
+			vehicle = v
+		end
+	end
+	
+	--never gets here!  check the valhalla menu to pick a car.
+	--use square:getVehicleContainer() to find the vehicle
+	if vehicle ~= nil then
+		print( "keyword: valid vehicle")
+		
+		local target = getPlayer():getSquare()
+		
+		vehicle:setX(tonumber( target:getx()));
+		vehicle:setY(tonumber( target:gety()));
+		vehicle:setZ(tonumber( target:getz()));
+		vehicle:setLx(tonumber( target:getx()));
+		vehicle:setLy(tonumber( target:gety()));
+		vehicle:setLz(tonumber( target:getz()));		
+	end
 end
 
 Events.OnFillWorldObjectContextMenu.Add(UG_Automaker.FillWorldContextMenu)
