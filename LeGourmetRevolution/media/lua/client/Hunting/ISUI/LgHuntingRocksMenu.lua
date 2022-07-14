@@ -121,9 +121,10 @@ LGHuntingRocksMenu.initContextMenu = function(player, context, worldobjects)
 			end
 		end
 		if htree2 and htree2:getSquare():DistToProper(playerObj:getSquare()) > 8 and (instanceof(Item, "HandWeapon") and Item:getCondition() > 0) and Item:getScope() then
-			if (Item:getType() == "VarmintRifle" or Item:getType() == "HuntingRifle") then
+			if (Item:getType() == "VarmintRifle" or Item:getType() == "HuntingRifle") or (Item:getAttachmentType() == "Rifle" and Item:getFireMode():contains("Single")) then
 				local scope = Item:getScope();
-				if scope:getType() == "x4Scope" or scope:getType() == "x8Scope" or scope:getType() == "x20Scope" or scope:getType() == "x40Scope" or scope:getType() == "StealthTacticalScope" or scope:getType() == "StealthTacticalScope2" then
+				if scope:getType() == "x4Scope" or scope:getType() == "x8Scope" or scope:getType() == "x20Scope" or scope:getType() == "x40Scope" or scope:getType() == "StealthTacticalScope" or scope:getType() == "StealthTacticalScope2"
+                or scope:getName():contains("20x") or scope:getName():contains("12x") or scope:getName():contains("8x") or scope:getName():contains("6x") or scope:getName():contains("4x") or scope:getName():contains("3x") then
 					playerObj:faceLocation(htree2:getX(), htree2:getY());
 					capture2 = LGHuntingRocksMenu.getcapturedata2();
 					local searchoption = context:addOption(getText("ContextMenu_HuntwithRifle") .. " " .. text, htree2, LGHuntingRocksMenu.onHuntTree, player, capture2, 2, Item);
