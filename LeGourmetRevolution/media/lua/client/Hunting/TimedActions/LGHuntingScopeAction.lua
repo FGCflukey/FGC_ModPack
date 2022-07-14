@@ -42,7 +42,7 @@ function LGHuntingScopeAction:start()
 	if Primary and instanceof(Primary, "HandWeapon") and getCore():isNewReloading() then
 		if ISReloadWeaponAction.canShoot(Primary) then
 			if Primary:getCondition() > 0 then 
-				if Primary:getType() == "VarmintRifle" or Primary:getType() == "HuntingRifle" then
+				if Primary:getType() == "VarmintRifle" or Primary:getType() == "HuntingRifle" or Primary:getAttachmentType() == "Rifle" then
 					local sound = nil;
 					local SoundMod = nil;
 					local RadiusMod = nil;
@@ -106,7 +106,7 @@ function LGHuntingScopeAction:start()
 			end
 
 			if (instanceof(Primary, "HandWeapon") and Primary:getCondition() > 0) then 
-				if Primary:getType() == "VarmintRifle" or Primary:getType() == "HuntingRifle" then
+				if Primary:getType() == "VarmintRifle" or Primary:getType() == "HuntingRifle" or Primary:getAttachmentType() == "Rifle" then
 					if Primary:getScope() ~= nil then
 						local Scope = Primary:getScope();
 						if Scope:getType() == "x4Scope" then
@@ -121,6 +121,18 @@ function LGHuntingScopeAction:start()
 							totalpercent = totalpercent + 16;
 						elseif Scope:getType() == "StealthTacticalScope2" then
 							totalpercent = totalpercent + 20;
+                        elseif Scope:getName():contains("20x") then 
+                            totalpercent = totalpercent + 12;
+                        elseif Scope:getName():contains("12x") then 
+                            totalpercent = totalpercent + 11;
+                        elseif Scope:getName():contains("8x") then 
+                            totalpercent = totalpercent + 10;
+                        elseif Scope:getName():contains("6x") then 
+                            totalpercent = totalpercent + 7;
+                        elseif Scope:getName():contains("4x") then 
+                            totalpercent = totalpercent + 5;
+                        elseif Scope:getName():contains("3x") then 
+                            totalpercent = totalpercent + 3;
 						end
 					end
 				end

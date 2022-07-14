@@ -1330,6 +1330,24 @@ module legourmetfarming
 	  	Category:Farming,
 	}
 
+	recipe Open Packet of Coffee Seeds
+	{
+		CoffeeBag,
+  
+      	Result:CafeSeed=50,
+        Time:20.0,
+	  	Category:Farming,
+	}
+ 
+	recipe Put Coffee Seeds in Packet
+	{
+        CafeSeed=50,
+
+        Result:CoffeeBag,
+        Time:30.0,
+	  	Category:Farming,
+	}
+
 	recipe Open Packet of Wheat Seeds
 	{
 		WheatBagSeed,
