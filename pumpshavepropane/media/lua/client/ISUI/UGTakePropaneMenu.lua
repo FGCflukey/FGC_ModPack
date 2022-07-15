@@ -15,7 +15,7 @@ function FindNearbyGasPump( target)
 			local square2 = getCell():getGridSquare(square:getX() + dx, square:getY() + dy, square:getZ())
 			for i=0, square2:getObjects():size()-1 do
 				local obj = square2:getObjects():get(i);
-				if obj:getPipedFuelAmount() > 0 then
+				if obj:getPipedFuelAmount() > 0 and obj:getName() ~= "FuelBarrel" then
 					return obj
 				end
 			end
@@ -32,8 +32,9 @@ UGTakePropaneMenu.OnContextMenu = function( player, context, worldobjects)
 
 		for _,v in ipairs(worldobjects) do
 		
-			if v:getPipedFuelAmount() > 0 then
-			
+			if v:getPipedFuelAmount() > 0 and v:getName() ~= "FuelBarrel" then 
+				
+				print("keyword: This is a: " .. v:getName() .. ", if this is a FuelBarrel this should never happen")
 				local pump = v
 				local dist = pump:getSquare():DistToProper(playerObj)
 				
