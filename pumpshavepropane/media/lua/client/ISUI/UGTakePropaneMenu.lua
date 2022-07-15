@@ -33,8 +33,7 @@ UGTakePropaneMenu.OnContextMenu = function( player, context, worldobjects)
 		for _,v in ipairs(worldobjects) do
 		
 			if v:getPipedFuelAmount() > 0 and v:getName() ~= "FuelBarrel" then 
-				
-				print("keyword: This is a: " .. v:getName() .. ", if this is a FuelBarrel this should never happen")
+
 				local pump = v
 				local dist = pump:getSquare():DistToProper(playerObj)
 				
