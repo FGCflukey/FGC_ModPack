@@ -3,7 +3,7 @@ doorlocksystem.onFillWorldObjectContextMenu = function(playerId, context, worldo
 local player = getSpecificPlayer(playerId)
 for a,door in ipairs(worldobjects) do
 			
-				if instanceof(door, 'IsoDoor') then
+				if instanceof(door, 'IsoThumpable') and door:isDoor() then
 					    local KeyMenu = context:addOption("Key Options", worldobjects);
                         local subMenu = ISContextMenu:getNew(context);
                         doorlocksystem.context = context
