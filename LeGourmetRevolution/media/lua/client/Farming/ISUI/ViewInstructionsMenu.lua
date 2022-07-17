@@ -7,6 +7,7 @@ ViewInstructionsMenu.doMenu = function(player, context, items)
 	if not pl:HasTrait("Illiterate") then
 
 		local SeedPacket = nil;
+        local SeedBook = nil;
 	    for i,v in ipairs(items) do
 		    local tempitem = v;
             if not instanceof(v, "InventoryItem") then
@@ -15,13 +16,36 @@ ViewInstructionsMenu.doMenu = function(player, context, items)
 			if LGRSeedPacketDef[tempitem:getType()] then
 				SeedPacket = tempitem;
 			end
-		end
+			if tempitem:getType() == "SeedBook" then
+				SeedBook = tempitem;
+			end
+        end
 
 	    if SeedPacket then
 			local option = context:addOption(getText("ContextMenu_View_Instructions"), SeedPacket, ViewInstructionsMenu.View_OnCreate, pl);
 			ViewInstructionsMenu.Tooltip(option, pl, SeedPacket)
 	    end
+	    if SeedBook then
+			local option = context:addOption("Learn All Sowing Recipes", SeedBook, ViewInstructionsMenu.LearnAll, pl);
+	    end
 	end
+end
+
+ViewInstructionsMenu.LearnAll = function(item, playerObj, RecipetoLearn, Recipetranslation)
+    for key,values in pairs(LGRSeedPacketDef) do
+        local seed_packet = nil
+        seed_packet = InventoryItemFactory.CreateItem("Greenfire." .. key)
+        if seed_packet == nil then
+            seed_packet = InventoryItemFactory.CreateItem("legourmetfarming." .. key)
+        end
+        if seed_packet == nil then
+            seed_packet = InventoryItemFactory.CreateItem("farming." .. key)
+        end
+        if seed_packet == nil then
+            return
+        end
+        ISTimedActionQueue.add(LGLearnRecipeAction:new(playerObj, seed_packet, 20))
+    end
 end
 
 ViewInstructionsMenu.Tooltip = function(option, pl, SeedPacket)

@@ -3,7 +3,8 @@ require ("TimedActions/ISBaseTimedAction");
 LGLearnRecipeAction = ISBaseTimedAction:derive("LGLearnRecipeAction");
 
 function LGLearnRecipeAction:isValid()
-	return ((self.character:getPrimaryHandItem() ~= nil and self.character:getPrimaryHandItem():getType() == (self.item:getType())) or (self.character:getSecondaryHandItem() ~= nil and self.character:getSecondaryHandItem():getType() == (self.item:getType())) and not self.character:getKnownRecipes():contains(self.recipe));
+	return true 
+    -- ((self.character:getPrimaryHandItem() ~= nil and self.character:getPrimaryHandItem():getType() == (self.item:getType())) or (self.character:getSecondaryHandItem() ~= nil and self.character:getSecondaryHandItem():getType() == (self.item:getType())) and not self.character:getKnownRecipes():contains(self.recipe));
 end
 
 function LGLearnRecipeAction:update()
