@@ -8,12 +8,12 @@ function UG_Automaker.VehicleBlackList( VehicleID)
 		return true
 	elseif VehicleID == "ATASchoolBus" then
 		return true
-	--elseif VehicleID == "BoatMotor" then
-		--return true
-	elseif VehicleID == "BoatMotor_Ground" then
+	elseif VehicleID == "BoatMotor" then
+		return true
+	lseif VehicleID == "BoatMotor_Ground" then
 		return true		
-	--elseif VehicleID == "BoatSailingYacht" then
-		--return true
+	elseif VehicleID == "BoatSailingYacht" then
+		return true
 	elseif VehicleID == "BoatSailingYacht_Ground" then
 		return true
 	elseif VehicleID == "86bounder" then
@@ -334,9 +334,10 @@ end
 function UG_Automaker.FillWorldContextMenu( player, context, worldobjects, test)
 
 	player = getPlayer()
+	local vehicle = IsoObjectPicker.Instance:PickVehicle(getMouseXScaled(), getMouseYScaled())
 	
-	if isAdmin() then
-		local movevehicleOption = context:addOption( "Bring Vehicle Here", worldobjects, UG_Automaker.MoveVehicle)
+	if vehicle and isAdmin() then
+		local movevehicleOption = context:addOption( "Bring Vehicle Here", vehicle, UG_Automaker.MoveVehicle)
 	end
 	
 	local automakerOption = context:addOption( "Build New Vehicle", worldobjects, nil)	
@@ -402,29 +403,31 @@ function UG_Automaker.onNewVehicle( worldobjects, vehiclescript, mechanictype, c
 	sendClientCommand( getPlayer(), "Automaker", "CreateVehicle", { VehicleID = vehiclescript})
 end
 
-function UG_Automaker.MoveVehicle( worldobjects)
+function UG_Automaker.MoveVehicle( vehicle)
 	print( "keyword: moving vehicle")
-	local vehicle = nil
-	
-    for i,v in ipairs(worldobjects) do
-		if instanceof(v, "IsoVehicle") then
-			vehicle = v
-		end
-	end
+
+	if vehicle == nil then return end
 	
 	--never gets here!  check the valhalla menu to pick a car.
-	--use square:getVehicleContainer() to find the vehicle
 	if vehicle ~= nil then
 		print( "keyword: valid vehicle")
 		
-		local target = getPlayer():getSquare()
+		local player = getPlayer()
+		local target = player:getSquare()
 		
-		vehicle:setX(tonumber( target:getx()));
-		vehicle:setY(tonumber( target:gety()));
-		vehicle:setZ(tonumber( target:getz()));
-		vehicle:setLx(tonumber( target:getx()));
-		vehicle:setLy(tonumber( target:gety()));
-		vehicle:setLz(tonumber( target:getz()));		
+		if target ~= nil then
+		
+			--player:setX( vehicle:getX())
+			--player:setY( vehicle:getY())
+			--player:setZ( vehicle:getZ())
+			vehicle:setX(tonumber( player:getX()))
+			vehicle:setY(tonumber( player:getY()))
+			vehicle:setZ(tonumber( player:getZ()))
+			vehicle:setLx(tonumber( player:getX()))
+			vehicle:setLy(tonumber( player:getY()))
+			vehicle:setLz(tonumber( player:getZ()))
+			vehicle:updateTransform()
+		end
 	end
 end
 
