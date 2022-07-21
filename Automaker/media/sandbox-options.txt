@@ -1,0 +1,6 @@
+VERSION = 1,
+option UG_Automaker.fullbuild
+{
+	type = boolean, min = false, max = true, default = true,
+	page = Automaker, translation = Sandbox_UG_Fullbuild,
+}

@@ -1,0 +1,3 @@
+UGSandbox_EN = {
+	Sandbox_UG_Fullbuild = "Spawn fully repaired vehicles."
+}

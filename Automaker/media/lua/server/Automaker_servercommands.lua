@@ -5,8 +5,7 @@ Commands.Automaker.CreateVehicle = function( player, args)
 
 	-- when true, the built vehicle will have all parts installed and set to 100% condition
 	-- when false, the vehicle will have all parts uninstalled.
-	local fullbuild = true
-	
+		
 	if isClient() then return end
 	
 	local vehicle = addVehicleDebug( tostring( args.VehicleID), IsoDirections.E, nil, player:getSquare())
@@ -15,7 +14,7 @@ Commands.Automaker.CreateVehicle = function( player, args)
 	
 		vehicle:putKeyInIgnition( vehicle:createVehicleKey())
 	
-		if fullbuild then
+		if SandboxVars.UG_Automaker.fullbuild then
 		
 			vehicle:repair()		
 			

@@ -1,5 +1,7 @@
 UG_Automaker = {}
 
+UG_Automaker.fullbuild = true
+
 function UG_Automaker.VehicleBlackList( VehicleID)
 	--any VehicleID in this list will return True (as in it's blacklisted don't make it)
 	if VehicleID == "ATAArmyBus" then
@@ -225,6 +227,15 @@ function UG_Automaker.getMaterialReq( mechanictype)
 		ret["ElectricWire"] = 80
 		ret["EngineParts"] = 80	
 	end
+
+	if not SandboxVars.UG_Automaker.fullbuild then
+	
+		ret["SheetMetal"] = math.floor( ret["SheetMetal"] /3)
+		ret["MetalBar"] = math.floor( ret["MetalBar"] / 3)
+		ret["ElectronicsScrap"] = math.floor( ret["ElectronicsScrap"] / 3)
+		ret["ElectricWire"] = math.floor( ret["ElectricWire"] / 3)
+		ret["EngineParts"] = math.floor( ret["EngineParts"] / 3)
+	end
 	
 	return ret
 end
@@ -429,6 +440,11 @@ function UG_Automaker.MoveVehicle( vehicle)
 			vehicle:updateTransform()
 		end
 	end
+end
+
+function UG_Automaker.init()
+
+	this.fullbuild = SandboxVars.UG_Automaker.fullbuild
 end
 
 Events.OnFillWorldObjectContextMenu.Add(UG_Automaker.FillWorldContextMenu)
