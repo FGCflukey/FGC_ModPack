@@ -1,0 +1,613 @@
+module Greenfire
+{
+	imports
+	{
+		Base
+	}
+
+   	recipe Make Fly Cure
+	{
+        	farming.GardeningSprayEmpty,
+        	Water=3,
+		Tobacco/BluntWrap,
+		Tobacco/BluntWrap,
+		Tobacco/BluntWrap,
+		Tobacco/BluntWrap,
+		Tobacco/BluntWrap,
+
+		Result:farming.GardeningSprayCigarettes,
+		Time:40.0,
+		NeedToBeLearn:true,
+		Category:GreenFireFarming,
+	}
+
+   	recipe Make Fly Cure
+	{
+        	farming.GardeningSprayEmpty,
+        	Water=3,
+		GFCigarette=5,
+
+		Result:farming.GardeningSprayCigarettes,
+		Time:40.0,
+		NeedToBeLearn:true,
+		Category:GreenFireFarming,
+	}
+
+   	recipe Make Fly Cure from Cigar Leaf
+	{
+        	farming.GardeningSprayEmpty,
+        	Water=3,
+		CigarLeaf,
+
+		Result:farming.GardeningSprayCigarettes,
+		Time:40.0,
+		NeedToBeLearn:true,
+		Category:GreenFireFarming,
+	}
+
+	item FreshBTobacco
+	{
+		Weight	=	2.0,
+		Type	=	Normal,
+		DisplayName	=	Fresh Stalk of Tobacco,
+        	DisplayCategory = GreenFireItem,
+		Icon	=	FreshBTobacco,
+	}
+
+	item DryBTobacco
+	{
+		Weight	=	1.0,
+		Type	=	Normal,
+		DisplayName	=	Dry Stalk of Tobacco,
+        	DisplayCategory = GreenFireItem,
+		Icon	=	DryBTobacco,
+	}
+
+	recipe Cut Tobacco
+	{
+		DryBTobacco,
+		keep Scissors/KitchenKnife/HuntingKnife/Machete/MeatCleaver/FlintKnife/Scalpel,
+		Result:Tobacco=20,
+		OnCreate:CutTobacco,
+		Category:GreenFireFarming,
+		Time:120.0,
+	}
+
+	recipe Open Blunt Cigar
+	{
+		BluntCigar,
+		keep KitchenKnife/HuntingKnife/Scissors/Scalpel,
+		Result:Tobacco=2,
+		OnCreate:OpenBlunt,
+		Category:GreenFire,
+		Time:20.0
+	}
+	
+	recipe Open Pack of Cigarettes
+	{
+		GFCigarettes,
+		Result:GFCigarette=1,
+		RemoveResultItem:true,
+		Category:GreenFire,
+		Time:10.0,
+		OnCreate:GF_GiveGFCigs,
+		OnTest:Check_noHydrocraft,
+	}
+
+	recipe Open Pack of Cigarettes
+	{
+		GFCigarettes,
+		Result:Cigarettes=1,
+		RemoveResultItem:true,
+		Category:GreenFire,
+		Time:10.0,
+		OnCreate:GF_GiveCigs,
+		OnTest:Check_Hydrocraft,
+	}
+
+	item GFCigarettes
+	{
+		Weight	=	0.02,
+		Type	=	Normal,
+		DisplayName	=	Pack of Cigarettes,
+        	DisplayCategory = GreenFireItem,
+		Icon	=	IckySticks,
+		WorldStaticModel = CigarettePack_Ground,
+	}
+
+	recipe Place Cigarettes into Pack
+	{
+		GFCigarette=20,
+		Result:GFCigarettes,
+		Category:GreenFire,
+		Time:10.0,
+		OnTest:Check_noHydrocraft,
+	}
+
+	recipe Place Cigarettes into Pack
+	{
+		GFCigarette=20,
+		Result:Hydrocraft.HCCigarettepack,
+		Category:GreenFire,
+		Time:10.0,
+		OnTest:Check_Hydrocraft,
+	}
+
+	recipe Place Cigarettes into Pack
+	{
+		Cigarettes=20,
+		Result:GFCigarettes,
+		Category:GreenFire,
+		Time:10.0,
+		OnTest:Check_SmokerMod_TestIsValid,
+	}
+
+	recipe Pack Bag of Tobacco
+	{
+		Tobacco=100,
+		
+		Result:PipeTobaccoBag,
+		Category:GreenFire,
+		Time:20.0,
+	}
+
+	item GFCigarette
+	{
+		HungerChange	=	0,
+		Weight	=	0.0015,
+		RequireInHandOrInventory	=	Lighter/Matches,
+		Type	=	Food,
+		DisplayName	=	Cigarette,
+        	DisplayCategory = GreenFireItem,
+		StressChange	=	-5,
+		Icon	=	IckySticks,
+		CustomContextMenu = Smoke,
+		CantBeFrozen = TRUE,
+		OnEat = OnEat_Cigarettes,
+		CustomEatSound =	GF_LightUp,
+		StaticModel = Cigarette,
+		EatType = Cigarettes,
+		WorldStaticModel = CigarettePack_Ground,
+	}
+
+	item BluntCigar
+	{
+		HungerChange	=	0,
+		Weight	=	0.0045,
+		RequireInHandOrInventory	=	Lighter/Matches,
+		Type	=	Food,
+		DisplayName	=	Blunt Cigar,
+        	DisplayCategory = GreenFireItem,
+		BoredomChange	=	-8,
+		StressChange	=	-8,
+		Icon	=	BluntCigar,
+		CustomContextMenu = Smoke,
+		CantBeFrozen = TRUE,
+		OnEat = OnSmoke_Cigar,
+		CustomEatSound =	GF_LightUp,
+		StaticModel = BluntC,
+		EatType = Cigarettes,
+        	WorldStaticModel = BluntC_Ground,
+	}
+
+	item HalfBluntCigar
+	{
+		HungerChange	=	0,
+		Weight	=	0.00225,
+		RequireInHandOrInventory	=	Lighter/Matches,
+		Type	=	Food,
+		DisplayName	=	Half of a Blunt Cigar,
+        	DisplayCategory = GreenFireItem,
+		BoredomChange	=	-7,
+		StressChange	=	-7,
+		Icon	=	HalfBlunt,
+		CustomContextMenu = Smoke,
+		CantBeFrozen = TRUE,
+		OnEat = OnSmoke_Cigar,
+		CustomEatSound =	GF_LightUp,
+		StaticModel = HalfBluntC,
+		EatType = Cigarettes,
+        	WorldStaticModel = HalfBluntC_Ground,
+	}
+
+	item BluntWrap
+	{
+		Weight	=	0.001,
+		Type	=	Normal,
+		DisplayName	=	Blunt Wrap,
+        	DisplayCategory = GreenFireItem,
+		Icon	=	BluntWrap,
+	}
+
+	recipe Make Blunt Wrap
+	{
+		CigarLeaf,
+		keep Scissors,
+		Water=1,
+		Flour=1,
+		Result:BluntWrap=2,
+		Category:GreenFire,
+		NeedToBeLearn:true,
+		OnCreate:MakeWrap,
+		Time:40.0,
+	}
+	
+	recipe Crush Blunt Wrap
+	{
+		BluntWrap,
+		Result:Tobacco,
+		Category:GreenFire,
+		Time:10.0,
+	}
+
+	recipe Roll Blunt Cigar
+	{
+		Tobacco=2,
+		BluntWrap,
+
+		Result:BluntCigar,
+		Category:GreenFire,
+		Time:120.0,
+	}
+
+	item UncuredCigar
+	{
+		Weight	=	0.04,
+		Type	=	Normal,
+		DisplayName	=	Uncured Cigar,
+        	DisplayCategory = GreenFireItem,
+		Icon	=	GFCigar,
+        	WorldStaticModel = GFCigar_Ground,
+	}
+	
+	item CigarLeaf
+	{
+		Weight	=	0.01,
+		Type	=	Normal,
+		DisplayName	=	Cigar Leaf,
+        	DisplayCategory = GreenFireItem,
+		Icon	=	CigarLeaf,
+	}
+
+	item GFCigar
+	{
+		HungerChange	=	0,
+		Weight	=	0.02,
+		RequireInHandOrInventory	=	Lighter/Matches,
+		Type	=	Food,
+		DisplayName	=	Cigar,
+        	DisplayCategory = GreenFireItem,
+		BoredomChange	=	-40,
+		StressChange	=	-40,
+		Icon	=	GFCigar,
+		CustomContextMenu = Smoke,
+		CantBeFrozen = TRUE,
+		OnEat = OnSmoke_Cigar,
+		CustomEatSound =	GF_LightUp,
+		StaticModel = GFCigar,
+		EatType = Cigarettes,
+        	WorldStaticModel = GFCigar_Ground,
+	}
+	
+	recipe Roll Cigar
+	{
+		CigarLeaf=4,
+		Water=1,
+		Flour=1,
+		Result:UncuredCigar,
+		NeedToBeLearn:true,
+		OnCreate:RollCigar,
+		Category:GreenFireFarming,
+		Time:120.0,
+	}
+
+	item HalfCigar
+	{
+		HungerChange	=	0,
+		Weight	=	0.01,
+		RequireInHandOrInventory	=	Lighter/Matches,
+		Type	=	Food,
+		DisplayName	=	Half of a Cigar,
+        	DisplayCategory = GreenFireItem,
+		BoredomChange	=	-40,
+		StressChange	=	-40,
+		Icon	=	HalfCigar,
+		CustomContextMenu = Smoke,
+		CantBeFrozen = TRUE,
+		OnEat = OnSmoke_Cigar,
+		CustomEatSound =	GF_LightUp,
+		StaticModel = GFHalfCigar,
+		EatType = Cigarettes,
+        	WorldStaticModel = GFHalfCigar_Ground,
+	}
+
+	item GFCigaretteCase
+	{
+		Weight	=	10.0,
+		Type	=	Normal,
+		DisplayName	=	Case of Cigarettes,
+        	DisplayCategory = GreenFireItem,
+		Icon	=	GFCigaretteCase,
+        	WorldStaticModel = GFCCase,
+
+	}
+
+	recipe Open Cigarette Case
+	{
+		GFCigaretteCase,
+		Result:GFCigaretteCarton = 50,
+		Category:GreenFire,
+		Time:10.0,
+		OnTest:Check_noHydrocraft,
+	}
+
+	recipe Open Cigarette Case
+	{
+		GFCigaretteCase,
+		Result:Hydrocraft.HCCigarettecarton = 50,
+		Category:GreenFire,
+		Time:10.0,
+		OnTest:Check_Hydrocraft,
+	}
+	
+	recipe Place Cigarette Cartons into Case
+	{
+		GFCigaretteCarton=50,
+		Result:GFCigaretteCase,
+		Category:GreenFire,
+		Time:10.0,
+	}
+
+	recipe Place Cigarette Cartons into Case
+	{
+		Hydrocraft.HCCigarettecarton=50,
+		Result:GFCigaretteCase,
+		Category:GreenFire,
+		Time:10.0,
+		OnTest:Check_Hydrocraft,
+	}
+
+	item GFCigaretteCarton
+	{
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Carton of Cigarettes,
+        	DisplayCategory = GreenFireItem,
+		Icon	=	GFCigaretteCarton,
+        	WorldStaticModel = GFCCarton,
+	}
+
+	item GFEmptyCigaretteCarton
+	{
+		Type	=	Normal,
+		Weight	=	0.01,
+		DisplayName	= Empty Carton of Cigarettes,
+        	DisplayCategory = GreenFireItem,
+		Icon	=	GFCigaretteCarton,
+        	WorldStaticModel = GFCCarton,
+	}
+
+	item GFUsedCigaretteCarton
+	{
+		Weight	=	0.1,
+		Type	=	Normal,
+		DisplayName	= Used Carton of Cigarettes,
+        	DisplayCategory = GreenFireItem,
+		Icon	=	GFCigaretteCarton,
+        	WorldStaticModel = GFCCarton,
+	}
+	
+	recipe Open Cigarette Carton
+	{
+		GFCigaretteCarton,
+	
+		Result:GFCigarettes=10,
+		OnTest:Check_noHydrocraft,
+		Category:GreenFire,
+		Time:10.0,
+	}
+
+	recipe Open Used Cigarette Carton
+	{
+		GFUsedCigaretteCarton,
+	
+		Result:GFEmptyCigaretteCarton,
+		Category:GreenFire,
+		RemoveResultItem:true,
+		OnCreate:Create_Cigs,
+		OnTest:Check_noHydrocraft,
+		Time:10.0,
+	}
+
+	recipe Open Cigarette Carton
+	{
+		GFCigaretteCarton,
+	
+		Result:Hydrocraft.HCCigarettepack=10,
+		Category:GreenFire,
+		OnTest:Check_Hydrocraft,
+		Time:10.0,
+	}
+
+	recipe Open Used Cigarette Carton
+	{
+		GFUsedCigaretteCarton,
+	
+		Result:GFEmptyCigaretteCarton,
+		RemoveResultItem:true,
+		OnCreate:Create_HCCigs,
+		Category:GreenFire,
+		OnTest:Check_Hydrocraft,
+		Time:10.0,
+	}
+
+	recipe Place Cigarette Packs into Carton
+	{
+		GFCigarettes=10,
+	
+		Result:GFCigaretteCarton,
+		Category:GreenFire,
+		OnTest:Check_noHydrocraft,
+		Time:10.0,
+	}
+
+	recipe Place Cigarette Packs into Carton
+	{
+		GFCigarettes=10,
+	
+		Result:Hydrocraft.HCCigarettecarton,
+		Category:GreenFire,
+		OnTest:Check_Hydrocraft,
+		Time:10.0,
+	}
+
+	item Tobacco
+	{
+		HungerChange 	=	0,
+		Weight	=	0.001,
+		Type	=	Normal,
+		DisplayName	=	Tobacco,
+        	DisplayCategory = GreenFireItem,
+		Icon	=	Tobacco,
+        	WorldStaticModel = GFTabac,
+	}
+
+
+
+	item TobaccoPipe
+	{
+		HungerChange		 	=	0,
+		Weight				=	0.1,
+		RequireInHandOrInventory	=	Lighter/Matches,
+		Type				=	Food,
+		DisplayName			=	Smoking Pipe filled with Tobacco,
+        	DisplayCategory = GreenFireItem,
+		StressChange			=	-5,
+		Icon				=	SmokingPipe,
+		CustomContextMenu		=	Smoke,
+		CantBeFrozen			=	TRUE,
+		OnEat				=	OnEat_Tobacco,
+		ReplaceOnUse			=	SmokingPipe,
+		CustomEatSound			=	GF_LightUp,
+	}
+
+	item TobaccoSeed
+	{
+		Type				=		Normal,
+		DisplayName			=		Tobacco Seeds,
+        	DisplayCategory = GreenFireItem,
+		Icon				=		TZ_StrewberrySeeds,
+		Weight				=		0.001,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+	item TobaccoBagSeed
+	{
+		Type				=		Normal,
+		DisplayName			=		Tobacco Seeds Packet,
+        	DisplayCategory = GreenFireItem,
+		Icon				=		SeedpackTobacco,
+		Weight				=		0.1,
+        	WorldStaticModel = TabacSeedBag,
+	}
+	
+	item PipeTobaccoBag
+	{
+		Type		=	Normal,
+		DisplayName	=	Bag of Tobacco,
+        	DisplayCategory = GreenFireItem,
+		Icon		=	TobaccoBag,
+		Weight		=	0.1,
+	}
+
+
+
+	recipe Unload Tobacco from Smoking Pipe
+	{
+		destroy TobaccoPipe,
+
+		Result:Tobacco,
+		Category:GreenFire,
+		Time:30.0,
+		OnCreate:DumpPipe_OnCreate,
+	}
+
+	recipe Fill Smoking Pipe with Tobacco
+	{
+		SmokingPipe,
+		Tobacco,
+
+		Result:TobaccoPipe,
+		Category:GreenFire,
+		Time:60.0,
+	}
+
+	recipe Open Bag of Tobacco
+	{
+		PipeTobaccoBag,
+		
+		Result:Tobacco=100,
+		Category:GreenFire,
+		Time:20.0,
+	}
+
+	recipe Open Packet of Tobacco Seeds
+	{
+		TobaccoBagSeed,
+
+        	Result:TobaccoSeed=18,
+        	Time:20.0,
+        	Category:GreenFireFarming,
+	}
+
+	recipe Put Tobacco Seeds in Packet
+	{
+        	TobaccoSeed=18,
+
+        	Result:TobaccoBagSeed,
+		Category:GreenFire,
+		Time:10.0,
+		Category:GreenFireFarming,
+	}
+
+	recipe Roll Cigarette
+	{
+		Tobacco,
+		RollingPapers=1,
+
+		Result:GFCigarette,
+		Category:GreenFire,
+		OnTest:Check_noHydrocraft,
+		Time:120.0,
+	}
+
+	recipe Roll Cigarette
+	{
+		Tobacco,
+		RollingPapers=1,
+
+		Result:Cigarettes,
+		Category:GreenFire,
+		OnTest:Check_Hydrocraft,
+		Time:120.0,
+	}
+
+	recipe Break Cigarette
+	{
+		GFCigarette,
+		
+		Result:Tobacco,
+		Category:GreenFire,
+		Time:20.0,
+	}
+
+	recipe Break Cigarette
+	{
+		Cigarettes,
+		
+		Result:Tobacco,
+		Category:GreenFire,
+		OnTest:Check_noSmokerM,
+		Time:20.0,
+	}
+}

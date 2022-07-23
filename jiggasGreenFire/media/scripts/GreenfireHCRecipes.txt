@@ -1,0 +1,154 @@
+module Greenfire
+{
+	imports
+	{
+		Base,
+		Hydrocraft
+	}
+
+	recipe Tear Cannabis
+	{
+		Cannabis/HCHempbudcured,
+		Result:CannabisShake,
+		OnCreate:MakeShake,
+		OnTest:Check_Hydrocraft,
+		Category:GreenFire,
+		
+		Time:120.0,
+	}
+
+	recipe Cut Cannabis
+	{
+		Cannabis/HCHempbudcured,
+		keep Scissors,
+		Result:CannabisShake,
+		Category:GreenFire,
+		OnTest:Check_Hydrocraft,
+		OnCreate:MakeShake,
+		
+		Time:60.0,
+	}
+
+	recipe Grind Cannabis
+	{
+		Cannabis/HCHempbudcured,
+		keep GFGrinder,
+		Result:CannabisShake,
+		Category:GreenFire,
+		OnTest:Check_Hydrocraft,
+		OnCreate:Grind_Cannabis,
+		Time:30.0
+	}
+
+	recipe Load Bong with Cannabis
+	{
+		Bong,
+		Cannabis/HCHempbudcured,
+
+		Result:WeedBong,
+		Category:GreenFire,
+		OnTest:Check_Hydrocraft,
+		
+		OnCreate:Append_W,
+		Time:60.0,
+	}
+
+	recipe Fill Smoking Pipe with Cannabis
+	{
+		SmokingPipe,
+		Cannabis/HCHempbudcured,
+
+		Result:WeedPipe,
+		Category:GreenFire,
+		OnCreate:Append_W,
+		OnTest:Check_Hydrocraft,
+		
+		Time:60.0,
+	}
+
+	recipe Make CannaButter
+	{
+		Butter,
+		Cannabis/HCHempbudcured,
+		Cannabis/HCHempbudcured,
+		Cannabis/HCHempbudcured,
+		Cannabis/HCHempbudcured,
+		Cannabis/HCHempbudcured,
+		Cannabis/HCHempbudcured,
+		Cannabis/HCHempbudcured,
+		Cannabis/HCHempbudcured,
+		Cannabis/HCHempbudcured,
+		Cannabis/HCHempbudcured,
+		Cannabis/HCHempbudcured,
+		Cannabis/HCHempbudcured,
+		Cannabis/HCHempbudcured,
+		Cannabis/HCHempbudcured,
+		Cannabis/HCHempbudcured,
+		Cannabis/HCHempbudcured,
+		Result:CannaButter,
+		NeedToBeLearn:true,
+		Time:40.0,
+		Category:GreenFireCooking,
+		OnTest:Check_Hydrocraft,
+		
+		OnGiveXP:Give3CookingXP,
+	}
+}
+
+module Hydrocraft
+{
+	imports
+	{
+		Base
+	}
+
+
+
+	recipe Put Bud in Pipe
+	{
+		HCHempbudcured/Greenfire.Cannabis,
+		HCClaypipesmoking,
+		Result:HCPipehemp,
+		Time:15,
+		Category:Alchemy,
+
+		OnCreate:Append_W,
+		OnTest:Check_Hydrocraft,
+		
+	}
+
+	recipe Put Bud in Pipe
+	{
+		HCHempbudcured/Greenfire.Cannabis,
+		HCCorncobpipe,
+		Result:HCCorncobpipehemp,
+		Time:15,
+		Category:Alchemy,
+		OnTest:Check_Hydrocraft,
+		
+	}
+
+	recipe Put Bud in Glass Bong
+	{
+		HCHempbudcured/Greenfire.Cannabis,
+		Water,
+		HCBongempty,
+		Result:HCBongfull,
+		Time:15,
+		Category:Alchemy,
+		OnTest:Check_Hydrocraft,
+		
+	}
+
+	recipe Put Bud in Acrylic Bong
+	{
+		HCHempbudcured/Greenfire.Cannabis,
+		Water,
+		HCBongacrylicempty,
+		Result:HCBongacrylicfull,
+		Time:15,
+		Category:Alchemy,
+		OnTest:Check_Hydrocraft,
+		
+	}
+}

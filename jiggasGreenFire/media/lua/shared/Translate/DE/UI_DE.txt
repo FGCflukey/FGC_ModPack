@@ -1,0 +1,14 @@
+UI_DE = {
+	UI_trait_stoner = "Kiffer",
+	UI_trait_stonerdesc = "Wird durch das Rauchen von Unkraut nicht schläfrig oder hungrig, sondern benötigt mehr für den gleichen Effekt.",
+	UI_speech_kief = "Sieht so aus, als ob sich unter diesem Bildschirm ein Kief befindet ...",
+	UI_speech_seed1 = "Sehe ich einen Samen in dieser Knospe?",
+	UI_speech_seed2 = "Ich habe einen Samen gefunden!",
+	UI_speech_cough0 = "*hust* *hust*",
+	UI_speech_cough1 = "Ich kann das nicht zu Ende rauchen.",
+	UI_speech_cough2 = "Wenn ich weiter rauche, könnte ich sterben ...",
+	UI_speech_cough3 = "Das ist zu viel für mich, ich bin mit dem Rauchen fertig.",
+	UI_speech_cough4 = "Ich denke, ich werde das später beenden.",
+	UI_speech_cough5 = "Ich kann dieses Ding nicht weiter rauchen.",
+	UI_speech_cough6 = "Ich muss eine Pause vom Rauchen machen.",
+}

@@ -1,0 +1,304 @@
+module Greenfire
+{
+	imports
+	{
+		Base
+	}
+	
+	item CannaButter
+	{
+		HungerChange		= -24,
+		Weight			= 0.3,
+		Type			= Food,
+		UnhappyChange		= 20,
+		DisplayName		= CannaButter,
+        	DisplayCategory = GreenFireItem,
+		Icon			= CannaButter,
+        	Carbohydrates		= 0,
+        	Proteins		= 0,
+        	Lipids			= 352,
+       		Calories		= 3200,
+		OnEat			= OnEat_Edible,
+		WorldStaticModel = CannaButter,
+	}
+
+	item SBrowniePan
+	{
+		Type			= Food,
+		Weight			= 2.33,
+		DisplayName		= Pan of Brownies,
+        	DisplayCategory = GreenFireItem,
+		Icon			= SBrowniePan,
+		HungerChange		= -64,
+		ThirstChange		= 16,
+		UnhappyChange		= -20,
+		BoredomChange		= -20,
+		StressChange		= -20,
+		Carbohydrates		= 450.6,
+		Proteins		= 47.1,
+		Lipids			= 428.8,
+		Calories		= 5656.5,
+		ReplaceOnUse		= BakingPan,
+		DaysFresh		= 3,
+		DaysTotallyRotten	= 9,
+		Tooltip			= Tooltip_Painkillers,
+		OnEat			= OnEat_Edible,
+		WorldStaticModel = SBPan,
+	}
+
+	item SBrownie
+	{
+		Type			= Food,
+		Weight			= 0.114,
+		DisplayName		= Brownie,
+        	DisplayCategory = GreenFireItem,
+		Icon			= SBrownie,
+		HungerChange		= -4,
+		ThirstChange		= 1,
+		UnhappyChange		= -5,
+		BoredomChange		= -5,
+		StressChange		= -5,
+		DaysFresh		= 3,
+		DaysTotallyRotten	= 9,
+		Carbohydrates		= 28.2,
+		Proteins		= 2.9,
+		Lipids			= 26.8,
+		Calories		= 353.5,
+		Tooltip			= Tooltip_Painkillers,
+		CustomContextMenu	= Eat,
+		OnEat			= OnEat_Edible,
+		StaticModel = BrownieBar_eat,
+		WorldStaticModel = BrownieBar,
+	}
+
+	item Marshmallows
+	{
+		Type			=	Food,
+		Weight			=	0.67,
+		DisplayName		=	Bag of Marshmallows,
+        	DisplayCategory = GreenFireItem,
+		Icon			=	GFMarshmallows,
+		HungerChange		=	-335,
+		UnhappyChange		=	-335,
+		Calories		=	2500,
+		Carbohydrates		=	536,
+		Proteins		=	34,
+		Lipids			=	0,
+		Packaged		=	TRUE,
+		WorldStaticModel = MallowBag,
+	}
+
+	item NiceCrispiezPan
+	{
+		Type			=	Food,
+		Weight			=	2.086,
+		DisplayName		=	Pan of Nice Crispiez,
+        	DisplayCategory = GreenFireItem,
+		Icon			=	NiceCrispiezPan,
+		HungerChange		=	-400,
+		ThirstChange		=	16,
+		UnhappyChange		=	-335,
+		BoredomChange		=	-20,
+		StressChange		=	-20,
+		DaysFresh		=	3,
+		DaysTotallyRotten	=	12,
+		Calories		=	8060,
+		Lipids			=	378,
+		Carbohydrates		=	1124,
+		Proteins		=	75,
+		Tooltip			=	Tooltip_Painkillers,
+		OnEat			=	OnEat_Edible,
+		WorldStaticModel = NCPan,
+	}
+
+	item NiceCrispiez
+	{
+		Type			=	Food,
+		Weight			=	0.118,
+		DisplayName		=	Nice Crispiez,
+        	DisplayCategory = GreenFireItem,
+		Icon			=	NiceCrispiez,
+		HungerChange		=	-25,
+		ThirstChange		=	1,
+		UnhappyChange		=	-25,
+		BoredomChange		=	-5,
+		StressChange		=	-5,
+		DaysFresh		=	3,
+		DaysTotallyRotten	=	12,
+		Calories		=	504,
+		Lipids			=	24,
+		Carbohydrates		=	70,
+		Proteins		=	5,
+		Tooltip			=	Tooltip_Painkillers,
+		OnEat			=	OnEat_Edible,
+		StaticModel = NCBar_eat,
+		WorldStaticModel = NCBar,
+	}
+
+/***************Recipes***************/
+
+	recipe Dump Brownies
+	{
+		destroy SBrowniePan,
+
+		Result:BakingPan,
+		Time:30.0,
+		Category:GreenFireCooking,
+		OnGiveXP:NoXP_OnGiveXP,
+	}
+
+	recipe Open Marshmallows
+	{
+		Greenfire.Marshmallows,
+
+		Result:Base.Marshmallows=67,
+		Time:30.0,
+		Category:GreenFireCooking,
+		OnGiveXP:NoXP_OnGiveXP,
+	}
+
+	recipe Pack Bag of Marshmallows
+	{
+		Base.Marshmallows=67,
+
+		Result:Greenfire.Marshmallows,
+		Time:30.0,
+		Category:GreenFireCooking,
+		OnGiveXP:NoXP_OnGiveXP,
+	}
+
+	recipe Dump Nice Crispiez
+	{
+		destroy NiceCrispiezPan,
+
+		Result:BakingPan,
+		Time:30.0,
+		Category:GreenFireCooking,
+		OnGiveXP:NoXP_OnGiveXP,
+	}
+
+	recipe Make CannaButter
+	{
+		Butter,
+		Cannabis=16,
+
+		Result:CannaButter,
+		NeedToBeLearn:true,
+		Time:40.0,
+		Category:GreenFireCooking,
+		OnTest:Check_noHydrocraft,
+		OnGiveXP:Give3CookingXP,
+	}
+	
+	recipe Make CannaButter with Shake
+	{
+		Butter,
+		CannabisShake=16,
+
+		Result:CannaButter,
+		NeedToBeLearn:true,
+		Time:40.0,
+		Category:GreenFireCooking,
+		OnGiveXP:Give3CookingXP,
+	}
+	
+	recipe Make CannaButter with Kief
+	{
+		Butter,
+		Kief=8,
+
+		Result:CannaButter,
+		NeedToBeLearn:true,
+		Time:40.0,
+		Category:GreenFireCooking,
+		OnGiveXP:Give3CookingXP,
+	}
+	
+	recipe Make CannaButter with Hashish
+	{
+		Butter,
+		Hashish=4,
+
+		Result:CannaButter,
+		NeedToBeLearn:true,
+		Time:40.0,
+		Category:GreenFireCooking,
+		OnGiveXP:Give3CookingXP,
+	}
+	
+	recipe Make Nice Crispiez
+	{
+		CannaButter,
+		Greenfire.Marshmallows,
+		Cereal,
+		BakingPan,
+
+		Result:NiceCrispiezPan,
+		NeedToBeLearn:true,
+		Time:40.0,
+		Category:GreenFireCooking,
+		OnGiveXP:Give10CookingXP,
+		OnCreate:GFNiceCrispiez_OnCreate,
+	}
+
+	recipe Make Nice Crispiez from individual Marshmallows
+	{
+		CannaButter,
+		Base.Marshmallows=67,
+		Cereal,
+		BakingPan,
+
+		Result:NiceCrispiezPan,
+		NeedToBeLearn:true,
+		Time:40.0,
+		Category:GreenFireCooking,
+		OnGiveXP:Give10CookingXP,
+		OnCreate:GFNiceCrispiez_OnCreate,
+	}
+
+	recipe Cut Nice Crispiez
+	{
+		NiceCrispiezPan,
+		keep HuntingKnife/KitchenKnife/ButterKnife,
+		
+		Result:NiceCrispiez=16,
+		Time:40.0,
+        	Sound:SliceBread,
+		Category:GreenFireCooking,
+		OnTest:Check_Build40,
+		OnGiveXP:Give3CookingXP,
+		OnCreate:GFCutPan_OnCreate,
+	}
+
+
+	recipe Cut Special Brownies
+	{
+		SBrowniePan,
+		keep HuntingKnife/KitchenKnife/ButterKnife,
+		
+		Result:SBrownie=16,
+		Time:40.0,
+        	Sound:SliceBread,
+		Category:GreenFireCooking,
+		OnGiveXP:Give3CookingXP,
+		OnTest:Check_Build40,
+		OnCreate:GFCutPan_OnCreate,
+	}
+
+	recipe Make Special Brownies
+	{
+		Flour=1,
+		Egg/WildEggs,
+		CannaButter,
+		Sugar=1,
+		Salt;1,
+		Chocolate,
+		BakingPan,
+		
+		Result:SBrowniePan,
+		NeedToBeLearn:true,
+		Time:120.0,
+		Category:GreenFireCooking,
+		OnGiveXP:Give10CookingXP,
+	}
+}

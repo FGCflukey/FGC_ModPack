@@ -1,0 +1,67 @@
+Farming_CH = {
+  -- vegetables name (type of seed)
+  Farming_Cannabis = "ƒ}ƒŠƒtƒ@ƒi",
+  Farming_Tobacco = "ƒ^ƒoƒR",
+  Farming_Carrots = "­JÅÚ½³",
+  Farming_Broccoli = "ªá·¦µE,
+  Farming_Radishes = "ÅÚ½³",
+  Farming_Strawberry_plant = "¯ó²E,
+  Farming_Tomato_Vine = "¦è¬õ¬U",
+  Farming_Tomato = "¿»­X",
+  Farming_Potatoes = "¤g¨§",
+  Farming_Cabbages = "¥ÕµE,
+  -- growing phase
+  Farming_Seedling = "¥®­]",
+  Farming_Young = "¤p­]",
+  Farming_Ready_for_Harvest = "¥i¦¬Ã¬",
+  Farming_In_bloom = "²±¶}",
+  Farming_Seed-bearing = "¦³ºØ¤lªº",
+  Farming_Receding = "¶}©l¬\µE,
+  Farming_Rotten = "»GÄE,
+  Farming_Destroyed = "ºR·´",
+  -- farming info text
+  -- title
+  Farming_Plant_Information = "´Óª«¸ET",
+  Farming_Current_growing_phase = "¥Ø«eªº¦¨ªø¶¥¬q",
+  Farming_Next_growing_phase = "¤U¤@­Ó¦¨ªø¶¥¬q",
+  Farming_Last_time_watered = "¤W¤@¦¸¼å¤ô®É¶¡",
+  Farming_Fertilized = "¬IªÎª¬ºA",
+  Farming_Health = "°·±dª¬ºA",
+  Farming_Disease = "¯fÂÎ®`",
+  Farming_Water_levels = "¤ô¤Àª¬ºA",
+  -- water
+  Farming_Well_watered = "¤ô¤À¥R¨¬",
+  Farming_Fine = "¨}¦n",
+  Farming_Thirsty = "¯Ê¤E,
+  Farming_Dry = "°®§E,
+  Farming_Parched = "°®¬\",
+  -- growing phase
+  Farming_Fully_grown = "§¹¥ş¦¨ªE,
+  Farming_Ready_to_harvest = "¥i¦¬Ã¬",
+  Farming_Seedling = "¥®­]"
+  -- disease
+  Farming_Mildew = "¾`¯f",
+  Farming_Pest_Flies = "®`ÂÎ",
+  Farming_Devil_Water_Fungi = "¤w¦³¯f®`",
+  -- hours
+  Farming_Hours = "¤p®É",
+  -- health
+  Farming_Flourishing = "°·±dµo®i",
+  Farming_Verdant = "¹àºE,
+  Farming_Healthy = "¥¿±`",
+  Farming_Sickly = "¤£°·±d",
+  Farming_Stunted = "µo¨|¤£¨}",
+  Farming_Flourishing = "Ác­Z",
+  Farming_Verdant = "¹àºE,
+  Farming_Healthy = "°·±d",
+  Farming_Sickly = "¯fÂÎ®`",
+  Farming_Stunted = "µo¨|¤£¨}",
+  Farming_Tooltip_MinWater = "³Ì¤p¤ô¤À: ",
+  Farming_Tooltip_MaxWater = "³Ì¤j¤ô¤À: ",
+  Farming_Tooltip_TimeOfGrow = "¥­§¡¥Íªø®É¶¡: ",
+  Farming_Tooltip_AverageWater = "¥­§¡¤ô¤À: ",
+  Farming_Tooltip_RequiredSeeds = "©Ò»İªººØ¤l: ",
+  Farming_Strawberry plant = "¯ó²E,
+  Farming_Tomato = "µf­X",
+  Farming_Plowed_Land = "²p¹Lªº¦a",
+}

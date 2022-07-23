@@ -1,0 +1,1166 @@
+module Greenfire
+{
+	imports
+	{
+		Base
+	}
+
+	item FreshUnCanna
+	{
+		Weight		= 0.5,
+		Type		= Normal,
+		DisplayName	= Fresh Untrimmed Cannabis,
+        	DisplayCategory = GreenFireItem,
+		Icon		= FreshUnCanna,
+	}
+	
+	recipe Trim Fresh Cannabis
+	{
+		FreshUnCanna,
+		keep Scissors,
+		Result:FreshTCanna,
+		NeedToBeLearn:true,
+		OnCreate:TrimFresh,
+		Category:GreenFireFarming,
+		Time:200.0,
+	}
+
+	item FreshTCanna
+	{
+		Weight		= 0.3,
+		Type		= Normal,
+		DisplayName	= Fresh Trimmed Cannabis,
+        	DisplayCategory = GreenFireItem,
+		Icon		= FreshTCanna,
+	}
+
+	item DryUnCanna
+	{
+		Weight		= 0.4,
+		Type		= Normal,
+		DisplayName	= Dry Untrimmed Cannabis,
+        	DisplayCategory = GreenFireItem,
+		Icon		= DryUnCanna,
+	}
+
+	recipe Trim Dry Cannabis
+	{
+		DryUnCanna,
+		keep Scissors,
+		Result:DryTCanna,
+		NeedToBeLearn:true,
+		OnCreate:TrimDry,
+		Category:GreenFireFarming,
+		Time:200.0,
+	}
+
+
+	item DryTCanna
+	{
+		Weight		= 0.1,
+		Type		= Normal,
+		DisplayName	= Dry Trimmed Cannabis,
+        	DisplayCategory = GreenFireItem,
+		Icon		= DryTCanna,
+	}
+
+	item FreshCannabisFanLeaf
+	{
+		Weight		= 0.02,
+		Type		= Normal,
+		DisplayName	= Fresh Cannabis Fan Leaf,
+        	DisplayCategory = GreenFireItem,
+		Icon		= FreshCannabisFanLeaf,
+	}
+
+	item DryCannabisFanLeaf
+	{
+		Weight		= 0.01,
+		Type		= Normal,
+		DisplayName	= Dry Cannabis Fan Leaf,
+        	DisplayCategory = GreenFireItem,
+		Icon		= DryCannabisFanLeaf,
+	}
+
+	item FreshCannabisSugarLeaf
+	{
+		Weight		= 0.02,
+		Type		= Normal,
+		DisplayName	= Fresh Cannabis Sugar Leaf,
+        	DisplayCategory = GreenFireItem,
+		Icon		= FreshCannabisSugarLeaf,
+	}
+
+	item DryCannabisSugarLeaf
+	{
+		Weight		= 0.01,
+		Type		= Normal,
+		DisplayName	= Dry Cannabis Sugar Leaf,
+        	DisplayCategory = GreenFireItem,
+		Icon		= DryCannabisSugarLeaf,
+	}
+
+	recipe Crush Sugar Leaf
+	{
+		DryCannabisSugarLeaf=2,
+		Result:CannabisShake,
+		Category:GreenFireFarming,
+		Time:30.0,
+	}
+
+	recipe Grind Sugar leaf
+	{
+		DryCannabisSugarLeaf=2,
+		keep GFGrinder,
+		Result:CannabisShake,
+		OnCreate:Grind_Leaf,
+		Category:GreenFireFarming,
+		Time:10.0,
+	}
+
+	item UnCannaJar
+	{
+		Weight		= 0.6,
+		Type		= Normal,
+		DisplayName	= Uncured Jar of Cannabis,
+        	DisplayCategory = GreenFireItem,
+		Icon		= CannaJar,
+        	WorldStaticModel = JarCannabis,
+	}
+
+	recipe Prepare Cannabis Curing Jar
+	{
+		EmptyJar,
+		JarLid,
+		DryTCanna,
+		keep Scissors,
+
+		Result:UnCannaJar,
+		OnCreate:JarCanna,
+		NeedToBeLearn:true,
+		Category:GreenFireCuring,
+		Time:120.0,
+	}
+
+	item CannaJar
+	{
+		Weight		= 0.6,
+		Type		= Normal,
+		DisplayName	= Jar of Cannabis,
+        	DisplayCategory = GreenFireItem,
+		Icon		= CannaJar,
+        	WorldStaticModel = JarCannabis,
+	}
+
+	recipe Open Jar of Cannabis
+	{
+		CannaJar,
+		Result:Cannabis=5,
+		OnCreate:OpenCannaJar,
+		Category:GreenFire,
+		Time:15.0,
+	}
+
+	item UnCannaJar2
+	{
+		Weight		= 0.6,
+		Type		= Normal,
+		DisplayName	= Uncured Jar of Cannabis,
+        	DisplayCategory = GreenFireItem,
+		Icon		= CannaJar,
+        	WorldStaticModel = JarCannabis,
+	}
+
+	recipe Prepare Half Full Cannabis Curing Jar
+	{
+		EmptyJar,
+		JarLid,
+		DryTCanna=2,
+		keep Scissors,
+
+		Result:UnCannaJar2,
+		OnCreate:JarCanna,
+		NeedToBeLearn:true,
+		Category:GreenFireCuring,
+		Time:120.0,
+	}
+
+	recipe Add Cannabis to Curing Jar
+	{
+		UnCannaJar,
+		DryTCanna,
+		keep Scissors,
+
+		Result:UnCannaJar2,
+		OnCreate:JarCanna,
+		NeedToBeLearn:true,
+		Category:GreenFireCuring,
+		Time:120.0,
+	}
+
+	item CannaJar2
+	{
+		Weight		= 0.6,
+		Type		= Normal,
+		DisplayName	= Jar of Cannabis,
+        	DisplayCategory = GreenFireItem,
+		Icon		= CannaJar,
+        	WorldStaticModel = JarCannabis,
+	}
+
+	recipe Open Half Full Jar of Cannabis
+	{
+		CannaJar2,
+		Result:Cannabis=10,
+		OnCreate:OpenCannaJar,
+		Category:GreenFire,
+		Time:15.0,
+	}
+
+	item UnCannaJar3
+	{
+		Weight		= 0.6,
+		Type		= Normal,
+		DisplayName	= Uncured Jar of Cannabis,
+        	DisplayCategory = GreenFireItem,
+		Icon		= CannaJar,
+        	WorldStaticModel = JarCannabis,
+	}
+
+	recipe Prepare Nearly Full Cannabis Curing Jar
+	{
+		EmptyJar,
+		JarLid,
+		DryTCanna=3,
+		keep Scissors,
+
+		Result:UnCannaJar3,
+		OnCreate:JarCanna,
+		NeedToBeLearn:true,
+		Category:GreenFireCuring,
+		Time:120.0,
+	}
+
+	recipe Add More Cannabis to Curing Jar
+	{
+		UnCannaJar2,
+		DryTCanna,
+		keep Scissors,
+
+		Result:UnCannaJar3,
+		OnCreate:JarCanna,
+		NeedToBeLearn:true,
+		Category:GreenFireCuring,
+		Time:120.0,
+	}
+
+	recipe Add Two More Cannabis to Curing Jar
+	{
+		UnCannaJar,
+		DryTCanna=2,
+		keep Scissors,
+
+		Result:UnCannaJar3,
+		OnCreate:JarCanna,
+		NeedToBeLearn:true,
+		Category:GreenFireCuring,
+		Time:120.0,
+	}
+
+	item CannaJar3
+	{
+		Weight		= 0.6,
+		Type		= Normal,
+		DisplayName	= Jar of Cannabis,
+        	DisplayCategory = GreenFireItem,
+		Icon		= CannaJar,
+        	WorldStaticModel = JarCannabis,
+	}
+
+	recipe Open Nearly Full Jar of Cannabis
+	{
+		CannaJar3,
+		Result:Cannabis=15,
+		OnCreate:OpenCannaJar,
+		Category:GreenFire,
+		Time:15.0,
+	}
+
+	item UnCannaJar4
+	{
+		Weight		= 0.6,
+		Type		= Normal,
+		DisplayName	= Uncured Jar of Cannabis,
+        	DisplayCategory = GreenFireItem,
+		Icon		= CannaJar,
+        	WorldStaticModel = JarCannabis,
+	}
+
+	recipe Prepare Full Cannabis Curing Jar
+	{
+		EmptyJar,
+		JarLid,
+		DryTCanna=4,
+		keep Scissors,
+
+		Result:UnCannaJar4,
+		OnCreate:JarCanna,
+		NeedToBeLearn:true,
+		Category:GreenFireCuring,
+		Time:120.0,
+	}
+
+	recipe Fill Cannabis Curing Jar
+	{
+		UnCannaJar3,
+		DryTCanna,
+		keep Scissors,
+
+		Result:UnCannaJar4,
+		OnCreate:JarCanna,
+		NeedToBeLearn:true,
+		Category:GreenFireCuring,
+		Time:120.0,
+	}
+
+	recipe Add Three More Cannabis to Curing Jar
+	{
+		UnCannaJar,
+		DryTCanna=3,
+		keep Scissors,
+
+		Result:UnCannaJar4,
+		OnCreate:JarCanna,
+		NeedToBeLearn:true,
+		Category:GreenFireCuring,
+		Time:120.0,
+	}
+
+	recipe Add Two Cannabis to Half Full Curing Jar
+	{
+		UnCannaJar2,
+		DryTCanna=2,
+		keep Scissors,
+
+		Result:UnCannaJar4,
+		OnCreate:JarCanna,
+		NeedToBeLearn:true,
+		Category:GreenFireCuring,
+		Time:120.0,
+	}
+
+	item CannaJar4
+	{
+		Weight		= 0.6,
+		Type		= Normal,
+		DisplayName	= Jar of Cannabis,
+        	DisplayCategory = GreenFireItem,
+		Icon		= CannaJar,
+        	WorldStaticModel = JarCannabis,
+	}
+
+	recipe Open Full Jar of Cannabis
+	{
+		CannaJar4,
+		Result:Cannabis=20,
+		OnCreate:OpenCannaJar,
+		Category:GreenFire,
+		Time:15.0,
+	}
+
+	item Cannabis
+	{
+		HungerChange 	= 0,
+		Count		= 3,
+		Weight		= 0.001,
+		Type		= Food,
+		DisplayName	= Cannabis,
+        	DisplayCategory = GreenFireItem,
+		Icon		= CannabisBase,
+        	WorldStaticModel = Cannabis,
+	}
+
+	recipe Pack Cannabis into Bag
+	{
+		Cannabis=27,
+		Result:OzCannabis,
+		Category:GreenFire,
+		Time:15.0,
+	}
+
+	recipe Unpack Cannabis
+	{
+		OzCannabis,
+		Result:Cannabis=9,
+		Category:GreenFire,
+		Time:15.0,
+	}
+
+	item OzCannabis
+	{
+		Weight		= 0.027,
+		Type		= Normal,
+		DisplayName	= Bag of Cannabis,
+        	DisplayCategory = GreenFireItem,
+		Icon		= OzCannabis,
+        	WorldStaticModel = OzCannabis,
+	}
+	
+	recipe Pack Bags of Cannabis into Kilo
+	{
+		OzCannabis=37,
+		Result:KgCannabis,
+		Category:GreenFire,
+		Time:15.0,
+	}
+	
+	recipe Unpack Kilo of Cannabis
+	{
+		KgCannabis,
+		Result:OzCannabis=37,
+		Category:GreenFire,
+		Time:15.0,
+	}
+
+	item KgCannabis
+	{
+		Weight		= 1.0,
+		Type		= Normal,
+		DisplayName	= Kilo of Cannabis,
+        	DisplayCategory = GreenFireItem,
+		Icon		= KgCannabis,
+        	WorldStaticModel = KgCannabis,
+	}
+
+	item CannabisShake
+	{
+		Weight		= 0.0009,
+		Type		= Normal,
+		DisplayName	= Cannabis Shake,
+        	DisplayCategory = GreenFireItem,
+		Icon		= CannabisShake,
+        	WorldStaticModel = GFShake,
+	}
+
+	item Joint
+	{
+		BoredomChange			= -5,
+		UnhappyChange			= -5,
+		StressChange			= -5,
+		Weight				= 0.001,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Joint,
+        	DisplayCategory = GreenFireItem,
+		Icon				= Joint,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_Cannabis,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= Joint,
+		EatType				= Cigarettes,
+        	WorldStaticModel = Joint_Ground,
+	}
+
+	item HalfJoint
+	{
+		BoredomChange			= -5,
+		UnhappyChange			= -5,
+		StressChange			= -5,
+		Weight				= 0.001,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Half of a Joint,
+        	DisplayCategory = GreenFireItem,
+		Icon				= HalfJoint,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_Cannabis,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= HalfJoint,
+		EatType				= Cigarettes,
+        	WorldStaticModel = HalfJoint_Ground,
+	}
+
+	item KiefJoint
+	{
+		BoredomChange			= -15,
+		UnhappyChange			= -15,
+		StressChange			= -15,
+		Weight				= 0.001,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Kief Joint,
+        	DisplayCategory = GreenFireItem,
+		Icon				= Joint,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_Cannabis,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= Joint,
+		EatType				= Cigarettes,
+        	WorldStaticModel = Joint_Ground,
+	}
+
+	item HalfKiefJoint
+	{
+		BoredomChange			= -15,
+		UnhappyChange			= -15,
+		StressChange			= -15,
+		Weight				= 0.001,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Half of a Kief Joint,
+        	DisplayCategory = GreenFireItem,
+		Icon				= HalfJoint,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_Cannabis,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= HalfJoint,
+		EatType				= Cigarettes,
+        	WorldStaticModel = HalfJoint_Ground,
+	}
+
+	item HashJoint
+	{
+		BoredomChange			= -25,
+		UnhappyChange			= -25,
+		StressChange			= -25,
+		Weight				= 0.001,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Hashish Joint,
+        	DisplayCategory = GreenFireItem,
+		Icon				= Joint,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_Cannabis,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= Joint,
+		EatType				= Cigarettes,
+        	WorldStaticModel = Joint_Ground,
+	}
+
+	item HalfHashJoint
+	{
+		BoredomChange			= -25,
+		UnhappyChange			= -25,
+		StressChange			= -25,
+		Weight				= 0.001,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Half of a Hashish Joint,
+        	DisplayCategory = GreenFireItem,
+		Icon				= HalfJoint,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_Cannabis,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= HalfJoint,
+		EatType				= Cigarettes,
+        	WorldStaticModel = HalfJoint_Ground,
+	}
+
+
+
+	item WeedPipe
+	{
+		Weight				= 0.1,
+        	Type				= Food,
+		DisplayName			= Smoking Pipe filled with Cannabis,
+        	DisplayCategory = GreenFireItem,
+		Icon				= SmokingPipe,
+		BoredomChange			= -10,
+		UnhappyChange			= -10,
+		RequireInHandOrInventory	= Lighter/Matches,
+		StressChange			= -10,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_Cannabis,
+		Tooltip				= Tooltip_Painkillers,
+		ReplaceOnUse			= SmokingPipe,
+		CustomEatSound			= GF_LightUp,
+	}
+
+
+	item ShakePipe
+	{
+		Weight				= 0.1,
+        	Type				= Food,
+		DisplayName			= Smoking Pipe filled with Cannabis Shake,
+        	DisplayCategory = GreenFireItem,
+		Icon				= SmokingPipe,
+		BoredomChange			= -10,
+		UnhappyChange			= -10,
+		RequireInHandOrInventory	= Lighter/Matches,
+		StressChange			= -10,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_Cannabis,
+		Tooltip				= Tooltip_Painkillers,
+		ReplaceOnUse			= SmokingPipe,
+		CustomEatSound 			= GF_LightUp,	
+	}
+
+
+
+	item KiefPipe
+	{
+		Weight				= 0.1,
+        	Type				= Food,
+		DisplayName			= Smoking Pipe filled with Kief,
+        	DisplayCategory = GreenFireItem,
+		Icon				= SmokingPipe,
+		BoredomChange			= -20,
+		UnhappyChange			= -20,
+		RequireInHandOrInventory	= Lighter/Matches,
+		StressChange			= -20,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_Cannabis,
+		Tooltip				= Tooltip_Painkillers,
+		ReplaceOnUse			= SmokingPipe,
+		CustomEatSound			= GF_LightUp,
+	}
+
+
+
+	item HashPipe
+	{
+		Weight				= 0.1,
+        	Type				= Food,
+		DisplayName			= Smoking Pipe filled with Hashish,
+        	DisplayCategory = GreenFireItem,
+		Icon				= SmokingPipe,
+		BoredomChange			= -40,
+		UnhappyChange			= -40,
+		RequireInHandOrInventory	= Lighter/Matches,
+		StressChange			= -40,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_Cannabis,
+		Tooltip				= Tooltip_Painkillers,
+		ReplaceOnUse			= SmokingPipe,
+		CustomEatSound			= GF_LightUp,
+	}
+
+	
+	item Kief
+	{
+		Weight			=	0.01,
+		Type			=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta  	 	=	0.05,
+		DisplayName		=	Kief,
+        	DisplayCategory = GreenFireItem,
+		Icon			=	Kief,
+        	WorldStaticModel = GFKief,
+	}
+
+
+	recipe Sift Shake
+	{
+		CannabisShake=40,
+		keep SilkScreen,
+		Result:Kief,
+		Sound:PutItemInBag,
+		OnCreate:SiftShake,
+		NeedToBeLearn:true,
+		Category:GreenFire,
+		Time:120.0,
+	}
+
+	
+	item Hashish
+	{
+		Weight			=	0.01,
+		Type			=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta  	 	=	0.1,
+		DisplayName		=	Hashish,
+        	DisplayCategory = GreenFireItem,
+		Icon			=	Hashish,
+		cantBeConsolided	=	TRUE,
+        	WorldStaticModel = GFHashish,
+	}
+
+	recipe Press Kief
+	{
+		Kief=20,
+		keep HashPress,
+		Sound:PutItemInBag,
+		Result:Hashish,
+		Category:GreenFire,
+		Time:120.0,
+	}
+
+	item UncuredCannaCigar
+	{
+		Type		= Normal,
+		DisplayName	= Uncured Cannabis Cigar,
+        	DisplayCategory = GreenFireItem,
+		Icon		= CannaCigar,
+		Weight		= 0.01,
+        	WorldStaticModel = GFUnCannaCigar_Ground,
+	}
+
+	item CannaCigar
+	{
+		BoredomChange			= -30,
+		UnhappyChange			= -30,
+		StressChange			= -30,
+		Weight				= 0.01,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Cannabis Cigar,
+        	DisplayCategory = GreenFireItem,
+		Icon				= CannaCigar,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_CannaCigar,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= GFCannaCigar,
+		EatType				= Cigarettes,
+        	WorldStaticModel = GFCannaCigar_Ground,
+	}
+
+	item HalfCannaCigar
+	{
+		BoredomChange			= -30,
+		UnhappyChange			= -30,
+		StressChange			= -30,
+		Weight				= 0.01,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Half of a Cannabis Cigar,
+        	DisplayCategory = GreenFireItem,
+		Icon				= HalfCannaCigar,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_CannaCigar,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= GFHalfCannaCigar,
+		EatType				= Cigarettes,
+        	WorldStaticModel = GFHalfCannaCigar_Ground,
+	}
+
+	recipe Roll Cannabis Cigar
+	{
+		CannabisShake=4,
+		FreshCannabisFanLeaf=2,
+		FreshCannabisSugarLeaf=4,
+		Result:UncuredCannaCigar,
+		NeedToBeLearn:true,
+		Category:GreenFireFarming,
+		OnCreate:RollCigar,
+		Time:100.0,
+	}
+
+	item UncuredPreCannaCigar
+	{
+		Type		= Normal,
+		DisplayName	= Uncured Premium Cannabis Cigar,
+        	DisplayCategory = GreenFireItem,
+		Icon		= PreCannaCigar,
+		Weight		= 0.01,
+        	WorldStaticModel = GFUnCannaCigar_Ground,
+	}
+
+	item PreCannaCigar
+	{
+		BoredomChange			= -40,
+		UnhappyChange			= -40,
+		StressChange			= -40,
+		Weight				= 0.01,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Premium Cannabis Cigar,
+        	DisplayCategory = GreenFireItem,
+		Icon				= PreCannaCigar,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_CannaCigar,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= GFPreCannaCigar,
+		EatType				= Cigarettes,
+        	WorldStaticModel = GFPreCannaCigar_Ground,
+	}
+
+	item HalfPreCannaCigar
+	{
+		BoredomChange			= -40,
+		UnhappyChange			= -40,
+		StressChange			= -40,
+		Weight				= 0.01,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Half of a Premium Cannabis Cigar,
+        	DisplayCategory = GreenFireItem,
+		Icon				= HalfPreCannaCigar,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_CannaCigar,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= GFHalfPreCCigar,
+		EatType				= Cigarettes,
+        	WorldStaticModel = GFHalfPreCCigar_Ground,
+	}
+
+	recipe Roll Premium Cannabis Cigar
+	{
+		CannabisShake=4,
+		Kief=1,
+		FreshCannabisFanLeaf=2,
+		FreshCannabisSugarLeaf=4,
+		Result:UncuredPreCannaCigar,
+		NeedToBeLearn:true,
+		Category:GreenFireFarming,
+		OnCreate:RollCigar,
+		Time:100.0,
+	}
+
+	item UncuredDelCannaCigar
+	{
+		Type		= Normal,
+		DisplayName	= Uncured Deluxe Cannabis Cigar,
+        	DisplayCategory = GreenFireItem,
+		Icon		= DeluxCannaCigar,
+		Weight		= 0.01,
+        	WorldStaticModel = GFUnCannaCigar_Ground,
+	}
+
+	item DelCannaCigar
+	{
+		BoredomChange			= -50,
+		UnhappyChange			= -50,
+		StressChange			= -50,
+		Weight				= 0.01,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Deluxe Cannabis Cigar,
+        	DisplayCategory = GreenFireItem,
+		Icon				= DeluxCannaCigar,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_CannaCigar,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= GFDeCannaCigar,
+		EatType				= Cigarettes,
+        	WorldStaticModel = GFDeCannaCigar_Ground,
+	}
+
+	item HalfDelCannaCigar
+	{
+		BoredomChange			= -50,
+		UnhappyChange			= -50,
+		StressChange			= -50,
+		Weight				= 0.01,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Half of a Deluxe Cannabis Cigar,
+        	DisplayCategory = GreenFireItem,
+		Icon				= HalfDeluxCannaCigar,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_CannaCigar,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= GFHalfDeCCigar,
+		EatType				= Cigarettes,
+        	WorldStaticModel = GFHalfDeCCigar_Ground,
+	}
+
+	recipe Roll Deluxe Cannabis Cigar
+	{
+		CannabisShake=4,
+		Hashish=1,
+		FreshCannabisFanLeaf=2,
+		FreshCannabisSugarLeaf=4,
+		Result:UncuredDelCannaCigar,
+		NeedToBeLearn:true,
+		Category:GreenFireFarming,
+		OnCreate:RollCigar,
+		Time:100.0,
+	}
+
+	item UncuredResCannaCigar
+	{
+		Type		= Normal,
+		DisplayName	= Uncured Reserve Cannabis Cigar,
+        	DisplayCategory = GreenFireItem,
+		Icon		= ResCannaCigar,
+		Weight		= 0.01,
+        	WorldStaticModel = GFUnCannaCigar_Ground,
+	}
+
+	item ResCannaCigar
+	{
+		BoredomChange			= -60,
+		UnhappyChange			= -60,
+		StressChange			= -60,
+		Weight				= 0.01,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Reserve Cannabis Cigar,
+        	DisplayCategory = GreenFireItem,
+		Icon				= ResCannaCigar,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_CannaCigar,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= GFResCannaCigar,
+		EatType				= Cigarettes,
+        	WorldStaticModel = GFResCannaCigar_Ground,
+	}
+
+	item HalfResCannaCigar
+	{
+		BoredomChange			= -60,
+		UnhappyChange			= -60,
+		StressChange			= -60,
+		Weight				= 0.01,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Half of a Reserve Cannabis Cigar,
+        	DisplayCategory = GreenFireItem,
+		Icon				= HalfResCannaCigar,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_CannaCigar,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= GFHalfResCCigar,
+		EatType				= Cigarettes,
+        	WorldStaticModel = GFHalfResCCigar_Ground,
+	}
+
+	recipe Roll Reserve Cannabis Cigar
+	{
+		CannabisShake=4,
+		Hashish=1,
+		Kief=1,
+		FreshCannabisFanLeaf=2,
+		FreshCannabisSugarLeaf=4,
+		Result:UncuredResCannaCigar,
+		NeedToBeLearn:true,
+		Category:GreenFireFarming,
+		OnCreate:RollCigar,
+		Time:100.0,
+	}
+
+
+	item CannabisSeed
+	{
+		Type		= Normal,
+		DisplayName	= Cannabis Seeds,
+        	DisplayCategory = GreenFireItem,
+		Icon		= TZ_LRRadishSeeds,
+		Weight		= 0.0003,
+		WorldStaticModel = Seeds_Ground,
+	}
+
+
+	item CannabisBagSeed
+	{
+		Type		= Normal,
+		DisplayName	= Cannabis Seeds Packet,
+        	DisplayCategory = GreenFireItem,
+		Icon		= SeedpackCannabis,
+		Tooltip     = 	Tooltip_LearnSow,
+		SurvivalGear = TRUE,
+		Weight		= 0.1,
+        	WorldStaticModel = CannaSeedBag,
+	}
+
+	recipe Tear Cannabis
+	{
+		Cannabis,
+		Result:CannabisShake,
+		OnCreate:MakeShake,
+		Category:GreenFire,
+		OnTest:Check_noHydrocraft,
+		Time:120.0,
+	}
+
+	recipe Cut Cannabis
+	{
+		Cannabis,
+		keep Scissors,
+		Result:CannabisShake,
+		OnTest:Check_noHydrocraft,
+		Category:GreenFire,
+		OnCreate:MakeShake,
+		Time:60.0,
+	}
+
+	recipe Grind Cannabis
+	{
+		Cannabis,
+		keep GFGrinder,
+		Result:CannabisShake,
+		OnTest:Check_noHydrocraft,
+		OnCreate:Grind_Cannabis,
+		Category:GreenFire,
+		Time:30.0
+	}
+
+
+
+
+
+	recipe Fill Smoking Pipe with Cannabis
+	{
+		SmokingPipe,
+		Cannabis,
+
+		Result:WeedPipe,
+		Category:GreenFire,
+		OnTest:Check_noHydrocraft,
+		Time:60.0,
+	}
+
+	recipe Unload Cannabis from Smoking Pipe
+	{
+		destroy WeedPipe,
+
+		Result:SmokingPipe,
+		Category:GreenFire,
+		Time:30.0,
+		OnCreate:DumpW_OnCreate,
+	}
+
+	recipe Fill Smoking Pipe with Cannabis Shake
+	{
+		SmokingPipe,
+		CannabisShake,
+
+		Result:ShakePipe,
+		Category:GreenFire,
+		Time:60.0,
+	}
+
+	recipe Unload Cannabis Shake from Smoking Pipe
+	{
+		destroy ShakePipe,
+
+		Result:CannabisShake,
+		Category:GreenFire,
+		Time:30.0,
+		OnCreate:DumpPipe_OnCreate,
+	}
+
+	recipe Fill Smoking Pipe with Kief
+	{
+		SmokingPipe,
+		Kief=1,
+
+		Result:KiefPipe,
+		Category:GreenFire,
+		Time:60.0,
+	}
+
+	recipe Unload Kief from Smoking Pipe
+	{
+		destroy KiefPipe,
+
+		Result:Kief,
+		Category:GreenFire,
+		Time:30.0,
+		OnCreate:DumpPipe_OnCreate,
+	}
+
+	recipe Fill Smoking Pipe with Hashish
+	{
+		SmokingPipe,
+		Hashish=1,
+
+		Result:HashPipe,
+		Category:GreenFire,
+		Time:60.0,
+	}
+
+	recipe Unload Hashish from Smoking Pipe
+	{
+		destroy HashPipe,
+
+		Result:Hashish,
+		Category:GreenFire,
+		Time:30.0,
+		OnCreate:DumpPipe_OnCreate,
+	}
+
+	recipe Open Packet of Cannabis Seeds
+	{
+		CannabisBagSeed,
+  
+        	Result:CannabisSeed=18,
+		Category:GreenFire,
+        	Time:20.0,
+        	Category:GreenFireFarming,
+	}
+
+	recipe Put Cannabis Seeds in Packet
+	{
+        	CannabisSeed=18,
+
+        	Result:CannabisBagSeed,
+		Category:GreenFire,
+        	Time:10.0,
+        	Category:GreenFireFarming,
+	}
+
+	recipe Roll Joint
+	{
+		CannabisShake,
+		RollingPapers=1,
+
+		Result:Joint,
+		Category:GreenFire,
+		Time:60.0,
+	}
+
+
+	recipe Roll Kief Joint
+	{
+		CannabisShake,
+		Kief=1,
+		RollingPapers=1,
+
+		Result:KiefJoint,
+		Category:GreenFire,
+		Time:60.0,
+	}
+
+	recipe Roll Hashish Joint
+	{
+		CannabisShake,
+		Hashish=1,
+		RollingPapers=1,
+
+		Result:HashJoint,
+		Category:GreenFire,
+		Time:60.0,
+	}
+
+	recipe Break Joint
+	{
+		Joint,
+		
+		Result:CannabisShake=1,
+		Category:GreenFire,
+		Time:20.0,
+	}
+}
