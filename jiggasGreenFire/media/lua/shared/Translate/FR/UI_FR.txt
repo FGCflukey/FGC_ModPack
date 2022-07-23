@@ -1,0 +1,14 @@
+UI_FR = {
+	UI_trait_stoner = "Fumeur d'herbe",
+	UI_trait_stonerdesc = "Insensible à la fatigue et à la faim en fumant de l'herbe, mais doit en fumer davantage pour ressentir les mêmes effets.",
+	UI_speech_kief = "On dirait qu'il y a du kief caché là-dessous...",
+	UI_speech_seed1 = "On dirait qu'il y a une graine dans ce bourgeon.",
+	UI_speech_seed2 = "J'ai trouvé une graine.",
+	UI_speech_cough0 = "*tousse* *tousse*",
+	UI_speech_cough1 = "Je peux pas finir de fumer ça, c'est trop, j'arrête.",
+	UI_speech_cough2 = "Oh merde... J'ai l'impression que je vais tomber dans les vapes si je continue à fumer ce truc...",
+	UI_speech_cough3 = "C'est trop pour moi, je m'arrête là.",
+	UI_speech_cough4 = "J'ai eu ma dose, je finirai de fumer ça plus tard.",
+	UI_speech_cough5 = "Ouah ! Je peux pas continuer à fumer ce truc !",
+	UI_speech_cough6 = "J'ai assez fumé, il est temps de faire une pause.",
+}

@@ -1,0 +1,14 @@
+UI_IT = {
+	UI_trait_stoner = "fumatore di erba",
+	UI_trait_stonerdesc = "Non si sente assonnato o affamato fumando erba, ma ha bisogno di più per lo stesso effetto.",
+	UI_speech_kief = "Sembra che ci sia del kief sotto questo schermo ...",
+	UI_speech_seed1 = "Vedo un seme in questo bocciolo?",
+	UI_speech_seed2 = "Ho trovato un seme!",
+	UI_speech_cough0 = "*tosse* *tosse*",
+	UI_speech_cough1 = "Non posso finire di fumare questo.",
+	UI_speech_cough2 = "Se continuo a fumare, potrei morire ...",
+	UI_speech_cough3 = "Questo è troppo per me, ho smesso di fumare.",
+	UI_speech_cough4 = "Penso che finirò di fumarlo più tardi.",
+	UI_speech_cough5 = "Non posso continuare a fumare questa cosa.",
+	UI_speech_cough6 = "Ho bisogno di fare una pausa dal fumo.",
+}

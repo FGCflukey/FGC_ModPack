@@ -1,0 +1,325 @@
+module Greenfire
+{
+	imports
+	{
+		Base
+	}
+
+	item Blunt
+	{
+		BoredomChange			= -10,
+		UnhappyChange			= -10,
+		StressChange			= -13,
+		Weight				= 0.001,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Blunt,
+        	DisplayCategory = GreenFireItem,
+		Icon				= Blunt,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_Blunt,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= Blunt,
+		EatType				= Cigarettes,
+        	WorldStaticModel = Blunt_Ground,
+	}
+
+	recipe Roll Blunt
+	{
+		CannabisShake=2,
+		BluntWrap,
+
+		Result:Blunt,
+		Category:GreenFire,
+		Time:120.0,
+	}
+
+	recipe Break Blunt
+	{
+		Blunt,
+		Result:CannabisShake=2,
+		Category:GreenFire,
+		OnCreate:BreakBlunt,
+		Time:15.0,
+	}
+
+	recipe Open Blunt
+	{
+		Blunt,
+		keep KitchenKnife/HuntingKnife/Scissors,
+		Result:CannabisShake=2,
+		Category:GreenFire,
+		OnCreate:OpenBlunt,
+		Time:20.0
+	}
+
+	item HalfBlunt
+	{
+		BoredomChange			= -10,
+		UnhappyChange			= -10,
+		StressChange			= -12,
+		Weight				= 0.001,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Half of a Blunt,
+        	DisplayCategory = GreenFireItem,
+		Icon				= HalfBlunt,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_Blunt,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= HalfBlunt,
+		EatType				= Cigarettes,
+        	WorldStaticModel = HalfBlunt_Ground,
+	}
+
+	item MixedBlunt
+	{
+		BoredomChange			= -5,
+		UnhappyChange			= -5,
+		StressChange			= -8,
+		Weight				= 0.001,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Mixed Blunt,
+        	DisplayCategory = GreenFireItem,
+		Icon				= MixedBlunt,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_Blunt,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= Blunt,
+		EatType				= Cigarettes,
+        	WorldStaticModel = Blunt_Ground,
+	}
+
+	recipe Roll Mixed Blunt
+	{
+		CannabisShake,
+		Tobacco,
+		BluntWrap,
+
+		Result:MixedBlunt,
+		Category:GreenFire,
+		Time:120.0,
+	}
+
+	item HalfMixedBlunt
+	{
+		BoredomChange			= -5,
+		UnhappyChange			= -5,
+		StressChange			= -7,
+		Weight				= 0.001,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Half of a Mixed Blunt,
+        	DisplayCategory = GreenFireItem,
+		Icon				= HalfBlunt,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_Blunt,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= HalfBlunt,
+		EatType				= Cigarettes,
+        	WorldStaticModel = HalfBlunt_Ground,
+	}
+
+	item KiefBlunt
+	{
+		BoredomChange			= -20,
+		UnhappyChange			= -20,
+		StressChange			= -23,
+		Weight				= 0.001,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Kief Blunt,
+        	DisplayCategory = GreenFireItem,
+		Icon				= Blunt,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_Blunt,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= Blunt,
+		EatType				= Cigarettes,
+        	WorldStaticModel = Blunt_Ground,
+	}
+
+	recipe Roll Kief Blunt
+	{
+		CannabisShake=2,
+		Kief=1,
+		BluntWrap,
+
+		Result:KiefBlunt,
+		Category:GreenFire,
+		Time:120.0,
+	}
+
+	item HalfKiefBlunt
+	{
+		BoredomChange			= -20,
+		UnhappyChange			= -20,
+		StressChange			= -22,
+		Weight				= 0.001,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Half of a Kief Blunt,
+        	DisplayCategory = GreenFireItem,
+		Icon				= HalfBlunt,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_Blunt,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= HalfBlunt,
+		EatType				= Cigarettes,
+        	WorldStaticModel = HalfBlunt_Ground,
+	}
+
+	item HashBlunt
+	{
+		BoredomChange			= -30,
+		UnhappyChange			= -30,
+		StressChange			= -33,
+		Weight				= 0.001,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Hashish Blunt,
+        	DisplayCategory = GreenFireItem,
+		Icon				= Blunt,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_Blunt,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= Blunt,
+		EatType				= Cigarettes,
+        	WorldStaticModel = Blunt_Ground,
+	}
+
+	recipe Roll Hashish Blunt
+	{
+		CannabisShake=2,
+		Hashish=1,
+		BluntWrap,
+
+		Result:HashBlunt,
+		Category:GreenFire,
+		Time:120.0,
+	}
+
+	item HalfHashBlunt
+	{
+		BoredomChange			= -30,
+		UnhappyChange			= -30,
+		StressChange			= -32,
+		Weight				= 0.001,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Half of a Hashish Blunt,
+        	DisplayCategory = GreenFireItem,
+		Icon				= HalfBlunt,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_Blunt,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= HalfBlunt,
+		EatType				= Cigarettes,
+        	WorldStaticModel = HalfBlunt_Ground,
+	}
+
+	item SpaceBlunt
+	{
+		BoredomChange			= -50,
+		UnhappyChange			= -50,
+		StressChange			= -53,
+		Weight				= 0.001,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Space Blunt,
+        	DisplayCategory = GreenFireItem,
+		Icon				= Blunt,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_Blunt,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= Blunt,
+		EatType				= Cigarettes,
+        	WorldStaticModel = Blunt_Ground,
+	}
+
+	recipe Roll Space Blunt
+	{
+		CannabisShake=2,
+		Hashish=1,
+		Kief=1,
+		BluntWrap,
+
+		Result:SpaceBlunt,
+		Category:GreenFire,
+		Time:120.0,
+	}
+
+	item HalfSpaceBlunt
+	{
+		BoredomChange			= -50,
+		UnhappyChange			= -50,
+		StressChange			= -52,
+		Weight				= 0.001,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Half of a Space Blunt,
+        	DisplayCategory = GreenFireItem,
+		Icon				= HalfBlunt,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnSmoke_Blunt,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= HalfBlunt,
+		EatType				= Cigarettes,
+        	WorldStaticModel = HalfBlunt_Ground,
+	}
+
+
+	item Spliff
+	{
+		BoredomChange			= -5,
+		UnhappyChange			= -5,
+		StressChange			= -7,
+		Weight				= 0.001,
+		RequireInHandOrInventory	= Lighter/Matches,
+		Type				= Food,
+		DisplayName			= Spliff,
+        	DisplayCategory = GreenFireItem,
+		Icon				= Spliff,
+		Tooltip				= Tooltip_Painkillers,
+		CustomContextMenu		= Smoke,
+		CantBeFrozen			= TRUE,
+		OnEat				= OnEat_Spliff,
+		CustomEatSound			= GF_LightUp,
+		StaticModel			= Spliff,
+		EatType				= Cigarettes,
+        	WorldStaticModel = Spliff_Ground,
+	}
+
+	recipe Roll Spliff
+	{
+		CannabisShake,
+		Tobacco,
+		RollingPapers=2,
+
+		Result:Spliff=2,
+		Category:GreenFire,
+		Time:120.0,
+	}
+
+}

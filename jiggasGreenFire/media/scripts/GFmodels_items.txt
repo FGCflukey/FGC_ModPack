@@ -1,0 +1,491 @@
+module Base
+{
+
+	model GFRollingPapers
+	{
+		mesh = WorldItems/GFRollingPapers,
+		texture = WorldItems/GFRollingPapers,
+		scale = 0.15,
+	}
+
+
+	model GFSilkscreen
+	{
+		mesh = WorldItems/GFSilkscreen,
+		texture = WorldItems/GFSilkscreen,
+		scale = 1.0,
+	}
+
+	model GFHashPress
+	{
+		mesh = WorldItems/GFHashPress,
+		texture = WorldItems/GFHashPress,
+		scale = 0.25,
+	}
+
+	model GFHashish
+	{
+		mesh = WorldItems/GFHashish,
+		texture = WorldItems/GFHashish,
+		scale = 0.20,
+	}
+
+	model BrownieBar
+	{
+		mesh = WorldItems/BrownieBar,
+		texture = WorldItems/BrownieBar,
+		scale = 0.25,
+	}
+
+	model BrownieBar_eat
+	{
+		mesh = WorldItems/BrownieBar_eat,
+		texture = WorldItems/BrownieBar,
+		scale = 0.25,
+	}
+
+	model NCBar
+	{
+		mesh = WorldItems/BrownieBar,
+		texture = WorldItems/NCBar,
+		scale = 0.25,
+	}
+
+	model NCBar_eat
+	{
+		mesh = WorldItems/BrownieBar_eat,
+		texture = WorldItems/NCBar,
+		scale = 0.25,
+	}
+
+	model NCPan
+	{
+		mesh = WorldItems/NCPan,
+		texture = WorldItems/NCPan,
+		scale = 0.45,
+	}
+
+	model SBPan
+	{
+		mesh = WorldItems/NCPan,
+		texture = WorldItems/SBPan,
+		scale = 0.45,
+	}
+
+
+
+
+	model OzCannabis
+	{
+		mesh = WorldItems/Chips,
+		texture = WorldItems/OzCannabis,
+		scale = 0.30,
+	}
+
+	model KgCannabis
+	{
+		mesh = WorldItems/GFCCase,
+		texture = WorldItems/GFKgCannabis,
+		scale = 1.35,
+	}
+
+	model MallowBag
+	{
+		mesh = WorldItems/Chips,
+		texture = WorldItems/MallowBag,
+		scale = 0.45,
+	}
+
+	model CannaButter
+	{
+		mesh = WorldItems/Butter,
+		texture = WorldItems/CannaButter,
+		scale = 0.4,
+	}
+
+	model Cannabis
+	{
+		mesh = WorldItems/Chips,
+		texture = WorldItems/Cannabis,
+		scale = 0.15,
+	}
+
+	model GFGrinder
+	{
+		mesh = WorldItems/GFGrinder,
+		texture = WorldItems/GFGrinder,
+		scale = 0.3,
+	}
+
+	model GFCCarton
+	{
+		mesh = WorldItems/GFCCarton,
+		texture = WorldItems/GFCCarton,
+		scale = 0.45,
+	}
+
+
+	model GFCCase
+	{
+		mesh = WorldItems/GFCCase,
+		texture = WorldItems/GFCCase,
+		scale = 1.35,
+	}
+
+    model CannaSeedBag
+    {
+        mesh = WorldItems/SeedPacket,
+        texture = WorldItems/SeedPacketGFCannabis,
+        scale = 0.4,
+    }
+
+    model TabacSeedBag
+    {
+        mesh = WorldItems/SeedPacket,
+        texture = WorldItems/SeedPacketGFTobacco,
+        scale = 0.4,
+    }
+
+	model JarCannabis
+	{
+		mesh = WorldItems/JarFood,
+		texture = WorldItems/JarCannabis2,
+		scale = 0.6,
+	}
+
+	model MJMag1
+	{
+		mesh = WorldItems/Magazine,
+		texture = WorldItems/MJFarming,
+		scale = 0.4,
+	}
+
+	model MJMag2
+	{
+		mesh = WorldItems/Magazine,
+		texture = WorldItems/MJCooking,
+		scale = 0.4,
+	}
+
+	model MJMag3
+	{
+		mesh = WorldItems/Magazine,
+		texture = WorldItems/MJHashish,
+		scale = 0.4,
+	}
+
+	model AficMag
+	{
+		mesh = WorldItems/Magazine,
+		texture = WorldItems/AficMag,
+		scale = 0.4,
+	}
+
+
+	model Joint
+	{
+		mesh = WorldItems/Joint,
+		texture = WorldItems/Joint_lit,
+		scale = 0.025,
+
+	}
+
+	model Joint_Ground
+	{
+		mesh = WorldItems/Joint_Ground,
+		texture = WorldItems/Joint,
+		scale = 0.15,
+
+	}
+
+	model HalfJoint
+	{
+		mesh = WorldItems/HalfJoint,
+		texture = WorldItems/HalfJoint_lit,
+		scale = 0.025,
+
+	}
+
+	model HalfJoint_Ground
+	{
+		mesh = WorldItems/HalfJoint_Ground,
+		texture = WorldItems/HalfJoint,
+		scale = 0.15,
+
+	}
+
+	model Spliff
+	{
+		mesh = WorldItems/Joint,
+		texture = WorldItems/Joint_lit,
+		scale = 0.025,
+
+	}
+
+	model Spliff_Ground
+	{
+		mesh = WorldItems/Joint_Ground,
+		texture = WorldItems/Spliff,
+		scale = 0.15,
+
+	}
+
+	model GFShake
+	{
+		mesh = WorldItems/GFShake,
+		texture = WorldItems/GFShake,
+		scale = 0.375,
+
+	}
+
+	model GFTabac
+	{
+		mesh = WorldItems/GFShake,
+		texture = WorldItems/GFTabac,
+		scale = 0.375,
+
+	}
+
+	model GFKief
+	{
+		mesh = WorldItems/GFShake,
+		texture = WorldItems/GFKief,
+		scale = 0.375,
+
+	}
+
+
+	model GFCigar_Ground
+	{
+		mesh = WorldItems/GFCigar_Ground,
+		texture = WorldItems/GFCigar,
+		scale = 0.3,
+
+	}
+
+	model GFCigar
+	{
+		mesh = WorldItems/GFCigar,
+		texture = WorldItems/GFCigar_lit,
+		scale = 0.3,
+
+	}
+
+	model GFHalfCigar_Ground
+	{
+		mesh = WorldItems/GFHalfCigar_Ground,
+		texture = WorldItems/GFHalfCigar,
+		scale = 0.3,
+
+	}
+
+	model GFHalfCigar
+	{
+		mesh = WorldItems/GFHalfCigar,
+		texture = WorldItems/GFHalfCigar_lit,
+		scale = 0.3,
+
+	}
+
+	model GFUnCannaCigar_Ground
+	{
+		mesh = WorldItems/GFCigar_Ground,
+		texture = WorldItems/GFCannaCigar,
+		scale = 0.3,
+
+	}
+
+
+
+	model GFCannaCigar_Ground
+	{
+		mesh = WorldItems/GFCigar_Ground,
+		texture = WorldItems/GFCureCCigar,
+		scale = 0.3,
+
+	}
+
+	model GFCannaCigar
+	{
+		mesh = WorldItems/GFCigar,
+		texture = WorldItems/GFCannaCigar_lit,
+		scale = 0.3,
+
+	}
+
+	model GFHalfCannaCigar_Ground
+	{
+		mesh = WorldItems/GFHalfCigar_Ground,
+		texture = WorldItems/GFHalfCannaCigar,
+		scale = 0.3,
+
+	}
+
+	model GFHalfCannaCigar
+	{
+		mesh = WorldItems/GFHalfCigar,
+		texture = WorldItems/GFHalfCannaCigar_lit,
+		scale = 0.3,
+
+	}
+
+	model GFDeCannaCigar_Ground
+	{
+		mesh = WorldItems/GFCigar_Ground,
+		texture = WorldItems/GFCureDeCCigar,
+		scale = 0.3,
+
+	}
+
+	model GFDeCannaCigar
+	{
+		mesh = WorldItems/GFCigar,
+		texture = WorldItems/GFCureDeCCigar_lit,
+		scale = 0.3,
+
+	}
+
+	model GFHalfDeCCigar_Ground
+	{
+		mesh = WorldItems/GFHalfCigar_Ground,
+		texture = WorldItems/GFHalfCureDeCCigar,
+		scale = 0.3,
+
+	}
+
+	model GFHalfDeCCigar
+	{
+		mesh = WorldItems/GFHalfCigar,
+		texture = WorldItems/GFHalfCureDeCCigar_lit,
+		scale = 0.3,
+
+	}
+
+	model GFPreCannaCigar_Ground
+	{
+		mesh = WorldItems/GFCigar_Ground,
+		texture = WorldItems/GFCurePreCCigar,
+		scale = 0.3,
+
+	}
+
+	model GFPreCannaCigar
+	{
+		mesh = WorldItems/GFCigar,
+		texture = WorldItems/GFCurePreCCigar_lit,
+		scale = 0.3,
+
+	}
+
+	model GFHalfPreCCigar_Ground
+	{
+		mesh = WorldItems/GFHalfCigar_Ground,
+		texture = WorldItems/GFHalfCurePreCCigar,
+		scale = 0.3,
+
+	}
+
+	model GFHalfPreCCigar
+	{
+		mesh = WorldItems/GFHalfCigar,
+		texture = WorldItems/GFHalfCurePreCCigar_lit,
+		scale = 0.3,
+
+	}
+
+	model GFResCannaCigar_Ground
+	{
+		mesh = WorldItems/GFCigar_Ground,
+		texture = WorldItems/GFCureResCCigar,
+		scale = 0.3,
+
+	}
+
+	model GFResCannaCigar
+	{
+		mesh = WorldItems/GFCigar,
+		texture = WorldItems/GFCureResCCigar_lit,
+		scale = 0.3,
+
+	}
+
+	model GFHalfResCCigar_Ground
+	{
+		mesh = WorldItems/GFHalfCigar_Ground,
+		texture = WorldItems/GFHalfCureResCCigar,
+		scale = 0.3,
+
+	}
+
+	model GFHalfResCCigar
+	{
+		mesh = WorldItems/GFHalfCigar,
+		texture = WorldItems/GFHalfCureResCCigar_lit,
+		scale = 0.3,
+
+	}
+
+	model Blunt_Ground
+	{
+		mesh = WorldItems/Blunt_Ground,
+		texture = WorldItems/Blunt,
+		scale = 0.075,
+
+	}
+
+	model Blunt
+	{
+		mesh = WorldItems/Blunt,
+		texture = WorldItems/Blunt_lit,
+		scale = 0.075,
+
+	}
+
+	model BluntC
+	{
+		mesh = WorldItems/Blunt,
+		texture = WorldItems/BluntC_lit,
+		scale = 0.075,
+
+	}
+
+	model BluntC_Ground
+	{
+		mesh = WorldItems/Blunt_Ground,
+		texture = WorldItems/BluntC,
+		scale = 0.075,
+
+	}
+
+	model HalfBlunt
+	{
+		mesh = WorldItems/HalfBlunt,
+		texture = WorldItems/HalfBlunt_lit,
+		scale = 0.075,
+
+	}
+
+	model HalfBlunt_Ground
+	{
+		mesh = WorldItems/HalfBlunt_Ground,
+		texture = WorldItems/HalfBlunt,
+		scale = 0.075,
+
+	}
+
+	model HalfBluntC
+	{
+		mesh = WorldItems/HalfBlunt,
+		texture = WorldItems/HalfBluntC_lit,
+		scale = 0.075,
+
+	}
+
+	model HalfBluntC_Ground
+	{
+		mesh = WorldItems/HalfBlunt_Ground,
+		texture = WorldItems/HalfBluntC,
+		scale = 0.075,
+
+	}
+}

@@ -1,0 +1,171 @@
+module Greenfire
+{
+	imports
+	{
+		Base
+	}
+
+	item GFSuspect1
+	{
+		Weight			=	0.1,
+        	Type			=	Normal,
+        	DisplayCategory = GreenFireItem,
+		DisplayName		=	Suspicious Object,
+		Icon			=	GFSuspect1,
+	}
+	recipe Investigate Object
+	{
+		GFSuspect1,
+		Result:Cannabis,
+		RemoveResultItem:true,
+		OnCreate:RevealSuspectItem,
+		Category:GreenFire,
+		Time:120.0,
+	}
+	item GFGrinder
+	{
+		Weight		= 0.1,
+		Type		= Normal,
+		DisplayName 	= Weed Grinder,
+        	DisplayCategory = GreenFireItem,
+		Icon		= GFGrinder,
+        	WorldStaticModel = GFGrinder,
+	}
+
+	item HashPress
+	{
+		Weight		= 0.1,
+		Type		= Normal,
+		DisplayName 	= Hashish Press,
+        	DisplayCategory = GreenFireItem,
+		Icon		= HashPress,
+        	WorldStaticModel = GFHashPress,
+	}
+	
+	recipe Build Hashish Press
+	{
+		MetalPipe,
+		MetalBar,
+		SmallSheetMetal=1,
+		BlowTorch=1,
+		keep WeldingMask,
+		Result:HashPress,
+		OnGiveXP:Give25MWXP,
+		Category:GreenFire,
+		NeedToBeLearn:true,
+		SkillRequired:MetalWelding=1,
+		Time:250.0,
+	}
+
+	item CannaMag1
+	{
+		Weight	=	0.1,
+		Type	=	Literature,
+		DisplayName	=	The Mary Journal: The Farming Issue,
+        	DisplayCategory = GreenFireItem,
+		Icon	=	CannaMag1,
+		TeachedRecipes  =   Make Fly Cure;Make Fly Cure from Cigar Leaf;Trim Fresh Cannabis;Trim Dry Cannabis;Roll Cannabis Cigar;Roll Premium Cannabis Cigar;Roll Deluxe Cannabis Cigar;Roll Reserve Cannabis Cigar;Prepare Cannabis Curing Jar;Prepare Half Full Cannabis Curing Jar;Add Cannabis to Curing Jar;Prepare Nearly Full Cannabis Curing Jar;Add More Cannabis to Curing Jar;Add Two More Cannabis to Curing Jar;Prepare Full Cannabis Curing Jar;Fill Cannabis Curing Jar;Add Three More Cannabis to Curing Jar;Add Two Cannabis to Half Full Curing Jar,
+		ReplaceOnUse    =   CannaMag1,
+        	WorldStaticModel = MJMag1,
+		StaticModel = Magazine,
+	}
+
+	item CannaMag2
+	{
+		Weight	=	0.1,
+		Type	=	Literature,
+		DisplayName	=	The Mary Journal: The Cooking Issue,
+        	DisplayCategory = GreenFireItem,
+		Icon	=	CannaMag2,
+		TeachedRecipes  =   Make Nice Crispiez Mix;Make Nice Crispiez;Make Nice Crispiez from individual Marshmallows;Make Special Brownies;Make CannaButter;Make CannaButter with Shake;Make CannaButter with Kief;Make CannaButter with Hashish,
+		ReplaceOnUse    =   CannaMag2,
+        	WorldStaticModel = MJMag2,
+		StaticModel = Magazine,
+	}
+
+	item CannaMag3
+	{
+		Weight	=	0.1,
+		Type	=	Literature,
+		DisplayName	=	The Mary Journal: The Hashish Issue,
+        	DisplayCategory = GreenFireItem,
+		Icon	=	CannaMag3,
+		TeachedRecipes  =   Sift Shake;Build Hashish Press,
+		ReplaceOnUse    =   CannaMag3,
+        	WorldStaticModel = MJMag3,
+		StaticModel = Magazine,
+	}
+
+
+	item AficMag1
+	{
+		Weight	=	0.1,
+		Type	=	Literature,
+		DisplayName	=	Aficionado Magazine,
+        	DisplayCategory = GreenFireItem,
+		Icon	=	AficMag,
+		TeachedRecipes  =   Roll Cigar;Roll Cannabis Cigar;Roll Premium Cannabis Cigar;Roll Deluxe Cannabis Cigar;Roll Reserve Cannabis Cigar;Make Blunt Wrap,
+		ReplaceOnUse    =   AficMag1,
+        	WorldStaticModel = AficMag,
+		StaticModel = Magazine,
+	}
+
+	item SilkScreen
+	{
+		Weight		= 0.7,
+		Type		= Normal,
+		DisplayName	= Silkscreen,
+        	DisplayCategory = GreenFireItem,
+		Icon		= Silkscreen,
+        	WorldStaticModel = GFSilkscreen,
+	}
+
+	recipe Build Silkscreen
+	{
+		Plank,
+		RollNylon,
+		Nails=8,
+		keep Hammer/HammerStone,
+		keep Saw,
+		Sound:Hammering,
+		Category:GreenFire,
+		SkillRequired:Woodwork=1,
+	   	OnGiveXP:NoXP_OnGiveXP,
+		Result:SilkScreen,
+		OnTest:Check_Build40,
+		Time:120.0,
+	}
+	
+	item RollNylon
+	{
+		Weight	= 0.3,
+		Type	= Normal,
+		DisplayName	= Roll of Nylon Mesh,
+        	DisplayCategory = GreenFireItem,
+		Icon		= RollNylon,
+	}
+
+
+
+	item SmokingPipe
+	{
+		Weight		=	0.1,
+		Type		=	Normal,
+		DisplayName	=	Smoking Pipe,
+        	DisplayCategory = GreenFireItem,
+		Icon		=	SmokingPipe,
+	}
+
+	item RollingPapers
+	{
+		Weight			=	0.1,
+		Type			=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta  	 	=	0.025,
+		DisplayName		=	Rolling Papers,
+        	DisplayCategory = GreenFireItem,
+		Icon			=	RollingPapers,
+		cantBeConsolided	=	TRUE,
+        	WorldStaticModel = GFRollingPapers,
+	}
+}

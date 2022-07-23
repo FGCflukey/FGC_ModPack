@@ -1,0 +1,55 @@
+module Greenfire
+{
+	imports
+	{
+		Base
+	}
+
+	recipe Cut Nice Crispiez
+	{
+		NiceCrispiezPan,
+		keep ButterKnife/KitchenKnife/HuntingKnife/MeatCleaver/FlintKnife/Machete,
+		
+		Result:NiceCrispiez=16,
+		Time:40.0,
+        	Sound:SliceBread,
+		Category:GreenFireCooking,
+		OnTest:Check_Build41,
+		
+		OnGiveXP:Give3CookingXP,
+		OnCreate:GFCutPan_OnCreate,
+	}
+
+
+	recipe Cut Special Brownies
+	{
+		SBrowniePan,
+		keep ButterKnife/KitchenKnife/HuntingKnife/MeatCleaver/FlintKnife/Machete,
+		
+		Result:SBrownie=16,
+		Time:40.0,
+        	Sound:SliceBread,
+		Category:GreenFireCooking,
+		OnGiveXP:Give3CookingXP,
+		OnTest:Check_Build41,
+		
+		OnCreate:GFCutPan_OnCreate,
+	}
+
+	recipe Build Silkscreen
+	{
+		Plank,
+		RollNylon,
+		Nails=8,
+		keep [Recipe.GetItemTypes.Hammer],
+		keep [Recipe.GetItemTypes.Saw],
+		Sound:Hammering,
+		Category:GreenFire,
+		SkillRequired:Woodwork=1,
+		
+	   	OnGiveXP:NoXP_OnGiveXP,
+		Result:SilkScreen,
+		OnTest:Check_Build41,
+		Time:120.0,
+	}
+}
