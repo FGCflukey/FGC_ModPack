@@ -29,3 +29,9 @@ LootMaps.Init.FLUKEY_rules = function(mapUI)
 end
 
 
+LootMaps.Init.FLUKEY_info = function(mapUI)
+	local mapAPI = mapUI.javaObject:getAPIv1()
+	MapUtils.initDirectoryMapData(mapUI, 'media/maps/Muldraugh, KY')
+	mapAPI:setBoundsInSquares(FlyerX1, FlyerY1, FlyerX2, FlyerY2)
+	overlayPNG(mapUI, FlyerX1, FlyerY1, 1.0, "lootMapPNG", "media/ui/LootableMaps/flukeysinfo.png", 1.0)
+end
