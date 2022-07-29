@@ -6,6 +6,16 @@ require "Items/ItemPicker"
 
 -- PROCEDURALDISTRIBUTIONS.LUA for Lumber and Stuff --
 
+table.insert(ProceduralDistributions.list["BookstoreBooks"].items, "FLUKEY.FlukeysRules");
+table.insert(ProceduralDistributions.list["BookstoreBooks"].items, 0.5);
+table.insert(ProceduralDistributions.list["BookstoreBooks"].items, "FLUKEY.FlukeysInfo");
+table.insert(ProceduralDistributions.list["BookstoreBooks"].items, 0.5);
+
+table.insert(ProceduralDistributions.list["LibraryBooks"].items, "FLUKEY.FlukeysRules");
+table.insert(ProceduralDistributions.list["LibraryBooks"].items, 0.5);
+table.insert(ProceduralDistributions.list["LibraryBooks"].items, "FLUKEY.FlukeysInfo");
+table.insert(ProceduralDistributions.list["LibraryBooks"].items, 0.5);
+
 table.insert(ProceduralDistributions.list["JanitorTools"].items, "Base.Handdolly");
 table.insert(ProceduralDistributions.list["JanitorTools"].items, 4);
 table.insert(ProceduralDistributions.list["JanitorTools"].items, "Base.Pushcart");

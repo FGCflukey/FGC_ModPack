@@ -1,4 +1,6 @@
 Tooltip_EN = {
+	Tooltip_FlukeysRules = "Server Rules. Required Reading!",
+	Tooltip_FlukeysInfo = "Server Info. Tips and Info!",
 	Tooltip_Extra_NewCondition = "New Condition",
 	Tooltip_FixGlassItems = "Used for making windshield repairs.",
 	Tooltip_BatteryCleaner = "Used to clean a car battery.",
