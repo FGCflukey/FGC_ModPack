@@ -1,0 +1,45 @@
+module Base
+{
+
+    item AutomakerMag1
+    {
+        DisplayCategory = SkillBook,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	How to build a car for dummies,
+        Icon	=	MagazineMechanic3,
+        TeachedRecipes  =   Automaker Basics,
+        ReplaceOnUse    =   AutomakerMag1,
+        Tooltip = Tooltip_AutomakerMag1,
+        StaticModel = Magazine,
+        WorldStaticModel = MagazineMec3Ground,
+    }
+
+    item AutomakerMag2
+    {
+        DisplayCategory = SkillBook,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Autobody Shop Guide,
+        Icon	=	MagazineMechanic3,
+        TeachedRecipes  =   Automaker Intermediate,
+        ReplaceOnUse    =   AutomakerMag2,
+        Tooltip = Tooltip_AutomakerMag2,
+        StaticModel = Magazine,
+        WorldStaticModel = MagazineMec3Ground,
+    }
+
+    item AutomakerMag3
+    {
+        DisplayCategory = SkillBook,
+        Weight	=	0.1,
+        Type	=	Literature,
+        DisplayName	=	Autobody Design and Manufacture,
+        Icon	=	MagazineMechanic3,
+        TeachedRecipes  =   Automaker Expert,
+        ReplaceOnUse    =   AutomakerMag3,
+        Tooltip = Tooltip_AutomakerMag3,
+        StaticModel = Magazine,
+        WorldStaticModel = MagazineMec3Ground,
+    }
+}

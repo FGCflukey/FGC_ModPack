@@ -323,6 +323,33 @@ function UG_Automaker.buildMaterialList( context, toolTip, mechanictype, player)
 	else
 		toolTip.description = toolTip.description .. " <LINE> <RGB:1,1,1> Engine Parts " .. tostring( totalEngineParts) .. "/" .. tostring( requirements["EngineParts"])
 	end
+	
+	if mechanictype == 1 then
+		
+		if player:getKnownRecipes():contains("Automaker Basics") == false then
+			toolTip.description = toolTip.description .. " <LINE> <RGB:1,0,0> Recipe: Automaker Basics "
+			context.notAvailable = true; 
+		else
+			toolTip.description = toolTip.description .. " <LINE> <RGB:1,1,1> Recipe: Automaker Basics "
+		end
+	elseif mechanictype == 2 then
+
+		if player:getKnownRecipes():contains("Automaker Intermediate") == false then
+			toolTip.description = toolTip.description .. " <LINE> <RGB:1,0,0> Recipe: Automaker Intermediate "
+			context.notAvailable = true; 
+		else
+			toolTip.description = toolTip.description .. " <LINE> <RGB:1,1,1> Recipe: Automaker Intermediate "
+		end
+	elseif mechanictype == 3 then
+
+		if player:getKnownRecipes():contains("Automaker Expert") == false then
+			toolTip.description = toolTip.description .. " <LINE> <RGB:1,0,0> Recipe: Automaker Expert "
+			context.notAvailable = true; 
+		else
+			toolTip.description = toolTip.description .. " <LINE> <RGB:1,1,1> Recipe: Automaker Expert "
+		end
+	end
+	
 end
 
 function UG_Automaker.initTooltip( context, vehicle, mechanictype, player)
