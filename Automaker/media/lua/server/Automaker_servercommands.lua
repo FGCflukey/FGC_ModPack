@@ -39,6 +39,9 @@ Commands.Automaker.CreateVehicle = function( player, args)
 				part = vehicle:getPartByIndex( i)
 			end		
 		end
+
+		vehicle:setEngineFeature( PZMath.clamp(player:getPerkLevel( Perks.Mechanics) * 10 + (ZombRand(30) - 15), 50 , 100), vehicle:getEngineLoudness(), vehicle:getEnginePower())
+		
 	end
 end
 
