@@ -241,7 +241,7 @@ function UG_Automaker.getMaterialReq( mechanictype)
 end
 
 function UG_Automaker.takeMaterials( mechanictype)
-
+	
 	local materials = UG_Automaker.getMaterialReq( mechanictype)
 	local materialOnGround = buildUtil.checkMaterialOnGround( getPlayer():getSquare())	
 	local playerInv = getPlayer():getInventory()
@@ -252,7 +252,11 @@ function UG_Automaker.takeMaterials( mechanictype)
 	ISItem.modData = {}	
 	
 	for m,c in pairs( materials) do -- m is the materialID, c is the number required
-		ISItem.modData["need:Base.".. tostring( m)] = c
+		if m == "ElectricWire" then
+			ISItem.modData["need:Radio." .. tostring( m)] = c
+		else
+			ISItem.modData["need:Base.".. tostring( m)] = c
+		end
 	end
 
 	buildUtil.consumeMaterial(ISItem)
@@ -371,13 +375,7 @@ end
 
 function UG_Automaker.FillWorldContextMenu( player, context, worldobjects, test)
 
-	player = getPlayer()
-	local vehicle = IsoObjectPicker.Instance:PickVehicle(getMouseXScaled(), getMouseYScaled())
-	
-	if vehicle and isAdmin() then
-		local movevehicleOption = context:addOption( "Bring Vehicle Here", vehicle, UG_Automaker.MoveVehicle)
-	end
-	
+	player = getPlayer()		
 	local automakerOption = context:addOption( "Build New Vehicle", worldobjects, nil)	
 
 	local subMenuVehicles = ISContextMenu:getNew(context)
@@ -437,36 +435,8 @@ function UG_Automaker.onNewVehicle( worldobjects, vehiclescript, mechanictype, c
 		context:setVisible(false)
 	end --for some reason the context menu stays open.
 	
-	UG_Automaker.takeMaterials( mechanictype)
-	sendClientCommand( getPlayer(), "Automaker", "CreateVehicle", { VehicleID = vehiclescript})
-end
-
-function UG_Automaker.MoveVehicle( vehicle)
-	print( "keyword: moving vehicle")
-
-	if vehicle == nil then return end
-	
-	--never gets here!  check the valhalla menu to pick a car.
-	if vehicle ~= nil then
-		print( "keyword: valid vehicle")
-		
-		local player = getPlayer()
-		local target = player:getSquare()
-		
-		if target ~= nil then
-		
-			--player:setX( vehicle:getX())
-			--player:setY( vehicle:getY())
-			--player:setZ( vehicle:getZ())
-			vehicle:setX(tonumber( player:getX()))
-			vehicle:setY(tonumber( player:getY()))
-			vehicle:setZ(tonumber( player:getZ()))
-			vehicle:setLx(tonumber( player:getX()))
-			vehicle:setLy(tonumber( player:getY()))
-			vehicle:setLz(tonumber( player:getZ()))
-			vehicle:updateTransform()
-		end
-	end
+	--UG_Automaker.takeMaterials( mechanictype)
+	sendClientCommand( getPlayer(), "Automaker", "CreateVehicle", { VehicleID=vehiclescript, MechanicType=mechanictype})
 end
 
 function UG_Automaker.init()
@@ -475,3 +445,22 @@ function UG_Automaker.init()
 end
 
 Events.OnFillWorldObjectContextMenu.Add(UG_Automaker.FillWorldContextMenu)
+
+if not isClient() then return end
+
+local Commands = {}
+Commands.Automaker = {}
+
+Commands.Automaker.TakeMaterials = function( args)
+
+	UG_Automaker.takeMaterials( tonumber( args.MechanicType))
+end
+
+local function OnServerCommand( module, command, args)
+
+	if Commands[module] and Commands[module][command] then
+		Commands[module][command]( args)
+	end
+end
+
+Events.OnServerCommand.Add(OnServerCommand)

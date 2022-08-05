@@ -2,10 +2,7 @@ local Commands = {}
 Commands.Automaker = {}
 
 Commands.Automaker.CreateVehicle = function( player, args)
-
-	-- when true, the built vehicle will have all parts installed and set to 100% condition
-	-- when false, the vehicle will have all parts uninstalled.
-		
+	
 	if isClient() then return end
 	
 	local vehicle = addVehicleDebug( tostring( args.VehicleID), IsoDirections.E, nil, player:getSquare())
@@ -42,6 +39,10 @@ Commands.Automaker.CreateVehicle = function( player, args)
 
 		vehicle:setEngineFeature( PZMath.clamp(player:getPerkLevel( Perks.Mechanics) * 10 + (ZombRand(30) - 15), 50 , 100), vehicle:getEngineLoudness(), vehicle:getEnginePower())
 		
+		sendServerCommand( player, "Automaker", "TakeMaterials", { MechanicType=args.MechanicType})
+	else
+	
+		print( "Automaker Error:  No vehicle spawned for " .. tostring( player.getName()))
 	end
 end
 
