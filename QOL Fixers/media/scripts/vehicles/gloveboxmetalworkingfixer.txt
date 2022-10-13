@@ -1,0 +1,11 @@
+module Base
+{
+	fixing Fix Glove Box Welding
+	{
+		Require : GloveBox1;GloveBox2;GloveBox3,
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 10.0,
+
+		Fixer : SmallSheetMetal=1; MetalWelding=1;Mechanics=1,
+	}
+}
