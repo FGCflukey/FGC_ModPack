@@ -1,0 +1,146 @@
+module Base
+{
+
+	fixing Fix DG70 Front Window
+	{
+		Require : DG70FrontSideWindow3,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=1;Mechanics=2,
+		Fixer : Rubbercement=2;Mechanics=2,
+	}
+
+	fixing Fix DG70 Rear Window
+	{
+		Require : DG70RearSideWindow3,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=1;Mechanics=2,
+		Fixer : Rubbercement=2;Mechanics=2,
+	}
+
+	fixing Fix DG70 Windshield
+	{
+		Require : DG70Windshield3,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=2;MetalWelding=3;Mechanics=2,
+		Fixer : Rubbercement=2;MetalWelding=3;Mechanics=2,
+	}
+
+	fixing Fix DG70 Rear Windshield
+	{
+		Require : DG70WindshieldRear3,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=2;MetalWelding=3;Mechanics=2,
+		Fixer : Rubbercement=2;MetalWelding=3;Mechanics=2,
+	}
+
+	fixing Fix DG70 Seat
+	{
+		Require : DodgeFrontSeat3;DodgeRearSeat3,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=2;Tailoring=3;Mechanics=2,
+	}
+
+	fixing Fix DG70 Tire
+	{
+		Require : DodgeRTtire3,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=2;Tailoring=3;Mechanics=1,
+		Fixer : Rubbercement=2;Tailoring=3;Mechanics=1,
+	}
+
+	fixing Fix R32 Front Window
+	{
+		Require : R32FrontSideWindow3,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=1;Mechanics=2,
+		Fixer : Rubbercement=2;Mechanics=2,
+	}
+
+	fixing Fix R32 Rear Window
+	{
+		Require : R32RearSideWindow3,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=1;Mechanics=2,
+		Fixer : Rubbercement=2;Mechanics=2,
+	}
+
+	fixing Fix R32 Windshield
+	{
+		Require : R32Windshield3,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=2;MetalWelding=3;Mechanics=2,
+		Fixer : Rubbercement=2;MetalWelding=3;Mechanics=2,
+	}
+
+	fixing Fix R32 Rear Windshield
+	{
+		Require : R32WindshieldRear3,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=2;MetalWelding=3;Mechanics=2,
+		Fixer : Rubbercement=2;MetalWelding=3;Mechanics=2,
+	}
+
+	fixing Fix R32 Seat
+	{
+		Require : R32FrontSeat3;R32RearSeat3,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=2;Tailoring=3;Mechanics=2,
+	}
+
+	fixing Fix R32 Tire
+	{
+		Require : R32Tire0;R32Tire1;R32Tire2;R32TireA,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=2;Tailoring=3;Mechanics=1,
+		Fixer : Rubbercement=2;Tailoring=3;Mechanics=1,
+	}
+
+	fixing Fix McLarenF1 Side Window
+	{
+		Require : McLarenF1SideWindow3,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=1;Mechanics=2,
+		Fixer : Rubbercement=2;Mechanics=2,
+	}
+
+	fixing Fix McLarenF1 Windshield
+	{
+		Require : McLarenF1Windshield3,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=2;MetalWelding=3;Mechanics=2,
+		Fixer : Rubbercement=2;MetalWelding=3;Mechanics=2,
+	}
+
+	fixing Fix McLarenF1 Rear Windshield
+	{
+		Require : McLarenF1RearWindshield3,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=2;MetalWelding=3;Mechanics=2,
+		Fixer : Rubbercement=2;MetalWelding=3;Mechanics=2,
+	}
+
+	fixing Fix McLarenF1 Tire
+	{
+		Require : McLarenF1FrontWheel3;McLarenF1RearWheel3,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=2;Tailoring=3;Mechanics=1,
+		Fixer : Rubbercement=2;Tailoring=3;Mechanics=1,
+	}
+
+}
