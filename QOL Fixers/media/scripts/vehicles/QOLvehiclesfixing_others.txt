@@ -1,6 +1,8 @@
 module Base
 {
 
+    /************************ DG70 ************************/
+
 	fixing Fix DG70 Front Window
 	{
 		Require : DG70FrontSideWindow3,
@@ -53,6 +55,8 @@ module Base
 		Fixer : Superglue=2;Tailoring=3;Mechanics=1,
 		Fixer : Rubbercement=2;Tailoring=3;Mechanics=1,
 	}
+
+    /************************ R32 ************************/
 
 	fixing Fix R32 Front Window
 	{
@@ -107,6 +111,8 @@ module Base
 		Fixer : Rubbercement=2;Tailoring=3;Mechanics=1,
 	}
 
+    /************************ McLaren ************************/
+
 	fixing Fix McLarenF1 Side Window
 	{
 		Require : McLarenF1SideWindow3,
@@ -141,6 +147,43 @@ module Base
 
 		Fixer : Superglue=2;Tailoring=3;Mechanics=1,
 		Fixer : Rubbercement=2;Tailoring=3;Mechanics=1,
+	}
+
+    /************************ M911 ************************/
+
+	fixing Fix M911 Windshield
+	{
+		Require : M911Windshield2,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=2;MetalWelding=3;Mechanics=2,
+		Fixer : Rubbercement=2;MetalWelding=3;Mechanics=2,
+	}	
+	
+	fixing Fix M911 Rear Windshield
+	{
+		Require : M911WindshieldRear2,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=2;MetalWelding=3;Mechanics=2,
+		Fixer : Rubbercement=2;MetalWelding=3;Mechanics=2,
+	}	
+
+	fixing Fix M911 Side Window
+	{
+		Require : M911SideWindow2,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=1;Mechanics=2,
+		Fixer : Rubbercement=2;Mechanics=2,
+	}
+
+	fixing Fix USMIL Seat
+	{
+		Require : Seat0,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=2;Tailoring=3;Mechanics=2,
 	}
 
 }
