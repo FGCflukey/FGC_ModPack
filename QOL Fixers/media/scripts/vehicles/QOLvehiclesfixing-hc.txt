@@ -1,0 +1,229 @@
+module Base
+{
+
+    /************************ Hydrocraft compatible fixes ************************/
+	
+	fixing Fix Car seat
+	{
+			Require : NormalCarSeat1;BigCarSeat1;SportCarSeat1;NormalCarSeat2;BigCarSeat2;SportCarSeat2;NormalCarSeat3;BigCarSeat3;SportCarSeat3;NormalCarSeat8;BigCarSeat8;SportCarSeat8;M998CarSeat2,
+			ConditionModifier : 1.2,
+
+		 
+			Fixer : Hydrocraft.Superglue=2;Tailoring=3;Mechanics=1,
+			Fixer : Hydrocraft.Rubbercement=2;Tailoring=3;Mechanics=1,
+			Fixer : DuctTape=2;Tailoring=3;Mechanics=1,
+	}
+
+	fixing Fix Tire
+	{
+		   Require : OldTire1;NormalTire1;ModernTire1;OldTire2;NormalTire2;ModernTire2;OldTire3;NormalTire3;ModernTire3;OldTire8;NormalTire8;ModernTire8;V100Tire2;V100Tires2;V100SmallTires2;V100Axle2;V100AxleSmall2;V101Tire2,
+		   ConditionModifier : 1.2,
+
+		   Fixer : Hydrocraft.Superglue=2; Tailoring=3;Mechanics=1,
+		   Fixer : Hydrocraft.Rubbercement=2; Tailoring=3;Mechanics=1,
+	}
+
+	fixing Fix Window
+	{
+			Require : FrontWindow1;RearWindow1;FrontWindow2;RearWindow2;FrontWindow3;RearWindow3;FrontWindow8;RearWindow8;M998SideWindow2,
+			ConditionModifier : 1.2,
+
+			Fixer : Hydrocraft.Superglue=1;MetalWelding=3;Mechanics=2,
+			Fixer : Hydrocraft.Rubbercement=2;MetalWelding=3;Mechanics=2,
+	}
+
+	fixing Fix Windshield
+	{
+			Require : Windshield1;RearWindshield1;Windshield2;RearWindshield2;Windshield3;RearWindshield3;Windshield8;RearWindshield8;M998Windshield2,
+			ConditionModifier : 1.2,
+
+			Fixer : Hydrocraft.Superglue=2;MetalWelding=3;Mechanics=2,
+			Fixer : Hydrocraft.Rubbercement=2;MetalWelding=3;Mechanics=2,
+
+	}
+
+    /************************ DG70 ************************/
+
+	fixing Fix DG70 Front Window
+	{
+		Require : DG70FrontSideWindow3,
+		ConditionModifier : 1.2,
+
+		Fixer : Hydrocraft.Superglue=1;Mechanics=2,
+		Fixer : Hydrocraft.Rubbercement=2;Mechanics=2,
+	}
+
+	fixing Fix DG70 Rear Window
+	{
+		Require : DG70RearSideWindow3,
+		ConditionModifier : 1.2,
+
+		Fixer : Hydrocraft.Superglue=1;Mechanics=2,
+		Fixer : Hydrocraft.Rubbercement=2;Mechanics=2,
+	}
+
+	fixing Fix DG70 Windshield
+	{
+		Require : DG70Windshield3,
+		ConditionModifier : 1.2,
+
+		Fixer : Hydrocraft.Superglue=2;MetalWelding=3;Mechanics=2,
+		Fixer : Hydrocraft.Rubbercement=2;MetalWelding=3;Mechanics=2,
+	}
+
+	fixing Fix DG70 Rear Windshield
+	{
+		Require : DG70WindshieldRear3,
+		ConditionModifier : 1.2,
+
+		Fixer : Hydrocraft.Superglue=2;MetalWelding=3;Mechanics=2,
+		Fixer : Hydrocraft.Rubbercement=2;MetalWelding=3;Mechanics=2,
+	}
+
+	fixing Fix DG70 Seat
+	{
+		Require : DodgeFrontSeat3;DodgeRearSeat3,
+		ConditionModifier : 1.2,
+
+		Fixer : Hydrocraft.Superglue=2;Tailoring=3;Mechanics=2,
+	}
+
+	fixing Fix DG70 Tire
+	{
+		Require : DodgeRTtire3,
+		ConditionModifier : 1.2,
+
+		Fixer : Hydrocraft.Superglue=2;Tailoring=3;Mechanics=1,
+		Fixer : Hydrocraft.Rubbercement=2;Tailoring=3;Mechanics=1,
+	}
+
+    /************************ R32 ************************/
+
+	fixing Fix R32 Front Window
+	{
+		Require : R32FrontSideWindow3,
+		ConditionModifier : 1.2,
+
+		Fixer : Hydrocraft.Superglue=1;Mechanics=2,
+		Fixer : Hydrocraft.Rubbercement=2;Mechanics=2,
+	}
+
+	fixing Fix R32 Rear Window
+	{
+		Require : R32RearSideWindow3,
+		ConditionModifier : 1.2,
+
+		Fixer : Hydrocraft.Superglue=1;Mechanics=2,
+		Fixer : Hydrocraft.Rubbercement=2;Mechanics=2,
+	}
+
+	fixing Fix R32 Windshield
+	{
+		Require : R32Windshield3,
+		ConditionModifier : 1.2,
+
+		Fixer : Hydrocraft.Superglue=2;MetalWelding=3;Mechanics=2,
+		Fixer : Hydrocraft.Rubbercement=2;MetalWelding=3;Mechanics=2,
+	}
+
+	fixing Fix R32 Rear Windshield
+	{
+		Require : R32WindshieldRear3,
+		ConditionModifier : 1.2,
+
+		Fixer : Hydrocraft.Superglue=2;MetalWelding=3;Mechanics=2,
+		Fixer : Hydrocraft.Rubbercement=2;MetalWelding=3;Mechanics=2,
+	}
+
+	fixing Fix R32 Seat
+	{
+		Require : R32FrontSeat3;R32RearSeat3,
+		ConditionModifier : 1.2,
+
+		Fixer : Hydrocraft.Superglue=2;Tailoring=3;Mechanics=2,
+	}
+
+	fixing Fix R32 Tire
+	{
+		Require : R32Tire0;R32Tire1;R32Tire2;R32TireA,
+		ConditionModifier : 1.2,
+
+		Fixer : Hydrocraft.Superglue=2;Tailoring=3;Mechanics=1,
+		Fixer : Hydrocraft.Rubbercement=2;Tailoring=3;Mechanics=1,
+	}
+
+    /************************ McLaren ************************/
+
+	fixing Fix McLarenF1 Side Window
+	{
+		Require : McLarenF1SideWindow3,
+		ConditionModifier : 1.2,
+
+		Fixer : Hydrocraft.Superglue=1;Mechanics=2,
+		Fixer : Hydrocraft.Rubbercement=2;Mechanics=2,
+	}
+
+	fixing Fix McLarenF1 Windshield
+	{
+		Require : McLarenF1Windshield3,
+		ConditionModifier : 1.2,
+
+		Fixer : Hydrocraft.Superglue=2;MetalWelding=3;Mechanics=2,
+		Fixer : Hydrocraft.Rubbercement=2;MetalWelding=3;Mechanics=2,
+	}
+
+	fixing Fix McLarenF1 Rear Windshield
+	{
+		Require : McLarenF1RearWindshield3,
+		ConditionModifier : 1.2,
+
+		Fixer : Hydrocraft.Superglue=2;MetalWelding=3;Mechanics=2,
+		Fixer : Hydrocraft.Rubbercement=2;MetalWelding=3;Mechanics=2,
+	}
+
+	fixing Fix McLarenF1 Tire
+	{
+		Require : McLarenF1FrontWheel3;McLarenF1RearWheel3,
+		ConditionModifier : 1.2,
+
+		Fixer : Hydrocraft.Superglue=2;Tailoring=3;Mechanics=1,
+		Fixer : Hydrocraft.Rubbercement=2;Tailoring=3;Mechanics=1,
+	}
+
+    /************************ M911 ************************/
+
+	fixing Fix M911 Windshield
+	{
+		Require : M911Windshield2,
+		ConditionModifier : 1.2,
+
+		Fixer : Hydrocraft.Superglue=2;MetalWelding=3;Mechanics=2,
+		Fixer : Hydrocraft.Rubbercement=2;MetalWelding=3;Mechanics=2,
+	}	
+	
+	fixing Fix M911 Rear Windshield
+	{
+		Require : M911WindshieldRear2,
+		ConditionModifier : 1.2,
+
+		Fixer : Hydrocraft.Superglue=2;MetalWelding=3;Mechanics=2,
+		Fixer : Hydrocraft.Rubbercement=2;MetalWelding=3;Mechanics=2,
+	}	
+
+	fixing Fix M911 Side Window
+	{
+		Require : M911SideWindow2,
+		ConditionModifier : 1.2,
+
+		Fixer : Hydrocraft.Superglue=1;Mechanics=2,
+		Fixer : Hydrocraft.Rubbercement=2;Mechanics=2,
+	}
+
+	fixing Fix USMIL Seat
+	{
+		Require : Seat0,
+		ConditionModifier : 1.2,
+
+		Fixer : Hydrocraft.Superglue=2;Tailoring=3;Mechanics=2,
+	}
+}
