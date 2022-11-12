@@ -5,7 +5,7 @@ module Base
     {
        	Weight    			= 1,
 		CanStoreWater		= TRUE,
-	    	DisplayCategory 		= WaterContainer,
+	    DisplayCategory		= WaterContainer,
        	Type    			= Normal,
 		DisplayName     	= Canteen,
 		ReplaceOnUseOn		= WaterSource-MyCanteenfull,
@@ -19,7 +19,7 @@ module Base
 		IsWaterSource		= TRUE,
 		Weight				= 2,
 		CanStoreWater		= TRUE,
-	    	DisplayCategory 		= WaterContainer,
+		DisplayCategory 	= Water,
 		Type				= Drainable,
 		UseWhileEquipped	= FALSE,
 		IsCookable			= TRUE,
@@ -36,7 +36,7 @@ module Base
     {
 		Weight    			= 1,
 		CanStoreWater		= TRUE,
-	    	DisplayCategory 		= WaterContainer,
+		DisplayCategory 	= WaterContainer,
 		Type    			= Normal,
 		DisplayName         = Strapped Canteens,
 		ReplaceOnUseOn		= WaterSource-MyStrappedcanteenfull,
@@ -55,6 +55,7 @@ module Base
 		IsCookable			= TRUE,
 		UseDelta			= 0.035,
 		DisplayName			= Strapped Canteens with Water,
+		DisplayCategory 	= Water,
 		ReplaceOnDeplete	= MyStrappedcanteen,
 		ReplaceOnUseOn		= WaterSource-MyStrappedcanteenfull,
 		Icon				= MyStrappedcanteen,
@@ -76,7 +77,7 @@ module Base
 	item LightBulbSixPack
 	{
 		Weight				= 0.2,
-        	DisplayCategory 		= Electronics,
+		DisplayCategory 	= Electronics,
 		Type				= Drainable,
 		UseDelta 			= 0.15,
 		DisplayName			= LightBulbs 6-Pack,
@@ -87,7 +88,7 @@ module Base
 	item LightBulbTwelvePack
 	{
 		Weight				= 0.4,
-        	DisplayCategory 		= Electronics,
+        DisplayCategory 	= Electronics,
 		Type				= Drainable,
 		UseDelta 			= 0.08,
 		DisplayName			= LightBulbs 12-Pack,
@@ -108,7 +109,7 @@ module Base
 	item DoorHingesBox
 	{
 		Weight				= 0.5,
-	    	DisplayCategory 		= Material,
+	    DisplayCategory 	= Material,
 		Type				= Drainable,
 		UseDelta 			= 0.15,
 		DisplayName			= Package of 6 Door Hinges,
@@ -119,7 +120,7 @@ module Base
 	item DoorknobsBox
 	{
 		Weight				= 0.8,
-	    	DisplayCategory 		= Material,
+	    DisplayCategory 	= Material,
 		Type				= Drainable,
 		UseDelta 			= 0.25,
 		DisplayName			= Package of 4 Doorknobs,
@@ -129,18 +130,18 @@ module Base
 	
 	item PropaneTank
 	{
-	    DisplayCategory = Material,
-		Weight	=	10.0,
-		Type	=	Drainable,
-		UseWhileEquipped	=	FALSE,
-		UseDelta	=	0.125,
-		DisplayName	=	Propane Tank,
-		Icon	=	PropaneTank,
-		UseWorldItem = TRUE,
-		ScaleWorldIcon = 2.0,
-		WeightEmpty = 5.0,
-		KeepOnDeplete = true,
-		WorldStaticModel = PropaneTank,
+	    DisplayCategory 	= Material,
+		Weight				= 10.0,
+		Type				= Drainable,
+		UseWhileEquipped	= FALSE,
+		UseDelta			= 0.125,
+		DisplayName			= Propane Tank,
+		Icon				= PropaneTank,
+		UseWorldItem 		= TRUE,
+		ScaleWorldIcon 		= 2.0,
+		WeightEmpty 		= 5.0,
+		KeepOnDeplete 		= true,
+		WorldStaticModel 	= PropaneTank,
 	}
 
 	recipe Take LightBulb From Box

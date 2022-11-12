@@ -19,6 +19,16 @@ module Base
        Fixer : SmallSheetMetal=1;MetalWelding=2;,
 	   Fixer : ScrapMetal=1;MetalWelding=3;,
 	}
+
+	fixing Fix Wood Axe 
+	{
+	   Require : WoodAxe,
+	   GlobalItem : BlowTorch=5,
+	   ConditionModifier : 1.2,
+	   
+       Fixer : SmallSheetMetal=1;MetalWelding=2;,
+	   Fixer : ScrapMetal=1;MetalWelding=3;,
+	}
 	
 	fixing Fix Hunting Knife 
 	{
@@ -53,10 +63,26 @@ module Base
        Fixer : ScrapMetal=1;MetalWelding=3;,
 	}
 	
-	recipe Build An Axe
+	recipe Make Axe
 	{
-	   TreeBranch,
+	   TreeBranch/Plank,
 	   SmallSheetMetal=3,
+	   BlowTorch=5,
+	   keep Saw,
+	   keep WeldingMask,
+
+	   Result:Axe,
+	   SkillRequired:Woodwork=2;MetalWelding=2,
+	   Sound:Hammering,
+	   Time:200.0,
+	   Category:Carpentry,
+	   OnGiveXP:Give10MWXP,
+	}
+
+	recipe Make Wood Axe
+	{
+	   TreeBranch/Plank,
+	   SmallSheetMetal=4,
 	   BlowTorch=5,
 	   keep Saw,
 	   keep WeldingMask,
@@ -64,7 +90,7 @@ module Base
 	   Result:Axe,
 	   SkillRequired:Woodwork=4;MetalWelding=2,
 	   Sound:Hammering,
-	   Time:200.0,
+	   Time:400.0,
 	   Category:Carpentry,
 	   OnGiveXP:Give10MWXP,
 	}

@@ -3,6 +3,7 @@ module Base
 
     item Katana
     {
+        DisplayCategory = Weapon,
         MaxRange	=	1.4,
         WeaponSprite	=	Katana,
         MinAngle	=	0.8,
@@ -69,7 +70,7 @@ module Base
 	   Require : Katana,	
 	   
 	   Fixer   : SheetMetal=1,MetalWelding=2,
-	   Fixer   : ScrapMetal=2,MetalWelding=2,
+	   Fixer   : ScrapMetal=3,MetalWelding=2,
 	   Fixer   : Katana=1,
 
 	}

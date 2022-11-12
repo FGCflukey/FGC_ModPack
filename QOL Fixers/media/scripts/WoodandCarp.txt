@@ -437,45 +437,4 @@ module Base
 		Prop1:GardenSaw,
 		Prop2:Log,
 	}
-
-/************************ HC Conversions ************************/	
-
-	recipe Convert Lumbersaw to HC
-	{
-		destroy Sawlumber,
-		
-		Result:Hydrocraft.HCSawlumber,
-		Time:100,
-		Category:Carpentry,		
-	}
-
-	recipe Convert HC Lumbersaw to Base
-	{
-		destroy Hydrocraft.HCSawlumber,
-		
-		Result:Sawlumber,
-		Time:100,
-		Category:Carpentry,		
-	}
-
-	recipe Convert Sawbuck to HC
-	{
-		destroy Sawbuck,
-		
-		Result:Hydrocraft.HCSawbuck,
-	   	Sound:Hammering,
-		Time:100,
-		Category:Carpentry,		
-	}
-
-	recipe Convert HC Sawbuck to Base
-	{
-		destroy Hydrocraft.HCSawbuck,
-		
-		Result:Sawbuck,
-	   	Sound:Hammering,
-		Time:100,
-		Category:Carpentry,		
-	}
-
 }
