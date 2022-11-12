@@ -186,4 +186,50 @@ module Base
 		Fixer : Superglue=2;Tailoring=3;Mechanics=2,
 	}
 
+	fixing Fix U1550L Part
+	{
+		Require : U1550LBull2;U1550LDoor2;U1550LHood2;U1550LTrunkDoor2;U1550LGasTank2;U1550LMuffler2,
+		GlobalItem : BlowTorch=2,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
+	}
+
+	fixing Fix U1550L Window
+	{
+		Require : U1550LWindow2,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=1;Mechanics=2,
+		Fixer : Rubbercement=2;Mechanics=2,
+	}
+
+	fixing Fix U1550L Window 2
+	{
+		Require : U1550LWindshield2;U1550LRearWindow2,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=2;Mechanics=2,
+		Fixer : Rubbercement=2;Mechanics=2,
+	}
+
+	fixing Fix U1550L Seat
+	{
+		Require : U1550LSeat2,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=2;Mechanics=2,
+		Fixer : Rubbercement=2;Mechanics=2,
+	}
+
+	fixing Fix U1550L Wheel
+	{
+		Require : U1550LWheel2,
+		ConditionModifier : 1.2,
+
+		Fixer : Superglue=2;Mechanics=2,
+		Fixer : Rubbercement=2;Mechanics=2,
+	}
+	
 }
