@@ -171,7 +171,7 @@ module QOLfixers
 		OnGiveXP:Recipe.OnGiveXP.MyCooking5,
 	}
 
-    	recipe Make Mildew Spray
+    recipe Make Mildew Spray
 	{
 		farming.GardeningSprayEmpty,
 		Base.Milk/MySoymilk,
