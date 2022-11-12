@@ -45,7 +45,7 @@ module Autotsar
 	{
 		Require : ATAMustangBullbar3Item;ATAMustangBullbar1Item;ATAMustangBullbar2Item,
 		
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
@@ -56,7 +56,7 @@ module Autotsar
 	{
 		Require : ATAMustangProtectionWindowLeftItem;ATAMustangProtectionWindowRightItem;ATAMustangProtectionWindowFrontItem;ATAMustangProtectionWindowRearItem,
 		
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
@@ -67,7 +67,7 @@ module Autotsar
 	{
 		Require : ATAJeepBumper1Item;ATAJeepBumper2Item;ATAJeepBumper3Item;ATAJeepBumper4Item,
 		
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
@@ -78,7 +78,7 @@ module Autotsar
 	{
 		Require : ATAJeepProtectionWindowItem;ATAJeepProtectionWindowFrontItem;ATAJeepProtectionWindowRearItem,
 		
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
@@ -89,7 +89,7 @@ module Autotsar
 	{
 		Require : ATAJeepRoofBaseItem;ATAJeepInteractiveTrunkRoofRackItem,
 		
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
@@ -100,7 +100,7 @@ module Autotsar
 	{
 		Require : ATAJeepInteractiveTrunkWheelRackItem,
 		
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
@@ -111,7 +111,7 @@ module Autotsar
 	{
 		Require : ATAPetyarbuiltProtectionSleeperItem,
 		
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
@@ -122,7 +122,7 @@ module Autotsar
 	{
 		Require : ATAPetyarbuiltProtectionRearWheelsItem,
 		
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
@@ -133,7 +133,7 @@ module Autotsar
 	{
 		Require : ATAPetyarbuiltProtectionGasTankItem,
 		
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
@@ -144,7 +144,7 @@ module Autotsar
 	{
 		Require : ATAPetyarbuiltProtectionSideItem,
 		
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
@@ -155,7 +155,7 @@ module Autotsar
 	{
 		Require : ATAPetyarbuiltProtectionSideFrontItem,
 		
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
@@ -166,7 +166,7 @@ module Autotsar
 	{
 		Require : ATAPetyarbuiltProtectionSideTopItem,
 		
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
@@ -177,7 +177,7 @@ module Autotsar
 	{
 		Require : ATADodgeRoofRackItem,
 		
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
@@ -188,7 +188,7 @@ module Autotsar
 	{
 		Require : ATADodgeWindowRackItem,
 		
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
@@ -199,7 +199,7 @@ module Autotsar
 	{
 		Require : ATADodgeBullbar1Item;ATADodgeBullbar2Item;ATADodgeBullbar3Item,
 		
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
@@ -210,7 +210,7 @@ module Autotsar
 	{
 		Require : ATADodgeProtectionWindowSideItem;ATADodgeProtectionWindowFrontItem,
 		
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
@@ -221,7 +221,7 @@ module Autotsar
 	{
 		Require : ATABusRoofRack,
 		
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
@@ -232,7 +232,7 @@ module Autotsar
 	{
 		Require : ATABusRoofBoxItem,
 		
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
@@ -243,7 +243,7 @@ module Autotsar
 	{
 		Require : ATABusKengur1Item;ATABusKengur2Item;ATABusKengur3Item,
 		
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
@@ -254,7 +254,7 @@ module Autotsar
 	{
 		Require : ATABusProtectionDoorItem;ATABusProtectionDoorRearItem,
 		
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
@@ -265,7 +265,7 @@ module Autotsar
 	{
 		Require : ATABusProtectionWheelsItem,
 		
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
@@ -276,7 +276,7 @@ module Autotsar
 	{
 		Require : ATABusProtectionWindowsFrontItem;ATABusProtectionWindowsRightItem;ATABusProtectionWindowsLeftItem,
 		
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
@@ -286,7 +286,7 @@ module Autotsar
 	recipe Convert Tire To BMW Tire
 	{
 		NormalTire1,
-		BlowTorch=5,
+		BlowTorch=2,
 		
 		Result:ATAMotoBMWNormalTire,
 		CanBeDoneFromFloor:true,
@@ -297,7 +297,7 @@ module Autotsar
 	recipe Convert Tire To BMW Tire
 	{
 		ModernTire1,
-		BlowTorch=5,
+		BlowTorch=2,
 		
 		Result:ATAMotoBMWModernTire,
 		CanBeDoneFromFloor:true,
@@ -308,7 +308,7 @@ module Autotsar
 	recipe Convert Tire To BMW Tire
 	{
 		OldTire1,
-		BlowTorch=5,
+		BlowTorch=2,
 		
 		Result:ATAMotoBMWOldTire,
 		CanBeDoneFromFloor:true,
@@ -319,7 +319,7 @@ module Autotsar
 	recipe Convert Tire To Harley Tire
 	{
 		NormalTire1,
-		BlowTorch=5,
+		BlowTorch=2,
 		
 		Result:ATAMotoHarleyNormalTire,
 		CanBeDoneFromFloor:true,
@@ -330,7 +330,7 @@ module Autotsar
 	recipe Convert Tire To Harley Tire
 	{
 		ModernTire1,
-		BlowTorch=5,
+		BlowTorch=2,
 		
 		Result:ATAMotoHarleyModernTire,
 		CanBeDoneFromFloor:true,
@@ -341,7 +341,7 @@ module Autotsar
 	recipe Convert Tire To Harley Tire
 	{
 		OldTire1,
-		BlowTorch=5,
+		BlowTorch=2,
 		
 		Result:ATAMotoHarleyOldTire,
 		CanBeDoneFromFloor:true,
