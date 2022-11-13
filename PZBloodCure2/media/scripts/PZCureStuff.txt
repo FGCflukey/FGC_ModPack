@@ -10,8 +10,8 @@ module Base
 	   	UseForPoison 			= 15,
 		PoisonDetectionLevel 	= 7,
 		Weight					= 1,
-		DaysFresh 				= 1,
-		DaysTotallyRotten 		= 2,
+		DaysFresh 				= 3,
+		DaysTotallyRotten 		= 5,
 		OnEat 					= OnEat_ZombieMeat,
 		Tooltip 				= Tooltip_ZombieMeat,
 	}
