@@ -79,7 +79,8 @@ function ISDissectCorpseAction:perform()
 	local ZombieMeat = nil;
 	for i=1,10 do
 		ZombieMeat = instanceItem("Base.ZombieMeat");
-		ZombieMeat:setAge(ZombieMeat:getOffAgeMax());
+--		ZombieMeat:setAge(ZombieMeat:getOffAgeMax());
+		ZombieMeat:setAge( 0.0);
 		ZombieMeat:setHungChange(-0.5001);
 --		ZombieMeat:setCompostTime(40000);
 		ZombieMeat:setCompostTime(0.8 * CompostHours);
