@@ -1,0 +1,18 @@
+module BMSATM
+{
+	imports
+	{
+		Base
+	}
+
+    sound BMSATM_ATM_BEEP
+    {
+        category = UI,
+        clip
+        {
+            file = media/sound/ATM_BEEP.ogg,
+            distanceMax = 5, 
+            volume = 1.0,
+        }
+    }
+}

@@ -1,0 +1,16 @@
+ItemName_RU = {
+	ItemName_BMSATM.1Dollar = "1 Доллар",
+	ItemName_BMSATM.2Dollar = "2 Доллара",
+	ItemName_BMSATM.5Dollar = "5 Долларов",
+	ItemName_BMSATM.10Dollar = "10 Долларов",
+	ItemName_BMSATM.20Dollar = "20 Долларов",
+	ItemName_BMSATM.50Dollar = "50 Долларов",
+	ItemName_BMSATM.100Dollar = "100 Долларов",
+	ItemName_BMSATM.1KDollar = "1 тыс. Долларов",
+	ItemName_BMSATM.2KDollar = "2 тыс. Долларов",
+	ItemName_BMSATM.5KDollar = "5 тыс. Долларов",
+	ItemName_BMSATM.10KDollar = "10 тыс. Долларов",
+	ItemName_BMSATM.20KDollar = "20 тыс. Долларов",
+	ItemName_BMSATM.50KDollar = "50 тыс. Долларов",
+	ItemName_BMSATM.100KDollar = "100 тыс. Долларов"
+}
