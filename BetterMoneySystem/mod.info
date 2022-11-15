@@ -1,0 +1,6 @@
+name=Better money system and working ATM
+id=BetterMoneySystem
+description=Money system and working ATM for MP
+poster=poster.png
+pack=ATMTiles
+tiledef=ATMTiles 2048
