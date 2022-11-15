@@ -134,7 +134,7 @@ module Base
 		Weight				= 10.0,
 		Type				= Drainable,
 		UseWhileEquipped	= FALSE,
-		UseDelta			= 0.125,
+		UseDelta			= 0.0625,
 		DisplayName			= Propane Tank,
 		Icon				= PropaneTank,
 		UseWorldItem 		= TRUE,
