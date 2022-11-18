@@ -351,7 +351,7 @@ module Autotsar
 
 	recipe Make BMW Moto Bag Left-Side
 	{
-		destroy Handbag/Purse,
+		destroy Handbag/Purse/Bag_Satchel,
 		destroy LeatherStrips=5,
 		Thread=5,
 		keep Scissors,
@@ -364,7 +364,7 @@ module Autotsar
 
 	recipe Make BMW Moto Bag Right-Side
 	{
-		destroy Handbag/Purse,
+		destroy Handbag/Purse/Bag_Satchel,
 		destroy LeatherStrips=5,
 		Thread=5,
 		keep Scissors,
@@ -377,7 +377,7 @@ module Autotsar
 
 	recipe Make Harley Moto Bag Left-Side
 	{
-		destroy Handbag/Purse,
+		destroy Handbag/Purse/Bag_Satchel,
 		destroy LeatherStrips=5,
 		Thread=5,
 		keep Scissors,
@@ -390,7 +390,7 @@ module Autotsar
 
 	recipe Make Harley Moto Bag Holster
 	{
-		destroy Handbag/Purse,
+		destroy Handbag/Purse/Bag_Satchel,
 		destroy LeatherStrips=5,
 		Thread=5,
 		keep Scissors,

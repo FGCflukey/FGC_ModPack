@@ -430,4 +430,14 @@ module Base
        Prop2:CDplayer,
     }
 
+	recipe Rip Belt into Strips
+	{
+		destroy Belt/Belt2,
+		keep Scissors,
+		
+		Result:LeatherStrips=2,
+		CanBeDoneFromFloor:true,
+		Time:100.0,	
+	}
+
 }
