@@ -281,46 +281,46 @@ module Base
 	fixing Fix E150 Hood Fur
 	{
 	   Require : E150HoodFur,
-	   GlobalItem : Superglue=1,
+	   GlobalItem : UpholsteryKit=2,
 	   ConditionModifier : 1.2,
 
-      Fixer : Thread=4;RippedSheets=2;Tailoring=3;Mechanics=2,
+      Fixer : Thread=4;Superglue=2;Tailoring=3;Mechanics=2,
 	}
 
 	fixing Fix E150 Trunk Doors Fur
 	{
 	   Require : E150TrunkDoorFur,
-	   GlobalItem : Superglue=1,
+	   GlobalItem : UpholsteryKit=2,
 	   ConditionModifier : 1.2,
 
-      Fixer : Thread=4;RippedSheets=2;Tailoring=3;Mechanics=2,
+      Fixer : Thread=4;Superglue=2;Tailoring=3;Mechanics=2,
 	}
 
 	fixing Fix E150 Door Fur
 	{
 	   Require : E150DoorFur,
-	   GlobalItem : Superglue=1,
+	   GlobalItem : UpholsteryKit=2,
 	   ConditionModifier : 1.2,
 
-      Fixer : Thread=4;RippedSheets=2;Tailoring=3;Mechanics=2,
+      Fixer : Thread=4;Superglue=2;Tailoring=3;Mechanics=2,
 	}
 	
 	fixing Fix E150 Chassis Fur
 	{
 	   Require : E150ChassisFur,
-	   GlobalItem : Superglue=1,
+	   GlobalItem : UpholsteryKit=2,
 	   ConditionModifier : 1.2,
 
-      Fixer : Thread=4;RippedSheets=2;Tailoring=3;Mechanics=2,
+      Fixer : Thread=4;Superglue=2;Tailoring=3;Mechanics=2,
 	}
 	
 	fixing Fix E150 Rear Leg
 	{
 	   Require : E150LegFur,
-	   GlobalItem : Superglue=1,
+	   GlobalItem : UpholsteryKit=2,
 	   ConditionModifier : 1.2,
 
-      Fixer : Thread=4;RippedSheets=2;Tailoring=3;Mechanics=2,
+      Fixer : Thread=4;Superglue=2;Tailoring=3;Mechanics=2,
 	}	
 
 	fixing Fix 80S Tire
