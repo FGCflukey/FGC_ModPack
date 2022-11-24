@@ -271,7 +271,7 @@ module Base
 
 	fixing Fix E150 Side Window
 	{
-	   Require : E150RearWindshield2,
+	   Require : E150SideWindow2,
 	   ConditionModifier : 1.2,
 
       Fixer : Superglue=1;Mechanics=2,
