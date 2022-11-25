@@ -1,0 +1,16 @@
+ItemName_EN = {
+	ItemName_BMSATM.1Dollar = "1 Dollar",
+	ItemName_BMSATM.2Dollar = "2 Dollars",
+	ItemName_BMSATM.5Dollar = "5 Dollars",
+	ItemName_BMSATM.10Dollar = "10 Dollars",
+	ItemName_BMSATM.20Dollar = "20 Dollars",
+	ItemName_BMSATM.50Dollar = "50 Dollars",
+	ItemName_BMSATM.100Dollar = "100 Dollars",
+	ItemName_BMSATM.1KDollar = "1K Dollars",
+	ItemName_BMSATM.2KDollar = "2K Dollars",
+	ItemName_BMSATM.5KDollar = "5K Dollars",
+	ItemName_BMSATM.10KDollar = "10K Dollars",
+	ItemName_BMSATM.20KDollar = "20K Dollars",
+	ItemName_BMSATM.50KDollar = "50K Dollars",
+	ItemName_BMSATM.100KDollar = "100K Dollars"
+}

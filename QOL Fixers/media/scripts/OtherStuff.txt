@@ -134,7 +134,7 @@ module Base
 		Weight				= 10.0,
 		Type				= Drainable,
 		UseWhileEquipped	= FALSE,
-		UseDelta			= 0.125,
+		UseDelta			= 0.0125,
 		DisplayName			= Propane Tank,
 		Icon				= PropaneTank,
 		UseWorldItem 		= TRUE,
@@ -142,6 +142,7 @@ module Base
 		WeightEmpty 		= 5.0,
 		KeepOnDeplete 		= true,
 		WorldStaticModel 	= PropaneTank,
+        cantBeConsolided 	= TRUE,
 	}
 
 	recipe Take LightBulb From Box
@@ -429,5 +430,15 @@ module Base
        Prop1:Screwdriver,
        Prop2:CDplayer,
     }
+
+	recipe Rip Belt into Strips
+	{
+		destroy Belt/Belt2,
+		keep Scissors,
+		
+		Result:LeatherStrips=2,
+		CanBeDoneFromFloor:true,
+		Time:100.0,	
+	}
 
 }

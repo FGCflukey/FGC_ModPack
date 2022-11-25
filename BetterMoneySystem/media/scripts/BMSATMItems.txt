@@ -1,0 +1,175 @@
+module BMSATM
+{
+	imports
+	{
+		Base
+	}
+
+    model moneyStack
+	{
+		mesh = moneyStack,
+		texture = moneyStack,
+		scale = 1,
+	}
+
+    model moneyStacks
+	{
+		mesh = moneyStacks,
+		texture = moneyStack,
+		scale = 1,
+	}
+
+    item 1Dollar
+    {
+        DisplayCategory = Material,
+        Weight	=	0.001,
+        Type	=	Normal,
+        DisplayName	=	1 Dollar,
+        Icon	=	Money,
+        WorldStaticModel = Money,
+        Tags = Money,
+    }
+
+    item 2Dollar
+    {
+        DisplayCategory = Material,
+        Weight	=	0.001,
+        Type	=	Normal,
+        DisplayName	=	2 Dollars,
+        Icon	=	Money,
+        WorldStaticModel = Money,
+        Tags = Money,
+    }
+
+    item 5Dollar
+    {
+        DisplayCategory = Material,
+        Weight	=	0.001,
+        Type	=	Normal,
+        DisplayName	=	5 Dollars,
+        Icon	=	Money,
+        WorldStaticModel = Money,
+        Tags = Money,
+    }
+
+    item 10Dollar
+    {
+        DisplayCategory = Material,
+        Weight	=	0.001,
+        Type	=	Normal,
+        DisplayName	=	10 Dollars,
+        Icon	=	Money,
+        WorldStaticModel = Money,
+        Tags = Money,
+    }
+
+    item 20Dollar
+    {
+        DisplayCategory = Material,
+        Weight	=	0.001,
+        Type	=	Normal,
+        DisplayName	=	20 Dollars,
+        Icon	=	Money,
+        WorldStaticModel = Money,
+        Tags = Money,
+    }
+
+    item 50Dollar
+    {
+        DisplayCategory = Material,
+        Weight	=	0.001,
+        Type	=	Normal,
+        DisplayName	=	50 Dollars,
+        Icon	=	Money,
+        WorldStaticModel = Money,
+        Tags = Money,
+    }
+
+    item 100Dollar
+    {
+        DisplayCategory = Material,
+        Weight	=	0.001,
+        Type	=	Normal,
+        DisplayName	=	100 Dollars,
+        Icon	=	Money,
+        WorldStaticModel = Money,
+        Tags = Money,
+    }
+
+    item 1KDollar
+    {
+        DisplayCategory = Material,
+        Weight	=	0.01,
+        Type	=	Normal,
+        DisplayName	=	1K Dollars,
+        Icon	=	Money,
+        WorldStaticModel = moneyStack,
+        Tags = Money,
+    }
+
+    item 2KDollar
+    {
+        DisplayCategory = Material,
+        Weight	=	0.02,
+        Type	=	Normal,
+        DisplayName	=	2K Dollars,
+        Icon	=	Money,
+        WorldStaticModel = moneyStack,
+        Tags = Money,
+    }
+
+    item 5KDollar
+    {
+        DisplayCategory = Material,
+        Weight	=	0.05,
+        Type	=	Normal,
+        DisplayName	=	5K Dollars,
+        Icon	=	Money,
+        WorldStaticModel = moneyStacks,
+        Tags = Money,
+    }
+
+    item 10KDollar
+    {
+        DisplayCategory = Material,
+        Weight	=	0.1,
+        Type	=	Normal,
+        DisplayName	=	10K Dollars,
+        Icon	=	Money,
+        WorldStaticModel = moneyStacks,
+        Tags = Money,
+    }
+
+    item 20KDollar
+    {
+        DisplayCategory = Material,
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	20K Dollars,
+        Icon	=	Money,
+        WorldStaticModel = moneyStacks,
+        Tags = Money,
+    }
+
+    item 50KDollar
+    {
+        DisplayCategory = Material,
+        Weight	=	0.5,
+        Type	=	Normal,
+        DisplayName	=	50K Dollars,
+        Icon	=	Money,
+        WorldStaticModel = moneyStacks,
+        Tags = Money,
+    }
+
+    item 100KDollar
+    {
+        DisplayCategory = Material,
+        Weight	=	1.0,
+        Type	=	Normal,
+        DisplayName	=	100K Dollars,
+        Icon	=	Money,
+        WorldStaticModel = moneyStacks,
+        Tags = Money,
+    }
+}

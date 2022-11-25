@@ -231,5 +231,148 @@ module Base
 		Fixer : Superglue=2;Mechanics=2,
 		Fixer : Rubbercement=2;Mechanics=2,
 	}
+
+    /************************ J10 and 80s Truck ************************/
+
+	fixing Fix E150 Tire
+	{
+	   Require : E150Tire2,
+	   ConditionModifier : 1.2,
+
+      Fixer : Superglue=2;Mechanics=2,
+      Fixer : Rubbercement=2;Mechanics=2,
+	}
 	
+	fixing Fix E150 Seat
+	{
+	   Require : E150CarSeat2,
+	   ConditionModifier : 1.2,
+
+       Fixer : Superglue=2;Mechanics=1,
+	}
+
+	fixing Fix E150 Windshield
+	{
+	   Require : E150Windshield2,
+	   ConditionModifier : 1.2,
+
+      Fixer : Superglue=2;Mechanics=2,
+      Fixer : Rubbercement=2;Mechanics=2,
+	}
+
+	fixing Fix E150 Rear Windshield
+	{
+	   Require : E150RearWindshield2,
+	   ConditionModifier : 1.2,
+
+      Fixer : Superglue=2;Mechanics=2,
+      Fixer : Rubbercement=2;Mechanics=2,
+	}
+
+	fixing Fix E150 Side Window
+	{
+	   Require : E150SideWindow2,
+	   ConditionModifier : 1.2,
+
+      Fixer : Superglue=1;Mechanics=2,
+      Fixer : Rubbercement=1;Mechanics=2,
+	}
+
+	fixing Fix E150 Hood Fur
+	{
+	   Require : E150HoodFur,
+	   GlobalItem : UpholsteryKit=2,
+	   ConditionModifier : 1.2,
+
+      Fixer : Thread=4;Superglue=2;Tailoring=3;Mechanics=2,
+	}
+
+	fixing Fix E150 Trunk Doors Fur
+	{
+	   Require : E150TrunkDoorFur,
+	   GlobalItem : UpholsteryKit=2,
+	   ConditionModifier : 1.2,
+
+      Fixer : Thread=4;Superglue=2;Tailoring=3;Mechanics=2,
+	}
+
+	fixing Fix E150 Door Fur
+	{
+	   Require : E150DoorFur,
+	   GlobalItem : UpholsteryKit=2,
+	   ConditionModifier : 1.2,
+
+      Fixer : Thread=4;Superglue=2;Tailoring=3;Mechanics=2,
+	}
+	
+	fixing Fix E150 Chassis Fur
+	{
+	   Require : E150ChassisFur,
+	   GlobalItem : UpholsteryKit=2,
+	   ConditionModifier : 1.2,
+
+      Fixer : Thread=4;Superglue=2;Tailoring=3;Mechanics=2,
+	}
+	
+	fixing Fix E150 Rear Leg
+	{
+	   Require : E150LegFur,
+	   GlobalItem : UpholsteryKit=2,
+	   ConditionModifier : 1.2,
+
+      Fixer : Thread=4;Superglue=2;Tailoring=3;Mechanics=2,
+	}	
+
+	fixing Fix 80S Tire
+	{
+	   Require : 80sOffroadTireA,
+	   ConditionModifier : 1.2,
+
+      Fixer : Superglue=2;Mechanics=2,
+      Fixer : Rubbercement=2;Mechanics=2,
+	}
+	
+	fixing Fix JP82 Seat
+	{
+	   Require : E150CarSeat2,
+	   ConditionModifier : 1.2,
+
+       Fixer : Superglue=2;Mechanics=1,
+	}
+
+	fixing Fix JP82 Windshield
+	{
+	   Require : 82JeepJ10Windshield2,
+	   ConditionModifier : 1.2,
+
+      Fixer : Superglue=2;Mechanics=2,
+      Fixer : Rubbercement=2;Mechanics=2,
+	}
+
+	fixing Fix JP82 Rear Windshield
+	{
+	   Require : 82JeepJ10WindshieldRear2,
+	   ConditionModifier : 1.2,
+
+      Fixer : Superglue=2;Mechanics=2,
+      Fixer : Rubbercement=2;Mechanics=2,
+	}
+
+	fixing Fix JP82 Side Window
+	{
+	   Require : 82JeepJ10WindowSide2,
+	   ConditionModifier : 1.2,
+
+      Fixer : Superglue=1;Mechanics=2,
+      Fixer : Rubbercement=1;Mechanics=2,
+	}
+
+	fixing Fix 80S Seat
+	{
+	   Require : 80sPickupSeatFront2;80sPickupSeatRear2,
+	   ConditionModifier : 1.2,
+
+      Fixer : Superglue=1;Mechanics=2,
+      Fixer : Rubbercement=1;Mechanics=2,
+	}
 }
