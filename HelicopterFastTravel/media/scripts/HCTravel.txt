@@ -1,0 +1,137 @@
+module Base
+{
+
+/************************ Travel Money Package ************************/
+/************************ $500 - Travel Money Package Recipes ************************/
+
+	recipe Make Travel Request Money Bundle
+	{
+		BMSATM.100Dollar=5,
+		
+		Result:HCMoneyBundle,
+		CanBeDoneFromFloor:true,		
+		Time:500.0
+	}
+		recipe Make Travel Request Money Bundle
+		{
+			BMSATM.50Dollar=10,
+			
+			Result:HCMoneyBundle,
+			CanBeDoneFromFloor:true,		
+			Time:500.0
+		}
+		
+		recipe Make Travel Request Money Bundle
+		{
+			BMSATM.20Dollar=25,
+			
+			Result:HCMoneyBundle,
+			CanBeDoneFromFloor:true,		
+			Time:500.0
+		}
+		
+		recipe Make Travel Request Money Bundle
+		{
+			BMSATM.10Dollar=50,
+			
+			Result:HCMoneyBundle,
+			CanBeDoneFromFloor:true,		
+			Time:500.0
+		}
+		
+		recipe Make Travel Request Money Bundle
+		{
+			BMSATM.5Dollar=100,
+			
+			Result:HCMoneyBundle,
+			CanBeDoneFromFloor:true,		
+			Time:500.0
+		}				
+
+/************************ Travel Request Package ************************/
+
+	recipe Make Travel Request Package
+	{
+		destroy HCMoneyBundle,
+		destroy MuldraughMap/WestpointMap/RiversideMap/RosewoodMap/MarchRidgeMap,
+		destroy SheetPaper2=2,
+		DuctTape=2,
+		
+		Result:HCTravelPackage,
+		Time:500.0,
+	}
+
+/************************ Travel Destinations ************************/
+
+		recipe Travel to Muldraugh
+		{
+			destroy HCTravelPackage,
+			
+			Result:WestpointMap,
+			RemoveResultItem:true,
+			CanBeDoneFromFloor:true,
+			Time:500.0,
+			OnCreate:travelToMuld,
+			Sound:chopper,
+		}
+		
+		recipe Travel to Ekron
+		{	
+			destroy HCTravelPackage,
+			
+			Result:WestpointMap,
+			RemoveResultItem:true,
+			CanBeDoneFromFloor:true,
+			Time:500.0,
+			OnCreate:travelToEkron,
+			Sound:chopper,
+		}
+
+		recipe Travel to Riverside
+		{	
+			destroy HCTravelPackage,
+			
+			Result:WestpointMap,
+			RemoveResultItem:true,
+			CanBeDoneFromFloor:true,
+			Time:500.0,
+			OnCreate:travelToRS,
+			Sound:chopper,
+		}
+
+		recipe Travel to West Point
+		{	
+			destroy HCTravelPackage,
+			
+			Result:WestpointMap,
+			RemoveResultItem:true,
+			CanBeDoneFromFloor:true,
+			Time:500.0,
+			OnCreate:travelToWPD,
+			Sound:chopper,
+		}
+
+		recipe Travel to Rosewood
+		{	
+			destroy HCTravelPackage,
+			
+			Result:WestpointMap,
+			RemoveResultItem:true,
+			CanBeDoneFromFloor:true,
+			Time:500.0,
+			OnCreate:travelToRW,
+			Sound:chopper,
+		}
+
+		recipe Travel to March Ridge
+		{	
+			destroy HCTravelPackage,
+			
+			Result:WestpointMap,
+			RemoveResultItem:true,
+			CanBeDoneFromFloor:true,
+			Time:500.0,
+			OnCreate:travelToMR,
+			Sound:chopper,
+		}
+}
