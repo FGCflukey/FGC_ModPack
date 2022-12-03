@@ -4,7 +4,7 @@ module Base
 	item Superglue
 	{
 		Type					= Drainable,
-		UseDelta				= 0.2,
+		UseDelta				= 0.04,
 		UseWhileEquipped		= FALSE,
 		DisplayName				= Super Glue,
 		Icon					= Superglue,
@@ -15,7 +15,7 @@ module Base
 	item Rubbercement
     {
 		Type	            	= Drainable,
-		UseDelta	        	= 0.2,
+		UseDelta	        	= 0.04,
 		UseWhileEquipped		= FALSE,
 		DisplayName				= Rubber Cement,
 		Icon					= Rubbercement,
@@ -54,7 +54,7 @@ module Base
 	{
 		DisplayCategory     	= Material,
         Type	            	= Drainable,
-        UseDelta	        	= 0.04,
+        UseDelta	        	= 0.05,
         UseWhileEquipped		= FALSE,
 		DisplayName	        	= Upholstery Repair Kit,
         Icon					= CarSewingKit,
