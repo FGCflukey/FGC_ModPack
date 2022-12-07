@@ -441,4 +441,18 @@ module Base
 		Time:100.0,	
 	}
 
+    recipe Make Wire
+    {
+        ScrapMetal=1,
+        BlowTorch=1,
+		keep Screwdriver,
+        keep WeldingMask,
+		
+		Result:Wire,
+		Time:100.0,
+        Category:Electrical,
+		SkillRequired:Electricity=1,
+		OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
+    },
+
 }
