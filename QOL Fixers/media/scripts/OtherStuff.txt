@@ -455,4 +455,49 @@ module Base
 		OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
     },
 
+	recipe Make 25 Nails ALT
+	{
+		SmallSheetMetal=1,
+		keep BlowTorch,
+		
+		Result:Nails=5,
+		Time:60,
+		AnimNode:Disassemble,
+		Category:Crafting,
+	}
+
+	recipe Make 25 Screws
+	{
+		SmallSheetMetal=1,
+		keep BlowTorch,
+		
+		Result:Screws=5,
+		Time:60,
+		AnimNode:Disassemble,
+		Category:Crafting,
+	}
+
+	recipe Make 100 Nails
+	{
+		SheetMetal=1,
+		keep BlowTorch,
+		
+		Result:Nails=20,
+		Time:60,
+		AnimNode:Disassemble,
+		Category:Crafting,
+	}
+
+	recipe Make 100 Screws
+	{
+		SheetMetal=1,
+		keep BlowTorch,
+		keep Screwdriver,
+		
+		Result:Screws=20,
+		Time:60,
+		AnimNode:Disassemble,
+		Category:Crafting,
+	}
+
 }
