@@ -333,24 +333,26 @@ module Base
 	recipe Scrap Small Metal Sheet
 	{
 		SmallSheetMetal=1,
-		keep Saw/GardenSaw,
+		keep [Recipe.GetItemTypes.Saw],
 		
 		Result:ScrapMetal=2,
 		Time:60,
 		Category:Welding,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding2,
+		Sound:Sawing,
 		AnimNode:Disassemble,
 	}
 	
 	recipe Scrap Metal Sheet
 	{
 		SheetMetal=1,
-		keep Saw/GardenSaw,
+		keep [Recipe.GetItemTypes.Saw],
 		
 		Result:ScrapMetal=4,
 		Time:60,
 		Category:Welding,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding2,
+		Sound:Sawing,
 		AnimNode:Disassemble,
 	}
 	
@@ -548,6 +550,7 @@ module Base
 		Time: 60,
 		Category:Welding,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding2,
+		Sound:Dismantle,
 		AnimNode:Disassemble,
 	}
 
@@ -562,6 +565,7 @@ module Base
 		Time: 120,
 		Category:Welding,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding2,
+		Sound:Dismantle,
 		AnimNode:Disassemble,
 	}
 
@@ -586,14 +590,16 @@ module Base
     {
         ScrapMetal=1,
         BlowTorch=1,
-		keep Screwdriver,
-        keep WeldingMask,
+		keep [Recipe.GetItemTypes.Screwdriver],
+		keep [Recipe.GetItemTypes.WeldingMask],
 		
 		Result:Wire,
-		Time:100.0,
+		Time:100,
         Category:Electrical,
 		SkillRequired:Electricity=1,
 		OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
+		Sound:Dismantle,
+		AnimNode:Disassemble,
     }
 
 	recipe Make Barbed Wire from Wire
@@ -602,12 +608,14 @@ module Base
 		Wire=2,
 		
 		Result:BarbedWire,
-		Time:500.0,
+		Time:200,
 		Category:Carpentry,
 		NeedToBeLearn:false,
 		CanBeDoneFromFloor:true,
 		SkillRequired:Electricity=1;MetalWelding=2,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+		Sound:Hammering,
+		AnimNode:Disassemble,
 	}
 	
 	recipe Make Sewing Needle
@@ -616,12 +624,14 @@ module Base
 		Nails/Tweezers,
 		
 		Result:Needle,
-		Time:100.0,
+		Time:60,
 		Category:Tailoring,
 		NeedToBeLearn:false,
 		CanBeDoneFromFloor:true,
 		SkillRequired:Woodwork=1;Tailoring=1,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+		Sound:Hammering,
+		AnimNode:Disassemble,
 	}
 	
 	recipe Make Suture Needle
@@ -630,12 +640,14 @@ module Base
 		Nails/Tweezers,
 		
 		Result:SutureNeedle,
-		Time:100.0,
+		Time:60,
 		Category:Tailoring,
 		NeedToBeLearn:false,
 		CanBeDoneFromFloor:true,
 		SkillRequired:Woodwork=1;Tailoring=1,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+		Sound:Hammering,
+		AnimNode:Disassemble,
 	}
 
 }
