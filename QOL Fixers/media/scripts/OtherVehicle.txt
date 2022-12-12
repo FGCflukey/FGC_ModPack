@@ -70,6 +70,60 @@ module Base
         BreakSound					= BreakMetalItem,
  	}
 	
+	recipe Gain Broken Glass Shards (Junk)
+	{
+		keep [Recipe.GetItemTypes.Hammer],
+		Mirror/Cologne/Perfume/LightBulb/LightBulbBlue/LightBulbCyan/LightBulbGreen/LightBulbMagenta/LightBulbOrange/LightBulbPink/LightBulbPurple/LightBulbRed/LightBulbYellow,
+	   
+		Result:brokenGlass,
+		Time:50.0,
+		Sound:PZ_Hammer,
+		Category:Carpentry,
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:true,
+	}
+	
+	recipe Gain Broken Glass Shards (Bottles)
+	{
+		keep [Recipe.GetItemTypes.Hammer],
+		EmptyJar/WineEmpty/WineEmpty2/WhiskeyEmpty/BeerEmpty/WhiskeyEmpty/RemouladeEmpty,
+	   
+		Result:brokenGlass=2,
+		Time:50.0,
+		Sound:PZ_Hammer,
+		Category:Carpentry,
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:true,
+	}
+
+	recipe Make Small Glass Panel
+	{
+		destroy brokenGlass=4,
+		BlowTorch=1,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		
+		Result:SmallGlassPanel,
+		Time: 120,
+		Category:Welding,
+		NeedToBeLearn:false,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding2,
+		AnimNode:Disassemble,	
+	}
+
+	recipe Make Big Glass Panel
+	{
+		destroy brokenGlass=8,
+		BlowTorch=2,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		
+		Result:BigGlassPanel,
+		Time: 120,
+		Category:Welding,
+		NeedToBeLearn:false,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding2,
+		AnimNode:Disassemble,	
+	}
+	
 	recipe Cut Glass Panel in Half
 	{
 		destroy BigGlassPanel,
