@@ -1,5 +1,6 @@
 module Base
 {
+
 	item BatteryCleaner
 	{
         Weight				= 0.2,
@@ -32,6 +33,15 @@ module Base
         Icon				= SmallGlassPanel,
 		Tooltip 			= Tooltip_FixGlassItems,
     }
+
+	item Brokenglass
+	{
+        Weight				= 0.1,
+        Type				= Normal,
+		DisplayName	        = Broken Glass Shards,
+	    DisplayCategory 	= Material,
+        Icon				= Brokenglass,
+	}
 
 	item GlassCutter
 	{
@@ -75,7 +85,7 @@ module Base
 		keep [Recipe.GetItemTypes.Hammer],
 		Mirror/Cologne/Perfume/LightBulb/LightBulbBlue/LightBulbCyan/LightBulbGreen/LightBulbMagenta/LightBulbOrange/LightBulbPink/LightBulbPurple/LightBulbRed/LightBulbYellow,
 	   
-		Result:brokenGlass,
+		Result:Brokenglass=1,
 		Time:50.0,
 		Sound:PZ_Hammer,
 		Category:Carpentry,
@@ -88,7 +98,7 @@ module Base
 		keep [Recipe.GetItemTypes.Hammer],
 		EmptyJar/WineEmpty/WineEmpty2/WhiskeyEmpty/BeerEmpty/WhiskeyEmpty/RemouladeEmpty,
 	   
-		Result:brokenGlass=2,
+		Result:Brokenglass=2,
 		Time:50.0,
 		Sound:PZ_Hammer,
 		Category:Carpentry,
@@ -98,7 +108,7 @@ module Base
 
 	recipe Make Small Glass Panel
 	{
-		destroy brokenGlass=4,
+		Brokenglass=4,
 		BlowTorch=1,
 		keep [Recipe.GetItemTypes.WeldingMask],
 		
@@ -112,7 +122,7 @@ module Base
 
 	recipe Make Big Glass Panel
 	{
-		destroy brokenGlass=8,
+		Brokenglass=8,
 		BlowTorch=2,
 		keep [Recipe.GetItemTypes.WeldingMask],
 		
