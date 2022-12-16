@@ -83,7 +83,7 @@ module Base
 	recipe Gain Broken Glass Shards (Junk)
 	{
 		keep [Recipe.GetItemTypes.Hammer],
-		Mirror/Cologne/Perfume/LightBulb/LightBulbBlue/LightBulbCyan/LightBulbGreen/LightBulbMagenta/LightBulbOrange/LightBulbPink/LightBulbPurple/LightBulbRed/LightBulbYellow,
+		Mirror/Cologne/Perfume/LightBulb/LightBulbBlue/LightBulbCyan/LightBulbGreen/LightBulbMagenta/LightBulbOrange/LightBulbPink/LightBulbPurple/LightBulbRed/LightBulbYellow/magnifyingglass/GlassTumbler/Glasses,
 	   
 		Result:Brokenglass=1,
 		Time:50.0,
@@ -98,6 +98,19 @@ module Base
 		keep [Recipe.GetItemTypes.Hammer],
 		EmptyJar/WineEmpty/WineEmpty2/WhiskeyEmpty/BeerEmpty/WhiskeyEmpty/RemouladeEmpty,
 	   
+		Result:Brokenglass=2,
+		Time:50.0,
+		Sound:PZ_Hammer,
+		Category:Carpentry,
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:true,
+	}
+
+	recipe Gain Broken Glass Shards (Bottles)
+	{
+		keep [Recipe.GetItemTypes.Hammer],
+		MarinaraEmpty/legourmet.Glass/legourmet.MargaritaGlass/legourmet.MartiniGlass/legourmet.VodkaEmpty/legourmet.WhiteRumEmpty/legourmet.WhiteTequilaEmpty/legourmet.WineEmpty3/legourmet.BeerBottleEmpty/legourmet.BeerBottleEmpty/legourmet.TripleSecEmpty,
+
 		Result:Brokenglass=2,
 		Time:50.0,
 		Sound:PZ_Hammer,
