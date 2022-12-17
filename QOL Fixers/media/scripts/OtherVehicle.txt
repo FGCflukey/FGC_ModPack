@@ -83,7 +83,7 @@ module Base
 	recipe Gain Broken Glass Shards (Junk)
 	{
 		keep [Recipe.GetItemTypes.Hammer],
-		Mirror/Cologne/Perfume/LightBulb/LightBulbBlue/LightBulbCyan/LightBulbGreen/LightBulbMagenta/LightBulbOrange/LightBulbPink/LightBulbPurple/LightBulbRed/LightBulbYellow/magnifyingglass/GlassTumbler/Glasses,
+		destroy Mirror/Cologne/Perfume/LightBulb/LightBulbBlue/LightBulbCyan/LightBulbGreen/LightBulbMagenta/LightBulbOrange/LightBulbPink/LightBulbPurple/LightBulbRed/LightBulbYellow/magnifyingglass/GlassTumbler/Glasses,
 	   
 		Result:Brokenglass=1,
 		Time:50.0,
@@ -96,7 +96,7 @@ module Base
 	recipe Gain Broken Glass Shards (Bottles)
 	{
 		keep [Recipe.GetItemTypes.Hammer],
-		EmptyJar/WineEmpty/WineEmpty2/WhiskeyEmpty/BeerEmpty/WhiskeyEmpty/RemouladeEmpty,
+		destroy EmptyJar/WineEmpty/WineEmpty2/WhiskeyEmpty/BeerEmpty/WhiskeyEmpty/RemouladeEmpty,
 	   
 		Result:Brokenglass=2,
 		Time:50.0,
@@ -109,7 +109,7 @@ module Base
 	recipe Gain Broken Glass Shards (Bottles)
 	{
 		keep [Recipe.GetItemTypes.Hammer],
-		MarinaraEmpty/legourmet.Glass/legourmet.MargaritaGlass/legourmet.MartiniGlass/legourmet.VodkaEmpty/legourmet.WhiteRumEmpty/legourmet.WhiteTequilaEmpty/legourmet.WineEmpty3/legourmet.BeerBottleEmpty/legourmet.BeerBottleEmpty/legourmet.TripleSecEmpty/legourmet.AguaardienteEmpty/legourmet.GinebraEmpty/legourmet.RumEmpty,
+		destroy MarinaraEmpty/legourmet.Glass/legourmet.MargaritaGlass/legourmet.MartiniGlass/legourmet.VodkaEmpty/legourmet.WhiteRumEmpty/legourmet.WhiteTequilaEmpty/legourmet.WineEmpty3/legourmet.BeerBottleEmpty/legourmet.BeerBottleEmpty/legourmet.TripleSecEmpty/legourmet.AguaardienteEmpty/legourmet.GinebraEmpty/legourmet.RumEmpty,
 
 		Result:Brokenglass=2,
 		Time:50.0,
@@ -121,7 +121,7 @@ module Base
 
 	recipe Make Small Glass Panel
 	{
-		Brokenglass=4,
+		destroy Brokenglass=4,
 		BlowTorch=1,
 		keep [Recipe.GetItemTypes.WeldingMask],
 		
@@ -135,7 +135,7 @@ module Base
 
 	recipe Make Big Glass Panel
 	{
-		Brokenglass=8,
+		destroy Brokenglass=8,
 		BlowTorch=2,
 		keep [Recipe.GetItemTypes.WeldingMask],
 		
