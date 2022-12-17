@@ -109,7 +109,7 @@ module Base
 	recipe Gain Broken Glass Shards (Bottles)
 	{
 		keep [Recipe.GetItemTypes.Hammer],
-		MarinaraEmpty/legourmet.Glass/legourmet.MargaritaGlass/legourmet.MartiniGlass/legourmet.VodkaEmpty/legourmet.WhiteRumEmpty/legourmet.WhiteTequilaEmpty/legourmet.WineEmpty3/legourmet.BeerBottleEmpty/legourmet.BeerBottleEmpty/legourmet.TripleSecEmpty,
+		MarinaraEmpty/legourmet.Glass/legourmet.MargaritaGlass/legourmet.MartiniGlass/legourmet.VodkaEmpty/legourmet.WhiteRumEmpty/legourmet.WhiteTequilaEmpty/legourmet.WineEmpty3/legourmet.BeerBottleEmpty/legourmet.BeerBottleEmpty/legourmet.TripleSecEmpty/legourmet.AguaardienteEmpty/legourmet.GinebraEmpty/legourmet.RumEmpty,
 
 		Result:Brokenglass=2,
 		Time:50.0,
