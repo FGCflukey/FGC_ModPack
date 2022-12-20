@@ -66,7 +66,7 @@ module Base
 		Fixer : SmallSheetMetal=2;MetalWelding=3;Mechanics=2,	
 	}
 	
-	fixing Fix DG70 DG70 Door Armor
+	fixing Fix DG70 Door Armor
 	{
 		Require : DG70DoorArmor,
 		GlobalItem : BlowTorch=5,
@@ -76,7 +76,7 @@ module Base
 		Fixer : SmallSheetMetal=2;MetalWelding=3;Mechanics=2,	
 	}
 
-	fixing Fix DG70 DG70 Windshield Armor
+	fixing Fix DG70 Windshield Armor
 	{
 		Require : DG70WindshieldArmor,
 		GlobalItem : BlowTorch=5,
@@ -86,7 +86,7 @@ module Base
 		Fixer : SmallSheetMetal=2;MetalWelding=3;Mechanics=2,	
 	}
 
-	fixing Fix DG70 DG70 Rear Windshield Armor
+	fixing Fix DG70 Rear Windshield Armor
 	{
 		Require : DG70WindshieldRearArmor,
 		GlobalItem : BlowTorch=5,
@@ -96,7 +96,7 @@ module Base
 		Fixer : SmallSheetMetal=2;MetalWelding=3;Mechanics=2,	
 	}
 
-	fixing Fix DG70 DG70 Spoiler
+	fixing Fix DG70 Spoiler
 	{
 		Require : DG70Spoiler0;DG70Spoiler1,
 		ConditionModifier : 1.2,
@@ -105,7 +105,7 @@ module Base
 		Fixer : Rubbercement=2;Mechanics=2,
 	}	
 
-	fixing Fix DG70 DG70 Roof
+	fixing Fix DG70 Roof
 	{
 		Require : DG70RTRoof0,
 		GlobalItem : BlowTorch=5,
@@ -113,7 +113,131 @@ module Base
 
 		Fixer : SheetMetal;MetalWelding=3;Mechanics=2,
 		Fixer : SmallSheetMetal=2;MetalWelding=3;Mechanics=2,	
-	}		
+	}
+
+		recipe Make DG70 RT Hood
+		{
+			EngineDoor3,
+			BlowTorch=2,
+			keep WeldingMask,
+			
+			Result:DG70RTEngineDoor,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}
+
+		recipe Make DG70 PD Hood
+		{
+			EngineDoor3,
+			BlowTorch=2,
+			keep WeldingMask,
+			
+			Result:DG70PDEngineDoor,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}
+
+		recipe Make DG70 TA Hood
+		{
+			EngineDoor3,
+			BlowTorch=2,
+			keep WeldingMask,
+			
+			Result:DG70TAEngineDoor0,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}
+
+		recipe Make DG70 TA Black Hood
+		{
+			EngineDoor3,
+			BlowTorch=2,
+			keep WeldingMask,
+			
+			Result:DG70TAEngineDoor1,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}
+
+		recipe Make DG70 Trunk Lid
+		{
+			TrunkDoor3,
+			BlowTorch=2,
+			keep WeldingMask,
+			
+			Result:DG70TrunkDoor3,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}
+
+		recipe Make DG70 Door
+		{
+			FrontCarDoor3,
+			BlowTorch=2,
+			keep WeldingMask,
+			
+			Result:DG70Door3,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}
+
+		recipe Make DG70 Seat
+		{
+			SportCarSeat3,
+			BlowTorch=2,
+			keep WeldingMask,
+			
+			Result:DodgeFrontSeat3,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}
+
+		recipe Make DG70 Rear Seat
+		{
+			SportCarSeat3,
+			BlowTorch=2,
+			keep WeldingMask,
+			
+			Result:DodgeRearSeat3,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}	
+
+		recipe Make DG70 Tire
+		{
+			ModernTire3,
+			
+			Result:DodgeRTtire3,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}	
 
     /************************ R32 ************************/
 
@@ -170,6 +294,149 @@ module Base
 		Fixer : Rubbercement=2;Tailoring=3;Mechanics=1,
 	}
 
+	fixing Fix R32 Bullbar
+	{
+		Require : R32BumperA;R32BumperRearA;R32SideskirtsA,
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
+	}
+
+	fixing Fix R32 Windshield Armor
+	{
+		Require : R32WindshieldRearArmor;R32WindshieldArmor,
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
+	}	
+
+	fixing Fix R32 Rear Window Armor
+	{
+		Require : R32RearWindowArmor,
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
+	}	
+
+	fixing Fix R32 Front Door Armor
+	{
+		Require : R32DoorArmor,
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
+	}	
+
+		recipe Make R32 Hood
+		{
+			EngineDoor3,
+			BlowTorch=2,
+			keep WeldingMask,
+			
+			Result:R32EngineDoor0,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}
+
+		recipe Make R32 Trunk Lid
+		{
+			TrunkDoor3,
+			BlowTorch=2,
+			keep WeldingMask,
+			
+			Result:R32TrunkDoor3,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}
+
+		recipe Make R32 Seat
+		{
+			SportCarSeat3,
+			
+			Result:R32FrontSeat3,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}
+
+		recipe Make R32 Rear Seat
+		{
+			SportCarSeat3,
+			
+			Result:R32RearSeat3,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}
+
+		recipe Make R32 Door
+		{
+			FrontCarDoor3,
+			BlowTorch=2,
+			keep WeldingMask,
+			
+			Result:R32Door3,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}
+
+		recipe Make R32 Stock Tire
+		{
+			ModernTire3,
+			
+			Result:R32Tire0,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}
+
+		recipe Make R32 Performance Tire
+		{
+			ModernTire3,
+			
+			Result:R32Tire1,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}
+
+		recipe Make R32 Slick Tire
+		{
+			ModernTire3,
+			
+			Result:R32Tire2,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}
+
+
     /************************ McLaren ************************/
 
 	fixing Fix McLarenF1 Side Window
@@ -207,6 +474,56 @@ module Base
 		Fixer : Superglue=2;Tailoring=3;Mechanics=1,
 		Fixer : Rubbercement=2;Tailoring=3;Mechanics=1,
 	}
+
+	fixing Fix McLarenF1 Front Armor
+	{
+		Require : McLarenF1Bull3,
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
+	}	
+
+	fixing Fix McLarenF1 Window Armor
+	{
+		Require : McLarenF1WindowArmor3,
+		GlobalItem : BlowTorch=5,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
+	}
+
+		recipe Make McLarenF1 Hood
+		{
+			EngineDoor3,
+			BlowTorch=2,
+			keep WeldingMask,
+			
+			Result:McLarenF1Hood3,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}
+
+		recipe Make McLarenF1 Trunk Lid
+		{
+			TrunkDoor3,
+			BlowTorch=2,
+			keep WeldingMask,
+			
+			Result:McLarenF1TrunkDoor3,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}
+
+
 
     /************************ M911 ************************/
 
@@ -563,7 +880,72 @@ module Base
 		CanBeDoneFromFloor:true,
 		Category:Welding,
 		Time:500.0,
-	}	
+	}
 
+		recipe Make 89 Bronco Door
+		{
+			FrontCarDoor2,
+			BlowTorch=2,
+			keep WeldingMask,
+			
+			Result:89BroncoCarFrontDoor2,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}	
+
+		recipe Make 89 Bronco Hood
+		{
+			EngineDoor2,
+			BlowTorch=2,
+			keep WeldingMask,
+			
+			Result:89BroncoEngineDoor2,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}	
+
+		recipe Make 89 Bronco Trunk Lid
+		{
+			TrunkDoor2,
+			BlowTorch=2,
+			keep WeldingMask,
+			
+			Result:89BroncoTrunkDoor2,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}
+
+		recipe Make 80s Pickup Front Seat
+		{
+			NormalCarSeat2,
+			
+			Result:80sPickupSeatFront2,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}
+
+
+		recipe Make 80s Pickup Rear Seat
+		{
+			NormalCarSeat2,
+			
+			Result:80sPickupSeatRear2,
+			Time:2000.0,
+			SkillRequired:Mechanics=10,
+			CanBeDoneFromFloor:true,
+			Category:Mechanics,
+			OnGiveXP:Recipe.OnGiveXP.None,
+		}
 }
-E150Tire2
