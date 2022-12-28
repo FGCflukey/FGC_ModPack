@@ -1,0 +1,13 @@
+ContextMenu_EN = {
+	ContextMenu_Play_BTTP = "Play Back to the Past",
+	ContextMenu_Play_Plumber= "Play Plumber Bros",
+	ContextMenu_Play_RoyalewCheese = "Play Royale With Cheese",
+	ContextMenu_Play_CubeCraft = "Play CubeCraft",
+	ContextMenu_Play_Wabalabadubudb = "Play Wabalabadubdub",
+	ContextMenu_Play_ToyDay99_Pinball = "Play Toy Day 99",
+	ContextMenu_Play_Dielord = "Play Die Lord",
+	ContextMenu_Play_DladerlkV = "Play DladerlkV",
+	ContextMenu_Play_Pinnnnballll = "Play Pinnnnballll",
+	ContextMenu_Play_3Nights = "Play 3 Nights",
+	ContextMenu_Play_SuperbSmushPros = "Play Suberb Smush Pros",
+}
