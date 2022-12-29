@@ -60,7 +60,7 @@ PMAPlayModdedGameMenu.doBuildMenu = function(player, context, worldobjects)
 						end
 
 						local spriteName = thisObject:getSprite():getName()
-						print("PseudoEdPMA: sprite name = " .. spriteName);
+						-- print("PseudoEdPMA: sprite name = " .. spriteName);
 			
 						-- For Arcade Machines, Custom Name = "Machine" and the Group Name is more specific 
 --						if customName == "Back to the Past Arcade Machine" or
