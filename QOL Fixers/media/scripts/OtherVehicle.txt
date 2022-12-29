@@ -83,7 +83,7 @@ module Base
 	recipe Gain Broken Glass Shards (Junk)
 	{
 		keep [Recipe.GetItemTypes.Hammer],
-		destroy Mirror/Cologne/Perfume/LightBulb/LightBulbBlue/LightBulbCyan/LightBulbGreen/LightBulbMagenta/LightBulbOrange/LightBulbPink/LightBulbPurple/LightBulbRed/LightBulbYellow/magnifyingglass/GlassTumbler/Glasses,
+		destroy Mirror/Mov_MirrorSmall/Cologne/Perfume/LightBulb/LightBulbBlue/LightBulbCyan/LightBulbGreen/LightBulbMagenta/LightBulbOrange/LightBulbPink/LightBulbPurple/LightBulbRed/LightBulbYellow/magnifyingglass/GlassTumbler/Glasses,
 	   
 		Result:Brokenglass=1,
 		Time:50.0,
@@ -118,6 +118,58 @@ module Base
 		NeedToBeLearn:false,
 		CanBeDoneFromFloor:true,
 	}
+	
+	recipe Gain Broken Glass Shards (Broken Glass)
+	{
+		keep [Recipe.GetItemTypes.Hammer],
+		destroy brokenglass_1_0/brokenglass_1_1/brokenglass_1_2/brokenglass_1_3,
+
+		Result:Brokenglass=2,
+		Time:50.0,
+		Sound:PZ_Hammer,
+		Category:Carpentry,
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:true,	
+	}
+	
+	recipe Gain Broken Glass Shards (Large Mirror)
+	{
+		keep [Recipe.GetItemTypes.Hammer],
+		destroy Mov_MirrorTall/Mov_MirrorWood/Mov_MirrorLarge,
+
+		Result:Brokenglass=4,
+		Time:50.0,
+		Sound:PZ_Hammer,
+		Category:Carpentry,
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:true,	
+	}
+
+	recipe Gain Broken Glass Shards (Windshield)
+	{
+		keep [Recipe.GetItemTypes.Hammer],
+		destroy Windshield1/Windshield2/Windshield3/RearWindshield1/RearWindshield2/RearWindshield3,
+
+		Result:Brokenglass=4,
+		Time:50.0,
+		Sound:PZ_Hammer,
+		Category:Carpentry,
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:true,
+	}
+
+	recipe Gain Broken Glass Shards (Side Window)
+	{
+		keep [Recipe.GetItemTypes.Hammer],
+		destroy FrontWindow1/FrontWindow2/FrontWindow3/RearWindow1/RearWindow2/RearWindow3,
+
+		Result:Brokenglass=2,
+		Time:50.0,
+		Sound:PZ_Hammer,
+		Category:Carpentry,
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:true,	
+	}	
 
 	recipe Make Small Glass Panel
 	{
