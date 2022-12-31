@@ -13,7 +13,7 @@ module Base
 		part M998SpareTire
         	{
 
-			model SpareTire
+			model SpareTire1
 				{
                 		file = 92amgeneralM998spare,
 				}
@@ -22,7 +22,7 @@ module Base
 			repairMechanic = true,
 			area = SpareTire,
 			specificItem = false,
-			itemType = Base.M998SpareTireMount_Item,
+			itemType = Base.V101Tire2,
 			mechanicRequireKey = false,
 
 
@@ -66,12 +66,15 @@ module Base
 			skills = Mechanics:1,
 			recipes = Intermediate Mechanics,
             		test = Vehicles.UninstallTest.Default,
+            		complete = M998.UninstallComplete.SpareTire,
+
 
             		}
 
             lua
             {
-			create = Vehicles.Create.Default,
+			create = M998.Create.SpareTire,
+			init = M998.Init.SpareTire,
 			}
 		}
 	}

@@ -92,6 +92,19 @@ module Base
 		NeedToBeLearn:false,
 		CanBeDoneFromFloor:true,
 	}
+
+	recipe Gain Broken Glass Shards (Wall Mirrors)
+	{
+		keep [Recipe.GetItemTypes.Hammer],
+		destroy Moveables.walls_decoration_01_11/Moveables.walls_decoration_01_10/Moveables.walls_decoration_01_9/Moveables.walls_decoration_01_8/Moveables.walls_decoration_01_7/Moveables.walls_decoration_01_6/Moveables.walls_decoration_01_5/Moveables.walls_decoration_01_4/Moveables.walls_decoration_01_37/Moveables.walls_decoration_01_36,
+	   
+		Result:Brokenglass=3,
+		Time:50.0,
+		Sound:PZ_Hammer,
+		Category:Carpentry,
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:true,
+	}
 	
 	recipe Gain Broken Glass Shards (Bottles)
 	{
@@ -122,7 +135,7 @@ module Base
 	recipe Gain Broken Glass Shards (Broken Glass)
 	{
 		keep [Recipe.GetItemTypes.Hammer],
-		destroy brokenglass_1_0/brokenglass_1_1/brokenglass_1_2/brokenglass_1_3,
+		destroy Moveables.brokenglass_1_0/Moveables.brokenglass_1_1/Moveables.brokenglass_1_2/Moveables.brokenglass_1_3,
 
 		Result:Brokenglass=2,
 		Time:50.0,

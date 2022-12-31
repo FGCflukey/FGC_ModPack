@@ -1,29 +1,32 @@
 module Base
 {
-	model TrailerM101A3sparefront
-	{
-		mesh = vehicles/Trailers_M101A3_Body|M101A3_frontsparetire,
-		texture = Vehicles/TrailerM101A3cargo_wheel_extra,
-		shader = vehiclewheel,
-		scale = 0.1,
-	}
+	model M911WindshieldArmor
+    	{
+        mesh = vehicles/Vehicles_82oshkoshM911_mk2_Body|m911_windshield_a,
+        shader = vehicle_noreflect,
+        scale = 0.1,
+    	}
 
-	template vehicle M101A3Spares
+	template vehicle M911WindshieldArmors
 		{
-		part M101A3Spare
+		part M911WindshieldArmor
         	{
 
-			model Spare1
+			model WindshieldArmor
 				{
-                		file = TrailerM101A3sparefront,
+                		file = M911WindshieldArmor,
 				}
 
-			area = SpareTireFront,
-repairMechanic = true,
+			area = Engine,
 			category = bodywork,
 			specificItem = false,
-			itemType = Base.V101Tire2,
+			itemType = Base.M911WindshieldArmor,
 			mechanicRequireKey = false,
+			repairMechanic = true,
+			table install
+					{
+						requireInstalled = Windshield,
+					}
 
 			table install
 			{
@@ -31,18 +34,18 @@ repairMechanic = true,
                 	{
                     	1
                     		{
-                        	type = Base.Wrench,
+                        	type = Base.Screwdriver,
                         	count = 1,
                         	keep = true,
 				equip = primary,
                     		}
                 	}
 
-                	time = 2000,
+                	time = 1100,
                 	skills = Mechanics:4,
                 	recipes = Intermediate Mechanics,
                 	test = Vehicles.InstallTest.Default,
-			complete = M101A3.InstallComplete.Spare,
+                	complete = M911.InstallComplete.WindshieldArmor,
             		}
 
             		table uninstall
@@ -51,27 +54,26 @@ repairMechanic = true,
                 	{
                     	1
                     		{
-  				type = Base.Wrench,
+  				type = Base.Screwdriver,
 				count = 1,
 				keep = true,
 				equip = primary,
                     		}
                 	}
 
-			time = 2000,
+			time = 1100,
 			skills = Mechanics:4,
 			recipes = Intermediate Mechanics,
                 	test = Vehicles.UninstallTest.Default,
-			complete = M101A3.UninstallComplete.Spare,
+			complete = M911.UninstallComplete.WindshieldArmor,
             		}
 
             		lua
             		{
-			create = M101A3.Create.Spare,
-			init = M101A3.Init.Spare,
+			create = M911.Create.WindshieldArmor,
+			init = M911.Init.WindshieldArmor,
 			}
 		}
-
 	}
 
 		

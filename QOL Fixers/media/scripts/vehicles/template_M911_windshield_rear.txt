@@ -1,0 +1,77 @@
+module Base
+{
+
+    model 82oshkoshM911rearwindshield
+    {
+        mesh = vehicles/Vehicles_82oshkoshM911_mk2_Body|m911_windshield_rear,
+        shader = vehicle,
+        scale = 0.1,
+    }
+
+	template vehicle M911WindshieldRear
+	{
+
+        part WindshieldRear
+        {
+            model windshieldRear9594
+            {
+                file = 82oshkoshM911rearwindshield,
+            }
+            
+            window
+            {
+            openable = false,
+            }
+            table uninstall
+                {
+                    requireUninstalled = M911WindshieldRearArmor,
+                }
+                
+            itemType = Base.M911WindshieldRear,
+            area = TruckBed,
+            category = bodywork,
+            mechanicRequireKey = false,
+			repairMechanic = true,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+			            equip = primary,
+                    }
+                }
+                time = 700,
+                skills = Mechanics:5,
+                recipes = Intermediate Mechanics,
+                test = Vehicles.InstallTest.Default,
+                complete = Vehicles.InstallComplete.Window,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+						equip = primary,
+                    }
+                }
+                time = 700,
+                  skills = Mechanics:5,
+                  recipes = Intermediate Mechanics,
+                test = Vehicles.UninstallTest.Default,
+            }
+            lua
+            {
+                create = Vehicles.Create.Default,
+            }
+        }
+
+        }
+}

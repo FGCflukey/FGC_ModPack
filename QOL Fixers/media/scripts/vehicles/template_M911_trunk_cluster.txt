@@ -38,28 +38,10 @@ module Base
 			}
 		}
 
-		part M911SpareTire
-		{
-			category = bodywork,
-			area = TruckBed,
-			itemType = Base.M911SpareTire,
-			mechanicRequireKey = true,
-			repairMechanic = true,
-			container
-			{
-				conditionAffectsCapacity = false,
-				test = Vehicles.ContainerAccess.TruckBed,
-			}
-			lua
-			{
-				create = Vehicles.Create.Default,
-			}
-		}
-
 		part TruckBed
 		{
 			category = nodisplay,
-			itemType = Base.M911Extra,
+			itemType = nil,
 			mechanicRequireKey = true,
 			repairMechanic = true,
 			container

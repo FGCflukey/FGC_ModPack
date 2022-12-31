@@ -1,0 +1,88 @@
+module Base
+{
+	model M911bullbar0
+	{
+		mesh = vehicles/Vehicles_82oshkoshM911_mk2_Body|m911_bullbar0,
+		shader = vehicle_noreflect,
+		scale = 0.1,
+	}
+	model M911bullbar1
+	{
+		mesh = vehicles/Vehicles_82oshkoshM911_mk2_Body|m911_bullbar1,
+		shader = vehicle_noreflect,
+		scale = 0.1,
+	}
+
+	template vehicle M911Bullbars
+		{
+		part M911Bullbar
+        	{
+
+			model Bullbar0
+				{
+                		file = M911bullbar0,
+				}
+
+			model Bullbar1
+				{
+                		file = M911bullbar1,
+				}
+
+			area = Engine,
+			category = bodywork,
+			specificItem = false,
+			itemType = Base.M911Bullbar0;Base.M911Bullbar1,
+			mechanicRequireKey = false,
+			repairMechanic = true,
+
+			table install
+			{
+                	items
+                	{
+                    	1
+                    		{
+                        	type = Base.Wrench,
+                        	count = 1,
+                        	keep = true,
+					equip = primary,
+                    		}
+                	}
+
+                	time = 1500,
+                	skills = Mechanics:4,
+                	recipes = Intermediate Mechanics,
+                	test = Vehicles.InstallTest.Default,
+                	complete = M911.InstallComplete.Bullbar,
+            		}
+
+            table uninstall
+            		{
+                	items
+                	{
+                    	1
+                    		{
+			  				type = Base.Wrench,
+							count = 1,
+							keep = true,
+							equip = primary,
+                    		}
+                	}
+
+                	requireUninstalled = HeadlightLeft,
+					time = 1500,
+					skills = Mechanics:4,
+					recipes = Intermediate Mechanics,
+                	test = Vehicles.UninstallTest.Default,
+					complete = M911.UninstallComplete.Bullbar,
+            		}
+
+            		lua
+            		{
+			create = M911.Create.Bullbar,
+			init = M911.Init.Bullbar,
+			}
+		}
+	}
+
+		
+}

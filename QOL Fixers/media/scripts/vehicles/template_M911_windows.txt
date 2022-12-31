@@ -1,0 +1,131 @@
+module Base
+{
+
+	model 82oshkoshM911windowfl
+	{
+		mesh = vehicles/Vehicles_82oshkoshM911_mk2_Body|m911_window_fl,
+		shader = vehicle,
+		static = FALSE,
+		scale = 0.1,
+		boneWeight = window_fl_bone 1.0,
+	}
+
+	model 82oshkoshM911windowfr
+	{
+		mesh = vehicles/Vehicles_82oshkoshM911_mk2_Body|m911_window_fr,
+		shader = vehicle,
+		static = FALSE,
+		scale = 0.1,
+		boneWeight = window_fr_bone 1.0,
+	}
+
+	template vehicle M911Windows
+	{
+		part WindowFrontLeft
+		{
+			model windowFL4569426
+			{
+				file = 82oshkoshM911windowfl,
+			}
+
+			anim ClosedToOpen
+			{
+				anim = Window_fl_opening,
+				reverse = FALSE,
+				animate = FALSE,
+			}
+
+			parent = DoorFrontLeft,
+			area = SeatFrontLeft,
+			repairMechanic = true,
+			table install
+			{
+				requireInstalled = DoorFrontLeft,
+			}
+			table uninstall
+				{
+				requireUninstalled = M911DoorFrontLeftArmor,
+				}
+		}
+
+		part WindowFrontRight
+		{
+			model windowFR652954563
+			{
+				file = 82oshkoshM911windowfr,
+			}
+
+			anim ClosedToOpen
+			{
+				anim = Window_fr_opening,
+				reverse = FALSE,
+				animate = FALSE,
+			}
+
+			parent = DoorFrontRight,
+			area = SeatFrontRight,
+			repairMechanic = true,
+			table install
+			{
+				requireInstalled = DoorFrontRight,
+			}
+			table uninstall
+				{
+				requireUninstalled = M911DoorFrontRightArmor,
+				}
+		}
+
+		part Window*
+		{
+			category = door,
+			mechanicRequireKey = true,
+			itemType = Base.M911SideWindow,
+			window
+			{
+				openable = true,
+			}
+			table install
+			{
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 500,
+				skills = Mechanics:3,
+				recipes = Intermediate Mechanics,
+				test = Vehicles.InstallTest.Default,
+				complete = Vehicles.InstallComplete.Window,
+			}
+			table uninstall
+			{
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 500,
+				skills = Mechanics:3,
+				recipes = Intermediate Mechanics,
+				test = Vehicles.UninstallTest.Default,
+				complete = Vehicles.UninstallComplete.Default,
+			}
+			lua
+			{
+				create = Vehicles.Create.Window,
+				init = Vehicles.Init.Window,
+			}
+		}
+	}
+}
+
