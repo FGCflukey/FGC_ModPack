@@ -1,0 +1,76 @@
+module Base
+{
+
+    model 82oshkoshM911windshield
+    {
+        mesh = vehicles/Vehicles_82oshkoshM911_mk2_Body|m911_windshield,
+        shader = vehicle,
+        scale = 0.1,
+    }
+
+	template vehicle M911Windshield
+	{
+
+        part Windshield
+        {
+            model windshieldFront12314643478
+            {
+                file = 82oshkoshM911windshield,
+            }
+            window
+            {
+            openable = false,
+            }
+            table uninstall
+                {
+                    requireUninstalled = M911WindshieldArmor,
+                }
+                
+            itemType = Base.M911Windshield,
+            area = Engine,
+            category = bodywork,
+            mechanicRequireKey = false,
+			repairMechanic = true,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+			equip = primary,
+                    }
+                }
+                time = 700,
+                skills = Mechanics:5,
+                recipes = Intermediate Mechanics,
+                test = Vehicles.InstallTest.Default,
+                complete = Vehicles.InstallComplete.Window,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+						equip = primary,
+                    }
+                }
+                time = 700,
+                  skills = Mechanics:5,
+                  recipes = Intermediate Mechanics,
+                test = Vehicles.UninstallTest.Default,
+            }
+            lua
+            {
+                create = Vehicles.Create.Default,
+            }
+        }
+
+        }
+}
