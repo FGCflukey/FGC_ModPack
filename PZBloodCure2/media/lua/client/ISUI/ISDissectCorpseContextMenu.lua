@@ -60,23 +60,12 @@ ISDissectCorpseContextMenu.createMenu = function(player, context, worldobjects, 
 	body = IsoObjectPicker.Instance:PickCorpse(Mouse.getXA(), Mouse.getYA()) or body
     if body then
 	
-		local it = playerInv:getItems();
-		for i = 0, it:size()-1 do
-			local item = it:get(i);
-	
-			if item:getTags().contains("ChopTree") or item:getTags().contains("SharpKnife") then
-				local axe = nil;
-				local knife = nil;
-				knife = playerInv:getBestCondition(item);
-			end
+		for i = 0, playerInv:getItems():size() - 1 do
+			local item = playerInv:getItems():get(i);
 
-			if test == true then 
-				return true; 
-			end
-
-			if knife or axe then
-				context:addOption(getText("ContextMenu_Dissect_Corpse"), worldobjects, ISDissectCorpseContextMenu.onDissectCorpse, player, body, knife);
-			end
+            if item:getTags().contains("ChopTree") or item:getTags().contains("SharpKnife") then
+				context:addOption(getText("ContextMenu_Dissect_Corpse"), worldobjects, ISDissectCorpseContextMenu.onDissectCorpse, player, body, item);
+            end
         end
     end
 end
