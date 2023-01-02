@@ -371,7 +371,7 @@ Recipe_EN = {
 	Recipe_Make_Corn_Oil = "Make Corn Oil",
 	
 	Recipe_Make_Taco_Shell = "Make Taco Shell",
-	Recipe_Make_Fernet_Cola = "Make fernet with cola",
+	Recipe_Make_Fernet_Cola = "Make Fernet with cola",
 	Recipe_Make_Wooden_Fishing_Net = "Make Wooden Fishing Net",
 	Recipe_Fill_Hot_Vacuum_Flask = "Fill Vacuum Flask With Hot Water",
 	Recipe_Prepare_Sweet_Mate = "Prepare Sweet Mate Drink",
