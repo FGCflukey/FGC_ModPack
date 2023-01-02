@@ -1,6 +1,6 @@
 module Base
 {
-	template vehicle TireV101M998
+	template vehicle M998TiresV101
 	{
 
 		part TireFrontLeft

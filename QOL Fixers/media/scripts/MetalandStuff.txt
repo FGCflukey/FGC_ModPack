@@ -282,7 +282,7 @@ module Base
 		keep [Recipe.GetItemTypes.Hammer],
 		keep [Recipe.GetItemTypes.WeldingMask],
 		
-		Result:ScrapMetal=2,
+		Result:ScrapMetal,
 		Time:60,
 		Category:Welding,
 		SkillRequired:MetalWelding=2,
@@ -330,6 +330,19 @@ module Base
 		AnimNode:Disassemble,
 	}
 	
+	recipe Scrap Metal Sheet
+	{
+		SheetMetal=1,
+		keep [Recipe.GetItemTypes.Saw],
+		
+		Result:ScrapMetal=6,
+		Time:60,
+		Category:Welding,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding2,
+		Sound:Sawing,
+		AnimNode:Disassemble,
+	}
+
 	recipe Scrap Small Metal Sheet
 	{
 		SmallSheetMetal=1,
@@ -343,25 +356,12 @@ module Base
 		AnimNode:Disassemble,
 	}
 	
-	recipe Scrap Metal Sheet
-	{
-		SheetMetal=1,
-		keep [Recipe.GetItemTypes.Saw],
-		
-		Result:ScrapMetal=4,
-		Time:60,
-		Category:Welding,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding2,
-		Sound:Sawing,
-		AnimNode:Disassemble,
-	}
-	
 	recipe Scrap Metal Pipe
 	{
 		MetalPipe=1,
 		keep [Recipe.GetItemTypes.Hammer],
 		
-		Result:ScrapMetal=2,
+		Result:ScrapMetal=4,
 		Time:60,
 		Category:Welding,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding2,
@@ -374,7 +374,7 @@ module Base
 		MetalBar=1,
 		keep [Recipe.GetItemTypes.Hammer],
 		
-		Result:ScrapMetal=4,
+		Result:ScrapMetal=6,
 		Time:60,
 		Category:Welding,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding2,
@@ -384,7 +384,7 @@ module Base
 	
 	recipe Get Sheet Metal
 	{
-		ScrapMetal=4,
+		ScrapMetal=6,
 		BlowTorch=2,
 		keep [Recipe.GetItemTypes.Hammer],
 		keep [Recipe.GetItemTypes.WeldingMask],
@@ -413,35 +413,7 @@ module Base
 		Sound:Hammering,
 		AnimNode:Disassemble,
 	}
-	
-	recipe Get Metal Pipe
-	{
-		SmallSheetMetal=1,
-		BlowTorch=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:MetalPipe,
-		Time:60,
-		Category:Welding,
-		SkillRequired:MetalWelding=2,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
-		AnimNode:Disassemble,
-	}
-	
-	recipe Get Metal Bar
-	{
-		SmallSheetMetal=2,
-		BlowTorch=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:MetalBar=1,
-		Time:60,
-		Category:Welding,
-		SkillRequired:MetalWelding=2,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
-		AnimNode:Disassemble,
-	}
-	
+
 	recipe Get Metal Pipe
 	{
 		SheetMetal=1,
@@ -456,6 +428,34 @@ module Base
 		AnimNode:Disassemble,
 	}
 	
+		recipe Get Metal Pipe
+		{
+			SmallSheetMetal=2,
+			BlowTorch=2,
+			keep [Recipe.GetItemTypes.WeldingMask],
+			
+			Result:MetalPipe,
+			Time:60,
+			Category:Welding,
+			SkillRequired:MetalWelding=2,
+			OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+			AnimNode:Disassemble,
+		}
+
+		recipe Get Metal Pipe
+		{
+			ScrapMetal=4,
+			BlowTorch=2,
+			keep [Recipe.GetItemTypes.WeldingMask],
+			
+			Result:MetalPipe,
+			Time:60,
+			Category:Welding,
+			SkillRequired:MetalWelding=2,
+			OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+			AnimNode:Disassemble,
+		}
+
 	recipe Get Metal Bar
 	{
 		SheetMetal=1,
@@ -469,6 +469,34 @@ module Base
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
 		AnimNode:Disassemble,
 	}
+
+		recipe Get Metal Bar
+		{
+			SmallSheetMetal=3,
+			BlowTorch=2,
+			keep [Recipe.GetItemTypes.WeldingMask],
+			
+			Result:MetalBar=1,
+			Time:60,
+			Category:Welding,
+			SkillRequired:MetalWelding=2,
+			OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+			AnimNode:Disassemble,
+		}
+
+		recipe Get Metal Bar
+		{
+			ScrapMetal=6,
+			BlowTorch=2,
+			keep [Recipe.GetItemTypes.WeldingMask],
+			
+			Result:MetalBar=1,
+			Time:60,
+			Category:Welding,
+			SkillRequired:MetalWelding=2,
+			OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+			AnimNode:Disassemble,
+		}
 	
 	recipe Get Jar Lid
 	{
@@ -513,7 +541,7 @@ module Base
 		AnimNode:Disassemble,
 	}
 	
-	recipe Make Nails
+	recipe Make 25 Nails
 	{
 		SmallSheetMetal=1,
 		BlowTorch=2,
@@ -539,7 +567,7 @@ module Base
 		AnimNode:Disassemble,
 	}
 
-	recipe Make Screws
+	recipe Make 25 Screws
 	{
 		SmallSheetMetal=1,
 		BlowTorch=2,

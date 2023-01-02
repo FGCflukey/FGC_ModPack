@@ -52,14 +52,14 @@ function UG_Automaker.VehicleBlackList( VehicleID)
 		return true
 		
 	--remove vehicles from Expanded Helicopter events mod
---	elseif String.find( VehicleID, "Bell206") then 
---		return true
---	elseif String.find( VehicleID, "SupplyDrop") then
---		return true
---	elseif String.find( VehicleID, "UH1H") then
---		return true
---	elseif String.find( VehicleID, "UH60") then
---		return true
+	elseif string.find( VehicleID, "Bell206") then 
+		return true
+	elseif string.find( VehicleID, "SupplyDrop") then
+		return true
+	elseif string.find( VehicleID, "UH1H") then
+		return true
+	elseif string.find( VehicleID, "UH60") then
+		return true
 	else
 		return false
 	end

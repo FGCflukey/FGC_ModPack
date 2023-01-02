@@ -33,7 +33,7 @@ module Base
 			}
 
             area = TireRearLeft,
-repairMechanic = true,
+		repairMechanic = true,
 	    category = engine,
 	    specificItem = false,
             itemType = Base.M998Muffler1_Item;Base.M998Muffler2_Item,
