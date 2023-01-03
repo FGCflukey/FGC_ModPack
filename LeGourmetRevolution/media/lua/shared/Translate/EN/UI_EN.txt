@@ -34,7 +34,7 @@ UI_EN = {
 	        "<H1>Gained a Wilson Ball!!! <LINE> <H1>",
 	UI_trait_Caveman = "Caveman",
 	UI_trait_Cavemandesc = "You have the knowledge to make<br>stone knifes and fur frames.",
-	UI_trait_archer = "Arquero",
+	UI_trait_archer = "Archer",
 	UI_trait_archerdesc = "You have the knowledge to make bows and arrows<br>Can reload bows from all backpacks 50% faster.",
 	UI_trait_hunterexpert = "Hunter",
 	UI_trait_hunterexpertdesc = "More chances to find animals.<br>You know where to hit them.",
