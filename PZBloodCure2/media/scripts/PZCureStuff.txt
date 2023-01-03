@@ -81,6 +81,7 @@ module Base
 
 	item BloodCureMag
 	{
+		DisplayCategory 		= SkillBook,
 		Weight					= 0.1,
 		Type					= Literature,
 		DisplayName				= Zombie Blood Cure Research,
@@ -88,6 +89,7 @@ module Base
 		TeachedRecipes  		= Synthesize Zombie Blood Cure;Extract Blood from Zombie Meat;Make Zombie Blood Cure Kit,
 		ReplaceOnUse    		= BloodCureMag,
 		StaticModel				= Magazine,
+		WorldStaticModel 		= MagazineEngi1Ground,
 		Tooltip					= Tooltip_ZBloodCureResearch,
 	}
 

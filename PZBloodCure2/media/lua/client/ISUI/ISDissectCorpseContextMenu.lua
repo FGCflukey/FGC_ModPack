@@ -59,30 +59,19 @@ ISDissectCorpseContextMenu.createMenu = function(player, context, worldobjects, 
 	-- Dissect a Corpse
 	body = IsoObjectPicker.Instance:PickCorpse(Mouse.getXA(), Mouse.getYA()) or body
     if body then
-        if playerInv:contains("HuntingKnife") or playerInv:contains("KitchenKnife") or playerInv:contains("Axe") or playerInv:contains("HandAxe") then
-			local knife = nil;
-			local axe = nil;
-			
-			if playerInv:getBestCondition("Axe") then	--playerInv:contains("HuntingKnife")
-					knife = playerInv:getBestCondition("Axe");
-			end
-			if playerInv:getBestCondition("HandAxe") then	--playerInv:contains("HuntingKnife")
-					knife = playerInv:getBestCondition("HandAxe");
-			end
-			if playerInv:getBestCondition("HuntingKnife") then	--playerInv:contains("HuntingKnife")
-					knife = playerInv:getBestCondition("HuntingKnife");
-			end
-			if playerInv:getBestCondition("KitchenKnife") then	--playerInv:contains("KitchenKnife")
-					knife = playerInv:getBestCondition("KitchenKnife");
-			end
+	
+		for i = 0, playerInv:getItems():size() - 1 do
+			local item = playerInv:getItems():get(i);
 
-			if test == true then 
-				return true; 
-			end
+			-- local itemnameID = item:getType();
+			-- print(" item name: ",itemnameID)
+			-- print(" item tags: ",item:getTags())
+			-- Does he have a proper axe or knife to dissect!
 
-			if knife then
-				context:addOption(getText("ContextMenu_Dissect_Corpse"), worldobjects, ISDissectCorpseContextMenu.onDissectCorpse, player, body, knife);
-			end
+            if item:getTags():contains("ChopTree") or item:getTags():contains("SharpKnife") then
+				
+				context:addOption(getText("ContextMenu_Dissect_Corpse"), worldobjects, ISDissectCorpseContextMenu.onDissectCorpse, player, body, item);
+            end
         end
     end
 end
@@ -91,10 +80,10 @@ ISDissectCorpseContextMenu.onDissectCorpse = function(worldobjects, player, corp
     local playerObj = getSpecificPlayer(player)
 	local playerInv = playerObj:getInventory()
     if corpse:getSquare() and luautils.walkAdj(playerObj, corpse:getSquare()) then
-		print(playerObj:getPrimaryHandItem());
+		-- print(playerObj:getPrimaryHandItem());
 		if playerObj:getPrimaryHandItem() then
 		
-			if playerObj:getPrimaryHandItem():getType() == "KitchenKnife" or playerObj:getPrimaryHandItem():getType() == "HuntingKnife" or playerObj:getPrimaryHandItem():getType() == "Axe" or playerObj:getPrimaryHandItem():getType() == "HandAxe" then
+			if playerObj:getPrimaryHandItem():getTags():contains("SharpKnife") or playerObj:getPrimaryHandItem():getTags():contains("ChopTree") then
 			
 				ISTimedActionQueue.add(ISDissectCorpseAction:new(playerObj, corpse, playerObj:getPrimaryHandItem()));
 			else
