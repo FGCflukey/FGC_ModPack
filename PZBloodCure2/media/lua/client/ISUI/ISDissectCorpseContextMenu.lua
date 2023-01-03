@@ -63,8 +63,10 @@ ISDissectCorpseContextMenu.createMenu = function(player, context, worldobjects, 
 		for i = 0, playerInv:getItems():size() - 1 do
 			local item = playerInv:getItems():get(i);
 
-			local itemnameID = item:getName();
-			print(" item name:"..itemnameID..")
+			-- local itemnameID = item:getType();
+			-- print(" item name: ",itemnameID)
+			-- print(" item tags: ",item:getTags())
+			-- Does he have a proper axe or knife to dissect!
 
             if item:getTags():contains("ChopTree") or item:getTags():contains("SharpKnife") then
 				
@@ -78,7 +80,7 @@ ISDissectCorpseContextMenu.onDissectCorpse = function(worldobjects, player, corp
     local playerObj = getSpecificPlayer(player)
 	local playerInv = playerObj:getInventory()
     if corpse:getSquare() and luautils.walkAdj(playerObj, corpse:getSquare()) then
-		print(playerObj:getPrimaryHandItem());
+		-- print(playerObj:getPrimaryHandItem());
 		if playerObj:getPrimaryHandItem() then
 		
 			if playerObj:getPrimaryHandItem():getTags():contains("SharpKnife") or playerObj:getPrimaryHandItem():getTags():contains("ChopTree") then

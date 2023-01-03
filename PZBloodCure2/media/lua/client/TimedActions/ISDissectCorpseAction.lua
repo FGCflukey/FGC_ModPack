@@ -71,6 +71,7 @@ function ISDissectCorpseAction:perform()
 --		self.corpseBody:getSquare():AddWorldInventoryItem( CorpseBodyItem:get(i) ,0,0,0);
 	end
 
+-- nope sorry, no free xp here
 --	if self.knife:getType() == "Axe" or self.knife:getType() == "HandAxe" then
 --	if self.knife:getTags():contains("ChopTree") then
 --		self.character:getXp():AddXP(Perks.BladeMaintenance, 1)
@@ -132,7 +133,7 @@ function ISDissectCorpseAction:new (character, corpse, knife)
 --	o.spriteFrame = 0;
 --	if knife:getType() == "Axe" or knife:getType() == "HandAxe" or knife:getType() == "WoodAxe" then
 --	if knife:getType() == "Axe" or knife:getType() == "HandAxe" then
-	if self.knife:getTags():contains("ChopTree") then
+	if knife:getTags():contains("ChopTree") then
 		o.sound = "DissectCorpseAxe";
 		o.spriteFrame = 0;
 		o.maxTime = 150;
