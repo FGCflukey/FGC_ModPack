@@ -63,10 +63,10 @@ ISDissectCorpseContextMenu.createMenu = function(player, context, worldobjects, 
 		for i = 0, playerInv:getItems():size() - 1 do
 			local item = playerInv:getItems():get(i);
 
-			local itemnameID = item.getName();
+			local itemnameID = item:getName();
 			print(" item name:"..itemnameID..")
 
-            if item:getTags().contains("ChopTree") or item:getTags().contains("SharpKnife") then
+            if item:getTags():contains("ChopTree") or item:getTags():contains("SharpKnife") then
 				
 				context:addOption(getText("ContextMenu_Dissect_Corpse"), worldobjects, ISDissectCorpseContextMenu.onDissectCorpse, player, body, item);
             end
@@ -81,7 +81,7 @@ ISDissectCorpseContextMenu.onDissectCorpse = function(worldobjects, player, corp
 		print(playerObj:getPrimaryHandItem());
 		if playerObj:getPrimaryHandItem() then
 		
-			if playerObj:getPrimaryHandItem():getTags().contains("SharpKnife") or playerObj:getPrimaryHandItem():getTags().contains("ChopTree") then
+			if playerObj:getPrimaryHandItem():getTags():contains("SharpKnife") or playerObj:getPrimaryHandItem():getTags():contains("ChopTree") then
 			
 				ISTimedActionQueue.add(ISDissectCorpseAction:new(playerObj, corpse, playerObj:getPrimaryHandItem()));
 			else
