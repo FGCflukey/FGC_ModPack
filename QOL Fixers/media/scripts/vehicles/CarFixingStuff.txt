@@ -211,15 +211,4 @@ module Base
 		Time:500.0,
 	}
 
-	fixing Container Trunk Door
-	{
-		Require : IsoContainerTrunkDoor2;IsoContainerTankerTrunkDoor2,
-		
-		GlobalItem : BlowTorch=5,
-		ConditionModifier : 1.2,
-
-		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
-		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
-	}
-
 }
