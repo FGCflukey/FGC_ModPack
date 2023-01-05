@@ -40,7 +40,7 @@ module Base
 
 	fixing Fix Hood Welding
 	{
-		Require : EngineDoor1;EngineDoor2;EngineDoor3;EngineDoor8;M998EngineDoor2;U1550LHood2;89BroncoEngineDoor2,
+		Require : EngineDoor1;EngineDoor2;EngineDoor3;EngineDoor8;U1550LHood2;89BroncoEngineDoor2,
 		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
@@ -50,7 +50,7 @@ module Base
 
 	fixing Fix Hood Other
 	{
-		Require : EngineDoor1;EngineDoor2;EngineDoor3;EngineDoor8;M998EngineDoor2;U1550LHood2;89BroncoEngineDoor2,
+		Require : EngineDoor1;EngineDoor2;EngineDoor3;EngineDoor8;U1550LHood2;89BroncoEngineDoor2,
 		GlobalItem : Screws=8,
 		ConditionModifier : 0.5,
 
@@ -59,7 +59,7 @@ module Base
 
 	fixing Fix Trunk Lid Welding
 	{
-		Require : TrunkDoor1;TrunkDoor2;TrunkDoor3;TrunkDoor8;M998TrunkDoor2;M101A3TrunkDoor2;M101A3TrunkDoorTwo2;U1550LTrunkDoor2;89BroncoTrunkDoor2,
+		Require : TrunkDoor1;TrunkDoor2;TrunkDoor3;TrunkDoor8;M101A3TrunkDoor2;M101A3TrunkDoorTwo2;U1550LTrunkDoor2;89BroncoTrunkDoor2,
 		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
@@ -69,7 +69,7 @@ module Base
 
 	fixing Fix Trunk Lid Other
 	{
-		Require : TrunkDoor1;TrunkDoor2;TrunkDoor3;TrunkDoor8;M998TrunkDoor2;M101A3TrunkDoor2;M101A3TrunkDoorTwo2;U1550LTrunkDoor2;89BroncoTrunkDoor2,
+		Require : TrunkDoor1;TrunkDoor2;TrunkDoor3;TrunkDoor8;M101A3TrunkDoor2;M101A3TrunkDoorTwo2;U1550LTrunkDoor2;89BroncoTrunkDoor2,
 		GlobalItem : Screws=8,
 		ConditionModifier : 0.5,
 
@@ -78,7 +78,7 @@ module Base
 
 	fixing Fix Door Welding
 	{
-		Require : FrontCarDoor1;FrontCarDoor2;FrontCarDoor3;RearCarDoor1;RearCarDoor2;RearCarDoor3;RearCarDoorDouble1;RearCarDoorDouble2;RearCarDoorDouble3;FrontCarDoor8;RearCarDoor8;RearCarDoorDouble8;M998CarFrontDoor2;M998CarRearDoor2;U1550LDoor2,
+		Require : FrontCarDoor1;FrontCarDoor2;FrontCarDoor3;RearCarDoor1;RearCarDoor2;RearCarDoor3;RearCarDoorDouble1;RearCarDoorDouble2;RearCarDoorDouble3;FrontCarDoor8;RearCarDoor8;RearCarDoorDouble8;U1550LDoor2,
 		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
@@ -254,16 +254,6 @@ module Base
 		Fixer : SmallSheetMetal=2;MetalWelding=3;Mechanics=2,	
 	}	
 	
-	fixing Fix Trunk Barrier Welding
-	{
-		Require : M998TrunkBarrier1_Item,
-		GlobalItem : BlowTorch=3,
-		ConditionModifier : 1.2,
-
-		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
-		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
-	}	
-	
 	fixing Fix Trunk Barrier Net
 	{
 		Require : M998TrunkBarrier2_Item,
@@ -295,7 +285,7 @@ module Base
 
 	fixing Fix Hard Cover
 	{
-		Require : M998BackCover1_Item;M101A3Cover1_Item;DG70RTRoof0;89BroncoBedCover;89BroncoBarrier,
+		Require : M101A3Cover1_Item;DG70RTRoof0;89BroncoBedCover;89BroncoBarrier,
 		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
@@ -341,6 +331,16 @@ module Base
 
 		Fixer : LeatherStrips=2;Tailoring=3;Mechanics=2,
 		Fixer : Superglue=2;Mechanics=2,
+	}
+
+	fixing Fix Roofracks
+	{
+		Require : ECTO1Equipment1_Item,
+		GlobalItem : BlowTorch=3,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
 	}
 
 }
