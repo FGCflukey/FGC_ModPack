@@ -3,7 +3,7 @@ module Base
 	fixing Fix Gas Tank Welding
 	{
 		Require : SmallGasTank1;NormalGasTank1;BigGasTank1;SmallGasTank2;NormalGasTank2;BigGasTank2;SmallGasTank3;NormalGasTank3;BigGasTank3;SmallGasTank8;NormalGasTank8;BigGasTank8;U1550LGasTank2,
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
@@ -22,7 +22,7 @@ module Base
 	fixing Fix Trailer Welding
 	{
 		Require : TrailerTrunk1;TrailerTrunk2;TrailerTrunk3;FRTrailerTrunk1;FRTrailerTrunk2;FRTrailerTrunk3,
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
@@ -41,7 +41,7 @@ module Base
 	fixing Fix Hood Welding
 	{
 		Require : EngineDoor1;EngineDoor2;EngineDoor3;EngineDoor8;M998EngineDoor2;U1550LHood2;89BroncoEngineDoor2,
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
@@ -60,7 +60,7 @@ module Base
 	fixing Fix Trunk Lid Welding
 	{
 		Require : TrunkDoor1;TrunkDoor2;TrunkDoor3;TrunkDoor8;M998TrunkDoor2;M101A3TrunkDoor2;M101A3TrunkDoorTwo2;U1550LTrunkDoor2;89BroncoTrunkDoor2,
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
@@ -79,7 +79,7 @@ module Base
 	fixing Fix Door Welding
 	{
 		Require : FrontCarDoor1;FrontCarDoor2;FrontCarDoor3;RearCarDoor1;RearCarDoor2;RearCarDoor3;RearCarDoorDouble1;RearCarDoorDouble2;RearCarDoorDouble3;FrontCarDoor8;RearCarDoor8;RearCarDoorDouble8;M998CarFrontDoor2;M998CarRearDoor2;U1550LDoor2,
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
@@ -98,7 +98,7 @@ module Base
 	fixing Fix Brake
 	{
 		Require : OldBrake1;NormalBrake1;ModernBrake1;OldBrake2;NormalBrake2;ModernBrake2;OldBrake3;NormalBrake3;ModernBrake3;OldBrake8;NormalBrake8;ModernBrake8,
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
@@ -108,7 +108,7 @@ module Base
 	fixing Fix Suspension
 	{
 		Require : NormalSuspension1;ModernSuspension1;NormalSuspension2;ModernSuspension2;NormalSuspension3;ModernSuspension3;NormalSuspension8;ModernSuspension8;leafSuspension2,
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
@@ -118,7 +118,7 @@ module Base
 	fixing Fix Muffler
 	{
 		Require : OldCarMuffler1;NormalCarMuffler1;ModernCarMuffler1;OldCarMuffler2;NormalCarMuffler2;ModernCarMuffler2;OldCarMuffler3;NormalCarMuffler3;ModernCarMuffler3;OldCarMuffler8;NormalCarMuffler8;ModernCarMuffler8;M998Muffler1_Item;M998Muffler2_Item;U1550LMuffler2,
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
@@ -156,7 +156,7 @@ module Base
 	fixing Fix Glove Box Welding
 	{
 		Require : GloveBox1;GloveBox2;GloveBox3,
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=3,
 		ConditionModifier : 10.0,
 
 		Fixer : SmallSheetMetal=1; MetalWelding=1;Mechanics=1,
@@ -218,7 +218,7 @@ module Base
 	fixing Fix Bullbar
 	{
 		Require : M998Bullbar1_Item;M998Bullbar2_Item;DG70FrontBumperA;DG70FrontBumperB;DG70FrontBumperC;DG70RearBumperA;DG70RearBumperB;DG70RearBumperC;R32BumperA;R32BumperRearA;R32SideskirtsA;McLarenF1Bull3;U1550LBull2;89BroncoBumperFront;89BroncoBumperRear;89BroncoBullbarFront,
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal;MetalWelding=3;Mechanics=2,
@@ -228,7 +228,7 @@ module Base
 	fixing Fix Door Armor
 	{
 		Require : M998CarFrontDoorArmor1_Item;M998CarRearDoorArmor1_Item;DG70DoorArmor;R32DoorArmor,
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal;MetalWelding=3;Mechanics=2,
@@ -238,7 +238,7 @@ module Base
 	fixing Fix Windshield Armor
 	{
 		Require : M998WindshieldArmor1_Item;M998WindshieldArmor2_Item;DG70WindshieldArmor;DG70WindshieldRearArmor;R32WindshieldRearArmor;R32WindshieldArmor,
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal;MetalWelding=3;Mechanics=2,
@@ -248,7 +248,7 @@ module Base
 	fixing Fix Window Armor
 	{
 		Require : R32RearWindowArmor;McLarenF1WindowArmor3,
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal;MetalWelding=3;Mechanics=2,
@@ -258,7 +258,7 @@ module Base
 	fixing Fix Trunk Barrier Welding
 	{
 		Require : M998TrunkBarrier1_Item,
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
@@ -277,7 +277,7 @@ module Base
 	fixing Container Trunk Door
 	{
 		Require : IsoContainerTrunkDoor2;IsoContainerTankerTrunkDoor2,
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
@@ -287,7 +287,7 @@ module Base
 	fixing Fix Spare Mount
 	{
 		Require : M998SpareMount_Item;M998SpareTireMount_Item,
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
@@ -297,7 +297,7 @@ module Base
 	fixing Fix Hard Cover
 	{
 		Require : M998BackCover1_Item;M101A3Cover1_Item;DG70RTRoof0;89BroncoBedCover;89BroncoBarrier,
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
@@ -317,7 +317,7 @@ module Base
 	fixing Fix Interior
 	{
 		Require : M998DefaultInterior2,
-		GlobalItem : BlowTorch=5,
+		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
