@@ -169,7 +169,6 @@ module Base
 		 
 		Fixer : Superglue=2;Tailoring=3;Mechanics=1,
 		Fixer : Rubbercement=2;Tailoring=3;Mechanics=1,
-		Fixer : DuctTape=2;Tailoring=3;Mechanics=1,
 	}
 
 	fixing Fix Car Seat Other
@@ -216,7 +215,7 @@ module Base
 
 	fixing Fix Bullbar
 	{
-		Require : M998Bullbar1_Item;M998Bullbar2_Item;DG70FrontBumperA;DG70FrontBumperB;DG70FrontBumperC;DG70RearBumperA;DG70RearBumperB;DG70RearBumperC;R32BumperA;R32BumperRearA;R32SideskirtsA;McLarenF1Bull3;U1550LBull2;89BroncoBumperFront;89BroncoBumperRear;89BroncoBullbarFront,
+		Require : DG70FrontBumper0;DG70RearBumper0;DG70FrontBumperA;DG70FrontBumperB;DG70FrontBumperC;DG70RearBumperA;DG70RearBumperB;DG70RearBumperC;R32BumperA;R32BumperRearA;R32SideskirtsA;McLarenF1Bull3;U1550LBull2;89BroncoBumperFront;89BroncoBumperRear;89BroncoBullbarFront,
 		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
@@ -315,7 +314,7 @@ module Base
 
 	fixing Fix Spoiler
 	{
-		Require : DG70Spoiler0;DG70Spoiler1;M911Mudflaps,
+		Require : DG70Spoiler0;DG70Spoiler1;M911Mudflaps;M998Mudflaps1_Item,
 		ConditionModifier : 1.2,
 
 		Fixer : Superglue=2;Mechanics=2,

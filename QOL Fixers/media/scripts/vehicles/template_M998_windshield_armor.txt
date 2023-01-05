@@ -36,6 +36,7 @@ module Base
 			specificItem = false,
 			itemType = Base.M998WindshieldArmor1_Item;Base.M998WindshieldArmor2_Item,
 			mechanicRequireKey = false,
+			repairMechanic = true,
 			table install
 					{
 						requireInstalled = Windshield,
