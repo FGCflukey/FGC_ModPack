@@ -1,0 +1,82 @@
+module Base
+{
+	model 74amgeneralM151A2CabArmor1
+    	{
+        mesh = vehicles/Vehicles_74amgeneralM151A2_Body|m151_armor_base,
+        shader = vehicle_noreflect,
+        scale = 0.1,
+    	}
+
+	template vehicle M151A2CabArmor
+		{
+		part M151A2CabArmor
+        	{
+
+			model CabArmor1
+				{
+                		file = 74amgeneralM151A2CabArmor1,
+				}
+
+			area = TruckBed,
+			category = bodywork,
+			specificItem = false,
+			itemType = Base.M151A2CabArmor1_Item,
+			mechanicRequireKey = false,
+			repairMechanic = true,
+
+			table uninstall
+			{
+				requireUninstalled = DoorFrontRight;DoorFrontLeft,
+			}
+
+			table install
+			{
+                	items
+                	{
+                    	1
+                    		{
+                        	type = Base.Screwdriver,
+                        	count = 1,
+                        	keep = true,
+							equip = primary,
+                    		}
+                	}
+
+                	time = 1100,
+                	skills = Mechanics:4,
+                	recipes = Intermediate Mechanics,
+                	test = Vehicles.InstallTest.Default,
+                	complete = M151A2.InstallComplete.CabArmor,
+            		}
+
+            		table uninstall
+            		{
+                	items
+                	{
+                    	1
+                    		{
+  				type = Base.Screwdriver,
+				count = 1,
+				keep = true,
+				equip = primary,
+                    		}
+                	}
+
+			time = 1100,
+			skills = Mechanics:4,
+			recipes = Intermediate Mechanics,
+			requireUninstalled = DoorFrontRight,
+            test = Vehicles.UninstallTest.Default,
+			complete = M151A2.UninstallComplete.CabArmor,
+            		}
+
+            		lua
+            		{
+			create = M151A2.Create.CabArmor,
+			init = M151A2.Init.CabArmor,
+			}
+		}
+	}
+
+		
+}

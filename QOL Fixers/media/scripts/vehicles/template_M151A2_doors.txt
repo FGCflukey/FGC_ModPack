@@ -1,0 +1,248 @@
+module Base
+{
+
+	model 74amgeneralM151A2door_fl
+	{
+		mesh = vehicles/Vehicles_74amgeneralM151A2_Body|m151_door_fl,
+		shader = vehicle_noreflect,
+		static = FALSE,
+		scale = 0.1,
+		boneWeight = door_fl_bone 1.0,
+	}
+
+	model 74amgeneralM151A2door_fr
+	{
+		mesh = vehicles/Vehicles_74amgeneralM151A2_Body|m151_door_fr,
+		shader = vehicle_noreflect,
+		static = FALSE,
+		scale = 0.1,
+		boneWeight = door_fr_bone 1.0,
+	}
+
+	template vehicle M151A2Doors
+	{
+
+		part DoorFrontLeft
+		{
+
+			model M151DoorFrontLeft
+			{
+				file = 74amgeneralM151A2door_fl,
+				offset = 0 0 0,
+				rotate = 0 0 0,
+				scale = 1.0,
+			}
+
+			anim Close
+			{
+				anim = Door_fl_closing,
+				rate = 0.70,
+			}
+
+			anim Open
+			{
+				anim = Door_fl_closing,
+				reverse = TRUE,
+				rate = 1.25,
+			}
+
+			anim Closed
+			{
+				anim = Door_fl_closing,
+				reverse = TRUE,
+				animate = FALSE,
+			}
+
+			anim Opened
+			{
+				anim = Door_fl_closing,
+				animate = FALSE,
+			}
+
+			area = SeatFrontLeft,
+			repairMechanic = true,
+			anim ActorOpen
+			{
+				angle = 0.0 270.0 0.0,
+			}
+			anim ActorClose
+			{
+				angle = 0.0 270.0 0.0,
+			}
+
+			table install
+			{
+				requireInstalled = M151A2CabArmor,
+			}
+
+			table uninstall
+			{
+				requireUninstalled = WindowFrontLeft,
+			}
+
+			itemType = Base.M151A2LeftDoor,
+			category = door,
+
+		}
+
+		part DoorFrontRight
+		{
+
+			model M151DoorFrontRight
+			{
+				file = 74amgeneralM151A2door_fr,
+				offset = 0 0 0,
+				rotate = 0 0 0,
+				scale = 1.0,
+			}
+
+			anim Close
+			{
+				anim = Door_fr_closing,
+				rate = 0.70,
+			}
+
+			anim Open
+			{
+				anim = Door_fr_closing,
+				reverse = TRUE,
+				rate = 1.25,
+			}
+
+			anim Closed
+			{
+				anim = Door_fr_closing,
+				reverse = TRUE,
+				animate = FALSE,
+			}
+
+			anim Opened
+			{
+				anim = Door_fr_closing,
+				animate = FALSE,
+			}
+
+			area = SeatFrontRight,
+			repairMechanic = true,
+			anim ActorOpen
+			{
+				angle = 0.0 90.0 0.0,
+			}
+			anim ActorClose
+			{
+				angle = 0.0 90.0 0.0,
+			}
+
+			table install
+			{
+				requireInstalled = M151A2CabArmor,
+			}
+
+			table uninstall
+			{
+				requireUninstalled = WindowFrontRight,
+			}
+
+			itemType = Base.M151A2RightDoor,
+			category = door,
+
+		}
+
+		part DoorRearLeft
+		{
+			area = SeatRearLeft,
+			repairMechanic = true,
+			itemType = Base.M151A2LeftDoor,
+			category = nodisplay,
+		}
+
+		part DoorRearRight
+		{
+			area = SeatRearLeft,
+			repairMechanic = true,
+			itemType = Base.M151A2RightDoor,
+			category = nodisplay,
+		}
+
+		
+		part Door*
+		{
+			door
+			{
+				}
+				anim Open
+				{
+					sound = VehicleDoorOpenStandard,
+				}
+				anim Close
+				{
+					sound = VehicleDoorCloseStandard,
+				}
+				anim Lock
+				{
+					sound = LockVehicleDoorStandard,
+				}
+				anim Unlock
+				{
+					sound = UnlockVehicleDoorStandard,
+				}
+				anim IsLocked
+				{
+					sound = VehicleDoorIsLockedStandard,
+				}
+				anim ActorOpen
+				{
+					anim = Attack_Shove,
+					rate = 0.3,
+				}
+				anim ActorClose
+				{
+					anim = Attack_Shove,
+					rate = 0.3,
+				}
+				mechanicRequireKey = true,
+				table install
+				{
+					items
+					{
+						item
+						{
+							type = Base.Wrench,
+							count = 1,
+							keep = true,
+							equip = primary,
+						}
+					}
+					time = 700,
+					skills = Mechanics:4,
+					recipes = Intermediate Mechanics,
+					test = Vehicles.InstallTest.Default,
+					complete = Vehicles.InstallComplete.Door,
+				}
+				table uninstall
+				{
+					items
+					{
+						item
+						{
+							type = Base.Wrench,
+							count = 1,
+							keep = true,
+							equip = primary,
+						}
+					}
+					time = 700,
+					skills = Mechanics:4,
+					recipes = Intermediate Mechanics,
+					test = Vehicles.UninstallTest.Default,
+					complete = Vehicles.UninstallComplete.Door,
+				}
+
+				lua
+				{
+					use = Vehicles.Use.Door,
+				}
+			}
+		}
+	}
+

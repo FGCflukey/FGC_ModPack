@@ -1,0 +1,72 @@
+module Base
+{
+
+    model 74amgeneralM151A2windshield
+    {
+        mesh = vehicles/Vehicles_74amgeneralM151A2_Body|m151_windshield,
+        shader = vehicle,
+        scale = 0.1,
+    }
+
+	template vehicle M151A2Windshield
+	{
+
+        part Windshield
+        {
+            model windshieldFront
+            {
+            file = 74amgeneralM151A2windshield,
+            }
+            window
+            {
+            openable = false,
+            }
+                
+            itemType = Base.M151A2Windshield,
+            area = Engine,
+            category = bodywork,
+            mechanicRequireKey = false,
+			repairMechanic = true,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+			equip = primary,
+                    }
+                }
+                time = 700,
+                skills = Mechanics:5,
+                recipes = Intermediate Mechanics,
+                test = Vehicles.InstallTest.Default,
+                complete = Vehicles.InstallComplete.Window,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+						equip = primary,
+                    }
+                }
+                time = 700,
+                  skills = Mechanics:5,
+                  recipes = Intermediate Mechanics,
+                test = Vehicles.UninstallTest.Default,
+            }
+            lua
+            {
+                create = Vehicles.Create.Default,
+            }
+        }
+
+        }
+}

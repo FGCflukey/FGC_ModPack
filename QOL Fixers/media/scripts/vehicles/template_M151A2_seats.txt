@@ -1,0 +1,219 @@
+module Base
+{
+
+	model 74amgeneralM151A2seatfl
+	{
+		mesh = vehicles/Vehicles_74amgeneralM151A2_Body|m151_seat_fl,
+		texture = Vehicles/Vehicles_74amgeneralM151A2_Interior_Wheel,
+		shader = vehiclewheel,
+		scale = 0.1,
+	}
+	model 74amgeneralM151A2seatfr
+	{
+		mesh = vehicles/Vehicles_74amgeneralM151A2_Body|m151_seat_fr,
+		texture = Vehicles/Vehicles_74amgeneralM151A2_Interior_Wheel,
+		shader = vehiclewheel,
+		scale = 0.1,
+	}
+	model 74amgeneralM151A2seatrl
+	{
+		mesh = vehicles/Vehicles_74amgeneralM151A2_Body|m151_seat_rl,
+		texture = Vehicles/Vehicles_74amgeneralM151A2_Interior_Wheel,
+		shader = vehiclewheel,
+		scale = 0.1,
+	}
+	model 74amgeneralM151A2seatrr
+	{
+		mesh = vehicles/Vehicles_74amgeneralM151A2_Body|m151_seat_rr,
+		texture = Vehicles/Vehicles_74amgeneralM151A2_Interior_Wheel,
+		shader = vehiclewheel,
+		scale = 0.1,
+	}
+	
+	template vehicle M151A2Seats
+	{
+		part SeatFrontLeft
+		{
+			
+			model SeatFL
+			{
+				file = 74amgeneralM151A2seatfl,
+				offset = 0 0 0,
+				rotate = 0 0 0,
+				scale = 1.0,
+			}
+			
+			area = SeatFrontLeft,
+			repairMechanic = true,
+			container
+			{
+				seat = FrontLeft,
+			}
+		}
+
+		part SeatFrontRight
+		{
+
+			model seatFR
+			{
+				file = 74amgeneralM151A2seatfr,
+				offset = 0 0 0,
+				rotate = 0 0 0,
+				scale = 1.0,
+			}
+
+			area = SeatFrontRight,
+			repairMechanic = true,
+			container
+			{
+				seat = FrontRight,
+			}
+		}
+
+		part SeatRearLeft
+		{
+
+			model seatRL
+			{
+				file = 74amgeneralM151A2seatrl,
+				offset = 0 0 0,
+				rotate = 0 0 0,
+				scale = 1.0,
+			}
+
+			area = SeatRearLeft,
+			repairMechanic = true,
+			container
+			{
+				seat = RearLeft,
+			}
+			table install
+			{
+				requireUninstalled = M151A2BarrierLeft,
+			}
+		}
+
+		part SeatRearRight
+		{
+
+			model seatRR
+			{
+				file = 74amgeneralM151A2seatrr,
+				offset = 0 0 0,
+				rotate = 0 0 0,
+				scale = 1.0,
+			}
+
+			area = SeatRearRight,
+			repairMechanic = true,
+			container
+			{
+				seat = RearRight,
+			}
+			table install
+			{
+				requireUninstalled = M151A2BarrierRight,
+			}
+		}
+
+		part SeatFront*
+		{
+			category = seat,
+			itemType = Base.M151A2CarSeatFront,
+			mechanicRequireKey = true,
+			container
+			{
+				test = Vehicles.ContainerAccess.Seat,
+			}
+			table install
+			{
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 300,
+				skills = Mechanics:1,
+				recipes = Basic Mechanics,
+				test = Vehicles.InstallTest.Default,
+			}
+			table uninstall
+			{
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 300,
+				skills = Mechanics:1,
+				recipes = Basic Mechanics,
+				test = Vehicles.UninstallTest.Default,
+				requireEmpty = true,
+			}
+			lua
+			{
+				create = Vehicles.Create.Default,
+			}
+		}
+		part SeatRear*
+		{
+			category = seat,
+			itemType = Base.M151A2CarSeatRear,
+			mechanicRequireKey = true,
+			container
+			{
+				test = Vehicles.ContainerAccess.Seat,
+			}
+			table install
+			{
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 350,
+				skills = Mechanics:1,
+				recipes = Basic Mechanics,
+				test = Vehicles.InstallTest.Default,
+			}
+			table uninstall
+			{
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 300,
+				skills = Mechanics:1,
+				recipes = Basic Mechanics,
+				test = Vehicles.UninstallTest.Default,
+				requireEmpty = true,
+			}
+			lua
+			{
+				create = Vehicles.Create.Default,
+			}
+		}
+	}
+}
+
