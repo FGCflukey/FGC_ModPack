@@ -117,7 +117,7 @@ module Base
 
 	fixing Fix Muffler
 	{
-		Require : OldCarMuffler1;NormalCarMuffler1;ModernCarMuffler1;OldCarMuffler2;NormalCarMuffler2;ModernCarMuffler2;OldCarMuffler3;NormalCarMuffler3;ModernCarMuffler3;OldCarMuffler8;NormalCarMuffler8;ModernCarMuffler8;M911Muffler;M998Muffler1_Item;M998Muffler2_Item;U1550LMuffler2,
+		Require : OldCarMuffler1;NormalCarMuffler1;ModernCarMuffler1;OldCarMuffler2;NormalCarMuffler2;ModernCarMuffler2;OldCarMuffler3;NormalCarMuffler3;ModernCarMuffler3;OldCarMuffler8;NormalCarMuffler8;ModernCarMuffler8;M911Muffler;M998Muffler1_Item;M998Muffler2_Item;U1550LMuffler2;R32muffler0;R32muffler1,
 		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
