@@ -127,7 +127,7 @@ module Base
 
 	fixing Fix Window
 	{
-		Require : FrontWindow1;RearWindow1;FrontWindow2;RearWindow2;FrontWindow3;RearWindow3;FrontWindow8;RearWindow8;M998SideWindow2;DG70FrontSideWindow3;DG70RearSideWindow3;R32FrontSideWindow3;R32RearSideWindow3;McLarenF1SideWindow3;M911SideWindow2;U1550LWindow2;E150SideWindow2;82JeepJ10WindowSide2;89BroncoWindowSide2;89BroncoWindowSideRear2;ECTO1SideWindow2;P19ASideWindow2,
+		Require : FrontWindow1;RearWindow1;FrontWindow2;RearWindow2;FrontWindow3;RearWindow3;FrontWindow8;RearWindow8;M998SideWindow2;DG70FrontSideWindow3;DG70RearSideWindow3;R32FrontSideWindow3;R32RearSideWindow3;McLarenF1SideWindow3;M911SideWindow2;U1550LWindow2;E150SideWindow2;82JeepJ10WindowSide2;89BroncoWindowSide2;89BroncoWindowSideRear2;ECTO1SideWindow2;P19ASideWindow2;88ChevyS10WindowSide2,
 		ConditionModifier : 1.2,
 
 		Fixer : Superglue=1;Mechanics=2,
@@ -136,7 +136,7 @@ module Base
 
 	fixing Fix Windshield
 	{
-		Require : Windshield1;RearWindshield1;Windshield2;RearWindshield2;Windshield3;RearWindshield3;Windshield8;RearWindshield8;M998Windshield2;DG70Windshield3;DG70WindshieldRear3;R32Windshield3;R32WindshieldRear3;McLarenF1Windshield3;McLarenF1RearWindshield3;M911Windshield2;M911WindshieldRear2;U1550LWindshield2;U1550LRearWindow2;E150Windshield2;E150RearWindshield2;82JeepJ10Windshield2;89BroncoWindshieldRear2;89BroncoWindshield2;ECTO1Windshield2;ECTO1RearWindshield2;82JeepJ10WindshieldRear2;P19AWindshield2,
+		Require : Windshield1;RearWindshield1;Windshield2;RearWindshield2;Windshield3;RearWindshield3;Windshield8;RearWindshield8;M998Windshield2;DG70Windshield3;DG70WindshieldRear3;R32Windshield3;R32WindshieldRear3;McLarenF1Windshield3;McLarenF1RearWindshield3;M911Windshield2;M911WindshieldRear2;U1550LWindshield2;U1550LRearWindow2;E150Windshield2;E150RearWindshield2;82JeepJ10Windshield2;89BroncoWindshieldRear2;89BroncoWindshield2;ECTO1Windshield2;ECTO1RearWindshield2;82JeepJ10WindshieldRear2;P19AWindshield2;88ChevyS10Windshield2;88ChevyS10WindshieldRear2,
 		ConditionModifier : 1.2,
 
 		Fixer : Superglue=2;Mechanics=2,
@@ -213,9 +213,9 @@ module Base
 		Fixer : ElectronicsScrap=6;Electricity=2,
 	}
 
-	fixing Fix Bullbar
+	fixing Fix Bullbar Bumper
 	{
-		Require : DG70FrontBumper0;DG70RearBumper0;DG70FrontBumperA;DG70FrontBumperB;DG70FrontBumperC;DG70RearBumperA;DG70RearBumperB;DG70RearBumperC;R32BumperA;R32BumperRearA;R32SideskirtsA;McLarenF1Bull3;U1550LBull2;89BroncoBumperFront;89BroncoBumperRear;89BroncoBullbarFront;80sPickupBullbarFront;80sPickupBullbarRear;82JeepJ10BumperFront;82JeepJ10BullbarFront;82JeepJ10BumperRear;P19AFenderLeft1_Item;P19AFenderLeft2_Item;P19AFenderRight1_Item;P19AFenderRight2_Item;P19AFenderRight3_Item,
+		Require : DG70FrontBumper0;DG70RearBumper0;DG70FrontBumperA;DG70FrontBumperB;DG70FrontBumperC;DG70RearBumperA;DG70RearBumperB;DG70RearBumperC;R32BumperA;R32BumperRearA;R32SideskirtsA;McLarenF1Bull3;U1550LBull2;89BroncoBumperFront;89BroncoBumperRear;89BroncoBullbarFront;80sPickupBullbarFront;80sPickupBullbarRear;82JeepJ10BumperFront;82JeepJ10BullbarFront;82JeepJ10BumperRear;P19AFenderLeft1_Item;P19AFenderLeft2_Item;P19AFenderRight1_Item;P19AFenderRight2_Item;P19AFenderRight3_Item;88ChevyS10BumperFront;88ChevyS10BullbarFront;88ChevyS10BumperRear,
 		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
@@ -284,7 +284,7 @@ module Base
 
 	fixing Fix Hard Cover
 	{
-		Require : M101A3Cover1_Item;DG70RTRoof0;89BroncoBedCover;89BroncoBarrier;82JeepJ10BedCover,
+		Require : M101A3Cover1_Item;DG70RTRoof0;89BroncoBedCover;89BroncoBarrier;82JeepJ10BedCover;88ChevyS10BedCover,
 		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
