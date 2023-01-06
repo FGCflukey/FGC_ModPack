@@ -245,7 +245,7 @@ module Base
 	
 	fixing Fix Window Armor
 	{
-		Require : R32RearWindowArmor;McLarenF1WindowArmor3;80sPickupWindowFrontArmor;80sPickupWindowRearArmor,
+		Require : R32RearWindowArmor;80sPickupWindowFrontArmor;80sPickupWindowRearArmor,
 		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
