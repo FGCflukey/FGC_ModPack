@@ -40,7 +40,7 @@ module Base
 
 	fixing Fix Hood Welding
 	{
-		Require : EngineDoor1;EngineDoor2;EngineDoor3;EngineDoor8;U1550LHood2;89BroncoEngineDoor2,
+		Require : EngineDoor1;EngineDoor2;EngineDoor3;EngineDoor8;U1550LHood2,
 		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
@@ -50,7 +50,7 @@ module Base
 
 	fixing Fix Hood Other
 	{
-		Require : EngineDoor1;EngineDoor2;EngineDoor3;EngineDoor8;U1550LHood2;89BroncoEngineDoor2,
+		Require : EngineDoor1;EngineDoor2;EngineDoor3;EngineDoor8;U1550LHood2,
 		GlobalItem : Screws=8,
 		ConditionModifier : 0.5,
 
@@ -59,7 +59,7 @@ module Base
 
 	fixing Fix Trunk Lid Welding
 	{
-		Require : TrunkDoor1;TrunkDoor2;TrunkDoor3;TrunkDoor8;M101A3TrunkDoor2;M101A3TrunkDoorTwo2;U1550LTrunkDoor2;89BroncoTrunkDoor2,
+		Require : TrunkDoor1;TrunkDoor2;TrunkDoor3;TrunkDoor8;M101A3TrunkDoor2;M101A3TrunkDoorTwo2;U1550LTrunkDoor2,
 		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
@@ -69,7 +69,7 @@ module Base
 
 	fixing Fix Trunk Lid Other
 	{
-		Require : TrunkDoor1;TrunkDoor2;TrunkDoor3;TrunkDoor8;M101A3TrunkDoor2;M101A3TrunkDoorTwo2;U1550LTrunkDoor2;89BroncoTrunkDoor2,
+		Require : TrunkDoor1;TrunkDoor2;TrunkDoor3;TrunkDoor8;M101A3TrunkDoor2;M101A3TrunkDoorTwo2;U1550LTrunkDoor2,
 		GlobalItem : Screws=8,
 		ConditionModifier : 0.5,
 
@@ -136,7 +136,7 @@ module Base
 
 	fixing Fix Windshield
 	{
-		Require : Windshield1;RearWindshield1;Windshield2;RearWindshield2;Windshield3;RearWindshield3;Windshield8;RearWindshield8;M998Windshield2;DG70Windshield3;DG70WindshieldRear3;R32Windshield3;R32WindshieldRear3;McLarenF1Windshield3;McLarenF1RearWindshield3;M911Windshield2;M911WindshieldRear2;U1550LWindshield2;U1550LRearWindow2;E150Windshield2;E150RearWindshield2;82JeepJ10Windshield2;89BroncoWindshieldRear2;89BroncoWindshield2;ECTO1Windshield2;ECTO1RearWindshield2,
+		Require : Windshield1;RearWindshield1;Windshield2;RearWindshield2;Windshield3;RearWindshield3;Windshield8;RearWindshield8;M998Windshield2;DG70Windshield3;DG70WindshieldRear3;R32Windshield3;R32WindshieldRear3;McLarenF1Windshield3;McLarenF1RearWindshield3;M911Windshield2;M911WindshieldRear2;U1550LWindshield2;U1550LRearWindow2;E150Windshield2;E150RearWindshield2;82JeepJ10Windshield2;89BroncoWindshieldRear2;89BroncoWindshield2;ECTO1Windshield2;ECTO1RearWindshield2;82JeepJ10WindshieldRear2,
 		ConditionModifier : 1.2,
 
 		Fixer : Superglue=2;Mechanics=2,
@@ -215,7 +215,7 @@ module Base
 
 	fixing Fix Bullbar
 	{
-		Require : DG70FrontBumper0;DG70RearBumper0;DG70FrontBumperA;DG70FrontBumperB;DG70FrontBumperC;DG70RearBumperA;DG70RearBumperB;DG70RearBumperC;R32BumperA;R32BumperRearA;R32SideskirtsA;McLarenF1Bull3;U1550LBull2;89BroncoBumperFront;89BroncoBumperRear;89BroncoBullbarFront,
+		Require : DG70FrontBumper0;DG70RearBumper0;DG70FrontBumperA;DG70FrontBumperB;DG70FrontBumperC;DG70RearBumperA;DG70RearBumperB;DG70RearBumperC;R32BumperA;R32BumperRearA;R32SideskirtsA;McLarenF1Bull3;U1550LBull2;89BroncoBumperFront;89BroncoBumperRear;89BroncoBullbarFront;80sPickupBullbarFront;80sPickupBullbarRear;82JeepJ10BumperFront;82JeepJ10BullbarFront;82JeepJ10BumperRear,
 		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
@@ -225,7 +225,7 @@ module Base
 
 	fixing Fix Door Armor
 	{
-		Require : M998CarFrontDoorArmor1_Item;M998CarRearDoorArmor1_Item;DG70DoorArmor;R32DoorArmor,
+		Require : M998CarFrontDoorArmor1_Item;M998CarRearDoorArmor1_Item;DG70DoorArmor;R32DoorArmor;E150DoorArmor,
 		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
@@ -235,7 +235,7 @@ module Base
 
 	fixing Fix Windshield Armor
 	{
-		Require : M998WindshieldArmor1_Item;M998WindshieldArmor2_Item;DG70WindshieldArmor;DG70WindshieldRearArmor;R32WindshieldRearArmor;R32WindshieldArmor,
+		Require : M998WindshieldArmor1_Item;M998WindshieldArmor2_Item;DG70WindshieldArmor;DG70WindshieldRearArmor;R32WindshieldRearArmor;R32WindshieldArmor;E150WindshieldArmor;E150WindshieldRearArmor;80sPickupWindshieldArmor,
 		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
@@ -245,7 +245,7 @@ module Base
 	
 	fixing Fix Window Armor
 	{
-		Require : R32RearWindowArmor;McLarenF1WindowArmor3,
+		Require : R32RearWindowArmor;McLarenF1WindowArmor3;80sPickupWindowFrontArmor;80sPickupWindowRearArmor,
 		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
@@ -284,7 +284,7 @@ module Base
 
 	fixing Fix Hard Cover
 	{
-		Require : M101A3Cover1_Item;DG70RTRoof0;89BroncoBedCover;89BroncoBarrier,
+		Require : M101A3Cover1_Item;DG70RTRoof0;89BroncoBedCover;89BroncoBarrier;82JeepJ10BedCover,
 		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
@@ -332,9 +332,9 @@ module Base
 		Fixer : Superglue=2;Mechanics=2,
 	}
 
-	fixing Fix Roofracks
+	fixing Fix Roofracks and Other
 	{
-		Require : ECTO1Equipment1_Item,
+		Require : ECTO1Equipment1_Item;E150Divider;E150MysteryMachineRoofrack2;E150MysteryMachineSurfboards2;80sPickupRoofrackA;80sPickupRollbarA;80sPickupRollbarB;82JeepJ10Dorothy;82JeepJ10DorothyAnemometer,
 		GlobalItem : BlowTorch=3,
 		ConditionModifier : 1.2,
 
