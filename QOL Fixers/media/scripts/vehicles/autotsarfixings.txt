@@ -23,15 +23,6 @@ module Autotsar
 		Fixer : LeatherStrips=2;Tailoring=2;Mechanics=2,
     }
 
-    fixing Fix Standard Seat
-	{
-		Require : NormalCarSeat1;NormalCarSeat2;NormalCarSeat3,
-		GlobalItem : UpholsteryKit=2,
-		ConditionModifier : 1.2,
-
-		Fixer : LeatherStrips=2;Tailoring=2;Mechanics=2,
-	}
-	
 	fixing Motorbike Accessories
 	{
 		Require : ATAMotoBagBMW1;ATAMotoBagBMW2;ATAMotoHarleyBag;ATAMotoHarleyHolster,
