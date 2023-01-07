@@ -1,0 +1,77 @@
+module Base
+{
+	model 74amgeneralM151A2tarp
+	{
+		mesh = vehicles/Vehicles_74amgeneralM151A2_Body|m151_tarp,
+		shader = vehicle_noreflect,
+		scale = 0.1,
+	}
+
+	template vehicle M151A2Tarps
+		{
+		part M151A2Tarp
+        	{
+
+			model Tarp1
+				{
+                		file = 74amgeneralM151A2tarp,
+				}
+
+			area = TireRearRight,
+			category = bodywork,
+			specificItem = false,
+			itemType = Base.M151A2Tarp1_Item,
+			mechanicRequireKey = false,
+			repairMechanic = true,
+
+			table install
+			{
+                	items
+                	{
+                    	1
+                    		{
+                        	type = Base.Wrench,
+                        	count = 1,
+                        	keep = true,
+				equip = primary,
+                    		}
+                	}
+
+                	time = 1500,
+                	skills = Mechanics:4,
+                	recipes = Intermediate Mechanics,
+                	test = Vehicles.InstallTest.Default,
+                	complete = M151A2.InstallComplete.Tarp,
+            		}
+
+            		table uninstall
+            		{
+                	items
+                	{
+                    	1
+                    		{
+  				type = Base.Wrench,
+				count = 1,
+				keep = true,
+				equip = primary,
+                    		}
+                	}
+
+				time = 1700,
+				skills = Mechanics:4,
+				recipes = Intermediate Mechanics,
+                test = Vehicles.UninstallTest.Default,
+				complete = M151A2.UninstallComplete.Tarp,
+				requireUninstalled = TrunkDoor,
+            		}
+
+            		lua
+            		{
+				create = M151A2.Create.Tarp,
+				init = M151A2.Init.Tarp,
+			}
+		}
+	}
+
+		
+}

@@ -1,0 +1,146 @@
+module Base
+{
+	model 74amgeneralM151A2barrierLeft
+	{
+		mesh = vehicles/Vehicles_74amgeneralM151A2_Body|m151_armor_barrier_left,
+		shader = vehicle_noreflect,
+		scale = 0.1,
+	}
+
+	model 74amgeneralM151A2barrierRight
+	{
+		mesh = vehicles/Vehicles_74amgeneralM151A2_Body|m151_armor_barrier_right,
+		shader = vehicle_noreflect,
+		scale = 0.1,
+	}
+
+	template vehicle M151A2Barriers
+		{
+		part M151A2BarrierLeft
+        	{
+
+			model BarrierLeft1
+				{
+                		file = 74amgeneralM151A2barrierLeft,
+				}
+
+			area = SeatFrontLeft,
+			category = bodywork,
+			specificItem = false,
+			itemType = Base.M151A2BarrierLeft1_Item,
+			mechanicRequireKey = false,
+			repairMechanic = true,
+
+			table install
+			{
+                	items
+                	{
+                    	1
+                    		{
+                        	type = Base.Wrench,
+                        	count = 1,
+                        	keep = true,
+				equip = primary,
+                    		}
+                	}
+
+                	time = 1200,
+                	skills = Mechanics:4,
+                	recipes = Intermediate Mechanics,
+                	requireUninstalled = SeatRearLeft,
+                	test = Vehicles.InstallTest.Default,
+                	complete = M151A2.InstallComplete.BarrierLeft,
+            		}
+
+            table uninstall
+            		{
+                	items
+                	{
+                    	1
+                    		{
+  				type = Base.Wrench,
+				count = 1,
+				keep = true,
+				equip = primary,
+                    		}
+                	}
+
+			time = 1200,
+			skills = Mechanics:4,
+			recipes = Intermediate Mechanics,
+            test = Vehicles.UninstallTest.Default,
+			complete = M151A2.UninstallComplete.BarrierLeft,
+            		}
+
+            		lua
+            		{
+			create = M151A2.Create.BarrierLeft,
+			init = M151A2.Init.BarrierLeft,
+			}
+		}
+		part M151A2BarrierRight
+        	{
+
+			model BarrierRight1
+				{
+                		file = 74amgeneralM151A2barrierRight,
+				}
+
+			area = SeatFrontRight,
+			category = bodywork,
+			specificItem = false,
+			itemType = Base.M151A2BarrierRight1_Item,
+			mechanicRequireKey = false,
+			repairMechanic = true,
+
+			table install
+			{
+                	items
+                	{
+                    	1
+                    		{
+                        	type = Base.Wrench,
+                        	count = 1,
+                        	keep = true,
+				equip = primary,
+                    		}
+                	}
+
+                	time = 1200,
+                	skills = Mechanics:4,
+                	recipes = Intermediate Mechanics,
+                	requireUninstalled = SeatRearRight,
+                	test = Vehicles.InstallTest.Default,
+                	complete = M151A2.InstallComplete.BarrierRight,
+            		}
+
+            		table uninstall
+            		{
+                	items
+                	{
+                    	1
+                    		{
+  				type = Base.Wrench,
+				count = 1,
+				keep = true,
+				equip = primary,
+                    		}
+                	}
+
+			time = 1200,
+			skills = Mechanics:4,
+			recipes = Intermediate Mechanics,
+            test = Vehicles.UninstallTest.Default,
+			complete = M151A2.UninstallComplete.BarrierRight,
+            		}
+
+            		lua
+            		{
+			create = M151A2.Create.BarrierRight,
+			init = M151A2.Init.BarrierRight,
+			}
+		}
+	}
+
+		
+}

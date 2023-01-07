@@ -1,0 +1,79 @@
+module Base
+{
+	model 74amgeneralM151A2spare
+	{
+		mesh = vehicles/Vehicles_74amgeneralM151A2_Body|m151_sparetire,
+		texture = Vehicles/Vehicles_74amgeneralM151A2_Interior_Wheel,
+		shader = vehiclewheel,
+		scale = 0.1,
+	}
+
+	template vehicle M151A2SpareTire
+		{
+		part M151A2SpareTire
+        	{
+
+			model SpareTire1
+				{
+                		file = 74amgeneralM151A2spare,
+				}
+
+			category = bodywork,
+			area = SpareTire,
+			itemType = Base.V102Tire,
+			mechanicRequireKey = false,
+			repairMechanic = true,
+
+
+			{
+				create = Vehicles.Create.Default,
+			}
+
+			table install
+			{
+                	items
+                	{
+                    	1
+                    		{
+                        	type = Base.Wrench,
+                        	count = 1,
+                        	keep = true,
+							equip = primary,
+                    		}
+                	}
+
+                	time = 1200,
+                	skills = Mechanics:1,
+                	recipes = Intermediate Mechanics,
+                	test = Vehicles.InstallTest.Default,
+            		}
+
+            		table uninstall
+            		{
+                	items
+                	{
+                    	1
+                    		{
+  				type = Base.Wrench,
+				count = 1,
+				keep = true,
+				equip = primary,
+                    		}
+                	}
+
+			time = 1000,
+			skills = Mechanics:1,
+			recipes = Intermediate Mechanics,
+            		test = Vehicles.UninstallTest.Default,
+
+            		}
+
+            lua
+            {
+			create = Vehicles.Create.Default,
+			}
+		}
+	}
+
+		
+}

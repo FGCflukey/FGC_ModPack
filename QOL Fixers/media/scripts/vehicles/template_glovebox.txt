@@ -5,7 +5,7 @@ module Base
 		part GloveBox
 		{
 			area = SeatFrontRight,
-	repairMechanic = true,
+			repairMechanic = true,
 			itemType = Base.GloveBox,
 			mechanicRequireKey = true,
 			container

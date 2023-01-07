@@ -1,0 +1,139 @@
+module Base
+{
+
+	model 74amgeneralM151A2window_fl
+	{
+		mesh = vehicles/Vehicles_74amgeneralM151A2_Body|m151_window_fl,
+		shader = vehicle,
+		static = FALSE,
+		scale = 0.1,
+		boneWeight = window_fl_bone 1.0,
+	}
+
+	model 74amgeneralM151A2window_fr
+	{
+		mesh = vehicles/Vehicles_74amgeneralM151A2_Body|m151_window_fr,
+		shader = vehicle,
+		static = FALSE,
+		scale = 0.1,
+		boneWeight = window_fr_bone 1.0,
+	}
+
+	template vehicle M151A2Windows
+	{
+		part WindowFrontLeft
+		{
+			model windowFL
+			{
+				file = 74amgeneralM151A2window_fl,
+			}
+
+			anim ClosedToOpen
+			{
+				anim = Window_fl_opening,
+				animate = FALSE,
+			}
+
+			parent = DoorFrontLeft,
+			category = door,
+			area = SeatFrontLeft,
+			repairMechanic = true,
+			itemType = Base.M151A2SideWindow,
+			table install
+			{
+				requireInstalled = DoorFrontLeft,
+			}
+		}
+
+		part WindowFrontRight
+		{
+			model windowFR
+			{
+				file = 74amgeneralM151A2window_fr,
+			}
+
+			anim ClosedToOpen
+			{
+				anim = Window_fr_opening,
+				animate = FALSE,
+			}
+
+			parent = DoorFrontRight,
+			category = door,
+			area = SeatFrontRight,
+			repairMechanic = true,
+			itemType = Base.M151A2SideWindow,
+			table install
+			{
+				requireInstalled = DoorFrontRight,
+			}
+		}
+
+		part WindowRearLeft
+		{
+			parent = DoorRearLeft,
+			category = nodisplay,
+			area = SeatRearLeft,
+			repairMechanic = true,
+			itemType = Base.M151A2SideWindow,
+		}
+
+		part WindowRearRight
+		{
+			parent = DoorRearRight,
+			category = nodisplay,
+			area = SeatRearRight,
+			repairMechanic = true,
+			itemType = Base.M151A2SideWindow,
+		}
+
+		part Window*
+		{
+			mechanicRequireKey = true,
+			window
+			{
+				openable = true,
+			}
+			table install
+			{
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 750,
+				skills = Mechanics:3,
+				recipes = Intermediate Mechanics,
+				test = Vehicles.InstallTest.Default,
+				complete = Vehicles.InstallComplete.Window,
+			}
+			table uninstall
+			{
+				items
+				{
+					1
+					{
+						type = Base.Screwdriver,
+						count = 1,
+						keep = true,
+						equip = primary,
+					}
+				}
+				time = 650,
+				skills = Mechanics:3,
+				recipes = Intermediate Mechanics,
+				test = Vehicles.UninstallTest.Default,
+				complete = Vehicles.UninstallComplete.Default,
+			}
+			lua
+			{
+				init = Vehicles.Init.Window,
+			}
+		}
+	}
+}

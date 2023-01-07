@@ -1,40 +1,26 @@
 module Base
 {
-	model 92amgeneralM998WindshieldArmor1
+	model 74amgeneralM151A2windshieldArmor1
     	{
-        mesh = vehicles/Vehicles_92amgeneralM998_Body|HMMWV_windshield_a,
-	texture = Vehicles/Vehicles_92amgeneralM998_Interior_Wheel,
-        shader = vehiclewheel,
+        mesh = vehicles/Vehicles_74amgeneralM151A2_Body|m151_windshield_a,
+        shader = vehicle_noreflect,
         scale = 0.1,
     	}
 
-	model 92amgeneralM998WindshieldArmor2
-    	{
-        mesh = vehicles/Vehicles_92amgeneralM998_Body|HMMWV_windshield_aa,
-	texture = Vehicles/Vehicles_92amgeneralM998_Interior_Wheel,
-        shader = vehiclewheel,
-        scale = 0.1,
-    	}
-
-	template vehicle M998WindshieldArmors
+	template vehicle M151A2WindshieldArmors
 		{
-		part M998WindshieldArmor
+		part M151A2WindshieldArmor
         	{
 
 			model WindshieldArmor1
 				{
-                		file = 92amgeneralM998WindshieldArmor1,
-				}
-
-			model WindshieldArmor2
-				{
-                		file = 92amgeneralM998WindshieldArmor2,
+                		file = 74amgeneralM151A2windshieldArmor1,
 				}
 
 			area = Engine,
 			category = bodywork,
 			specificItem = false,
-			itemType = Base.M998WindshieldArmor1_Item;Base.M998WindshieldArmor2_Item,
+			itemType = Base.M151A2WindshieldArmor1_Item,
 			mechanicRequireKey = false,
 			repairMechanic = true,
 			table install
@@ -59,7 +45,7 @@ module Base
                 	skills = Mechanics:4,
                 	recipes = Intermediate Mechanics,
                 	test = Vehicles.InstallTest.Default,
-                	complete = M998.InstallComplete.WindshieldArmor,
+                	complete = M151A2.InstallComplete.WindshieldArmor,
             		}
 
             		table uninstall
@@ -79,13 +65,13 @@ module Base
 			skills = Mechanics:4,
 			recipes = Intermediate Mechanics,
                 	test = Vehicles.UninstallTest.Default,
-			complete = M998.UninstallComplete.WindshieldArmor,
+			complete = M151A2.UninstallComplete.WindshieldArmor,
             		}
 
             		lua
             		{
-			create = M998.Create.WindshieldArmor,
-			init = M998.Init.WindshieldArmor,
+			create = M151A2.Create.WindshieldArmor,
+			init = M151A2.Init.WindshieldArmor,
 			}
 		}
 	}
