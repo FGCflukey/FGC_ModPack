@@ -1,0 +1,9 @@
+VERSION = 1,
+
+
+option MoreBuildPluss.BuildingPermission
+{
+	type = enum, numValues = 6, default = 1,
+	page = MoreBuildsPlus, translation = BuildingPermission,
+	valueTranslation = MoreBuildPluss_BuildingPermission,
+}
