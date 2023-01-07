@@ -430,4 +430,12 @@ module Base
 		Time:100.0,	
 	}
 
+	recipe Convert Spear to Crafted Spear
+	{
+		destroy WoodenLance,
+		
+		Result:SpearCrafted,
+		CanBeDoneFromFloor:true,
+		Time:100.0,
+	}
 }
