@@ -438,4 +438,18 @@ module Base
 		CanBeDoneFromFloor:true,
 		Time:100.0,
 	}
+	
+	recipe Make a Golf Club
+	{
+		MetalPipe=2,
+		ScrapMetal=2,
+		LeatherStrips=2,
+		Glue=2,
+		BlowTorch=2,
+		keep WeldingMask,
+		
+		Result:Golfclub,
+		CanBeDoneFromFloor:true,
+		Time:300.0,		
+	}
 }
