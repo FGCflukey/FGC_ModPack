@@ -77,17 +77,25 @@ UGTakePropaneMenu.OnContextMenu = function( player, context, worldobjects)
 					--make a proper propane tank and replace the outdated 'empty' propane tank.
 					playerInv:AddItem( "PropaneTank", 0.0)
 					playerInv:Remove( EmptyTank)
-				else
-				
-					EmptyTank = playerInv:getItemFromType( "LTSPropaneTankEmpty")
-					
-					if EmptyTank then
-					
-						--make a proper propane tank and replace the outdated 'empty' propane tank.
-						playerInv:AddItem( "PropaneTank", 0.0)
-						playerInv:Remove( EmptyTank)
-					end
 				end
+				
+				EmptyTank = playerInv:getItemFromType( "LTSPropaneTankEmpty")
+					
+				if EmptyTank then
+				
+					--make a proper propane tank and replace the outdated 'empty' propane tank.
+					playerInv:AddItem( "PropaneTank", 0.0)
+					playerInv:Remove( EmptyTank)
+				end
+				 
+				EmptyTank = playerInv:getItemFromType( "HCPropanetankempty")
+					
+				if EmptyTank then
+				
+					--make a proper propane tank and replace the outdated 'empty' propane tank.
+					playerInv:AddItem( "PropaneTank", 0.0)
+					playerInv:Remove( EmptyTank)
+				end				 
 				
 				PTList = playerInv:getItemsFromType( "PropaneTank")
 				
