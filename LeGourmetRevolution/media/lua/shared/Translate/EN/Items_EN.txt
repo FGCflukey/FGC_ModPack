@@ -36,7 +36,7 @@ Items_EN = {
 	DisplayNameFloating_line_(GrassHopper) = "Floating line (GrassHopper)",
 	DisplayNameFloating_line_(Cockroach) = "Floating line (Cockroach)",
 	DisplayNameFloating_line_(Baitfish) = "Floating line (Baitfish)",
-	DisplayNameDentudo = "Dentudo",
+	DisplayNameDentudo = "Toothfish",
 	DisplayNameRed_Worm = "Red Worm",
 	DisplayNameFloating_line_(Red_Worm) = "Floating line (Red Worm)",
 	DisplayNameMedium_floating_line = "Medium floating line",
@@ -459,5 +459,5 @@ Items_EN = {
 	DisplayNameFilter_Paper_Bag = "Teabag Empty",
 	DisplayNameBox_Filter_Paper_Bag = "Box of empty teabags",
 	DisplayNameMagnifying_Glass = "Magnifying Glass",
-	DisplayNameMov_WallDiana = "Wall Diana",
+	DisplayNameMov_WallDiana = "Wall Target",
 }
