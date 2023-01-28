@@ -1,0 +1,33 @@
+VERSION = 1,
+
+option SpearTraps.SpearTrapsKillPlayer
+{
+	type = boolean,
+	default = true,
+	page = SadisticAIDirector,
+	translation = SpearTraps_SpearTrapsKillPlayer,
+}
+
+option SpearTraps.SpearTrapsHurtPlayer
+{
+	type = boolean,
+	default = true,
+	page = SadisticAIDirector,
+	translation = SpearTraps_SpearTrapsHurtPlayer,
+}
+
+option SpearTraps.SpearsBreak
+{
+	type = boolean,
+	default = true,
+	page = SadisticAIDirector,
+	translation = SpearTraps_SpearsBreak,
+}
+
+option SpearTraps.SpearsDamageVehicles
+{
+	type = boolean,
+	default = true,
+	page = SadisticAIDirector,
+	translation = SpearTraps_SpearsDamageVehicles,
+}

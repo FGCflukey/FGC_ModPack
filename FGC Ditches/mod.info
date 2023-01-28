@@ -1,0 +1,6 @@
+name=FGC Ditches
+id=FGCDitches
+description=Adds spear traps to the game
+poster=poster.png
+pack=spear_traps_01
+tiledef=spear_traps_01 100

@@ -1,0 +1,10 @@
+Sandbox_EN = {
+	Sandbox_SpearTraps_SpearTrapsKillPlayer = "Spear Traps Kill Players"
+	Sandbox_SpearTraps_SpearTrapsKillPlayer_tooltip = "Kill players when they walk over a spear trap"
+	Sandbox_SpearTraps_SpearTrapsHurtPlayer = "Spear Traps Hurt Players"
+	Sandbox_SpearTraps_SpearTrapsHurtPlayer_tooltip = "Hurt players when they walk over a spear trap"
+	Sandbox_SpearTraps_SpearsBreak = "Spears break when trap is triggered"
+	Sandbox_SpearTraps_SpearsBreak_tooltip = "Spears take damage and break when trap is triggered"
+	Sandbox_SpearTraps_SpearsDamageVehicles = "Spears damage vehicles when driven over"
+	Sandbox_SpearTraps_SpearsDamageVehicles_tooltip = "Spears cause damage to tires and suspension when driven over"
+}
