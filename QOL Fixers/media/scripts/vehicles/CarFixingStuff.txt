@@ -155,7 +155,7 @@ module Base
 	{
 		SkillRequired:MetalWelding=4,
 		BlowTorch=5,
-		keep WeldingMask,
+		keep [Recipe.GetItemTypes.WeldingMask],
 		ScrapMetal=4,
 		ElectronicsScrap=2,
 		WeldingRods=2,
@@ -170,7 +170,7 @@ module Base
 	{
 		SkillRequired:MetalWelding=4,
 		BlowTorch=5,
-		keep WeldingMask,
+		keep [Recipe.GetItemTypes.WeldingMask],
 		SheetMetal=1,
 		ElectronicsScrap=2,
 		WeldingRods=2,
@@ -185,7 +185,7 @@ module Base
 	{
 		SkillRequired:MetalWelding=4,
 		BlowTorch=5,
-		keep WeldingMask,
+		keep [Recipe.GetItemTypes.WeldingMask],
 		SmallSheetMetal=2,
 		ElectronicsScrap=2,
 		WeldingRods=2,
@@ -200,7 +200,7 @@ module Base
 	{
 		SkillRequired:MetalWelding=4,
 		BlowTorch=5,
-		keep WeldingMask,
+		keep [Recipe.GetItemTypes.WeldingMask],
 		MetalBar=2,
 		ElectronicsScrap=2,
 		WeldingRods=2,
