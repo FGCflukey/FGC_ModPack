@@ -17,7 +17,7 @@ module Base
 	item MyCanteenfull
     {
 		IsWaterSource		= TRUE,
-		Weight				= 0.8
+		Weight				= 0.8,
 		CanStoreWater		= TRUE,
 		DisplayCategory 	= Water,
 		Type				= Drainable,
