@@ -190,7 +190,7 @@ module Base
 
 	fixing Fix Tire
 	{
-		Require : OldTire1;NormalTire1;ModernTire1;OldTire2;NormalTire2;ModernTire2;OldTire3;NormalTire3;ModernTire3;OldTire8;NormalTire8;ModernTire8;V100Tire2;V100Tires2;V100SmallTires2;V100Axle2;V100AxleSmall2;V101Tire2;DodgeRTtire3;R32Tire0;R32Tire1;R32Tire2;R32TireA;McLarenF1FrontWheel3;McLarenF1RearWheel3;U1550LWheel2;E150Tire2;80sOffroadTireA;ECTO1tire2_Item;ECTO1tire1_Item,
+		Require : OldTire1;NormalTire1;ModernTire1;OldTire2;NormalTire2;ModernTire2;OldTire3;NormalTire3;ModernTire3;OldTire8;NormalTire8;ModernTire8;V100Tire2;V100Tires2;V100SmallTires2;V100Axle2;V100AxleSmall2;V101Tire2;DodgeRTtire3;R32Tire0;R32Tire1;R32Tire2;R32TireA;McLarenF1FrontWheel3;McLarenF1RearWheel3;U1550LWheel2;E150Tire2;80sOffroadTireA;ECTO1tire2_Item;ECTO1tire1_Item;V102Tire2,
 		ConditionModifier : 1.2,
 
 		Fixer : Superglue=2; Mechanics=2,
@@ -235,7 +235,7 @@ module Base
 
 	fixing Fix Windshield Armor
 	{
-		Require : M998WindshieldArmor1_Item;M998WindshieldArmor2_Item;DG70WindshieldArmor;DG70WindshieldRearArmor;R32WindshieldRearArmor;R32WindshieldArmor;E150WindshieldArmor;E150WindshieldRearArmor;80sPickupWindshieldArmor;P19AWindshieldArmor1_Item,
+		Require : M998WindshieldArmor1_Item;M998WindshieldArmor2_Item;DG70WindshieldArmor;DG70WindshieldRearArmor;R32WindshieldRearArmor;R32WindshieldArmor;E150WindshieldArmor;E150WindshieldRearArmor;80sPickupWindshieldArmor;P19AWindshieldArmor1_Item;M151A2WindshieldArmor1_Item,
 		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
