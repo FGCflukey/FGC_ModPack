@@ -149,10 +149,18 @@ MoreBuildPlus.getwallsPlusData = function()
     },
 	{
       'location_hospitality_sunstarmotel_01_4',
-      'location_hospitality_sunstarmotel_01_6',
       'location_hospitality_sunstarmotel_01_5',
-      'location_hospitality_sunstarmotel_01_6',
+      'location_hospitality_sunstarmotel_01_4',
+      'location_hospitality_sunstarmotel_01_5',
       "Flower Wall",
+      "Elegant flower wall."
+    },
+	{
+      'location_hospitality_sunstarmotel_01_6',
+      'location_hospitality_sunstarmotel_01_6',
+      'location_hospitality_sunstarmotel_01_6',
+      'location_hospitality_sunstarmotel_01_6',
+      "Flower Corner",
       "Elegant flower wall."
     },
 	{
@@ -170,14 +178,6 @@ MoreBuildPlus.getwallsPlusData = function()
       'location_restaurant_bar_01_46',
       "Wood Corner",
       "Elegant wood wall."
-    },
-	{
-      'location_hospitality_sunstarmotel_01_6',
-      'location_hospitality_sunstarmotel_01_6',
-      'location_hospitality_sunstarmotel_01_6',
-      'location_hospitality_sunstarmotel_01_6',
-      "Flower Corner",
-      "Elegant flower wall."
     },
 	{
       'walls_interior_bathroom_01_0',
