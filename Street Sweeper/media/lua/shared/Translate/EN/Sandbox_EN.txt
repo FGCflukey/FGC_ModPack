@@ -1,0 +1,15 @@
+Sandbox_EN = {
+
+	Sandbox_StreetSweeper_CheckSize = "Distance to check."
+	Sandbox_StreetSweeper_CheckSize_tooltip = "Distance in tiles of how far from a player to check for items."
+
+	Sandbox_StreetSweeper_CleanTime = "Remove items after this many game hours."
+	Sandbox_StreetSweeper_CleanTime_tooltip = "Any item on the ground for this many game hours or more will be removed from the map."
+
+	Sandbox_StreetSweeper_CleanCatagories = "Remove these catagories of items."
+	Sandbox_StreetSweeper_CleanCatagories_tooltip = "Any item with a catagory listed here will be removed from the map after the set ammount of time."
+
+	Sandbox_StreetSweeper_CleanTypes = "Remove these types of items."
+	Sandbox_StreetSweeper_CleanTypes_tooltip = "Any item with a type listed here will be removed from the map after the set ammount of time."
+	
+}
