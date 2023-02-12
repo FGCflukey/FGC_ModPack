@@ -170,9 +170,48 @@ module Base
 		Category:Welding,
 	}
 
+	recipe Recycle Other Hood
+	{
+		destroy U1550LHood2/M151A2EngineDoor2/M998EngineDoor2/E150EngineDoor2/P19AEngineDoor2/89BroncoEngineDoor2/R32EngineDoor0/82JeepJ10EngineDoor2/DG70TAEngineDoor0/DG70TAEngineDoor1/88ChevyS10EngineDoor2/ECTO1EngineDoor2/V100EngineDoor2/DG70PDEngineDoor/DG70RTEngineDoor/M911EngineDoor2/M35A2EngineDoor2/97BushEngineDoor2,
+		BlowTorch=5,
+		keep WeldingMask,
+		
+		Result:SheetMetal=2,
+		Time:150.0,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+
+	recipe Recycle Other Hoods
+	{
+		destroy Autotsar.ATASamaraHood2Item3/Autotsar.ATASamaraHood3Item3/Autotsar.ATAMustangHood2Item3/Autotsar.ATAMustangHood4Item3/Autotsar.ATAMustangHood3Item3,
+		BlowTorch=5,
+		keep WeldingMask,
+		
+		Result:SheetMetal=2,
+		Time:150.0,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+
 	recipe Recycle Trunk Lid
 	{
 		destroy TrunkDoor1/TrunkDoor2/TrunkDoor3,
+		BlowTorch=5,
+		keep WeldingMask,
+		
+		Result:SheetMetal=2,
+		Time:150.0,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+
+	recipe Recycle Other Trunk Lid
+	{
+		destroy McLarenF1TrunkDoor3/M101A3TrunkDoor2/IsoContainerDoubleTrunkDoor2/E150TrunkDoor2/M127TrunkDoor2/M101A3TrunkDoorTwo2/U1550LTrunkDoor2/M129TrunkDoor2/M128TrunkDoor2/88ChevyS10TrunkDoorTop2/IsoContainerTankerTrunkDoor2/M911TrunkDoor2/R32TrunkDoor3/89BroncoTrunkDoor2/88ChevyS10TrunkDoor2/P19ATrunkDoor2/M998TrunkDoor2/DG70TrunkDoor3/M967TrunkDoor2/ECTO1TrunkDoor2/82JeepJ10TrunkDoor2/82JeepJ10TrunkDoorTop2/IsoContainerTrunkDoor2,
 		BlowTorch=5,
 		keep WeldingMask,
 		
@@ -251,6 +290,20 @@ module Base
 	recipe Recycle Door
 	{
 		destroy FrontCarDoor1/FrontCarDoor2/FrontCarDoor3/RearCarDoor1/RearCarDoor2/RearCarDoor3/RearCarDoorDouble1/RearCarDoorDouble2/RearCarDoorDouble3,
+		BlowTorch=5,
+		keep WeldingMask,
+		
+		Result:SmallSheetMetal=2,
+		Time:150.0,
+		OnCreate:GiveBack_ElectronicScrap,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+
+	recipe Recycle Other Doors
+	{
+		destroy McLarenF1Door3/IsoContainerDoubleTrunkDoor2/FrontRightV100Door2/RearV100Door2/ECTO1CarRearDoor2/ECTO1CarFrontDoor2/E150CarFrontDoor2/U1550LDoor2/88ChevyS10CarFrontDoor2/P19ACarFrontDoor2/M151A2LeftDoor2/FrontLeftV100Door2/DG70Door3/E150CarSlideDoor2/R32Door3/M911CarFrontDoor2/RearM113Door3/RearM113Door2/RearM113Door1/FrontM113Door2/FrontM113Door3/FrontM113Door1/89BroncoCarFrontDoor2/M998CarRearDoor2/M151A2RightDoor2/82JeepJ10CarFrontDoor2/U1550LTrailerDoor2/M998CarFrontDoor2/M35A2Door2/M49PumpDoor2/97BushDoor2,
 		BlowTorch=5,
 		keep WeldingMask,
 		
