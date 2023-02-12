@@ -279,6 +279,15 @@ module Base
 		Category:Survivalist,
 	}
 
+	recipe Make Rope
+	{
+		SheetRope=3,
+
+		Result:Rope,
+		Time:90.0,
+		Category:Survivalist,
+	}
+
 	recipe Make Wood Glue
 	{
 		Plank/UnusableWood,
