@@ -918,4 +918,100 @@ module Base
 		OnGiveXP:Recipe.OnGiveXP.None,
     }
 
+	recipe Make NormalTire1
+	{
+		keep LugWrench,    			
+		MetalBar=2,
+		OldTire1=2,
+		SmallSheetMetal=3,
+		MetalPipe=2,
+		Screws=12,
+		
+		Result:NormalTire1,
+		Time:600.0,
+		Category:Mechanics,
+		SkillRequired:MetalWelding=3,		
+		
+	}
+	
+	recipe Make NormalTire2
+	{
+		keep LugWrench,    			
+		MetalBar=2,
+		OldTire2=2,
+		SmallSheetMetal=3,
+		MetalPipe=2,
+		Screws=12,
+		
+		Result:NormalTire2,
+		Time:600.0,
+		Category:Mechanics,
+		SkillRequired:MetalWelding=3,		
+		
+	}
+
+	recipe Make NormalTire3
+	{
+		keep LugWrench,    			
+		MetalBar=2,
+		OldTire3=2,
+		SmallSheetMetal=3,
+		MetalPipe=2,
+		Screws=12,
+		
+		Result:NormalTire3,
+		Time:600.0,
+		Category:Mechanics,
+		SkillRequired:MetalWelding=3,		
+		
+	}
+	
+	recipe Make ModernTire3
+	{
+		keep LugWrench,    			
+		MetalBar=2,
+		NormalTire3=2,
+		SmallSheetMetal=3,
+		MetalPipe=2,
+		Screws=12,
+		
+		Result:ModernTire3,
+		Time:600.0,
+		Category:Mechanics,
+		SkillRequired:MetalWelding=4,		
+		
+	}
+	
+	recipe Make ModernTire2
+	{
+		keep LugWrench,    			
+		MetalBar=2,
+		NormalTire2=2,
+		SmallSheetMetal=3,
+		MetalPipe=2,
+		Screws=12,
+		
+		Result:ModernTire2,
+		Time:600.0,
+		Category:Mechanics,
+		SkillRequired:MetalWelding=4,		
+		
+	}
+	
+	recipe Make ModernTire1
+	{
+		keep LugWrench,    			
+		MetalBar=2,
+		NormalTire1=2,
+		SmallSheetMetal=3,
+		MetalPipe=2,
+		Screws=12,
+		
+		Result:ModernTire1,
+		Time:600.0,
+		Category:Mechanics,
+		SkillRequired:MetalWelding=4,		
+		
+	}
+
 }

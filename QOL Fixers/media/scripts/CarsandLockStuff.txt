@@ -78,7 +78,7 @@ module Base
 	{
 		SkillRequired:MetalWelding=4,
 		keep Screwdriver,
-		SheetMetal,
+		SmallSheetMetal,
 		
 		Result:Screwdriver,
 		OnCreate:addKey,
