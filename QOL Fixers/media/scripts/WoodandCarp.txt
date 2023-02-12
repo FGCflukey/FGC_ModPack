@@ -422,6 +422,7 @@ module Base
 
 	recipe Make BaseBall Bat
 	{
+		SkillRequired:Woodwork=1,
 		Log,
 		keep Saw/GardenSaw,
         DuctTape=2,
@@ -431,10 +432,21 @@ module Base
 		Sound:Sawing,
 		Time:300,
 		Category:Carpentry,
-		SkillRequired:Woodwork=1;,
 		OnGiveXP:Recipe.OnGiveXP.SawLogs,
 		AnimNode:SawLog,
 		Prop1:GardenSaw,
 		Prop2:Log,
 	}
+
+	recipe Make Plank from Scrap Wood
+    {
+       UnusableWood=2,
+	   
+       Result:Plank,
+       Time:250.0,
+	   Sound:Sawing,
+	   Category:Carpentry,
+	   OnGiveXP:Recipe.OnGiveXP.WoodWork5,
+    }
+
 }

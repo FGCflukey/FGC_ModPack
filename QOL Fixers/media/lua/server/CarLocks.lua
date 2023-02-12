@@ -37,7 +37,7 @@ function addKey()
 
 	if not car then
 		player:Say("Not in a vehicle...");
-		inv:AddItem("Base.SheetMetal");
+		inv:AddItem("Base.SmallSheetMetal");
 	else
 		inv:AddItem(car:createVehicleKey());
 	end
