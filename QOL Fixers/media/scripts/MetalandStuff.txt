@@ -352,7 +352,7 @@ module Base
 		Result:ScrapMetal,
 		Time:60,
 		Category:Welding,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
 		Sound:Hammering,
 		AnimNode:Disassemble,
 	}
@@ -365,7 +365,7 @@ module Base
 		Result:ScrapMetal,
 		Time:60,
 		Category:Welding,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
 		Sound:Hammering,
 		AnimNode:Disassemble,
 	}
@@ -378,7 +378,7 @@ module Base
 		Result:ScrapMetal,
 		Time:60,
 		Category:Welding,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
 		Sound:Hammering,
 		AnimNode:Disassemble,
 	}
@@ -391,7 +391,7 @@ module Base
 		Result:ScrapMetal=6,
 		Time:60,
 		Category:Welding,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
 		Sound:Sawing,
 		AnimNode:Disassemble,
 	}
@@ -404,7 +404,7 @@ module Base
 		Result:ScrapMetal=2,
 		Time:60,
 		Category:Welding,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
 		Sound:Sawing,
 		AnimNode:Disassemble,
 	}
@@ -417,7 +417,7 @@ module Base
 		Result:ScrapMetal=4,
 		Time:60,
 		Category:Welding,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
 		Sound:Hammering,
 		AnimNode:Disassemble,
 	}
@@ -430,7 +430,7 @@ module Base
 		Result:ScrapMetal=6,
 		Time:60,
 		Category:Welding,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
 		Sound:Hammering,
 		AnimNode:Disassemble,
 	}
@@ -603,7 +603,7 @@ module Base
 		Result:Nails=5,
 		Time: 60,
 		Category:Welding,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
 		AnimNode:Disassemble,
 	}
 
@@ -616,7 +616,7 @@ module Base
 		Result:NailsBox,
 		Time: 120,
 		Category:Welding,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
 		AnimNode:Disassemble,
 	}
 
@@ -630,7 +630,7 @@ module Base
 		Result:Screws=5,
 		Time: 60,
 		Category:Welding,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
 		Sound:Dismantle,
 		AnimNode:Disassemble,
 	}
@@ -645,7 +645,7 @@ module Base
 		Result:ScrewsBox,
 		Time: 120,
 		Category:Welding,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
 		Sound:Dismantle,
 		AnimNode:Disassemble,
 	}

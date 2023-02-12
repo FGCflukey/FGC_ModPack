@@ -194,7 +194,7 @@ module Base
 		Time: 120,
 		Category:Welding,
 		NeedToBeLearn:false,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
 		AnimNode:Disassemble,	
 	}
 
@@ -208,7 +208,7 @@ module Base
 		Time: 120,
 		Category:Welding,
 		NeedToBeLearn:false,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
 		AnimNode:Disassemble,	
 	}
 	
