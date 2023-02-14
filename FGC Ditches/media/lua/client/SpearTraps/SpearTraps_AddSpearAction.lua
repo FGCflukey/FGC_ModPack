@@ -30,10 +30,19 @@ function ISAddSpearToGrave:perform()
 	local data2 = self.grave2:getModData()
 
 	data['spears'] = data['spears'] or {}
-	data['owner'] = data['owner'] or self.character:getID()
-	data2['spears'] = data2['spears'] or {}
-	data2['owner'] = data2['owner'] or self.character:getID()
+	data['owner'] = data['owner'] or {}
+	if data['owner'].ID == nil then 
+		--print(" setting grave owner to: " .. tostring( self.character:getDisplayName()))
+		data['owner'].ID = self.character:getDisplayName()
+	end
 	
+	data2['spears'] = data2['spears'] or {}
+	data2['owner'] = data2['owner'] or {}
+	if data2['owner'].ID == nil then
+		--print(" setting grave2 owner to: " .. tostring( self.character:getDisplayName()))
+		data2['owner'].ID = self.character:getDisplayName()
+	end
+
 
 	local spears = data['spears']
 	local spears2 = data2['spears']

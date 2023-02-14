@@ -147,7 +147,9 @@ local function onFillWorldObjectContextMenu2(player, context, worldobjects, test
 				local data = grave:getModData() or {}
 				local items = data['spears'] or {}
 				local owner = data['owner'] or {}
-				if #items > 0 and playerObj:getID() == owner then
+				--print("grave owner is: " .. tostring( owner.ID))
+				--print("player is: " .. tostring( playerObj:getDisplayName()))
+				if #items > 0 and owner.ID ~= nil and playerObj:getDisplayName() == owner.ID then
 					local rootmenu = context:addOption(getText('ContextMenu_RemoveSpearFromGrave'), worldobjects, nil)
 					local submenu = context:getNew(context)
 					context:addSubMenu(rootmenu, submenu)
