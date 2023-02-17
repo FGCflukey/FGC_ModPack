@@ -1,0 +1,9 @@
+Sandbox_EN = {
+	Sandbox_ServerMessages = "Server Message Mod Options",
+
+	Sandbox_ServerMessages_EnableAnnounceJoinServer = "Enable Player Join Messages",
+	Sandbox_MySandboxMod_EnableAnnounceJoinServer_tooltip = "If enabled a message in Chat will be sent each time a player joins the server.",
+
+    Sandbox_ServerMessages_EnableAnnounceLeaveServer = "Enable Player Leave Messages",
+	Sandbox_MySandboxMod_EnableAnnounceLeaveServer_tooltip = "If enabled a message in Chat will be sent each time a player leaves the server.",
+}
