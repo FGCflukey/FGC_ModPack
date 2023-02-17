@@ -17,3 +17,12 @@ option ServerMessages.EnableAnnounceLeaveServer
 	page = ServerMessages,
 	translation = ServerMessages_EnableAnnounceLeaveServer,
 }
+
+option ServerMessages.ExcludeNames
+{
+	type = string,
+	default = ,
+
+	page = ServerMessages,
+	translation = ServerMessages_ExcludeNames,
+}

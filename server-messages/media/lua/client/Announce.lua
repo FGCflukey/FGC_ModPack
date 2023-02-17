@@ -13,9 +13,11 @@ local function announceArrival()
         return
     end
 
-    -- now chat should be ready
-    processGeneralMessage(joined_msg)
-    announced = announced + 1
+    -- now chat should be ready	                               
+	if SandboxVars.ServerMessages.ExcludeNames and SandboxVars.ServerMessages.ExcludeNames ~= "" and not string.match( SandboxVars.ServerMessages.ExcludeNames, getPlayer():getDisplayName()) then
+		processGeneralMessage(joined_msg)
+		announced = announced + 1
+	end
     
 end
 
@@ -24,7 +26,7 @@ Events.OnGameTimeLoaded.Add(announceArrival)
 local og_onMenuItemMouseDownMainMenu = MainScreen.onMenuItemMouseDownMainMenu
 
 MainScreen.onMenuItemMouseDownMainMenu = function(item, x, y)
-    if SandboxVars.ServerMessages.EnableAnnounceLeaveServer ~= true or item.internal ~= "EXIT" or MainScreen.instance.inGame ~= true then 
+    if SandboxVars.ServerMessages.EnableAnnounceLeaveServer ~= true or item.internal ~= "EXIT" or MainScreen.instance.inGame ~= true then
         og_onMenuItemMouseDownMainMenu(item, x, y) 
         return 
     end
@@ -68,7 +70,11 @@ MainScreen.onMenuItemMouseDownMainMenu = function(item, x, y)
 --            MainScreen.instance:getLatestSave();
 --        end
         if MainScreen.instance.inGame == true then
-            processGeneralMessage(left_msg)
+		
+			if SandboxVars.ServerMessages.ExcludeNames and SandboxVars.ServerMessages.ExcludeNames ~= "" and not string.match( SandboxVars.ServerMessages.ExcludeNames, getPlayer():getDisplayName()) then
+				processGeneralMessage(left_msg)
+			end
+			
             setGameSpeed(1);
             pauseSoundAndMusic();
             setShowPausedMessage(true);
@@ -200,7 +206,9 @@ function MainScreen:onConfirmQuitToDesktop(button)
         return 
     end
     if button.internal == "YES" then
-        processGeneralMessage(left_msg)
+		if SandboxVars.ServerMessages.ExcludeNames and SandboxVars.ServerMessages.ExcludeNames ~= "" and not string.match( SandboxVars.ServerMessages.ExcludeNames, getPlayer():getDisplayName()) then
+			processGeneralMessage(left_msg)
+		end
         setGameSpeed(1)
         pauseSoundAndMusic()
         setShowPausedMessage(true)
@@ -216,7 +224,9 @@ function ISPostDeathUI:onExit()
         og_ISPostDeathUI_onExit(self)
         return 
     end
-    processGeneralMessage(left_msg)
+	if SandboxVars.ServerMessages.ExcludeNames and SandboxVars.ServerMessages.ExcludeNames ~= "" and not string.match( SandboxVars.ServerMessages.ExcludeNames, getPlayer():getDisplayName()) then
+		processGeneralMessage(left_msg)
+	end
 	self:removeFromUIManager()
 	getCore():exitToMenu()
 end
@@ -229,7 +239,9 @@ function ISPostDeathUI:onConfirmQuitToDesktop(button)
         return
     end
 	if button.internal == "YES" then
-        processGeneralMessage(left_msg)
+		if SandboxVars.ServerMessages.ExcludeNames and SandboxVars.ServerMessages.ExcludeNames ~= "" and not string.match( SandboxVars.ServerMessages.ExcludeNames, getPlayer():getDisplayName()) then
+			processGeneralMessage(left_msg)
+		end
 		setGameSpeed(1)
 		pauseSoundAndMusic()
 		setShowPausedMessage(true)
