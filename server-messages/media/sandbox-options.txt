@@ -1,0 +1,19 @@
+VERSION = 1,
+
+option ServerMessages.EnableAnnounceJoinServer
+{
+	type = boolean,
+	default = true,
+
+	page = ServerMessages,
+	translation = ServerMessages_EnableAnnounceJoinServer,
+}
+
+option ServerMessages.EnableAnnounceLeaveServer
+{
+	type = boolean,
+	default = true,
+
+	page = ServerMessages,
+	translation = ServerMessages_EnableAnnounceLeaveServer,
+}

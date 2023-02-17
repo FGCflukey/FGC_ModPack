@@ -1,0 +1,5 @@
+name=Server Messages
+poster=poster.png
+id=ServerMessages
+description=Generate chat messages from server events.
+url=https://github.com/RavenousGaming/server-messages
