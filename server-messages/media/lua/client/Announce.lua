@@ -4,6 +4,8 @@ local joined_msg = "...has joined the server."
 local left_msg = "...has left the server."
 
 local function announceArrival()
+
+
     if not isClient() or announced >= 2 then return end
     if not SandboxVars.ServerMessages.EnableAnnounceJoinServer then return end
     
@@ -12,13 +14,20 @@ local function announceArrival()
         announced = announced + 1
         return
     end
-
-    -- now chat should be ready	                               
-	if SandboxVars.ServerMessages.ExcludeNames and SandboxVars.ServerMessages.ExcludeNames ~= "" and not string.match( SandboxVars.ServerMessages.ExcludeNames, getPlayer():getDisplayName()) then
-		processGeneralMessage(joined_msg)
-		announced = announced + 1
+	
+	--just checking here.
+	--processGeneralMessage( "My display name is: " .. getPlayer():getDisplayName())
+	
+    -- now chat should be ready	
+	if SandboxVars.ServerMessages.ExcludeNames ~= nil then
+	
+		if not string.match( tostring( SandboxVars.ServerMessages.ExcludeNames), tostring( getPlayer():getDisplayName())) then
+		
+			processGeneralMessage( joined_msg)
+			announced = announced + 1
+		end
 	end
-    
+	
 end
 
 Events.OnGameTimeLoaded.Add(announceArrival)
