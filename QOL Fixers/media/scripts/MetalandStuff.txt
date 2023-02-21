@@ -731,6 +731,96 @@ module Base
 		AnimNode:Disassemble,
 	}
 
+/************************ Pots and Pans ************************/
+
+	recipe Make a Cooking Pot
+	{
+	   SheetMetal=2,
+       ScrapMetal=2,
+       Screws=4,
+	   BlowTorch=3,
+       WeldingRod=2,
+	   keep [Recipe.GetItemTypes.Screwdriver],
+	   keep [Recipe.GetItemTypes.Hammer],
+	   keep [Recipe.GetItemTypes.WeldingMask],
+		
+	   Result:Pot,
+	   Time:250,
+	   Category:Welding,
+	   Sound:Welding,
+	   SkillRequired:MetalWelding=2,
+	   CanBeDoneFromFloor:true,
+
+	}
+
+	recipe Make a Frying Pan
+	{
+	   SmallSheetMetal=1,
+       MetalBar=1,
+       Screws=2,
+	   BlowTorch=2,
+	   WeldingRod=1,
+	   keep [Recipe.GetItemTypes.Screwdriver],
+	   keep [Recipe.GetItemTypes.Hammer],
+	   keep [Recipe.GetItemTypes.WeldingMask],
+		
+	   Result:Pan,
+	   Time:250,
+	   Category:Welding,
+	   Sound:Welding,
+	   SkillRequired:MetalWelding=2,
+	   CanBeDoneFromFloor:true,
+
+	}
+	
+    recipe Make a Saucepan
+	{
+	   SmallSheetMetal=2,
+       MetalBar=1,
+       Screws=2,
+	   BlowTorch=3,
+       WeldingRod=2,
+	   keep [Recipe.GetItemTypes.Screwdriver],
+	   keep [Recipe.GetItemTypes.Hammer],
+	   keep [Recipe.GetItemTypes.WeldingMask],
+		
+	   Result:Saucepan,
+	   Time:250,
+	   Category:Welding,
+	   Sound:Welding,
+	   SkillRequired:MetalWelding=2,
+	   CanBeDoneFromFloor:true,
+
+	}
+
+    recipe Make a Roasting Pan
+	{
+	   SmallSheetMetal=1,
+       keep [Recipe.GetItemTypes.Hammer],
+	   		
+	   Result:RoastingPan,
+	   Time:200,
+	   Category:Welding,
+	   Sound:Hammering,
+	   SkillRequired:MetalWelding=2,
+	   CanBeDoneFromFloor:true,
+
+	}
+
+    recipe Make a Baking Tray
+	{
+	   SmallSheetMetal=1,
+	   keep [Recipe.GetItemTypes.Hammer],
+	   		
+	   Result:BakingTray,
+	   Time:200,
+	   Category:Welding,
+	   Sound:Hammering,
+	   SkillRequired:MetalWelding=2,
+	   CanBeDoneFromFloor:true,
+
+	}
+
 }
 
 
