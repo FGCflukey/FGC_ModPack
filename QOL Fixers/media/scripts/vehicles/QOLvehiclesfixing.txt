@@ -117,7 +117,7 @@ module Base
 
 	fixing Fix Muffler
 	{
-		Require : OldCarMuffler1;NormalCarMuffler1;ModernCarMuffler1;OldCarMuffler2;NormalCarMuffler2;ModernCarMuffler2;OldCarMuffler3;NormalCarMuffler3;ModernCarMuffler3;OldCarMuffler8;NormalCarMuffler8;ModernCarMuffler8;M911Muffler;M998Muffler1_Item;M998Muffler2_Item;U1550LMuffler2;R32muffler0;R32muffler1,
+		Require : OldCarMuffler1;NormalCarMuffler1;ModernCarMuffler1;OldCarMuffler2;NormalCarMuffler2;ModernCarMuffler2;OldCarMuffler3;NormalCarMuffler3;ModernCarMuffler3;OldCarMuffler8;NormalCarMuffler8;ModernCarMuffler8;M911Muffler;M998Muffler1_Item;M998Muffler2_Item;U1550LMuffler2;R32muffler0;R32muffler1;KZ1Kmuffler,
 		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
@@ -136,7 +136,7 @@ module Base
 
 	fixing Fix Windshield
 	{
-		Require : Windshield1;RearWindshield1;Windshield2;RearWindshield2;Windshield3;RearWindshield3;Windshield8;RearWindshield8;M998Windshield2;DG70Windshield3;DG70WindshieldRear3;R32Windshield3;R32WindshieldRear3;McLarenF1Windshield3;McLarenF1RearWindshield3;M911Windshield2;M911WindshieldRear2;U1550LWindshield2;U1550LRearWindow2;E150Windshield2;E150RearWindshield2;82JeepJ10Windshield2;89BroncoWindshieldRear2;89BroncoWindshield2;ECTO1Windshield2;ECTO1RearWindshield2;82JeepJ10WindshieldRear2;P19AWindshield2;88ChevyS10Windshield2;88ChevyS10WindshieldRear2;M151A2Windshield2;97BushWindshield2;97BushWindshieldRear2,
+		Require : Windshield1;RearWindshield1;Windshield2;RearWindshield2;Windshield3;RearWindshield3;Windshield8;RearWindshield8;M998Windshield2;DG70Windshield3;DG70WindshieldRear3;R32Windshield3;R32WindshieldRear3;McLarenF1Windshield3;McLarenF1RearWindshield3;M911Windshield2;M911WindshieldRear2;U1550LWindshield2;U1550LRearWindow2;E150Windshield2;E150RearWindshield2;82JeepJ10Windshield2;89BroncoWindshieldRear2;89BroncoWindshield2;ECTO1Windshield2;ECTO1RearWindshield2;82JeepJ10WindshieldRear2;P19AWindshield2;88ChevyS10Windshield2;88ChevyS10WindshieldRear2;M151A2Windshield2;97BushWindshield2;97BushWindshieldRear2;KZ1Kwindshield3,
 		ConditionModifier : 1.2,
 
 		Fixer : Superglue=2;Mechanics=2,
@@ -163,7 +163,7 @@ module Base
 
 	fixing Fix Car Seat
 	{
-		Require : NormalCarSeat1;BigCarSeat1;SportCarSeat1;NormalCarSeat2;BigCarSeat2;SportCarSeat2;NormalCarSeat3;BigCarSeat3;SportCarSeat3;NormalCarSeat8;BigCarSeat8;SportCarSeat8;M998CarSeat2;DodgeFrontSeat3;DodgeRearSeat3;R32FrontSeat3;R32RearSeat3;Seat0;U1550LSeat2;E150CarSeat2;80sPickupSeatFront2;80sPickupSeatRear2;ECTO1CarSeatfl2;ECTO1CarSeatfr2;ECTO1CarSeatrl2;ECTO1CarSeatrr2;M151A2CarSeatFront2;M151A2CarSeatRear2;97BushmasterSeat;97BushmasterGunnerSeat,
+		Require : NormalCarSeat1;BigCarSeat1;SportCarSeat1;NormalCarSeat2;BigCarSeat2;SportCarSeat2;NormalCarSeat3;BigCarSeat3;SportCarSeat3;NormalCarSeat8;BigCarSeat8;SportCarSeat8;M998CarSeat2;DodgeFrontSeat3;DodgeRearSeat3;R32FrontSeat3;R32RearSeat3;Seat0;U1550LSeat2;E150CarSeat2;80sPickupSeatFront2;80sPickupSeatRear2;ECTO1CarSeatfl2;ECTO1CarSeatfr2;ECTO1CarSeatrl2;ECTO1CarSeatrr2;M151A2CarSeatFront2;M151A2CarSeatRear2;97BushmasterSeat;97BushmasterGunnerSeat;KZ1Kseat,
 		ConditionModifier : 1.2,
 
 		 
@@ -173,7 +173,7 @@ module Base
 
 	fixing Fix Car Seat Other
 	{
-		Require : NormalCarSeat1;BigCarSeat1;SportCarSeat1;NormalCarSeat2;BigCarSeat2;SportCarSeat2;NormalCarSeat3;BigCarSeat3;SportCarSeat3;NormalCarSeat8;BigCarSeat8;SportCarSeat8;M998CarSeat2;DodgeFrontSeat3;DodgeRearSeat3;R32FrontSeat3;R32RearSeat3;Seat0;U1550LSeat2;E150CarSeat2;80sPickupSeatFront2;80sPickupSeatRear2;ECTO1CarSeatfl2;ECTO1CarSeatfr2;ECTO1CarSeatrl2;ECTO1CarSeatrr2;M151A2CarSeatFront2;M151A2CarSeatRear2,
+		Require : NormalCarSeat1;BigCarSeat1;SportCarSeat1;NormalCarSeat2;BigCarSeat2;SportCarSeat2;NormalCarSeat3;BigCarSeat3;SportCarSeat3;NormalCarSeat8;BigCarSeat8;SportCarSeat8;M998CarSeat2;DodgeFrontSeat3;DodgeRearSeat3;R32FrontSeat3;R32RearSeat3;Seat0;U1550LSeat2;E150CarSeat2;80sPickupSeatFront2;80sPickupSeatRear2;ECTO1CarSeatfl2;ECTO1CarSeatfr2;ECTO1CarSeatrl2;ECTO1CarSeatrr2;M151A2CarSeatFront2;M151A2CarSeatRear2;KZ1Kseat,
 		GlobalItem : UpholsteryKit=2,
 		ConditionModifier : 1.2,
 
@@ -190,7 +190,7 @@ module Base
 
 	fixing Fix Tire
 	{
-		Require : OldTire1;NormalTire1;ModernTire1;OldTire2;NormalTire2;ModernTire2;OldTire3;NormalTire3;ModernTire3;OldTire8;NormalTire8;ModernTire8;V100Tire2;V100Tires2;V100SmallTires2;V100Axle2;V100AxleSmall2;V101Tire2;DodgeRTtire3;R32Tire0;R32Tire1;R32Tire2;R32TireA;McLarenF1FrontWheel3;McLarenF1RearWheel3;U1550LWheel2;E150Tire2;80sOffroadTireA;ECTO1tire2_Item;ECTO1tire1_Item;V102Tire2;BushmasterTire,
+		Require : OldTire1;NormalTire1;ModernTire1;OldTire2;NormalTire2;ModernTire2;OldTire3;NormalTire3;ModernTire3;OldTire8;NormalTire8;ModernTire8;V100Tire2;V100Tires2;V100SmallTires2;V100Axle2;V100AxleSmall2;V101Tire2;DodgeRTtire3;R32Tire0;R32Tire1;R32Tire2;R32TireA;McLarenF1FrontWheel3;McLarenF1RearWheel3;U1550LWheel2;E150Tire2;80sOffroadTireA;ECTO1tire2_Item;ECTO1tire1_Item;V102Tire2;BushmasterTire;KZ1KoldTire;KZ1KnormalTire;KZ1KmodernTire,
 		ConditionModifier : 1.2,
 
 		Fixer : Superglue=2; Mechanics=2,
