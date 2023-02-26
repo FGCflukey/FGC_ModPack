@@ -159,7 +159,7 @@ module Base
 
 	recipe Recycle Hood
 	{
-		destroy EngineDoor1/EngineDoor2/EngineDoor3,
+		destroy EngineDoor1/EngineDoor2/EngineDoor3/EngineDoor8/U1550LHood2,
 		BlowTorch=5,
 		keep WeldingMask,
 		
@@ -198,7 +198,7 @@ module Base
 
 	recipe Recycle Trunk Lid
 	{
-		destroy TrunkDoor1/TrunkDoor2/TrunkDoor3,
+		destroy TrunkDoor1/TrunkDoor2/TrunkDoor3/TrunkDoor8/M101A3TrunkDoor2/M101A3TrunkDoorTwo2/U1550LTrunkDoor2,
 		BlowTorch=5,
 		keep WeldingMask,
 		
@@ -224,7 +224,7 @@ module Base
 
 	recipe Recycle Muffler
 	{
-		destroy OldCarMuffler1/OldCarMuffler2/OldCarMuffler3/NormalCarMuffler1/NormalCarMuffler2/NormalCarMuffler3/ModernCarMuffler1/ModernCarMuffler2/ModernCarMuffler3,
+		destroy OldCarMuffler1/OldCarMuffler2/OldCarMuffler3/NormalCarMuffler1/NormalCarMuffler2/NormalCarMuffler3/ModernCarMuffler1/ModernCarMuffler2/ModernCarMuffler3/OldCarMuffler8/NormalCarMuffler8/ModernCarMuffler8/M911Muffler/M998Muffler1_Item/M998Muffler2_Item/U1550LMuffler2/R32muffler0/R32muffler1/KZ1Kmuffler,
 		BlowTorch=5,
 		keep WeldingMask,
 		
@@ -237,7 +237,7 @@ module Base
 
 	recipe Recycle Gas Tank
 	{
-		destroy SmallGasTank1/SmallGasTank2/SmallGasTank3,
+		destroy SmallGasTank1/SmallGasTank2/SmallGasTank3/SmallGasTank8/NormalGasTank8/BigGasTank8/U1550LGasTank2,
 		BlowTorch=5,
 		keep WeldingMask,
 		
@@ -263,7 +263,7 @@ module Base
 
 	recipe Recycle Suspension
 	{
-		destroy NormalSuspension1/NormalSuspension2/NormalSuspension3/ModernSuspension1/ModernSuspension2/ModernSuspension3,
+		destroy NormalSuspension1/NormalSuspension2/NormalSuspension3/NormalSuspension8/ModernSuspension1/ModernSuspension2/ModernSuspension3/ModernSuspension8/leafSuspension2,
 		BlowTorch=5,
 		keep WeldingMask,
 		
@@ -289,7 +289,7 @@ module Base
 
 	recipe Recycle Door
 	{
-		destroy FrontCarDoor1/FrontCarDoor2/FrontCarDoor3/RearCarDoor1/RearCarDoor2/RearCarDoor3/RearCarDoorDouble1/RearCarDoorDouble2/RearCarDoorDouble3,
+		destroy FrontCarDoor1/FrontCarDoor2/FrontCarDoor3/RearCarDoor1/RearCarDoor2/RearCarDoor3/RearCarDoorDouble1/RearCarDoorDouble2/RearCarDoorDouble3/FrontCarDoor8/RearCarDoor8/RearCarDoorDouble8/U1550LDoor2,
 		BlowTorch=5,
 		keep WeldingMask,
 		
@@ -317,7 +317,7 @@ module Base
 	
 	recipe Recycle Car Seat
 	{
-		destroy NormalCarSeat1/NormalCarSeat2/NormalCarSeat3,
+		destroy NormalCarSeat1/BigCarSeat1/SportCarSeat1/NormalCarSeat2/BigCarSeat2/SportCarSeat2/NormalCarSeat3/BigCarSeat3/SportCarSeat3/NormalCarSeat8/BigCarSeat8/SportCarSeat8/M998CarSeat2/DodgeFrontSeat3/DodgeRearSeat3/R32FrontSeat3/R32RearSeat3/Seat0/U1550LSeat2/E150CarSeat2/80sPickupSeatFront2/80sPickupSeatRear2/ECTO1CarSeatfl2/ECTO1CarSeatfr2/ECTO1CarSeatrl2/ECTO1CarSeatrr2/M151A2CarSeatFront2/M151A2CarSeatRear2/KZ1Kseat,
 		keep Wrench,
 		keep Screwdriver,
 
