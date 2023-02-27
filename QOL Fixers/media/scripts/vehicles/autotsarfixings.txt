@@ -381,4 +381,56 @@ module Autotsar
 		Time:500.0,	
 	}	
 
+	recipe Recycle ATA Bullbars
+	{
+		destroy ATAMustangBullbar3Item/ATAMustangBullbar1Item/ATAMustangBullbar2Item/ATADodgeBullbar1Item/ATADodgeBullbar2Item/ATADodgeBullbar3Item/ATA_Bus_Kengur_1_Item/ATA_Bus_Kengur_2_Item/ATA_Bus_Kengur_3_Item,
+		BlowTorch=5,
+		keep WeldingMask,
+		
+		Result:MetalBar=4,
+		Time:150.0,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+
+	recipe Recycle ATA Window Armor
+	{
+		destroy ATAMustangProtectionWindowLeftItem/ATAMustangProtectionWindowRightItem/ATAMustangProtectionWindowFrontItem/ATAMustangProtectionWindowRearItem/ATAJeepProtectionWindowItem/ATAJeepProtectionWindowFrontItem/ATAJeepProtectionWindowRearItem/ATADodgeProtectionWindowSideItem/ATADodgeProtectionWindowFrontItem/ATA_Bus_Protection_windows_front_Item/ATA_Bus_Protection_windows_right_Item/ATA_Bus_Protection_windows_left_Item,
+		BlowTorch=5,
+		keep WeldingMask,
+		
+		Result:SheetMetal=2,
+		Time:150.0,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+
+	recipe Recycle ATA Door Armor
+	{
+		destroy ATA_Bus_Protection_door_Item/ATA_Bus_Protection_door_rear_Item/ATAPetyarbuiltProtectionSideItem,
+		BlowTorch=5,
+		keep WeldingMask,
+		
+		Result:SheetMetal=2,
+		Time:150.0,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+
+	recipe Recycle ATA Truck Armor
+	{
+		destroy ATAPetyarbuiltProtectionSideTopItem/ATAPetyarbuiltProtectionSideFrontItem/ATAPetyarbuiltProtectionGasTankItem/ATAPetyarbuiltProtectionSideItem/ATAPetyarbuiltProtectionSleeperItem,
+		BlowTorch=5,
+		keep WeldingMask,
+		
+		Result:SheetMetal=2,
+		Time:150.0,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+
 }

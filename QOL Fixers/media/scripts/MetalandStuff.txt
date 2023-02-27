@@ -341,11 +341,11 @@ module Base
 
 	recipe Recycle Bullbars
 	{
-		destroy DG70FrontBumper0/DG70RearBumper0/DG70FrontBumperA/DG70FrontBumperB/DG70FrontBumperC/DG70RearBumperA/DG70RearBumperB/DG70RearBumperC/R32BumperA/R32BumperRearA/R32SideskirtsA/McLarenF1Bull3/U1550LBull2/89BroncoBumperFront/89BroncoBumperRear/89BroncoBullbarFront/80sPickupBullbarFront/80sPickupBullbarRear/82JeepJ10BumperFront/82JeepJ10BullbarFront/82JeepJ10BumperRear/P19AFenderLeft1_Item/P19AFenderLeft2_Item/P19AFenderRight1_Item/P19AFenderRight2_Item/P19AFenderRight3_Item/88ChevyS10BumperFront/88ChevyS10BullbarFront/88ChevyS10BumperRear/97BushBullbarSAS,
+		destroy DG70FrontBumper0/DG70RearBumper0/DG70FrontBumperA/DG70FrontBumperB/DG70FrontBumperC/DG70RearBumperA/DG70RearBumperB/DG70RearBumperC/R32BumperA/R32BumperRearA/R32SideskirtsA/McLarenF1Bull3/U1550LBull2/89BroncoBumperFront/89BroncoBumperRear/89BroncoBullbarFront/80sPickupBullbarFront/80sPickupBullbarRear/82JeepJ10BumperFront/82JeepJ10BullbarFront/82JeepJ10BumperRear/P19AFenderLeft1_Item/P19AFenderLeft2_Item/P19AFenderRight1_Item/P19AFenderRight2_Item/P19AFenderRight3_Item/88ChevyS10BumperFront/88ChevyS10BullbarFront/88ChevyS10BumperRear/97BushBullbarSAS/M998Bullbar1_Item/M998Bullbar2_Item,
 		BlowTorch=5,
 		keep WeldingMask,
 		
-		Result:SheetMetal=2,
+		Result:MetalBar=4,
 		Time:150.0,
 		SkillRequired:MetalWelding=2,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
