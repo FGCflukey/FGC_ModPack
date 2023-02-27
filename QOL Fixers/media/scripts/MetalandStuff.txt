@@ -301,6 +301,19 @@ module Base
 		Category:Welding,
 	}
 
+	recipe Recycle Door Armor
+	{
+		destroy M998CarFrontDoorArmor1_Item/M998CarRearDoorArmor1_Item/DG70DoorArmor/R32DoorArmor/E150DoorArmor/P19ACarFrontDoorArmor1_Item,
+		BlowTorch=5,
+		keep WeldingMask,
+		
+		Result:SheetMetal=2,
+		Time:150.0,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+
 	recipe Recycle Other Doors
 	{
 		destroy McLarenF1Door3/IsoContainerDoubleTrunkDoor2/FrontRightV100Door2/RearV100Door2/ECTO1CarRearDoor2/ECTO1CarFrontDoor2/E150CarFrontDoor2/U1550LDoor2/88ChevyS10CarFrontDoor2/P19ACarFrontDoor2/M151A2LeftDoor2/FrontLeftV100Door2/DG70Door3/E150CarSlideDoor2/R32Door3/M911CarFrontDoor2/RearM113Door3/RearM113Door2/RearM113Door1/FrontM113Door2/FrontM113Door3/FrontM113Door1/89BroncoCarFrontDoor2/M998CarRearDoor2/M151A2RightDoor2/82JeepJ10CarFrontDoor2/U1550LTrailerDoor2/M998CarFrontDoor2/M35A2Door2/M49PumpDoor2/97BushDoor2,
@@ -324,6 +337,45 @@ module Base
 		Result:Thread=2,
 		Time:150.0,
 		OnCreate:GiveBack_CarSeatStuff,
+	}
+
+	recipe Recycle Bullbars
+	{
+		destroy DG70FrontBumper0/DG70RearBumper0/DG70FrontBumperA/DG70FrontBumperB/DG70FrontBumperC/DG70RearBumperA/DG70RearBumperB/DG70RearBumperC/R32BumperA/R32BumperRearA/R32SideskirtsA/McLarenF1Bull3/U1550LBull2/89BroncoBumperFront/89BroncoBumperRear/89BroncoBullbarFront/80sPickupBullbarFront/80sPickupBullbarRear/82JeepJ10BumperFront/82JeepJ10BullbarFront/82JeepJ10BumperRear/P19AFenderLeft1_Item/P19AFenderLeft2_Item/P19AFenderRight1_Item/P19AFenderRight2_Item/P19AFenderRight3_Item/88ChevyS10BumperFront/88ChevyS10BullbarFront/88ChevyS10BumperRear/97BushBullbarSAS,
+		BlowTorch=5,
+		keep WeldingMask,
+		
+		Result:SheetMetal=2,
+		Time:150.0,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+
+	recipe Recycle Windshield Armor
+	{
+		destroy M998WindshieldArmor1_Item/M998WindshieldArmor2_Item/DG70WindshieldArmor/DG70WindshieldRearArmor/R32WindshieldRearArmor/R32WindshieldArmor/E150WindshieldArmor/E150WindshieldRearArmor/80sPickupWindshieldArmor/P19AWindshieldArmor1_Item/M151A2WindshieldArmor1_Item,
+		BlowTorch=5,
+		keep WeldingMask,
+		
+		Result:SheetMetal=2,
+		Time:150.0,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+
+	recipe Recycle Window Armor
+	{
+		destroy R32RearWindowArmor/80sPickupWindowFrontArmor/80sPickupWindowRearArmor,
+		BlowTorch=5,
+		keep WeldingMask,
+		
+		Result:SheetMetal=2,
+		Time:150.0,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
 	}
 
 /************************ Recycle Metal to other things ************************/
