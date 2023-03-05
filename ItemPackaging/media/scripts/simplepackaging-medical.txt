@@ -36,7 +36,7 @@ module Base
 			10xBandaidPack/20xBandaidPack/50xBandaidPack,
 
 			Result:Bandaid=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Bandaids
@@ -44,7 +44,7 @@ module Base
 			destroy Bandaid=10,
 
 			Result:10xBandaidPack,
-			Time:100.0,
+			Time:50.0,
 		}
 
 		recipe Pack up 20 Bandaids
@@ -52,7 +52,7 @@ module Base
 			destroy Bandaid=20,
 
 			Result:20xBandaidPack,
-			Time:150.0,
+			Time:60.0,
 		}
 
 		recipe Pack up 50 Bandaids
@@ -60,7 +60,7 @@ module Base
 			destroy Bandaid=50,
 
 			Result:50xBandaidPack,
-			Time:200.0,
+			Time:90.0,
 		}
 
 	item 10xBandagePack
@@ -98,7 +98,7 @@ module Base
 			10xBandagePack/20xBandagePack/50xBandagePack,
 
 			Result:Bandage=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Bandages
@@ -106,7 +106,7 @@ module Base
 			destroy Bandage=10,
 
 			Result:10xBandagePack,
-			Time:100.0,
+			Time:50.0,
 		}
 
 		recipe Pack up 20 Bandages
@@ -114,7 +114,7 @@ module Base
 			destroy Bandage=20,
 
 			Result:20xBandagePack,
-			Time:150.0,
+			Time:60.0,
 		}
 
 		recipe Pack up 50 Bandages
@@ -122,7 +122,7 @@ module Base
 			destroy Bandage=50,
 
 			Result:50xBandagePack,
-			Time:200.0,
+			Time:90.0,
 		}
 
 	item 10xAlcoholBandagePack
@@ -160,7 +160,7 @@ module Base
 			10xAlcoholBandagePack/20xAlcoholBandagePack/50xAlcoholBandagePack,
 
 			Result:AlcoholBandage=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack 10 up Sterilized Bandages
@@ -168,7 +168,7 @@ module Base
 			destroy AlcoholBandage=10,
 
 			Result:10xAlcoholBandagePack,
-			Time:100.0,
+			Time:60.0,
 		}
 
 		recipe Pack 20 up Sterilized Bandages
@@ -176,7 +176,7 @@ module Base
 			destroy AlcoholBandage=20,
 
 			Result:20xAlcoholBandagePack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 
@@ -185,7 +185,7 @@ module Base
 			destroy AlcoholBandage=50,
 
 			Result:50xAlcoholBandagePack,
-			Time:200.0,
+			Time:120.0,
 		}
 
 	item 10xSuturePack
@@ -213,7 +213,7 @@ module Base
 			10xSuturePack/20xSuturePack,
 
 			Result:SutureNeedle=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Sutures Needles
@@ -221,7 +221,7 @@ module Base
 			destroy SutureNeedle=10,
 
 			Result:10xSuturePack,
-			Time:100.0,
+			Time:60.0,
 		}
 
 		recipe Pack up 20 Suture Needles
@@ -229,7 +229,7 @@ module Base
 			destroy SutureNeedle=20,
 
 			Result:20xSuturePack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xTweezerPack
@@ -257,7 +257,7 @@ module Base
 			10xTweezerPack/20xTweezerPack,
 
 			Result:Tweezers=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Tweezers
@@ -265,7 +265,7 @@ module Base
 			destroy Tweezers=10,
 
 			Result:10xTweezerPack,
-			Time:100.0,
+			Time:60.0,
 		}
 
 		recipe Pack up 20 Tweezers
@@ -273,7 +273,7 @@ module Base
 			destroy Tweezers=20,
 
 			Result:20xTweezerPack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xAlcoholWipesPack
@@ -311,7 +311,7 @@ module Base
 			10xAlcoholWipesPack/20xAlcoholWipesPack/50xAlcoholWipesPack,
 
 			Result:AlcoholWipes=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Alcohol Wipes
@@ -320,7 +320,7 @@ module Base
 
 			Result:10xAlcoholWipesPack,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:100.0,
+			Time:60.0,
 		}
 		
 		recipe Pack up 20 Alcohol Wipes
@@ -329,7 +329,7 @@ module Base
 
 			Result:20xAlcoholWipesPack,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:150.0,
+			Time:90.0,
 		}
 
 		recipe Pack up 50 Alcohol Wipes
@@ -338,7 +338,7 @@ module Base
 
 			Result:50xAlcoholWipesPack,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:200.0,
+			Time:120.0,
 		}
 
 	item 10xAntiBioticsPack
@@ -366,7 +366,7 @@ module Base
 			10xAntiBioticsPack/20xAntiBioticsPack,
 
 			Result:Antibiotics=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Antibiotics
@@ -374,7 +374,7 @@ module Base
 			destroy Antibiotics=10,
 
 			Result:10xAntiBioticsPack,
-			Time:100.0,
+			Time:60.0,
 		}
 
 		recipe Pack up 20 Antibiotics
@@ -382,7 +382,7 @@ module Base
 			destroy Antibiotics=20,
 
 			Result:20xAntiBioticsPack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xDisinfectantPack
@@ -410,7 +410,7 @@ module Base
 			10xDisinfectantPack/20xDisinfectantPack,
 
 			Result:Disinfectant=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Disinfectant
@@ -419,7 +419,7 @@ module Base
 
 			Result:10xDisinfectantPack,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:150.0,
+			Time:60.0,
 		}
 
 		recipe Pack up 20 Disinfectant
@@ -428,7 +428,7 @@ module Base
 
 			Result:20xDisinfectantPack,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:150.0,
+			Time:90.0,
 		}
 
 
@@ -457,7 +457,7 @@ module Base
 			10xPillsBox/20xPillsBox,
 
 			Result:Pills=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Painkillers
@@ -466,7 +466,7 @@ module Base
 
 			Result:10xPillsBox,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:150.0,
+			Time:60.0,
 		}
 
 		recipe Pack up 20 Painkillers
@@ -475,7 +475,7 @@ module Base
 
 			Result:20xPillsBox,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xPillsSleepingTabletsBox
@@ -503,7 +503,7 @@ module Base
 			10xPillsSleepingTabletsBox/20xPillsSleepingTabletsBox,
 
 			Result:PillsSleepingTablets=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Sleeping Tablets
@@ -512,7 +512,7 @@ module Base
 
 			Result:10xPillsSleepingTabletsBox,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:150.0,
+			Time:60.0,
 		}
 
 		recipe Pack up 20 Sleeping Tablets
@@ -521,7 +521,7 @@ module Base
 
 			Result:20xPillsSleepingTabletsBox,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xPillsVitaminsBox
@@ -549,7 +549,7 @@ module Base
 			10xPillsVitaminsBox/20xPillsVitaminsBox,
 
 			Result:PillsVitamins=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Vitamins
@@ -558,7 +558,7 @@ module Base
 
 			Result:10xPillsVitaminsBox,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:150.0,
+			Time:60.0,
 		}
 
 		recipe Pack up 20 Vitamins
@@ -567,7 +567,7 @@ module Base
 
 			Result:20xPillsVitaminsBox,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xPillsBetaBox
@@ -595,7 +595,7 @@ module Base
 			10xPillsBetaBox/20xPillsBetaBox,
 
 			Result:PillsBeta=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Beta Blockers
@@ -604,7 +604,7 @@ module Base
 
 			Result:10xPillsBetaBox,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:150.0,
+			Time:60.0,
 		}
 
 		recipe Pack up 20 Beta Blockers
@@ -613,7 +613,7 @@ module Base
 
 			Result:20xPillsBetaBox,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xPillsAntiDepBox
@@ -641,7 +641,7 @@ module Base
 			10xPillsAntiDepBox/20xPillsAntiDepBox,
 
 			Result:PillsAntiDep=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Antidepressants
@@ -650,7 +650,7 @@ module Base
 
 			Result:10xPillsAntiDepBox,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:150.0,
+			Time:60.0,
 		}
 
 		recipe Pack up 20 Antidepressants
@@ -659,7 +659,7 @@ module Base
 
 			Result:20xPillsAntiDepBox,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:150.0,
+			Time:90.0,
 		}
 
 }

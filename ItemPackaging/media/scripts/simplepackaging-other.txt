@@ -761,7 +761,7 @@ module Base
 			10xDuctTapePack/20xDuctTapePack,
 
 			Result:DuctTape=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Package 10 Duct Tape
@@ -770,7 +770,7 @@ module Base
 
 			Result:10xDuctTapePack,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:100.0,
+			Time:60.0,
 		}
 
 		recipe Package 20 Duct Tape
@@ -779,7 +779,7 @@ module Base
 
 			Result:20xDuctTapePack,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:100.0,
+			Time:60.0,
 		}
 
 	item 10xBatteryPack
@@ -807,7 +807,7 @@ module Base
 			10xBatteryPack/20xBatteryPack,
 
 			Result:Battery=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Package 10 Batteries
@@ -816,7 +816,7 @@ module Base
 
 			Result:10xBatteryPack,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:100.0,
+			Time:60.0,
 		}
 
 		recipe Package 20 Batteries
@@ -825,7 +825,7 @@ module Base
 
 			Result:20xBatteryPack,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:100.0,
+			Time:90.0,
 		}
 
 	item 50xScrapMetalBox
@@ -853,7 +853,7 @@ module Base
 			50xScrapMetalBox/100xScrapMetalBox,
 
 			Result:ScrapMetal=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Package 50 Scrap Metal
@@ -861,7 +861,7 @@ module Base
 			destroy ScrapMetal=50,
 
 			Result:50xScrapMetalBox,
-			Time:125.0,
+			Time:60.0,
 		}
 
 		recipe Package 100 Scrap Metal
@@ -869,7 +869,7 @@ module Base
 			destroy ScrapMetal=100,
 
 			Result:100xScrapMetalBox,
-			Time:125.0,
+			Time:90.0,
 		}
 
 	item 50xElectricWireBox
@@ -897,7 +897,7 @@ module Base
 			50xElectricWireBox/100xElectricWireBox,
 
 			Result:Radio.ElectricWire=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Package 50 Electric Wire
@@ -905,7 +905,7 @@ module Base
 			destroy Radio.ElectricWire=50,
 
 			Result:50xElectricWireBox,
-			Time:100.0,
+			Time:60.0,
 		}
 
 		recipe Package 100 Electric Wire
@@ -913,7 +913,7 @@ module Base
 			destroy Radio.ElectricWire=100,
 
 			Result:100xElectricWireBox,
-			Time:100.0,
+			Time:90.0,
 		}
 
 	item 50xAluminumBox
@@ -941,7 +941,7 @@ module Base
 			50xAluminumBox/100xAluminumBox,
 
 			Result:Aluminum=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Package 50 Aluminum
@@ -949,7 +949,7 @@ module Base
 			destroy Aluminum=50,
 
 			Result:50xAluminumBox,
-			Time:100.0,
+			Time:60.0,
 		}
 
 		recipe Package 100 Aluminum
@@ -957,7 +957,7 @@ module Base
 			destroy Aluminum=100,
 
 			Result:100xAluminumBox,
-			Time:100.0,
+			Time:90.0,
 		}
 
 	item 50xElectronicsScrapBox
@@ -985,7 +985,7 @@ module Base
 			50xElectronicsScrapBox/100xElectronicsScrapBox,
 
 			Result:ElectronicsScrap=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Package 50 Electronics Scrap
@@ -993,7 +993,7 @@ module Base
 			destroy ElectronicsScrap=50,
 
 			Result:50xElectronicsScrapBox,
-			Time:100.0,
+			Time:60.0,
 		}
 
 		recipe Package 100 Electronics Scrap
@@ -1001,7 +1001,7 @@ module Base
 			destroy ElectronicsScrap=100,
 
 			Result:100xElectronicsScrapBox,
-			Time:100.0,
+			Time:90.0,
 		}
 
 	item 10xNailsBox
@@ -1039,7 +1039,7 @@ module Base
 			10xNailsBox/20xNailsBox/50xNailsBox,
 
 			Result:NailsBox=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Package 10 Boxes of Nails
@@ -1047,7 +1047,7 @@ module Base
 			destroy NailsBox=10,
 
 			Result:10xNailsBox,
-			Time:50.0,
+			Time:60.0,
 		}
 
 		recipe Package 20 Boxes of Nails
@@ -1055,7 +1055,7 @@ module Base
 			destroy NailsBox=20,
 
 			Result:20xNailsBox,
-			Time:100.0,
+			Time:90.0,
 		}
 
 		recipe Package 50 Boxes of Nails
@@ -1063,7 +1063,7 @@ module Base
 			destroy NailsBox=50,
 
 			Result:50xNailsBox,
-			Time:150.0,
+			Time:120.0,
 		}
 
 	item 10xScrewsBox
@@ -1101,7 +1101,7 @@ module Base
 			10xScrewsBox/20xScrewsBox/50xScrewsBox,
 
 			Result:ScrewsBox=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Package 10 Boxes of Screws
@@ -1109,7 +1109,7 @@ module Base
 			destroy ScrewsBox=10,
 
 			Result:10xScrewsBox,
-			Time:50.0,
+			Time:60.0,
 		}
 
 		recipe Package 20 Boxes of Screws
@@ -1117,7 +1117,7 @@ module Base
 			destroy ScrewsBox=20,
 
 			Result:20xScrewsBox,
-			Time:100.0,
+			Time:90.0,
 		}
 
 		recipe Package 50 Boxes of Screws
@@ -1125,7 +1125,7 @@ module Base
 			destroy ScrewsBox=50,
 
 			Result:50xScrewsBox,
-			Time:150.0,
+			Time:120.0,
 		}
 
 }
