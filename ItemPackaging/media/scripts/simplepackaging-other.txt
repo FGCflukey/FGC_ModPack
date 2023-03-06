@@ -1155,6 +1155,70 @@ module Base
 			Time:90.0,
 		}
 
+	item 10xMatchesPack
+	{
+        DisplayCategory  	= Material,
+		Weight				= 0.5,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack of Matches,
+		Icon				= 10xMatchesPack,
+	}
+
+	item 20xMatchesPack
+	{
+        DisplayCategory  	= Material,
+		Weight				= 1.0,
+		Type				= Drainable,
+		UseDelta 			= 0.053,
+		DisplayName			= 20-Pack of Matches,
+		Icon				= 20xMatchesPack,
+	}
+
+	item 50xMatchesPack
+	{
+        DisplayCategory  	= Material,
+		Weight				= 1.5,
+		Type				= Drainable,
+		UseDelta 			= 0.02,
+		DisplayName			= 50-Pack of Matches,
+		Icon				= 50xMatchesPack,
+	}
+
+		recipe Take Matches from Pack
+		{
+			10xMatchesPack/20xMatchesPack/50xMatchesPack,
+
+			Result:Matches=1,
+			Time:30.0,
+		}
+
+		recipe Package up 10 Matches
+		{
+			destroy Matches=10,
+
+			Result:10xMatchesPack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:50.0,
+		}
+
+		recipe Package up 20 Matches
+		{
+			destroy Matches=20,
+
+			Result:20xMatchesPack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:60.0,
+		}
+
+		recipe Package up 50 Matches
+		{
+			destroy Matches=50,
+
+			Result:50xMatchesPack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:90.0,
+		}
 
 }
 
