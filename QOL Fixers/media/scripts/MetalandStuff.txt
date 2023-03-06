@@ -237,7 +237,7 @@ module Base
 
 	recipe Recycle Gas Tank
 	{
-		destroy SmallGasTank1/SmallGasTank2/SmallGasTank3/SmallGasTank8/NormalGasTank8/BigGasTank8/U1550LGasTank2,
+		destroy SmallGasTank1/SmallGasTank2/SmallGasTank3/SmallGasTank8/NormalGasTank8/BigGasTank8/U1550LGasTank2/KZ1KgasTank,
 		BlowTorch=5,
 		keep WeldingMask,
 		
