@@ -1128,5 +1128,33 @@ module Base
 			Time:120.0,
 		}
 
+	item 12xSupergluePack
+	{
+        DisplayCategory  	= Material,
+		Weight				= 0.5,
+		Type				= Drainable,
+		UseDelta 			= 0.0833,
+		DisplayName			= 12-Pack of Superglue,
+		Icon				= 12xSupergluePack,
+	}
+
+		recipe Take Superglue from Pack
+		{
+			12xSupergluePack,
+
+			Result:Superglue=1,
+			Time:30.0,
+		}
+
+		recipe Package up 12 Superglue
+		{
+			destroy Superglue=12,
+
+			Result:12xSupergluePack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:90.0,
+		}
+
+
 }
 
