@@ -21,6 +21,17 @@ ExtractSeedsMenu.doMenu = function(player, context, items)
         local key = Fruit:getType()
         if key == "Grapefruit" then key = "GrapeFruit" end -- seriously? I hate string based types
         if key == "Grapes" then key = "Grape" end -- seriously? I hate string based types
+		
+		if key == "NaturalLemon" then key = "Lemon" end -- seriously? you missed some
+		if key == "NaturalLime" then key = "Lime" end -- seriously? you missed some
+		if key == "NaturalOrange" then key = "Orange" end -- seriously? you missed some
+		if key == "NaturalApple" then key = "Apple" end -- seriously? you missed some
+		if key == "NaturalPeach" then key = "Peach" end -- seriously? you missed some
+		if key == "NaturalBanana" then key = "Banana" end -- seriously? you missed some
+		if key == "NaturalPineapple" then key = "Pineapple" end -- seriously? you missed some
+		if key == "NaturalCherry" then key = "Cherry" end -- seriously? you missed some
+		if key == "NaturalAvocado" then key = "Avocado" end -- seriously? you missed some
+		
         seeds = InventoryItemFactory.CreateItem(
                     "legourmetfarming." .. key .. "Seed")
         if seeds == nil then
@@ -47,6 +58,16 @@ ExtractSeedsMenu.ExtractSeeds = function(item, playerObj, count)
     local key = item:getType()
     if key == "Grapefruit" then key = "GrapeFruit" end -- seriously? I hate string based types
     if key == "Grapes" then key = "Grape" end -- seriously? I hate string based types
+
+	if key == "NaturalLemon" then key = "Lemon" end -- seriously? you missed some
+	if key == "NaturalLime" then key = "Lime" end -- seriously? you missed some
+	if key == "NaturalOrange" then key = "Orange" end -- seriously? you missed some
+	if key == "NaturalApple" then key = "Apple" end -- seriously? you missed some
+	if key == "NaturalPeach" then key = "Peach" end -- seriously? you missed some
+	if key == "NaturalBanana" then key = "Banana" end -- seriously? you missed some
+	if key == "NaturalPineapple" then key = "Pineapple" end -- seriously? you missed some
+	if key == "NaturalCherry" then key = "Cherry" end -- seriously? you missed some
+	if key == "NaturalAvocado" then key = "Avocado" end -- seriously? you missed some
 
     if count == 1 then
         local seeds = nil
