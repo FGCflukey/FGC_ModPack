@@ -8,7 +8,7 @@ ExtractSeedsMenu.doMenu = function(player, context, items)
         local tempitem = v;
         if not instanceof(v, "InventoryItem") then tempitem = v.items[1]; end
         if tempitem:IsFood() and
-            (tempitem:getFoodType() == "Fruits" or tempitem:getType() ==
+            (tempitem:getFoodType() == "Fruits" or tempitem:getFoodType() == "Citrus" or tempitem:getType() ==
                 "Tomato") and tempitem:IsRotten() then
             if pl:getInventory():contains(tempitem) then
                 Fruit = tempitem
