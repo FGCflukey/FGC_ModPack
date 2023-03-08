@@ -257,7 +257,7 @@ function UG_Automaker.takeMaterials( mechanictype)
 	local ISItem = {}
 	ISItem.player = getPlayer():getPlayerNum()
 	ISItem.sq = getPlayer():getSquare()
-	ISItem.modData = {}	
+	ISItem.modData = {}
 	
 	for m,c in pairs( materials) do -- m is the materialID, c is the number required
 		if m == "ElectricWire" then
@@ -364,84 +364,181 @@ function UG_Automaker.buildMaterialList( context, toolTip, mechanictype, player)
 	
 end
 
-function UG_Automaker.initTooltip( context, vehicle, mechanictype, player)
+function UG_Automaker.getSkillReq( player, mechanictype)
 
-	local toolTip = ISToolTip:new()
-	toolTip:initialise()
-	toolTip:setVisible(false)
+	local mechanicReq = 5
+	local metalworkReq = 5
+	local electricalReq = 5
+	
+	-- Script:getMechanicType()    1=standard 2=heavy duty 3=sports	
+	if isAdmin() and player:isBuildCheat() then
+		
+		mechanicReq = 0
+		metalworkReq = 0
+		electricalReq = 0
+	elseif mechanictype == 1 then
+	
+		mechanicReq = 5
+		metalworkReq = 5
+		electricalReq = 6
+	elseif mechanictype == 2 then
+	
+		mechanicReq = 7
+		metalworkReq = 7
+		electricalReq = 6
+	elseif mechanictype == 3 then
+	
+		mechanicReq = 9
+		metalworkReq = 9
+		electricalReq = 6
+	else
+	
+		mechanicReq = 11
+		metalworkReq = 11
+		electricalReq = 11
+	end
+	
+	return mechanicReq, metalworkReq, electricalReq
 
-	-- add it to our current option
-	context.toolTip = toolTip
-	toolTip:setName( "Build a new car")
-	toolTip.description = tostring(vehicle:getName()) .. "<LINE>Automaker:" .. "<LINE>Let's build a car!<LINE>"
-	--toolTip:setTexture("crafted_01_16")  --figure out a way to get images of each car.
-	
-	UG_Automaker.buildSkillList( context, toolTip, mechanictype, player)
-	UG_Automaker.buildMaterialList( context, toolTip, mechanictype, player)
-	
 end
 
-function UG_Automaker.FillWorldContextMenu( player, context, worldobjects, test)
-
-	player = getPlayer()		
-	local automakerOption = context:addOption( "Build New Vehicle", worldobjects, nil)	
-
-	local subMenuVehicles = ISContextMenu:getNew(context)
-	context:addSubMenu(automakerOption, subMenuVehicles)
-
-	local subMenuStandard = subMenuVehicles:addOption( "Standard Models", worldobjects, nil)
-	local subMenuStandardModels = ISContextMenu:getNew(context)
-	context:addSubMenu(subMenuStandard, subMenuStandardModels)
-
-	local subMenuSport = subMenuVehicles:addOption( "Sport Models", worldobjects, nil)
-	local subMenuSportModels = ISContextMenu:getNew(context)
-	context:addSubMenu(subMenuSport, subMenuSportModels)
+function UG_Automaker.canBuild( player, mechanictype)
 	
-	local subMenuHeavyDuty = subMenuVehicles:addOption( "Heavy Duty Models", worldobjects, nil)
-	local subMenuHeavyDutyModels = ISContextMenu:getNew(context)
-	context:addSubMenu(subMenuHeavyDuty, subMenuHeavyDutyModels)
+	local materialReqs = UG_Automaker.getMaterialReq( mechanictype)
+	local groundItems = buildUtil.getMaterialOnGround( player:getSquare())
+	local groundItemCounts = buildUtil.getMaterialOnGroundCounts( groundItems)	
+	local playerInv = player:getInventory()
 	
-	local subMenuOther = subMenuVehicles:addOption( "Other Models", worldobjects, nil)
-	local subMenuOtherModels = ISContextMenu:getNew(context)
-	context:addSubMenu(subMenuOther, subMenuOtherModels)
-
-	local AllScripts = getScriptManager():getAllVehicleScripts()
+	--do they have the materials?
+	for k,v in pairs( materialReqs) do
 	
-	for i=1, AllScripts:size() do
-	
-		local v = AllScripts:get( i-1)
-		if UG_Automaker.VehicleBlackList( v:getName()) == false and string.find( v:getName(), "Smashed") == nil and string.find( v:getName(), "Burnt") == nil and string.find( v:getName(), "shipwreck") == nil then
+		if luautils.stringStarts( k, "need:") then
 		
-			local mt = v:getMechanicType()  -- Script:getMechanicType()    1=standard 2=heavy duty 3=sports	
-			local ModelContext
+			local itemFullType = luautils.split( k, ":")[ 2]
+			local nbOfItem = playerInv:getCountTypeEvalRecurse( itemFullType, buildUtil.predicateMaterial)
 			
-			if mt == 1 then
-			
-				ModelContext = subMenuStandardModels:addOption( UG_Automaker.getVehicleRealName( v:getName()), worldobjects, UG_Automaker.onNewVehicle, v:getFullName(), mt, subMenuVehicles)
-				UG_Automaker.initTooltip( ModelContext, v, mt, player)
-			elseif mt == 2 then
-
-				ModelContext = subMenuHeavyDutyModels:addOption( getText("IGUI_VehicleName" .. v:getName()), worldobjects, UG_Automaker.onNewVehicle, v:getFullName(), mt, subMenuVehicles)
-				UG_Automaker.initTooltip( ModelContext, v, mt, player)
-			elseif mt == 3 then
-
-				ModelContext = subMenuSportModels:addOption( getText("IGUI_VehicleName" .. v:getName()), worldobjects, UG_Automaker.onNewVehicle, v:getFullName(), mt, subMenuVehicles)
-				UG_Automaker.initTooltip( ModelContext, v, mt, player)
-			else
-			
-				ModelContext = subMenuOtherModels:addOption( getText("IGUI_VehicleName" .. v:getName()), worldobjects, UG_Automaker.onNewVehicle, v:getFullName(), mt, subMenuVehicles)
-				UG_Automaker.initTooltip( ModelContext, v, mt, player)
-			end		
+			if groundItemCounts[ itemFullType] then
+				nbOfItem = nbOfItem + groundItemCounts[ itemFullType];
+			end
+			if nbOfItem < tonumber( v) then
+				--player:Say("Not enough mats")
+				return false
+			end			
 		end
 	end
+	
+	--do they have the skill?	
+	local mechanicReq, metalworkReq, electricalReq = UG_Automaker.getSkillReq( player, mechanictype)
+
+	if player:getPerkLevel( Perks.Mechanics) < mechanicReq then
+		--player:Say("Not enough skill Mech")
+		return false
+	end
+	
+	if player:getPerkLevel( Perks.MetalWelding) < metalworkReq then
+		--player:Say("Not enough skill Meta")
+		return false
+	end
+	
+	if player:getPerkLevel( Perks.Electricity) < electricalReq  then
+		--player:Say("Not enough skill Elec")
+		return false
+	end
+
+	--have they read the books!?
+	if mechanictype == 1 and player:getKnownRecipes():contains("Automaker Basics") == false then
+		--player:Say("No book1")
+		return false
+	elseif mechanictype == 2 and player:getKnownRecipes():contains("Automaker Intermediate") == false then
+		--player:Say("No book2")
+		return false
+	elseif mechanictype == 3 and player:getKnownRecipes():contains("Automaker Expert") == false then
+		--player:Say("No book3")
+		return false
+	end
+	
+	--should be all good now
+	return true
+end
+
+-- function UG_Automaker.initTooltip( context, vehicle, mechanictype, player)
+
+	-- local toolTip = ISToolTip:new()
+	-- toolTip:initialise()
+	-- toolTip:setVisible(false)
+
+	-- -- add it to our current option
+	-- context.toolTip = toolTip
+	-- toolTip:setName( "Build a new car")
+	-- toolTip.description = tostring(vehicle:getName()) .. "<LINE>Automaker:" .. "<LINE>Let's build a car!<LINE>"
+	
+	-- UG_Automaker.buildSkillList( context, toolTip, mechanictype, player)
+	-- UG_Automaker.buildMaterialList( context, toolTip, mechanictype, player)
+	
+-- end
+
+ function UG_Automaker.FillWorldContextMenu( player, context, worldobjects, test)
+
+	player = getPlayer()	
+	local automakerOption = context:addOption( "Build Vehicle", worldobjects, UG_Automaker.onNewNew, player)
+	-- local automakerOption = context:addOption( "Build New Vehicle", worldobjects, nil)	
+
+	-- local subMenuVehicles = ISContextMenu:getNew(context)
+	-- context:addSubMenu(automakerOption, subMenuVehicles)
+
+	-- local subMenuStandard = subMenuVehicles:addOption( "Standard Models", worldobjects, nil)
+	-- local subMenuStandardModels = ISContextMenu:getNew(context)
+	-- context:addSubMenu(subMenuStandard, subMenuStandardModels)
+
+	-- local subMenuSport = subMenuVehicles:addOption( "Sport Models", worldobjects, nil)
+	-- local subMenuSportModels = ISContextMenu:getNew(context)
+	-- context:addSubMenu(subMenuSport, subMenuSportModels)
+	
+	-- local subMenuHeavyDuty = subMenuVehicles:addOption( "Heavy Duty Models", worldobjects, nil)
+	-- local subMenuHeavyDutyModels = ISContextMenu:getNew(context)
+	-- context:addSubMenu(subMenuHeavyDuty, subMenuHeavyDutyModels)
+	
+	-- local subMenuOther = subMenuVehicles:addOption( "Other Models", worldobjects, nil)
+	-- local subMenuOtherModels = ISContextMenu:getNew(context)
+	-- context:addSubMenu(subMenuOther, subMenuOtherModels)
+
+	-- local AllScripts = getScriptManager():getAllVehicleScripts()
+	
+	-- for i=1, AllScripts:size() do
+	
+		-- local v = AllScripts:get( i-1)
+		-- if UG_Automaker.VehicleBlackList( v:getName()) == false and string.find( v:getName(), "Smashed") == nil and string.find( v:getName(), "Burnt") == nil and string.find( v:getName(), "shipwreck") == nil then
+		
+			-- local mt = v:getMechanicType()  -- Script:getMechanicType()    1=standard 2=heavy duty 3=sports	
+			-- local ModelContext
+			
+			-- if mt == 1 then
+			
+				-- ModelContext = subMenuStandardModels:addOption( UG_Automaker.getVehicleRealName( v:getName()), worldobjects, UG_Automaker.onNewVehicle, v:getFullName(), mt, subMenuVehicles)
+				-- UG_Automaker.initTooltip( ModelContext, v, mt, player)
+			-- elseif mt == 2 then
+
+				-- ModelContext = subMenuHeavyDutyModels:addOption( getText("IGUI_VehicleName" .. v:getName()), worldobjects, UG_Automaker.onNewVehicle, v:getFullName(), mt, subMenuVehicles)
+				-- UG_Automaker.initTooltip( ModelContext, v, mt, player)
+			-- elseif mt == 3 then
+
+				-- ModelContext = subMenuSportModels:addOption( getText("IGUI_VehicleName" .. v:getName()), worldobjects, UG_Automaker.onNewVehicle, v:getFullName(), mt, subMenuVehicles)
+				-- UG_Automaker.initTooltip( ModelContext, v, mt, player)
+			-- else
+			
+				-- ModelContext = subMenuOtherModels:addOption( getText("IGUI_VehicleName" .. v:getName()), worldobjects, UG_Automaker.onNewVehicle, v:getFullName(), mt, subMenuVehicles)
+				-- UG_Automaker.initTooltip( ModelContext, v, mt, player)
+			-- end		
+		-- end
+	-- end
 end
 
 function UG_Automaker.onNewVehicle( worldobjects, vehiclescript, mechanictype, context)
 
-	if context then
-		context:closeAll()
-		context:setVisible(false)
-	end --for some reason the context menu stays open.
+	-- if context then
+		-- context:closeAll()
+		-- context:setVisible(false)
+	-- end --for some reason the context menu stays open.
 	
 	--UG_Automaker.takeMaterials( mechanictype)
 	sendClientCommand( getPlayer(), "Automaker", "CreateVehicle", { VehicleID=vehiclescript, MechanicType=mechanictype})
@@ -452,7 +549,169 @@ function UG_Automaker.init()
 	this.fullbuild = SandboxVars.UG_Automaker.fullbuild
 end
 
+function UG_Automaker.onNewNew( worldobjects, player)
+
+	UG_AutomakerUI:show( player)
+end
+
+
+--New UI with 3D Preview
+UG_AutomakerUI = ISCollapsableWindow:derive("UG_AutomakerUI")
+UG_AutomakerUI.instance = nil;
+UG_AutomakerUI.SMALL_FONT_HGT = getTextManager():getFontFromEnum(UIFont.Small):getLineHeight()
+UG_AutomakerUI.MEDIUM_FONT_HGT = getTextManager():getFontFromEnum(UIFont.Medium):getLineHeight()
+
+local width = 845
+local height = 550
+local posX = 0
+local posY = 0
+ 
+function UG_AutomakerUI:show( player)
+
+    local square = player:getSquare()
+    posX = square:getX()
+    posY = square:getY()
+
+	if UG_AutomakerUI.instance == nil then
+		
+		UG_AutomakerUI.instance = UG_AutomakerUI:new( 0, 0, width, height, player)
+		UG_AutomakerUI.instance:initialise()
+		UG_AutomakerUI.instance:instantiate()
+	end
+	
+	UG_AutomakerUI.instance.pinButton:setVisible( false)
+	UG_AutomakerUI.instance.collapseButton:setVisible( false)
+	UG_AutomakerUI.instance:addToUIManager()
+	--UG_AutomakerUI.instance.setVisible( true)
+	
+	return UG_AutomakerUI.instance;
+end
+
+function UG_AutomakerUI:onMouseMove( dx, dy)
+
+	self.mouseOver = true;
+	if self.moving then
+	
+		self:setX( self.x + dx)
+		self:setY( self.y + dy)
+		self:bringToTop();
+	end
+	
+	--UG_AutomakerUI.instance:toggleToolTip( false)
+end
+
+function UG_AutomakerUI:onMouseDown( x, y)
+
+	ISCollapsableWindow.onMouseDown( self, x, y)
+	--if UG_AutomakerUI.instance then UG_AutomakerUI.instance.close() end
+end
+
+function UG_AutomakerUI:close()
+
+	self:setVisible( false)
+	UG_AutomakerUI.instance:removeFromUIManager()
+	UG_AutomakerUI.instance = nil
+	self:removeFromUIManager()
+end
+
+function UG_AutomakerUI:createChildren()
+
+	ISCollapsableWindow.createChildren( self)
+	
+	local x=30
+	local y=85
+	
+    local th = self:titleBarHeight()
+    self.panel = ISTabPanel:new(1, th, self.width-2, self.height-(th+1))
+    self.panel:initialise()
+    self.panel:setAnchorRight(true)
+    self.panel:setAnchorBottom(true)
+    self.panel.borderColor = { r = 1, g = 0, b = 0, a = 1}
+    --self.panel.onActivateView = self.onActivateView
+    self.panel.target = self
+	self.panel.tabHeight = 25
+    self.panel:setEqualTabWidth(false)
+    self:addChild(self.panel)
+	
+	local tab
+	--Script:getMechanicType()    1=standard 2=heavy duty 3=sports	
+	
+	tab = AutoTab:new(0, 0, self.width, self.panel.height - self.panel.tabHeight)
+	tab:initialise()
+	tab:setAnchorRight(true)
+	tab:setAnchorBottom(true)
+	tab:setAutoList(UG_AutomakerUI.instance)
+	tab:setCategoryType( "Standard Models")
+	tab:FillList()
+	tab:FillDescription( 1)
+	self.panel:addView( "Standard Models", tab)
+	tab.parent = self
+
+	tab = AutoTab:new(0, 0, self.width, self.panel.height - self.panel.tabHeight)
+	tab:initialise()
+	tab:setAnchorRight(true)
+	tab:setAnchorBottom(true)
+	tab:setAutoList(UG_AutomakerUI.instance)
+	tab:setCategoryType( "Sport Models")
+	tab:FillList()
+	tab:FillDescription( 3)
+	self.panel:addView( "Sport Models", tab)
+	tab.parent = self
+	
+	tab = AutoTab:new(0, 0, self.width, self.panel.height - self.panel.tabHeight)
+	tab:initialise()
+	tab:setAnchorRight(true)
+	tab:setAnchorBottom(true)
+	tab:setAutoList(UG_AutomakerUI.instance)
+	tab:setCategoryType( "Heavy Duty Models")
+	tab:FillList()
+	tab:FillDescription( 2)
+	self.panel:addView( "Heavy Duty Models", tab)
+	tab.parent = self
+	
+	self.panel:activateView( "Standard Models")
+end
+
+function UG_AutomakerUI:render()
+
+	ISCollapsableWindow.render( self)
+end
+
+function UG_AutomakerUI:new(x, y, width, height, player)
+    local o = {}
+    if x == 0 and y == 0 then
+        x = (getCore():getScreenWidth() / 2) - (width / 2);
+        y = (getCore():getScreenHeight() / 2) - (height / 2);
+    end
+    o = ISCollapsableWindow:new(x, y, width, height);
+    setmetatable(o, self)
+    o.fgBar = {r=0, g=0.6, b=0, a=0.7 }
+    self.__index = self
+    
+    o.title = "Automaker: Select a vehicle to create **Please create your vehicle outside in an open area!**"
+    o.player = player
+    o.resizable = false;
+    return o
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Events.OnFillWorldObjectContextMenu.Add(UG_Automaker.FillWorldContextMenu)
+
 
 if not isClient() then return end
 
