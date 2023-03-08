@@ -15,7 +15,7 @@ module Base
 			10xCannedBolognesePack,
 
 			Result:CannedBolognese=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Cans
@@ -23,7 +23,7 @@ module Base
 			destroy CannedBolognese=10,
 
 			Result:10xCannedBolognesePack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xCannedCarrotsPack
@@ -41,7 +41,7 @@ module Base
 			10xCannedCarrotsPack,
 
 			Result:CannedCarrots=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Cans
@@ -49,7 +49,7 @@ module Base
 			destroy CannedCarrots=10,
 
 			Result:10xCannedCarrotsPack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 
@@ -68,7 +68,7 @@ module Base
 			10xCannedChiliPack,
 
 			Result:CannedChili=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Cans
@@ -76,7 +76,7 @@ module Base
 			destroy CannedChili=10,
 
 			Result:10xCannedChiliPack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xCannedCornPack
@@ -94,7 +94,7 @@ module Base
 			10xCannedCornPack,
 
 			Result:CannedCorn=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Cans
@@ -102,7 +102,7 @@ module Base
 			destroy CannedCorn=10,
 
 			Result:10xCannedCornPack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xCannedCornedBeefPack
@@ -120,7 +120,7 @@ module Base
 			10xCannedCornedBeefPack,
 
 			Result:CannedCornedBeef=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Cans
@@ -128,7 +128,7 @@ module Base
 			destroy CannedCornedBeef=10,
 
 			Result:10xCannedCornedBeefPack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xCannedMushroomSoupPack
@@ -146,7 +146,7 @@ module Base
 			10xCannedMushroomSoupPack,
 
 			Result:CannedMushroomSoup=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Cans
@@ -154,7 +154,7 @@ module Base
 			destroy CannedMushroomSoup=10,
 
 			Result:10xCannedMushroomSoupPack,
-			Time:150.0,
+			Time:90.0,
 		}
 		
 	item 10xCannedPeasPack
@@ -172,7 +172,7 @@ module Base
 			10xCannedPeasPack,
 
 			Result:CannedPeas=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Cans
@@ -180,7 +180,7 @@ module Base
 			destroy CannedPeas=10,
 
 			Result:10xCannedPeasPack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xCannedPotatoPack
@@ -198,7 +198,7 @@ module Base
 			10xCannedPotatoPack,
 
 			Result:CannedPotato2=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Cans
@@ -206,7 +206,7 @@ module Base
 			destroy CannedPotato2=10,
 
 			Result:10xCannedPotatoPack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xCannedSardinesPack
@@ -224,7 +224,7 @@ module Base
 			10xCannedSardinesPack,
 
 			Result:CannedSardines=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Cans
@@ -232,7 +232,7 @@ module Base
 			destroy CannedSardines=10,
 
 			Result:10xCannedSardinesPack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xCannedTomatoPack
@@ -250,7 +250,7 @@ module Base
 			10xCannedTomatoPack,
 
 			Result:CannedTomato2=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Cans
@@ -258,7 +258,7 @@ module Base
 			destroy CannedTomato2=10,
 
 			Result:10xCannedTomatoPack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xDogfoodPack
@@ -276,7 +276,7 @@ module Base
 			10xDogfoodPack,
 
 			Result:Dogfood=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Cans
@@ -284,7 +284,7 @@ module Base
 			destroy Dogfood=10,
 
 			Result:10xDogfoodPack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xCannedOatsRawPack
@@ -302,7 +302,7 @@ module Base
 			10xCannedOatsRawPack,
 
 			Result:OatsRaw=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Cans
@@ -310,7 +310,7 @@ module Base
 			destroy OatsRaw=10,
 
 			Result:10xCannedOatsRawPack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xCannedTinnedBeansPack
@@ -328,7 +328,7 @@ module Base
 			10xCannedTinnedBeansPack,
 
 			Result:TinnedBeans=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Cans
@@ -336,7 +336,7 @@ module Base
 			destroy TinnedBeans=10,
 
 			Result:10xCannedTinnedBeansPack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xCannedTunaTinPack
@@ -354,7 +354,7 @@ module Base
 			10xCannedTunaTinPack,
 
 			Result:TunaTin=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Cans
@@ -362,7 +362,7 @@ module Base
 			destroy TunaTin=10,
 
 			Result:10xCannedTunaTinPack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xWaterBottlePack
@@ -385,12 +385,12 @@ module Base
 		Icon				= 20xWaterBottlePack,
 	}
 		
-		recipe Take Water Bottle from Pack
+		recipe Take Water from Pack
 		{
 			10xWaterBottlePack/20xWaterBottlePack,
 
 			Result:WaterBottleFull=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Package 10 Water Bottles
@@ -399,7 +399,7 @@ module Base
 
 			Result:10xWaterBottlePack,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:100.0,
+			Time:90.0,
 		}
 
 		recipe Package 20 Water Bottles
@@ -408,7 +408,7 @@ module Base
 
 			Result:20xWaterBottlePack,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:200.0,
+			Time:120.0,
 		}
 
 	item 10xPopBottlePack
@@ -431,12 +431,12 @@ module Base
 		Icon				= 20xPopBottlePack,
 	}
 		
-		recipe Take Pop Bottle from Pack
+		recipe Take Pop from Pack
 		{
 			10xPopBottlePack/20xPopBottlePack,
 
 			Result:PopBottle=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Package 10 Pop Bottles
@@ -445,7 +445,7 @@ module Base
 
 			Result:10xPopBottlePack,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:100.0,
+			Time:90.0,
 		}
 
 		recipe Package 20 Pop Bottles
@@ -454,7 +454,7 @@ module Base
 
 			Result:20xPopBottlePack,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:200.0,
+			Time:120.0,
 		}
 
 	item 10xCannedBellPepperPack
@@ -467,12 +467,12 @@ module Base
 		Icon				= 10xCannedBellPepperPack,
 	}
 
-		recipe Take a Jar from Pack
+		recipe Take Jar from Pack
 		{
 			10xCannedBellPepperPack,
 
 			Result:CannedBellPepper=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Jars
@@ -480,7 +480,7 @@ module Base
 			destroy CannedBellPepper=10,
 
 			Result:10xCannedBellPepperPack,
-			Time:200.0,
+			Time:90.0,
 		}
 		
 	item 10xCannedBroccoliPack
@@ -493,12 +493,12 @@ module Base
 		Icon				= 10xCannedBroccoliPack,
 	}
 
-		recipe Take a Jar from Pack
+		recipe Take Jar from Pack
 		{
 			10xCannedBroccoliPack,
 
 			Result:CannedBroccoli=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Jars
@@ -506,7 +506,7 @@ module Base
 			destroy CannedBroccoli=10,
 
 			Result:10xCannedBroccoliPack,
-			Time:200.0,
+			Time:90.0,
 		}
 
 	item 10xCannedCabbagePack
@@ -519,12 +519,12 @@ module Base
 		Icon				= 10xCannedCabbagePack,
 	}
 
-		recipe Take a Jar from Pack
+		recipe Take Jar from Pack
 		{
 			10xCannedCabbagePack,
 
 			Result:CannedCabbage=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Jars
@@ -532,7 +532,7 @@ module Base
 			destroy CannedCabbage=10,
 
 			Result:10xCannedCabbagePack,
-			Time:200.0,
+			Time:90.0,
 		}
 
 	item 10xCannedCarrotsPack
@@ -545,12 +545,12 @@ module Base
 		Icon				= 10xCannedCarrotsPack,
 	}
 
-		recipe Take a Jar from Pack
+		recipe Take Jar from Pack
 		{
 			10xCannedCarrotsPack,
 
 			Result:CannedCarrots=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Jars
@@ -558,7 +558,7 @@ module Base
 			destroy CannedCarrots=10,
 
 			Result:10xCannedCarrotsPack,
-			Time:200.0,
+			Time:90.0,
 		}
 
 	item 10xCannedEggplantPack
@@ -571,12 +571,12 @@ module Base
 		Icon				= 10xCannedEggplantPack,
 	}
 
-		recipe Take a Jar from Pack
+		recipe Take Jar from Pack
 		{
 			10xCannedEggplantPack,
 
 			Result:CannedEggplant=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Jars
@@ -584,7 +584,7 @@ module Base
 			destroy CannedEggplant=10,
 
 			Result:10xCannedEggplantPack,
-			Time:200.0,
+			Time:90.0,
 		}
 
 	item 10xCannedLeekPack
@@ -597,12 +597,12 @@ module Base
 		Icon				= 10xCannedLeekPack,
 	}
 
-		recipe Take a Jar from Pack
+		recipe Take Jar from Pack
 		{
 			10xCannedLeekPack,
 
 			Result:CannedLeek=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Jars
@@ -610,7 +610,7 @@ module Base
 			destroy CannedLeek=10,
 
 			Result:10xCannedLeekPack,
-			Time:200.0,
+			Time:90.0,
 		}
 
 	item 10xCannedRadishPack
@@ -623,12 +623,12 @@ module Base
 		Icon				= 10xCannedRadishPack,
 	}
 
-		recipe Take a Jar from Pack
+		recipe Take Jar from Pack
 		{
 			10xCannedRadishPack,
 
 			Result:CannedRedRadish=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Jars
@@ -636,7 +636,7 @@ module Base
 			destroy CannedRedRadish=10,
 
 			Result:10xCannedRadishPack,
-			Time:200.0,
+			Time:90.0,
 		}
 		
 	item 10xCannedTomatoPack2
@@ -649,12 +649,12 @@ module Base
 		Icon				= 10xCannedTomatoPack2,
 	}
 
-		recipe Take a Jar from Pack
+		recipe Take Jar from Pack
 		{
 			10xCannedTomatoPack2,
 
 			Result:CannedTomato=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Jars
@@ -662,7 +662,7 @@ module Base
 			destroy CannedTomato=10,
 
 			Result:10xCannedTomatoPack2,
-			Time:200.0,
+			Time:90.0,
 		}
 
 	item 10xCannedPotatoPack2
@@ -675,12 +675,12 @@ module Base
 		Icon				= 10xCannedPotatoPack2,
 	}
 
-		recipe Take a Jar from Pack
+		recipe Take Jar from Pack
 		{
 			10xCannedPotatoPack2,
 
 			Result:CannedPotato=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Jars
@@ -688,7 +688,7 @@ module Base
 			destroy CannedPotato=10,
 
 			Result:10xCannedPotatoPack2,
-			Time:200.0,
+			Time:90.0,
 		}
 
 	item 10xCannedPeachesPack
@@ -706,7 +706,7 @@ module Base
 			10xCannedPeachesPack,
 
 			Result:CannedPeaches=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Cans
@@ -714,7 +714,7 @@ module Base
 			destroy CannedPeaches=10,
 
 			Result:10xCannedPeachesPack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xCannedFruitCocktailPack
@@ -732,7 +732,7 @@ module Base
 			10xCannedFruitCocktailPack,
 
 			Result:CannedFruitCocktail=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Cans
@@ -740,7 +740,7 @@ module Base
 			destroy CannedFruitCocktail=10,
 
 			Result:10xCannedFruitCocktailPack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xCannedSoupPack
@@ -758,7 +758,7 @@ module Base
 			10xCannedSoupPack,
 
 			Result:TinnedSoup=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Cans
@@ -766,7 +766,7 @@ module Base
 			destroy TinnedSoup=10,
 
 			Result:10xCannedSoupPack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xCannedPineapplePack
@@ -784,7 +784,7 @@ module Base
 			10xCannedPineapplePack,
 
 			Result:CannedPineapple=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Cans
@@ -792,7 +792,7 @@ module Base
 			destroy CannedPineapple=10,
 
 			Result:10xCannedPineapplePack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xDietPopPack
@@ -810,7 +810,7 @@ module Base
 			10xDietPopPack,
 
 			Result:Pop=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Cans
@@ -818,7 +818,7 @@ module Base
 			destroy Pop=10,
 
 			Result:10xDietPopPack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xColaPopPack
@@ -836,7 +836,7 @@ module Base
 			10xColaPopPack,
 
 			Result:Pop2=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Cans
@@ -844,7 +844,7 @@ module Base
 			destroy Pop2=10,
 
 			Result:10xColaPopPack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xFizzPopPack
@@ -862,7 +862,7 @@ module Base
 			10xFizzPopPack,
 
 			Result:Pop3=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Cans
@@ -870,7 +870,7 @@ module Base
 			destroy Pop3=10,
 
 			Result:10xFizzPopPack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xMacandCheesePack
@@ -888,7 +888,7 @@ module Base
 			10xMacandCheesePack,
 
 			Result:Macandcheese=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Mac and Cheese
@@ -896,7 +896,7 @@ module Base
 			destroy Macandcheese=10,
 
 			Result:10xMacandCheesePack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xFruitJamPack
@@ -909,12 +909,12 @@ module Base
 		Icon				= 10xFruitJamPack,
 	}
 	
-		recipe Take One from Pack
+		recipe Take Fruit Jam from Pack
 		{
 			10xFruitJamPack,
 
 			Result:JamFruit=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Fruit Jam
@@ -922,7 +922,7 @@ module Base
 			destroy JamFruit=10,
 
 			Result:10xFruitJamPack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xPeanutButterPack
@@ -935,12 +935,12 @@ module Base
 		Icon				= 10xPeanutButterPack,
 	}
 	
-		recipe Take One from Pack
+		recipe Take Peanut Butter from Pack
 		{
 			10xPeanutButterPack,
 
 			Result:PeanutButter=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Pack up 10 Peanut Butter
@@ -948,7 +948,7 @@ module Base
 			destroy PeanutButter=10,
 
 			Result:10xPeanutButterPack,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xVinegarPack
@@ -961,22 +961,22 @@ module Base
 		Icon				= 10xVinegarPack,
 	}
 	
-		recipe Take One from Pack
+		recipe Take Vinegar from Pack
 		{
 			10xVinegarPack,
 
 			Result:Vinegar=1,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:50.0,
+			Time:30.0,
 		}
 
-		recipe Pack up 10 Vinegar
+		recipe Pack up 10 Vinegar Bottles
 		{
 			destroy Vinegar=10,
 
 			Result:10xVinegarPack,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:150.0,
+			Time:90.0,
 		}
 
 	item 10xSugarPack
@@ -989,22 +989,22 @@ module Base
 		Icon				= 10xSugarPack,
 	}
 	
-		recipe Take One from Pack
+		recipe Take One Sugar from Pack
 		{
 			10xSugarPack,
 
 			Result:Sugar=1,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:50.0,
+			Time:30.0,
 		}
 
-		recipe Pack up 10 Peanut Butter
+		recipe Pack up 10 Sugar Packs
 		{
 			destroy Sugar=10,
 
 			Result:10xSugarPack,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:150.0,
+			Time:90.0,
 		}
 
 }

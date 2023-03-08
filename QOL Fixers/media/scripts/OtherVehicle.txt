@@ -171,10 +171,36 @@ module Base
 		CanBeDoneFromFloor:true,
 	}
 
+	recipe Gain Broken Glass Shards (Other Windshield)
+	{
+		keep [Recipe.GetItemTypes.Hammer],
+		destroy Windshield8/RearWindshield8/M998Windshield2/DG70Windshield3/DG70WindshieldRear3/R32Windshield3/R32WindshieldRear3/McLarenF1Windshield3/McLarenF1RearWindshield3/M911Windshield2/M911WindshieldRear2/U1550LWindshield2/U1550LRearWindow2/E150Windshield2/E150RearWindshield2/82JeepJ10Windshield2/89BroncoWindshieldRear2/89BroncoWindshield2/ECTO1Windshield2/ECTO1RearWindshield2/82JeepJ10WindshieldRear2/P19AWindshield2/88ChevyS10Windshield2/88ChevyS10WindshieldRear2/M151A2Windshield2/97BushWindshield2/97BushWindshieldRear2/KZ1Kwindshield3,
+
+		Result:Brokenglass=4,
+		Time:50.0,
+		Sound:PZ_Hammer,
+		Category:Carpentry,
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:true,
+	}
+
 	recipe Gain Broken Glass Shards (Side Window)
 	{
 		keep [Recipe.GetItemTypes.Hammer],
 		destroy FrontWindow1/FrontWindow2/FrontWindow3/RearWindow1/RearWindow2/RearWindow3,
+
+		Result:Brokenglass=2,
+		Time:50.0,
+		Sound:PZ_Hammer,
+		Category:Carpentry,
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:true,	
+	}	
+
+	recipe Gain Broken Glass Shards (Other Side Window)
+	{
+		keep [Recipe.GetItemTypes.Hammer],
+		destroy FrontWindow8/RearWindow8/M998SideWindow2/DG70FrontSideWindow3/DG70RearSideWindow3/R32FrontSideWindow3/R32RearSideWindow3/McLarenF1SideWindow3/M911SideWindow2/U1550LWindow2/E150SideWindow2/82JeepJ10WindowSide2/89BroncoWindowSide2/89BroncoWindowSideRear2/ECTO1SideWindow2/P19ASideWindow2/88ChevyS10WindowSide2/M151A2SideWindow2/97BushFrontSideWindow2/97BushSideWindow2,
 
 		Result:Brokenglass=2,
 		Time:50.0,

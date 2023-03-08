@@ -761,7 +761,7 @@ module Base
 			10xDuctTapePack/20xDuctTapePack,
 
 			Result:DuctTape=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Package 10 Duct Tape
@@ -770,7 +770,7 @@ module Base
 
 			Result:10xDuctTapePack,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:100.0,
+			Time:60.0,
 		}
 
 		recipe Package 20 Duct Tape
@@ -779,7 +779,7 @@ module Base
 
 			Result:20xDuctTapePack,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:100.0,
+			Time:60.0,
 		}
 
 	item 10xBatteryPack
@@ -807,7 +807,7 @@ module Base
 			10xBatteryPack/20xBatteryPack,
 
 			Result:Battery=1,
-			Time:50.0,
+			Time:30.0,
 		}
 
 		recipe Package 10 Batteries
@@ -816,7 +816,7 @@ module Base
 
 			Result:10xBatteryPack,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:100.0,
+			Time:60.0,
 		}
 
 		recipe Package 20 Batteries
@@ -825,7 +825,399 @@ module Base
 
 			Result:20xBatteryPack,
 			OnTest:PackageRecipes.OnTestPacking,
-			Time:100.0,
+			Time:90.0,
+		}
+
+	item 50xScrapMetalBox
+	{
+        DisplayCategory  	= Material,
+		Weight				= 2.5,
+		Type				= Drainable,
+		UseDelta 			= 0.02,
+		DisplayName			= 50-Pack Scrap Metal,
+		Icon				= 50xScrapMetalBox,
+	}
+
+	item 100xScrapMetalBox
+	{
+        DisplayCategory  	= Material,
+		Weight				= 5.0,
+		Type				= Drainable,
+		UseDelta 			= 0.01,
+		DisplayName			= 100-Pack Scrap Metal,
+		Icon				= 100xScrapMetalBox,
+	}
+		
+		recipe Take ScrapMetal from Pack
+		{
+			50xScrapMetalBox/100xScrapMetalBox,
+
+			Result:ScrapMetal=1,
+			Time:30.0,
+		}
+
+		recipe Package 50 Scrap Metal
+		{
+			destroy ScrapMetal=50,
+
+			Result:50xScrapMetalBox,
+			Time:60.0,
+		}
+
+		recipe Package 100 Scrap Metal
+		{
+			destroy ScrapMetal=100,
+
+			Result:100xScrapMetalBox,
+			Time:90.0,
+		}
+
+	item 50xElectricWireBox
+	{
+        DisplayCategory  	= Electronics,
+		Weight				= 2.5,
+		Type				= Drainable,
+		UseDelta 			= 0.02,
+		DisplayName			= 50-Pack Electric Wire,
+		Icon				= 50xElectricWireBox,
+	}
+
+	item 100xElectricWireBox
+	{
+        DisplayCategory  	= Electronics,
+		Weight				= 5.0,
+		Type				= Drainable,
+		UseDelta 			= 0.01,
+		DisplayName			= 100-Pack Electric Wire,
+		Icon				= 100xElectricWireBox,
+	}
+		
+		recipe Take Electric Wire from Pack
+		{
+			50xElectricWireBox/100xElectricWireBox,
+
+			Result:Radio.ElectricWire=1,
+			Time:30.0,
+		}
+
+		recipe Package 50 Electric Wire
+		{
+			destroy Radio.ElectricWire=50,
+
+			Result:50xElectricWireBox,
+			Time:60.0,
+		}
+
+		recipe Package 100 Electric Wire
+		{
+			destroy Radio.ElectricWire=100,
+
+			Result:100xElectricWireBox,
+			Time:90.0,
+		}
+
+	item 50xAluminumBox
+	{
+        DisplayCategory  	= Material,
+		Weight				= 2.5,
+		Type				= Drainable,
+		UseDelta 			= 0.02,
+		DisplayName			= 50-Pack Aluminum,
+		Icon				= 50xAluminumBox,
+	}
+
+	item 100xAluminumBox
+	{
+        DisplayCategory  	= Material,
+		Weight				= 5.0,
+		Type				= Drainable,
+		UseDelta 			= 0.01,
+		DisplayName			= 100-Pack Aluminum,
+		Icon				= 100xAluminumBox,
+	}
+		
+		recipe Take Aluminum from Pack
+		{
+			50xAluminumBox/100xAluminumBox,
+
+			Result:Aluminum=1,
+			Time:30.0,
+		}
+
+		recipe Package 50 Aluminum
+		{
+			destroy Aluminum=50,
+
+			Result:50xAluminumBox,
+			Time:60.0,
+		}
+
+		recipe Package 100 Aluminum
+		{
+			destroy Aluminum=100,
+
+			Result:100xAluminumBox,
+			Time:90.0,
+		}
+
+	item 50xElectronicsScrapBox
+	{
+        DisplayCategory  	= Electronics,
+		Weight				= 2.5,
+		Type				= Drainable,
+		UseDelta 			= 0.02,
+		DisplayName			= 50-Pack Electronics Scrap,
+		Icon				= 50xElectronicsScrapBox,
+	}
+
+	item 100xElectronicsScrapBox
+	{
+        DisplayCategory  	= Electronics,
+		Weight				= 5.0,
+		Type				= Drainable,
+		UseDelta 			= 0.01,
+		DisplayName			= 100-Pack Electronics Scrap,
+		Icon				= 100xElectronicsScrapBox,
+	}
+		
+		recipe Take Electronics Scrap from Pack
+		{
+			50xElectronicsScrapBox/100xElectronicsScrapBox,
+
+			Result:ElectronicsScrap=1,
+			Time:30.0,
+		}
+
+		recipe Package 50 Electronics Scrap
+		{
+			destroy ElectronicsScrap=50,
+
+			Result:50xElectronicsScrapBox,
+			Time:60.0,
+		}
+
+		recipe Package 100 Electronics Scrap
+		{
+			destroy ElectronicsScrap=100,
+
+			Result:100xElectronicsScrapBox,
+			Time:90.0,
+		}
+
+	item 10xNailsBox
+	{
+        DisplayCategory  	= Material,
+		Weight				= 1.5,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack of Nails,
+		Icon				= 10xNailsBox,
+	}
+
+	item 20xNailsBox
+	{
+        DisplayCategory  	= Material,
+		Weight				= 2.0,
+		Type				= Drainable,
+		UseDelta 			= 0.05,
+		DisplayName			= 20-Pack of Nails,
+		Icon				= 20xNailsBox,
+	}
+
+	item 50xNailsBox
+	{
+        DisplayCategory  	= Material,
+		Weight				= 3.0,
+		Type				= Drainable,
+		UseDelta 			= 0.02,
+		DisplayName			= 50-Pack of Nails,
+		Icon				= 50xNailsBox,
+	}
+
+		recipe Take Box of Nails from Pack
+		{
+			10xNailsBox/20xNailsBox/50xNailsBox,
+
+			Result:NailsBox=1,
+			Time:30.0,
+		}
+
+		recipe Package 10 Boxes of Nails
+		{
+			destroy NailsBox=10,
+
+			Result:10xNailsBox,
+			Time:60.0,
+		}
+
+		recipe Package 20 Boxes of Nails
+		{
+			destroy NailsBox=20,
+
+			Result:20xNailsBox,
+			Time:90.0,
+		}
+
+		recipe Package 50 Boxes of Nails
+		{
+			destroy NailsBox=50,
+
+			Result:50xNailsBox,
+			Time:120.0,
+		}
+
+	item 10xScrewsBox
+	{
+        DisplayCategory  	= Material,
+		Weight				= 1.5,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack of Screws,
+		Icon				= 10xScrewsBox,
+	}
+
+	item 20xScrewsBox
+	{
+        DisplayCategory  	= Material,
+		Weight				= 2.0,
+		Type				= Drainable,
+		UseDelta 			= 0.05,
+		DisplayName			= 20-Pack of Screws,
+		Icon				= 20xScrewsBox,
+	}
+
+	item 50xScrewsBox
+	{
+        DisplayCategory  	= Material,
+		Weight				= 3.0,
+		Type				= Drainable,
+		UseDelta 			= 0.02,
+		DisplayName			= 50-Pack of Screws,
+		Icon				= 50xScrewsBox,
+	}
+
+		recipe Take Box of Screws from Pack
+		{
+			10xScrewsBox/20xScrewsBox/50xScrewsBox,
+
+			Result:ScrewsBox=1,
+			Time:30.0,
+		}
+
+		recipe Package 10 Boxes of Screws
+		{
+			destroy ScrewsBox=10,
+
+			Result:10xScrewsBox,
+			Time:60.0,
+		}
+
+		recipe Package 20 Boxes of Screws
+		{
+			destroy ScrewsBox=20,
+
+			Result:20xScrewsBox,
+			Time:90.0,
+		}
+
+		recipe Package 50 Boxes of Screws
+		{
+			destroy ScrewsBox=50,
+
+			Result:50xScrewsBox,
+			Time:120.0,
+		}
+
+	item 12xSupergluePack
+	{
+        DisplayCategory  	= Material,
+		Weight				= 0.5,
+		Type				= Drainable,
+		UseDelta 			= 0.0833,
+		DisplayName			= 12-Pack of Superglue,
+		Icon				= 12xSupergluePack,
+	}
+
+		recipe Take Superglue from Pack
+		{
+			12xSupergluePack,
+
+			Result:Superglue=1,
+			Time:30.0,
+		}
+
+		recipe Package up 12 Superglue
+		{
+			destroy Superglue=12,
+
+			Result:12xSupergluePack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:90.0,
+		}
+
+	item 10xMatchesPack
+	{
+        DisplayCategory  	= Material,
+		Weight				= 0.5,
+		Type				= Drainable,
+		UseDelta 			= 0.1,
+		DisplayName			= 10-Pack of Matches,
+		Icon				= 10xMatchesPack,
+	}
+
+	item 20xMatchesPack
+	{
+        DisplayCategory  	= Material,
+		Weight				= 1.0,
+		Type				= Drainable,
+		UseDelta 			= 0.053,
+		DisplayName			= 20-Pack of Matches,
+		Icon				= 20xMatchesPack,
+	}
+
+	item 50xMatchesPack
+	{
+        DisplayCategory  	= Material,
+		Weight				= 1.5,
+		Type				= Drainable,
+		UseDelta 			= 0.02,
+		DisplayName			= 50-Pack of Matches,
+		Icon				= 50xMatchesPack,
+	}
+
+		recipe Take Matches from Pack
+		{
+			10xMatchesPack/20xMatchesPack/50xMatchesPack,
+
+			Result:Matches=1,
+			Time:30.0,
+		}
+
+		recipe Package up 10 Matches
+		{
+			destroy Matches=10,
+
+			Result:10xMatchesPack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:50.0,
+		}
+
+		recipe Package up 20 Matches
+		{
+			destroy Matches=20,
+
+			Result:20xMatchesPack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:60.0,
+		}
+
+		recipe Package up 50 Matches
+		{
+			destroy Matches=50,
+
+			Result:50xMatchesPack,
+			OnTest:PackageRecipes.OnTestPacking,
+			Time:90.0,
 		}
 
 }

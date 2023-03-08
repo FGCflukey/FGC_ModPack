@@ -1,5 +1,34 @@
 module Base
 {
+	model TrailerM747lowbedfrontwheelleft
+	{
+		mesh = vehicles/Vehicles_82oshkoshM911_Wheels|m747_trailer_smallwheel_fake_backINV,
+		texture = vehicles/Vehicles_82oshkoshM911_Interior_Wheel,
+		shader = vehiclewheel,
+		scale = 0.1,
+	}
+	model TrailerM747lowbedfrontwheelright
+	{
+		mesh = vehicles/Vehicles_82oshkoshM911_Wheels|m747_trailer_smallwheel_fake_back,
+		texture = vehicles/Vehicles_82oshkoshM911_Interior_Wheel,
+		shader = vehiclewheel,
+		scale = 0.1,
+	}
+	model TrailerM747lowbedrearwheelleft
+	{
+		mesh = vehicles/Vehicles_82oshkoshM911_Wheels|m747_trailer_smallwheel_fake_backINV,
+		texture = vehicles/Vehicles_82oshkoshM911_Interior_Wheel,
+		shader = vehiclewheel,
+		scale = 0.1,
+	}
+	model TrailerM747lowbedrearwheelright
+	{
+		mesh = vehicles/Vehicles_82oshkoshM911_Wheels|m747_trailer_smallwheel_fake_back,
+		texture = vehicles/Vehicles_82oshkoshM911_Interior_Wheel,
+		shader = vehiclewheel,
+		scale = 0.1,
+	}
+
 	template vehicle AxleV100A4
 	{
 
