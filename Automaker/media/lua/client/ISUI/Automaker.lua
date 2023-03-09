@@ -42,7 +42,7 @@ function UG_Automaker.VehicleBlackList( VehicleID)
 		return true
 	elseif VehicleID == "TrailerAMCWaverunner" then
 		return true
-	elseif VehicleID == "AMC_Waverunner" then
+	elseif VehicleID == "AMC_Waverunner_Ground" then
 		return true
 	elseif VehicleID == "TrailerAMCWaverunnerWithBody" then
 		return true
