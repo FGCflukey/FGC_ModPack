@@ -3,8 +3,9 @@ UGPropaneTruckMenu = {}
 UGSnakesPropane = {}
 UGWorkshopPropane = {}
 
+local CustomFuelObject = require("FuelAPI/CustomFuelObject")
+
 function FindNearbyGasPump( target)
-	
 	
 	local square = getCell():getGridSquare( target:getX(), target:getY(), target:getZ())
 	
@@ -31,8 +32,13 @@ UGTakePropaneMenu.OnContextMenu = function( player, context, worldobjects)
 	if ((SandboxVars.AllowExteriorGenerator and playerObj:getSquare():haveElectricity()) or (SandboxVars.ElecShutModifier > -1 and GameTime:getInstance():getNightsSurvived() < SandboxVars.ElecShutModifier)) then
 
 		for _,v in ipairs(worldobjects) do
-		
-			if v:getPipedFuelAmount() > 0 and v:getName() ~= "FuelBarrel" then 
+
+			if CustomFuelObject ~= nil then
+
+				if CustomFuelObject:new( v) then return end
+			end
+
+			if v:getPipedFuelAmount() > 0 and v:getName() ~= "FuelBarrel" then
 
 				local pump = v
 				local dist = pump:getSquare():DistToProper(playerObj)
@@ -50,10 +56,7 @@ UGTakePropaneMenu.OnContextMenu = function( player, context, worldobjects)
 					if item:getUsedDelta() < 1 then
 						
 						tank = item
-						break;
-					else
-					
-						--context:addOptionOnTop( getText( "ContextMenu_EmptyTorch"), item, UGTakePropaneMenu.EmptyTank)
+						break
 					end
 				end	
 				
