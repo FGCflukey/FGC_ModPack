@@ -59,7 +59,7 @@ BookLearning.gainXP = function(self)
 
 	--Fix rounding error for XP on last page
 	if readPercent == 100 then
-		xpGained = xpGained + 0.1;
+		xpGained = xpGained + 0.3;
 	end
 	
 	if xpGained > 0 then
