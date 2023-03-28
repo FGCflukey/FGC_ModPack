@@ -1,4 +1,4 @@
 name=Street Sweeper
-id=FGCSSweeper
+id=FGCSSweeperDEV
 description=Removes items dropped on the ground after a set ammount of hours.
 poster=poster.png

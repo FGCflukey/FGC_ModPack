@@ -2,36 +2,24 @@ VERSION = 1,
 
 option UG_StreetSweeper.CheckSize
 {
-	type = double,
-	default = 20,
-	min = 5,
-	max = 40,
-	page = Street Sweeper,
-	translation = StreetSweeper_CheckSize,
+	type = integer,	default = 20, min = 5, max = 40,
+	page = Street Sweeper, translation = StreetSweeper_CheckSize,
 }
 
 option UG_StreetSweeper.CleanTime
 {
-	type = double,
-	default = 48,
-	min = 1,
-	max = 720,
-	page = Street Sweeper,
-	translation = StreetSweeper_CleanTime,
+	type = double, default = 48, min = 1, max = 720,
+	page = Street Sweeper, translation = StreetSweeper_CleanTime,
 }
 
 option UG_StreetSweeper.CleanCatagories
 {
-	type = string,
-	default = ,
-	page = Street Sweeper,
-	translation = StreetSweeper_CleanCatagories,
+	type = string, default = ,
+	page = Street Sweeper, translation = StreetSweeper_CleanCatagories,
 }
 
 option UG_StreetSweeper.CleanTypes
 {
-	type = string,
-	default = ,
-	page = Street Sweeper,
-	translation = StreetSweeper_CleanTypes,
+	type = string, default = ,
+	page = Street Sweeper, translation = StreetSweeper_CleanTypes,
 }

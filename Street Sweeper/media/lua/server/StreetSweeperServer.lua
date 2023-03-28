@@ -8,7 +8,9 @@ local function cleanItemCatagory( item)
 	--quick sanity check for the sandbox variable
 	if item == nil or SandboxVars.UG_StreetSweeper.CleanCatagories == nil or SandboxVars.UG_StreetSweeper.CleanCatagories == "" then return false end
 
-	if string.match( SandboxVars.UG_StreetSweeper.CleanCatagories, item:getDisplayCategory()) then
+	print( "Catagory target / pattern: " .. SandboxVars.UG_StreetSweeper.CleanCatagories .. " / " .. item:getDisplayCategory())
+	if string.find( SandboxVars.UG_StreetSweeper.CleanCatagories, item:getDisplayCategory()) then
+--	if string.find( "This is the string to check", "check") then
 		return true
 	else
 		return false
@@ -19,20 +21,20 @@ local function cleanItemType( item)
 
 	--quick sanity check for the sandbox variable
 	if item == nil or SandboxVars.UG_StreetSweeper.CleanTypes == nil or SandboxVars.UG_StreetSweeper.CleanTypes == "" then return false end
-
-	if string.match( SandboxVars.UG_StreetSweeper.CleanTypes, item:getType()) then
+	
+	print( "Type target / pattern: " .. SandboxVars.UG_StreetSweeper.CleanCatagories .. " / " .. item:getType())
+	if string.find( SandboxVars.UG_StreetSweeper.CleanTypes, item:getType()) then
 		return true
 	else
 		return false
 	end
 end
 
-
 Commands.StreetSweeper.Cleanup = function( player , args)
 
 	if isClient() then return end
 	
-	--print("Keyword: Cleanup script called")
+	print("Keyword: Cleanup script called")
 	local checksize = SandboxVars.UG_StreetSweeper.CheckSize
 	local playerssquare = player:getSquare()
 	local cell = player:getCell()
@@ -58,21 +60,21 @@ Commands.StreetSweeper.Cleanup = function( player , args)
 							local worldage = GameTime.instance:getWorldAgeHours()
 							local gitem = wobj:getItem()
 							
-							--print("item category/type is: " .. tostring( gitem:getDisplayCategory()) .. "/" .. tostring( gitem:getType()))
+							print("item category/type is: " .. tostring( gitem:getDisplayCategory()) .. "/" .. tostring( gitem:getType()))
 							
 							if gitem and (cleanItemCatagory( gitem) or cleanItemType( gitem)) then
 						
 								if gitem:getModData().dropTime == nil then
 								
-									--print("adding dropTime to object: " .. worldage)
+									print("adding dropTime to object: " .. worldage)
 									gitem:getModData().dropTime = worldage
 									--gitem:transmitModData()  --does not need to be transmitted, this is only required on the server side
 								end
 								
 								local itemage = worldage - gitem:getModData().dropTime
 								
-								--print("itemage: " .. itemage)
-								--print("cleanupage: " .. SandboxVars.UG_StreetSweeper.CleanTime)
+								print("itemage: " .. itemage)
+								print("cleanupage: " .. SandboxVars.UG_StreetSweeper.CleanTime)
 
 								if itemage >= SandboxVars.UG_StreetSweeper.CleanTime then
 								
@@ -85,7 +87,7 @@ Commands.StreetSweeper.Cleanup = function( player , args)
 
 					for _,v in ipairs( removelist) do
 					
-						--print("removing overaged item from the world")
+						print("removing overaged item from the world")
 						dsquare:transmitRemoveItemFromSquare( v);
 						v:removeFromWorld()
 						v:removeFromSquare()
