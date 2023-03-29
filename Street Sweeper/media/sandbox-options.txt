@@ -1,14 +1,13 @@
 VERSION = 1,
-
 option UG_StreetSweeper.CheckSize
 {
-	type = integer,	default = 20, min = 5, max = 40,
+	type = integer,	min = 5, max = 40, default = 20, 
 	page = Street Sweeper, translation = StreetSweeper_CheckSize,
 }
 
 option UG_StreetSweeper.CleanTime
 {
-	type = double, default = 48, min = 1, max = 720,
+	type = double, min = 1, max = 720, default = 48, 
 	page = Street Sweeper, translation = StreetSweeper_CleanTime,
 }
 
