@@ -134,7 +134,7 @@ function AutoTab:onBuildClick()
 		sendClientCommand( player, "Automaker", "CreateVehicle", { VehicleID = vehicleid, MechanicType = mechanictype})
 	else
 	
-		player:Say( "I can't make that vehicle! mt is: " .. tostring( mechanictype))
+		player:Say( "I can't make that vehicle!")
 	end
 	
 	self.parent:close()

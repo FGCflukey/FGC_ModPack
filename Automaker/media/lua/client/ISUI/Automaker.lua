@@ -42,8 +42,6 @@ function UG_Automaker.VehicleBlackList( VehicleID)
 		return true
 	elseif VehicleID == "TrailerAMCWaverunner" then
 		return true
-	elseif VehicleID == "AMC_Waverunner_Ground" then
-		return true
 	elseif VehicleID == "AMC_Waverunner" then
 		return true
 	elseif VehicleID == "TrailerAMCWaverunnerWithBody" then
@@ -405,7 +403,7 @@ function UG_Automaker.getSkillReq( player, mechanictype)
 end
 
 function UG_Automaker.canBuild( player, mechanictype)
-	
+
 	local materialReqs = UG_Automaker.getMaterialReq( mechanictype)
 	local groundItems = buildUtil.getMaterialOnGround( player:getSquare())
 	local groundItemCounts = buildUtil.getMaterialOnGroundCounts( groundItems)	
@@ -413,22 +411,21 @@ function UG_Automaker.canBuild( player, mechanictype)
 	
 	--do they have the materials?
 	for k,v in pairs( materialReqs) do
-	
-		if luautils.stringStarts( k, "need:") then
 		
-			local itemFullType = luautils.split( k, ":")[ 2]
-			local nbOfItem = playerInv:getCountTypeEvalRecurse( itemFullType, buildUtil.predicateMaterial)
-			
-			if groundItemCounts[ itemFullType] then
-				nbOfItem = nbOfItem + groundItemCounts[ itemFullType];
-			end
-			if nbOfItem < tonumber( v) then
-				--player:Say("Not enough mats")
-				return false
-			end			
+		local nbOfItem = playerInv:getCountTypeEvalRecurse( k, buildUtil.predicateMaterial)
+		
+		if groundItemCounts[ k] then
+			nbOfItem = nbOfItem + groundItemCounts[ k]
 		end
+		
+		if nbOfItem < tonumber( v) then
+			--player:Say( "Not enough mats: " .. tostring( k))
+			return false
+		else
+			--player:Say( "Enough Mats: " .. tostring( k))
+		end		
 	end
-	
+
 	--do they have the skill?	
 	local mechanicReq, metalworkReq, electricalReq = UG_Automaker.getSkillReq( player, mechanictype)
 
@@ -459,25 +456,10 @@ function UG_Automaker.canBuild( player, mechanictype)
 		return false
 	end
 	
-	--should be all good now
 	return true
+
 end
 
--- function UG_Automaker.initTooltip( context, vehicle, mechanictype, player)
-
-	-- local toolTip = ISToolTip:new()
-	-- toolTip:initialise()
-	-- toolTip:setVisible(false)
-
-	-- -- add it to our current option
-	-- context.toolTip = toolTip
-	-- toolTip:setName( "Build a new car")
-	-- toolTip.description = tostring(vehicle:getName()) .. "<LINE>Automaker:" .. "<LINE>Let's build a car!<LINE>"
-	
-	-- UG_Automaker.buildSkillList( context, toolTip, mechanictype, player)
-	-- UG_Automaker.buildMaterialList( context, toolTip, mechanictype, player)
-	
--- end
 
  function UG_Automaker.FillWorldContextMenu( player, context, worldobjects, test)
 
