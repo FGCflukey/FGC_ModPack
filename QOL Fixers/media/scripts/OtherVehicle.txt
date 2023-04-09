@@ -1040,4 +1040,38 @@ module Base
 		
 	}
 
+	recipe Make Chain Protection for Car
+	{
+		keep [Recipe.GetItemTypes.Hammer],
+		keep [Recipe.GetItemTypes.Screwdriver],
+		keep [Recipe.GetItemTypes.WeldingMask],
+		WeldingRods=4,
+		MetalBar=4,
+		SmallSheetMetal=2,
+		MetalPipe=2,
+		BlowTorch=5,
+		
+		Result:ATAProtectionWheelsChain,
+		Time:600.0,
+		Category:Mechanics,
+		SkillRequired:MetalWelding=4,		
+		
+	}
+
+	recipe Make Roof Lights for Car
+	{
+		keep [Recipe.GetItemTypes.Hammer],
+		keep [Recipe.GetItemTypes.Screwdriver],
+		MetalBar=2,
+		ScrapMetal=4,
+		Radio.ElectricWire=4,
+		Screws=8,
+		
+		Result:ATARoofLightItem,
+		Time:300.0,
+		Category:Mechanics,
+		SkillRequired:MetalWelding=4;Electricity=2,		
+		
+	}
+
 }
