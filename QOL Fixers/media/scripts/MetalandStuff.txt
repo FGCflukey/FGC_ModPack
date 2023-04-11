@@ -172,7 +172,7 @@ module Base
 
 	recipe Recycle Other Hood
 	{
-		destroy U1550LHood2/M151A2EngineDoor2/M998EngineDoor2/E150EngineDoor2/P19AEngineDoor2/89BroncoEngineDoor2/R32EngineDoor0/82JeepJ10EngineDoor2/DG70TAEngineDoor0/DG70TAEngineDoor1/88ChevyS10EngineDoor2/ECTO1EngineDoor2/V100EngineDoor2/DG70PDEngineDoor/DG70RTEngineDoor/M911EngineDoor2/M35A2EngineDoor2/97BushEngineDoor2,
+		destroy U1550LHood2/M151A2EngineDoor2/M998EngineDoor2/E150EngineDoor2/P19AEngineDoor2/89BroncoEngineDoor2/R32EngineDoor0/82JeepJ10EngineDoor2/DG70TAEngineDoor0/DG70TAEngineDoor1/88ChevyS10EngineDoor2/ECTO1EngineDoor2/V100EngineDoor2/DG70PDEngineDoor/DG70RTEngineDoor/M911EngineDoor2/M35A2EngineDoor2/97BushEngineDoor2/93townCarEngineDoor1/93townCarTrunkDoor1,
 		BlowTorch=5,
 		keep WeldingMask,
 		
@@ -289,7 +289,7 @@ module Base
 
 	recipe Recycle Door
 	{
-		destroy FrontCarDoor1/FrontCarDoor2/FrontCarDoor3/RearCarDoor1/RearCarDoor2/RearCarDoor3/RearCarDoorDouble1/RearCarDoorDouble2/RearCarDoorDouble3/FrontCarDoor8/RearCarDoor8/RearCarDoorDouble8/U1550LDoor2,
+		destroy FrontCarDoor1/FrontCarDoor2/FrontCarDoor3/RearCarDoor1/RearCarDoor2/RearCarDoor3/RearCarDoorDouble1/RearCarDoorDouble2/RearCarDoorDouble3/FrontCarDoor8/RearCarDoor8/RearCarDoorDouble8/U1550LDoor2/93townCarFrontDoor1/93townCarRearDoor1,
 		BlowTorch=5,
 		keep WeldingMask,
 		
@@ -303,7 +303,7 @@ module Base
 
 	recipe Recycle Door Armor
 	{
-		destroy M998CarFrontDoorArmor1_Item/M998CarRearDoorArmor1_Item/DG70DoorArmor/R32DoorArmor/E150DoorArmor/P19ACarFrontDoorArmor1_Item,
+		destroy M998CarFrontDoorArmor1_Item/M998CarRearDoorArmor1_Item/DG70DoorArmor/R32DoorArmor/E150DoorArmor/P19ACarFrontDoorArmor1_Item/93townCarFrontDoorArmor/93townCarRearDoorArmor,
 		BlowTorch=5,
 		keep WeldingMask,
 		
@@ -330,7 +330,7 @@ module Base
 	
 	recipe Recycle Car Seat
 	{
-		destroy NormalCarSeat1/BigCarSeat1/SportCarSeat1/NormalCarSeat2/BigCarSeat2/SportCarSeat2/NormalCarSeat3/BigCarSeat3/SportCarSeat3/NormalCarSeat8/BigCarSeat8/SportCarSeat8/M998CarSeat2/DodgeFrontSeat3/DodgeRearSeat3/R32FrontSeat3/R32RearSeat3/Seat0/U1550LSeat2/E150CarSeat2/80sPickupSeatFront2/80sPickupSeatRear2/ECTO1CarSeatfl2/ECTO1CarSeatfr2/ECTO1CarSeatrl2/ECTO1CarSeatrr2/M151A2CarSeatFront2/M151A2CarSeatRear2/KZ1Kseat,
+		destroy NormalCarSeat1/BigCarSeat1/SportCarSeat1/NormalCarSeat2/BigCarSeat2/SportCarSeat2/NormalCarSeat3/BigCarSeat3/SportCarSeat3/NormalCarSeat8/BigCarSeat8/SportCarSeat8/M998CarSeat2/DodgeFrontSeat3/DodgeRearSeat3/R32FrontSeat3/R32RearSeat3/Seat0/U1550LSeat2/E150CarSeat2/80sPickupSeatFront2/80sPickupSeatRear2/ECTO1CarSeatfl2/ECTO1CarSeatfr2/ECTO1CarSeatrl2/ECTO1CarSeatrr2/M151A2CarSeatFront2/M151A2CarSeatRear2/KZ1Kseat/93townCarSeatFront1/93townCarSeatRear1,
 		keep Wrench,
 		keep Screwdriver,
 
@@ -341,7 +341,7 @@ module Base
 
 	recipe Recycle Bullbars
 	{
-		destroy DG70FrontBumper0/DG70RearBumper0/DG70FrontBumperA/DG70FrontBumperB/DG70FrontBumperC/DG70RearBumperA/DG70RearBumperB/DG70RearBumperC/R32BumperA/R32BumperRearA/R32SideskirtsA/McLarenF1Bull3/U1550LBull2/89BroncoBumperFront/89BroncoBumperRear/89BroncoBullbarFront/80sPickupBullbarFront/80sPickupBullbarRear/82JeepJ10BumperFront/82JeepJ10BullbarFront/82JeepJ10BumperRear/P19AFenderLeft1_Item/P19AFenderLeft2_Item/P19AFenderRight1_Item/P19AFenderRight2_Item/P19AFenderRight3_Item/88ChevyS10BumperFront/88ChevyS10BullbarFront/88ChevyS10BumperRear/97BushBullbarSAS/M998Bullbar1_Item/M998Bullbar2_Item,
+		destroy DG70FrontBumper0/DG70RearBumper0/DG70FrontBumperA/DG70FrontBumperB/DG70FrontBumperC/DG70RearBumperA/DG70RearBumperB/DG70RearBumperC/R32BumperA/R32BumperRearA/R32SideskirtsA/McLarenF1Bull3/U1550LBull2/89BroncoBumperFront/89BroncoBumperRear/89BroncoBullbarFront/80sPickupBullbarFront/80sPickupBullbarRear/82JeepJ10BumperFront/82JeepJ10BullbarFront/82JeepJ10BumperRear/P19AFenderLeft1_Item/P19AFenderLeft2_Item/P19AFenderRight1_Item/P19AFenderRight2_Item/P19AFenderRight3_Item/88ChevyS10BumperFront/88ChevyS10BullbarFront/88ChevyS10BumperRear/97BushBullbarSAS/M998Bullbar1_Item/M998Bullbar2_Item/93townCarBumperFront0/93townCarBumperFront1/93townCarBullbarFrontA/93townCarBullbarFrontB/93townCarBullbarFrontC/93townCarBumperRear0,
 		BlowTorch=5,
 		keep WeldingMask,
 		
@@ -354,7 +354,7 @@ module Base
 
 	recipe Recycle Windshield Armor
 	{
-		destroy M998WindshieldArmor1_Item/M998WindshieldArmor2_Item/DG70WindshieldArmor/DG70WindshieldRearArmor/R32WindshieldRearArmor/R32WindshieldArmor/E150WindshieldArmor/E150WindshieldRearArmor/80sPickupWindshieldArmor/P19AWindshieldArmor1_Item/M151A2WindshieldArmor1_Item,
+		destroy M998WindshieldArmor1_Item/M998WindshieldArmor2_Item/DG70WindshieldArmor/DG70WindshieldRearArmor/R32WindshieldRearArmor/R32WindshieldArmor/E150WindshieldArmor/E150WindshieldRearArmor/80sPickupWindshieldArmor/P19AWindshieldArmor1_Item/M151A2WindshieldArmor1_Item/93townCarWindshieldArmorA/93townCarWindshieldArmorB/93townCarWindshieldRearArmor/93townCarWindshieldRearArmor,
 		BlowTorch=5,
 		keep WeldingMask,
 		
