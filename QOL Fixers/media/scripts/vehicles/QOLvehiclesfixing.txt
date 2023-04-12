@@ -127,7 +127,7 @@ module Base
 
 	fixing Fix Window
 	{
-		Require : FrontWindow1;RearWindow1;FrontWindow2;RearWindow2;FrontWindow3;RearWindow3;FrontWindow8;RearWindow8;M998SideWindow2;DG70FrontSideWindow3;DG70RearSideWindow3;R32FrontSideWindow3;R32RearSideWindow3;McLarenF1SideWindow3;M911SideWindow2;U1550LWindow2;E150SideWindow2;82JeepJ10WindowSide2;89BroncoWindowSide2;89BroncoWindowSideRear2;ECTO1SideWindow2;P19ASideWindow2;88ChevyS10WindowSide2;M151A2SideWindow2;97BushFrontSideWindow2;97BushSideWindow2;93townCarFrontSideWindow1;93townCarMiddleSideWindow1;93townCarRearSideWindow1;93townCarSunRoof1,
+		Require : FrontWindow1;RearWindow1;FrontWindow2;RearWindow2;FrontWindow3;RearWindow3;FrontWindow8;RearWindow8;M998SideWindow2;DG70FrontSideWindow3;DG70RearSideWindow3;R32FrontSideWindow3;R32RearSideWindow3;McLarenF1SideWindow3;M911SideWindow2;U1550LWindow2;E150SideWindow2;82JeepJ10WindowSide2;89BroncoWindowSide2;89BroncoWindowSideRear2;ECTO1SideWindow2;P19ASideWindow2;88ChevyS10WindowSide2;M151A2SideWindow2;97BushFrontSideWindow2;97BushSideWindow2;93townCarFrontSideWindow1;93townCarMiddleSideWindow1;93townCarRearSideWindow1;93townCarSunRoof1;90pierceArrowSideWindow2,
 		ConditionModifier : 1.2,
 
 		Fixer : Superglue=1;Mechanics=2,
@@ -136,7 +136,7 @@ module Base
 
 	fixing Fix Windshield
 	{
-		Require : Windshield1;RearWindshield1;Windshield2;RearWindshield2;Windshield3;RearWindshield3;Windshield8;RearWindshield8;M998Windshield2;DG70Windshield3;DG70WindshieldRear3;R32Windshield3;R32WindshieldRear3;McLarenF1Windshield3;McLarenF1RearWindshield3;M911Windshield2;M911WindshieldRear2;U1550LWindshield2;U1550LRearWindow2;E150Windshield2;E150RearWindshield2;82JeepJ10Windshield2;89BroncoWindshieldRear2;89BroncoWindshield2;ECTO1Windshield2;ECTO1RearWindshield2;82JeepJ10WindshieldRear2;P19AWindshield2;88ChevyS10Windshield2;88ChevyS10WindshieldRear2;M151A2Windshield2;97BushWindshield2;97BushWindshieldRear2;KZ1Kwindshield3;93townCarWindshield1;93townCarRearWindshield1,
+		Require : Windshield1;RearWindshield1;Windshield2;RearWindshield2;Windshield3;RearWindshield3;Windshield8;RearWindshield8;M998Windshield2;DG70Windshield3;DG70WindshieldRear3;R32Windshield3;R32WindshieldRear3;McLarenF1Windshield3;McLarenF1RearWindshield3;M911Windshield2;M911WindshieldRear2;U1550LWindshield2;U1550LRearWindow2;E150Windshield2;E150RearWindshield2;82JeepJ10Windshield2;89BroncoWindshieldRear2;89BroncoWindshield2;ECTO1Windshield2;ECTO1RearWindshield2;82JeepJ10WindshieldRear2;P19AWindshield2;88ChevyS10Windshield2;88ChevyS10WindshieldRear2;M151A2Windshield2;97BushWindshield2;97BushWindshieldRear2;KZ1Kwindshield3;93townCarWindshield1;93townCarRearWindshield1;90pierceArrowWindshield2;90pierceArrowRearWindshield2,
 		ConditionModifier : 1.2,
 
 		Fixer : Superglue=2;Mechanics=2,
@@ -163,7 +163,7 @@ module Base
 
 	fixing Fix Car Seat
 	{
-		Require : NormalCarSeat1;BigCarSeat1;SportCarSeat1;NormalCarSeat2;BigCarSeat2;SportCarSeat2;NormalCarSeat3;BigCarSeat3;SportCarSeat3;NormalCarSeat8;BigCarSeat8;SportCarSeat8;M998CarSeat2;DodgeFrontSeat3;DodgeRearSeat3;R32FrontSeat3;R32RearSeat3;Seat0;U1550LSeat2;E150CarSeat2;80sPickupSeatFront2;80sPickupSeatRear2;ECTO1CarSeatfl2;ECTO1CarSeatfr2;ECTO1CarSeatrl2;ECTO1CarSeatrr2;M151A2CarSeatFront2;M151A2CarSeatRear2;97BushmasterSeat;97BushmasterGunnerSeat;KZ1Kseat;93townCarSeatFront1;93townCarSeatRear1,
+		Require : NormalCarSeat1;BigCarSeat1;SportCarSeat1;NormalCarSeat2;BigCarSeat2;SportCarSeat2;NormalCarSeat3;BigCarSeat3;SportCarSeat3;NormalCarSeat8;BigCarSeat8;SportCarSeat8;M998CarSeat2;DodgeFrontSeat3;DodgeRearSeat3;R32FrontSeat3;R32RearSeat3;Seat0;U1550LSeat2;E150CarSeat2;80sPickupSeatFront2;80sPickupSeatRear2;ECTO1CarSeatfl2;ECTO1CarSeatfr2;ECTO1CarSeatrl2;ECTO1CarSeatrr2;M151A2CarSeatFront2;M151A2CarSeatRear2;97BushmasterSeat;97BushmasterGunnerSeat;KZ1Kseat;93townCarSeatFront1;93townCarSeatRear1;90pierceArrowSeat2,
 		ConditionModifier : 1.2,
 
 		 
@@ -173,7 +173,7 @@ module Base
 
 	fixing Fix Car Seat Other
 	{
-		Require : NormalCarSeat1;BigCarSeat1;SportCarSeat1;NormalCarSeat2;BigCarSeat2;SportCarSeat2;NormalCarSeat3;BigCarSeat3;SportCarSeat3;NormalCarSeat8;BigCarSeat8;SportCarSeat8;M998CarSeat2;DodgeFrontSeat3;DodgeRearSeat3;R32FrontSeat3;R32RearSeat3;Seat0;U1550LSeat2;E150CarSeat2;80sPickupSeatFront2;80sPickupSeatRear2;ECTO1CarSeatfl2;ECTO1CarSeatfr2;ECTO1CarSeatrl2;ECTO1CarSeatrr2;M151A2CarSeatFront2;M151A2CarSeatRear2;KZ1Kseat;93townCarSeatFront1;93townCarSeatRear1,
+		Require : NormalCarSeat1;BigCarSeat1;SportCarSeat1;NormalCarSeat2;BigCarSeat2;SportCarSeat2;NormalCarSeat3;BigCarSeat3;SportCarSeat3;NormalCarSeat8;BigCarSeat8;SportCarSeat8;M998CarSeat2;DodgeFrontSeat3;DodgeRearSeat3;R32FrontSeat3;R32RearSeat3;Seat0;U1550LSeat2;E150CarSeat2;80sPickupSeatFront2;80sPickupSeatRear2;ECTO1CarSeatfl2;ECTO1CarSeatfr2;ECTO1CarSeatrl2;ECTO1CarSeatrr2;M151A2CarSeatFront2;M151A2CarSeatRear2;KZ1Kseat;93townCarSeatFront1;93townCarSeatRear1;90pierceArrowSeat2,
 		GlobalItem : UpholsteryKit=2,
 		ConditionModifier : 1.2,
 
@@ -190,7 +190,7 @@ module Base
 
 	fixing Fix Tire
 	{
-		Require : OldTire1;NormalTire1;ModernTire1;OldTire2;NormalTire2;ModernTire2;OldTire3;NormalTire3;ModernTire3;OldTire8;NormalTire8;ModernTire8;V100Tire2;V100Tires2;V100SmallTires2;V100Axle2;V100AxleSmall2;V101Tire2;DodgeRTtire3;R32Tire0;R32Tire1;R32Tire2;R32TireA;McLarenF1FrontWheel3;McLarenF1RearWheel3;U1550LWheel2;E150Tire2;80sOffroadTireA;ECTO1tire2_Item;ECTO1tire1_Item;V102Tire2;BushmasterTire;KZ1KoldTire;KZ1KnormalTire;KZ1KmodernTire;93townCarTire1,
+		Require : OldTire1;NormalTire1;ModernTire1;OldTire2;NormalTire2;ModernTire2;OldTire3;NormalTire3;ModernTire3;OldTire8;NormalTire8;ModernTire8;V100Tire2;V100Tires2;V100SmallTires2;V100Axle2;V100AxleSmall2;V101Tire2;DodgeRTtire3;R32Tire0;R32Tire1;R32Tire2;R32TireA;McLarenF1FrontWheel3;McLarenF1RearWheel3;U1550LWheel2;E150Tire2;80sOffroadTireA;ECTO1tire2_Item;ECTO1tire1_Item;V102Tire2;BushmasterTire;KZ1KoldTire;KZ1KnormalTire;KZ1KmodernTire;93townCarTire1;90pierceArrowTire2;90pierceArrowDoubleTires2,
 		ConditionModifier : 1.2,
 
 		Fixer : Superglue=2; Mechanics=2,
@@ -235,7 +235,7 @@ module Base
 
 	fixing Fix Windshield Armor
 	{
-		Require : M998WindshieldArmor1_Item;M998WindshieldArmor2_Item;DG70WindshieldArmor;DG70WindshieldRearArmor;R32WindshieldRearArmor;R32WindshieldArmor;E150WindshieldArmor;E150WindshieldRearArmor;80sPickupWindshieldArmor;P19AWindshieldArmor1_Item;M151A2WindshieldArmor1_Item;93townCarWindshieldArmorA;93townCarWindshieldArmorB;93townCarWindshieldRearArmor,
+		Require : M998WindshieldArmor1_Item;M998WindshieldArmor2_Item;DG70WindshieldArmor;DG70WindshieldRearArmor;R32WindshieldRearArmor;R32WindshieldArmor;E150WindshieldArmor;E150WindshieldRearArmor;80sPickupWindshieldArmor;P19AWindshieldArmor1_Item;M151A2WindshieldArmor1_Item;93townCarWindshieldArmorA;93townCarWindshieldArmorB;93townCarWindshieldRearArmor;90pierceArrowWindshieldArmor;90pierceArrowWindshieldRearArmor,
 		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
@@ -245,7 +245,7 @@ module Base
 	
 	fixing Fix Window Armor
 	{
-		Require : R32RearWindowArmor;80sPickupWindowFrontArmor;80sPickupWindowRearArmor;93townCarMiddleWindowArmor,
+		Require : R32RearWindowArmor;80sPickupWindowFrontArmor;80sPickupWindowRearArmor;93townCarMiddleWindowArmor;90pierceArrowSideWindowArmor,
 		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
@@ -322,7 +322,7 @@ module Base
 
 	fixing Fix Accessory
 	{
-		Require : E150HoodFur;E150TrunkDoorFur;E150DoorFur;E150ChassisFur;E150LegFur,
+		Require : E150HoodFur;E150TrunkDoorFur;E150DoorFur;E150ChassisFur;E150LegFur;90pierceArrowHoses,
 		GlobalItem : UpholsteryKit=2,
 		ConditionModifier : 1.2,
 
@@ -332,7 +332,7 @@ module Base
 
 	fixing Fix Roofracks and Other
 	{
-		Require : ECTO1Equipment1_Item;E150Divider;E150MysteryMachineRoofrack2;E150MysteryMachineSurfboards2;80sPickupRoofrackA;80sPickupRollbarA;80sPickupRollbarB;82JeepJ10Dorothy;82JeepJ10DorothyAnemometer,
+		Require : ECTO1Equipment1_Item;E150Divider;E150MysteryMachineRoofrack2;E150MysteryMachineSurfboards2;80sPickupRoofrackA;80sPickupRollbarA;80sPickupRollbarB;82JeepJ10Dorothy;82JeepJ10DorothyAnemometer;90pierceArrowLadders,
 		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
