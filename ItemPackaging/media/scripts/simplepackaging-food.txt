@@ -40,13 +40,13 @@ module Base
 		{
 			10xCannedCarrotsPack,
 
-			Result:CannedCarrots=1,
+			Result:CannedCarrots2=1,
 			Time:30.0,
 		}
 
 		recipe Pack up 10 Cans
 		{
-			destroy CannedCarrots=10,
+			destroy CannedCarrots2=10,
 
 			Result:10xCannedCarrotsPack,
 			Time:90.0,
