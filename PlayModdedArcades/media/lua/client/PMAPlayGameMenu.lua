@@ -60,7 +60,7 @@ PMAPlayModdedGameMenu.doBuildMenu = function(player, context, worldobjects)
 						end
 
 						local spriteName = thisObject:getSprite():getName()
-						-- print("PseudoEdPMA: sprite name = " .. spriteName);
+	--					print("PseudoEdPMA: sprite name = " .. spriteName);
 			
 						-- For Arcade Machines, Custom Name = "Machine" and the Group Name is more specific 
 --						if customName == "Back to the Past Arcade Machine" or
@@ -72,12 +72,12 @@ PMAPlayModdedGameMenu.doBuildMenu = function(player, context, worldobjects)
 							groupName == "arcadian" or 
 							groupName == "ValleyArcade" then
 
-							--print("PseudoEdPMA: Getting ready to play arcade machine " .. customName);
+							print("PseudoEdPMA: Getting ready to play arcade machine " .. customName);
 
 							if not ((SandboxVars.ElecShutModifier > -1 and
 									 GameTime:getInstance():getNightsSurvived() < SandboxVars.ElecShutModifier) or
 								thisObject:getSquare():haveElectricity()) then
-								--print("PseudoEdPMA: This object is unpowered");
+								print("PseudoEdPMA: This object is unpowered");
 								return
 							end
 							arcadeMachine = thisObject
@@ -119,7 +119,16 @@ PMAPlayModdedGameMenu.doBuildMenu = function(player, context, worldobjects)
 		if USE_CUSTOM_ANIMATION then
 			actionType = "PlayArcade"
 		end
-	elseif arcadeCustomName == "Royale with Cheese Arcade" then
+--	elseif arcadeCustomName == "Royale with Cheese Arcade" then
+	elseif arcadeSpriteName == "DylansBar01_16" then
+		soundFile = "PAMGRoyaleplay"
+		soundEnd = "PAMGRoyaleend"
+		contextMenu = "ContextMenu_Play_RoyalewCheese"
+		actionType = "Loot"
+		if USE_CUSTOM_ANIMATION then
+			actionType = "PlayArcade"
+		end
+	elseif arcadeSpriteName == "DylansBar01_17" then
 		soundFile = "PAMGRoyaleplay"
 		soundEnd = "PAMGRoyaleend"
 		contextMenu = "ContextMenu_Play_RoyalewCheese"
@@ -136,10 +145,61 @@ PMAPlayModdedGameMenu.doBuildMenu = function(player, context, worldobjects)
 		if USE_CUSTOM_ANIMATION then
 			actionType = "PlayArcadian"
 		end
+	elseif arcadeSpriteName == "d_location_arcadian_01_1" then
+		soundFile = "PMACubesplay"
+		soundEnd = "PAMGArcadianend"
+		contextMenu = "ContextMenu_Play_JumpShoot"
+		actionType = "Loot"
+		length = 912
+		if USE_CUSTOM_ANIMATION then
+			actionType = "PlayArcadian"
+		end
+	elseif arcadeSpriteName == "d_location_arcadian_01_2" then
+		soundFile = "PMACubesplay"
+		soundEnd = "PAMGArcadianend"
+		contextMenu = "ContextMenu_Play_TestFacility"
+		actionType = "Loot"
+		length = 912
+		if USE_CUSTOM_ANIMATION then
+			actionType = "PlayArcadian"
+		end
+	elseif arcadeSpriteName == "d_location_arcadian_01_3" then
+		soundFile = "PMAWabaplay"
+		soundEnd = "PMAWabaend"
+		contextMenu = "ContextMenu_Play_SpiffoArcade"
+		actionType = "Loot"
+		if USE_CUSTOM_ANIMATION then
+			actionType = "PlayArcadian"
+		end
+	elseif arcadeSpriteName == "d_location_arcadian_01_8" then
+		soundFile = "PAMGArcadianplay"
+		soundEnd = "PAMGArcadianend"
+		contextMenu = "ContextMenu_Play_Kilmandio"
+		actionType = "Loot"
+		if USE_CUSTOM_ANIMATION then
+			actionType = "PlayArcadian"
+		end
+	elseif arcadeSpriteName == "d_location_arcadian_01_9" then
+		soundFile = "PMACubesplay"
+		soundEnd = "PAMGArcadianend"
+		contextMenu = "ContextMenu_Play_CubeismII"
+		actionType = "Loot"
+		length = 912
+		if USE_CUSTOM_ANIMATION then
+			actionType = "PlayArcadian"
+		end
 	elseif arcadeSpriteName == "d_location_arcadian_01_10" then
 		soundFile = "PMAWabaplay"
 		soundEnd = "PMAWabaend"
 		contextMenu = "ContextMenu_Play_Wabalabadubudb"
+		actionType = "Loot"
+		if USE_CUSTOM_ANIMATION then
+			actionType = "PlayArcadian"
+		end
+	elseif arcadeSpriteName == "d_location_arcadian_01_11" then
+		soundFile = "PMAWabaplay"
+		soundEnd = "PMAWabaend"
+		contextMenu = "ContextMenu_Play_Zomboid"
 		actionType = "Loot"
 		if USE_CUSTOM_ANIMATION then
 			actionType = "PlayArcadian"
@@ -160,10 +220,26 @@ PMAPlayModdedGameMenu.doBuildMenu = function(player, context, worldobjects)
 		if USE_CUSTOM_ANIMATION then
 			actionType = "PlayArcadian"
 		end
+	elseif arcadeSpriteName == "d_location_arcadian_01_17" then
+		soundFile = "PAMGArcadianplay"
+		soundEnd = "PAMGArcadianend"
+		contextMenu = "ContextMenu_Play_StarLord"
+		actionType = "Loot"
+		if USE_CUSTOM_ANIMATION then
+			actionType = "PlayArcadian"
+		end
 	elseif arcadeSpriteName == "d_location_arcadian_01_18" then
 		soundFile = "PMADladrlkvplay"
 		soundEnd = "PMADladrlkvend"
 		contextMenu = "ContextMenu_Play_DladerlkV"
+		actionType = "Loot"
+		if USE_CUSTOM_ANIMATION then
+			actionType = "PlayArcadian"
+		end
+	elseif arcadeSpriteName == "d_location_arcadian_01_19" then
+		soundFile = "PMADladrlkvplay"
+		soundEnd = "PMADladrlkvend"
+		contextMenu = "ContextMenu_Play_SecretAgent"
 		actionType = "Loot"
 		if USE_CUSTOM_ANIMATION then
 			actionType = "PlayArcadian"
@@ -184,6 +260,14 @@ PMAPlayModdedGameMenu.doBuildMenu = function(player, context, worldobjects)
 		if USE_CUSTOM_ANIMATION then
 			actionType = "PlayArcadian"
 		end
+	elseif arcadeSpriteName == "d_location_arcadian_01_25" then
+		soundFile = "PAMGArcadianplay"
+		soundEnd = "PAMGArcadianend"
+		contextMenu = "ContextMenu_Play_Exile5088"
+		actionType = "Loot"
+		if USE_CUSTOM_ANIMATION then
+			actionType = "PlayArcadian"
+		end
 	elseif arcadeSpriteName == "d_location_arcadian_01_26" then
 		soundFile = "PAMGArcadianplay"
 		soundEnd = "PAMGArcadianend"
@@ -192,11 +276,21 @@ PMAPlayModdedGameMenu.doBuildMenu = function(player, context, worldobjects)
 		if USE_CUSTOM_ANIMATION then
 			actionType = "PlayArcadian"
 		end
+	elseif arcadeSpriteName == "d_location_arcadian_01_27" then
+		soundFile = "PAMGArcadianplay"
+		soundEnd = "PAMGArcadianend"
+		contextMenu = "ContextMenu_Play_ColorDodge"
+		actionType = "Loot"
+		if USE_CUSTOM_ANIMATION then
+			actionType = "PlayArcadian"
+		end
 	else
 		print("PseudoEdPMA: Unassigned machine")
 		return
 	end -- if customname
-	
+
+	print("PseudoEdPMA: Post arcadeCustomName " .. arcadeCustomName)
+	print("PseudoEdPMA: Post arcadeSpriteName " .. arcadeSpriteName)
 	
 	context:addOption(getText(contextMenu),
 					  worldobjects,
@@ -221,6 +315,8 @@ PMAPlayModdedGameMenu.walkToFront = function(thisPlayer, thisObject)
 		return false
 	end
 
+	print("PseudoEdPMA: Walk to front " .. spriteName);
+
 	local properties = thisObject:getSprite():getProperties()
 	
 	local facing = nil
@@ -228,26 +324,52 @@ PMAPlayModdedGameMenu.walkToFront = function(thisPlayer, thisObject)
 		facing = "S"
 	elseif spriteName == "ValleyArcade_21" then
 		facing = "E"
+	elseif spriteName == "ValleyArcade_22" then
+		facing = "S"
 	elseif spriteName == "ValleyArcade_23" then
 		facing = "E"
 	elseif spriteName == "DylanRandomAssetPack3_25" then
 		facing = "S"
+	elseif spriteName == "DylansBar01_16" then
+		facing = "E"
+	elseif spriteName == "DylansBar01_17" then
+		facing = "S"
 	elseif spriteName == "d_location_arcadian_01_0" then
 		facing = "E"
+	elseif spriteName == "d_location_arcadian_01_1" then
+		facing = "S"
+	elseif spriteName == "d_location_arcadian_01_2" then
+		facing = "W"
+	elseif spriteName == "d_location_arcadian_01_3" then
+		facing = "N"
+	elseif spriteName == "d_location_arcadian_01_8" then
+		facing = "E"
+	elseif spriteName == "d_location_arcadian_01_9" then
+		facing = "S"
 	elseif spriteName == "d_location_arcadian_01_10" then
 		facing = "W"
+	elseif spriteName == "d_location_arcadian_01_11" then
+		facing = "N"
 	elseif spriteName == "d_location_arcadian_01_12" then
 		facing = "S"
 	elseif spriteName == "d_location_arcadian_01_16" then
 		facing = "E"
+	elseif spriteName == "d_location_arcadian_01_17" then
+		facing = "S"
 	elseif spriteName == "d_location_arcadian_01_18" then
 		facing = "W"
+	elseif spriteName == "d_location_arcadian_01_19" then
+		facing = "N"
 	elseif spriteName == "d_location_arcadian_01_20" then
 		facing = "S"
 	elseif spriteName == "d_location_arcadian_01_24" then
 		facing = "E"
+	elseif spriteName == "d_location_arcadian_01_25" then
+		facing = "S"
 	elseif spriteName == "d_location_arcadian_01_26" then
 		facing = "W"
+	elseif spriteName == "d_location_arcadian_01_27" then
+		facing = "N"
 	else
 		print("PseudoEdPMA: " .. spriteName .. " is not coded for facing")
 		return
