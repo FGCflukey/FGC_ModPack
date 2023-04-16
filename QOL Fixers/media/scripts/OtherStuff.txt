@@ -393,20 +393,49 @@ module Base
 		SkillRequired:Cooking=4, 
 	}
 
+	recipe Make Vinegar
+	{
+		RedWine/RedWineAged/RedWineAgedFully/WineBoxSmall1/WineBoxSmall2/WineBoxSmall3/WhiteWine/WhiteWineAged/WhiteWineAgedFully/WineBoxSmall4/WineBoxSmall5/WineBoxSmall6/WildBerryWine/RosehipWine/PineappleWine/StrawberryWine/PeachWine/PearWine/BananaWine;10,
+		keep TinCanEmpty,
+		Water=10,
+		WaterBottleEmpty/PopBottleEmpty,
+		keep RippedSheets/DishCloth,
+		NeedToBeLearn:false,
+				
+		Result:Vinegar,
+		Time:600.0,
+		Category:Survivalist,
+		SkillRequired:Cooking=4, 
+	}
+
 	recipe Make Sugar
 	{
 		Carrots=10,
 		keep RippedSheets/DishCloth,
-		keep KitchenKnife/ButterKnife/BreadKnife/HuntingKnife/MeatCleaver/FlintKnife/Machete,
+		keep [Recipe.GetItemTypes.SharpKnife],
 		WhiskeyFull/Wine/Wine2;10,
 		NeedToBeLearn:false,
 						
 		Result:Sugar,
 		Time:600.0,
 		Category:Survivalist,
-		OnCreate:DullTool_OnCreate,
 		SkillRequired:Cooking=4, 
 	}
+
+	recipe Make Sugar
+	{
+		Carrots=10,
+		keep RippedSheets/DishCloth,
+		keep [Recipe.GetItemTypes.SharpKnife],
+		RedWine/RedWineAged/RedWineAgedFully/WineBoxSmall1/WineBoxSmall2/WineBoxSmall3/WhiteWine/WhiteWineAged/WhiteWineAgedFully/WineBoxSmall4/WineBoxSmall5/WineBoxSmall6/WildBerryWine/RosehipWine/PineappleWine/StrawberryWine/PeachWine/PearWine/BananaWine;10,
+		NeedToBeLearn:false,
+						
+		Result:Sugar,
+		Time:600.0,
+		Category:Survivalist,
+		SkillRequired:Cooking=4, 
+	}
+
 
 	recipe Dismantle Radio Transmitter
 	{
