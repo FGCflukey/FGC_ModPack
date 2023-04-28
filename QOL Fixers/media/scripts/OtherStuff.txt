@@ -291,10 +291,10 @@ module Base
 	recipe Make Wood Glue
 	{
 		Plank/UnusableWood,
-		keep Saw,
-		keep Hammer,
+		keep [Recipe.GetItemTypes.Saw],
+		keep [Recipe.GetItemTypes.Hammer],
 		Charcoal,
-		keep Lighter/Matches,
+		[Recipe.GetItemTypes.StartFire],
 		Flour,
 		Water=3,
 		Vinegar=1,
@@ -309,10 +309,10 @@ module Base
 	recipe Make Super Glue
 	{
 		Plank/UnusableWood,
-		keep Saw,
-		keep Hammer,
+		keep [Recipe.GetItemTypes.Saw],
+		keep [Recipe.GetItemTypes.Hammer],
 		Flour,
-		keep Lighter/Matches,
+		[Recipe.GetItemTypes.StartFire],
 		Water=2,
 		Glue=1,
 		Vinegar=1,
@@ -327,7 +327,7 @@ module Base
 	recipe Break Shovel Into Trowel
 	{
 		destroy Shovel,
-		keep Hammer,
+		keep [Recipe.GetItemTypes.Hammer],
 
 		Result:HandShovel,
 		Sound:PZ_Hammer,
@@ -338,7 +338,7 @@ module Base
 	recipe Make Sack
 	{
 		Sheet,
-		keep Needle/SutureNeedle/Nails,
+        keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle/Nails,
 		Thread=2,
 
 		Result:EmptySandbag,
@@ -350,7 +350,7 @@ module Base
 	recipe Make Sheet
 	{
 		RippedSheets=4,
-		keep Needle/SutureNeedle/Nails,
+		keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle/Nails,
 		Thread=2,
 		
 		Result:Sheet,
@@ -361,7 +361,7 @@ module Base
 	recipe Make Sheet
 	{
 		AlcoholRippedSheets=4,
-		keep Needle/SutureNeedle/Nails,
+		keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle/Nails,
 		Thread=2,
 		
 		Result:Sheet,
@@ -412,7 +412,7 @@ module Base
 	{
 		Carrots=10,
 		keep RippedSheets/DishCloth,
-		keep [Recipe.GetItemTypes.SharpKnife],
+		keep [Recipe.GetItemTypes.SharpKnife]/[Recipe.GetItemTypes.DullKnife],
 		WhiskeyFull/Wine/Wine2;10,
 		NeedToBeLearn:false,
 						
@@ -426,7 +426,7 @@ module Base
 	{
 		Carrots=10,
 		keep RippedSheets/DishCloth,
-		keep [Recipe.GetItemTypes.SharpKnife],
+		keep [Recipe.GetItemTypes.SharpKnife]/[Recipe.GetItemTypes.DullKnife],
 		RedWine/RedWineAged/RedWineAgedFully/WineBoxSmall1/WineBoxSmall2/WineBoxSmall3/WhiteWine/WhiteWineAged/WhiteWineAgedFully/WineBoxSmall4/WineBoxSmall5/WineBoxSmall6/WildBerryWine/RosehipWine/PineappleWine/StrawberryWine/PeachWine/PearWine/BananaWine;10,
 		NeedToBeLearn:false,
 						
@@ -435,7 +435,6 @@ module Base
 		Category:Survivalist,
 		SkillRequired:Cooking=4, 
 	}
-
 
 	recipe Dismantle Radio Transmitter
 	{
@@ -467,6 +466,21 @@ module Base
 		Sound:Dismantle,		
 	}
 
+	recipe Dismantle Receiver
+	{
+		destroy Receiver,
+		keep [Recipe.GetItemTypes.Screwdriver],
+		
+		Result:ElectronicsScrap,
+		Time:30.0,	
+		OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
+		Category:Electrical,
+		AnimNode:Disassemble,
+		Prop1:Screwdriver,
+		Prop2:CDplayer,
+		Sound:Dismantle,		
+	}
+
     recipe Dismantle Alarm Clock
     {
        destroy AlarmClock2,
@@ -484,7 +498,7 @@ module Base
 	recipe Rip Belt into Strips
 	{
 		destroy Belt/Belt2,
-		keep Scissors,
+		keep [Recipe.GetItemTypes.Scissors],
 		
 		Result:LeatherStrips=2,
 		CanBeDoneFromFloor:true,
@@ -516,7 +530,7 @@ module Base
 		LeatherStrips=2,
 		Glue=2,
 		BlowTorch=2,
-		keep WeldingMask,
+		keep [Recipe.GetItemTypes.WeldingMask],
 		
 		Result:Golfclub,
 		CanBeDoneFromFloor:true,
@@ -526,6 +540,15 @@ module Base
 	recipe Break Spear
 	{
 		destroy SpearCrafted/WoodenStick,
+		
+		Result:Twigs=4,
+		CanBeDoneFromFloor:true,
+		Time:60.0,			
+	}
+
+	recipe Break Tree Branch
+	{
+		destroy TreeBranch,
 		
 		Result:Twigs=4,
 		CanBeDoneFromFloor:true,

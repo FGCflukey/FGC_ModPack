@@ -115,117 +115,117 @@ module Base
 	recipe Make Log Pile
 	{
 		Log=5,
-		CanBeDoneFromFloor:true,
 		
 		Result:Logstack1,
 		Time:500.0,
 		Category:Carpentry,
+		CanBeDoneFromFloor:true,
 	}
 
 	recipe Add Logs to Pile
 	{
 		Log=5,
 		Logstack1,
-		CanBeDoneFromFloor:true,
 		
 		Result:Logstack2,
 		Time:500.0,
 		Category:Carpentry,
+		CanBeDoneFromFloor:true,
 	}
 
 	recipe Add Logs to Pile
 	{
 		Log=5,
 		Logstack2,
-		CanBeDoneFromFloor:true,
 		
 		Result:Logstack3,
 		Time:500.0,
 		Category:Carpentry,
+		CanBeDoneFromFloor:true,
 	}
 
 	recipe Add Logs to Pile
 	{
 		Log=5,
 		Logstack3,
-		CanBeDoneFromFloor:true,
 		
 		Result:Logstack4,
 		Time:500.0,
 		Category:Carpentry,
+		CanBeDoneFromFloor:true,
 	}
 
 	recipe Remove Logs from Pile
 	{
 		Logstack4,
-		CanBeDoneFromFloor:true,
 		
 		Result:Logstack3,
 		Time:500.0,
 		Category:Carpentry,
+		CanBeDoneFromFloor:true,
 		OnCreate:GiveBack_Logs,
 	}
 
 	recipe Remove Logs from Pile
 	{
 		Logstack3,
-		CanBeDoneFromFloor:true,
 		
 		Result:Logstack2,
 		Time:500.0,
 		Category:Carpentry,
+		CanBeDoneFromFloor:true,
 		OnCreate:GiveBack_Logs,
 	}
 
 	recipe Remove Logs from Pile
 	{
 		Logstack2,
-		CanBeDoneFromFloor:true,
 		
 		Result:Logstack1,
 		Time:500.0,
 		Category:Carpentry,
+		CanBeDoneFromFloor:true,
 		OnCreate:GiveBack_Logs,
 	}
 
 	recipe Remove Logs from Pile
 	{
 		Logstack1,
-		CanBeDoneFromFloor:true,
 		
 		Result:Log=5,
 		Time:500.0,
 		Category:Carpentry,
+		CanBeDoneFromFloor:true,
 	}
 
 /************************ WOOD PALLETS ************************/
 
 	recipe Make Wooden Pallet
 	{
-		SkillRequired:Woodwork=1,
 		Plank=4,
 		Nails=4,
 		keep [Recipe.GetItemTypes.Hammer],
-		CanBeDoneFromFloor:true,
 		
 		Result:Woodenpallet,
 	   	Sound:Hammering,
 		Time:250.0,
 		Category:Carpentry,
+		SkillRequired:Woodwork=1,
+		CanBeDoneFromFloor:true,
 		OnGiveXP:Give5WoodworkXP,
 	}
 
 	recipe Recycle Wooden Pallet
 	{
-		SkillRequired:Woodwork=1,
 		Woodenpallet,
 		keep [Recipe.GetItemTypes.Hammer],
-		CanBeDoneFromFloor:true,
-		
+	
 		Result:Plank=4,
 	   	Sound:Hammering,
 		Time:150.0,
 		Category:Carpentry,
+		CanBeDoneFromFloor:true,
+		SkillRequired:Woodwork=1,
 		OnCreate:GiveBack_Nails,
 	}
 
@@ -257,22 +257,22 @@ module Base
 	{
 		Plank=12,
 		Rope,
-		CanBeDoneFromFloor:true,
 		
 		Result:Lumberstack,
 		Time:40.0,
 		Category:Carpentry,
+		CanBeDoneFromFloor:true,
 		OnGiveXP:Give5WoodworkXP,
 	}
 
 	recipe Unpack Lumber Stack
 	{
 		Lumberstack,
-		CanBeDoneFromFloor:true,
 		
 		Result:Plank=12,
 		Time:40.0,
 		Category:Carpentry,
+		CanBeDoneFromFloor:true,
 		OnCreate:GiveBack_OneRope,
 	}
 
@@ -281,22 +281,22 @@ module Base
 		Lumberstack=3,
 		Rope=2,
 		Woodenpallet,
-		CanBeDoneFromFloor:true,
 		
 		Result:Lumberbox,
 		Time:40.0,
 		Category:Carpentry,
+		CanBeDoneFromFloor:true,
 		OnGiveXP:Give5WoodworkXP,
 	}
 	
 	recipe Unpack Pallet of Lumber
 	{
 		Lumberbox,
-		CanBeDoneFromFloor:true,
 		
 		Result:Lumberstack=3,
 		Time:40.0,
 		Category:Carpentry,
+		CanBeDoneFromFloor:true,
 		OnGiveXP:Give5WoodworkXP,
 		OnCreate:GiveBack_RopeAndPallet,
 	}
@@ -307,21 +307,21 @@ module Base
 	{
 		Log=4,
 		Rope=2,
-		CanBeDoneFromFloor:true,
 		
 		Result:LogStacks4,
 		Time:40,
 		Category:Carpentry,
+		CanBeDoneFromFloor:true,
 	}
 
 	recipe Unpack Four-Log Stack
 	{
 		LogStacks4,
-		CanBeDoneFromFloor:true,
 		
 		Result:Log=4,
 		Time:40,
 		Category:Carpentry,
+		CanBeDoneFromFloor:true,
 		OnCreate:GiveBack_TwoRope,
 	}
 
@@ -330,22 +330,22 @@ module Base
 		LogStacks4=3,
 		Rope=2,
 		Woodenpallet,
-		CanBeDoneFromFloor:true,
 		
 		Result:Logbox,
 		Time:40.0,
 		Category:Carpentry,
+		CanBeDoneFromFloor:true,
 		OnGiveXP:Give5WoodworkXP,
 	}
 
 	recipe Unpack Pallet of Logs
 	{
 		Logbox,
-		CanBeDoneFromFloor:true,
 		
 		Result:LogStacks4=3,
 		Time:40.0,
 		Category:Carpentry,
+		CanBeDoneFromFloor:true,
 		OnCreate:GiveBack_RopeAndPallet,
 	}
 
@@ -354,66 +354,83 @@ module Base
 
 	recipe Make Sawbuck
 	{
-		SkillRequired:Woodwork=2,
 		Log=4,
 		Plank=8,
 		Nails=10,
 		keep [Recipe.GetItemTypes.Hammer],
-		keep Saw/Sawlumber/GardenSaw,
+		keep [Recipe.GetItemTypes.Saw]/Sawlumber/GardenSaw,
 		
-		CanBeDoneFromFloor:true,
 		Result:Sawbuck,
 	   	Sound:Hammering,
 		Time:300,
 		Category:Carpentry,
+		CanBeDoneFromFloor:true,
+		SkillRequired:Woodwork=2,
 		OnGiveXP:Give5WoodworkXP,
 	}
 
 
-	recipe Saw Logs
+	recipe Saw More Logs
 	{
 		Log,
 		keep Sawlumber,
-		CanBeDoneFromFloor:true,
 		
 		Result:Plank=4,
 		Sound:Sawing,
 		Time:200,
 		Category:Carpentry,
+		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.SawLogs,
 		AnimNode:SawLog,
 		Prop1:GardenSaw,
 		Prop2:Log,
 	}
 
-	recipe Saw Logs
+	recipe Saw More Logs2
 	{
 		Log,
-		keep Saw/GardenSaw,
+		keep [Recipe.GetItemTypes.Saw],
 		keep Sawbuck,
-		CanBeDoneFromFloor:true,
 		
 		Result:Plank=4,
 		Sound:Sawing,
 		Time:230,
 		Category:Carpentry,
+		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.SawLogs,
 		AnimNode:SawLog,
 		Prop1:Source=2,
 		Prop2:Log,
 	}
 
-	recipe Saw Logs
+	recipe Saw More Logs3
+	{
+		Log,
+		keep GardenSaw,
+		keep Sawbuck,
+		
+		Result:Plank=4,
+		Sound:Sawing,
+		Time:230,
+		Category:Carpentry,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.SawLogs,
+		AnimNode:SawLog,
+		Prop1:GardenSaw,
+		Prop2:Log,
+	}
+
+	recipe Saw Even More Logs
 	{
 		Log,
 		keep Sawlumber,
 		keep Sawbuck,
-		CanBeDoneFromFloor:true,
 		
 		Result:Plank=6,
 		Sound:Sawing,
 		Time:200,
 		Category:Carpentry,
+		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.SawLogs,
 		AnimNode:SawLog,
 		Prop1:GardenSaw,
@@ -422,16 +439,16 @@ module Base
 
 	recipe Make BaseBall Bat
 	{
-		SkillRequired:Woodwork=1,
 		Log,
-		keep Saw/GardenSaw,
+		keep [Recipe.GetItemTypes.Saw]/GardenSaw,
         DuctTape=2,
-		CanBeDoneFromFloor:true,
 		
 		Result:BaseballBat=1,
 		Sound:Sawing,
 		Time:300,
 		Category:Carpentry,
+		CanBeDoneFromFloor:true,
+		SkillRequired:Woodwork=1,
 		OnGiveXP:Recipe.OnGiveXP.SawLogs,
 		AnimNode:SawLog,
 		Prop1:GardenSaw,
@@ -440,13 +457,14 @@ module Base
 
 	recipe Make Plank from Scrap Wood
     {
-       UnusableWood=2,
-	   
-       Result:Plank,
-       Time:250.0,
-	   Sound:Sawing,
-	   Category:Carpentry,
-	   OnGiveXP:Recipe.OnGiveXP.WoodWork5,
+		UnusableWood=2,
+
+		Result:Plank,
+		Time:250.0,
+		Sound:Sawing,
+		Category:Carpentry,
+		CanBeDoneFromFloor:true,
+		OnGiveXP:Recipe.OnGiveXP.WoodWork5,
     }
 
 }

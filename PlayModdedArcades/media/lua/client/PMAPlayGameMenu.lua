@@ -120,15 +120,7 @@ PMAPlayModdedGameMenu.doBuildMenu = function(player, context, worldobjects)
 			actionType = "PlayArcade"
 		end
 --	elseif arcadeCustomName == "Royale with Cheese Arcade" then
-	elseif arcadeSpriteName == "DylansBar01_16" then
-		soundFile = "PAMGRoyaleplay"
-		soundEnd = "PAMGRoyaleend"
-		contextMenu = "ContextMenu_Play_RoyalewCheese"
-		actionType = "Loot"
-		if USE_CUSTOM_ANIMATION then
-			actionType = "PlayArcade"
-		end
-	elseif arcadeSpriteName == "DylansBar01_17" then
+	elseif arcadeSpriteName == "DylansBar01_16" or arcadeSpriteName == "DylansBar01_17" or arcadeSpriteName == "DylanRandomAssetPack3_24" or arcadeSpriteName == "DylanRandomAssetPack3_25" then
 		soundFile = "PAMGRoyaleplay"
 		soundEnd = "PAMGRoyaleend"
 		contextMenu = "ContextMenu_Play_RoyalewCheese"
@@ -328,11 +320,9 @@ PMAPlayModdedGameMenu.walkToFront = function(thisPlayer, thisObject)
 		facing = "S"
 	elseif spriteName == "ValleyArcade_23" then
 		facing = "E"
-	elseif spriteName == "DylanRandomAssetPack3_25" then
-		facing = "S"
-	elseif spriteName == "DylansBar01_16" then
+	elseif spriteName == "DylansBar01_16" or spriteName == "DylanRandomAssetPack3_24" then
 		facing = "E"
-	elseif spriteName == "DylansBar01_17" then
+	elseif spriteName == "DylansBar01_17" or spriteName == "DylanRandomAssetPack3_25" then
 		facing = "S"
 	elseif spriteName == "d_location_arcadian_01_0" then
 		facing = "E"
