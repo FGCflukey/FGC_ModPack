@@ -358,7 +358,7 @@ module Base
 		Plank=8,
 		Nails=10,
 		keep [Recipe.GetItemTypes.Hammer],
-		keep [Recipe.GetItemTypes.Saw]/Sawlumber/GardenSaw,
+		keep [Recipe.GetItemTypes.Saw]/Sawlumber,
 		
 		Result:Sawbuck,
 	   	Sound:Hammering,
@@ -377,7 +377,7 @@ module Base
 		
 		Result:Plank=4,
 		Sound:Sawing,
-		Time:200,
+		Time:180,
 		Category:Carpentry,
 		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.SawLogs,
@@ -386,7 +386,7 @@ module Base
 		Prop2:Log,
 	}
 
-	recipe Saw More Logs2
+	recipe Saw More Logs
 	{
 		Log,
 		keep [Recipe.GetItemTypes.Saw],
@@ -394,29 +394,12 @@ module Base
 		
 		Result:Plank=4,
 		Sound:Sawing,
-		Time:230,
+		Time:200,
 		Category:Carpentry,
 		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.SawLogs,
 		AnimNode:SawLog,
 		Prop1:Source=2,
-		Prop2:Log,
-	}
-
-	recipe Saw More Logs3
-	{
-		Log,
-		keep GardenSaw,
-		keep Sawbuck,
-		
-		Result:Plank=4,
-		Sound:Sawing,
-		Time:230,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-		OnGiveXP:Recipe.OnGiveXP.SawLogs,
-		AnimNode:SawLog,
-		Prop1:GardenSaw,
 		Prop2:Log,
 	}
 
@@ -428,7 +411,7 @@ module Base
 		
 		Result:Plank=6,
 		Sound:Sawing,
-		Time:200,
+		Time:180,
 		Category:Carpentry,
 		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.SawLogs,
@@ -440,7 +423,7 @@ module Base
 	recipe Make BaseBall Bat
 	{
 		Log,
-		keep [Recipe.GetItemTypes.Saw]/GardenSaw,
+		keep [Recipe.GetItemTypes.Saw],
         DuctTape=2,
 		
 		Result:BaseballBat=1,
