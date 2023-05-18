@@ -546,7 +546,7 @@ UG_AutomakerUI.SMALL_FONT_HGT = getTextManager():getFontFromEnum(UIFont.Small):g
 UG_AutomakerUI.MEDIUM_FONT_HGT = getTextManager():getFontFromEnum(UIFont.Medium):getLineHeight()
 
 local width = 845
-local height = 550
+local height = 600
 local posX = 0
 local posY = 0
  
