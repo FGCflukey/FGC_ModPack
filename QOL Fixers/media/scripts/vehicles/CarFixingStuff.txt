@@ -151,64 +151,80 @@ module Base
 		Time:100.0,
 	}	
 	
-	recipe Make Spare Engine Parts
+	recipe Make Spare Engine Part
 	{
 		SkillRequired:MetalWelding=4,
 		BlowTorch=5,
-		keep [Recipe.GetItemTypes.WeldingMask],
 		ScrapMetal=4,
 		ElectronicsScrap=2,
-		WeldingRods=2,
-
-		Result:EngineParts,
-		OnCreate:Give5EngineParts_OnCreate,
-		Category:Welding,
-		Time:500.0,
-	}
-	
-	recipe Make Spare Engine Parts
-	{
-		SkillRequired:MetalWelding=4,
-		BlowTorch=5,
+		WeldingRods=1,
+		keep [Recipe.GetItemTypes.Hammer],
 		keep [Recipe.GetItemTypes.WeldingMask],
-		SheetMetal=1,
-		ElectronicsScrap=2,
-		WeldingRods=2,
-
-		Result:EngineParts,
-		OnCreate:Give5EngineParts_OnCreate,
-		Category:Welding,
-		Time:500.0,
-	}
-
-	recipe Make Spare Engine Parts
-	{
-		SkillRequired:MetalWelding=4,
-		BlowTorch=5,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		SmallSheetMetal=2,
-		ElectronicsScrap=2,
-		WeldingRods=2,
-
-		Result:EngineParts,
-		OnCreate:Give5EngineParts_OnCreate,
-		Category:Welding,
-		Time:500.0,
-	}
-	
-	recipe Make Spare Engine Parts
-	{
-		SkillRequired:MetalWelding=4,
-		BlowTorch=5,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		MetalBar=2,
-		ElectronicsScrap=2,
-		WeldingRods=2,
 		
 		Result:EngineParts,
-		OnCreate:Give5EngineParts_OnCreate,
+		Time:500,
 		Category:Welding,
-		Time:500.0,
+		SkillRequired:MetalWelding=2,		
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+		Sound:Hammering,
+		AnimNode:Disassemble,
+	}
+	
+	recipe Make Spare Engine Parts
+	{
+		SkillRequired:MetalWelding=4,
+		BlowTorch=5,
+		SheetMetal=1,
+		ElectronicsScrap=2,
+		WeldingRods=1,
+		keep [Recipe.GetItemTypes.Hammer],
+		keep [Recipe.GetItemTypes.WeldingMask],
+		
+		Result:EngineParts,
+		Time:500,
+		Category:Welding,
+		SkillRequired:MetalWelding=2,		
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+		Sound:Hammering,
+		AnimNode:Disassemble,
+	}
+
+	recipe Make Spare Engine Parts
+	{
+		SkillRequired:MetalWelding=4,
+		BlowTorch=5,
+		SmallSheetMetal=2,
+		ElectronicsScrap=2,
+		WeldingRods=1,
+		keep [Recipe.GetItemTypes.Hammer],
+		keep [Recipe.GetItemTypes.WeldingMask],
+		
+		Result:EngineParts,
+		Time:500,
+		Category:Welding,
+		SkillRequired:MetalWelding=2,		
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+		Sound:Hammering,
+		AnimNode:Disassemble,
+	}
+	
+	recipe Make Spare Engine Parts
+	{
+		SkillRequired:MetalWelding=4,
+		BlowTorch=5,
+		MetalBar=2,
+		ElectronicsScrap=2,
+		WeldingRods=1,
+		keep [Recipe.GetItemTypes.Hammer],
+		keep [Recipe.GetItemTypes.WeldingMask],
+		
+		Result:EngineParts,
+		Time:500,
+		Category:Welding,
+		SkillRequired:MetalWelding=2,		
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+		Sound:Hammering,
+		AnimNode:Disassemble,
 	}
 
 }

@@ -59,7 +59,7 @@ module Base
 		
     	CanBeDoneFromFloor:true,
     	Result:MetalBarBox,
-    	Time:150.0,
+    	Time:300.0,
     }
 	
 	recipe Unpack Pallet of Metal Bars
@@ -68,7 +68,7 @@ module Base
 
 		CanBeDoneFromFloor:true,		
     	Result:MetalBar=50,
-    	Time:150.0,
+    	Time:300.0,
     	OnCreate:GiveBack_RopeAndPallet,
     }
 
@@ -78,7 +78,7 @@ module Base
 		
 		CanBeDoneFromFloor:true,
     	Result:MetalPipe=12,
-    	Time:150.0,
+    	Time:300.0,
     	OnCreate:GiveBack_RopeAndPallet,
     }
 
@@ -90,7 +90,7 @@ module Base
     	
 		CanBeDoneFromFloor:true,
     	Result:MetalPipeBox,
-    	Time:150.0,
+    	Time:300.0,
     }
 
 	recipe Pack Pallet of Metal Sheets
@@ -101,7 +101,7 @@ module Base
 		
     	CanBeDoneFromFloor:true,
 		Result:MetalSheetBox,
-    	Time:150.0,
+    	Time:300.0,
     }
 
 	recipe Unpack Pallet of Metal Sheets
@@ -110,7 +110,7 @@ module Base
 
 		CanBeDoneFromFloor:true,
     	Result:SheetMetal=10,
-    	Time:150.0,
+    	Time:300.0,
     	OnCreate:GiveBack_RopeAndPallet,
     }
 
@@ -122,7 +122,7 @@ module Base
 
 		CanBeDoneFromFloor:true,
 		Result:SmallMetalSheetBox,
-		Time:150.0,
+		Time:300.0,
 	}
 
 	recipe Unpack Pallet of Small Metal Sheets
@@ -131,7 +131,7 @@ module Base
 
 		CanBeDoneFromFloor:true,
 		Result:SmallMetalSheetStack=4,
-		Time:150.0,
+		Time:300.0,
 		OnCreate:GiveBack_RopeAndPallet,
 	}
 
@@ -159,12 +159,12 @@ module Base
 
 	recipe Recycle Hood
 	{
-		destroy EngineDoor1/EngineDoor2/EngineDoor3/EngineDoor8/U1550LHood2,
+		destroy EngineDoor1/EngineDoor2/EngineDoor3/EngineDoor8,
 		BlowTorch=5,
 		keep WeldingMask,
 		
 		Result:SheetMetal=2,
-		Time:150.0,
+		Time:300.0,
 		SkillRequired:MetalWelding=2,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
@@ -177,7 +177,7 @@ module Base
 		keep WeldingMask,
 		
 		Result:SheetMetal=2,
-		Time:150.0,
+		Time:300.0,
 		SkillRequired:MetalWelding=2,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
@@ -190,7 +190,7 @@ module Base
 		keep WeldingMask,
 		
 		Result:SheetMetal=2,
-		Time:150.0,
+		Time:300.0,
 		SkillRequired:MetalWelding=2,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
@@ -198,12 +198,12 @@ module Base
 
 	recipe Recycle Trunk Lid
 	{
-		destroy TrunkDoor1/TrunkDoor2/TrunkDoor3/TrunkDoor8/M101A3TrunkDoor2/M101A3TrunkDoorTwo2/U1550LTrunkDoor2,
+		destroy TrunkDoor1/TrunkDoor2/TrunkDoor3/TrunkDoor8,
 		BlowTorch=5,
 		keep WeldingMask,
 		
 		Result:SheetMetal=2,
-		Time:150.0,
+		Time:300.0,
 		SkillRequired:MetalWelding=2,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
@@ -211,12 +211,12 @@ module Base
 
 	recipe Recycle Other Trunk Lid
 	{
-		destroy McLarenF1TrunkDoor3/M101A3TrunkDoor2/IsoContainerDoubleTrunkDoor2/E150TrunkDoor2/M127TrunkDoor2/M101A3TrunkDoorTwo2/U1550LTrunkDoor2/M129TrunkDoor2/M128TrunkDoor2/88ChevyS10TrunkDoorTop2/IsoContainerTankerTrunkDoor2/M911TrunkDoor2/R32TrunkDoor3/89BroncoTrunkDoor2/88ChevyS10TrunkDoor2/P19ATrunkDoor2/M998TrunkDoor2/DG70TrunkDoor3/M967TrunkDoor2/ECTO1TrunkDoor2/82JeepJ10TrunkDoor2/82JeepJ10TrunkDoorTop2/IsoContainerTrunkDoor2/90pierceArrowTrunkDoor2/90pierceArrowTrunkDoorsLeft2/90pierceArrowTrunkDoorsRight2,
+		destroy McLarenF1TrunkDoor3/IsoContainerDoubleTrunkDoor2/E150TrunkDoor2/M127TrunkDoor2/M129TrunkDoor2/M128TrunkDoor2/88ChevyS10TrunkDoorTop2/IsoContainerTankerTrunkDoor2/M911TrunkDoor2/R32TrunkDoor3/89BroncoTrunkDoor2/88ChevyS10TrunkDoor2/P19ATrunkDoor2/M998TrunkDoor2/DG70TrunkDoor3/M967TrunkDoor2/ECTO1TrunkDoor2/82JeepJ10TrunkDoor2/82JeepJ10TrunkDoorTop2/IsoContainerTrunkDoor2/90pierceArrowTrunkDoor2/90pierceArrowTrunkDoorsLeft2/90pierceArrowTrunkDoorsRight2,
 		BlowTorch=5,
 		keep WeldingMask,
 		
 		Result:SheetMetal=2,
-		Time:150.0,
+		Time:300.0,
 		SkillRequired:MetalWelding=2,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
@@ -224,12 +224,25 @@ module Base
 
 	recipe Recycle Muffler
 	{
-		destroy OldCarMuffler1/OldCarMuffler2/OldCarMuffler3/NormalCarMuffler1/NormalCarMuffler2/NormalCarMuffler3/ModernCarMuffler1/ModernCarMuffler2/ModernCarMuffler3/OldCarMuffler8/NormalCarMuffler8/ModernCarMuffler8/M911Muffler/M998Muffler1_Item/M998Muffler2_Item/U1550LMuffler2/R32muffler0/R32muffler1/KZ1Kmuffler,
+		destroy OldCarMuffler1/OldCarMuffler2/OldCarMuffler3/NormalCarMuffler1/NormalCarMuffler2/NormalCarMuffler3/ModernCarMuffler1/ModernCarMuffler2/ModernCarMuffler3/OldCarMuffler8/NormalCarMuffler8/ModernCarMuffler8,
 		BlowTorch=5,
 		keep WeldingMask,
 		
 		Result:SheetMetal=2,
-		Time:150.0,
+		Time:300.0,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+
+	recipe Recycle Other Muffler
+	{
+		destroy M911Muffler/M998Muffler1_Item/M998Muffler2_Item/U1550LMuffler2/R32muffler0/R32muffler1/KZ1Kmuffler,
+		BlowTorch=5,
+		keep WeldingMask,
+		
+		Result:SheetMetal=2,
+		Time:300.0,
 		SkillRequired:MetalWelding=2,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
@@ -237,25 +250,25 @@ module Base
 
 	recipe Recycle Gas Tank
 	{
-		destroy SmallGasTank1/SmallGasTank2/SmallGasTank3/SmallGasTank8/NormalGasTank8/BigGasTank8/U1550LGasTank2/KZ1KgasTank,
+		destroy NormalGasTank1/NormalGasTank2/NormalGasTank3/NormalGasTank8/BigGasTank1/BigGasTank2/BigGasTank3/SmallGasTank1/SmallGasTank2/SmallGasTank3/SmallGasTank8,
+		BlowTorch=5,
+		keep WeldingMask,
+		
+		Result:SheetMetal=2,
+		Time:300.0,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+
+	recipe Recycle Other Gas Tank
+	{
+		destroy U1550LGasTank2/KZ1KgasTank,
 		BlowTorch=5,
 		keep WeldingMask,
 		
 		Result:SheetMetal=1,
-		Time:150.0,
-		SkillRequired:MetalWelding=2,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-		Category:Welding,
-	}
-
-	recipe Recycle Gas Tank
-	{
-		destroy NormalGasTank1/NormalGasTank2/NormalGasTank3/BigGasTank1/BigGasTank2/BigGasTank3,
-		BlowTorch=5,
-		keep WeldingMask,
-		
-		Result:SheetMetal=2,
-		Time:150.0,
+		Time:300.0,
 		SkillRequired:MetalWelding=2,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
@@ -268,7 +281,7 @@ module Base
 		keep WeldingMask,
 		
 		Result:ScrapMetal=4,
-		Time:150.0,
+		Time:300.0,
 		SkillRequired:MetalWelding=2,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
@@ -281,7 +294,7 @@ module Base
 		keep WeldingMask,
 		
 		Result:ScrapMetal=2,
-		Time:150.0,
+		Time:300.0,
 		SkillRequired:MetalWelding=2,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
@@ -289,12 +302,26 @@ module Base
 
 	recipe Recycle Door
 	{
-		destroy FrontCarDoor1/FrontCarDoor2/FrontCarDoor3/RearCarDoor1/RearCarDoor2/RearCarDoor3/RearCarDoorDouble1/RearCarDoorDouble2/RearCarDoorDouble3/FrontCarDoor8/RearCarDoor8/RearCarDoorDouble8/U1550LDoor2/93townCarFrontDoor1/93townCarRearDoor1,
+		destroy FrontCarDoor1/FrontCarDoor2/FrontCarDoor3/RearCarDoor1/RearCarDoor2/RearCarDoor3/RearCarDoorDouble1/RearCarDoorDouble2/RearCarDoorDouble3/FrontCarDoor8/RearCarDoor8/RearCarDoorDouble8,
 		BlowTorch=5,
 		keep WeldingMask,
 		
 		Result:SmallSheetMetal=2,
-		Time:150.0,
+		Time:300.0,
+		OnCreate:GiveBack_ElectronicScrap,
+		SkillRequired:MetalWelding=2,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+		Category:Welding,
+	}
+
+	recipe Recycle Other Door
+	{
+		destroy 93townCarFrontDoor1/93townCarRearDoor1/McLarenF1Door3/IsoContainerDoubleTrunkDoor2/FrontRightV100Door2/RearV100Door2/ECTO1CarRearDoor2/ECTO1CarFrontDoor2/E150CarFrontDoor2/U1550LDoor2/88ChevyS10CarFrontDoor2/P19ACarFrontDoor2/M151A2LeftDoor2/FrontLeftV100Door2/DG70Door3/E150CarSlideDoor2/R32Door3/M911CarFrontDoor2/RearM113Door3/RearM113Door2/RearM113Door1/FrontM113Door2/FrontM113Door3/FrontM113Door1/89BroncoCarFrontDoor2/M998CarRearDoor2/M151A2RightDoor2/82JeepJ10CarFrontDoor2/U1550LTrailerDoor2/M998CarFrontDoor2/M35A2Door2/M49PumpDoor2/97BushDoor2/90pierceArrowFrontDoor2/90pierceArrowRearDoor2,
+		BlowTorch=5,
+		keep WeldingMask,
+		
+		Result:SmallSheetMetal=2,
+		Time:300.0,
 		OnCreate:GiveBack_ElectronicScrap,
 		SkillRequired:MetalWelding=2,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
@@ -308,34 +335,31 @@ module Base
 		keep WeldingMask,
 		
 		Result:SheetMetal=2,
-		Time:150.0,
+		Time:300.0,
 		SkillRequired:MetalWelding=2,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
 	}
 
-	recipe Recycle Other Doors
-	{
-		destroy McLarenF1Door3/IsoContainerDoubleTrunkDoor2/FrontRightV100Door2/RearV100Door2/ECTO1CarRearDoor2/ECTO1CarFrontDoor2/E150CarFrontDoor2/U1550LDoor2/88ChevyS10CarFrontDoor2/P19ACarFrontDoor2/M151A2LeftDoor2/FrontLeftV100Door2/DG70Door3/E150CarSlideDoor2/R32Door3/M911CarFrontDoor2/RearM113Door3/RearM113Door2/RearM113Door1/FrontM113Door2/FrontM113Door3/FrontM113Door1/89BroncoCarFrontDoor2/M998CarRearDoor2/M151A2RightDoor2/82JeepJ10CarFrontDoor2/U1550LTrailerDoor2/M998CarFrontDoor2/M35A2Door2/M49PumpDoor2/97BushDoor2/90pierceArrowFrontDoor2/90pierceArrowRearDoor2,
-		BlowTorch=5,
-		keep WeldingMask,
-		
-		Result:SmallSheetMetal=2,
-		Time:150.0,
-		OnCreate:GiveBack_ElectronicScrap,
-		SkillRequired:MetalWelding=2,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-		Category:Welding,
-	}
-	
 	recipe Recycle Car Seat
 	{
-		destroy NormalCarSeat1/BigCarSeat1/SportCarSeat1/NormalCarSeat2/BigCarSeat2/SportCarSeat2/NormalCarSeat3/BigCarSeat3/SportCarSeat3/NormalCarSeat8/BigCarSeat8/SportCarSeat8/M998CarSeat2/DodgeFrontSeat3/DodgeRearSeat3/R32FrontSeat3/R32RearSeat3/Seat0/U1550LSeat2/E150CarSeat2/80sPickupSeatFront2/80sPickupSeatRear2/ECTO1CarSeatfl2/ECTO1CarSeatfr2/ECTO1CarSeatrl2/ECTO1CarSeatrr2/M151A2CarSeatFront2/M151A2CarSeatRear2/KZ1Kseat/93townCarSeatFront1/93townCarSeatRear1/90pierceArrowSeat2,
+		destroy NormalCarSeat1/BigCarSeat1/SportCarSeat1/NormalCarSeat2/BigCarSeat2/SportCarSeat2/NormalCarSeat3/BigCarSeat3/SportCarSeat3/NormalCarSeat8/BigCarSeat8/SportCarSeat8,
 		keep Wrench,
 		keep Screwdriver,
 
 		Result:Thread=2,
-		Time:150.0,
+		Time:300.0,
+		OnCreate:GiveBack_CarSeatStuff,
+	}
+
+	recipe Recycle Other Car Seat
+	{
+		destroy M998CarSeat2/DodgeFrontSeat3/DodgeRearSeat3/R32FrontSeat3/R32RearSeat3/Seat0/U1550LSeat2/E150CarSeat2/80sPickupSeatFront2/80sPickupSeatRear2/ECTO1CarSeatfl2/ECTO1CarSeatfr2/ECTO1CarSeatrl2/ECTO1CarSeatrr2/M151A2CarSeatFront2/M151A2CarSeatRear2/KZ1Kseat/93townCarSeatFront1/93townCarSeatRear1/90pierceArrowSeat2,
+		keep Wrench,
+		keep Screwdriver,
+
+		Result:Thread=2,
+		Time:300.0,
 		OnCreate:GiveBack_CarSeatStuff,
 	}
 
@@ -346,7 +370,7 @@ module Base
 		keep WeldingMask,
 		
 		Result:MetalBar=4,
-		Time:150.0,
+		Time:300.0,
 		SkillRequired:MetalWelding=2,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
@@ -359,7 +383,7 @@ module Base
 		keep WeldingMask,
 		
 		Result:SheetMetal=2,
-		Time:150.0,
+		Time:300.0,
 		SkillRequired:MetalWelding=2,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
@@ -372,7 +396,7 @@ module Base
 		keep WeldingMask,
 		
 		Result:SheetMetal=2,
-		Time:150.0,
+		Time:300.0,
 		SkillRequired:MetalWelding=2,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
@@ -630,22 +654,6 @@ module Base
 		AnimNode:Disassemble,
 	}
 	
-	recipe Make Engine Part
-	{
-		ScrapMetal=2,
-		BlowTorch=2,
-		keep [Recipe.GetItemTypes.Hammer],
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:EngineParts,
-		Time:90,
-		Category:Welding,
-		SkillRequired:MetalWelding=2,		
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
-		Sound:Hammering,
-		AnimNode:Disassemble,
-	}
-	
 	recipe Make 25 Nails
 	{
 		SmallSheetMetal=1,
@@ -704,7 +712,7 @@ module Base
 
 	recipe Make Welding Rods
 	{
-		ScrapMetal=2,
+		ScrapMetal=4,
 		BlowTorch=2,
 		keep [Recipe.GetItemTypes.Saw],
 		keep [Recipe.GetItemTypes.Hammer],
@@ -728,6 +736,22 @@ module Base
 		
 		Result:Wire,
 		Time:100,
+        Category:Electrical,
+		SkillRequired:Electricity=1,
+		OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
+		Sound:Dismantle,
+		AnimNode:Disassemble,
+    }
+
+    recipe Make Electric Wire
+    {
+        ScrapMetal=1,
+        BlowTorch=2,
+		keep [Recipe.GetItemTypes.Screwdriver],
+		keep [Recipe.GetItemTypes.WeldingMask],
+		
+		Result:Wire,
+		Time:300,
         Category:Electrical,
 		SkillRequired:Electricity=1,
 		OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
@@ -785,7 +809,7 @@ module Base
 
 /************************ Pots and Pans ************************/
 
-	recipe Make a Cooking Pot
+	recipe Make Cooking Pot
 	{
 	   SheetMetal=2,
        ScrapMetal=2,
@@ -805,7 +829,7 @@ module Base
 
 	}
 
-	recipe Make a Frying Pan
+	recipe Make Frying Pan
 	{
 	   SmallSheetMetal=1,
        MetalBar=1,
@@ -825,7 +849,7 @@ module Base
 
 	}
 	
-    recipe Make a Saucepan
+    recipe Make Saucepan
 	{
 	   SmallSheetMetal=2,
        MetalBar=1,
@@ -845,7 +869,7 @@ module Base
 
 	}
 
-    recipe Make a Roasting Pan
+    recipe Make Roasting Pan
 	{
 	   SmallSheetMetal=1,
        keep [Recipe.GetItemTypes.Hammer],
@@ -859,7 +883,7 @@ module Base
 
 	}
 
-    recipe Make a Baking Tray
+    recipe Make Baking Tray
 	{
 	   SmallSheetMetal=1,
 	   keep [Recipe.GetItemTypes.Hammer],
