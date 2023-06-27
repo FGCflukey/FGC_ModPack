@@ -944,7 +944,7 @@ module Base
 		OnGiveXP:Recipe.OnGiveXP.None,
     }
 
-	recipe Make NormalTire1
+	recipe Make Standard Regular Tire
 	{
 		keep LugWrench,    			
 		MetalBar=2,
@@ -960,7 +960,7 @@ module Base
 		
 	}
 	
-	recipe Make NormalTire2
+	recipe Make Heavy Regular Tire
 	{
 		keep LugWrench,    			
 		MetalBar=2,
@@ -976,7 +976,7 @@ module Base
 		
 	}
 
-	recipe Make NormalTire3
+	recipe Make Sport Regular Tire
 	{
 		keep LugWrench,    			
 		MetalBar=2,
@@ -992,7 +992,7 @@ module Base
 		
 	}
 	
-	recipe Make ModernTire3
+	recipe Make Sport Performance Tire
 	{
 		keep LugWrench,    			
 		MetalBar=2,
@@ -1008,7 +1008,7 @@ module Base
 		
 	}
 	
-	recipe Make ModernTire2
+	recipe Make Heavy Performance Tire
 	{
 		keep LugWrench,    			
 		MetalBar=2,
@@ -1021,10 +1021,9 @@ module Base
 		Time:600.0,
 		Category:Mechanics,
 		SkillRequired:MetalWelding=4,		
-		
 	}
 	
-	recipe Make ModernTire1
+	recipe Make Standard Performance Tire
 	{
 		keep LugWrench,    			
 		MetalBar=2,
@@ -1037,10 +1036,9 @@ module Base
 		Time:600.0,
 		Category:Mechanics,
 		SkillRequired:MetalWelding=4,		
-		
 	}
 
-	recipe Make Chain Protection for Car
+	recipe Make Chain Protection for Car Tires
 	{
 		WeldingRods=4,
 		MetalBar=4,
@@ -1055,7 +1053,6 @@ module Base
 		Time:600.0,
 		Category:Mechanics,
 		SkillRequired:MetalWelding=4,		
-		
 	}
 
 	recipe Make Roof Lights for Car
@@ -1071,7 +1068,6 @@ module Base
 		Time:300.0,
 		Category:Mechanics,
 		SkillRequired:MetalWelding=4;Electricity=2,		
-		
 	}
 
 }
