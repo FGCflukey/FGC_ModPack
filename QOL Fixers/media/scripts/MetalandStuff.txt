@@ -750,7 +750,7 @@ module Base
 		keep [Recipe.GetItemTypes.Screwdriver],
 		keep [Recipe.GetItemTypes.WeldingMask],
 		
-		Result:Wire,
+		Result:Radio.ElectricWire,
 		Time:300,
         Category:Electrical,
 		SkillRequired:Electricity=1,
