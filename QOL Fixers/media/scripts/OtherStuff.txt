@@ -95,7 +95,7 @@ module Base
 		Icon				= LightBulbTwelvePack,
 	}
 
-     item Note_Flukey
+    item Note_Flukey
     {
         Type = Normal,
         DisplayName = Note,
@@ -332,6 +332,64 @@ module Base
 		Result:HandShovel,
 		Sound:PZ_Hammer,
 		Time:120.0,
+		Category:Survivalist,
+	}
+	
+	recipe Make Hinges
+	{
+		ScrapMetal,
+		keep [Recipe.GetItemTypes.Screwdriver],
+		keep [Recipe.GetItemTypes.Hammer],		
+
+		Result:Hinge=2,
+		Sound:PZ_Hammer,
+		Time:150.0,
+		Category:Survivalist,
+	}
+	
+	recipe Make Bucket
+	{
+		ScrapMetal,
+		SheetMetal,
+		Wire=1,
+		Screws=2,
+		BlowTorch=5,
+		keep [Recipe.GetItemTypes.Screwdriver],
+		keep [Recipe.GetItemTypes.Hammer],
+		keep [Recipe.GetItemTypes.WeldingMask],
+
+		Result:BucketEmpty,,
+		Sound:PZ_Hammer,
+		Time:150.0,
+		Category:Survivalist,
+	}
+
+	recipe Make Doorknob
+	{
+		ScrapMetal,
+		SmallSheetMetal,
+		keep [Recipe.GetItemTypes.Screwdriver],
+		keep [Recipe.GetItemTypes.Hammer],		
+
+		Result:Doorknob,
+		Sound:PZ_Hammer,
+		Time:150.0,
+		Category:Survivalist,
+	}
+
+	recipe Make Shovel
+	{
+		Rope,
+		SheetMetal,
+		WoodenStick,
+		DuctTape=2,
+		Screws=2,
+		keep [Recipe.GetItemTypes.Screwdriver],
+		keep [Recipe.GetItemTypes.Hammer],		
+
+		Result:Doorknob,
+		Sound:PZ_Hammer,
+		Time:150.0,
 		Category:Survivalist,
 	}
 
