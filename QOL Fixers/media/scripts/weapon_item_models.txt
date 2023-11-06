@@ -1,0 +1,18 @@
+module Base
+{
+  
+	model CleaningKit
+	{
+		mesh = WorldItems/cleaningkit_model,
+		texture = WorldItems/cleaningkit_texture,
+		scale = 1.8,
+	}
+
+	model FireKlean
+	{
+		mesh = WorldItems/fireklean_model,
+		texture = WorldItems/fireklean_texture,
+		scale = 1.8,
+	}
+
+}
