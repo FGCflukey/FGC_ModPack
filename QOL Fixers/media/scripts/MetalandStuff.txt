@@ -669,6 +669,19 @@ module Base
 
 	recipe Make Box of Nails
 	{
+		SmallSheetMetal=3,
+		BlowTorch=2,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		
+		Result:NailsBox,
+		Time: 120,
+		Category:Welding,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+		AnimNode:Disassemble,
+	}
+
+	recipe Make Box of Nails
+	{
 		SheetMetal=1,
 		BlowTorch=2,
 		keep [Recipe.GetItemTypes.WeldingMask],
@@ -689,6 +702,21 @@ module Base
 		
 		Result:Screws=5,
 		Time: 60,
+		Category:Welding,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+		Sound:Dismantle,
+		AnimNode:Disassemble,
+	}
+
+	recipe Make Box of Screws
+	{
+		SmallSheetMetal=3,
+		BlowTorch=2,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		keep [Recipe.GetItemTypes.Screwdriver],
+		
+		Result:ScrewsBox,
+		Time: 120,
 		Category:Welding,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
 		Sound:Dismantle,
