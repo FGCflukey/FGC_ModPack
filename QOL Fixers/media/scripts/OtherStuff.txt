@@ -539,6 +539,21 @@ module Base
 		Sound:Dismantle,		
 	}
 
+	recipe Dismantle Remote Controller
+	{
+		destroy RemoteCraftedV1/RemoteCraftedV2/RemoteCraftedV3,
+		keep [Recipe.GetItemTypes.Screwdriver],
+		
+		Result:ElectronicsScrap,
+		Time:30.0,	
+		OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
+		Category:Electrical,
+		AnimNode:Disassemble,
+		Prop1:Screwdriver,
+		Prop2:CDplayer,
+		Sound:Dismantle,		
+	}
+
     recipe Dismantle Alarm Clock
     {
        destroy AlarmClock2,
@@ -559,6 +574,26 @@ module Base
 		keep [Recipe.GetItemTypes.Scissors],
 		
 		Result:LeatherStrips=2,
+		CanBeDoneFromFloor:true,
+		Time:100.0,	
+	}
+
+	recipe Rip Holster into Strips
+	{
+		destroy HolsterSimple,
+		keep [Recipe.GetItemTypes.Scissors],
+		
+		Result:LeatherStrips=4,
+		CanBeDoneFromFloor:true,
+		Time:100.0,	
+	}
+
+	recipe Rip Double Holster into Strips
+	{
+		destroy HolsterDouble,
+		keep [Recipe.GetItemTypes.Scissors],
+		
+		Result:LeatherStrips=5,
 		CanBeDoneFromFloor:true,
 		Time:100.0,	
 	}
