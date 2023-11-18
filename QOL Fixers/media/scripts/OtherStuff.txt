@@ -341,20 +341,23 @@ module Base
 		keep [Recipe.GetItemTypes.Screwdriver],
 		keep [Recipe.GetItemTypes.Hammer],
 		keep [Recipe.GetItemTypes.Saw],
-
+		keep [Recipe.GetItemTypes.WeldingMask],
+		
 		Result:Hinge=2,
 		Sound:PZ_Hammer,
 		Time:150.0,
 		Category:Survivalist,
+		SkillRequired:MetalWelding=2,
 	}
 	
 	recipe Make Bucket
 	{
+		BlowTorch=2,
 		ScrapMetal,
 		SheetMetal,
 		Wire=1,
 		Screws=2,
-		BlowTorch=5,
+		keep [Recipe.GetItemTypes.WeldingMask],
 		keep [Recipe.GetItemTypes.Screwdriver],
 		keep [Recipe.GetItemTypes.Hammer],
 		keep [Recipe.GetItemTypes.WeldingMask],
@@ -363,12 +366,16 @@ module Base
 		Sound:PZ_Hammer,
 		Time:150.0,
 		Category:Survivalist,
+		SkillRequired:MetalWelding=2,
 	}
 
 	recipe Make Doorknob
 	{
+
+		BlowTorch=2,
 		ScrapMetal,
 		SmallSheetMetal,
+		keep [Recipe.GetItemTypes.WeldingMask],
 		keep [Recipe.GetItemTypes.Screwdriver],
 		keep [Recipe.GetItemTypes.Hammer],		
 
@@ -376,15 +383,16 @@ module Base
 		Sound:PZ_Hammer,
 		Time:150.0,
 		Category:Survivalist,
+		SkillRequired:MetalWelding=2,
 	}
 
 	recipe Make Shovel
 	{
-		Rope,
+		BlowTorch=2,
 		SheetMetal,
 		WoodenStick,
-		DuctTape=2,
 		Screws=2,
+		keep [Recipe.GetItemTypes.WeldingMask],
 		keep [Recipe.GetItemTypes.Screwdriver],
 		keep [Recipe.GetItemTypes.Hammer],		
 
@@ -392,6 +400,88 @@ module Base
 		Sound:PZ_Hammer,
 		Time:150.0,
 		Category:Survivalist,
+		SkillRequired:MetalWelding=2,
+	}
+
+	recipe Make Pipe Wrench 
+	{
+		BlowTorch=2,
+		WeldingRods=2,
+		SmallSheetMetal=2,
+		MetalBar=1,
+		ScrapMetal=5,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		
+		Result:PipeWrench,
+		Time:150.0,
+		Category:Welding,
+		SkillRequired:MetalWelding=2,
+	}
+	
+	recipe Make Lug Wrench 
+	{
+		BlowTorch=2,
+		WeldingRods=2,
+		SmallSheetMetal=1,
+		MetalBar=2,
+		ScrapMetal=2,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		
+		Result:LugWrench,
+		Time:150.0,
+		Category:Welding,
+		SkillRequired:MetalWelding=2;Mechanics=2,
+	}
+	
+	recipe Make Jack 
+	{
+		BlowTorch=2,
+		WeldingRods=2,
+		SmallSheetMetal=3,
+		MetalBar=3,
+		ScrapMetal=5,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		
+		Result:Jack,
+		Time:150.0,
+		Category:Welding,
+		SkillRequired:MetalWelding=2;Mechanics=2,
+	}
+	
+	recipe Make Wrench 
+	{
+		BlowTorch=2,
+		WeldingRods=2,
+		SmallSheetMetal=2,
+		MetalBar=1,
+		ScrapMetal=3,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		
+		Result:Wrench,
+		Time:150.0,
+		Category:Welding,
+		SkillRequired:MetalWelding=2,
+	}
+
+	recipe Make Bag of Gravel
+	{
+		EmptySandbag,
+		Stone=5,
+		keep [Recipe.GetItemTypes.Hammer],
+
+		Result:Gravelbag,
+		Time:200.0,
+		Category:Carpentry,
+	}
+	
+	recipe Make Bag of Sand
+	{
+		Gravelbag,
+		keep [Recipe.GetItemTypes.Hammer],
+
+		Result:Sandbag,
+		Time:200.0,
+		Category:Carpentry,
 	}
 
 	recipe Make Sack
@@ -404,6 +494,120 @@ module Base
 		Sound:PZ_ClothesRipping,
 		Time:300.0,
 		Category:Survivalist,
+	}
+
+	recipe Extract Gunpowder
+	{
+		Sparklers=1,
+		
+		Result:GunPowder=10,
+		Time:150.0,
+		Category:Carpentry,
+	}
+
+	recipe Make Tarp
+	{
+		Garbagebag=2,
+		RippedSheets=4,
+		
+		Result:Tarp,
+		Time:200.0,
+		CanBeDoneFromFloor:false,
+		Sound:FixWithTape,
+		Category:Tailoring,
+	}
+
+	recipe Make Garbage Bags from Tarp
+	{
+		keep Scissors,
+		Tarp,
+		
+		Result:Garbagebag=4,
+		Time:150.0,
+		Category:Survivalist,
+		CanBeDoneFromFloor:true,
+	}	
+	
+	recipe Make Garbage Bags
+	{
+		keep Scissors,
+		Plasticbag/GroceryBag1/GroceryBag2/GroceryBag3/GroceryBag4,
+
+		Result:Garbagebag,
+		Time:150.0,
+		Category:Recycling,
+		CanBeDoneFromFloor:true,
+	}
+
+	recipe Make Bullet Proof Vest
+	{
+        keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle/Nails,
+		keep Scissors,
+		Thread=2,
+		Sheet,
+		LeatherStrips=10,
+		SmallSheetMetal=4,
+		Button=5,
+		Glue=5,
+		
+		Result:Vest_BulletCivilian,
+		Time:600.0,
+		SkillRequired:MetalWelding=4;Tailoring=4,
+		Category:Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring20,
+    }
+
+    recipe Carve Buttons from Wood
+	{
+		Plank,
+		keep [Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Button=10,
+		Time:200.0,
+		SkillRequired:Woodwork=2,
+		Category:Carpentry,
+		OnGiveXP:Recipe.OnGiveXP.WoodWork2,
+	}
+
+    recipe Carve Buttons from Log
+	{
+		Log,
+		keep [Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Button=30,
+		Time:400.0,
+		SkillRequired:Woodwork=2,
+		Category:Carpentry,
+		OnGiveXP:Recipe.OnGiveXP.WoodWork2,
+	}
+
+	recipe Make Welding Mask
+	{
+		SmallSheetMetal=4,
+		Nails=5,
+		Plank=1,
+		Glasses/Glasses_SafetyGoggles/Glasses_Shooting/Glasses_SkiGoggles/Glasses_Sun/Glasses_Aviators=1,
+		keep [Recipe.GetItemTypes.Hammer],
+		keep [Recipe.GetItemTypes.Saw],
+		
+		Result:WeldingMask,
+		Time:150.0,
+		Category:Welding,
+		Sound:BlowTorch,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding4,
+	}
+
+	recipe Scrap Jewelery
+    {
+		keep [Recipe.GetItemTypes.Hammer],
+		Necklace_DogTag/Necklace_Gold/Necklace_GoldRuby/Necklace_GoldDiamond/Necklace_Silver/Necklace_SilverSapphire/Necklace_SilverCrucifix/Necklace_SilverDiamond/Necklace_Crucifix/Necklace_YingYang/Necklace_Pearl/NecklaceLong_Gold/NecklaceLong_GoldDiamond/NecklaceLong_Silver/NecklaceLong_SilverEmerald/NecklaceLong_SilverSapphire/NecklaceLong_SilverDiamond/NecklaceLong_Amber/NoseRing_Gold/NoseRing_Silver/NoseStud_Gold/NoseStud_Silver/Earring_LoopLrg_Gold/Earring_LoopLrg_Silver/Earring_LoopMed_Silver/Earring_LoopMed_Gold/Earring_LoopSmall_Silver_Both/Earring_LoopSmall_Gold_Both/Earring_LoopSmall_Gold_Top/Earring_LoopSmall_Silver_Top/Earring_Stud_Gold/Earring_Stud_Silver/Earring_Stone_Sapphire/Earring_Stone_Emerald/Earring_Stone_Ruby/Earring_Pearl/Earring_Dangly_Sapphire/Earring_Dangly_Emerald/Earring_Dangly_Ruby/Earring_Dangly_Diamond/Earring_Dangly_Pearl/Ring_Right_MiddleFinger_Gold/Ring_Left_MiddleFinger_Gold/Ring_Right_RingFinger_Gold/Ring_Left_RingFinger_Gold/Ring_Right_MiddleFinger_Silver/Ring_Left_MiddleFinger_Silver/Ring_Right_RingFinger_Silver/Ring_Left_RingFinger_Silver/Ring_Right_MiddleFinger_SilverDiamond/Ring_Left_MiddleFinger_SilverDiamond/Ring_Right_RingFinger_SilverDiamond/Ring_Left_RingFinger_SilverDiamond/Ring_Right_MiddleFinger_GoldRuby/Ring_Left_MiddleFinger_GoldRuby/Ring_Right_RingFinger_GoldRuby/Ring_Left_RingFinger_GoldRuby/Ring_Right_MiddleFinger_GoldDiamond/Ring_Left_MiddleFinger_GoldDiamond/Ring_Right_RingFinger_GoldDiamond/Ring_Left_RingFinger_GoldDiamond/Bracelet_BangleRightGold/Bracelet_BangleLeftGold/Bracelet_ChainRightGold/Bracelet_ChainLeftGold/Bracelet_BangleRightSilver/Bracelet_BangleLeftSilver/Bracelet_ChainRightSilver/Bracelet_ChainLeftSilver/BellyButton_DangleGold/BellyButton_DangleGoldRuby/BellyButton_DangleSilver/BellyButton_DangleSilverDiamond/BellyButton_RingGold/BellyButton_RingGoldDiamond/BellyButton_RingGoldRuby/BellyButton_RingSilver/BellyButton_RingSilverAmethyst/BellyButton_RingSilverDiamond/BellyButton_RingSilverRuby/BellyButton_StudGold/BellyButton_StudGoldDiamond/BellyButton_StudSilver/BellyButton_StudSilverDiamond,
+
+		Result:ScrapMetal,
+		Time:150.0,
+		Category:Welding,
+		CanBeDoneFromFloor:false,
+		Sound:Hammering,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
 	}
 	
 	recipe Make Sheet
@@ -437,6 +641,18 @@ module Base
 		Category:Survivalist,
 	}
 
+	recipe Make Disinfectant
+    {
+		Bleach;1,
+		Water;5,
+		PopBottleEmpty/WaterBottleEmpty,
+		
+		Result:Disinfectant,
+		Time:100.0,
+		Category:Survivalist,
+		CanBeDoneFromFloor: True,
+    }
+
 	recipe Make Vinegar
 	{
 		WhiskeyFull/Wine/Wine2;10,
@@ -450,6 +666,21 @@ module Base
 		Time:600.0,
 		Category:Survivalist,
 		SkillRequired:Cooking=4, 
+	}
+
+	 recipe Make Peanut Butter
+     {
+		keep MortarPestle,
+		Peanuts=5,
+		OilVegetable=1,
+		Sugar=1,
+		
+		Result:PeanutButter=2,
+		Time:200.0,
+		Category:Cooking,
+		CanBeDoneFromFloor:true,
+		SkillRequired:PlantScavenging=10;Cooking=2,
+		OnGiveXP:Recipe.OnGiveXP.Cooking10,
 	}
 
 	recipe Make Vinegar
@@ -617,7 +848,7 @@ module Base
 		Time:60.0,
 	}
 	
-	recipe Make a Golf Club
+	recipe Make Golf Club
 	{
 		MetalPipe=2,
 		ScrapMetal=2,
@@ -628,7 +859,70 @@ module Base
 		
 		Result:Golfclub,
 		CanBeDoneFromFloor:true,
-		Time:300.0,		
+		Sound:BlowTorch,
+		Time:300.0,
+		Category:Welding,
+		SkillRequired:MetalWelding=4,
+	}
+
+	recipe Make Sledgehammer
+    {
+		BlowTorch=5,
+		WeldingRods=2,
+		ScrapMetal=20,
+		MetalPipe=2,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		
+		Result:Sledgehammer,
+		Time:600.0,
+		Category:Welding,
+		SkillRequired:MetalWelding=8,
+		CanBeDoneFromFloor:true,
+		Sound:BlowTorch,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding12,
+	}
+
+	recipe Make Screwdriver
+	{
+		Screws=2,
+		ScrapMetal=5,
+		WoodenStick=1,
+		keep [Recipe.GetItemTypes.Hammer],
+		keep [Recipe.GetItemTypes.Saw],
+		
+		Result:Screwdriver,
+		Time:200.0,
+		Category:Tools,
+		OnGiveXP:Recipe.OnGiveXP.WoodWork3,
+	}
+	
+	recipe Make Scissors
+	{
+		Screws=1,
+		ScrapMetal=6,
+		WoodenStick=1,
+		keep [Recipe.GetItemTypes.Hammer],
+		
+		Result:Scissors,
+		Time:200.0,
+		Category:Tools,
+		OnGiveXP:Recipe.OnGiveXP.WoodWork3,
+	}	
+	
+	recipe Make Hammer
+	{
+		keep [Recipe.GetItemTypes.WeldingMask],
+		BlowTorch=2,
+		WeldingRods=1,
+		Nails=5,
+		MetalBar=2,
+		ScrapMetal=5,
+		WoodenStick=1,
+		
+		Result:Hammer,
+		Time:200.0,
+		Category:Welding,
+		SkillRequired:MetalWelding=5,
 	}
 	
 	recipe Break Spear
