@@ -296,7 +296,7 @@ module Base
 		Charcoal,
 		[Recipe.GetItemTypes.StartFire],
 		Flour,
-		Water=3,
+		Water=2,
 		Vinegar=1,
 		
 		CanBeDoneFromFloor:true,
@@ -326,10 +326,10 @@ module Base
 
 	recipe Break Shovel Into Trowel
 	{
-		destroy Shovel,
+		destroy farming.Shovel,
 		keep [Recipe.GetItemTypes.Hammer],
 
-		Result:HandShovel,
+		Result:farming.HandShovel,
 		Sound:PZ_Hammer,
 		Time:120.0,
 		Category:Survivalist,
@@ -337,9 +337,10 @@ module Base
 	
 	recipe Make Hinges
 	{
-		ScrapMetal,
+		ScrapMetal/SmallSheetMetal,
 		keep [Recipe.GetItemTypes.Screwdriver],
-		keep [Recipe.GetItemTypes.Hammer],		
+		keep [Recipe.GetItemTypes.Hammer],
+		keep [Recipe.GetItemTypes.Saw],
 
 		Result:Hinge=2,
 		Sound:PZ_Hammer,
@@ -358,7 +359,7 @@ module Base
 		keep [Recipe.GetItemTypes.Hammer],
 		keep [Recipe.GetItemTypes.WeldingMask],
 
-		Result:BucketEmpty,,
+		Result:BucketEmpty,
 		Sound:PZ_Hammer,
 		Time:150.0,
 		Category:Survivalist,
@@ -387,7 +388,7 @@ module Base
 		keep [Recipe.GetItemTypes.Screwdriver],
 		keep [Recipe.GetItemTypes.Hammer],		
 
-		Result:Doorknob,
+		Result:farming.Shovel,
 		Sound:PZ_Hammer,
 		Time:150.0,
 		Category:Survivalist,
