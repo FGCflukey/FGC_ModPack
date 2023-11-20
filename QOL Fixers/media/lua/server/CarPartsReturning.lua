@@ -41,6 +41,8 @@ function GiveBack_ElectronicScrap(items, result, player)
 
 		player:getInventory():AddItem("Base.ElectronicsScrap");
 		player:getInventory():AddItem("Base.ElectronicsScrap");
+		player:getInventory():AddItem("Radio.ElectricWire");
+		player:getInventory():AddItem("Radio.ElectricWire");
 end
 
 function GetNeedle_OnCreate(items, result, player)
