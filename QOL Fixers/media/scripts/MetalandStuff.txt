@@ -774,7 +774,7 @@ module Base
     recipe Make Electric Wire
     {
         ScrapMetal=1,
-        BlowTorch=2,
+        BlowTorch=1,
 		keep [Recipe.GetItemTypes.Screwdriver],
 		keep [Recipe.GetItemTypes.WeldingMask],
 		
@@ -843,7 +843,7 @@ module Base
        ScrapMetal=2,
        Screws=4,
 	   BlowTorch=3,
-       WeldingRod=2,
+       WeldingRods=2,
 	   keep [Recipe.GetItemTypes.Screwdriver],
 	   keep [Recipe.GetItemTypes.Hammer],
 	   keep [Recipe.GetItemTypes.WeldingMask],
@@ -859,11 +859,11 @@ module Base
 
 	recipe Make Frying Pan
 	{
-	   SmallSheetMetal=1,
+	   SmallSheetMetal=2,
        MetalBar=1,
        Screws=2,
 	   BlowTorch=2,
-	   WeldingRod=1,
+	   WeldingRods=1,
 	   keep [Recipe.GetItemTypes.Screwdriver],
 	   keep [Recipe.GetItemTypes.Hammer],
 	   keep [Recipe.GetItemTypes.WeldingMask],
@@ -883,7 +883,7 @@ module Base
        MetalBar=1,
        Screws=2,
 	   BlowTorch=3,
-       WeldingRod=2,
+       WeldingRods=1,
 	   keep [Recipe.GetItemTypes.Screwdriver],
 	   keep [Recipe.GetItemTypes.Hammer],
 	   keep [Recipe.GetItemTypes.WeldingMask],
@@ -899,8 +899,12 @@ module Base
 
     recipe Make Roasting Pan
 	{
-	   SmallSheetMetal=1,
-       keep [Recipe.GetItemTypes.Hammer],
+	   SmallSheetMetal=2,
+	   BlowTorch=3,
+       WeldingRods=1,
+	   keep [Recipe.GetItemTypes.Screwdriver],
+	   keep [Recipe.GetItemTypes.Hammer],
+	   keep [Recipe.GetItemTypes.WeldingMask],
 	   		
 	   Result:RoastingPan,
 	   Time:200,
@@ -913,8 +917,12 @@ module Base
 
     recipe Make Baking Tray
 	{
-	   SmallSheetMetal=1,
+	   SmallSheetMetal=2,
+	   BlowTorch=3,
+       WeldingRods=1,
+	   keep [Recipe.GetItemTypes.Screwdriver],
 	   keep [Recipe.GetItemTypes.Hammer],
+	   keep [Recipe.GetItemTypes.WeldingMask],
 	   		
 	   Result:BakingTray,
 	   Time:200,
