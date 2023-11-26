@@ -166,6 +166,7 @@ module Base
 		Result:SheetMetal=2,
 		Time:300.0,
 		SkillRequired:MetalWelding=2,
+		AllowDestroyedItem:true,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
 	}
@@ -179,6 +180,7 @@ module Base
 		Result:SheetMetal=2,
 		Time:300.0,
 		SkillRequired:MetalWelding=2,
+		AllowDestroyedItem:true,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
 	}
@@ -192,6 +194,7 @@ module Base
 		Result:SheetMetal=2,
 		Time:300.0,
 		SkillRequired:MetalWelding=2,
+		AllowDestroyedItem:true,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
 	}
@@ -205,6 +208,7 @@ module Base
 		Result:SheetMetal=2,
 		Time:300.0,
 		SkillRequired:MetalWelding=2,
+		AllowDestroyedItem:true,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
 	}
@@ -218,6 +222,7 @@ module Base
 		Result:SheetMetal=2,
 		Time:300.0,
 		SkillRequired:MetalWelding=2,
+		AllowDestroyedItem:true,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
 	}
@@ -231,6 +236,7 @@ module Base
 		Result:SheetMetal=2,
 		Time:300.0,
 		SkillRequired:MetalWelding=2,
+		AllowDestroyedItem:true,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
 	}
@@ -244,6 +250,7 @@ module Base
 		Result:SheetMetal=2,
 		Time:300.0,
 		SkillRequired:MetalWelding=2,
+		AllowDestroyedItem:true,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
 	}
@@ -257,6 +264,7 @@ module Base
 		Result:SheetMetal=2,
 		Time:300.0,
 		SkillRequired:MetalWelding=2,
+		AllowDestroyedItem:true,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
 	}
@@ -270,6 +278,7 @@ module Base
 		Result:SheetMetal=1,
 		Time:300.0,
 		SkillRequired:MetalWelding=2,
+		AllowDestroyedItem:true,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
 	}
@@ -283,6 +292,7 @@ module Base
 		Result:ScrapMetal=4,
 		Time:300.0,
 		SkillRequired:MetalWelding=2,
+		AllowDestroyedItem:true,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
 	}
@@ -296,6 +306,7 @@ module Base
 		Result:ScrapMetal=2,
 		Time:300.0,
 		SkillRequired:MetalWelding=2,
+		AllowDestroyedItem:true,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
 	}
@@ -310,6 +321,7 @@ module Base
 		Time:300.0,
 		OnCreate:GiveBack_ElectronicScrap,
 		SkillRequired:MetalWelding=2,
+		AllowDestroyedItem:true,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
 	}
@@ -324,6 +336,7 @@ module Base
 		Time:300.0,
 		OnCreate:GiveBack_ElectronicScrap,
 		SkillRequired:MetalWelding=2,
+		AllowDestroyedItem:true,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
 		Category:Welding,
 	}
@@ -504,6 +517,73 @@ module Base
 		keep [Recipe.GetItemTypes.Hammer],
 		
 		Result:ScrapMetal=6,
+		Time:60,
+		Category:Welding,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+		Sound:Hammering,
+		AnimNode:Disassemble,
+	}
+
+	recipe Scrap Rake
+	{
+		destroy LeafRake/Rake,
+		keep [Recipe.GetItemTypes.Hammer],
+		
+		Result:ScrapMetal,
+		Time:60,
+		Category:Welding,
+		Sound:Hammering,
+		AnimNode:Disassemble,
+		OnCreate:GiveHimStick_OnCreate,
+	}
+
+	recipe Scrap GardenFork
+	{
+		destroy GardenFork,
+		keep [Recipe.GetItemTypes.Hammer],
+		
+		Result:ScrapMetal=2,
+		Time:60,
+		Category:Welding,
+		Sound:Hammering,
+		AnimNode:Disassemble,
+		OnCreate:GiveHimStick_OnCreate,
+	}
+
+	recipe Scrap Shovel
+	{
+		destroy SnowShovel/Shovel/Shovel2,
+		keep [Recipe.GetItemTypes.Hammer],
+		
+		Result:ScrapMetal=2,
+		Time:60,
+		Category:Welding,
+		Sound:Hammering,
+		AnimNode:Disassemble,
+		OnCreate:GiveHimStick_OnCreate,
+	}
+
+	recipe Scrap GardenHoe
+	{
+		destroy GardenHoe,
+		keep [Recipe.GetItemTypes.Hammer],
+		
+		Result:ScrapMetal=2,
+		Time:60,
+		Category:Welding,
+		Sound:Hammering,
+		AnimNode:Disassemble,
+		OnCreate:GiveHimStick_OnCreate,
+	}
+
+	recipe Scrap BarBell
+	{
+		destroy BarBell,
+		BlowTorch=2,
+		keep [Recipe.GetItemTypes.Hammer],
+		keep [Recipe.GetItemTypes.WeldingMask],
+		
+		Result:ScrapMetal=4,
 		Time:60,
 		Category:Welding,
 		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,

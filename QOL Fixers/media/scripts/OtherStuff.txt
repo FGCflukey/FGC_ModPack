@@ -800,6 +800,20 @@ module Base
        Prop2:CDplayer,
     }
 
+    recipe Dismantle Amplifier
+    {
+       destroy Amplifier,
+       keep [Recipe.GetItemTypes.Screwdriver],
+
+       Result:ScrapMetal,
+       Time:30.0,
+       OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
+       Category:Electrical,
+       AnimNode:Disassemble,
+       Prop1:Screwdriver,
+       Prop2:CDplayer,
+    }
+
 	recipe Rip Belt into Strips
 	{
 		destroy Belt/Belt2,
