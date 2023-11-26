@@ -49,3 +49,8 @@ function GetNeedle_OnCreate(items, result, player)
 
 		player:getInventory():AddItem("Base.Needle");
 end
+
+function GiveHimStick_OnCreate(items, result, player)
+
+		player:getInventory():AddItem("Base.WoodenStick");
+end
