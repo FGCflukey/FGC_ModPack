@@ -956,4 +956,31 @@ module Base
 		CanBeDoneFromFloor:true,
 		Time:60.0,			
 	}
+
+	recipe Make Roll of Nylon Mesh
+	{
+		destroy Boxers_Silk_Black/Boxers_Silk_Red/StockingsBlack/StockingsBlackTrans/StockingsBlackSemiTrans/TightsBlack/TightsBlackTrans/TightsBlackSemiTrans/StockingsWhite/Shirt_Jockey01/Shirt_Jockey02/Shirt_Jockey03/Shirt_Jockey04/Shirt_Jockey05/Shirt_Jockey06,
+		keep [Recipe.GetItemTypes.Scissors],
+		
+		Result:Greenfire.RollNylon,
+		SkillRequired:Tailoring=2,
+		CanBeDoneFromFloor:true,
+		Time:200.0,	
+	}
+
+	recipe Make Grinder for Cannabis
+	{
+		ElectronicsScrap=2,
+		Radio.ElectricWire=2,
+		ScrapMetal=2,
+		SmallSheetMetal=1,
+		Screws=4,
+		keep [Recipe.GetItemTypes.Screwdriver],		
+		keep [Recipe.GetItemTypes.Scissors],
+		
+		Result:Greenfire.GFGrinder,
+		CanBeDoneFromFloor:true,
+		Time:400.0,		
+	}
+
 }
