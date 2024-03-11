@@ -113,6 +113,16 @@ module Base
        Fixer : ScrapMetal=1;MetalWelding=2,
 	}
 	
+	fixing Bastard Sword
+	{
+	   Require : BastardSword,
+	   GlobalItem : BlowTorch=5,
+	   ConditionModifier : 1.2,
+
+       Fixer : SmallSheetMetal=1;MetalWelding=2,
+	   Fixer : ScrapMetal=1;MetalWelding=2,
+	}
+	
 	recipe Make Axe
 	{
 	   TreeBranch/Plank,

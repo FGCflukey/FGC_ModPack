@@ -591,7 +591,7 @@ module Base
 		AnimNode:Disassemble,
 	}
 	
-	recipe Get Sheet Metal
+	recipe Make Sheet Metal
 	{
 		ScrapMetal=6,
 		BlowTorch=2,
@@ -607,7 +607,7 @@ module Base
 		AnimNode:Disassemble,
 	}
 	
-	recipe Get Small Sheet Metal
+	recipe Make Small Sheet Metal
 	{
 		ScrapMetal=2,
 		BlowTorch=2,
@@ -623,7 +623,7 @@ module Base
 		AnimNode:Disassemble,
 	}
 
-	recipe Get Metal Pipe
+	recipe Make Metal Pipe
 	{
 		SheetMetal=1,
 		BlowTorch=2,
@@ -637,7 +637,7 @@ module Base
 		AnimNode:Disassemble,
 	}
 	
-		recipe Get Metal Pipe
+		recipe Make Metal Pipe
 		{
 			SmallSheetMetal=2,
 			BlowTorch=2,
@@ -651,7 +651,7 @@ module Base
 			AnimNode:Disassemble,
 		}
 
-		recipe Get Metal Pipe
+		recipe Make Metal Pipe
 		{
 			ScrapMetal=4,
 			BlowTorch=2,
@@ -665,7 +665,7 @@ module Base
 			AnimNode:Disassemble,
 		}
 
-	recipe Get Metal Bar
+	recipe Make Metal Bar
 	{
 		SheetMetal=1,
 		BlowTorch=2,
@@ -679,7 +679,7 @@ module Base
 		AnimNode:Disassemble,
 	}
 
-		recipe Get Metal Bar
+		recipe Make Metal Bar
 		{
 			SmallSheetMetal=3,
 			BlowTorch=2,
@@ -693,7 +693,7 @@ module Base
 			AnimNode:Disassemble,
 		}
 
-		recipe Get Metal Bar
+		recipe Make Metal Bar
 		{
 			ScrapMetal=6,
 			BlowTorch=2,
@@ -707,7 +707,7 @@ module Base
 			AnimNode:Disassemble,
 		}
 	
-	recipe Get Jar Lid
+	recipe Make Jar Lid
 	{
 		SmallSheetMetal=1,
 		BlowTorch=1,
@@ -747,31 +747,31 @@ module Base
 		AnimNode:Disassemble,
 	}
 
-	recipe Make Box of Nails
-	{
-		SmallSheetMetal=3,
-		BlowTorch=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:NailsBox,
-		Time: 120,
-		Category:Welding,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
-		AnimNode:Disassemble,
-	}
+		recipe Make Box of Nails
+		{
+			SmallSheetMetal=3,
+			BlowTorch=2,
+			keep [Recipe.GetItemTypes.WeldingMask],
+			
+			Result:NailsBox,
+			Time: 120,
+			Category:Welding,
+			OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+			AnimNode:Disassemble,
+		}
 
-	recipe Make Box of Nails
-	{
-		SheetMetal=1,
-		BlowTorch=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:NailsBox,
-		Time: 120,
-		Category:Welding,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
-		AnimNode:Disassemble,
-	}
+		recipe Make Box of Nails
+		{
+			SheetMetal=1,
+			BlowTorch=2,
+			keep [Recipe.GetItemTypes.WeldingMask],
+			
+			Result:NailsBox,
+			Time: 120,
+			Category:Welding,
+			OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+			AnimNode:Disassemble,
+		}
 
 	recipe Make 25 Screws
 	{
@@ -788,35 +788,35 @@ module Base
 		AnimNode:Disassemble,
 	}
 
-	recipe Make Box of Screws
-	{
-		SmallSheetMetal=3,
-		BlowTorch=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		keep [Recipe.GetItemTypes.Screwdriver],
-		
-		Result:ScrewsBox,
-		Time: 120,
-		Category:Welding,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
-		Sound:Dismantle,
-		AnimNode:Disassemble,
-	}
+		recipe Make Box of Screws
+		{
+			SmallSheetMetal=3,
+			BlowTorch=2,
+			keep [Recipe.GetItemTypes.WeldingMask],
+			keep [Recipe.GetItemTypes.Screwdriver],
+			
+			Result:ScrewsBox,
+			Time: 120,
+			Category:Welding,
+			OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+			Sound:Dismantle,
+			AnimNode:Disassemble,
+		}
 
-	recipe Make Box of Screws
-	{
-		SheetMetal=1,
-		BlowTorch=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		keep [Recipe.GetItemTypes.Screwdriver],
-		
-		Result:ScrewsBox,
-		Time: 120,
-		Category:Welding,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
-		Sound:Dismantle,
-		AnimNode:Disassemble,
-	}
+		recipe Make Box of Screws
+		{
+			SheetMetal=1,
+			BlowTorch=2,
+			keep [Recipe.GetItemTypes.WeldingMask],
+			keep [Recipe.GetItemTypes.Screwdriver],
+			
+			Result:ScrewsBox,
+			Time: 120,
+			Category:Welding,
+			OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+			Sound:Dismantle,
+			AnimNode:Disassemble,
+		}
 
 	recipe Make Welding Rods
 	{
