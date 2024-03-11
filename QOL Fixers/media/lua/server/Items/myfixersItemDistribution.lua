@@ -1,4 +1,4 @@
-require 'Items/distributionTable'
+require "Items/Distributions"
 require "Items/SuburbsDistributions"
 require "Items/ProceduralDistributions"
 require "Vehicles/VehicleDistributions"
