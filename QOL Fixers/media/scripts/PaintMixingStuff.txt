@@ -58,7 +58,6 @@ module Base
 			
 			Result:PaintBlack,
 			Time:180.0,
-			OnTest:RecipeItemChecking.OnTestPacking,
 			OnGiveXP:Recipe.OnGiveXP.None,
 			Sound:OpenCannedFood,
 		}
@@ -87,7 +86,6 @@ module Base
 			
 			Result:PaintWhite,
 			Time:180.0,
-			OnTest:RecipeItemChecking.OnTestPacking,
 			OnGiveXP:Recipe.OnGiveXP.None,
 			Sound:OpenCannedFood,
 		}
@@ -116,7 +114,6 @@ module Base
 			
 			Result:PaintPink,
 			Time:180.0,
-			OnTest:RecipeItemChecking.OnTestPacking,
 			OnGiveXP:Recipe.OnGiveXP.None,
 			Sound:OpenCannedFood,
 		}
@@ -145,7 +142,6 @@ module Base
 			
 			Result:PaintYellow,
 			Time:180.0,
-			OnTest:RecipeItemChecking.OnTestPacking,
 			OnGiveXP:Recipe.OnGiveXP.None,
 			Sound:OpenCannedFood,
 		}
@@ -174,7 +170,6 @@ module Base
 			
 			Result:PaintRed,
 			Time:180.0,
-			OnTest:RecipeItemChecking.OnTestPacking,
 			OnGiveXP:Recipe.OnGiveXP.None,
 			Sound:OpenCannedFood,
 		}
@@ -219,7 +214,6 @@ module Base
 			
 			Result:PaintLightBrown,
 			Time:180.0,
-			OnTest:RecipeItemChecking.OnTestPacking,
 			OnGiveXP:Recipe.OnGiveXP.None,
 			Sound:OpenCannedFood,
 		}
@@ -233,7 +227,6 @@ module Base
 			
 			Result:PaintBrown,
 			Time:180.0,
-			OnTest:RecipeItemChecking.OnTestPacking,
 			OnGiveXP:Recipe.OnGiveXP.None,
 			Sound:OpenCannedFood,
 		}
@@ -262,7 +255,6 @@ module Base
 			
 			Result:PaintGreen,
 			Time:180.0,
-			OnTest:RecipeItemChecking.OnTestPacking,
 			OnGiveXP:Recipe.OnGiveXP.None,
 			Sound:OpenCannedFood,
 		}
@@ -291,7 +283,6 @@ module Base
 			
 			Result:PaintBlue,
 			Time:180.0,
-			OnTest:RecipeItemChecking.OnTestPacking,
 			OnGiveXP:Recipe.OnGiveXP.None,
 			Sound:OpenCannedFood,
 		}
@@ -305,7 +296,6 @@ module Base
 			
 			Result:PaintLightBlue,
 			Time:180.0,
-			OnTest:RecipeItemChecking.OnTestPacking,
 			OnGiveXP:Recipe.OnGiveXP.None,
 			Sound:OpenCannedFood,
 		}
@@ -319,7 +309,6 @@ module Base
 			
 			Result:PaintOrange,
 			Time:180.0,
-			OnTest:RecipeItemChecking.OnTestPacking,
 			OnGiveXP:Recipe.OnGiveXP.None,
 			Sound:OpenCannedFood,
 		}
@@ -333,7 +322,6 @@ module Base
 			
 			Result:PaintPurple,
 			Time:180.0,
-			OnTest:RecipeItemChecking.OnTestPacking,
 			OnGiveXP:Recipe.OnGiveXP.None,
 			Sound:OpenCannedFood,
 		}
@@ -347,7 +335,6 @@ module Base
 			
 			Result:PaintTurquoise,
 			Time:180.0,
-			OnTest:RecipeItemChecking.OnTestPacking,
 			OnGiveXP:Recipe.OnGiveXP.None,
 			Sound:OpenCannedFood,
 		}
@@ -361,7 +348,6 @@ module Base
 			
 			Result:PaintGrey,
 			Time:180.0,
-			OnTest:RecipeItemChecking.OnTestPacking,
 			OnGiveXP:Recipe.OnGiveXP.None,
 			Sound:OpenCannedFood,
 		}
@@ -376,7 +362,6 @@ module Base
 			
 			Result:PaintCyan,
 			Time:180.0,
-			OnTest:RecipeItemChecking.OnTestPacking,
 			OnGiveXP:Recipe.OnGiveXP.None,
 			Sound:OpenCannedFood,
 		}
