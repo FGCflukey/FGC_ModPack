@@ -1,0 +1,383 @@
+module Base
+{	
+	item Flour
+	{
+		DisplayCategory = Food,
+		Weight	=	1,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	0.05,
+		DisplayName	=	Flour,
+		Icon	=	Flour,
+		WorldStaticModel = Flour,
+		Tags = Flour,	
+		/*EvolvedRecipe = Soup:1;Stew:1,
+		Spice = true,
+		EvolvedRecipeName = Carrot,
+		FoodType = NoExplicit,		
+		Tags = Flour:DrainableSpice,	*/
+	}
+
+    item HairDyeBlonde
+    {
+        DisplayCategory = Appearance,
+        Weight	=	1,
+        Type	=	Drainable,
+        UseWhileEquipped	=	FALSE,
+        UseDelta	=	0.1,
+        DisplayName	=	Blonde Hair Dye,
+        Icon	=	HairDye,
+        HairDye = TRUE,
+        ColorRed = 212,
+        ColorGreen = 171,
+        ColorBlue = 69,
+        WorldStaticModel = HairDyeBlond,
+    }
+
+    item HairDyeBlack
+    {
+        DisplayCategory = Appearance,
+        Weight	=	1,
+        Type	=	Drainable,
+        UseWhileEquipped	=	FALSE,
+        UseDelta	=	0.1,
+        DisplayName	=	Black Hair Dye,
+        Icon	=	HairDye,
+        HairDye = TRUE,
+        ColorRed = 27,
+        ColorGreen = 23,
+        ColorBlue = 22,
+        WorldStaticModel = HairDyeBlackDarkBrown,
+    }
+
+		recipe Mix Black Paint
+		{
+			Flour=2,
+			destroy WaterPaintbucket,
+			HairDyeBlack=1,
+			
+			Result:PaintBlack,
+			Time:180.0,
+			OnTest:RecipeItemChecking.OnTestPacking,
+			OnGiveXP:Recipe.OnGiveXP.None,
+			Sound:OpenCannedFood,
+		}
+
+    item HairDyeWhite
+    {
+        DisplayCategory = Appearance,
+        Weight	=	1,
+        Type	=	Drainable,
+        UseWhileEquipped	=	FALSE,
+        UseDelta	=	0.1,
+        DisplayName	=	White Hair Dye,
+        Icon	=	HairDye,
+        HairDye = TRUE,
+        ColorRed = 202,
+        ColorGreen = 200,
+        ColorBlue = 192,
+        WorldStaticModel = HairDyeBlackWhite,
+    }
+
+		recipe Mix White Paint
+		{
+			Flour=2,
+			destroy WaterPaintbucket,
+			HairDyeWhite=1,
+			
+			Result:PaintWhite,
+			Time:180.0,
+			OnTest:RecipeItemChecking.OnTestPacking,
+			OnGiveXP:Recipe.OnGiveXP.None,
+			Sound:OpenCannedFood,
+		}
+
+    item HairDyePink
+    {
+        DisplayCategory = Appearance,
+        Weight	=	1,
+        Type	=	Drainable,
+        UseWhileEquipped	=	FALSE,
+        UseDelta	=	0.1,
+        DisplayName	=	Pink Hair Dye,
+        Icon	=	HairDye,
+        HairDye = TRUE,
+        ColorRed = 246,
+        ColorGreen = 83,
+        ColorBlue = 150,
+        WorldStaticModel = HairDyePink,
+    }
+
+		recipe Mix Pink Paint
+		{
+			Flour=2,
+			destroy WaterPaintbucket,
+			HairDyePink=1,
+			
+			Result:PaintPink,
+			Time:180.0,
+			OnTest:RecipeItemChecking.OnTestPacking,
+			OnGiveXP:Recipe.OnGiveXP.None,
+			Sound:OpenCannedFood,
+		}
+
+    item HairDyeYellow
+    {
+        DisplayCategory = Appearance,
+        Weight	=	1,
+        Type	=	Drainable,
+        UseWhileEquipped	=	FALSE,
+        UseDelta	=	0.1,
+        DisplayName	=	Yellow Hair Dye,
+        Icon	=	HairDye,
+        HairDye = TRUE,
+        ColorRed = 252,
+        ColorGreen = 223,
+        ColorBlue = 0,
+        WorldStaticModel = HairDyeYellowBlond,
+    }
+
+		recipe Mix Yellow Paint
+		{
+			Flour=2,
+			destroy WaterPaintbucket,
+			HairDyeYellow=1,
+			
+			Result:PaintYellow,
+			Time:180.0,
+			OnTest:RecipeItemChecking.OnTestPacking,
+			OnGiveXP:Recipe.OnGiveXP.None,
+			Sound:OpenCannedFood,
+		}
+
+    item HairDyeRed
+    {
+        DisplayCategory = Appearance,
+        Weight	=	1,
+        Type	=	Drainable,
+        UseWhileEquipped	=	FALSE,
+        UseDelta	=	0.1,
+        DisplayName	=	Red Hair Dye,
+        Icon	=	HairDye,
+        HairDye = TRUE,
+        ColorRed = 210,
+        ColorGreen = 38,
+        ColorBlue = 18,
+        WorldStaticModel = HairDyeRedStrawberryBlond,
+    }
+
+		recipe Mix Red Paint
+		{
+			Flour=2,
+			destroy WaterPaintbucket,
+			HairDyeRed=1,
+			
+			Result:PaintRed,
+			Time:180.0,
+			OnTest:RecipeItemChecking.OnTestPacking,
+			OnGiveXP:Recipe.OnGiveXP.None,
+			Sound:OpenCannedFood,
+		}
+
+    item HairDyeGinger
+    {
+        DisplayCategory = Appearance,
+        Weight	=	1,
+        Type	=	Drainable,
+        UseWhileEquipped	=	FALSE,
+        UseDelta	=	0.1,
+        DisplayName	=	Strawberry Blonde Hair Dye,
+        Icon	=	HairDye,
+        HairDye = TRUE,
+        ColorRed = 190,
+        ColorGreen = 89,
+        ColorBlue = 34,
+        WorldStaticModel = HairDyeRedStrawberryBlond,
+    }
+
+    item HairDyeLightBrown
+    {
+        DisplayCategory = Appearance,
+        Weight	=	1,
+        Type	=	Drainable,
+        UseWhileEquipped	=	FALSE,
+        UseDelta	=	0.1,
+        DisplayName	=	Light Brown Hair Dye,
+        Icon	=	HairDye,
+        HairDye = TRUE,
+        ColorRed = 159,
+        ColorGreen = 108,
+        ColorBlue = 43,
+        WorldStaticModel = HairDyeBrown,
+    }
+	
+		recipe Mix Light Brown Paint
+		{
+			Flour=2,
+			destroy WaterPaintbucket,
+			HairDyeLightBrown=1,
+			
+			Result:PaintLightBrown,
+			Time:180.0,
+			OnTest:RecipeItemChecking.OnTestPacking,
+			OnGiveXP:Recipe.OnGiveXP.None,
+			Sound:OpenCannedFood,
+		}
+
+		recipe Mix Brown Paint
+		{
+			Flour=2,
+			destroy WaterPaintbucket,
+			HairDyeGreen=1,
+			HairDyeRed=1,
+			
+			Result:PaintBrown,
+			Time:180.0,
+			OnTest:RecipeItemChecking.OnTestPacking,
+			OnGiveXP:Recipe.OnGiveXP.None,
+			Sound:OpenCannedFood,
+		}
+
+    item HairDyeGreen
+    {
+        DisplayCategory = Appearance,
+        Weight	=	1,
+        Type	=	Drainable,
+        UseWhileEquipped	=	FALSE,
+        UseDelta	=	0.1,
+        DisplayName	=	Green Hair Dye,
+        Icon	=	HairDye,
+        HairDye = TRUE,
+        ColorRed = 55,
+        ColorGreen = 152,
+        ColorBlue = 77,
+        WorldStaticModel = HairDyeGreen,
+    }
+
+		recipe Mix Green Paint
+		{
+			Flour=2,
+			destroy WaterPaintbucket,
+			HairDyeGreen=1,
+			
+			Result:PaintGreen,
+			Time:180.0,
+			OnTest:RecipeItemChecking.OnTestPacking,
+			OnGiveXP:Recipe.OnGiveXP.None,
+			Sound:OpenCannedFood,
+		}
+
+    item HairDyeBlue
+    {
+        DisplayCategory = Appearance,
+        Weight	=	1,
+        Type	=	Drainable,
+        UseWhileEquipped	=	FALSE,
+        UseDelta	=	0.1,
+        DisplayName	=	Blue Hair Dye,
+        Icon	=	HairDye,
+        HairDye = TRUE,
+        ColorRed = 66,
+        ColorGreen = 155,
+        ColorBlue = 207,
+        WorldStaticModel = HairDyeBlue,
+    }
+
+		recipe Mix Blue Paint
+		{
+			Flour=2,
+			destroy WaterPaintbucket,
+			HairDyeBlue=1,
+			
+			Result:PaintBlue,
+			Time:180.0,
+			OnTest:RecipeItemChecking.OnTestPacking,
+			OnGiveXP:Recipe.OnGiveXP.None,
+			Sound:OpenCannedFood,
+		}
+
+		recipe Mix Light Blue Paint
+		{
+			Flour=2,
+			destroy WaterPaintbucket,
+			HairDyeBlue=1,
+			HairDyeWhite=1,
+			
+			Result:PaintLightBlue,
+			Time:180.0,
+			OnTest:RecipeItemChecking.OnTestPacking,
+			OnGiveXP:Recipe.OnGiveXP.None,
+			Sound:OpenCannedFood,
+		}
+
+		recipe Mix Orange Paint
+		{
+			Flour=2,
+			destroy WaterPaintbucket,
+			HairDyeYellow=1,
+			HairDyeRed=1,
+			
+			Result:PaintOrange,
+			Time:180.0,
+			OnTest:RecipeItemChecking.OnTestPacking,
+			OnGiveXP:Recipe.OnGiveXP.None,
+			Sound:OpenCannedFood,
+		}
+
+		recipe Mix Purple Paint
+		{
+			Flour=2,
+			destroy WaterPaintbucket,
+			HairDyeBlue=1,
+			HairDyeRed=1,
+			
+			Result:PaintPurple,
+			Time:180.0,
+			OnTest:RecipeItemChecking.OnTestPacking,
+			OnGiveXP:Recipe.OnGiveXP.None,
+			Sound:OpenCannedFood,
+		}
+
+		recipe Mix Turquoise Paint
+		{
+			Flour=2,
+			destroy WaterPaintbucket,
+			HairDyeBlue=1,
+			HairDyeGreen=1,
+			
+			Result:PaintTurquoise,
+			Time:180.0,
+			OnTest:RecipeItemChecking.OnTestPacking,
+			OnGiveXP:Recipe.OnGiveXP.None,
+			Sound:OpenCannedFood,
+		}
+
+		recipe Mix Grey Paint
+		{
+			Flour=2,
+			destroy WaterPaintbucket,
+			HairDyeBlack=1,
+			HairDyeWhite=1,
+			
+			Result:PaintGrey,
+			Time:180.0,
+			OnTest:RecipeItemChecking.OnTestPacking,
+			OnGiveXP:Recipe.OnGiveXP.None,
+			Sound:OpenCannedFood,
+		}
+
+		recipe Mix Cyan Paint
+		{
+			Flour=2,
+			destroy WaterPaintbucket,
+			HairDyeBlue=1,
+			HairDyeWhite=1,
+			HairDyeGreen=1,
+			
+			Result:PaintCyan,
+			Time:180.0,
+			OnTest:RecipeItemChecking.OnTestPacking,
+			OnGiveXP:Recipe.OnGiveXP.None,
+			Sound:OpenCannedFood,
+		}
+}
