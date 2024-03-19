@@ -8,6 +8,14 @@ module Base
 		scale = 0.1,
 	}
 
+	model DG70BGWheel
+	{
+		mesh = vehicles/Vehicles_70dodge_Wheel|challenger_tire_n,
+		texture = vehicles/Vehicles_70dodgePD_Wheel_Interior,
+		shader = vehiclewheel,
+		scale = 0.1,
+	}
+
 	template vehicle DG70RTTires
 	{
 
@@ -59,7 +67,7 @@ module Base
 		part Tire*
 		{
 			category = tire,
-			itemType = Base.DodgeRTtire,
+			itemType = Base.DodgeRTtire;Base.CUDAtire;Base.CamaroSStire,
 			container
 			{
 				capacity = 35,

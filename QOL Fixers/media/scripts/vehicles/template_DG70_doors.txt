@@ -136,23 +136,31 @@ module Base
 
 		part DoorRearLeft
 		{
-				itemType = nil,
+				itemType = Base.DG70Door,
 				area = SeatRearLeft,
+				repairMechanic = true,
 				category = nodisplay,
 
 				lua
 				{
+					create = Vehicles.Create.Door,
+					init = Vehicles.Init.Door,
+					use = Vehicles.Use.Door,
 				}
 		}
 
 		part DoorRearRight
 		{
-				itemType = nil,
+				itemType = Base.DG70Door,
 				area = SeatRearRight,
+				repairMechanic = true,
 				category = nodisplay,
 
 				lua
 				{
+					create = Vehicles.Create.Door,
+					init = Vehicles.Init.Door,
+					use = Vehicles.Use.Door,
 				}
 		}
 

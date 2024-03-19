@@ -74,5 +74,29 @@ module Base
 				}
 		}
 	}
+
+	template vehicle DG70BGRoofs
+	{
+		part DG70RTRoof
+        	{
+
+			model DGRTroof0
+				{
+                		file = DG70RTroof,
+				}
+
+			category = nodisplay,
+			area = TruckBed,
+			specificItem = false,
+			itemType = Base.DG70RTRoof0,
+			mechanicRequireKey = false,
+			repairMechanic = true,
+
+	            lua
+	            {
+				create = Vehicles.Create.Default,
+				}
+		}
+	}
 }
 
