@@ -190,7 +190,7 @@ module Base
 
 	fixing Fix Tire
 	{
-		Require : OldTire1;NormalTire1;ModernTire1;OldTire2;NormalTire2;ModernTire2;OldTire3;NormalTire3;ModernTire3;OldTire8;NormalTire8;ModernTire8;V100Tire2;V100Tires2;V100SmallTires2;V100Axle2;V100AxleSmall2;V101Tire2;DodgeRTtire3;R32Tire0;R32Tire1;R32Tire2;R32TireA;McLarenF1FrontWheel3;McLarenF1RearWheel3;U1550LWheel2;E150Tire2;80sOffroadTireA;ECTO1tire2_Item;ECTO1tire1_Item;V102Tire2;BushmasterTire;KZ1KoldTire;KZ1KnormalTire;KZ1KmodernTire;93townCarTire1;90pierceArrowTire2;90pierceArrowDoubleTires2,
+		Require : OldTire1;NormalTire1;ModernTire1;OldTire2;NormalTire2;ModernTire2;OldTire3;NormalTire3;ModernTire3;OldTire8;NormalTire8;ModernTire8;V100Tire2;V100Tires2;V100SmallTires2;V100Axle2;V100AxleSmall2;V101Tire2;DodgeRTtire3;CUDAtire3;CamaroSStire3;R32Tire0;R32Tire1;R32Tire2;R32TireA;McLarenF1FrontWheel3;McLarenF1RearWheel3;U1550LWheel2;E150Tire2;80sOffroadTireA;ECTO1tire2_Item;ECTO1tire1_Item;V102Tire2;BushmasterTire;KZ1KoldTire;KZ1KnormalTire;KZ1KmodernTire;93townCarTire1;90pierceArrowTire2;90pierceArrowDoubleTires2;DoubleOldTire2;DoubleNormalTire2;DoubleModernTire2,
 		ConditionModifier : 1.2,
 
 		Fixer : Superglue=2; Mechanics=2,
@@ -235,7 +235,7 @@ module Base
 
 	fixing Fix Windshield Armor
 	{
-		Require : M998WindshieldArmor1_Item;M998WindshieldArmor2_Item;DG70WindshieldArmor;DG70WindshieldRearArmor;R32WindshieldRearArmor;R32WindshieldArmor;E150WindshieldArmor;E150WindshieldRearArmor;80sPickupWindshieldArmor;P19AWindshieldArmor1_Item;M151A2WindshieldArmor1_Item;93townCarWindshieldArmorA;93townCarWindshieldArmorB;93townCarWindshieldRearArmor;90pierceArrowWindshieldArmor;90pierceArrowWindshieldRearArmor,
+		Require : M998WindshieldArmor1_Item;M998WindshieldArmor2_Item;DG70WindshieldArmor;DG70WindshieldArmorB;DG70WindshieldRearArmor;R32WindshieldRearArmor;R32WindshieldArmor;E150WindshieldArmor;E150WindshieldRearArmor;80sPickupWindshieldArmor;P19AWindshieldArmor1_Item;M151A2WindshieldArmor1_Item;93townCarWindshieldArmorA;93townCarWindshieldArmorB;93townCarWindshieldRearArmor;90pierceArrowWindshieldArmor;90pierceArrowWindshieldRearArmor,
 		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
@@ -332,7 +332,17 @@ module Base
 
 	fixing Fix Roofracks and Other
 	{
-		Require : ECTO1Equipment1_Item;E150Divider;E150MysteryMachineRoofrack2;E150MysteryMachineSurfboards2;80sPickupRoofrackA;80sPickupRollbarA;80sPickupRollbarB;82JeepJ10Dorothy;82JeepJ10DorothyAnemometer;90pierceArrowLadders,
+		Require : ECTO1Equipment1_Item;E150Divider;E150MysteryMachineRoofrack2;E150MysteryMachineSurfboards2;80sPickupRoofrackA;80sPickupRollbarA;80sPickupRollbarB;82JeepJ10Dorothy;82JeepJ10DorothyAnemometer;90pierceArrowLadders;OldSmallRoofrack3,
+		GlobalItem : BlowTorch=2,
+		ConditionModifier : 1.2,
+
+		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
+	}
+
+	fixing Fix Axles
+	{
+		Require : AxleOldTire2;AxleNormalTire2;AxleModernTire2,
 		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 

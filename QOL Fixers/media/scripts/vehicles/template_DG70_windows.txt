@@ -103,7 +103,6 @@ module Base
 			anim ClosedToOpen
 			{
 				anim = window_rl_opening,
-				reverse = TURE,
 				animate = FALSE,
 			}
 
@@ -131,7 +130,6 @@ module Base
 			anim ClosedToOpen
 			{
 				anim = window_rr_opening,
-				reverse = TURE,
 				animate = FALSE,
 			}
 

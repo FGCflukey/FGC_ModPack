@@ -59,7 +59,7 @@ module Base
 				itemType = Base.DG70RearBumper0;Base.DG70RearBumperA;Base.DG70RearBumperB;Base.DG70RearBumperC,
 				mechanicRequireKey = false,
 				repairMechanic = true,
-
+				
 				table install
 				{
                 	items

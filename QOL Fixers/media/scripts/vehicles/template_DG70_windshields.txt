@@ -154,6 +154,7 @@ module Base
             area = Engine,
             category = bodywork,
             mechanicRequireKey = false,
+			repairMechanic = true,
             table install
             {
                 items
@@ -211,6 +212,7 @@ module Base
             area = TruckBed,
             category = bodywork,
             mechanicRequireKey = false,
+			repairMechanic = true,
             table install
             {
                 items
