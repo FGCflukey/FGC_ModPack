@@ -449,5 +449,22 @@ module Base
 		CanBeDoneFromFloor:true,
 		OnGiveXP:Recipe.OnGiveXP.WoodWork5,
     }
-
+	
+	recipe Make Some Bowls
+	{
+		Log,
+		keep [Recipe.GetItemTypes.Saw],
+		keep [Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Bowl=6,
+		Sound:Sawing,
+		Time:400,
+		Category:Carpentry,
+		CanBeDoneFromFloor:true,
+		SkillRequired:Woodwork=1,
+		OnGiveXP:Recipe.OnGiveXP.SawLogs,
+		AnimNode:SawLog,
+		Prop1:GardenSaw,
+		Prop2:Log,		
+	}
 }
