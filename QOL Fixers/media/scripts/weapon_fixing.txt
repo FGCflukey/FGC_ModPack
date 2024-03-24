@@ -112,4 +112,98 @@ module Base
 		   Fixer : CleaningKit=1; Aiming=2,
 		   Fixer : FireKlean; Aiming=1,
 		}
+
+
+	fixing Fix OverlookFireAxe
+	{
+	   Require : OverlookFireAxe,	
+	   
+	   Fixer   : SheetMetal=1,MetalWelding=2,
+	   Fixer   : ScrapMetal=3,MetalWelding=2,
+	   Fixer   : OverlookFireAxe=1,
+	}
+
+	fixing Fix BatLeth
+	{
+	   Require : BatLeth,
+
+       Fixer : Woodglue=2; Woodwork=2,
+       Fixer : DuctTape=2,
+       Fixer : Glue=2,
+       Fixer : Scotchtape=4,
+	}
+
+	fixing Fix MekLeth
+	{
+	   Require : MekLeth,	
+	   
+	   Fixer   : SheetMetal=1,MetalWelding=2,
+	   Fixer   : ScrapMetal=3,MetalWelding=2,
+	   Fixer   : MekLeth=1,
+	}
+
+	fixing Fix AZZK Pistol
+	{
+	   Require : AZZK_pistol,
+
+	   Fixer : CleaningKit=1; Aiming=2,
+	   Fixer : FireKlean; Aiming=1,
+	}
+
+	fixing Fix Spikes Kukri
+	{
+	   Require : MonmouthWeapons.KukriMacheteSpike,	
+	   
+	   Fixer   : SheetMetal=1,MetalWelding=2,
+	   Fixer   : ScrapMetal=3,MetalWelding=2,
+	   Fixer   : MonmouthWeapons.KukriMacheteSpike=1,
+	}
+
+	fixing Fix PickAxeAmelora
+	{
+	   Require : MonmouthWeapons.PickAxeAmelora,	
+	   
+	   Fixer   : SheetMetal=1,MetalWelding=2,
+	   Fixer   : ScrapMetal=3,MetalWelding=2,
+	   Fixer   : MonmouthWeapons.PickAxeAmelora=1,
+	}
+
+	fixing Fix Toddy Hammer
+	{
+	   Require : MonmouthWeapons.Hammer_Toddy,
+
+       Fixer : Woodglue=2; Woodwork=2,
+       Fixer : DuctTape=2,
+       Fixer : Glue=2,
+       Fixer : Scotchtape=4,
+	}
+
+	fixing Fix SpearGungnir
+	{
+	   Require : MonmouthWeapons.SpearGungnir,
+
+       Fixer : Woodglue=2; Woodwork=2,
+       Fixer : DuctTape=2,
+       Fixer : Glue=2,
+       Fixer : Scotchtape=4,
+	}
+
+	fixing Fix CrowbarScorpion
+	{
+	   Require : MonmouthWeapons.CrowbarScorpion,	
+	   
+	   Fixer   : SheetMetal=1,MetalWelding=2,
+	   Fixer   : ScrapMetal=3,MetalWelding=2,
+	   Fixer   : MonmouthWeapons.CrowbarScorpion=1,
+	}
+
+	fixing Fix AxeUnknown
+	{
+	   Require : MonmouthWeapons.AxeUnknown,	
+	   
+	   Fixer   : SheetMetal=1,MetalWelding=2,
+	   Fixer   : ScrapMetal=3,MetalWelding=2,
+	   Fixer   : MonmouthWeapons.AxeUnknown=1,
+	}
+
 }
