@@ -3,7 +3,7 @@ module Base
 
 	model 92nissanGTRseatfl
 	{
-		mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_seat_fl,
+		mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_seat_fr,
 		texture = Vehicles/Vehicles_92nissanGTR_Interior,
 		shader = vehiclewheel,
 		scale = 0.1,
@@ -14,6 +14,7 @@ module Base
 		texture = Vehicles/Vehicles_92nissanGTR_Interior,
 		shader = vehiclewheel,
 		scale = 0.1,
+        invertX = TRUE,
 	}
 	model 92nissanGTRseatrl
 	{
@@ -24,10 +25,11 @@ module Base
 	}
 	model 92nissanGTRseatrr
 	{
-		mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_seat_rr,
+		mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_seat_rl,
 		texture = Vehicles/Vehicles_92nissanGTR_Interior,
 		shader = vehiclewheel,
 		scale = 0.1,
+        invertX = TRUE,
 	}
 	
 	template vehicle R32Seats

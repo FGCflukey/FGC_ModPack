@@ -39,7 +39,20 @@ module Base
 			wheel = FrontLeft,
 			table install
 			{
+				complete = R32.InstallComplete.TireFrontLeft,
 				requireInstalled = BrakeFrontLeft;SuspensionFrontLeft,
+			}
+			table uninstall
+			{
+				complete = R32.UninstallComplete.TireFrontLeft,
+			}
+
+			lua
+			{
+				create = Vehicles.Create.Tire,
+				init = R32.Init.TireFrontLeft,
+				checkOperate = Vehicles.CheckOperate.Tire,
+				update = Vehicles.Update.Tire,
 			}
 
 		}
@@ -51,7 +64,20 @@ module Base
 			wheel = FrontRight,
 			table install
 			{
+				complete = R32.InstallComplete.TireFrontRight,
 				requireInstalled = BrakeFrontRight;SuspensionFrontRight,
+			}
+			table uninstall
+			{
+				complete = R32.UninstallComplete.TireFrontRight,
+			}
+
+			lua
+			{
+				create = Vehicles.Create.Tire,
+				init = R32.Init.TireFrontRight,
+				checkOperate = Vehicles.CheckOperate.Tire,
+				update = Vehicles.Update.Tire,
 			}
 		}
 
@@ -62,7 +88,20 @@ module Base
 			wheel = RearLeft,
 			table install
 			{
+				complete = R32.InstallComplete.TireRearLeft,
 				requireInstalled = BrakeRearLeft;SuspensionRearLeft,
+			}
+			table uninstall
+			{
+				complete = R32.UninstallComplete.TireRearLeft,
+			}
+
+			lua
+			{
+				create = Vehicles.Create.Tire,
+				init = R32.Init.TireRearLeft,
+				checkOperate = Vehicles.CheckOperate.Tire,
+				update = Vehicles.Update.Tire,
 			}
 		}
 
@@ -73,7 +112,20 @@ module Base
 			wheel = RearRight,
 			table install
 			{
+				complete = R32.InstallComplete.TireRearRight,
 				requireInstalled = BrakeRearRight;SuspensionRearRight,
+			}
+			table uninstall
+			{
+				complete = R32.UninstallComplete.TireRearRight,
+			}
+
+			lua
+			{
+				create = Vehicles.Create.Tire,
+				init = R32.Init.TireRearRight,
+				checkOperate = Vehicles.CheckOperate.Tire,
+				update = Vehicles.Update.Tire,
 			}
 		}
 
@@ -109,7 +161,6 @@ module Base
 				time = 400,
 				skills = Mechanics:1,
 				test = Vehicles.InstallTest.Default,
-				complete = R32.InstallComplete.Tire,
 			}
 			table uninstall
 			{
@@ -132,7 +183,6 @@ module Base
 				time = 400,
 				skills = Mechanics:1,
 				test = Vehicles.UninstallTest.Default,
-				complete = R32.UninstallComplete.Tire,
 			}
 
 			model R32Tire0
@@ -155,13 +205,6 @@ module Base
 				file = 92nissanGTRwheelA,
 			}
 
-			lua
-			{
-				create = Vehicles.Create.Tire,
-				init = R32.Init.Tire,
-				checkOperate = Vehicles.CheckOperate.Tire,
-				update = Vehicles.Update.Tire,
-			}
 		}
 	}
 }

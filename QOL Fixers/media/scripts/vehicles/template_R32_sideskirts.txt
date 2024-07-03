@@ -4,28 +4,28 @@ module Base
 	model 92nissanGTRsideskirts1
 	{
 		mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_sideskirts_1,
-		shader = vehicle,
+		shader = damn_vehicle_shader,
 		scale = 0.1,
 	}
 
     model 92nissanGTRsideskirts2
     {
         mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_sideskirts_2,
-        shader = vehicle,
+        shader = damn_vehicle_shader,
         scale = 0.1,
     }
 
     model 92nissanGTRsideskirts3
     {
         mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_sideskirts_3,
-        shader = vehicle,
+        shader = damn_vehicle_shader,
         scale = 0.1,
     }
 
     model 92nissanGTRsideskirtsA
     {
         mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_sideskirts_a,
-        shader = vehicle,
+        shader = damn_vehicle_shader,
         scale = 0.1,
     }
 

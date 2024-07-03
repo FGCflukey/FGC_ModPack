@@ -4,35 +4,35 @@ module Base
     model 92nissanGTRbumper0
     {
         mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_bumper_0,
-        shader = vehicle,
+        shader = damn_vehicle_shader,
         scale = 0.1,
     }
 	
 	model 92nissanGTRbumper1
 	{
 		mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_bumper_1,
-		shader = vehicle,
+		shader = damn_vehicle_shader,
 		scale = 0.1,
 	}
 
     model 92nissanGTRbumper2
     {
         mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_bumper_2,
-        shader = vehicle,
+        shader = damn_vehicle_shader,
         scale = 0.1,
     }
 
     model 92nissanGTRbumper3
     {
         mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_bumper_3,
-        shader = vehicle,
+        shader = damn_vehicle_shader,
         scale = 0.1,
     }
 
     model 92nissanGTRbumperA
     {
         mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_bumper_a,
-        shader = vehicle,
+        shader = damn_vehicle_shader,
         scale = 0.1,
     }
 

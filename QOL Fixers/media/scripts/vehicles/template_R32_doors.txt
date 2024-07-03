@@ -4,7 +4,7 @@ module Base
 	model 92nissanGTRdoorfl
 	{
 		mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_door_fl,
-		shader = vehicle,
+		shader = damn_vehicle_shader,
 		static = FALSE,
 		scale = 0.1,
 		boneWeight = door_fl_bone 1.0,
@@ -13,7 +13,7 @@ module Base
 	model 92nissanGTRdoorfr
 	{
 		mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_door_fr,
-		shader = vehicle,
+		shader = damn_vehicle_shader,
 		static = FALSE,
 		scale = 0.1,
 		boneWeight = door_fr_bone 1.0,
@@ -45,27 +45,27 @@ module Base
 
 				anim Close
 				{
-					anim = Door_fl_closing,
+					anim = door_fl_opening,
+                    reverse = TRUE,
 					rate = 1.5,
 				}
 
 				anim Open
 				{
-					anim = Door_fl_closing,
-					reverse = TRUE,
+					anim = door_fl_opening,
 					rate = 1.0,
 				}
 
 				anim Closed
 				{
-					anim = Door_fl_closing,
-					reverse = TRUE,
+					anim = door_fl_opening,
 					animate = FALSE,
 				}
 
 				anim Opened
 				{
-					anim = Door_fl_closing,
+					anim = door_fl_opening,
+                    reverse = TRUE,
 					animate = FALSE,
 				}
 				lua
@@ -99,27 +99,27 @@ module Base
 
 				anim Close
 				{
-					anim = Door_fr_closing,
+					anim = door_fr_opening,
+                    reverse = TRUE,
 					rate = 1.5,
 				}
 
 				anim Open
 				{
-					anim = Door_fr_closing,
-					reverse = TRUE,
+					anim = door_fr_opening,
 					rate = 1.0,
 				}
 
 				anim Closed
 				{
-					anim = Door_fr_closing,
-					reverse = TRUE,
+					anim = door_fr_opening,
 					animate = FALSE,
 				}
 
 				anim Opened
 				{
-					anim = Door_fr_closing,
+					anim = door_fr_opening,
+                    reverse = TRUE,
 					animate = FALSE,
 				}
 				lua

@@ -4,11 +4,19 @@ module Base
     model ECTO1windshield
     {
         mesh = vehicles/Vehicles_ECTO1_Body|ECTO1_windshield,
-        shader = vehicle,
+        shader = damn_vehicle_shader,
         scale = 0.1,
     }
 
-	template vehicle ECTO1Windshield
+    model ECTO1rearwindshield
+    {
+        mesh = vehicles/Vehicles_ECTO1_Body|ECTO1_rear_windshield,
+        shader = damn_vehicle_shader,
+        static = FALSE,
+        scale = 0.1,
+    }
+
+	template vehicle ECTO1Windshields
 	{
 
         part Windshield
@@ -72,5 +80,65 @@ module Base
             }
         }
 
+        part WindshieldRear
+        {
+            model windshieldRear
+            {
+            file = ECTO1rearwindshield,
+            }
+            parent = TrunkDoor,
+            
+            window
+            {
+            openable = false,
+            }
+                
+            itemType = Base.ECTO1RearWindshield,
+            area = Engine,
+            category = bodywork,
+            mechanicRequireKey = false,
+			repairMechanic = true,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+			            equip = primary,
+                    }
+                }
+                time = 700,
+                skills = Mechanics:5,
+                recipes = Intermediate Mechanics,
+                test = Vehicles.InstallTest.Default,
+                complete = Vehicles.InstallComplete.Window,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        type = Base.Screwdriver,
+                        count = 1,
+                        keep = true,
+						equip = primary,
+                    }
+                }
+                time = 700,
+                skills = Mechanics:5,
+                recipes = Intermediate Mechanics,
+                test = Vehicles.UninstallTest.Default,
+                requireUninstalled = ECTO1RearWindshieldArmor,
+            }
+            lua
+            {
+                create = Vehicles.Create.Default,
+            }
         }
+
+    }
 }

@@ -1,61 +1,58 @@
 module Base
 {
-
-	model 86fordE150rearWindshieldLong
+	model 86fordE150doorrr
 	{
-		mesh = vehicles/Vehicles_86fordE150_Body|e150_windshieldRear_long,
-		shader = vehicle,
+		mesh = vehicles/Vehicles_86fordE150_Body|e150_door_rr,
+		shader = damn_vehicle_shader,
 		static = FALSE,
 		scale = 0.1,
+		boneWeight = door_rr_bone 1.0,
 	}
 
-	template vehicle E150RearWindshieldLong
+	template vehicle E150SlideDoor
 	{
-		part WindshieldRear
+
+		part DoorRearRight
 		{
 
-			model RearLongBoi415777845
+			model shortBoid4689764
 			{
-				file = 86fordE150rearWindshieldLong,
+				file = 86fordE150doorrr,
 				offset = 0 0 0,
 				rotate = 0 0 0,
 				scale = 1.0,
 			}
 
-			category = bodywork,
-			area = TruckBed,
-			repairMechanic = true,
-			parent = TrunkDoor,
-
 			anim Close
 			{
-				anim = trunk_long_closing,
-				rate = 0.85,
+				anim = door_rr_opening,
+                reverse = TRUE,
+				rate = 1.0,
 			}
 
 			anim Open
 			{
-				anim = trunk_long_closing,
-				reverse = TRUE,
-				rate = 0.5,
+				anim = door_rr_opening,
+				rate = 1.0,
 			}
 
 			anim Closed
 			{
-				anim = trunk_long_closing,
-				reverse = TRUE,
+				anim = door_rr_opening,
 				animate = FALSE,
 			}
 
 			anim Opened
 			{
-				anim = trunk_long_closing,
+				anim = door_rr_opening,
+                reverse = TRUE,
 				animate = FALSE,
 			}
 
-			window
+			category = door,
+			area = SeatRearRight,
+			door
             {
-            openable = false,
             }
 			anim Open
 			{
@@ -81,15 +78,15 @@ module Base
 			{
 				anim = WindowOpenSuccess,
 				rate = 0.15,
-				angle = 0.0 0.0 0.0,
+				angle = 0.0 90.0 0.0,
 			}
 			anim ActorClose
 			{
 				anim = Attack_Shove,
 				rate = 0.3,
-				angle = 0.0 0.0 0.0,
+				angle = 0.0 90.0 0.0,
 			}
-			itemType = Base.E150RearWindshield,
+			itemType = Base.E150CarSlideDoor,
 			mechanicRequireKey = true,
 			repairMechanic = true,
 			table install
@@ -104,11 +101,11 @@ module Base
 						equip = primary,
 					}
 				}
-				time = 500,
+				time = 600,
 				skills = Mechanics:2,
 				recipes = Intermediate Mechanics,
 				test = Vehicles.InstallTest.Default,
-				complete = Vehicles.InstallComplete.Window,
+				complete = Vehicles.InstallComplete.Door,
 			}
 			table uninstall
 			{
@@ -122,18 +119,19 @@ module Base
 						equip = primary,
 					}
 				}
-				time = 500,
+				time = 600,
 				skills = Mechanics:2,
 				recipes = Intermediate Mechanics,
 				test = Vehicles.UninstallTest.Default,
-				requireUninstalled = E150WindshieldRearLongArmor,
+				complete = Vehicles.UninstallComplete.Door,
 
 			}
 			lua
 			{
-				create = Vehicles.Create.Default,
+				create = Vehicles.Create.Door,
+				init = Vehicles.Init.Door,
+				use = Vehicles.Use.Door,
 			}
 		}
 	}
 }
-

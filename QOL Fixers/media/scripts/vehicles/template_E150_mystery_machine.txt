@@ -3,21 +3,21 @@ module Base
 	model 86fordE150MMSpareTire
     	{
         mesh = vehicles/Vehicles_86fordE150_Body|e150_mm_spareTire,
-		shader = vehicle,
+		shader = damn_vehicle_shader,
         scale = 0.1,
     	}
 
     model 86fordE150MMRoofrack
     	{
         mesh = vehicles/Vehicles_86fordE150_Body|e150_mm_roofrack,
-		shader = vehicle,
+		shader = damn_vehicle_shader,
         scale = 0.1,
     	}
 
     model 86fordE150MMSurfboards
     	{
         mesh = vehicles/Vehicles_86fordE150_Body|e150_mm_surfboards,
-		shader = vehicle,
+		shader = damn_vehicle_shader,
         scale = 0.1,
     	}
 

@@ -4,37 +4,33 @@ module Base
 	model ECTO1windowfl
 	{
 		mesh = vehicles/Vehicles_ECTO1_Body|ECTO1_window_fl,
-		shader = vehicle,
+		shader = damn_vehicle_shader,
 		static = FALSE,
 		scale = 0.1,
-		boneWeight = window_fl_bone 1.0,
 	}
 
 	model ECTO1windowfr
 	{
 		mesh = vehicles/Vehicles_ECTO1_Body|ECTO1_window_fr,
-		shader = vehicle,
+		shader = damn_vehicle_shader,
 		static = FALSE,
 		scale = 0.1,
-		boneWeight = window_fr_bone 1.0,
 	}
 
 	model ECTO1windowrl
 	{
 		mesh = vehicles/Vehicles_ECTO1_Body|ECTO1_window_rl,
-		shader = vehicle,
+		shader = damn_vehicle_shader,
 		static = FALSE,
 		scale = 0.1,
-		boneWeight = window_rl_bone 1.0,
 	}
 
 	model ECTO1windowrr
 	{
 		mesh = vehicles/Vehicles_ECTO1_Body|ECTO1_window_rr,
-		shader = vehicle,
+		shader = damn_vehicle_shader,
 		static = FALSE,
 		scale = 0.1,
-		boneWeight = window_rr_bone 1.0,
 	}
 
 	template vehicle ECTO1Windows
@@ -48,8 +44,7 @@ module Base
 
 			anim ClosedToOpen
 			{
-				anim = Window_fl_opening,
-				reverse = TRUE,
+				anim = window_fl_opening,
 				animate = FALSE,
 			}
 
@@ -76,8 +71,7 @@ module Base
 
 			anim ClosedToOpen
 			{
-				anim = Window_fr_opening,
-				reverse = TRUE,
+				anim = window_fr_opening,
 				animate = FALSE,
 			}
 
@@ -104,8 +98,7 @@ module Base
 
 			anim ClosedToOpen
 			{
-				anim = Window_rl_opening,
-				reverse = TRUE,
+				anim = window_rl_opening,
 				animate = FALSE,
 			}
 
@@ -132,8 +125,7 @@ module Base
 
 			anim ClosedToOpen
 			{
-				anim = Window_rr_opening,
-				reverse = TRUE,
+				anim = window_rr_opening,
 				animate = FALSE,
 			}
 

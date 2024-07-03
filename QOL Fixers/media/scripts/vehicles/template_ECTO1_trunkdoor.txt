@@ -1,62 +1,55 @@
 module Base
 {
 
-	model 86fordE150rearWindshield
+	model ECTO1trunk
 	{
-		mesh = vehicles/Vehicles_86fordE150_Body|e150_windshieldRear,
-		shader = vehicle,
+		mesh = vehicles/Vehicles_ECTO1_Body|ECTO1_trunk,
+		shader = damn_vehicle_shader,
 		static = FALSE,
 		scale = 0.1,
 	}
 
-	template vehicle E150RearWindshield
+	template vehicle ECTO1TrunkDoor
 	{
-		part WindshieldRear
+		part TrunkDoor
 		{
 
-			model RearWindshield15684846
+			model SweetTrunkOfMine
 			{
-				file = 86fordE150rearWindshield,
-				offset = 0 0 0,
-				rotate = 0 0 0,
-				scale = 1.0,
+				file = ECTO1trunk,
 			}
-
-			category = bodywork,
-			area = TruckBed,
-			repairMechanic = true,
-			parent = TrunkDoor,
 
 			anim Close
 			{
-				anim = trunk_closing,
-				rate = 0.85,
+				anim = trunk_opening,
+                reverse = TRUE,
+				rate = 1.0,
 			}
 
 			anim Open
 			{
-				anim = trunk_closing,
-				reverse = TRUE,
+				anim = trunk_opening,
 				rate = 0.5,
 			}
 
 			anim Closed
 			{
-				anim = trunk_closing,
-				reverse = TRUE,
+				anim = trunk_opening,
 				animate = FALSE,
 			}
 
 			anim Opened
 			{
-				anim = trunk_closing,
+				anim = trunk_opening,
+                reverse = TRUE,
 				animate = FALSE,
 			}
 
-			window
-            {
-            openable = false,
-            }
+			category = bodywork,
+			area = TruckBed,
+			door
+			{
+			}
 			anim Open
 			{
 				sound = VehicleTrunkOpenStandard,
@@ -89,7 +82,7 @@ module Base
 				rate = 0.3,
 				angle = 0.0 0.0 0.0,
 			}
-			itemType = Base.E150RearWindshield,
+			itemType = Base.ECTO1TrunkDoor,
 			mechanicRequireKey = true,
 			repairMechanic = true,
 			table install
@@ -104,11 +97,11 @@ module Base
 						equip = primary,
 					}
 				}
-				time = 500,
+				time = 1000,
 				skills = Mechanics:2,
 				recipes = Intermediate Mechanics,
 				test = Vehicles.InstallTest.Default,
-				complete = Vehicles.InstallComplete.Window,
+				complete = Vehicles.InstallComplete.Door,
 			}
 			table uninstall
 			{
@@ -122,15 +115,18 @@ module Base
 						equip = primary,
 					}
 				}
-				time = 500,
+				time = 1000,
 				skills = Mechanics:2,
 				recipes = Intermediate Mechanics,
 				test = Vehicles.UninstallTest.Default,
-				requireUninstalled = E150WindshieldRearArmor,
+				complete = ECTO1.UninstallComplete.TrunkDoor,
+
 			}
 			lua
 			{
-				create = Vehicles.Create.Default,
+				create = Vehicles.Create.TrunkDoor,
+				init = Vehicles.Init.Door,
+				use = Vehicles.Use.TrunkDoor,
 			}
 		}
 	}

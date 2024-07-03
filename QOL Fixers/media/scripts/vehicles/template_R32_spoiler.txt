@@ -5,7 +5,7 @@ module Base
 	{
 		mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_spoiler_0,
 		texture = Vehicles/Vehicles_92nissanGTR_Shell,
-		shader = vehicle,
+		shader = damn_vehicle_shader,
         static = FALSE,
 		scale = 0.1,
 	}
@@ -14,7 +14,7 @@ module Base
     {
         mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_spoiler_1,
         texture = Vehicles/Vehicles_92nissanGTR_Shell,
-        shader = vehicle,
+        shader = damn_vehicle_shader,
         static = FALSE,
         scale = 0.1,
     }
@@ -23,7 +23,7 @@ module Base
     {
         mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_spoiler_2,
         texture = Vehicles/Vehicles_92nissanGTR_Shell,
-        shader = vehicle,
+        shader = damn_vehicle_shader,
         static = FALSE,
         scale = 0.1,
     }
@@ -32,7 +32,7 @@ module Base
     {
         mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_spoiler_3,
         texture = Vehicles/Vehicles_92nissanGTR_Shell,
-        shader = vehicle,
+        shader = damn_vehicle_shader,
         static = FALSE,
         scale = 0.1,
     }
@@ -62,70 +62,13 @@ module Base
                     file = 92nissanGTRspoiler3,
             }
 
-            anim Close
-            {
-                anim = Trunk_closing,
-                rate = 1.0,
-            }
-
-            anim Open
-            {
-                anim = Trunk_closing,
-                reverse = TRUE,
-                rate = 0.6,
-            }
-
-            anim Closed
-            {
-                anim = Trunk_closing,
-                reverse = TRUE,
-                animate = FALSE,
-            }
-
-            anim Opened
-            {
-                anim = Trunk_closing,
-                animate = FALSE,
-            }
-
             category = bodywork,
             area = TruckBed,
             parent = TrunkDoor,
             door
             {
             }
-            anim Open
-            {
-                sound = VehicleTrunkOpenStandard,
-            }
-            anim Close
-            {
-                sound = VehicleTrunkCloseStandard,
-            }
-            anim Lock
-            {
-                sound = LockVehicleDoorStandard,
-            }
-            anim Unlock
-            {
-                sound = UnlockVehicleDoorStandard,
-            }
-            anim IsLocked
-            {
-                sound = VehicleDoorIsLockedStandard,
-            }
-            anim ActorOpen
-            {
-                anim = WindowOpenSuccess,
-                rate = 0.15,
-                angle = 0.0 0.0 0.0,
-            }
-            anim ActorClose
-            {
-                anim = Attack_Shove,
-                rate = 0.3,
-                angle = 0.0 0.0 0.0,
-            }
+            
             specificItem = false,
             itemType = Base.R32Spoiler0;Base.R32Spoiler1;Base.R32Spoiler2;Base.R32Spoiler3;,
             mechanicRequireKey = false,
