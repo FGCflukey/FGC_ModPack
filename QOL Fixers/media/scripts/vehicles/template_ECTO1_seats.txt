@@ -34,13 +34,9 @@ module Base
 	{
 		part SeatFrontLeft
 		{
-			
 			model SeatFL
 			{
 				file = ECTO1seatfl,
-				offset = 0 0 0,
-				rotate = 0 0 0,
-				scale = 1.0,
 			}
 			itemType = Base.ECTO1CarSeatfl,
 			area = SeatFrontLeft,
@@ -57,9 +53,6 @@ module Base
 			model seatFR
 			{
 				file = ECTO1seatfr,
-				offset = 0 0 0,
-				rotate = 0 0 0,
-				scale = 1.0,
 			}
 			itemType = Base.ECTO1CarSeatfr,
 			area = SeatFrontRight,
@@ -76,9 +69,6 @@ module Base
 			model seatRL
 			{
 				file = ECTO1seatrl,
-				offset = 0 0 0,
-				rotate = 0 0 0,
-				scale = 1.0,
 			}
 			itemType = Base.ECTO1CarSeatrl,
 			area = SeatRearLeft,
@@ -95,9 +85,6 @@ module Base
 			model seatRR
 			{
 				file = ECTO1seatrr,
-				offset = 0 0 0,
-				rotate = 0 0 0,
-				scale = 1.0,
 			}
 			itemType = Base.ECTO1CarSeatrr,
 			area = SeatRearRight,

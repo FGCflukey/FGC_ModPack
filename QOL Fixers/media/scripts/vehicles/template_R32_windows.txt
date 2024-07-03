@@ -4,7 +4,7 @@ module Base
 	model 92nissanGTRBasewindowfl
 	{
 		mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_window_fl,
-		shader = vehicle,
+		shader = damn_vehicle_shader,
 		static = FALSE,
 		scale = 0.1,
 		boneWeight = window_fl_bone 1.0,
@@ -13,7 +13,7 @@ module Base
 	model 92nissanGTRBasewindowfr
 	{
 		mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_window_fr,
-		shader = vehicle,
+		shader = damn_vehicle_shader,
 		static = FALSE,
 		scale = 0.1,
 		boneWeight = window_fr_bone 1.0,
@@ -22,14 +22,14 @@ module Base
 	model 92nissanGTRBasewindowrl
 	{
 		mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_window_rl,
-		shader = vehicle,
+		shader = damn_vehicle_shader,
 		scale = 0.1,
 	}
 
 	model 92nissanGTRBasewindowrr
 	{
 		mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_window_rr,
-		shader = vehicle,
+		shader = damn_vehicle_shader,
 		scale = 0.1,
 	}
 
@@ -44,19 +44,18 @@ module Base
 
 			anim ClosedToOpen
 			{
-				anim = Window_fl_closing,
-				reverse = TRUE,
+				anim = window_fl_opening,
 				animate = FALSE,
 			}
 
 			parent = DoorFrontLeft,
 			area = SeatFrontLeft,
 			repairMechanic = true,
+			itemType = Base.R32FrontSideWindow,
 			table install
-				{
-					requireInstalled = DoorFrontLeft,
-				}
-
+			{
+				requireInstalled = DoorFrontLeft,
+			}
 			table uninstall
 				{
 				requireUninstalled = R32DoorFrontLeftArmor,
@@ -72,19 +71,18 @@ module Base
 
 			anim ClosedToOpen
 			{
-				anim = Window_fr_closing,
-				reverse = TRUE,
+				anim = window_fr_opening,
 				animate = FALSE,
 			}
 
 			parent = DoorFrontRight,
 			area = SeatFrontRight,
 			repairMechanic = true,
+			itemType = Base.R32FrontSideWindow,
 			table install
 			{
 				requireInstalled = DoorFrontRight,
 			}
-
 			table uninstall
 				{
 				requireUninstalled = R32DoorFrontRightArmor,
@@ -98,9 +96,9 @@ module Base
 				file = 92nissanGTRBasewindowrl,
 			}
 
-			area = SeatFrontLeft,
+			area = SeatRearLeft,
 			repairMechanic = true,
-
+			itemType = Base.R32RearSideWindow,
 			table uninstall
 				{
 				requireUninstalled = R32WindowRearLeftArmor,
@@ -114,22 +112,13 @@ module Base
 				file = 92nissanGTRBasewindowrr,
 			}
 
-			area = SeatFrontRight,
+			area = SeatRearRight,
 			repairMechanic = true,
+			itemType = Base.R32RearSideWindow,
 			table uninstall
 				{
-				requireUninstalled = R32WindowRearLeftArmor,
+				requireUninstalled = R32WindowRearRightArmor,
 				}
-		}
-
-		part WindowFront*
-		{
-			itemType = Base.R32FrontSideWindow,
-		}
-
-		part WindowRear*
-		{
-			itemType = Base.R32RearSideWindow,
 		}
 
 		part Window*
@@ -154,7 +143,7 @@ module Base
 				}
 				time = 500,
 				skills = Mechanics:3,
-				recipes = Advanced Mechanics,
+				recipes = Intermediate Mechanics,
 				test = Vehicles.InstallTest.Default,
 				complete = Vehicles.InstallComplete.Window,
 			}
@@ -172,7 +161,7 @@ module Base
 				}
 				time = 500,
 				skills = Mechanics:3,
-				recipes = Advanced Mechanics,
+				recipes = Intermediate Mechanics,
 				test = Vehicles.UninstallTest.Default,
 				complete = Vehicles.UninstallComplete.Default,
 			}

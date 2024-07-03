@@ -3,7 +3,7 @@ module Base
     model 86fordE150doorfla
     	{
         mesh = vehicles/Vehicles_86fordE150_Body|e150_door_fl_a,
-		shader = vehicle_noreflect,
+		shader = damn_vehicle_shader,
         scale = 0.1,
         static = FALSE,
     	}
@@ -11,7 +11,7 @@ module Base
     model 86fordE150doorfra
     	{
         mesh = vehicles/Vehicles_86fordE150_Body|e150_door_fr_a,
-		shader = vehicle_noreflect,
+		shader = damn_vehicle_shader,
         scale = 0.1,
         static = FALSE,
     	}
@@ -19,14 +19,15 @@ module Base
     model 86fordE150windshielda
     	{
         mesh = vehicles/Vehicles_86fordE150_Body|e150_windshield_a,
-		shader = vehicle_noreflect,
+		texture = Vehicles/Vehicles_86fordE150_Interior,
+		shader = vehiclewheel,
         scale = 0.1,
     	}
 
     model 86fordE150windshieldreara
     	{
         mesh = vehicles/Vehicles_86fordE150_Body|e150_trunkDoor_a,
-		shader = vehicle_noreflect,
+		shader = damn_vehicle_shader,
         scale = 0.1,
         static = FALSE,
     	}
@@ -34,7 +35,7 @@ module Base
     model 86fordE150windshieldrearla
     	{
         mesh = vehicles/Vehicles_86fordE150_Body|e150_trunkDoor_long_a,
-		shader = vehicle_noreflect,
+		shader = damn_vehicle_shader,
         scale = 0.1,
         static = FALSE,
     	}

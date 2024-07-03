@@ -4,7 +4,7 @@ module Base
 	model ECTO1doorfl
 	{
 		mesh = vehicles/Vehicles_ECTO1_Body|ECTO1_door_fl,
-		shader = vehicle,
+		shader = damn_vehicle_shader,
 		static = FALSE,
 		scale = 0.1,
 		boneWeight = door_fl_bone 1.0,
@@ -13,7 +13,7 @@ module Base
 	model ECTO1doorfr
 	{
 		mesh = vehicles/Vehicles_ECTO1_Body|ECTO1_door_fr,
-		shader = vehicle,
+		shader = damn_vehicle_shader,
 		static = FALSE,
 		scale = 0.1,
 		boneWeight = door_fr_bone 1.0,
@@ -22,7 +22,7 @@ module Base
 	model ECTO1doorrl
 	{
 		mesh = vehicles/Vehicles_ECTO1_Body|ECTO1_door_rl,
-		shader = vehicle,
+		shader = damn_vehicle_shader,
 		static = FALSE,
 		scale = 0.1,
 		boneWeight = door_rl_bone 1.0,
@@ -31,7 +31,7 @@ module Base
 	model ECTO1doorrr
 	{
 		mesh = vehicles/Vehicles_ECTO1_Body|ECTO1_door_rr,
-		shader = vehicle,
+		shader = damn_vehicle_shader,
 		static = FALSE,
 		scale = 0.1,
 		boneWeight = door_rr_bone 1.0,
@@ -64,27 +64,27 @@ module Base
 
 				anim Close
 				{
-					anim = Door_fl_closing,
+					anim = door_fl_opening,
+                    reverse = TRUE,
 					rate = 1.5,
 				}
 
 				anim Open
 				{
-					anim = Door_fl_closing,
-					reverse = TRUE,
+					anim = door_fl_opening,
 					rate = 1.0,
 				}
 
 				anim Closed
 				{
-					anim = Door_fl_closing,
-					reverse = TRUE,
+					anim = door_fl_opening,
 					animate = FALSE,
 				}
 
 				anim Opened
 				{
-					anim = Door_fl_closing,
+					anim = door_fl_opening,
+                    reverse = TRUE,
 					animate = FALSE,
 				}
 				lua
@@ -119,27 +119,27 @@ module Base
 
 				anim Close
 				{
-					anim = Door_fr_closing,
+					anim = door_fr_opening,
+                    reverse = TRUE,
 					rate = 1.5,
 				}
 
 				anim Open
 				{
-					anim = Door_fr_closing,
-					reverse = TRUE,
+					anim = door_fr_opening,
 					rate = 1.0,
 				}
 
 				anim Closed
 				{
-					anim = Door_fr_closing,
-					reverse = TRUE,
+					anim = door_fr_opening,
 					animate = FALSE,
 				}
 
 				anim Opened
 				{
-					anim = Door_fr_closing,
+					anim = door_fr_opening,
+                    reverse = TRUE,
 					animate = FALSE,
 				}
 				lua
@@ -174,27 +174,27 @@ module Base
 
 				anim Close
 				{
-					anim = Door_rl_closing,
+					anim = door_rl_opening,
+                    reverse = TRUE,
 					rate = 1.5,
 				}
 
 				anim Open
 				{
-					anim = Door_rl_closing,
-					reverse = TRUE,
+					anim = door_rl_opening,
 					rate = 1.0,
 				}
 
 				anim Closed
 				{
-					anim = Door_rl_closing,
-					reverse = TRUE,
+					anim = door_rl_opening,
 					animate = FALSE,
 				}
 
 				anim Opened
 				{
-					anim = Door_rl_closing,
+					anim = door_rl_opening,
+                    reverse = TRUE,
 					animate = FALSE,
 				}
 				lua
@@ -229,27 +229,27 @@ module Base
 
 				anim Close
 				{
-					anim = Door_rr_closing,
+					anim = door_rr_opening,
+                    reverse = TRUE,
 					rate = 1.0,
 				}
 
 				anim Open
 				{
-					anim = Door_rr_closing,
-					reverse = TRUE,
+					anim = door_rr_opening,
 					rate = 0.25,
 				}
 
 				anim Closed
 				{
-					anim = Door_rr_closing,
-					reverse = TRUE,
+					anim = door_rr_opening,
 					animate = FALSE,
 				}
 
 				anim Opened
 				{
-					anim = Door_rr_closing,
+					anim = door_rr_opening,
+                    reverse = TRUE,
 					animate = FALSE,
 				}
 				lua
@@ -265,7 +265,7 @@ module Base
 			category = door,
 			door
 			{
-				}
+			}
 				anim Open
 				{
 					sound = VehicleDoorOpenStandard,
@@ -333,8 +333,6 @@ module Base
 					test = Vehicles.UninstallTest.Default,
 					complete = Vehicles.UninstallComplete.Door,
 				}
-			}
 		}
 	}
 }
-

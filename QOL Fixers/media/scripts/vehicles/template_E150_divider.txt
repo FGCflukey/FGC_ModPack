@@ -3,7 +3,8 @@ module Base
 	model 86fordE150Divider
     	{
         mesh = vehicles/Vehicles_86fordE150_Body|e150_divider,
-		shader = vehicle,
+		texture = Vehicles/Vehicles_86fordE150_Interior,
+		shader = vehiclewheel,
         scale = 0.1,
     	}
 

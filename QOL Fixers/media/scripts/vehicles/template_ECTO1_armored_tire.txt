@@ -1,5 +1,12 @@
 module Base
 {
+    model ECTO1wheel
+	{
+		mesh = vehicles/Vehicles_ECTO1_Wheel,
+		texture = vehicles/Vehicles_ECTO1_Interior_Wheel,
+		shader = vehiclewheel,
+	}
+
 	template vehicle TireECTO1
 	{
 
@@ -112,18 +119,11 @@ module Base
 				checkOperate = Vehicles.CheckOperate.Tire,
 				update = Vehicles.Update.Tire,
 			}
-			model InflatedTirePlusWheel
+
+			model ectoroundthingsthatspin
 			{
-				file = Vehicles_Wheel,
+				file = ECTO1wheel,
 			}
-			/*
-			model test
-			{
-				file = Vehicles_Wheel,
-				offset = -0.1 0.0 0.0,
-				rotate = 0.0 0.0 0.0,
-			}
-			*/
 		}
 	}
 }

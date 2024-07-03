@@ -4,15 +4,31 @@ module Base
     model 92nissanGTRwindshield
     {
         mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_windshield,
-        shader = vehicle,
+        shader = damn_vehicle_shader,
         scale = 0.1,
+    }
+
+    model 92nissanGTRwindshieldRef
+    {
+        mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_windshield,
+        shader = damn_vehicle_shader,
+        scale = 0.1,
+        invertX = TRUE,
     }
 
     model 92nissanGTRrearWindshield
     {
         mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_windshieldRear,
-        shader = vehicle,
+        shader = damn_vehicle_shader,
         scale = 0.1,
+    }
+
+    model 92nissanGTRrearWindshieldRef
+    {
+        mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_windshieldRear,
+        shader = damn_vehicle_shader,
+        scale = 0.1,
+        invertX = TRUE,
     }
 
 	template vehicle R32Windshields
@@ -134,5 +150,26 @@ module Base
             }
         }
 
+    }
+
+    template vehicle R32WindshieldsRef
+	{
+        template! = R32Windshields,
+
+        part Windshield
+        {
+            model windshieldFront
+            {
+            file = 92nissanGTRwindshieldRef,
+            }
+        }
+
+        part WindshieldRear
+        {
+            model windshieldRear
+            {
+            file = 92nissanGTRrearWindshieldRef,
+            }
+        }
     }
 }

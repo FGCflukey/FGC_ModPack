@@ -4,7 +4,7 @@ module Base
 	model E150Wheel
 	{
 		mesh = vehicles/Vehicles_86fordE150_Wheel|e150_tire,
-		texture = vehicles/Vehicles_86fordE150_Wheel_Interior,
+		texture = vehicles/Vehicles_86fordE150_Wheel,
 		shader = vehiclewheel,
 		scale = 0.1,
 	}

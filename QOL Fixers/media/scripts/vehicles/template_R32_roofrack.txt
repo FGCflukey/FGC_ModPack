@@ -1,30 +1,37 @@
 module Base
 {
-	model 86fordE150rearBumperLong
+
+	model 92nissanGTRRoofrack0
 	{
-		mesh = vehicles/Vehicles_86fordE150_Body|e150_bumperRear_long,
-		shader = vehicle,
+		mesh = vehicles/Vehicles_92nissanGTR_Body|gtr_roofrack,
+		texture = Vehicles/Items_damnRoofrackModern,
+		shader = vehiclewheel,
 		scale = 0.1,
 	}
 
-	template vehicle E150RearBumperLong
+	template vehicle R32Roofrack
+	{
+		part R32Roofrack
 		{
-		part E150RearBumper
-        	{
 
-			model RearBumper546844
+			model R32Roofrack0
 				{
-                		file = 86fordE150rearBumperLong,
+                		file = 92nissanGTRRoofrack0,
 				}
 
-				area = TruckBed,
-				category = bodywork,
-				itemType = Base.E150RearBumper,
-				mechanicRequireKey = false,
-				repairMechanic = true,
+			category = Other,
+			area = Roofrack,
+			itemType = Base.ModernSmallRoofrack,
+			mechanicRequireKey = false,
+			repairMechanic = true,
+			container
+			{
+				conditionAffectsCapacity = false,
+				test = R32.ContainerAccess.Roofrack,
+			}
 
-				table install
-				{
+			table install
+			{
                 	items
                 	{
                     	1
@@ -36,14 +43,14 @@ module Base
                     		}
                 	}
 
-                	time = 450,
-                	skills = Mechanics:3,
+                	time = 800,
+                	skills = Mechanics:1,
                 	recipes = Intermediate Mechanics,
                 	test = Vehicles.InstallTest.Default,
                 	complete = Vehicles.InstallComplete.Default,
             		}
 
-            		table uninstall
+            table uninstall
             		{
                 	items
                 	{
@@ -56,19 +63,20 @@ module Base
                     		}
                 	}
 
-					time = 500,
-					skills = Mechanics:3,
+					time = 800,
+					skills = Mechanics:1,
 					recipes = Intermediate Mechanics,
-                	test = Vehicles.UninstallTest.Default,
+            		test = Vehicles.UninstallTest.Default,
 					complete = Vehicles.UninstallComplete.Default,
+					requireEmpty = true,
+
             		}
 
-            		lua
-            		{
-					create = Vehicles.Create.Default,
-					}
+            lua
+            	{
+					create = DAMN.Create.Blank,
+				}
 		}
 	}
-
-		
 }
+

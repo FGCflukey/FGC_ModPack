@@ -3,7 +3,7 @@ module Base
 	model 86fordE150SpareTire
     	{
         mesh = vehicles/Vehicles_86fordE150_Body|e150_spareTire,
-		texture = Vehicles/Vehicles_86fordE150_Wheel_Interior,
+		texture = Vehicles/Vehicles_86fordE150_Wheel,
 		shader = vehiclewheel,
         scale = 0.1,
     	}

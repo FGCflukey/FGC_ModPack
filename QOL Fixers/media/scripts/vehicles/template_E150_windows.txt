@@ -3,7 +3,7 @@ module Base
 	model 86fordE150windowfl
 	{
 		mesh = vehicles/Vehicles_86fordE150_Body|e150_window_fl,
-		shader = vehicle,
+		shader = damn_vehicle_shader,
 		static = FALSE,
 		scale = 0.1,
 		boneWeight = window_fl_bone 1.0,
@@ -12,7 +12,7 @@ module Base
 	model 86fordE150windowfr
 	{
 		mesh = vehicles/Vehicles_86fordE150_Body|e150_window_fr,
-		shader = vehicle,
+		shader = damn_vehicle_shader,
 		static = FALSE,
 		scale = 0.1,
 		boneWeight = window_fr_bone 1.0,

@@ -9,7 +9,7 @@ module Base
 		scale = 0.1,
 	}
 
-	template vehicle ECTO1RoofrackCompartment
+	template vehicle 59meteorRoofrackCompartment
 	{
 		part ECTO1Roofrack
 		{
@@ -49,6 +49,7 @@ module Base
                 	skills = Mechanics:1,
                 	recipes = Intermediate Mechanics,
                 	test = Vehicles.InstallTest.Default,
+                    complete = ECTO1.InstallComplete.Roofrack,
             		}
 
             		table uninstall
@@ -57,10 +58,10 @@ module Base
                 	{
                     	1
                     		{
-                            type = Base.Wrench,
-                            count = 1,
-                            keep = true,
-                            equip = primary,
+  				type = Base.Wrench,
+				count = 1,
+				keep = true,
+				equip = primary,
                     		}
                 	}
 
@@ -68,15 +69,15 @@ module Base
                     skills = Mechanics:1,
                     recipes = Intermediate Mechanics,
             		test = Vehicles.UninstallTest.Default,
-                    complete = ECTO1.UninstallComplete.Roofrack,
+			        complete = ECTO1.UninstallComplete.Roofrack,
                     requireUninstalled = ECTO1Equipment,
             		}
 
             		lua
             		{
-                    create = ECTO1.Create.Roofrack,
-                    init = ECTO1.Init.Roofrack,
-                    }
+                        create = DAMN.Create.Blank,
+					}
 		}
 	}
 }
+
