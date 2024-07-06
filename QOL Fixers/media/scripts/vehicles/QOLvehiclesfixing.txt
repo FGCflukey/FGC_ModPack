@@ -12,7 +12,7 @@ module Base
 
 	fixing Fix Gas Tank Other
 	{
-		Require : SmallGasTank1;NormalGasTank1;BigGasTank1;SmallGasTank2;NormalGasTank2;BigGasTank2;SmallGasTank3;NormalGasTank3;BigGasTank3;SmallGasTank8;NormalGasTank8;BigGasTank8;U1550LGasTank2,
+		Require : SmallGasTank1;NormalGasTank1;BigGasTank1;SmallGasTank2;NormalGasTank2;BigGasTank2;SmallGasTank3;NormalGasTank3;BigGasTank3;SmallGasTank8;NormalGasTank8;BigGasTank8;U1550LGasTank2;97BushGasTank2,
 		GlobalItem : Screws=8,
 		ConditionModifier : 0.5,
 
@@ -40,7 +40,7 @@ module Base
 
 	fixing Fix Hood Welding
 	{
-		Require : EngineDoor1;EngineDoor2;EngineDoor3;EngineDoor8;U1550LHood2,
+		Require : EngineDoor1;EngineDoor2;EngineDoor3;EngineDoor8;U1550LHood2;97BushEngineDoor2,
 		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
@@ -69,7 +69,7 @@ module Base
 
 	fixing Fix Trunk Lid Other
 	{
-		Require : TrunkDoor1;TrunkDoor2;TrunkDoor3;TrunkDoor8;M101A3TrunkDoor2;M101A3TrunkDoorTwo2;U1550LTrunkDoor2,
+		Require : TrunkDoor1;TrunkDoor2;TrunkDoor3;TrunkDoor8;M101A3TrunkDoor2;M101A3TrunkDoorTwo2;U1550LTrunkDoor2;97BushStorageLidSmall;97BushStorageLidLarge,
 		GlobalItem : Screws=8,
 		ConditionModifier : 0.5,
 
@@ -88,7 +88,7 @@ module Base
 
 	fixing Fix Door
 	{
-		Require : FrontCarDoor1;FrontCarDoor2;FrontCarDoor3;RearCarDoor1;RearCarDoor2;RearCarDoor3;RearCarDoorDouble1;RearCarDoorDouble2;RearCarDoorDouble3;FrontCarDoor8;RearCarDoor8;RearCarDoorDouble8;M998CarFrontDoor2;M998CarRearDoor2;U1550LDoor2,
+		Require : FrontCarDoor1;FrontCarDoor2;FrontCarDoor3;RearCarDoor1;RearCarDoor2;RearCarDoor3;RearCarDoorDouble1;RearCarDoorDouble2;RearCarDoorDouble3;FrontCarDoor8;RearCarDoor8;RearCarDoorDouble8;M998CarFrontDoor2;M998CarRearDoor2;U1550LDoor2;97BushDoor2;97BushHatch2,
 		GlobalItem : Screws=8,
 		ConditionModifier : 0.5,
 
@@ -163,7 +163,7 @@ module Base
 
 	fixing Fix Car Seat
 	{
-		Require : NormalCarSeat1;BigCarSeat1;SportCarSeat1;NormalCarSeat2;BigCarSeat2;SportCarSeat2;NormalCarSeat3;BigCarSeat3;SportCarSeat3;NormalCarSeat8;BigCarSeat8;SportCarSeat8;M998CarSeat2;DodgeFrontSeat3;DodgeRearSeat3;R32FrontSeat3;R32RearSeat3;Seat0;U1550LSeat2;E150CarSeat2;80sPickupSeatFront2;80sPickupSeatRear2;ECTO1CarSeatfl2;ECTO1CarSeatfr2;ECTO1CarSeatrl2;ECTO1CarSeatrr2;M151A2CarSeatFront2;M151A2CarSeatRear2;97BushmasterSeat;97BushmasterGunnerSeat;KZ1Kseat;93townCarSeatFront1;93townCarSeatRear1;90pierceArrowSeat2;M35A2CarSeat2,
+		Require : NormalCarSeat1;BigCarSeat1;SportCarSeat1;NormalCarSeat2;BigCarSeat2;SportCarSeat2;NormalCarSeat3;BigCarSeat3;SportCarSeat3;NormalCarSeat8;BigCarSeat8;SportCarSeat8;M998CarSeat2;DodgeFrontSeat3;DodgeRearSeat3;R32FrontSeat3;R32RearSeat3;Seat0;U1550LSeat2;E150CarSeat2;80sPickupSeatFront2;80sPickupSeatRear2;ECTO1CarSeatfl2;ECTO1CarSeatfr2;ECTO1CarSeatrl2;ECTO1CarSeatrr2;M151A2CarSeatFront2;M151A2CarSeatRear2;KZ1Kseat;93townCarSeatFront1;93townCarSeatRear1;90pierceArrowSeat2;M35A2CarSeat2,
 		ConditionModifier : 1.2,
 
 		 
@@ -173,7 +173,7 @@ module Base
 
 	fixing Fix Car Seat Other
 	{
-		Require : NormalCarSeat1;BigCarSeat1;SportCarSeat1;NormalCarSeat2;BigCarSeat2;SportCarSeat2;NormalCarSeat3;BigCarSeat3;SportCarSeat3;NormalCarSeat8;BigCarSeat8;SportCarSeat8;M998CarSeat2;DodgeFrontSeat3;DodgeRearSeat3;R32FrontSeat3;R32RearSeat3;Seat0;U1550LSeat2;E150CarSeat2;80sPickupSeatFront2;80sPickupSeatRear2;ECTO1CarSeatfl2;ECTO1CarSeatfr2;ECTO1CarSeatrl2;ECTO1CarSeatrr2;M151A2CarSeatFront2;M151A2CarSeatRear2;KZ1Kseat;93townCarSeatFront1;93townCarSeatRear1;90pierceArrowSeat2;M35A2CarSeat2,
+		Require : NormalCarSeat1;BigCarSeat1;SportCarSeat1;NormalCarSeat2;BigCarSeat2;SportCarSeat2;NormalCarSeat3;BigCarSeat3;SportCarSeat3;NormalCarSeat8;BigCarSeat8;SportCarSeat8;M998CarSeat2;DodgeFrontSeat3;DodgeRearSeat3;R32FrontSeat3;R32RearSeat3;Seat0;U1550LSeat2;E150CarSeat2;80sPickupSeatFront2;80sPickupSeatRear2;ECTO1CarSeatfl2;ECTO1CarSeatfr2;ECTO1CarSeatrl2;ECTO1CarSeatrr2;M151A2CarSeatFront2;M151A2CarSeatRear2;KZ1Kseat;93townCarSeatFront1;93townCarSeatRear1;90pierceArrowSeat2;M35A2CarSeat2;97BushmasterSeat;97BushmasterGunnerSeat,
 		GlobalItem : UpholsteryKit=2,
 		ConditionModifier : 1.2,
 
@@ -190,7 +190,7 @@ module Base
 
 	fixing Fix Tire
 	{
-		Require : OldTire1;NormalTire1;ModernTire1;OldTire2;NormalTire2;ModernTire2;OldTire3;NormalTire3;ModernTire3;OldTire8;NormalTire8;ModernTire8;V100Tire2;V100Tires2;V100SmallTires2;V100Axle2;V100AxleSmall2;V101Tire2;DodgeRTtire3;CUDAtire3;CamaroSStire3;R32Tire0;R32Tire1;R32Tire2;R32TireA;McLarenF1FrontWheel3;McLarenF1RearWheel3;U1550LWheel2;E150Tire2;80sOffroadTireA;ECTO1tire2_Item;ECTO1tire1_Item;V102Tire2;BushmasterTire;KZ1KoldTire;KZ1KnormalTire;KZ1KmodernTire;93townCarTire1;90pierceArrowTire2;90pierceArrowDoubleTires2;DoubleOldTire2;DoubleNormalTire2;DoubleModernTire2,
+		Require : OldTire1;NormalTire1;ModernTire1;OldTire2;NormalTire2;ModernTire2;OldTire3;NormalTire3;ModernTire3;OldTire8;NormalTire8;ModernTire8;V100Tire2;V100Tires2;V100SmallTires2;V100Axle2;V100AxleSmall2;V101Tire2;DodgeRTtire3;CUDAtire3;CamaroSStire3;R32Tire0;R32Tire1;R32Tire2;R32TireA;McLarenF1FrontWheel3;McLarenF1RearWheel3;U1550LWheel2;E150Tire2;80sOffroadTireA;ECTO1tire2_Item;ECTO1tire1_Item;V102Tire2;BushmasterTire;KZ1KoldTire;KZ1KnormalTire;KZ1KmodernTire;93townCarTire1;90pierceArrowTire2;90pierceArrowDoubleTires2;DoubleOldTire2;DoubleNormalTire2;DoubleModernTire2;runFlat.SmallTire;runFlat.ModernTire;runFlat.LargeDoubleTires;runFlat.MediumTire;runFlat.LargeTire,
 		ConditionModifier : 1.2,
 
 		Fixer : Superglue=2; Mechanics=2,
@@ -215,7 +215,7 @@ module Base
 
 	fixing Fix Bullbar Bumper
 	{
-		Require : DG70FrontBumper0;DG70RearBumper0;DG70FrontBumperA;DG70FrontBumperB;DG70FrontBumperC;DG70RearBumperA;DG70RearBumperB;DG70RearBumperC;R32BumperA;R32BumperRearA;R32SideskirtsA;McLarenF1Bull3;U1550LBull2;89BroncoBumperFront;89BroncoBumperRear;89BroncoBullbarFront;80sPickupBullbarFront;80sPickupBullbarRear;82JeepJ10BumperFront;82JeepJ10BullbarFront;82JeepJ10BumperRear;P19AFenderLeft1_Item;P19AFenderLeft2_Item;P19AFenderRight1_Item;P19AFenderRight2_Item;P19AFenderRight3_Item;88ChevyS10BumperFront;88ChevyS10BullbarFront;88ChevyS10BumperRear;97BushBullbarSAS,
+		Require : DG70FrontBumper0;DG70RearBumper0;DG70FrontBumperA;DG70FrontBumperB;DG70FrontBumperC;DG70RearBumperA;DG70RearBumperB;DG70RearBumperC;R32BumperA;R32BumperRearA;R32SideskirtsA;McLarenF1Bull3;U1550LBull2;89BroncoBumperFront;89BroncoBumperRear;89BroncoBullbarFront;80sPickupBullbarFront;80sPickupBullbarRear;82JeepJ10BumperFront;82JeepJ10BullbarFront;82JeepJ10BumperRear;P19AFenderLeft1_Item;P19AFenderLeft2_Item;P19AFenderRight1_Item;P19AFenderRight2_Item;P19AFenderRight3_Item;88ChevyS10BumperFront;88ChevyS10BullbarFront;88ChevyS10BumperRear;97BushBullbarSAS;97BushLeftFender0;97BushRightFender0,
 		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
@@ -255,7 +255,7 @@ module Base
 	
 	fixing Fix Trunk Barrier Net
 	{
-		Require : M998TrunkBarrier2_Item,
+		Require : M998TrunkBarrier2_Item;97BushMudflaps,
 
 		Fixer : Superglue=2;Mechanics=2,
 		Fixer : Rubbercement=2;Mechanics=2,
@@ -274,7 +274,7 @@ module Base
 
 	fixing Fix Spare Mount
 	{
-		Require : M998SpareMount_Item;M998SpareTireMount_Item;P19ASpareMount1_Item;P19ASpareMount2_Item,
+		Require : M998SpareMount_Item;M998SpareTireMount_Item;P19ASpareMount1_Item;P19ASpareMount2_Item;runFlat.Medium4TireAxle;runFlat.Large4TireAxle;runFlat.Large2TireAxle,
 		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
@@ -332,7 +332,7 @@ module Base
 
 	fixing Fix Roofracks and Other
 	{
-		Require : ECTO1Equipment1_Item;E150Divider;E150MysteryMachineRoofrack2;E150MysteryMachineSurfboards2;80sPickupRoofrackA;80sPickupRollbarA;80sPickupRollbarB;82JeepJ10Dorothy;82JeepJ10DorothyAnemometer;90pierceArrowLadders;OldSmallRoofrack3,
+		Require : ECTO1Equipment1_Item;E150Divider;E150MysteryMachineRoofrack2;E150MysteryMachineSurfboards2;80sPickupRoofrackA;80sPickupRollbarA;80sPickupRollbarB;82JeepJ10Dorothy;82JeepJ10DorothyAnemometer;90pierceArrowLadders;OldSmallRoofrack3;97BushLeftStorage0;97BushRightStorage0;97BushRoofStorage0,
 		GlobalItem : BlowTorch=2,
 		ConditionModifier : 1.2,
 
