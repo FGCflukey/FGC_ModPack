@@ -1,0 +1,215 @@
+module Base
+{
+	model 97bushmasterSpareRight
+	{
+		mesh = vehicles/Vehicles_97bushmaster_Body|bush_spare_right,
+		texture = Vehicles/Wheels_runFlat_modern,
+		shader = vehiclewheel,
+		scale = 0.1,
+	}
+
+	model 97bushmasterSpareRoof
+	{
+		mesh = vehicles/Vehicles_97bushmaster_Body|bush_spare_roof,
+		texture = Vehicles/Wheels_runFlat_modern,
+		shader = vehiclewheel,
+		scale = 0.1,
+	}
+
+	model 97bushmasterspareFloor0
+	{
+		mesh = vehicles/Vehicles_97bushmaster_Body|bush_spare_bottom0,
+		texture = vehicles/Wheels_runFlat_modern,
+		shader = vehiclewheel,
+		scale = 0.1,
+	}
+	model 97bushmasterspareFloor1
+	{
+		mesh = vehicles/Vehicles_97bushmaster_Body|bush_spare_bottom1,
+		shader = damn_vehicle_noreflect_shader,
+		scale = 0.1,
+	}
+
+	template vehicle BUSHSpareTires
+		{
+		part BUSHSpareRight
+        	{
+
+			model Bushspare1
+				{
+                	file = 97bushmasterSpareRight,
+				}
+				area = TireRearRight,
+
+				table install
+					{
+                	complete = BUSH.InstallComplete.SpareTire,
+            		}
+
+            	table uninstall
+            		{
+					complete = BUSH.UninstallComplete.SpareTire,
+
+            		}
+
+            		lua
+            		{
+            			init = BUSH.Init.SpareTire,
+						create = BUSH.Create.SpareTire,
+					}
+			}
+
+		part BUSHSpareRoof
+        	{
+
+			model Bushspare2
+				{
+                	file = 97bushmasterSpareRoof,
+				}
+
+				area = RearDoor,
+
+				table install
+					{
+                	complete = BUSH.InstallComplete.SpareTireRoof,
+            		}
+
+            	table uninstall
+            		{
+					complete = BUSH.UninstallComplete.SpareTireRoof,
+            		}
+
+            		lua
+            		{
+            			init = BUSH.Init.SpareTireRoof,
+						create = BUSH.Create.SpareTireRoof,
+					}
+			}
+
+			part BUSHSpare*
+        	{
+
+				category = bodywork,
+				specificItem = false,
+				itemType = runFlat.ModernTire,
+				mechanicRequireKey = false,
+				repairMechanic = true,
+
+				table install
+				{
+                	items
+                	{
+                    	1
+                    		{
+                        	type = Base.Wrench,
+                        	count = 1,
+                        	keep = true,
+							equip = primary,
+                    		}
+                	}
+
+                	time = 800,
+                	skills = Mechanics:1,
+                	recipes = Intermediate Mechanics,
+                	test = Vehicles.InstallTest.Default,
+            		}
+
+            	table uninstall
+            		{
+                	items
+                	{
+                    	1
+                    		{
+				  				type = Base.Wrench,
+								count = 1,
+								keep = true,
+								equip = primary,
+                    		}
+                	}
+
+					time = 750,
+					skills = Mechanics:1,
+					recipes = Intermediate Mechanics,
+		            test = Vehicles.UninstallTest.Default,
+
+            		}
+
+			}
+
+			part BUSHStorageSpare
+        	{
+
+			model Bushstorageright1
+				{
+                		file = 97bushmasterspareFloor0,
+				}
+			model Bushstorageright1b
+				{
+                		file = 97bushmasterspareFloor1,
+				}
+
+			area = Storage3,
+			specificItem = false,
+			itemType = runFlat.ModernTire,
+			category = bodywork,
+			mechanicRequireKey = false,
+			repairMechanic = true,
+
+			container
+			{
+				conditionAffectsCapacity = false,
+				test = BUSH.ContainerAccess.SR,
+			}
+
+			table install
+			{
+                	items
+                	{
+                    	1
+                    		{
+                        	type = Base.Wrench,
+                        	count = 1,
+                        	keep = true,
+							equip = primary,
+                    		}
+                	}
+
+                	time = 800,
+                	skills = Mechanics:1,
+                	recipes = Intermediate Mechanics,
+                	test = Vehicles.InstallTest.Default,
+                	complete = Vehicles.InstallComplete.Default,
+                	requireUninstalled = BUSHStorageRight,
+
+            		}
+
+            table uninstall
+            		{
+                	items
+                	{
+                    	1
+                    		{
+			  				type = Base.Wrench,
+							count = 1,
+							keep = true,
+							equip = primary,
+                    		}
+                	}
+
+					time = 750,
+					skills = Mechanics:1,
+					recipes = Intermediate Mechanics,
+		            test = Vehicles.UninstallTest.Default,
+					complete = Vehicles.UninstallComplete.Default,
+
+				}
+
+				lua
+            		{
+					create = DAMN.Create.Blank,
+					}
+			}
+	}
+
+		
+}
