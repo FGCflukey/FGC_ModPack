@@ -202,7 +202,7 @@ end
 UGTakePropaneMenu.TakePropane = function( tank, player, pump)
 
 	--print( "keyword: TakePropane called")
-	ISTimedActionQueue.add( UGTakePropane:new( pump, tank, player, 50, 100, false))
+	ISTimedActionQueue.add( UGTakePropane:new( pump, tank, player, 50, 50, false))
 end
 
 
