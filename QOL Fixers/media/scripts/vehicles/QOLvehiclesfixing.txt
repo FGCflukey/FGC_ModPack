@@ -88,7 +88,7 @@ module Base
 
 	fixing Fix Door
 	{
-		Require : FrontCarDoor1;FrontCarDoor2;FrontCarDoor3;RearCarDoor1;RearCarDoor2;RearCarDoor3;RearCarDoorDouble1;RearCarDoorDouble2;RearCarDoorDouble3;FrontCarDoor8;RearCarDoor8;RearCarDoorDouble8;M998CarFrontDoor2;M998CarRearDoor2;U1550LDoor2;97BushDoor2;97BushHatch2,
+		Require : FrontCarDoor1;FrontCarDoor2;FrontCarDoor3;RearCarDoor1;RearCarDoor2;RearCarDoor3;RearCarDoorDouble1;RearCarDoorDouble2;RearCarDoorDouble3;FrontCarDoor8;RearCarDoor8;RearCarDoorDouble8;M998CarFrontDoor2;M998CarRearDoor2;U1550LDoor2;97BushDoor2;97BushHatch2;93townCarFrontDoor1;93townCarRearDoor1,
 		GlobalItem : Screws=8,
 		ConditionModifier : 0.5,
 
