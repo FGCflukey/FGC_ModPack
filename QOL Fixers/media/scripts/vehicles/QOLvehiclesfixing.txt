@@ -13,10 +13,11 @@ module Base
 	fixing Fix Gas Tank Other
 	{
 		Require : SmallGasTank1;NormalGasTank1;BigGasTank1;SmallGasTank2;NormalGasTank2;BigGasTank2;SmallGasTank3;NormalGasTank3;BigGasTank3;SmallGasTank8;NormalGasTank8;BigGasTank8;U1550LGasTank2;97BushGasTank2,
-		GlobalItem : Screws=8,
-		ConditionModifier : 0.5,
+		GlobalItem : BlowTorch=2,
+		ConditionModifier : 1.2,
 
-		Fixer : SheetMetal; Mechanics=2,
+		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
 	}
 
 	fixing Fix Trailer Welding
@@ -51,10 +52,11 @@ module Base
 	fixing Fix Hood Other
 	{
 		Require : EngineDoor1;EngineDoor2;EngineDoor3;EngineDoor8;U1550LHood2,
-		GlobalItem : Screws=8,
-		ConditionModifier : 0.5,
+		GlobalItem : BlowTorch=2,
+		ConditionModifier : 1.2,
 
-		Fixer : SheetMetal; Mechanics=2,
+		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
 	}
 
 	fixing Fix Trunk Lid Welding
@@ -70,10 +72,11 @@ module Base
 	fixing Fix Trunk Lid Other
 	{
 		Require : TrunkDoor1;TrunkDoor2;TrunkDoor3;TrunkDoor8;M101A3TrunkDoor2;M101A3TrunkDoorTwo2;U1550LTrunkDoor2;97BushStorageLidSmall;97BushStorageLidLarge,
-		GlobalItem : Screws=8,
-		ConditionModifier : 0.5,
+		GlobalItem : BlowTorch=2,
+		ConditionModifier : 1.2,
 
-		Fixer : SheetMetal; Mechanics=2,
+		Fixer : SheetMetal; MetalWelding=3;Mechanics=2,
+		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
 	}
 
 	fixing Fix Door Welding
@@ -89,10 +92,11 @@ module Base
 	fixing Fix Door
 	{
 		Require : FrontCarDoor1;FrontCarDoor2;FrontCarDoor3;RearCarDoor1;RearCarDoor2;RearCarDoor3;RearCarDoorDouble1;RearCarDoorDouble2;RearCarDoorDouble3;FrontCarDoor8;RearCarDoor8;RearCarDoorDouble8;M998CarFrontDoor2;M998CarRearDoor2;U1550LDoor2;97BushDoor2;97BushHatch2;93townCarFrontDoor1;93townCarRearDoor1,
-		GlobalItem : Screws=8,
-		ConditionModifier : 0.5,
+		GlobalItem : BlowTorch=2,
+		ConditionModifier : 1.2,
 
 		Fixer : SheetMetal; Mechanics=2,
+		Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=2,
 	}
 
 	fixing Fix Brake
