@@ -1,295 +1,295 @@
 module Base
 {
-	item BrokenBearTrap
-	{
-		DisplayCategory = Junk,
-		Weight 			= 0.1,
-		Type 			= Normal,
-		DisplayName 	= Bear Trap Broken,
-		Icon 			= BrokenBearTrap,
-		Tooltip = Tooltip_BearTrapBroken,
-		MetalValue = 5,
-		WorldStaticModel = BearTrapBroken_Ground,
-	}
-
-	item SmallStone
-	{
-		DisplayCategory = Material,
-		Weight 			= 0.1,
-		Type 			= Normal,
-		DisplayName 	= Small Stone,
-		Icon 			= SmallStone,
-		Tooltip = Tooltip_SmallStone,
-		WorldStaticModel = SmallStone,
-	}
-
-	item DeerCall
-	{
-		DisplayCategory = Tool,
-		Weight 			= 0.1,
-		Type 			= Normal,
-		DisplayName 	= Deer Call,
-		Icon 			= DeerCall,
-		Tooltip = Tooltip_DeerCall,
-		StaticModel = DeerCall,
-		WorldStaticModel = DeerCall_Ground,
-	}
-
-	item LGRBookHunting1
+    item BrokenBearTrap
     {
-		DisplayCategory = SkillBook,
-        NumberOfPages	=	220,
-        Weight	=	0.8,
-        Type	=	Literature,
-        DisplayName	=	Hunting for Beginners,
-        Icon	=	BookHunting,
+        DisplayCategory = Junk,
+        Weight          = 0.1,
+        Type            = Normal,
+        DisplayName     = Bear Trap Broken,
+        Icon            = BrokenBearTrap,
+        Tooltip = Tooltip_BearTrapBroken,
+        MetalValue = 5,
+        WorldStaticModel = BearTrapBroken_Ground,
+    }
+
+    item SmallStone
+    {
+        DisplayCategory = Material,
+        Weight          = 0.1,
+        Type            = Normal,
+        DisplayName     = Small Stone,
+        Icon            = SmallStone,
+        Tooltip = Tooltip_SmallStone,
+        WorldStaticModel = SmallStone,
+    }
+
+    item DeerCall
+    {
+        DisplayCategory = Tool,
+        Weight          = 0.1,
+        Type            = Normal,
+        DisplayName     = Deer Call,
+        Icon            = DeerCall,
+        Tooltip = Tooltip_DeerCall,
+        StaticModel = DeerCall,
+        WorldStaticModel = DeerCall_Ground,
+    }
+
+    item LGRBookHunting1
+    {
+        DisplayCategory = SkillBook,
+        NumberOfPages   =   220,
+        Weight  =   0.8,
+        Type    =   Literature,
+        DisplayName =   Hunting for Beginners,
+        Icon    =   BookHunting,
         SkillTrained = LGRHunting,
         LvlSkillTrained = 1,
         NumLevelsTrained = 2,
         StaticModel = LGRBookHunting,
-		WorldStaticModel = LGRBookHunting_Ground,
+        WorldStaticModel = LGRBookHunting_Ground,
     }
 
     item LGRBookHunting2
     {
-		DisplayCategory = SkillBook,
-        NumberOfPages	=	260,
-        Weight	=	0.8,
-        Type	=	Literature,
-        DisplayName	=	Hunting for Intermediates,
-        Icon	=	BookHunting,
+        DisplayCategory = SkillBook,
+        NumberOfPages   =   260,
+        Weight  =   0.8,
+        Type    =   Literature,
+        DisplayName =   Hunting for Intermediates,
+        Icon    =   BookHunting,
         SkillTrained = LGRHunting,
         LvlSkillTrained = 3,
         NumLevelsTrained = 2,
         StaticModel = LGRBookHunting,
-		WorldStaticModel = LGRBookHunting_Ground,
+        WorldStaticModel = LGRBookHunting_Ground,
     }
 
     item LGRBookHunting3
     {
-		DisplayCategory = SkillBook,
-        NumberOfPages	=	300,
-        Weight	=	0.8,
-        Type	=	Literature,
-        DisplayName	=	Advanced Hunting,
-        Icon	=	BookHunting,
+        DisplayCategory = SkillBook,
+        NumberOfPages   =   300,
+        Weight  =   0.8,
+        Type    =   Literature,
+        DisplayName =   Advanced Hunting,
+        Icon    =   BookHunting,
         SkillTrained = LGRHunting,
         LvlSkillTrained = 5,
         NumLevelsTrained = 2,
         StaticModel = LGRBookHunting,
-		WorldStaticModel = LGRBookHunting_Ground,
+        WorldStaticModel = LGRBookHunting_Ground,
     }
 
     item LGRBookHunting4
     {
-		DisplayCategory = SkillBook,
-        NumberOfPages	=	340,
-        Weight	=	0.8,
-        Type	=	Literature,
-        DisplayName	=	Expert Hunting,
-        Icon	=	BookHunting,
+        DisplayCategory = SkillBook,
+        NumberOfPages   =   340,
+        Weight  =   0.8,
+        Type    =   Literature,
+        DisplayName =   Expert Hunting,
+        Icon    =   BookHunting,
         SkillTrained = LGRHunting,
         LvlSkillTrained = 7,
         NumLevelsTrained = 2,
         StaticModel = LGRBookHunting,
-		WorldStaticModel = LGRBookHunting_Ground,
+        WorldStaticModel = LGRBookHunting_Ground,
     }
 
     item LGRBookHunting5
     {
-		DisplayCategory = SkillBook,
-        NumberOfPages	=	380,
-        Weight	=	0.8,
-        Type	=	Literature,
-        DisplayName	=	Master Hunting,
-        Icon	=	BookHunting,
+        DisplayCategory = SkillBook,
+        NumberOfPages   =   380,
+        Weight  =   0.8,
+        Type    =   Literature,
+        DisplayName =   Master Hunting,
+        Icon    =   BookHunting,
         SkillTrained = LGRHunting,
         LvlSkillTrained = 9,
         NumLevelsTrained = 2,
         StaticModel = LGRBookHunting,
-		WorldStaticModel = LGRBookHunting_Ground,
+        WorldStaticModel = LGRBookHunting_Ground,
     }
-	
+    
     item SpearKDKnife
     {
-        MaxRange	=	1.48,
-        WeaponSprite	=	SpearKDKnife,
-        MinAngle	=	0.8,
-        Type	=	Weapon,
-        MinimumSwingTime	=	2,
-        KnockBackOnNoDeath	=	FALSE,
-        SwingAmountBeforeImpact	=	0.02,
-        Categories	=	Improvised;Spear,
-        ConditionLowerChanceOneIn	=	15,
-        Weight	=	1.5,
-        SplatNumber	=	1,
-        PushBackMod	=	0.3,
-        SubCategory	=	Spear,
-        ConditionMax	=	10,
-        MaxHitCount	=	2,
-        DoorDamage	=	7,
-        SwingAnim	=	Spear,
-        DisplayName	=	Spear With Knife Despostador,
-        MinRange	=	0.98,
-        SwingTime	=	2,
-        KnockdownMod	=	0,
-        SplatBloodOnNoDeath	=	FALSE,
-        Icon	=	SpearKDKnife,
-        RunAnim	=	Run_Weapon2,
-        IdleAnim	=	Idle_Weapon2,
+        MaxRange    =   1.48,
+        WeaponSprite    =   SpearKDKnife,
+        MinAngle    =   0.8,
+        Type    =   Weapon,
+        MinimumSwingTime    =   2,
+        KnockBackOnNoDeath  =   FALSE,
+        SwingAmountBeforeImpact =   0.02,
+        Categories  =   Improvised;Spear,
+        ConditionLowerChanceOneIn   =   15,
+        Weight  =   1.5,
+        SplatNumber =   1,
+        PushBackMod =   0.3,
+        SubCategory =   Spear,
+        ConditionMax    =   10,
+        MaxHitCount =   2,
+        DoorDamage  =   7,
+        SwingAnim   =   Spear,
+        DisplayName =   Spear With Knife Despostador,
+        MinRange    =   0.98,
+        SwingTime   =   2,
+        KnockdownMod    =   0,
+        SplatBloodOnNoDeath =   FALSE,
+        Icon    =   SpearKDKnife,
+        RunAnim =   Run_Weapon2,
+        IdleAnim    =   Idle_Weapon2,
         TreeDamage  =   0,
         TwoHandWeapon = TRUE,
-        CriticalChance	=	30,
+        CriticalChance  =   30,
         CritDmgMultiplier = 10,
-        MinDamage	=	1.2,
-        MaxDamage	=	1.7,
+        MinDamage   =   1.2,
+        MaxDamage   =   1.7,
         DamageCategory = Slash,
         DamageMakeHole = TRUE,
         BreakSound  =   SpearHuntingKnifeBreak,
-        HitFloorSound	=	SpearHuntingKnifeHit,
-        ImpactSound	=	SpearHuntingKnifeHit,
+        HitFloorSound   =   SpearHuntingKnifeHit,
+        ImpactSound =   SpearHuntingKnifeHit,
         DoorHitSound = SpearHuntingKnifeHit,
-        HitSound	=	SpearHuntingKnifeHit,
-        SwingSound	=	SpearHuntingKnifeSwing,
-		AttachmentType = Shovel,
+        HitSound    =   SpearHuntingKnifeHit,
+        SwingSound  =   SpearHuntingKnifeSwing,
+        AttachmentType = Shovel,
         Tags = FishingSpear,
     }
 
-	item magnifyingglass
-	{
-		DisplayCategory = Tool,
-		Weight 			= 0.1,
-		Type 			= Normal,
-		DisplayName 	= Magnifying Glass,
-		Icon 			= Lupa,
-		Tooltip = Tooltip_Lupa,
-		WorldStaticModel = MagnifyingGlass_Ground,
-	}
+    item magnifyingglass
+    {
+        DisplayCategory = Tool,
+        Weight          = 0.1,
+        Type            = Normal,
+        DisplayName     = Magnifying Glass,
+        Icon            = Lupa,
+        Tooltip = Tooltip_Lupa,
+        WorldStaticModel = MagnifyingGlass_Ground,
+    }
 
     item SpearSurvivalKnife
     {
-        MaxRange	=	1.7,
-        WeaponSprite	=	SpearSurvivalKnife,
-        MinAngle	=	0.65,
-        Type	=	Weapon,
-        MinimumSwingTime	=	2,
-        KnockBackOnNoDeath	=	FALSE,
-        SwingAmountBeforeImpact	=	0.02,
-        Categories	=	Improvised;Spear,
-        ConditionLowerChanceOneIn	=	7,
-        Weight	=	1.5,
-        SplatNumber	=	1,
-        PushBackMod	=	0.3,
-        SubCategory	=	Spear,
-        ConditionMax	=	10,
-        MaxHitCount	=	2,
-        DoorDamage	=	5,
-        SwingAnim	=	Spear,
-        DisplayName	=	Spear With Survival Knife,
-        MinRange	=	0.98,
-        SwingTime	=	2,
-        KnockdownMod	=	0,
-        SplatBloodOnNoDeath	=	FALSE,
-        Icon	=	SpearStone,
-        RunAnim	=	Run_Weapon2,
-        IdleAnim	=	Idle_Weapon2,
+        MaxRange    =   1.7,
+        WeaponSprite    =   SpearSurvivalKnife,
+        MinAngle    =   0.65,
+        Type    =   Weapon,
+        MinimumSwingTime    =   2,
+        KnockBackOnNoDeath  =   FALSE,
+        SwingAmountBeforeImpact =   0.02,
+        Categories  =   Improvised;Spear,
+        ConditionLowerChanceOneIn   =   7,
+        Weight  =   1.5,
+        SplatNumber =   1,
+        PushBackMod =   0.3,
+        SubCategory =   Spear,
+        ConditionMax    =   10,
+        MaxHitCount =   2,
+        DoorDamage  =   5,
+        SwingAnim   =   Spear,
+        DisplayName =   Spear With Survival Knife,
+        MinRange    =   0.98,
+        SwingTime   =   2,
+        KnockdownMod    =   0,
+        SplatBloodOnNoDeath =   FALSE,
+        Icon    =   SpearStone,
+        RunAnim =   Run_Weapon2,
+        IdleAnim    =   Idle_Weapon2,
         TreeDamage  =   0,
         TwoHandWeapon = TRUE,
-        CriticalChance	=	30,
+        CriticalChance  =   30,
         CritDmgMultiplier = 10,
-        MinDamage	=	1,
-        MaxDamage	=	1.6,
+        MinDamage   =   1,
+        MaxDamage   =   1.6,
         DamageCategory = Slash,
         DamageMakeHole = TRUE,
         BreakSound  =   SpearCraftedBreak,
-        HitFloorSound	=	SpearCraftedHit,
-        ImpactSound	=	SpearCraftedHit,
+        HitFloorSound   =   SpearCraftedHit,
+        ImpactSound =   SpearCraftedHit,
         DoorHitSound = SpearCraftedHit,
-        HitSound	=	SpearCraftedHit,
-        SwingSound	=	SpearCraftedSwing,
-		AttachmentType = Shovel,
+        HitSound    =   SpearCraftedHit,
+        SwingSound  =   SpearCraftedSwing,
+        AttachmentType = Shovel,
     }
 
-	item BranchPack
-	{
-		DisplayCategory = Material,
-		Weight	=	3.0,
-		Type	=	Normal,
-		DisplayName	=	Tree Branch Pile,
-		Icon	=	BranchPack,
-		Tooltip = Tooltip_FuelMaterial,
-		WorldStaticModel = TreeBranchPile_Ground,
-	}
+    item BranchPack
+    {
+        DisplayCategory = Material,
+        Weight  =   3.0,
+        Type    =   Normal,
+        DisplayName =   Tree Branch Pile,
+        Icon    =   BranchPack,
+        Tooltip = Tooltip_FuelMaterial,
+        WorldStaticModel = TreeBranchPile_Ground,
+    }
 
-	item TwigsPack
-	{
-		DisplayCategory = Material,
-		Weight	=	2.0,
-		Type	=	Normal,
-		DisplayName	=	Twigs Pile,
-		Icon	=	TwigsPack,
-		Tooltip = Tooltip_FuelMaterial,
-		WorldStaticModel = TwigsPack_Ground,
-	}
+    item TwigsPack
+    {
+        DisplayCategory = Material,
+        Weight  =   2.0,
+        Type    =   Normal,
+        DisplayName =   Twigs Pile,
+        Icon    =   TwigsPack,
+        Tooltip = Tooltip_FuelMaterial,
+        WorldStaticModel = TwigsPack_Ground,
+    }
 
-	item ThreadPieces
-	{
-		DisplayCategory = Material,
-		Weight	=	0.01,
-		Type	=	Normal,
-		DisplayName	=	Thread Pieces,
-		Icon	=	String2,
-		WorldStaticModel = ThreadPieces_Ground,
-	}
+    item ThreadPieces
+    {
+        DisplayCategory = Material,
+        Weight  =   0.01,
+        Type    =   Normal,
+        DisplayName =   Thread Pieces,
+        Icon    =   String2,
+        WorldStaticModel = ThreadPieces_Ground,
+    }
 
-	item String
-	{
-		DisplayCategory = Material,
-		Weight	=	0.01,
-		Type	=	Normal,
-		DisplayName	=	Twine Pieces,
-		Icon	=	String,
-		WorldStaticModel = TwinePieces_Ground,
-	}
+    item String
+    {
+        DisplayCategory = Material,
+        Weight  =   0.01,
+        Type    =   Normal,
+        DisplayName =   Twine Pieces,
+        Icon    =   String,
+        WorldStaticModel = TwinePieces_Ground,
+    }
 
-	item ThreadBox
-	{
-		DisplayCategory = Material,
-		Weight	=	0.25,
-		Type	=	Normal,
-		DisplayName	=	Thread Pieces Box,
-		Icon	=	ThreadBox,
-		Tooltip = Tooltip_ThreadBox,
-		WorldStaticModel = ThreadBox_Ground,
-	}
+    item ThreadBox
+    {
+        DisplayCategory = Material,
+        Weight  =   0.25,
+        Type    =   Normal,
+        DisplayName =   Thread Pieces Box,
+        Icon    =   ThreadBox,
+        Tooltip = Tooltip_ThreadBox,
+        WorldStaticModel = ThreadBox_Ground,
+    }
 
-	item StringBox
-	{
-		DisplayCategory = Material,
-		Weight	=	0.25,
-		Type	=	Normal,
-		DisplayName	=	Twine Pieces Box,
-		Icon	=	StringBox,
-		Tooltip = Tooltip_StringBox,
-		WorldStaticModel = StringBox_Ground,
-	}
+    item StringBox
+    {
+        DisplayCategory = Material,
+        Weight  =   0.25,
+        Type    =   Normal,
+        DisplayName =   Twine Pieces Box,
+        Icon    =   StringBox,
+        Tooltip = Tooltip_StringBox,
+        WorldStaticModel = StringBox_Ground,
+    }
 
-	item MooseSteak
-	{
-		DisplayCategory = Food,
-		HungerChange	=	-15,
-		UnhappyChange	=	15,
-		Weight	=	0.3,
-		Type	=	Food,
-		IsCookable	=	TRUE,
-		DangerousUncooked	=	TRUE,
-		DaysTotallyRotten	=	4,
-		MinutesToBurn	=	70,
-		DisplayName	=	Moose Steak,
-		Icon	=	Bearsteak,
-		DaysFresh	=	2,
-		MinutesToCook	=	50,
-		EvolvedRecipe = Stir fry Griddle Pan:10;Stew:10;Sandwich:5|Cooked,
+    item MooseSteak
+    {
+        DisplayCategory = Food,
+        HungerChange    =   -15,
+        UnhappyChange   =   15,
+        Weight  =   0.3,
+        Type    =   Food,
+        IsCookable  =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   4,
+        MinutesToBurn   =   70,
+        DisplayName =   Moose Steak,
+        Icon    =   Bearsteak,
+        DaysFresh   =   2,
+        MinutesToCook   =   50,
+        EvolvedRecipe = Stir fry Griddle Pan:10;Stew:10;Sandwich:5|Cooked,
         FoodType    =   Meat,
         Carbohydrates = 0,
         Proteins = 30.52,
@@ -298,25 +298,25 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-	}
+    }
 
     item BadMooseChop
-	{
-		DisplayCategory = Food,
-		HungerChange	=	-8,
-		UnhappyChange	=	30,
-		Weight	=	0.5,
-		Type	=	Food,
-		IsCookable	=	TRUE,
-		DangerousUncooked	=	TRUE,
-		DaysTotallyRotten	=	4,
-		MinutesToBurn	=	70,
-		DisplayName	=	Bad Moose Chop,
-		Icon	=	Badbearchop,
-		DaysFresh	=	2,
-		MinutesToCook	=	50,
-		EvolvedRecipe = Stew:5;Stir fry Griddle Pan:5;Stir fry:5;PastaPot:5;PastaPan:5;RicePot:5;RicePan:5,
-		FoodType    =   Meat,
+    {
+        DisplayCategory = Food,
+        HungerChange    =   -8,
+        UnhappyChange   =   30,
+        Weight  =   0.5,
+        Type    =   Food,
+        IsCookable  =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   4,
+        MinutesToBurn   =   70,
+        DisplayName =   Bad Moose Chop,
+        Icon    =   Badbearchop,
+        DaysFresh   =   2,
+        MinutesToCook   =   50,
+        EvolvedRecipe = Stew:5;Stir fry Griddle Pan:5;Stir fry:5;PastaPot:5;PastaPan:5;RicePot:5;RicePan:5,
+        FoodType    =   Meat,
         Carbohydrates = 0,
         Proteins = 10.11,
         Lipids = 9.35,
@@ -324,25 +324,25 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		Tooltip = Tooltip_BadChop,
-	}
+        Tooltip = Tooltip_BadChop,
+    }
 
-	item BisonSteak
-	{
-		DisplayCategory = Food,
-		HungerChange	=	-40,
-		Weight	=	0.3,
-		Type	=	Food,
-		IsCookable	=	TRUE,
-		DangerousUncooked	=	TRUE,
-		DaysTotallyRotten	=	4,
-		MinutesToBurn	=	70,
-		DisplayName	=	Bison Steak,
-		Icon	=	Steak,
-		DaysFresh	=	2,
-		MinutesToCook	=	50,
-		EvolvedRecipe = Stir fry Griddle Pan:25;Stew:25;Stir fry:25;Burger:25;Roasted Vegetables:25;PastaPot:25;PastaPan:25;RicePot:25;RicePan:25,
-		FoodType    =   Meat,
+    item BisonSteak
+    {
+        DisplayCategory = Food,
+        HungerChange    =   -40,
+        Weight  =   0.3,
+        Type    =   Food,
+        IsCookable  =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   4,
+        MinutesToBurn   =   70,
+        DisplayName =   Bison Steak,
+        Icon    =   Steak,
+        DaysFresh   =   2,
+        MinutesToCook   =   50,
+        EvolvedRecipe = Stir fry Griddle Pan:25;Stew:25;Stir fry:25;Burger:25;Roasted Vegetables:25;PastaPot:25;PastaPan:25;RicePot:25;RicePan:25,
+        FoodType    =   Meat,
         Carbohydrates = 0,
         Proteins = 31.62,
         Lipids = 10.02,
@@ -350,25 +350,25 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-	}
+    }
 
     item BadBisonChop
-	{
-		DisplayCategory = Food,
-		HungerChange	=	-10,
-		UnhappyChange	=	10,
-		Weight	=	0.5,
-		Type	=	Food,
-		IsCookable	=	TRUE,
-		DangerousUncooked	=	TRUE,
-		DaysTotallyRotten	=	4,
-		MinutesToBurn	=	70,
-		DisplayName	=	Bad Bison Chop,
-		Icon	=	Badbisonchop,
-		DaysFresh	=	2,
-		MinutesToCook	=	50,
-		EvolvedRecipe = Stew:5;Stir fry Griddle Pan:5;Stir fry:5;PastaPot:5;PastaPan:5;RicePot:5;RicePan:5,
-		FoodType    =   Meat,
+    {
+        DisplayCategory = Food,
+        HungerChange    =   -10,
+        UnhappyChange   =   10,
+        Weight  =   0.5,
+        Type    =   Food,
+        IsCookable  =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   4,
+        MinutesToBurn   =   70,
+        DisplayName =   Bad Bison Chop,
+        Icon    =   Badbisonchop,
+        DaysFresh   =   2,
+        MinutesToCook   =   50,
+        EvolvedRecipe = Stew:5;Stir fry Griddle Pan:5;Stir fry:5;PastaPot:5;PastaPan:5;RicePot:5;RicePan:5,
+        FoodType    =   Meat,
         Carbohydrates = 0,
         Proteins = 10.11,
         Lipids = 9.35,
@@ -376,89 +376,89 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		Tooltip = Tooltip_BadChop,
-	}
-
-	item DeerHead
-    {
-		DisplayCategory = Material,
-        Weight	=	2.5,
-        Type	=	Normal,
-        DisplayName	=	Deer Head,
-        Icon	=	Deerhead,
-		Tooltip = Tooltip_TrophyHead,
-		ScaleWorldIcon 	= 1.2,
+        Tooltip = Tooltip_BadChop,
     }
 
-	item CowHead
+    item DeerHead
     {
-		DisplayCategory = Material,
-        Weight	=	5.0,
-        Type	=	Normal,
-        DisplayName	=	Cow Head,
-        Icon	=	Cowhead,
-		Tooltip = Tooltip_TrophyHead,
-		ScaleWorldIcon 	= 1.2,
+        DisplayCategory = Material,
+        Weight  =   2.5,
+        Type    =   Normal,
+        DisplayName =   Deer Head,
+        Icon    =   Deerhead,
+        Tooltip = Tooltip_TrophyHead,
+        ScaleWorldIcon  = 1.2,
     }
 
-	item BearHead
+    item CowHead
     {
-		DisplayCategory = Material,
-        Weight	=	5.0,
-        Type	=	Normal,
-        DisplayName	=	Bear Head,
-        Icon	=	Bearhead,
-		Tooltip = Tooltip_TrophyHead,
-		ScaleWorldIcon 	= 1.2,
+        DisplayCategory = Material,
+        Weight  =   5.0,
+        Type    =   Normal,
+        DisplayName =   Cow Head,
+        Icon    =   Cowhead,
+        Tooltip = Tooltip_TrophyHead,
+        ScaleWorldIcon  = 1.2,
     }
 
-	item BoarHead
+    item BearHead
     {
-		DisplayCategory = Material,
-        Weight	=	2.5,
-        Type	=	Normal,
-        DisplayName	=	Boar Head,
-        Icon	=	Boarhead,
-		Tooltip = Tooltip_TrophyHead,
-		ScaleWorldIcon 	= 1.2,
+        DisplayCategory = Material,
+        Weight  =   5.0,
+        Type    =   Normal,
+        DisplayName =   Bear Head,
+        Icon    =   Bearhead,
+        Tooltip = Tooltip_TrophyHead,
+        ScaleWorldIcon  = 1.2,
     }
 
-	item BisonHead
+    item BoarHead
     {
-		DisplayCategory = Material,
-        Weight	=	2.5,
-        Type	=	Normal,
-        DisplayName	=	Bison Head,
-        Icon	=	Bisonhead,
-		Tooltip = Tooltip_TrophyHead,
-		ScaleWorldIcon 	= 1.2,
+        DisplayCategory = Material,
+        Weight  =   2.5,
+        Type    =   Normal,
+        DisplayName =   Boar Head,
+        Icon    =   Boarhead,
+        Tooltip = Tooltip_TrophyHead,
+        ScaleWorldIcon  = 1.2,
     }
 
-	item MooseHead
+    item BisonHead
     {
-		DisplayCategory = Material,
-        Weight	=	7.0,
-        Type	=	Normal,
-        DisplayName	=	Moose Head,
-        Icon	=	Moosehead,
-		Tooltip = Tooltip_TrophyHead,
-		ScaleWorldIcon 	= 1.2,
+        DisplayCategory = Material,
+        Weight  =   2.5,
+        Type    =   Normal,
+        DisplayName =   Bison Head,
+        Icon    =   Bisonhead,
+        Tooltip = Tooltip_TrophyHead,
+        ScaleWorldIcon  = 1.2,
+    }
+
+    item MooseHead
+    {
+        DisplayCategory = Material,
+        Weight  =   7.0,
+        Type    =   Normal,
+        DisplayName =   Moose Head,
+        Icon    =   Moosehead,
+        Tooltip = Tooltip_TrophyHead,
+        ScaleWorldIcon  = 1.2,
     }
 
     item DeerChop
     {
-		DisplayCategory = Food,
-        HungerChange	=	-20,
-        Weight	=	0.3,
-        Type	=	Food,
-        IsCookable	=	TRUE,
-        DangerousUncooked	=	TRUE,
-        DaysTotallyRotten	=	4,
-        MinutesToBurn	=	70,
-        DisplayName	=	Deer Chop,
-        Icon	=	Deerchop,
-        DaysFresh	=	2,
-        MinutesToCook	=	50,
+        DisplayCategory = Food,
+        HungerChange    =   -20,
+        Weight  =   0.3,
+        Type    =   Food,
+        IsCookable  =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   4,
+        MinutesToBurn   =   70,
+        DisplayName =   Deer Chop,
+        Icon    =   Deerchop,
+        DaysFresh   =   2,
+        MinutesToCook   =   50,
         EvolvedRecipe = Stir fry Griddle Pan:15;Soup:15;Stew:15;Pie:15;Stir fry:15;Sandwich:5|Cooked;Burger:10;Salad:10|Cooked;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
         FoodType    =   Meat,
         Carbohydrates = 0.08,
@@ -468,26 +468,26 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		WorldStaticModel = DeerChop,
+        WorldStaticModel = DeerChop,
     }
 
     item BadDeerChop
-	{
-		DisplayCategory = Food,
-		HungerChange	=	-10,
-		UnhappyChange	=	15,
-		Weight	=	0.5,
-		Type	=	Food,
-		IsCookable	=	TRUE,
-		DangerousUncooked	=	TRUE,
-		DaysTotallyRotten	=	4,
-		MinutesToBurn	=	70,
-		DisplayName	=	Bad Deer Chop,
-		Icon	=	Baddeerchop,
-		DaysFresh	=	2,
-		MinutesToCook	=	50,
-		EvolvedRecipe = Stew:5;Stir fry Griddle Pan:5;Stir fry:5;PastaPot:5;PastaPan:5;RicePot:5;RicePan:5,
-		FoodType    =   Meat,
+    {
+        DisplayCategory = Food,
+        HungerChange    =   -10,
+        UnhappyChange   =   15,
+        Weight  =   0.5,
+        Type    =   Food,
+        IsCookable  =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   4,
+        MinutesToBurn   =   70,
+        DisplayName =   Bad Deer Chop,
+        Icon    =   Baddeerchop,
+        DaysFresh   =   2,
+        MinutesToCook   =   50,
+        EvolvedRecipe = Stew:5;Stir fry Griddle Pan:5;Stir fry:5;PastaPot:5;PastaPan:5;RicePot:5;RicePan:5,
+        FoodType    =   Meat,
         Carbohydrates = 0,
         Proteins = 10.11,
         Lipids = 9.35,
@@ -495,26 +495,26 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		Tooltip = Tooltip_BadChop,
-		WorldStaticModel = BadDeerChop_Ground,
-	}
+        Tooltip = Tooltip_BadChop,
+        WorldStaticModel = BadDeerChop_Ground,
+    }
 
-	item BearSteak
-	{
-		DisplayCategory = Food,
-		HungerChange	=	-20,
-		UnhappyChange	=	15,
-		Weight	=	0.3,
-		Type	=	Food,
-		IsCookable	=	TRUE,
-		DangerousUncooked	=	TRUE,
-		DaysTotallyRotten	=	4,
-		MinutesToBurn	=	70,
-		DisplayName	=	Bear Steak,
-		Icon	=	Bearsteak,
-		DaysFresh	=	2,
-		MinutesToCook	=	50,
-		EvolvedRecipe = Stir fry Griddle Pan:10;Stew:10;Sandwich:5|Cooked,
+    item BearSteak
+    {
+        DisplayCategory = Food,
+        HungerChange    =   -20,
+        UnhappyChange   =   15,
+        Weight  =   0.3,
+        Type    =   Food,
+        IsCookable  =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   4,
+        MinutesToBurn   =   70,
+        DisplayName =   Bear Steak,
+        Icon    =   Bearsteak,
+        DaysFresh   =   2,
+        MinutesToCook   =   50,
+        EvolvedRecipe = Stir fry Griddle Pan:10;Stew:10;Sandwich:5|Cooked,
         FoodType    =   Meat,
         Carbohydrates = 0,
         Proteins = 31.62,
@@ -523,26 +523,26 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		WorldStaticModel = BearSteak_Ground,
-	}
+        WorldStaticModel = BearSteak_Ground,
+    }
 
     item BadBearChop
-	{
-		DisplayCategory = Food,
-		HungerChange	=	-10,
-		UnhappyChange	=	30,
-		Weight	=	1.0,
-		Type	=	Food,
-		IsCookable	=	TRUE,
-		DangerousUncooked	=	TRUE,
-		DaysTotallyRotten	=	4,
-		MinutesToBurn	=	70,
-		DisplayName	=	Bad Bear Chop,
-		Icon	=	Badbearchop,
-		DaysFresh	=	2,
-		MinutesToCook	=	50,
-		EvolvedRecipe = Stew:5;Stir fry Griddle Pan:5;Stir fry:5;PastaPot:5;PastaPan:5;RicePot:5;RicePan:5,
-		FoodType    =   Meat,
+    {
+        DisplayCategory = Food,
+        HungerChange    =   -10,
+        UnhappyChange   =   30,
+        Weight  =   1.0,
+        Type    =   Food,
+        IsCookable  =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   4,
+        MinutesToBurn   =   70,
+        DisplayName =   Bad Bear Chop,
+        Icon    =   Badbearchop,
+        DaysFresh   =   2,
+        MinutesToCook   =   50,
+        EvolvedRecipe = Stew:5;Stir fry Griddle Pan:5;Stir fry:5;PastaPot:5;PastaPan:5;RicePot:5;RicePan:5,
+        FoodType    =   Meat,
         Carbohydrates = 0,
         Proteins = 10.11,
         Lipids = 9.35,
@@ -550,292 +550,292 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		Tooltip = Tooltip_BadChop,
-		WorldStaticModel = BadBearChop_Ground,
-	}
-
-	item RubberBandsBox
-    {
-		DisplayCategory = Material,
-        Weight	=	0.3,
-        Type	=	Normal,
-        DisplayName	=	Box of Rubber Bands,
-        Icon	=	RubbersBox,
-		WorldStaticModel = RubberBandsBox_Ground,
+        Tooltip = Tooltip_BadChop,
+        WorldStaticModel = BadBearChop_Ground,
     }
 
-	item Tendon
+    item RubberBandsBox
     {
-		DisplayCategory = Material,
-        Weight	=	0.3,
-        Type	=	Normal,
-        DisplayName	=	Animal tendon,
-        Icon	=	Tendon,
-		Tooltip = Tooltip_Tendon,
-		WorldStaticModel = Tendon_Ground,
-    }
-	
-	item Feather
-    {
-		DisplayCategory = Material,
-        Weight	=	0.02,
-        Type	=	Normal,
-        DisplayName	=	Feather,
-        Icon	=	Feather,
-		Tooltip = Tooltip_Feather,
+        DisplayCategory = Material,
+        Weight  =   0.3,
+        Type    =   Normal,
+        DisplayName =   Box of Rubber Bands,
+        Icon    =   RubbersBox,
+        WorldStaticModel = RubberBandsBox_Ground,
     }
 
-	item Chicken
-	{
-		DisplayCategory = Food,
-		HungerChange	=	-35,
-		Weight	=	0.3,
-		Type	=	Food,
-		IsCookable	=	TRUE,
-		DangerousUncooked	=	TRUE,
-		DaysTotallyRotten	=	4,
-		MinutesToBurn	=	60,
-		DisplayName	=	Chicken Leg,
-		Icon	=	Chicken,
-		DaysFresh	=	2,
-		MinutesToCook	=	30,
-		EvolvedRecipe = Soup:15;Stew:15;Pie:10;Stir fry Griddle Pan:15;Stir fry:15;Sandwich:5|Cooked;Burger:10;Salad:10|Cooked;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
-		FoodType    =   Meat,
+    item Tendon
+    {
+        DisplayCategory = Material,
+        Weight  =   0.3,
+        Type    =   Normal,
+        DisplayName =   Animal tendon,
+        Icon    =   Tendon,
+        Tooltip = Tooltip_Tendon,
+        WorldStaticModel = Tendon_Ground,
+    }
+    
+    item Feather
+    {
+        DisplayCategory = Material,
+        Weight  =   0.02,
+        Type    =   Normal,
+        DisplayName =   Feather,
+        Icon    =   Feather,
+        Tooltip = Tooltip_Feather,
+    }
+
+    item Chicken
+    {
+        DisplayCategory = Food,
+        HungerChange    =   -35,
+        Weight  =   0.3,
+        Type    =   Food,
+        IsCookable  =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   4,
+        MinutesToBurn   =   60,
+        DisplayName =   Chicken Leg,
+        Icon    =   Chicken,
+        DaysFresh   =   2,
+        MinutesToCook   =   30,
+        EvolvedRecipe = Soup:15;Stew:15;Pie:10;Stir fry Griddle Pan:15;Stir fry:15;Sandwich:5|Cooked;Burger:10;Salad:10|Cooked;Roasted Vegetables:15;RicePot:15;RicePan:15;PastaPot:15;PastaPan:15,
+        FoodType    =   Meat,
         Carbohydrates = 0,
         Proteins = 18,
         Lipids = 9,
         Calories = 150,
         BadInMicrowave = true,
         GoodHot = true,
-		StaticModel = FriedChicken,
+        StaticModel = FriedChicken,
         WorldStaticModel = Chicken,
-	}
+    }
 
     item LgBinoculars
-	{
-        MaxRange	=	1.0,
-        WeaponSprite	=	LgBinoculars,
-        MinAngle	=	0.65,
-        Type	=	Weapon,
-        MinimumSwingTime	=	2,
-        KnockBackOnNoDeath	=	TRUE,
-        SwingAmountBeforeImpact	=	0.04,
-        Categories	=	SmallBlunt,
-        ConditionLowerChanceOneIn	=	10,
-        Weight	=	0.5,
-        SplatNumber	=	1,
-        PushBackMod	=	0.3,
-        SubCategory	=	Swinging,
-        ConditionMax	=	10,
-        MaxHitCount	=	1,
-        DoorDamage	=	1,
-        SwingAnim	=	Bat,
-        DisplayName	=	Binoculars,
-        MinRange	=	0.5,
-        SwingTime	=	2,
-        KnockdownMod	=	0,
-        SplatBloodOnNoDeath	=	FALSE,
-        Icon	=	LgBinoculars,
-        RunAnim	=	Run_Weapon2,
-        IdleAnim	=	Idle_Weapon2,
+    {
+        MaxRange    =   1.0,
+        WeaponSprite    =   LgBinoculars,
+        MinAngle    =   0.65,
+        Type    =   Weapon,
+        MinimumSwingTime    =   2,
+        KnockBackOnNoDeath  =   TRUE,
+        SwingAmountBeforeImpact =   0.04,
+        Categories  =   SmallBlunt,
+        ConditionLowerChanceOneIn   =   10,
+        Weight  =   0.5,
+        SplatNumber =   1,
+        PushBackMod =   0.3,
+        SubCategory =   Swinging,
+        ConditionMax    =   10,
+        MaxHitCount =   1,
+        DoorDamage  =   1,
+        SwingAnim   =   Bat,
+        DisplayName =   Binoculars,
+        MinRange    =   0.5,
+        SwingTime   =   2,
+        KnockdownMod    =   0,
+        SplatBloodOnNoDeath =   FALSE,
+        Icon    =   LgBinoculars,
+        RunAnim =   Run_Weapon2,
+        IdleAnim    =   Idle_Weapon2,
         BreakSound  =   BreakWoodItem,
         TreeDamage  =   0,
-        CriticalChance	=	2,
+        CriticalChance  =   2,
         CritDmgMultiplier = 2,
-        MinDamage	=	0.3,
-        MaxDamage	=	0.8,
+        MinDamage   =   0.3,
+        MaxDamage   =   0.8,
         BaseSpeed = 0.93,
         WeaponLength = 0.2,
-		Tooltip = Tooltip_LgBinoculars,
-  	}
+        Tooltip = Tooltip_LgBinoculars,
+    }
 
     item SlingshotHandle
     {
-		DisplayCategory = Material,
-        Weight	=	0.5,
-        Type	=	Normal,
-        DisplayName	=	Slingshot Handle,
-        Icon	=	Horqueta,
-		Tooltip = Tooltip_Horqueta,
-		WorldStaticModel = SlingshotHandle,
+        DisplayCategory = Material,
+        Weight  =   0.5,
+        Type    =   Normal,
+        DisplayName =   Slingshot Handle,
+        Icon    =   Horqueta,
+        Tooltip = Tooltip_Horqueta,
+        WorldStaticModel = SlingshotHandle,
     }
 
     item MedicalHose
     {
-		DisplayCategory = Material,
-        Weight	=	0.1,
-        Type	=	Normal,
-        DisplayName	=	Medical hose,
-        Icon	=	MedicalHose,
-		Tooltip = Tooltip_MedicalHose,
-		WorldStaticModel = MedicalHose,
+        DisplayCategory = Material,
+        Weight  =   0.1,
+        Type    =   Normal,
+        DisplayName =   Medical hose,
+        Icon    =   MedicalHose,
+        Tooltip = Tooltip_MedicalHose,
+        WorldStaticModel = MedicalHose,
     }
 
     item Slingshot2
     {
-		DisplayCategory = Tool,
-        Weight	=	0.5,
-        Type	=	Normal,
-        DisplayName	=	Carpenter Slingshot,
-		DisplayCategory = Weapon,
-        Icon	=	Slingshot2,
-		Tooltip = Tooltip_Slingshot,
-		ConditionMax = 100,
-		WorldStaticModel = Slingshot2,
+        DisplayCategory = Tool,
+        Weight  =   0.5,
+        Type    =   Normal,
+        DisplayName =   Carpenter Slingshot,
+        DisplayCategory = Weapon,
+        Icon    =   Slingshot2,
+        Tooltip = Tooltip_Slingshot,
+        ConditionMax = 100,
+        WorldStaticModel = Slingshot2,
     }
 
     item Slingshot
     {
-		DisplayCategory = Tool,
-        Weight	=	0.3,
-        Type	=	Normal,
-        DisplayName	=	Slingshot,
-		DisplayCategory = Weapon,
-        Icon	=	Gomera1,
-		Tooltip = Tooltip_Slingshot,
-		ConditionMax = 100,
-		WorldStaticModel = Slingshot1,
+        DisplayCategory = Tool,
+        Weight  =   0.3,
+        Type    =   Normal,
+        DisplayName =   Slingshot,
+        DisplayCategory = Weapon,
+        Icon    =   Gomera1,
+        Tooltip = Tooltip_Slingshot,
+        ConditionMax = 100,
+        WorldStaticModel = Slingshot1,
     }
 
 
     item HuntingCard1
     {
-        Weight	=	0.1,
-        Type	=	Normal,
-        DisplayName	=	Hunting card (Rats),
-		DisplayCategory = Literature,
-        Icon	=	HuntingCardRat,
-		StaticModel = HuntingCard,
-		WorldStaticModel = HuntingCard_Ground,
+        Weight  =   0.1,
+        Type    =   Normal,
+        DisplayName =   Hunting card (Rats),
+        DisplayCategory = Literature,
+        Icon    =   HuntingCardRat,
+        StaticModel = HuntingCard,
+        WorldStaticModel = HuntingCard_Ground,
     }
 
     item HuntingCard2
     {
-        Weight	=	0.1,
-        Type	=	Normal,
-        DisplayName	=	Hunting card (Mouses),
-		DisplayCategory = Literature,
-        Icon	=	HuntingCardMouse,
-		StaticModel = HuntingCard,
-		WorldStaticModel = HuntingCard_Ground,
+        Weight  =   0.1,
+        Type    =   Normal,
+        DisplayName =   Hunting card (Mouses),
+        DisplayCategory = Literature,
+        Icon    =   HuntingCardMouse,
+        StaticModel = HuntingCard,
+        WorldStaticModel = HuntingCard_Ground,
     }
 
     item HuntingCard3
     {
-        Weight	=	0.1,
-        Type	=	Normal,
-        DisplayName	=	Hunting card (Birds),
-		DisplayCategory = Literature,
-        Icon	=	HuntingCardBird,
-		StaticModel = HuntingCard,
-		WorldStaticModel = HuntingCard_Ground,
+        Weight  =   0.1,
+        Type    =   Normal,
+        DisplayName =   Hunting card (Birds),
+        DisplayCategory = Literature,
+        Icon    =   HuntingCardBird,
+        StaticModel = HuntingCard,
+        WorldStaticModel = HuntingCard_Ground,
     }
 
     item HuntingCard4
     {
-        Weight	=	0.1,
-        Type	=	Normal,
-        DisplayName	=	Hunting card (Squirrels),
-		DisplayCategory = Literature,
-        Icon	=	HuntingCardSquirrel,
-		StaticModel = HuntingCard,
-		WorldStaticModel = HuntingCard_Ground,
+        Weight  =   0.1,
+        Type    =   Normal,
+        DisplayName =   Hunting card (Squirrels),
+        DisplayCategory = Literature,
+        Icon    =   HuntingCardSquirrel,
+        StaticModel = HuntingCard,
+        WorldStaticModel = HuntingCard_Ground,
     }
 
     item HuntingCard5
     {
-        Weight	=	0.1,
-        Type	=	Normal,
-        DisplayName	=	Hunting card (Rabbits),
-		DisplayCategory = Literature,
-        Icon	=	HuntingCardRabbit,
-		StaticModel = HuntingCard,
-		WorldStaticModel = HuntingCard_Ground,
+        Weight  =   0.1,
+        Type    =   Normal,
+        DisplayName =   Hunting card (Rabbits),
+        DisplayCategory = Literature,
+        Icon    =   HuntingCardRabbit,
+        StaticModel = HuntingCard,
+        WorldStaticModel = HuntingCard_Ground,
     }
 
     item HuntingCard6
     {
-        Weight	=	0.1,
-        Type	=	Normal,
-        DisplayName	=	Hunting card (Wild Pigs),
-		DisplayCategory = Literature,
-        Icon	=	HuntingCardWildPig,
-		StaticModel = HuntingCard,
-		WorldStaticModel = HuntingCard_Ground,
+        Weight  =   0.1,
+        Type    =   Normal,
+        DisplayName =   Hunting card (Wild Pigs),
+        DisplayCategory = Literature,
+        Icon    =   HuntingCardWildPig,
+        StaticModel = HuntingCard,
+        WorldStaticModel = HuntingCard_Ground,
     }
 
     item HuntingCard7
     {
-        Weight	=	0.1,
-        Type	=	Normal,
-        DisplayName	=	Hunting card (Cow),
-		DisplayCategory = Literature,
-        Icon	=	HuntingCardCow,
-		StaticModel = HuntingCard,
-		WorldStaticModel = HuntingCard_Ground,
+        Weight  =   0.1,
+        Type    =   Normal,
+        DisplayName =   Hunting card (Cow),
+        DisplayCategory = Literature,
+        Icon    =   HuntingCardCow,
+        StaticModel = HuntingCard,
+        WorldStaticModel = HuntingCard_Ground,
     }
 
     item HuntingCard8
     {
-        Weight	=	0.1,
-        Type	=	Normal,
-        DisplayName	=	Hunting card (Chicken),
-		DisplayCategory = Literature,
-        Icon	=	HuntingCardChicken,
-		StaticModel = HuntingCard,
-		WorldStaticModel = HuntingCard_Ground,
+        Weight  =   0.1,
+        Type    =   Normal,
+        DisplayName =   Hunting card (Chicken),
+        DisplayCategory = Literature,
+        Icon    =   HuntingCardChicken,
+        StaticModel = HuntingCard,
+        WorldStaticModel = HuntingCard_Ground,
     }
 
     item HuntingCard9
     {
-        Weight	=	0.1,
-        Type	=	Normal,
-        DisplayName	=	Hunting card (Bear),
-		DisplayCategory = Literature,
-        Icon	=	HuntingCardBear,
-		StaticModel = HuntingCard,
-		WorldStaticModel = HuntingCard_Ground,
+        Weight  =   0.1,
+        Type    =   Normal,
+        DisplayName =   Hunting card (Bear),
+        DisplayCategory = Literature,
+        Icon    =   HuntingCardBear,
+        StaticModel = HuntingCard,
+        WorldStaticModel = HuntingCard_Ground,
     }
 
     item HuntingCard10
     {
-        Weight	=	0.1,
-        Type	=	Normal,
-        DisplayName	=	Hunting card (Crow),
-		DisplayCategory = Literature,
-        Icon	=	HuntingCardCrow,
-		StaticModel = HuntingCard,
-		WorldStaticModel = HuntingCard_Ground,
+        Weight  =   0.1,
+        Type    =   Normal,
+        DisplayName =   Hunting card (Crow),
+        DisplayCategory = Literature,
+        Icon    =   HuntingCardCrow,
+        StaticModel = HuntingCard,
+        WorldStaticModel = HuntingCard_Ground,
     }
 
     item BearTrap
     {
-		DisplayCategory = Trapping,
-        Weight	=	1.0,
-        Type	=	Normal,
-        DisplayName	=	Bear Trap,
-        Icon	=	BearTrap,
+        DisplayCategory = Trapping,
+        Weight  =   1.0,
+        Type    =   Normal,
+        DisplayName =   Bear Trap,
+        Icon    =   BearTrap,
         Trap    =   true,
-		MetalValue = 10,
-		WorldStaticModel = BearTrap_Ground,
+        MetalValue = 10,
+        WorldStaticModel = BearTrap_Ground,
     }
 
     item DeadCow
     {
-		DisplayCategory = Food,
-        HungerChange	=	-60,
-        Weight	=	50.0,
-        Type	=	Food,
-		UnhappyChange	=	50,
-        DisplayName	=	Dead Cow,
-        Icon	=	Cow,
-        IsCookable	=	TRUE,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-        DangerousUncooked	=	TRUE,
-        DaysTotallyRotten	=	12,
-        MinutesToBurn	=	250,
-        MinutesToCook	=	180,
-        DaysFresh	=	8,
+        DisplayCategory = Food,
+        HungerChange    =   -60,
+        Weight  =   50.0,
+        Type    =   Food,
+        UnhappyChange   =   50,
+        DisplayName =   Dead Cow,
+        Icon    =   Cow,
+        IsCookable  =   TRUE,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   12,
+        MinutesToBurn   =   250,
+        MinutesToCook   =   180,
+        DaysFresh   =   8,
         Carbohydrates = 0,
         Proteins = 100.8,
         Lipids = 9.58,
@@ -843,57 +843,57 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		ScaleWorldIcon 	= 1.0,
+        ScaleWorldIcon  = 1.0,
     }
 
     item CowRope
     {
-		DisplayCategory = Food,
-        Weight	=	50.0,
-        Type	=	Food,
-        DisplayName	=	Tied Cow,
-        Icon	=	CowRope,
-        DaysTotallyRotten	=	12,
-        DaysFresh	=	8,
+        DisplayCategory = Food,
+        Weight  =   50.0,
+        Type    =   Food,
+        DisplayName =   Tied Cow,
+        Icon    =   CowRope,
+        DaysTotallyRotten   =   12,
+        DaysFresh   =   8,
         Carbohydrates = 0,
         Proteins = 100.8,
         Lipids = 9.58,
         Calories = 2000,
-		ScaleWorldIcon 	= 1.0,
+        ScaleWorldIcon  = 1.0,
     }
 
     item BisonRope
     {
-		DisplayCategory = Food,
-        Weight	=	50.0,
-        Type	=	Food,
-        DisplayName	=	Tied Bison,
-        Icon	=	BisonRope,
-        DaysTotallyRotten	=	12,
-        DaysFresh	=	8,
+        DisplayCategory = Food,
+        Weight  =   50.0,
+        Type    =   Food,
+        DisplayName =   Tied Bison,
+        Icon    =   BisonRope,
+        DaysTotallyRotten   =   12,
+        DaysFresh   =   8,
         Carbohydrates = 0,
         Proteins = 100.8,
         Lipids = 9.58,
         Calories = 3000,
-		ScaleWorldIcon 	= 2.0,
+        ScaleWorldIcon  = 2.0,
     }
 
     item DeadBear
     {
-		DisplayCategory = Food,
-        HungerChange	=	-50,
-        Weight	=	50.0,
-        Type	=	Food,
-		UnhappyChange	=	50,
-        DisplayName	=	Dead Bear,
-        Icon	=	Deadbear,
-        IsCookable	=	TRUE,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-        DangerousUncooked	=	TRUE,
-        DaysTotallyRotten	=	10,
-        MinutesToBurn	=	240,
-        MinutesToCook	=	200,
-        DaysFresh	=	6,
+        DisplayCategory = Food,
+        HungerChange    =   -50,
+        Weight  =   50.0,
+        Type    =   Food,
+        UnhappyChange   =   50,
+        DisplayName =   Dead Bear,
+        Icon    =   Deadbear,
+        IsCookable  =   TRUE,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   10,
+        MinutesToBurn   =   240,
+        MinutesToCook   =   200,
+        DaysFresh   =   6,
         Carbohydrates = 0,
         Proteins = 100.8,
         Lipids = 9.58,
@@ -901,25 +901,25 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		ScaleWorldIcon 	= 1.0,
+        ScaleWorldIcon  = 1.0,
     }
 
     item BearMeat
     {
-		DisplayCategory = Food,
-        HungerChange	=	-50,
-        Weight	=	50.0,
-        Type	=	Food,
-		UnhappyChange	=	30,
-        DisplayName	=	Bear Meat,
-        Icon	=	Bearmeat,
-        IsCookable	=	TRUE,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-        DangerousUncooked	=	TRUE,
-        DaysTotallyRotten	=	10,
-        MinutesToBurn	=	220,
-        MinutesToCook	=	180,
-        DaysFresh	=	6,
+        DisplayCategory = Food,
+        HungerChange    =   -50,
+        Weight  =   50.0,
+        Type    =   Food,
+        UnhappyChange   =   30,
+        DisplayName =   Bear Meat,
+        Icon    =   Bearmeat,
+        IsCookable  =   TRUE,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   10,
+        MinutesToBurn   =   220,
+        MinutesToCook   =   180,
+        DaysFresh   =   6,
         Carbohydrates = 0,
         Proteins = 100.8,
         Lipids = 9.58,
@@ -927,41 +927,41 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		ScaleWorldIcon 	= 1.0,
+        ScaleWorldIcon  = 1.0,
     }
 
     item BearRope
     {
-		DisplayCategory = Food,
-        Weight	=	50.0,
-        Type	=	Food,
-        DisplayName	=	Tied Bear,
-        Icon	=	Stackedbear,
-        DaysFresh	=	6,
-		DaysTotallyRotten	=	10,
+        DisplayCategory = Food,
+        Weight  =   50.0,
+        Type    =   Food,
+        DisplayName =   Tied Bear,
+        Icon    =   Stackedbear,
+        DaysFresh   =   6,
+        DaysTotallyRotten   =   10,
         Carbohydrates = 0,
         Proteins = 100.8,
         Lipids = 9.58,
         Calories = 2000,
-		ScaleWorldIcon 	= 1.0,
+        ScaleWorldIcon  = 1.0,
     }
 
     item DeadMoose
     {
-		DisplayCategory = Food,
-        HungerChange	=	-50,
-        Weight	=	50.0,
-        Type	=	Food,
-		UnhappyChange	=	50,
-        DisplayName	=	Dead Moose,
-        Icon	=	Moose,
-        IsCookable	=	TRUE,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-        DangerousUncooked	=	TRUE,
-        DaysTotallyRotten	=	10,
-        MinutesToBurn	=	240,
-        MinutesToCook	=	200,
-        DaysFresh	=	6,
+        DisplayCategory = Food,
+        HungerChange    =   -50,
+        Weight  =   50.0,
+        Type    =   Food,
+        UnhappyChange   =   50,
+        DisplayName =   Dead Moose,
+        Icon    =   Moose,
+        IsCookable  =   TRUE,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   10,
+        MinutesToBurn   =   240,
+        MinutesToCook   =   200,
+        DaysFresh   =   6,
         Carbohydrates = 0,
         Proteins = 100.8,
         Lipids = 9.58,
@@ -969,25 +969,25 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		ScaleWorldIcon 	= 1.0,
+        ScaleWorldIcon  = 1.0,
     }
 
     item MooseMeat
     {
-		DisplayCategory = Food,
-        HungerChange	=	-50,
-        Weight	=	50.0,
-        Type	=	Food,
-		UnhappyChange	=	30,
-        DisplayName	=	Moose Meat,
-        Icon	=	Moosemeat,
-        IsCookable	=	TRUE,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-        DangerousUncooked	=	TRUE,
-        DaysTotallyRotten	=	10,
-        MinutesToBurn	=	220,
-        MinutesToCook	=	180,
-        DaysFresh	=	6,
+        DisplayCategory = Food,
+        HungerChange    =   -50,
+        Weight  =   50.0,
+        Type    =   Food,
+        UnhappyChange   =   30,
+        DisplayName =   Moose Meat,
+        Icon    =   Moosemeat,
+        IsCookable  =   TRUE,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   10,
+        MinutesToBurn   =   220,
+        MinutesToCook   =   180,
+        DaysFresh   =   6,
         Carbohydrates = 0,
         Proteins = 100.8,
         Lipids = 9.58,
@@ -995,41 +995,41 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		ScaleWorldIcon 	= 1.0,
+        ScaleWorldIcon  = 1.0,
     }
 
     item MooseRope
     {
-		DisplayCategory = Food,
-        Weight	=	50.0,
-        Type	=	Food,
-        DisplayName	=	Tied Moose,
-        Icon	=	MooseRope,
-        DaysFresh	=	6,
-		DaysTotallyRotten	=	10,
+        DisplayCategory = Food,
+        Weight  =   50.0,
+        Type    =   Food,
+        DisplayName =   Tied Moose,
+        Icon    =   MooseRope,
+        DaysFresh   =   6,
+        DaysTotallyRotten   =   10,
         Carbohydrates = 0,
         Proteins = 100.8,
         Lipids = 9.58,
         Calories = 2000,
-		ScaleWorldIcon 	= 1.0,
+        ScaleWorldIcon  = 1.0,
     }
 
     item Cowmeat
     {
-		DisplayCategory = Food,
-        HungerChange	=	-60,
-        Weight	=	5,
-        Type	=	Food,
-		UnhappyChange	=	25,
-        IsCookable	=	TRUE,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-        DangerousUncooked	=	TRUE,
-        DaysTotallyRotten	=	4,
-        MinutesToBurn	=	150,
-        DisplayName	=	Cow Meat,
-        Icon	=	Cowmeat,
-        DaysFresh	=	2,
-        MinutesToCook	=	120,
+        DisplayCategory = Food,
+        HungerChange    =   -60,
+        Weight  =   5,
+        Type    =   Food,
+        UnhappyChange   =   25,
+        IsCookable  =   TRUE,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   4,
+        MinutesToBurn   =   150,
+        DisplayName =   Cow Meat,
+        Icon    =   Cowmeat,
+        DaysFresh   =   2,
+        MinutesToCook   =   120,
         Carbohydrates = 5,
         Proteins = 45,
         Lipids = 7.25,
@@ -1037,25 +1037,25 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		ScaleWorldIcon 	= 1.0,
+        ScaleWorldIcon  = 1.0,
     }
 
     item DeadPork
     {
-		DisplayCategory = Food,
-        HungerChange	=	-50,
-        Weight	=	50.0,
-        Type	=	Food,
-		UnhappyChange	=	50,
-        DisplayName	=	Dead Pork,
-        Icon	=	Jabalidead,
-        IsCookable	=	TRUE,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-        DangerousUncooked	=	TRUE,
-        DaysTotallyRotten	=	12,
-        MinutesToBurn	=	250,
-        MinutesToCook	=	180,
-        DaysFresh	=	8,
+        DisplayCategory = Food,
+        HungerChange    =   -50,
+        Weight  =   50.0,
+        Type    =   Food,
+        UnhappyChange   =   50,
+        DisplayName =   Dead Pork,
+        Icon    =   Jabalidead,
+        IsCookable  =   TRUE,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   12,
+        MinutesToBurn   =   250,
+        MinutesToCook   =   180,
+        DaysFresh   =   8,
         Carbohydrates = 0,
         Proteins = 100.8,
         Lipids = 9.58,
@@ -1063,25 +1063,25 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		ScaleWorldIcon 	= 1.0,
+        ScaleWorldIcon  = 1.0,
     }
 
     item Jabalimeat
     {
-		DisplayCategory = Food,
-        HungerChange	=	-50,
-        Weight	=	5,
-        Type	=	Food,
-		UnhappyChange	=	25,
-        IsCookable	=	TRUE,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-        DangerousUncooked	=	TRUE,
-        DaysTotallyRotten	=	4,
-        MinutesToBurn	=	150,
-        DisplayName	=	Jabali Meat,
-        Icon	=	JabaliMeat,
-        DaysFresh	=	2,
-        MinutesToCook	=	120,
+        DisplayCategory = Food,
+        HungerChange    =   -50,
+        Weight  =   5,
+        Type    =   Food,
+        UnhappyChange   =   25,
+        IsCookable  =   TRUE,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   4,
+        MinutesToBurn   =   150,
+        DisplayName =   Jabali Meat,
+        Icon    =   JabaliMeat,
+        DaysFresh   =   2,
+        MinutesToCook   =   120,
         Carbohydrates = 5,
         Proteins = 45,
         Lipids = 7.25,
@@ -1089,65 +1089,65 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		ScaleWorldIcon 	= 1.0,
+        ScaleWorldIcon  = 1.0,
     }
 
     item PorkRope
     {
-		DisplayCategory = Food,
-        Weight	=	50.0,
-        Type	=	Food,
-        DisplayName	=	Tied Pork,
-        Icon	=	JabaliRope,
-        DaysTotallyRotten	=	12,
-        DaysFresh	=	8,
+        DisplayCategory = Food,
+        Weight  =   50.0,
+        Type    =   Food,
+        DisplayName =   Tied Pork,
+        Icon    =   JabaliRope,
+        DaysTotallyRotten   =   12,
+        DaysFresh   =   8,
         Carbohydrates = 0,
         Proteins = 100.8,
         Lipids = 9.58,
         Calories = 1000,
-		ScaleWorldIcon 	= 1.0,
+        ScaleWorldIcon  = 1.0,
     }
 
-	item ChickenDead
-	{
-		DisplayCategory = Food,
-		HungerChange	=	-50,
-		UnhappyChange	=	20,
-		Weight	=	1.8,
-		Type	=	Food,
-		IsCookable	=	TRUE,
-		DangerousUncooked	=	TRUE,
-		DaysTotallyRotten	=	4,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-		MinutesToBurn	=	150,
-		DisplayName	=	Chicken Dead,
-		Icon	=	Chickendead,
-		DaysFresh	=	2,
-		MinutesToCook	=	120,
+    item ChickenDead
+    {
+        DisplayCategory = Food,
+        HungerChange    =   -50,
+        UnhappyChange   =   20,
+        Weight  =   1.8,
+        Type    =   Food,
+        IsCookable  =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   4,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        MinutesToBurn   =   150,
+        DisplayName =   Chicken Dead,
+        Icon    =   Chickendead,
+        DaysFresh   =   2,
+        MinutesToCook   =   120,
         Carbohydrates = 0,
         Proteins = 36,
         Lipids = 30,
         Calories = 500,
         BadInMicrowave = true,
         GoodHot = true,
-		WorldStaticModel = ChickenDead_Ground,
-	}
+        WorldStaticModel = ChickenDead_Ground,
+    }
 
     item BadPorkChop
     {
-		DisplayCategory = Food,
-        HungerChange	=	-10,
-		UnhappyChange	=	30,
-        Weight	=	0.3,
-        Type	=	Food,
-        IsCookable	=	TRUE,
-        DangerousUncooked	=	TRUE,
-        DaysTotallyRotten	=	4,
-        MinutesToBurn	=	70,
-        DisplayName	=	Boar Chop,
-        Icon	=	BoarChop,
-        DaysFresh	=	2,
-        MinutesToCook	=	50,
+        DisplayCategory = Food,
+        HungerChange    =   -10,
+        UnhappyChange   =   30,
+        Weight  =   0.3,
+        Type    =   Food,
+        IsCookable  =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   4,
+        MinutesToBurn   =   70,
+        DisplayName =   Boar Chop,
+        Icon    =   BoarChop,
+        DaysFresh   =   2,
+        MinutesToCook   =   50,
         EvolvedRecipe = Soup:10;Stew:10;RicePot:10;RicePan:10;PastaPot:10;PastaPan:10,
         FoodType    =   Meat,
         Carbohydrates = 0,
@@ -1157,100 +1157,100 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		Tooltip = Tooltip_BadChop,
+        Tooltip = Tooltip_BadChop,
     }
 
-	item ChickenMeat
-	{
-		DisplayCategory = Food,
-		HungerChange	=	-50,
-		UnhappyChange	=	15,
-		Weight	=	1.5,
-		Type	=	Food,
-		IsCookable	=	TRUE,
-		DangerousUncooked	=	TRUE,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-		DaysTotallyRotten	=	6,
-		MinutesToBurn	=	120,
-		DisplayName	=	Chicken Meat,
-		Icon	=	Smallbirdmeat,
-		DaysFresh	=	4,
-		MinutesToCook	=	90,
+    item ChickenMeat
+    {
+        DisplayCategory = Food,
+        HungerChange    =   -50,
+        UnhappyChange   =   15,
+        Weight  =   1.5,
+        Type    =   Food,
+        IsCookable  =   TRUE,
+        DangerousUncooked   =   TRUE,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        DaysTotallyRotten   =   6,
+        MinutesToBurn   =   120,
+        DisplayName =   Chicken Meat,
+        Icon    =   Smallbirdmeat,
+        DaysFresh   =   4,
+        MinutesToCook   =   90,
         Carbohydrates = 0,
         Proteins = 36,
         Lipids = 30,
         Calories = 600,
         BadInMicrowave = true,
         GoodHot = true,
-	}
+    }
 
-	item ChickenWing
-	{
-		DisplayCategory = Food,
-		HungerChange	=	-15,
-		UnhappyChange	=	10,
-		Weight	=	0.1,
-		Type	=	Food,
-		IsCookable	=	TRUE,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-		DangerousUncooked	=	TRUE,
-		DaysTotallyRotten	=	6,
-		MinutesToBurn	=	60,
-		DisplayName	=	Chicken Wing,
-		Icon	=	Chickenwing,
-		DaysFresh	=	4,
-		MinutesToCook	=	30,
+    item ChickenWing
+    {
+        DisplayCategory = Food,
+        HungerChange    =   -15,
+        UnhappyChange   =   10,
+        Weight  =   0.1,
+        Type    =   Food,
+        IsCookable  =   TRUE,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   6,
+        MinutesToBurn   =   60,
+        DisplayName =   Chicken Wing,
+        Icon    =   Chickenwing,
+        DaysFresh   =   4,
+        MinutesToCook   =   30,
         Carbohydrates = 0,
         Proteins = 10,
         Lipids = 6,
         Calories = 100,
-		EvolvedRecipe = Stir fry Griddle Pan:10;Soup:10;Stew:10;Pie:5;Stir fry:10;Burger:5;Salad:5|Cooked;Roasted Vegetables:10;RicePot:10;RicePan:10;PastaPot:10;PastaPan:10,
-		FoodType    =   Meat,
+        EvolvedRecipe = Stir fry Griddle Pan:10;Soup:10;Stew:10;Pie:5;Stir fry:10;Burger:5;Salad:5|Cooked;Roasted Vegetables:10;RicePot:10;RicePan:10;PastaPot:10;PastaPan:10,
+        FoodType    =   Meat,
         BadInMicrowave = true,
         GoodHot = true,
-	}
+    }
 
-	item Chickenchest
-	{
-		DisplayCategory = Food,
-		HungerChange	=	-40,
-		Weight	=	0.5,
-		Type	=	Food,
-		IsCookable	=	TRUE,
-		DangerousUncooked	=	TRUE,
-		DaysTotallyRotten	=	4,
-		MinutesToBurn	=	90,
-		DisplayName	=	Chicken chest,
-		Icon	=	Chickenmchest,
-		DaysFresh	=	2,
-		MinutesToCook	=	60,
-		EvolvedRecipe = Stir fry Griddle Pan:20;Soup:20;Stew:20;Pie:15;Stir fry:20;Sandwich:10|Cooked;Burger:15;Salad:15|Cooked;Roasted Vegetables:20;RicePot:20;RicePan:20;PastaPot:20;PastaPan:20,
-		FoodType    =   Meat,
+    item Chickenchest
+    {
+        DisplayCategory = Food,
+        HungerChange    =   -40,
+        Weight  =   0.5,
+        Type    =   Food,
+        IsCookable  =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   4,
+        MinutesToBurn   =   90,
+        DisplayName =   Chicken chest,
+        Icon    =   Chickenmchest,
+        DaysFresh   =   2,
+        MinutesToCook   =   60,
+        EvolvedRecipe = Stir fry Griddle Pan:20;Soup:20;Stew:20;Pie:15;Stir fry:20;Sandwich:10|Cooked;Burger:15;Salad:15|Cooked;Roasted Vegetables:20;RicePot:20;RicePan:20;PastaPot:20;PastaPan:20,
+        FoodType    =   Meat,
         Carbohydrates = 0,
         Proteins = 25,
         Lipids = 15,
         Calories = 200,
         BadInMicrowave = true,
         GoodHot = true,
-	}
+    }
 
     item BadCowChop
-	{
-		DisplayCategory = Food,
-		HungerChange	=	-10,
-		UnhappyChange	=	10,
-		Weight	=	0.5,
-		Type	=	Food,
-		IsCookable	=	TRUE,
-		DangerousUncooked	=	TRUE,
-		DaysTotallyRotten	=	4,
-		MinutesToBurn	=	70,
-		DisplayName	=	Cow Chop,
-		Icon	=	Badcowchop,
-		DaysFresh	=	2,
-		MinutesToCook	=	50,
-		EvolvedRecipe = Stew:5;Stir fry Griddle Pan:5;Stir fry:5;PastaPot:5;PastaPan:5;RicePot:5;RicePan:5,
-		FoodType    =   Meat,
+    {
+        DisplayCategory = Food,
+        HungerChange    =   -10,
+        UnhappyChange   =   10,
+        Weight  =   0.5,
+        Type    =   Food,
+        IsCookable  =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   4,
+        MinutesToBurn   =   70,
+        DisplayName =   Cow Chop,
+        Icon    =   Badcowchop,
+        DaysFresh   =   2,
+        MinutesToCook   =   50,
+        EvolvedRecipe = Stew:5;Stir fry Griddle Pan:5;Stir fry:5;PastaPot:5;PastaPan:5;RicePot:5;RicePan:5,
+        FoodType    =   Meat,
         Carbohydrates = 0,
         Proteins = 10.11,
         Lipids = 9.35,
@@ -1258,106 +1258,106 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		Tooltip = Tooltip_BadChop,
-	}
+        Tooltip = Tooltip_BadChop,
+    }
 
-	item Cowribs
-	{
-		DisplayCategory = Food,
-		HungerChange	=	-80,
-		UnhappyChange	=	10,
-		Weight	=	5.0,
-		Type	=	Food,
-		IsCookable	=	TRUE,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-		DangerousUncooked	=	TRUE,
-		DaysTotallyRotten	=	4,
-		MinutesToBurn	=	150,
-		DisplayName	=	Cow ribs,
-		Icon	=	Costillar,
-		DaysFresh	=	2,
-		MinutesToCook	=	120,
-		EvolvedRecipe = Stir fry Griddle Pan:25;Soup:25;Stew:25;RicePot:25;PastaPot:20,
-		FoodType    =   Meat,
+    item Cowribs
+    {
+        DisplayCategory = Food,
+        HungerChange    =   -80,
+        UnhappyChange   =   10,
+        Weight  =   5.0,
+        Type    =   Food,
+        IsCookable  =   TRUE,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   4,
+        MinutesToBurn   =   150,
+        DisplayName =   Cow ribs,
+        Icon    =   Costillar,
+        DaysFresh   =   2,
+        MinutesToCook   =   120,
+        EvolvedRecipe = Stir fry Griddle Pan:25;Soup:25;Stew:25;RicePot:25;PastaPot:20,
+        FoodType    =   Meat,
         Carbohydrates = 15,
         Proteins = 20,
         Lipids = 35,
         Calories = 1000,
         BadInMicrowave = true,
         GoodHot = true,
-	}
+    }
 
-	item Bisonribs
-	{
-		DisplayCategory = Food,
-		HungerChange	=	-60,
-		UnhappyChange	=	10,
-		Weight	=	5.0,
-		Type	=	Food,
-		IsCookable	=	TRUE,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-		DangerousUncooked	=	TRUE,
-		DaysTotallyRotten	=	4,
-		MinutesToBurn	=	150,
-		DisplayName	=	Bison ribs,
-		Icon	=	Costillar,
-		DaysFresh	=	2,
-		MinutesToCook	=	120,
-		EvolvedRecipe = Stir fry Griddle Pan:25;Soup:25;Stew:25;RicePot:25;PastaPot:20,
-		FoodType    =   Meat,
+    item Bisonribs
+    {
+        DisplayCategory = Food,
+        HungerChange    =   -60,
+        UnhappyChange   =   10,
+        Weight  =   5.0,
+        Type    =   Food,
+        IsCookable  =   TRUE,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   4,
+        MinutesToBurn   =   150,
+        DisplayName =   Bison ribs,
+        Icon    =   Costillar,
+        DaysFresh   =   2,
+        MinutesToCook   =   120,
+        EvolvedRecipe = Stir fry Griddle Pan:25;Soup:25;Stew:25;RicePot:25;PastaPot:20,
+        FoodType    =   Meat,
         Carbohydrates = 18,
         Proteins = 18,
         Lipids = 45,
         Calories = 1500,
         BadInMicrowave = true,
         GoodHot = true,
-	}
+    }
 
-	item Cowshortribs
-	{
-		DisplayCategory = Food,
-		HungerChange	=	-20,
-		UnhappyChange	=	5,
-		Weight	=	5.0,
-		Type	=	Food,
-		IsCookable	=	TRUE,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-		DangerousUncooked	=	TRUE,
-		DaysTotallyRotten	=	4,
-		MinutesToBurn	=	120,
-		DisplayName	=	Cow short ribs,
-		Icon	=	Asado,
-		DaysFresh	=	2,
-		MinutesToCook	=	80,
-		EvolvedRecipe = Stir fry Griddle Pan:20;Soup:20;Stew:20;RicePot:20;PastaPot:20,
-		FoodType    =   Meat,
+    item Cowshortribs
+    {
+        DisplayCategory = Food,
+        HungerChange    =   -20,
+        UnhappyChange   =   5,
+        Weight  =   5.0,
+        Type    =   Food,
+        IsCookable  =   TRUE,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   4,
+        MinutesToBurn   =   120,
+        DisplayName =   Cow short ribs,
+        Icon    =   Asado,
+        DaysFresh   =   2,
+        MinutesToCook   =   80,
+        EvolvedRecipe = Stir fry Griddle Pan:20;Soup:20;Stew:20;RicePot:20;PastaPot:20,
+        FoodType    =   Meat,
         Carbohydrates = 1.5,
         Proteins = 2,
         Lipids = 3.5,
         Calories = 100,
         BadInMicrowave = true,
         GoodHot = true,
-		StaticModel = Cowshortribs,
-		EatType = 2handforced,
-		WorldStaticModel = Cowshortribs_Ground,
-	}
+        StaticModel = Cowshortribs,
+        EatType = 2handforced,
+        WorldStaticModel = Cowshortribs_Ground,
+    }
 
     item DeadCanary
     {
-		DisplayCategory = Food,
-        HungerChange	=	-15,
-		UnhappyChange	=	15,
-        Weight	=	0.1,
-        Type	=	Food,
-        DisplayName	=	Dead Canary,
-        Icon	=	CanaryDead,
-        IsCookable	=	TRUE,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-        DangerousUncooked	=	TRUE,
-        DaysTotallyRotten	=	12,
-        MinutesToBurn	=	40,
-        MinutesToCook	=	25,
-        DaysFresh	=	8,
+        DisplayCategory = Food,
+        HungerChange    =   -15,
+        UnhappyChange   =   15,
+        Weight  =   0.1,
+        Type    =   Food,
+        DisplayName =   Dead Canary,
+        Icon    =   CanaryDead,
+        IsCookable  =   TRUE,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   12,
+        MinutesToBurn   =   40,
+        MinutesToCook   =   25,
+        DaysFresh   =   8,
         Carbohydrates = 0,
         Proteins = 30,
         Lipids = 3.25,
@@ -1365,25 +1365,25 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		WorldStaticModel = DeadCanary,
+        WorldStaticModel = DeadCanary,
     }
-	
+    
     item DeadCrow
     {
-		DisplayCategory = Food,
-        HungerChange	=	-5,
-		UnhappyChange	=	25,
-        Weight	=	0.5,
-        Type	=	Food,
-        DisplayName	=	Dead Crow,
-        Icon	=	CrowDead,
-        IsCookable	=	TRUE,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-        DangerousUncooked	=	TRUE,
-        DaysTotallyRotten	=	12,
-        MinutesToBurn	=	60,
-        MinutesToCook	=	25,
-        DaysFresh	=	8,
+        DisplayCategory = Food,
+        HungerChange    =   -5,
+        UnhappyChange   =   25,
+        Weight  =   0.5,
+        Type    =   Food,
+        DisplayName =   Dead Crow,
+        Icon    =   CrowDead,
+        IsCookable  =   TRUE,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   12,
+        MinutesToBurn   =   60,
+        MinutesToCook   =   25,
+        DaysFresh   =   8,
         Carbohydrates = 0,
         Proteins = 15,
         Lipids = 1.8,
@@ -1391,25 +1391,25 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		WorldStaticModel = DeadCrow,
+        WorldStaticModel = DeadCrow,
     }
 
     item DeadDeer
     {
-		DisplayCategory = Food,
-        HungerChange	=	-50,
-        Weight	=	50.0,
-        Type	=	Food,
-		UnhappyChange	=	50,
-        DisplayName	=	Deer dead,
-        Icon	=	Deaddeer,
-        IsCookable	=	TRUE,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-        DangerousUncooked	=	TRUE,
-        DaysTotallyRotten	=	10,
-        MinutesToBurn	=	240,
-        MinutesToCook	=	200,
-        DaysFresh	=	6,
+        DisplayCategory = Food,
+        HungerChange    =   -50,
+        Weight  =   50.0,
+        Type    =   Food,
+        UnhappyChange   =   50,
+        DisplayName =   Deer dead,
+        Icon    =   Deaddeer,
+        IsCookable  =   TRUE,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   10,
+        MinutesToBurn   =   240,
+        MinutesToCook   =   200,
+        DaysFresh   =   6,
         Carbohydrates = 0,
         Proteins = 100.8,
         Lipids = 9.58,
@@ -1417,25 +1417,25 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		ScaleWorldIcon 	= 1.0,
+        ScaleWorldIcon  = 1.0,
     }
 
     item DeerMeat
     {
-		DisplayCategory = Food,
-        HungerChange	=	-50,
-        Weight	=	50.0,
-        Type	=	Food,
-		UnhappyChange	=	30,
-        DisplayName	=	Deer Meat,
-        Icon	=	Deermeat,
-        IsCookable	=	TRUE,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-        DangerousUncooked	=	TRUE,
-        DaysTotallyRotten	=	10,
-        MinutesToBurn	=	220,
-        MinutesToCook	=	180,
-        DaysFresh	=	6,
+        DisplayCategory = Food,
+        HungerChange    =   -50,
+        Weight  =   50.0,
+        Type    =   Food,
+        UnhappyChange   =   30,
+        DisplayName =   Deer Meat,
+        Icon    =   Deermeat,
+        IsCookable  =   TRUE,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   10,
+        MinutesToBurn   =   220,
+        MinutesToCook   =   180,
+        DaysFresh   =   6,
         Carbohydrates = 0,
         Proteins = 100.8,
         Lipids = 9.58,
@@ -1443,41 +1443,41 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		ScaleWorldIcon 	= 1.0,
+        ScaleWorldIcon  = 1.0,
     }
 
     item DeerRope
     {
-		DisplayCategory = Food,
-        Weight	=	50.0,
-        Type	=	Food,
-        DisplayName	=	Tied deer,
-        Icon	=	DeerRope,
-        DaysTotallyRotten	=	10,
-        DaysFresh	=	6,
+        DisplayCategory = Food,
+        Weight  =   50.0,
+        Type    =   Food,
+        DisplayName =   Tied deer,
+        Icon    =   DeerRope,
+        DaysTotallyRotten   =   10,
+        DaysFresh   =   6,
         Carbohydrates = 0,
         Proteins = 100.8,
         Lipids = 9.58,
         Calories = 2000,
-		ScaleWorldIcon 	= 1.0,
+        ScaleWorldIcon  = 1.0,
     }
 
     item DeadSheep
     {
-		DisplayCategory = Food,
-        HungerChange	=	-50,
-        Weight	=	50.0,
-        Type	=	Food,
-		UnhappyChange	=	50,
-        DisplayName	=	Sheep dead,
-        Icon	=	Lambdead,
-        IsCookable	=	TRUE,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-        DangerousUncooked	=	TRUE,
-        DaysTotallyRotten	=	10,
-        MinutesToBurn	=	240,
-        MinutesToCook	=	200,
-        DaysFresh	=	4,
+        DisplayCategory = Food,
+        HungerChange    =   -50,
+        Weight  =   50.0,
+        Type    =   Food,
+        UnhappyChange   =   50,
+        DisplayName =   Sheep dead,
+        Icon    =   Lambdead,
+        IsCookable  =   TRUE,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   10,
+        MinutesToBurn   =   240,
+        MinutesToCook   =   200,
+        DaysFresh   =   4,
         Carbohydrates = 0,
         Proteins = 100.8,
         Lipids = 9.58,
@@ -1485,25 +1485,25 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		ScaleWorldIcon 	= 1.2,
+        ScaleWorldIcon  = 1.2,
     }
 
     item SheepMeat
     {
-		DisplayCategory = Food,
-        HungerChange	=	-50,
-        Weight	=	50.0,
-        Type	=	Food,
-		UnhappyChange	=	30,
-        DisplayName	=	Sheep Meat,
-        Icon	=	Lambmeat,
-        IsCookable	=	TRUE,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-        DangerousUncooked	=	TRUE,
-        DaysTotallyRotten	=	10,
-        MinutesToBurn	=	220,
-        MinutesToCook	=	180,
-        DaysFresh	=	6,
+        DisplayCategory = Food,
+        HungerChange    =   -50,
+        Weight  =   50.0,
+        Type    =   Food,
+        UnhappyChange   =   30,
+        DisplayName =   Sheep Meat,
+        Icon    =   Lambmeat,
+        IsCookable  =   TRUE,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   10,
+        MinutesToBurn   =   220,
+        MinutesToCook   =   180,
+        DaysFresh   =   6,
         Carbohydrates = 0,
         Proteins = 100.8,
         Lipids = 9.58,
@@ -1511,24 +1511,24 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		ScaleWorldIcon 	= 1.2,
+        ScaleWorldIcon  = 1.2,
     }
 
     item BadMuttonChop
     {
-		DisplayCategory = Food,
-        HungerChange	=	-10,
-		UnhappyChange	=	20,
-        Weight	=	0.3,
-        Type	=	Food,
-        IsCookable	=	TRUE,
-        DangerousUncooked	=	TRUE,
-        DaysTotallyRotten	=	4,
-        MinutesToBurn	=	70,
-        DisplayName	=	Bad Mutton Chop,
-        Icon	=	Badmuttonchop,
-        DaysFresh	=	2,
-        MinutesToCook	=	50,
+        DisplayCategory = Food,
+        HungerChange    =   -10,
+        UnhappyChange   =   20,
+        Weight  =   0.3,
+        Type    =   Food,
+        IsCookable  =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   4,
+        MinutesToBurn   =   70,
+        DisplayName =   Bad Mutton Chop,
+        Icon    =   Badmuttonchop,
+        DaysFresh   =   2,
+        MinutesToCook   =   50,
         EvolvedRecipe = Soup:5;Stew:5;RicePot:5;PastaPot:5,
         FoodType    =   Meat,
         Carbohydrates = 0.02,
@@ -1538,93 +1538,93 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		Tooltip = Tooltip_BadChop,
+        Tooltip = Tooltip_BadChop,
     }
 
     item SheepRope
     {
-		DisplayCategory = Food,
-        Weight	=	50.0,
-        Type	=	Food,
-        DisplayName	=	Tied sheep,
-        Icon	=	SheepRope,
-        DaysTotallyRotten	=	10,
-        DaysFresh	=	6,
+        DisplayCategory = Food,
+        Weight  =   50.0,
+        Type    =   Food,
+        DisplayName =   Tied sheep,
+        Icon    =   SheepRope,
+        DaysTotallyRotten   =   10,
+        DaysFresh   =   6,
         Carbohydrates = 0,
         Proteins = 100.8,
         Lipids = 9.58,
         Calories = 2000,
-		ScaleWorldIcon 	= 1.2,
+        ScaleWorldIcon  = 1.2,
     }
 
     item KnifeDepostador
-	{
-		MaxRange	=	0.9,
-		WeaponSprite	=	KnifeDepostador,
-		MinAngle	=	0,
-		Type	=	Weapon,
-		Tooltip = Tooltip_KnifeDepostador,
-		MinimumSwingTime	=	2,
-		KnockBackOnNoDeath	=	FALSE,
-		SwingAmountBeforeImpact	=	0.02,
-		Categories	=	SmallBlade,
-		ConditionLowerChanceOneIn	=	15,
-		Weight	=	0.5,
-		SplatNumber	=	2,
-		PushBackMod	=	0.3,
-		SubCategory	=	Stab,
-		AimingMod	=	0.8,
-		CloseKillMove = Jaw_Stab,
-		ConditionMax	=	10,
-		MaxHitCount	=	1,
-		IsAimedHandWeapon	=	TRUE,
-		DoorDamage	=	1,
-		SwingAnim	=	Stab,
-		WeaponWeight	=	0.3,
-		DisplayName	=	Knife Depostador,
-		MinRange	=	0.61,
-		SwingTime	=	2,
-		KnockdownMod	=	0,
-		SplatBloodOnNoDeath	=	TRUE,
-		Icon	=	KnifeDepostador,
-		RunAnim	=	Run_Weapon2,
-        IdleAnim	=	Idle_Weapon2,
+    {
+        MaxRange    =   0.9,
+        WeaponSprite    =   KnifeDepostador,
+        MinAngle    =   0,
+        Type    =   Weapon,
+        Tooltip = Tooltip_KnifeDepostador,
+        MinimumSwingTime    =   2,
+        KnockBackOnNoDeath  =   FALSE,
+        SwingAmountBeforeImpact =   0.02,
+        Categories  =   SmallBlade,
+        ConditionLowerChanceOneIn   =   15,
+        Weight  =   0.5,
+        SplatNumber =   2,
+        PushBackMod =   0.3,
+        SubCategory =   Stab,
+        AimingMod   =   0.8,
+        CloseKillMove = Jaw_Stab,
+        ConditionMax    =   10,
+        MaxHitCount =   1,
+        IsAimedHandWeapon   =   TRUE,
+        DoorDamage  =   1,
+        SwingAnim   =   Stab,
+        WeaponWeight    =   0.3,
+        DisplayName =   Knife Depostador,
+        MinRange    =   0.61,
+        SwingTime   =   2,
+        KnockdownMod    =   0,
+        SplatBloodOnNoDeath =   TRUE,
+        Icon    =   KnifeDepostador,
+        RunAnim =   Run_Weapon2,
+        IdleAnim    =   Idle_Weapon2,
         BreakSound  =   HuntingKnifeBreak,
         TreeDamage  =   2,
         EnduranceMod = 0.5,
         MetalValue = 8,
-        CriticalChance	=	15,
+        CriticalChance  =   15,
         CritDmgMultiplier = 3,
-        MinDamage	=	0.6,
-        MaxDamage	=	1.2,
-		WeaponLength = 0.17,
-		DamageCategory = Slash,
+        MinDamage   =   0.6,
+        MaxDamage   =   1.2,
+        WeaponLength = 0.17,
+        DamageCategory = Slash,
         DamageMakeHole = TRUE,
-        HitFloorSound	=	HuntingKnifeHit,
-        ImpactSound	=	HuntingKnifeHit,
+        HitFloorSound   =   HuntingKnifeHit,
+        ImpactSound =   HuntingKnifeHit,
         DoorHitSound = HuntingKnifeHit,
-		HitSound	=	HuntingKnifeHit,
-		SwingSound = HuntingKnifeSwing,
-		AttachmentType = Knife,
-		Tags = CutPlant;SharpKnife,
-	}
+        HitSound    =   HuntingKnifeHit,
+        SwingSound = HuntingKnifeSwing,
+        AttachmentType = Knife,
+        Tags = CutPlant;SharpKnife,
+    }
 
     item DeadBison
     {
-		DisplayCategory = Food,
-        HungerChange	=	-60,
-        Weight	=	50.0,
-        Type	=	Food,
-		UnhappyChange	=	50,
-        DisplayName	=	Dead Bison,
-        Icon	=	Bison,
-        IsCookable	=	TRUE,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-        DangerousUncooked	=	TRUE,
-        DaysTotallyRotten	=	12,
-        MinutesToBurn	=	250,
-        MinutesToCook	=	180,
-        DaysFresh	=	8,
+        DisplayCategory = Food,
+        HungerChange    =   -60,
+        Weight  =   50.0,
+        Type    =   Food,
+        UnhappyChange   =   50,
+        DisplayName =   Dead Bison,
+        Icon    =   Bison,
+        IsCookable  =   TRUE,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   12,
+        MinutesToBurn   =   250,
+        MinutesToCook   =   180,
+        DaysFresh   =   8,
         Carbohydrates = 0,
         Proteins = 100.8,
         Lipids = 9.58,
@@ -1632,25 +1632,25 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		ScaleWorldIcon 	= 1.0,
+        ScaleWorldIcon  = 1.0,
     }
 
     item Bisonmeat
     {
-		DisplayCategory = Food,
-        HungerChange	=	-60,
-        Weight	=	5,
-        Type	=	Food,
-		UnhappyChange	=	25,
-        IsCookable	=	TRUE,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-        DangerousUncooked	=	TRUE,
-        DaysTotallyRotten	=	4,
-        MinutesToBurn	=	150,
-        DisplayName	=	Bison Meat,
-        Icon	=	Bisonmeat,
-        DaysFresh	=	2,
-        MinutesToCook	=	120,
+        DisplayCategory = Food,
+        HungerChange    =   -60,
+        Weight  =   5,
+        Type    =   Food,
+        UnhappyChange   =   25,
+        IsCookable  =   TRUE,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   4,
+        MinutesToBurn   =   150,
+        DisplayName =   Bison Meat,
+        Icon    =   Bisonmeat,
+        DaysFresh   =   2,
+        MinutesToCook   =   120,
         Carbohydrates = 5,
         Proteins = 45,
         Lipids = 7.25,
@@ -1658,25 +1658,25 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		ScaleWorldIcon 	= 1.0,
+        ScaleWorldIcon  = 1.0,
     }
 
     item DeadBlackBear
     {
-		DisplayCategory = Food,
-        HungerChange	=	-50,
-        Weight	=	50.0,
-        Type	=	Food,
-		UnhappyChange	=	50,
-        DisplayName	=	Dead Black Bear,
-        Icon	=	Deadbearblack,
-        IsCookable	=	TRUE,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-        DangerousUncooked	=	TRUE,
-        DaysTotallyRotten	=	10,
-        MinutesToBurn	=	240,
-        MinutesToCook	=	200,
-        DaysFresh	=	6,
+        DisplayCategory = Food,
+        HungerChange    =   -50,
+        Weight  =   50.0,
+        Type    =   Food,
+        UnhappyChange   =   50,
+        DisplayName =   Dead Black Bear,
+        Icon    =   Deadbearblack,
+        IsCookable  =   TRUE,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   10,
+        MinutesToBurn   =   240,
+        MinutesToCook   =   200,
+        DaysFresh   =   6,
         Carbohydrates = 0,
         Proteins = 100.8,
         Lipids = 9.58,
@@ -1684,25 +1684,25 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		ScaleWorldIcon 	= 2.0,
+        ScaleWorldIcon  = 2.0,
     }
 
     item DeadWolf
     {
-		DisplayCategory = Food,
-        HungerChange	=	-50,
-        Weight	=	50.0,
-        Type	=	Food,
-		UnhappyChange	=	50,
-        DisplayName	=	Dead Wolf,
-        Icon	=	Wolfdead,
-        IsCookable	=	TRUE,
-		RemoveNegativeEffectOnCooked    =   TRUE,
-        DangerousUncooked	=	TRUE,
-        DaysTotallyRotten	=	12,
-        MinutesToBurn	=	250,
-        MinutesToCook	=	180,
-        DaysFresh	=	8,
+        DisplayCategory = Food,
+        HungerChange    =   -50,
+        Weight  =   50.0,
+        Type    =   Food,
+        UnhappyChange   =   50,
+        DisplayName =   Dead Wolf,
+        Icon    =   Wolfdead,
+        IsCookable  =   TRUE,
+        RemoveNegativeEffectOnCooked    =   TRUE,
+        DangerousUncooked   =   TRUE,
+        DaysTotallyRotten   =   12,
+        MinutesToBurn   =   250,
+        MinutesToCook   =   180,
+        DaysFresh   =   8,
         Carbohydrates = 0,
         Proteins = 80.8,
         Lipids = 6.58,
@@ -1710,288 +1710,288 @@ module Base
         BadInMicrowave = true,
         GoodHot = true,
         BadCold = true,
-		ScaleWorldIcon 	= 1.0,
+        ScaleWorldIcon  = 1.0,
     }
 
 
-	item CowRug
-	{
-		DisplayCategory = Furniture,
-		Weight	=	20,
-		Type	=	Moveable,
-		DisplayName	=	Cow Rug,
-		Icon	=	CowRug,
-		WorldObjectSprite	= camping_02_14,
-	}
+    item CowRug
+    {
+        DisplayCategory = Furniture,
+        Weight  =   20,
+        Type    =   Moveable,
+        DisplayName =   Cow Rug,
+        Icon    =   CowRug,
+        WorldObjectSprite   = camping_02_14,
+    }
 
-	item DeerRug
-	{
-		DisplayCategory = Furniture,
-		Weight	=	15,
-		Type	=	Moveable,
-		DisplayName	=	Deer Rug,
-		Icon	=	DeerRug,
-		WorldObjectSprite	= camping_02_34,
-	}
+    item DeerRug
+    {
+        DisplayCategory = Furniture,
+        Weight  =   15,
+        Type    =   Moveable,
+        DisplayName =   Deer Rug,
+        Icon    =   DeerRug,
+        WorldObjectSprite   = camping_02_34,
+    }
 
-	item BearRug
-	{
-		DisplayCategory = Furniture,
-		Weight	=	30,
-		Type	=	Moveable,
-		DisplayName	=	Bear Rug,
-		Icon	=	BearRug,
-		WorldObjectSprite	= camping_02_52,
-	}
+    item BearRug
+    {
+        DisplayCategory = Furniture,
+        Weight  =   30,
+        Type    =   Moveable,
+        DisplayName =   Bear Rug,
+        Icon    =   BearRug,
+        WorldObjectSprite   = camping_02_52,
+    }
 
 
 
     item SurvivalistMag1
     {
-		DisplayCategory = SkillBook,
-        Weight	=	0.1,
-        Type	=	Literature,
-        DisplayName	=	The Survivalist Magazine,
-        Icon	=	SurvivalMag1,
+        DisplayCategory = SkillBook,
+        Weight  =   0.1,
+        Type    =   Literature,
+        DisplayName =   The Survivalist Magazine,
+        Icon    =   SurvivalMag1,
         TeachedRecipes  =   Polish chipped stone;Make wooden grip;Make shark knife,
         ReplaceOnUse    =   SurvivalistMag1,
-		StaticModel = LGSurvivalistMag1,
-		WorldStaticModel = LGSurvivalistMag1_Ground,
+        StaticModel = LGSurvivalistMag1,
+        WorldStaticModel = LGSurvivalistMag1_Ground,
     }
-	
+    
     item SurvivalistMag2
     {
-		DisplayCategory = SkillBook,
-        Weight	=	0.1,
-        Type	=	Literature,
-        DisplayName	=	The Survivalist Magazine2,
-        Icon	=	SurvivalMag2,
+        DisplayCategory = SkillBook,
+        Weight  =   0.1,
+        Type    =   Literature,
+        DisplayName =   The Survivalist Magazine2,
+        Icon    =   SurvivalMag2,
         TeachedRecipes  =   Make Animal Trophys;Make Twine;Make Rope,
         ReplaceOnUse    =   SurvivalistMag2,
-		StaticModel = LGSurvivalistMag2,
-		WorldStaticModel = LGSurvivalistMag2_Ground,
+        StaticModel = LGSurvivalistMag2,
+        WorldStaticModel = LGSurvivalistMag2_Ground,
     }
 
     item SurvivalistMag3
     {
-		DisplayCategory = SkillBook,
-        Weight	=	0.1,
-        Type	=	Literature,
-        DisplayName	=	The Survivalist Magazine3,
-        Icon	=	SurvivalMag3,
+        DisplayCategory = SkillBook,
+        Weight  =   0.1,
+        Type    =   Literature,
+        DisplayName =   The Survivalist Magazine3,
+        Icon    =   SurvivalMag3,
         TeachedRecipes  =   Make fur frame;Deer Skin treatment;Cow Skin treatment;Bear Skin treatment;Make cow rug;Make deer rug;Make bear rug,
         ReplaceOnUse    =   SurvivalistMag3,
-		StaticModel = LGSurvivalistMag3,
-		WorldStaticModel = LGSurvivalistMag3_Ground,
+        StaticModel = LGSurvivalistMag3,
+        WorldStaticModel = LGSurvivalistMag3_Ground,
     }
-	
+    
     item SurvivalistMag4
     {
-		DisplayCategory = SkillBook,
-        Weight	=	0.1,
-        Type	=	Literature,
-        DisplayName	=	The Survivalist Magazine4,
-        Icon	=	SurvivalMag4,
+        DisplayCategory = SkillBook,
+        Weight  =   0.1,
+        Type    =   Literature,
+        DisplayName =   The Survivalist Magazine4,
+        Icon    =   SurvivalMag4,
         TeachedRecipes  =   Advanced frames;Cheese table;Make diana,
         ReplaceOnUse    =   SurvivalistMag4,
-		StaticModel = LGSurvivalistMag4,
-		WorldStaticModel = LGSurvivalistMag4_Ground,
+        StaticModel = LGSurvivalistMag4,
+        WorldStaticModel = LGSurvivalistMag4_Ground,
     }
 
     item SurvivalistMag5
     {
-		DisplayCategory = SkillBook,
-        Weight	=	0.1,
-        Type	=	Literature,
-        DisplayName	=	The Survivalist Magazine5,
-        Icon	=	SurvivalMag5,
+        DisplayCategory = SkillBook,
+        Weight  =   0.1,
+        Type    =   Literature,
+        DisplayName =   The Survivalist Magazine5,
+        Icon    =   SurvivalMag5,
         TeachedRecipes  =   Make Stone Pickaxe;ButterKnife sharpening;KitchenKnife sharpening;HuntingKnife sharpening;MeatCleaver sharpening;KnifeDepostador sharpening,
         ReplaceOnUse    =   SurvivalistMag5,
-		StaticModel = LGSurvivalistMag5,
-		WorldStaticModel = LGSurvivalistMag5_Ground,
+        StaticModel = LGSurvivalistMag5,
+        WorldStaticModel = LGSurvivalistMag5_Ground,
     }
 
     item SurvivalistMag6
     {
-		DisplayCategory = SkillBook,
-        Weight	=	0.1,
-        Type	=	Literature,
-        DisplayName	=	The Survivalist Magazine6,
-        Icon	=	SurvivalMag6,
+        DisplayCategory = SkillBook,
+        Weight  =   0.1,
+        Type    =   Literature,
+        DisplayName =   The Survivalist Magazine6,
+        Icon    =   SurvivalMag6,
         TeachedRecipes  =   Make double log door;Make log door frame;Make log reinforcements,
         ReplaceOnUse    =   SurvivalistMag6,
-		StaticModel = LGSurvivalistMag6,
-		WorldStaticModel = LGSurvivalistMag6_Ground,
+        StaticModel = LGSurvivalistMag6,
+        WorldStaticModel = LGSurvivalistMag6_Ground,
     }
 
 
     item SharpedknifeStone
     {
-		DisplayCategory = Material,
-        Weight	=	0.3,
-        Type	=	Normal,
-        DisplayName	=	Chipped knife stone,
-        Icon	=	KnStone,
+        DisplayCategory = Material,
+        Weight  =   0.3,
+        Type    =   Normal,
+        DisplayName =   Chipped knife stone,
+        Icon    =   KnStone,
     }
 
     item WoodenGrip
     {
-		DisplayCategory = Material,
-        Weight	=	0.1,
-        Type	=	Normal,
-        DisplayName	=	Wooden grip,
-        Icon	=	woodengrip,
+        DisplayCategory = Material,
+        Weight  =   0.1,
+        Type    =   Normal,
+        DisplayName =   Wooden grip,
+        Icon    =   woodengrip,
     }
 
     item SharkTooth
     {
-		DisplayCategory = Material,
-        Weight	=	0.2,
-        Type	=	Normal,
-        DisplayName	=	Shark tooth,
-        Icon	=	SharkTooth,
-		Tooltip = Tooltip_SharkTooth,
+        DisplayCategory = Material,
+        Weight  =   0.2,
+        Type    =   Normal,
+        DisplayName =   Shark tooth,
+        Icon    =   SharkTooth,
+        Tooltip = Tooltip_SharkTooth,
     }
 
     item RawCowSkin
     {
-		DisplayCategory = Material,
-        Weight	=	20,
-        Type	=	Normal,
-        DisplayName	=	Raw Cow skin,
-        Icon	=	AnimalSkinCow,
-		Tooltip = Tooltip_Needtobecured,
+        DisplayCategory = Material,
+        Weight  =   20,
+        Type    =   Normal,
+        DisplayName =   Raw Cow skin,
+        Icon    =   AnimalSkinCow,
+        Tooltip = Tooltip_Needtobecured,
     }
 
     item CowSkin
     {
-		DisplayCategory = Material,
-        Weight	=	20,
-        Type	=	Normal,
-        DisplayName	=	Cow skin,
-        Icon	=	AnimalSkinCow,
-		Tooltip = Tooltip_AnimalSkin,
+        DisplayCategory = Material,
+        Weight  =   20,
+        Type    =   Normal,
+        DisplayName =   Cow skin,
+        Icon    =   AnimalSkinCow,
+        Tooltip = Tooltip_AnimalSkin,
     }
 
     item RawDeerSkin
     {
-		DisplayCategory = Material,
-        Weight	=	15,
-        Type	=	Normal,
-        DisplayName	=	Raw Deer skin,
-        Icon	=	AnimalSkinDeer,
-		Tooltip = Tooltip_Needtobecured,
+        DisplayCategory = Material,
+        Weight  =   15,
+        Type    =   Normal,
+        DisplayName =   Raw Deer skin,
+        Icon    =   AnimalSkinDeer,
+        Tooltip = Tooltip_Needtobecured,
     }
 
     item DeerSkin
     {
-		DisplayCategory = Material,
-        Weight	=	15,
-        Type	=	Normal,
-        DisplayName	=	Deer skin,
-        Icon	=	AnimalSkinDeer,
-		Tooltip = Tooltip_AnimalSkin,
+        DisplayCategory = Material,
+        Weight  =   15,
+        Type    =   Normal,
+        DisplayName =   Deer skin,
+        Icon    =   AnimalSkinDeer,
+        Tooltip = Tooltip_AnimalSkin,
     }
 
     item RawBearSkin
     {
-		DisplayCategory = Material,
-        Weight	=	30,
-        Type	=	Normal,
-        DisplayName	=	Raw Bear skin,
-        Icon	=	AnimalSkinBear,
-		Tooltip = Tooltip_Needtobecured,
+        DisplayCategory = Material,
+        Weight  =   30,
+        Type    =   Normal,
+        DisplayName =   Raw Bear skin,
+        Icon    =   AnimalSkinBear,
+        Tooltip = Tooltip_Needtobecured,
     }
 
     item BearSkin
     {
-		DisplayCategory = Material,
-        Weight	=	30,
-        Type	=	Normal,
-        DisplayName	=	Bear skin,
-        Icon	=	AnimalSkinBear,
-		Tooltip = Tooltip_AnimalSkin,
+        DisplayCategory = Material,
+        Weight  =   30,
+        Type    =   Normal,
+        DisplayName =   Bear skin,
+        Icon    =   AnimalSkinBear,
+        Tooltip = Tooltip_AnimalSkin,
     }
 
     item SurvivalKnife2
-	{
-	    Icon	=	SharkKnife,
-		MaxRange	=	0.9,
-		WeaponSprite	=	Knife,
-		MinAngle	=	0,
-		Type	=	Weapon,
-		MinimumSwingTime	=	2,
-		KnockBackOnNoDeath	=	FALSE,
-		SwingAmountBeforeImpact	=	0.02,
-		Categories	=	Blade,
-		ConditionLowerChanceOneIn	=	60,
-		Weight	=	0.4,
-		SplatNumber	=	0,
-		PushBackMod	=	0.3,
-		MaxDamage	=	0.8,
-		SubCategory	=	Stab,
-		AimingMod	=	0.8,
-		ConditionMax	=	10,
-		MaxHitCount	=	1,
-		IsAimedHandWeapon	=	TRUE,
-		DoorDamage	=	1,
-		SwingAnim	=	Stab,
-		WeaponWeight	=	0.4,
-		DisplayName	=	SharkTooth knife,
-		MinRange	=	0.61,
-		CloseKillMove = Jaw_Stab,
-		SwingTime	=	2,
-		MinDamage	=	0.3,
-		KnockdownMod	=	0,
-		SplatBloodOnNoDeath	=	TRUE,
-		RunAnim	=	Run_Weapon2,
-        IdleAnim	=	Idle_Weapon2,
-		BreakSound  =   FixingItemFailed,
+    {
+        Icon    =   SharkKnife,
+        MaxRange    =   0.9,
+        WeaponSprite    =   Knife,
+        MinAngle    =   0,
+        Type    =   Weapon,
+        MinimumSwingTime    =   2,
+        KnockBackOnNoDeath  =   FALSE,
+        SwingAmountBeforeImpact =   0.02,
+        Categories  =   Blade,
+        ConditionLowerChanceOneIn   =   60,
+        Weight  =   0.4,
+        SplatNumber =   0,
+        PushBackMod =   0.3,
+        MaxDamage   =   0.8,
+        SubCategory =   Stab,
+        AimingMod   =   0.8,
+        ConditionMax    =   10,
+        MaxHitCount =   1,
+        IsAimedHandWeapon   =   TRUE,
+        DoorDamage  =   1,
+        SwingAnim   =   Stab,
+        WeaponWeight    =   0.4,
+        DisplayName =   SharkTooth knife,
+        MinRange    =   0.61,
+        CloseKillMove = Jaw_Stab,
+        SwingTime   =   2,
+        MinDamage   =   0.3,
+        KnockdownMod    =   0,
+        SplatBloodOnNoDeath =   TRUE,
+        RunAnim =   Run_Weapon2,
+        IdleAnim    =   Idle_Weapon2,
+        BreakSound  =   FixingItemFailed,
         TreeDamage  =   2,
         EnduranceMod = 0.5,
-	}
+    }
 
-    recipe Polish chipped stone
-	{
-	   SharpedStone,
-	   keep Stone,
+    recipe Polish Chipped stone
+    {
+       SharpedStone,
+       keep Stone,
 
-	   Result:SharpedknifeStone,
-	   Sound:sharpstone,
-	   SkillRequired:Woodwork=1;PlantScavenging=1,
-	   NeedToBeLearn:true,
-	   OnGiveXP:EKScarvxp1,
-	   Time:275.0,
-	   Category:Survivalist,
-	}
+       Result:SharpedknifeStone,
+       Sound:sharpstone,
+       SkillRequired:Woodwork=1;PlantScavenging=1,
+       NeedToBeLearn:true,
+       OnGiveXP:EKScarvxp1,
+       Time:275.0,
+       Category:Survivalist,
+    }
 
-    recipe Make wooden grip
-	{
-	   TreeBranch,
-	   keep SharpedknifeStone/KnifeDepostador/HuntingKnife/KitchenKnife/Saw,
+    recipe Make Wooden grip
+    {
+       TreeBranch,
+       keep SharpedknifeStone/KnifeDepostador/HuntingKnife/KitchenKnife/Saw,
 
-	   Result:WoodenGrip,
-	   Sound:woodgrip,
-	   SkillRequired:Woodwork=1;PlantScavenging=1,
-	   NeedToBeLearn:true,
-	   OnGiveXP:EKScarvxp1,
-	   Time:200.0,
-	   Category:Survivalist,
-	}
+       Result:WoodenGrip,
+       Sound:woodgrip,
+       SkillRequired:Woodwork=1;PlantScavenging=1,
+       NeedToBeLearn:true,
+       OnGiveXP:EKScarvxp1,
+       Time:200.0,
+       Category:Survivalist,
+    }
 
-    recipe Make shark knife
-	{
-	   SharkTooth,
-	   WoodenGrip,
-	   Twine,
+    recipe Make Shark knife
+    {
+       SharkTooth,
+       WoodenGrip,
+       Twine,
 
-	   Result:SurvivalKnife2,
-	   NeedToBeLearn:true,
-	   OnGiveXP:EKScarvxp3,
-	   SkillRequired:Woodwork=4;PlantScavenging=5,
-	   Time:250.0,
-	   Category:Survivalist,
-	}
+       Result:SurvivalKnife2,
+       NeedToBeLearn:true,
+       OnGiveXP:EKScarvxp3,
+       SkillRequired:Woodwork=4;PlantScavenging=5,
+       Time:250.0,
+       Category:Survivalist,
+    }
 
     recipe Open Box of Rubber Bands
     {
@@ -2011,15 +2011,15 @@ module Base
         Time:5.0,
     }
 
-    recipe Make slingshot
+    recipe Make Slingshot
     {
         TreeBranch,
         RubberBand/Tendon,
-		
+        
         Result:Slingshot,
         Time:150.0,
-		OnCreate:MakeSlingshot_OnCreate,
-		SkillRequired:PlantScavenging=1,
+        OnCreate:MakeSlingshot_OnCreate,
+        SkillRequired:PlantScavenging=1,
         Category:Survivalist,
     }
 
@@ -2027,24 +2027,24 @@ module Base
     {
         Plank,
         keep [Recipe.GetItemTypes.Saw],
-		
+        
         Result:SlingshotHandle,
         Time:150.0,
-		SkillRequired:Woodwork=5,
+        SkillRequired:Woodwork=5,
         Category:Carpentry,
     }
 
-    recipe Carpenter slingshot
+    recipe Carpenter Slingshot
     {
         SlingshotHandle,
         MedicalHose/Tendon,
-		Twine=2,
-		Woodglue=1,
-		
+        Twine=2,
+        Woodglue=1,
+        
         Result:Slingshot2,
         Time:150.0,
-		OnCreate:MakeSlingshot_OnCreate,
-		SkillRequired:Woodwork=5,
+        OnCreate:MakeSlingshot_OnCreate,
+        SkillRequired:Woodwork=5,
         Category:Carpentry,
     }
 
@@ -2052,12 +2052,12 @@ module Base
     {
         keep KnifeDepostador/KitchenKnife/HuntingKnife,
         ChickenDead,
-		
-		CanBeDoneFromFloor:true,
+        
+        CanBeDoneFromFloor:true,
         Result:ChickenMeat,
         Sound:SliceMeat,
         Time:125.0,
-		SkillRequired:Cooking=4,
+        SkillRequired:Cooking=4,
         OnCreate:DepostarMTAnimal_OnCreate,
         Category:Survivalist,
         OnGiveXP:Give10CookingXP,
@@ -2068,14 +2068,14 @@ module Base
     {
         keep KnifeDepostador,
         ChickenMeat,
-		
-		CanBeDoneFromFloor:true,
+        
+        CanBeDoneFromFloor:true,
         Result:Chicken=2,
         Sound:SliceMeat,
         Time:125.0,
-		SkillRequired:Cooking=4,
-		NeedToBeLearn:true,
-		OnCreate:CutMTChicken_OnCreate,
+        SkillRequired:Cooking=4,
+        NeedToBeLearn:true,
+        OnCreate:CutMTChicken_OnCreate,
         Category:Survivalist,
         OnGiveXP:Give10CookingXP,
     }
@@ -2084,27 +2084,27 @@ module Base
     {
         keep [Recipe.GetItemTypes.Saw],
         Cowribs,
-		
+        
         Result:Cowshortribs=4,
         Sound:SliceBread,
         Time:200.0,
-		SkillRequired:Cooking=4,
-		OnCreate:Cutcowribs_OnCreate,
+        SkillRequired:Cooking=4,
+        OnCreate:Cutcowribs_OnCreate,
         Category:Cooking,
         OnGiveXP:Give3CookingXP,
     }
-	
-    recipe Tie up Bear
+    
+    recipe Tie-up Bear
     {
         DeadBear,
-		Rope=4,
-		
-		CanBeDoneFromFloor:true,
+        Rope=4,
+        
+        CanBeDoneFromFloor:true,
         Result:BearRope,
-		Sound:PutItemInBag,
+        Sound:PutItemInBag,
         Time:500.0,
         OnCreate:TieMTAnimal_OnCreate,
-		OnTest:TieAnimal_TestIsValid,
+        OnTest:TieAnimal_TestIsValid,
         Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.None,
     }
@@ -2112,27 +2112,27 @@ module Base
     recipe Untie Bear
     {
         BearRope,
-		
-		CanBeDoneFromFloor:true,
+        
+        CanBeDoneFromFloor:true,
         Result:DeadBear,
-		Sound:PutItemInBag,
+        Sound:PutItemInBag,
         Time:500.0,
         OnCreate:UnTieMTAnimal_OnCreate,
         Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.None,
     }
 
-    recipe Tie up Cow
+    recipe Tie-up Cow
     {
         DeadCow,
-		Rope=4,
-		
-		CanBeDoneFromFloor:true,
+        Rope=4,
+        
+        CanBeDoneFromFloor:true,
         Result:CowRope,
-		Sound:PutItemInBag,
+        Sound:PutItemInBag,
         Time:500.0,
         OnCreate:TieMTAnimal_OnCreate,
-		OnTest:TieAnimal_TestIsValid,
+        OnTest:TieAnimal_TestIsValid,
         Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.None,
     }
@@ -2140,27 +2140,27 @@ module Base
     recipe Untie Cow
     {
         CowRope,
-		
-		CanBeDoneFromFloor:true,
+        
+        CanBeDoneFromFloor:true,
         Result:DeadCow,
-		Sound:PutItemInBag,
+        Sound:PutItemInBag,
         Time:500.0,
         OnCreate:UnTieMTAnimal_OnCreate,
         Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.None,
     }
-	
-    recipe Tie up Bison
+    
+    recipe Tie-up Bison
     {
         DeadBison,
-		Rope=4,
-		
-		CanBeDoneFromFloor:true,
+        Rope=4,
+        
+        CanBeDoneFromFloor:true,
         Result:BisonRope,
-		Sound:PutItemInBag,
+        Sound:PutItemInBag,
         Time:500.0,
         OnCreate:TieMTAnimal_OnCreate,
-		OnTest:TieAnimal_TestIsValid,
+        OnTest:TieAnimal_TestIsValid,
         Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.None,
     }
@@ -2168,27 +2168,27 @@ module Base
     recipe Untie Bison
     {
         BisonRope,
-		
-		CanBeDoneFromFloor:true,
+        
+        CanBeDoneFromFloor:true,
         Result:DeadBison,
-		Sound:PutItemInBag,
+        Sound:PutItemInBag,
         Time:500.0,
         OnCreate:UnTieMTAnimal_OnCreate,
         Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.None,
     }
 
-    recipe Tie up Moose
+    recipe Tie-up Moose
     {
         DeadMoose,
-		Rope=4,
-		
-		CanBeDoneFromFloor:true,
+        Rope=4,
+        
+        CanBeDoneFromFloor:true,
         Result:MooseRope,
-		Sound:PutItemInBag,
+        Sound:PutItemInBag,
         Time:500.0,
         OnCreate:TieMTAnimal_OnCreate,
-		OnTest:TieAnimal_TestIsValid,
+        OnTest:TieAnimal_TestIsValid,
         Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.None,
     }
@@ -2196,27 +2196,27 @@ module Base
     recipe Untie Moose
     {
         MooseRope,
-		
-		CanBeDoneFromFloor:true,
+        
+        CanBeDoneFromFloor:true,
         Result:DeadMoose,
-		Sound:PutItemInBag,
+        Sound:PutItemInBag,
         Time:500.0,
         OnCreate:UnTieMTAnimal_OnCreate,
         Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.None,
     }
 
-    recipe Tie up Deer
+    recipe Tie-up Deer
     {
         DeadDeer,
-		Rope=4,
-		
-		CanBeDoneFromFloor:true,
+        Rope=4,
+        
+        CanBeDoneFromFloor:true,
         Result:DeerRope,
-		Sound:PutItemInBag,
+        Sound:PutItemInBag,
         Time:500.0,
         OnCreate:TieMTAnimal_OnCreate,
-		OnTest:TieAnimal_TestIsValid,
+        OnTest:TieAnimal_TestIsValid,
         Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.None,
     }
@@ -2224,27 +2224,27 @@ module Base
     recipe Untie Deer
     {
         DeerRope,
-		
-		CanBeDoneFromFloor:true,
+        
+        CanBeDoneFromFloor:true,
         Result:DeadDeer,
-		Sound:PutItemInBag,
+        Sound:PutItemInBag,
         Time:500.0,
         OnCreate:UnTieMTAnimal_OnCreate,
         Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.None,
     }
 
-    recipe Tie up Jabali
+    recipe Tie-up Jabali
     {
         DeadPork,
-		Rope=4,
-		
-		CanBeDoneFromFloor:true,
+        Rope=4,
+        
+        CanBeDoneFromFloor:true,
         Result:PorkRope,
-		Sound:PutItemInBag,
+        Sound:PutItemInBag,
         Time:500.0,
         OnCreate:TieMTAnimal_OnCreate,
-		OnTest:TieAnimal_TestIsValid,
+        OnTest:TieAnimal_TestIsValid,
         Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.None,
     }
@@ -2252,10 +2252,10 @@ module Base
     recipe Untie Jabali
     {
         PorkRope,
-		
-		CanBeDoneFromFloor:true,
+        
+        CanBeDoneFromFloor:true,
         Result:DeadPork,
-		Sound:PutItemInBag,
+        Sound:PutItemInBag,
         Time:500.0,
         OnCreate:UnTieMTAnimal_OnCreate,
         Category:Survivalist,
@@ -2275,17 +2275,17 @@ module Base
         OnGiveXP:Give10CookingXP,
     }
 
-    recipe Tie up Sheep
+    recipe Tie-up Sheep
     {
         DeadSheep,
-		Rope=4,
-		
-		CanBeDoneFromFloor:true,
+        Rope=4,
+        
+        CanBeDoneFromFloor:true,
         Result:SheepRope,
-		Sound:PutItemInBag,
+        Sound:PutItemInBag,
         Time:500.0,
         OnCreate:TieMTAnimal_OnCreate,
-		OnTest:TieAnimal_TestIsValid,
+        OnTest:TieAnimal_TestIsValid,
         Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.None,
     }
@@ -2293,10 +2293,10 @@ module Base
     recipe Untie Sheep
     {
         SheepRope,
-		
-		CanBeDoneFromFloor:true,
+        
+        CanBeDoneFromFloor:true,
         Result:DeadSheep,
-		Sound:PutItemInBag,
+        Sound:PutItemInBag,
         Time:500.0,
         OnCreate:UnTieMTAnimal_OnCreate,
         Category:Survivalist,
@@ -2382,7 +2382,7 @@ module Base
         Time:100.0,
         Category:Survivalist,
         OnGiveXP:Give5TailoringXP,
-		NeedToBeLearn:true,
+        NeedToBeLearn:true,
     }
 
     recipe Make Rope
@@ -2393,170 +2393,170 @@ module Base
         Time:100.0,
         Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.None,
-		NeedToBeLearn:true,
+        NeedToBeLearn:true,
     }
 
-    recipe Cow Skin treatment
+    recipe Cow Skin Treatment
     {
-		keep KnifeDepostador/HuntingKnife,
+        keep KnifeDepostador/HuntingKnife,
         RawCowSkin,
-		Bleach,
-		Water=10,
+        Bleach,
+        Water=10,
 
         Result:CowSkin,
-		Sound:SliceMeat,
+        Sound:SliceMeat,
         Time:1000.0,
         Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.None,
-		NeedToBeLearn:true,
+        NeedToBeLearn:true,
     }
 
-    recipe Deer Skin treatment
+    recipe Deer Skin Treatment
     {
-		keep KnifeDepostador/HuntingKnife,
+        keep KnifeDepostador/HuntingKnife,
         RawDeerSkin,
-		Bleach,
-		Water=10,
+        Bleach,
+        Water=10,
 
         Result:DeerSkin,
-		Sound:SliceMeat,
+        Sound:SliceMeat,
         Time:1000.0,
         Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.None,
-		NeedToBeLearn:true,
+        NeedToBeLearn:true,
     }
 
-    recipe Bear Skin treatment
+    recipe Bear Skin Treatment
     {
-		keep KnifeDepostador/HuntingKnife,
+        keep KnifeDepostador/HuntingKnife,
         RawBearSkin,
-		Bleach,
-		Water=10,
+        Bleach,
+        Water=10,
 
         Result:BearSkin,
-		Sound:SliceMeat,
+        Sound:SliceMeat,
         Time:1000.0,
         Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.None,
-		NeedToBeLearn:true,
+        NeedToBeLearn:true,
     }
 
-    recipe Make cow rug
+    recipe Make Cow rug
     {
-		keep KnifeDepostador/HuntingKnife,
+        keep KnifeDepostador/HuntingKnife,
         CowSkin,
 
         Result:CowRug,
-		Sound:SliceMeat,
+        Sound:SliceMeat,
         Time:300.0,
         Category:Survivalist,
-		OnTest:AnimalRugs_TestIsValid,
+        OnTest:AnimalRugs_TestIsValid,
         OnGiveXP:Recipe.OnGiveXP.None,
-		NeedToBeLearn:true,
+        NeedToBeLearn:true,
     }
 
-    recipe Make deer rug
+    recipe Make Deer rug
     {
-		keep KnifeDepostador/HuntingKnife,
+        keep KnifeDepostador/HuntingKnife,
         DeerSkin,
 
         Result:DeerRug,
-		Sound:SliceMeat,
+        Sound:SliceMeat,
         Time:300.0,
         Category:Survivalist,
-		OnTest:AnimalRugs_TestIsValid,
+        OnTest:AnimalRugs_TestIsValid,
         OnGiveXP:Recipe.OnGiveXP.None,
-		NeedToBeLearn:true,
+        NeedToBeLearn:true,
     }
 
-    recipe Make bear rug
+    recipe Make Bear rug
     {
-		keep KnifeDepostador/HuntingKnife,
+        keep KnifeDepostador/HuntingKnife,
         BearSkin,
-		BearHead,
+        BearHead,
 
         Result:BearRug,
-		Sound:SliceMeat,
+        Sound:SliceMeat,
         Time:300.0,
         Category:Survivalist,
-		OnTest:AnimalRugs_TestIsValid,
+        OnTest:AnimalRugs_TestIsValid,
         OnGiveXP:Recipe.OnGiveXP.None,
-		NeedToBeLearn:true,
+        NeedToBeLearn:true,
     }
 
     recipe ButterKnife sharpening
     {
-		Stone,
+        Stone,
         ButterKnife,
 
         Result:ButterKnife,
-		Sound:SliceMeat,
+        Sound:SliceMeat,
         Time:300.0,
         Category:Survivalist,
-		OnTest:sharpening_TestIsValid,
-		OnCreate:Sharpening_OnCreate,
+        OnTest:sharpening_TestIsValid,
+        OnCreate:Sharpening_OnCreate,
         OnGiveXP:Recipe.OnGiveXP.None,
-		NeedToBeLearn:true,
+        NeedToBeLearn:true,
     }
 
     recipe KitchenKnife sharpening
     {
-		Stone,
+        Stone,
         KitchenKnife,
 
         Result:KitchenKnife,
-		Sound:SliceMeat,
+        Sound:SliceMeat,
         Time:300.0,
         Category:Survivalist,
-		OnTest:sharpening_TestIsValid,
-		OnCreate:Sharpening_OnCreate,
+        OnTest:sharpening_TestIsValid,
+        OnCreate:Sharpening_OnCreate,
         OnGiveXP:Recipe.OnGiveXP.None,
-		NeedToBeLearn:true,
+        NeedToBeLearn:true,
     }
 
     recipe HuntingKnife sharpening
     {
-		Stone,
+        Stone,
         HuntingKnife,
 
         Result:HuntingKnife,
-		Sound:SliceMeat,
+        Sound:SliceMeat,
         Time:300.0,
         Category:Survivalist,
-		OnTest:sharpening_TestIsValid,
-		OnCreate:Sharpening_OnCreate,
+        OnTest:sharpening_TestIsValid,
+        OnCreate:Sharpening_OnCreate,
         OnGiveXP:Recipe.OnGiveXP.None,
-		NeedToBeLearn:true,
+        NeedToBeLearn:true,
     }
 
     recipe KnifeDepostador sharpening
     {
-		Stone,
+        Stone,
         KnifeDepostador,
 
         Result:KnifeDepostador,
-		Sound:SliceMeat,
+        Sound:SliceMeat,
         Time:300.0,
         Category:Survivalist,
-		OnTest:sharpening_TestIsValid,
-		OnCreate:Sharpening_OnCreate,
+        OnTest:sharpening_TestIsValid,
+        OnCreate:Sharpening_OnCreate,
         OnGiveXP:Recipe.OnGiveXP.None,
-		NeedToBeLearn:true,
+        NeedToBeLearn:true,
     }
 
     recipe MeatCleaver sharpening
     {
-		Stone,
+        Stone,
         MeatCleaver,
 
         Result:MeatCleaver,
-		Sound:SliceMeat,
+        Sound:SliceMeat,
         Time:300.0,
         Category:Survivalist,
-		OnTest:sharpening_TestIsValid,
-		OnCreate:Sharpening_OnCreate,
+        OnTest:sharpening_TestIsValid,
+        OnCreate:Sharpening_OnCreate,
         OnGiveXP:Recipe.OnGiveXP.None,
-		NeedToBeLearn:true,
+        NeedToBeLearn:true,
     }
 
     recipe Make Stone Pickaxe
@@ -2568,49 +2568,53 @@ module Base
         Result:Mining.StonePickaxe,
         Time:80.0,
         Category:Survivalist,
-		OnGiveXP:Recipe.OnGiveXP.None,
-		NeedToBeLearn:true,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        NeedToBeLearn:true,
     }
 
-    recipe Make branch pile
+    recipe Make Branch pile
     {
         TreeBranch=25,
-		RippedSheetsDirty/RippedSheets/Thread,
+        RippedSheetsDirty/RippedSheets/Thread,
 
         Result:BranchPack,
+        CanBeDoneFromFloor:true,
         Time:20.0,
         Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.None,
     }
 
-    recipe Untie branch pile
+    recipe Untie Branch pile
     {
-		BranchPack,
+        BranchPack,
 
         Result:TreeBranch=25,
-		OnCreate:Untiebranch_OnCreate,
+        CanBeDoneFromFloor:true,
+        OnCreate:Untiebranch_OnCreate,
         Time:20.0,
         Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.None,
     }
 
-    recipe Make twigs pile
+    recipe Make Twigs pile
     {
         Twigs=25,
-		RippedSheetsDirty/RippedSheets/Thread,
+        RippedSheetsDirty/RippedSheets/Thread,
 
         Result:TwigsPack,
+        CanBeDoneFromFloor:true,
         Time:20.0,
         Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.None,
     }
 
-    recipe Untie twigs pile
+    recipe Untie Twigs pile
     {
-		TwigsPack,
+        TwigsPack,
 
         Result:Twigs=25,
-		OnCreate:Untiebranch_OnCreate,
+        OnCreate:Untiebranch_OnCreate,
+        CanBeDoneFromFloor:true,
         Time:20.0,
         Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.None,
@@ -2619,165 +2623,165 @@ module Base
     recipe Unravel Clothing
     {
         [UnravelClothing_GetItemTypes],
-		keep Scissors,
+        keep Scissors,
 
         Result:ThreadPieces,
         RemoveResultItem:true,
         Sound:ClothesRipping,
         Time:100.0,
         AnimNode:RipSheets,
-		Prop1:Scissors,
+        Prop1:Scissors,
         OnCreate:UnravelClothing_OnCreate,
     }
 
     recipe Unravel Clothing
     {
         RippedSheets/RippedSheetsDirty/DenimStrips/DenimStripsDirty,
-		keep Scissors,
+        keep Scissors,
 
         Result:ThreadPieces,
         RemoveResultItem:true,
         Sound:ClothesRipping,
         Time:100.0,
         AnimNode:RipSheets,
-		Prop1:Scissors,
+        Prop1:Scissors,
         OnCreate:UnravelClothing_OnCreate,
     }
 
     recipe Tenderize Bison meat
     {
-		BadBisonChop,
-		keep WoodenMallet,
+        BadBisonChop,
+        keep WoodenMallet,
 
         Result:BadBisonChop,
-		CanBeDoneFromFloor:true,
-		OnTest:Tenderize_TestIsValid,
-		OnCreate:Tenderize_Meat_OnCreate,
+        CanBeDoneFromFloor:true,
+        OnTest:Tenderize_TestIsValid,
+        OnCreate:Tenderize_Meat_OnCreate,
         Time:250.0,
         Category:Cooking,
-		NeedToBeLearn:true,
+        NeedToBeLearn:true,
         OnGiveXP:Recipe.OnGiveXP.Cooking3,
-		Sound:SlapMeat,
-		AnimNode:BuildLow,
-		Prop1:WoodenMallet,
+        Sound:SlapMeat,
+        AnimNode:BuildLow,
+        Prop1:WoodenMallet,
     }
 
     recipe Tenderize Moose meat
     {
-		BadMooseChop,
-		keep WoodenMallet,
+        BadMooseChop,
+        keep WoodenMallet,
 
         Result:BadMooseChop,
-		CanBeDoneFromFloor:true,
-		OnTest:Tenderize_TestIsValid,
-		OnCreate:Tenderize_Meat_OnCreate,
+        CanBeDoneFromFloor:true,
+        OnTest:Tenderize_TestIsValid,
+        OnCreate:Tenderize_Meat_OnCreate,
         Time:250.0,
         Category:Cooking,
-		NeedToBeLearn:true,
+        NeedToBeLearn:true,
         OnGiveXP:Recipe.OnGiveXP.Cooking3,
-		Sound:SlapMeat,
-		AnimNode:BuildLow,
-		Prop1:WoodenMallet,
+        Sound:SlapMeat,
+        AnimNode:BuildLow,
+        Prop1:WoodenMallet,
     }
 
     recipe Tenderize Bear meat
     {
-		BadBearChop,
-		keep WoodenMallet,
+        BadBearChop,
+        keep WoodenMallet,
 
         Result:BadBearChop,
-		CanBeDoneFromFloor:true,
-		OnTest:Tenderize_TestIsValid,
-		OnCreate:Tenderize_Meat_OnCreate,
+        CanBeDoneFromFloor:true,
+        OnTest:Tenderize_TestIsValid,
+        OnCreate:Tenderize_Meat_OnCreate,
         Time:250.0,
         Category:Cooking,
-		NeedToBeLearn:true,
+        NeedToBeLearn:true,
         OnGiveXP:Recipe.OnGiveXP.Cooking3,
-		Sound:SlapMeat,
-		AnimNode:BuildLow,
-		Prop1:WoodenMallet,
+        Sound:SlapMeat,
+        AnimNode:BuildLow,
+        Prop1:WoodenMallet,
     }
 
     recipe Tenderize Deer meat
     {
-		BadDeerChop,
-		keep WoodenMallet,
+        BadDeerChop,
+        keep WoodenMallet,
 
         Result:BadDeerChop,
-		CanBeDoneFromFloor:true,
-		OnTest:Tenderize_TestIsValid,
-		OnCreate:Tenderize_Meat_OnCreate,
+        CanBeDoneFromFloor:true,
+        OnTest:Tenderize_TestIsValid,
+        OnCreate:Tenderize_Meat_OnCreate,
         Time:250.0,
         Category:Cooking,
-		NeedToBeLearn:true,
+        NeedToBeLearn:true,
         OnGiveXP:Recipe.OnGiveXP.Cooking3,
-		Sound:SlapMeat,
-		AnimNode:BuildLow,
-		Prop1:WoodenMallet,
+        Sound:SlapMeat,
+        AnimNode:BuildLow,
+        Prop1:WoodenMallet,
     }
 
     recipe Tenderize Mutton meat
     {
-		BadMuttonChop,
-		keep WoodenMallet,
+        BadMuttonChop,
+        keep WoodenMallet,
 
         Result:BadMuttonChop,
-		CanBeDoneFromFloor:true,
-		OnTest:Tenderize_TestIsValid,
-		OnCreate:Tenderize_Meat_OnCreate,
+        CanBeDoneFromFloor:true,
+        OnTest:Tenderize_TestIsValid,
+        OnCreate:Tenderize_Meat_OnCreate,
         Time:250.0,
         Category:Cooking,
-		NeedToBeLearn:true,
+        NeedToBeLearn:true,
         OnGiveXP:Recipe.OnGiveXP.Cooking3,
-		Sound:SlapMeat,
-		AnimNode:BuildLow,
-		Prop1:WoodenMallet,
+        Sound:SlapMeat,
+        AnimNode:BuildLow,
+        Prop1:WoodenMallet,
     }
 
     recipe Tenderize Cow meat
     {
-		BadCowChop,
-		keep WoodenMallet,
+        BadCowChop,
+        keep WoodenMallet,
 
         Result:BadCowChop,
-		CanBeDoneFromFloor:true,
-		OnTest:Tenderize_TestIsValid,
-		OnCreate:Tenderize_Meat_OnCreate,
+        CanBeDoneFromFloor:true,
+        OnTest:Tenderize_TestIsValid,
+        OnCreate:Tenderize_Meat_OnCreate,
         Time:250.0,
         Category:Cooking,
-		NeedToBeLearn:true,
+        NeedToBeLearn:true,
         OnGiveXP:Recipe.OnGiveXP.Cooking3,
-		Sound:SlapMeat,
-		AnimNode:BuildLow,
-		Prop1:WoodenMallet,
+        Sound:SlapMeat,
+        AnimNode:BuildLow,
+        Prop1:WoodenMallet,
     }
 
     recipe Tenderize Pork meat
     {
-		BadPorkChop,
-		keep WoodenMallet,
+        BadPorkChop,
+        keep WoodenMallet,
 
         Result:BadPorkChop,
-		CanBeDoneFromFloor:true,
-		OnTest:Tenderize_TestIsValid,
-		OnCreate:Tenderize_Meat_OnCreate,
+        CanBeDoneFromFloor:true,
+        OnTest:Tenderize_TestIsValid,
+        OnCreate:Tenderize_Meat_OnCreate,
         Time:250.0,
         Category:Cooking,
-		NeedToBeLearn:true,
+        NeedToBeLearn:true,
         OnGiveXP:Recipe.OnGiveXP.Cooking3,
-		Sound:SlapMeat,
-		AnimNode:BuildLow,
-		Prop1:WoodenMallet,
+        Sound:SlapMeat,
+        AnimNode:BuildLow,
+        Prop1:WoodenMallet,
     }
 
-	item TreeBranchWindow
-	{
-		Weight	=	10,
-		Type	=	Moveable,
-		DisplayName	=	Natural Tree Branch Window,
-		Icon	=	treebranchwindow,
-		WorldObjectSprite	= walls_exterior_legourmet_01_14,
-	}
+    item TreeBranchWindow
+    {
+        Weight  =   10,
+        Type    =   Moveable,
+        DisplayName =   Natural Tree Branch Window,
+        Icon    =   treebranchwindow,
+        WorldObjectSprite   = walls_exterior_legourmet_01_14,
+    }
 
 
     recipe Attach Survivalist Knife to Spear
@@ -2831,7 +2835,7 @@ module Base
 
         Result:SpearCrafted,
         Time:100.0,
-		OnTest:LGRCreateSpear_TestIsValid,
+        OnTest:LGRCreateSpear_TestIsValid,
         OnCreate:Recipe.OnCreate.CreateSpear,
         Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.WoodWork5,
@@ -2839,7 +2843,7 @@ module Base
 
     recipe Fix Bear Trap
     {
-	   BrokenBearTrap,
+       BrokenBearTrap,
        ScrapMetal=5,
        BlowTorch=5,
        keep WeldingMask,
@@ -2852,20 +2856,20 @@ module Base
     }
 
 
-	recipe Smash Stone
-	{
-	   Stone/SharpedStone,
-	   keep [Recipe.GetItemTypes.Hammer],
+    recipe Smash Stone
+    {
+       Stone/SharpedStone,
+       keep [Recipe.GetItemTypes.Hammer],
 
-	   Result:SmallStone=2,
-	   OnCreate:MakeSmallStones_OnCreate,
-	   Time:50.0,
-	   OnGiveXP:Recipe.OnGiveXP.None,
-	   Category:Survivalist,
+       Result:SmallStone=2,
+       OnCreate:MakeSmallStones_OnCreate,
+       Time:50.0,
+       OnGiveXP:Recipe.OnGiveXP.None,
+       Category:Survivalist,
        AnimNode:BuildLow,
-	   Prop1:Source=2,
-	   Prop2:Source=1,
-	}
+       Prop1:Source=2,
+       Prop2:Source=1,
+    }
 
     fixing Fix Spear With Knife Despostador
     {
@@ -2887,7 +2891,7 @@ module Base
        Fixer : Scotchtape=4,
     }
 
-	fixing Reparar Cuchillo depostador
+    fixing Reparar Cuchillo depostador
     {
        Require : KnifeDepostador,
 
@@ -2896,5 +2900,5 @@ module Base
        Fixer : Glue=3,
        Fixer : Scotchtape=4,
     }
-	
+    
 }
