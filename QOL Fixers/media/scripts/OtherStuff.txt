@@ -1,790 +1,751 @@
 module Base
 {
 
-	item MyCanteen
+    item MyCanteen
     {
-       	Weight    			= 0.2,
-		CanStoreWater		= TRUE,
-	    DisplayCategory		= WaterContainer,
-       	Type    			= Normal,
-		DisplayName     	= Canteen,
-		ReplaceOnUseOn		= WaterSource-MyCanteenfull,
-		Icon 				= MyCanteen,
-		RainFactor 			= 1,
-		Tooltip 			= Tooltip_item_RainFromGround,
+        Weight              = 0.2,
+        CanStoreWater       = TRUE,
+        DisplayCategory     = WaterContainer,
+        Type                = Normal,
+        DisplayName         = Canteen,
+        ReplaceOnUseOn      = WaterSource-MyCanteenfull,
+        Icon                = MyCanteen,
+        RainFactor          = 1,
+        Tooltip             = Tooltip_item_RainFromGround,
     }
 
-	item MyCanteenfull
+    item MyCanteenfull
     {
-		IsWaterSource		= TRUE,
-		Weight				= 0.8,
-		CanStoreWater		= TRUE,
-		DisplayCategory 	= Water,
-		Type				= Drainable,
-		UseWhileEquipped	= FALSE,
-		IsCookable			= TRUE,
-		UseDelta			= 0.05,
-		DisplayName			= Canteen with Water,
-		ReplaceOnDeplete	= MyCanteen,
-		ReplaceOnUseOn		= WaterSource-MyCanteenfull,
-		Icon				= MyCanteenfull,
-		RainFactor 			= 1,
-		Tooltip 			= Tooltip_item_RainFromGround,
+        IsWaterSource       = TRUE,
+        Weight              = 0.8,
+        CanStoreWater       = TRUE,
+        DisplayCategory     = Water,
+        Type                = Drainable,
+        UseWhileEquipped    = FALSE,
+        IsCookable          = TRUE,
+        UseDelta            = 0.05,
+        DisplayName         = Canteen with Water,
+        ReplaceOnDeplete    = MyCanteen,
+        ReplaceOnUseOn      = WaterSource-MyCanteenfull,
+        Icon                = MyCanteenfull,
+        RainFactor          = 1,
+        Tooltip             = Tooltip_item_RainFromGround,
     }
 
-	item MyStrappedcanteen
+    item MyStrappedcanteen
     {
-		Weight    			= 0.3,
-		CanStoreWater		= TRUE,
-		DisplayCategory 	= WaterContainer,
-		Type    			= Normal,
-		DisplayName         = Strapped Canteens,
-		ReplaceOnUseOn		= WaterSource-MyStrappedcanteenfull,
-		Icon 				= MyStrappedcanteen,
-		RainFactor 			= 1,
-		Tooltip 			= Tooltip_item_RainFromGround,
+        Weight              = 0.3,
+        CanStoreWater       = TRUE,
+        DisplayCategory     = WaterContainer,
+        Type                = Normal,
+        DisplayName         = Strapped Canteens,
+        ReplaceOnUseOn      = WaterSource-MyStrappedcanteenfull,
+        Icon                = MyStrappedcanteen,
+        RainFactor          = 1,
+        Tooltip             = Tooltip_item_RainFromGround,
     }
 
-	item MyStrappedcanteenfull
+    item MyStrappedcanteenfull
     {
-		IsWaterSource		= TRUE,
-		Weight				= 1.2,
-		CanStoreWater		= TRUE,
-		Type				= Drainable,
-		UseWhileEquipped	= FALSE,
-		IsCookable			= TRUE,
-		UseDelta			= 0.025,
-		DisplayName			= Strapped Canteens with Water,
-		DisplayCategory 	= Water,
-		ReplaceOnDeplete	= MyStrappedcanteen,
-		ReplaceOnUseOn		= WaterSource-MyStrappedcanteenfull,
-		Icon				= MyStrappedcanteen,
-		RainFactor 			= 1,
-		Tooltip 			= Tooltip_item_RainFromGround,
+        IsWaterSource       = TRUE,
+        Weight              = 1.2,
+        CanStoreWater       = TRUE,
+        Type                = Drainable,
+        UseWhileEquipped    = FALSE,
+        IsCookable          = TRUE,
+        UseDelta            = 0.025,
+        DisplayName         = Strapped Canteens with Water,
+        DisplayCategory     = Water,
+        ReplaceOnDeplete    = MyStrappedcanteen,
+        ReplaceOnUseOn      = WaterSource-MyStrappedcanteenfull,
+        Icon                = MyStrappedcanteen,
+        RainFactor          = 1,
+        Tooltip             = Tooltip_item_RainFromGround,
     }
 
-	item MyGarbagebagbox
-	{
-		Weight				= 0.8,
-		Type				= Drainable,
-		UseDelta 			= 0.05,
-		DisplayName			= Box of Garbage Bags,
-		ReplaceOnDeplete	= MyGarbagebagboxempty,
-		Icon				= MyGarbagebagbox,
-	}
-
-	item LightBulbSixPack
-	{
-		Weight				= 0.2,
-		DisplayCategory 	= Electronics,
-		Type				= Drainable,
-		UseDelta 			= 0.15,
-		DisplayName			= LightBulbs 6-Pack,
-		ReplaceOnDeplete	= LightBulbSixPackempty,
-		Icon				= LightBulbSixPack,
-	}
-
-	item LightBulbTwelvePack
-	{
-		Weight				= 0.4,
-        DisplayCategory 	= Electronics,
-		Type				= Drainable,
-		UseDelta 			= 0.08,
-		DisplayName			= LightBulbs 12-Pack,
-		ReplaceOnDeplete	= LightBulbTwelvePackempty,
-		Icon				= LightBulbTwelvePack,
-	}
-
-    item Note_Flukey
+    item MyGarbagebagbox
     {
-        Type = Normal,
-        DisplayName = Note,
-        Icon = Map,
-        Weight = 0.1,
-        Map = media/ui/LootableMaps/Note_Flukey.png,
+        Weight              = 0.8,
+        Type                = Drainable,
+        UseDelta            = 0.05,
+        DisplayName         = Box of Garbage Bags,
+        ReplaceOnDeplete    = MyGarbagebagboxempty,
+        Icon                = MyGarbagebagbox,
+        Tooltip             = Tooltip_MyGarbagebagbox,
     }
 
-	item DoorHingesBox
-	{
-		Weight				= 0.5,
-	    DisplayCategory 	= Material,
-		Type				= Drainable,
-		UseDelta 			= 0.15,
-		DisplayName			= Package of 6 Door Hinges,
-		ReplaceOnDeplete	= DoorHingesBoxempty,
-		Icon				= DoorHingesBox,	
-	}
-
-	item DoorknobsBox
-	{
-		Weight				= 0.8,
-	    DisplayCategory 	= Material,
-		Type				= Drainable,
-		UseDelta 			= 0.25,
-		DisplayName			= Package of 4 Doorknobs,
-		ReplaceOnDeplete	= DoorknobsBoxempty,
-		Icon				= DoorknobsBox,	
-	}
-	
-    item BlowTorch
+    item LightBulbSixPack
     {
-        DisplayCategory 	= Tool,
-        Weight				= 1.0,
-        Type				= Drainable,
-        UseWhileEquipped	= FALSE,
-        UseDelta			= 0.01,
-        DisplayName			= Propane Torch,
-        Icon				= BlowTorch,
-        MetalValue 			= 20,
-        KeepOnDeplete 		= true,
-        StaticModel 		= BlowTorch,
-        WeightEmpty 		= 0.3,
-        WorldStaticModel 	= BlowtorchGround,
-        cantBeConsolided 	= TRUE,
+        Weight              = 0.2,
+        DisplayCategory     = Electronics,
+        Type                = Drainable,
+        UseDelta            = 0.15,
+        DisplayName         = LightBulbs 6-Pack,
+        ReplaceOnDeplete    = LightBulbSixPackempty,
+        Icon                = LightBulbSixPack,
+        Tooltip             = Tooltip_LightBulbSixPack,
     }
 
-	item PropaneTank
-	{
-	    DisplayCategory 	= Material,
-		Weight				= 10.0,
-		Type				= Drainable,
-		UseWhileEquipped	= FALSE,
-		UseDelta			= 0.02,
-		DisplayName			= Propane Tank,
-		Icon				= PropaneTank,
-		UseWorldItem 		= TRUE,
-		ScaleWorldIcon 		= 2.0,
-		WeightEmpty 		= 5.0,
-		KeepOnDeplete 		= true,
-		WorldStaticModel 	= PropaneTank,
-        cantBeConsolided 	= TRUE,
-	}
-
-	recipe Take LightBulb From Box
-	{
-		LightBulbSixPack/LightBulbTwelvePack,
-		
-		Result:LightBulb=1,
-		Time:30,
-	}
-
-		recipe Put LightBulbs in 6-Pack
-		{
-			destroy LightBulb=6,
-			
-			Result:LightBulbSixPack,
-			Time:10,
-		}
-
-		recipe Put LightBulbs in 12-Pack
-		{
-			destroy LightBulb=12,
-			
-			Result:LightBulbTwelvePack,
-			Time:10,
-		}
-
-	recipe Take Hinge From Box
-	{
-		DoorHingesBox,
-		
-		Result:Hinge=1,
-		Time:30,
-	}
-
-		recipe Put Hinges in a Box
-		{
-			destroy Hinge=6,
-			
-			Result:DoorHingesBox,
-			Time:10,
-		}
-
-	recipe Take Doorknob From Box
-	{
-		DoorknobsBox,
-		
-		Result:Doorknob=1,
-		Time:30,
-	}
-
-		recipe Put Doorknobs in a Box
-		{
-			destroy Doorknob=4,
-			
-			Result:DoorknobsBox,
-			Time:10,
-		}
-
-	recipe Take Garbage Bag From Box
+    item LightBulbTwelvePack
     {
-		MyGarbagebagbox,
-		
-		Result:Garbagebag=1,
-		Time:10,
+        Weight              = 0.4,
+        DisplayCategory     = Electronics,
+        Type                = Drainable,
+        UseDelta            = 0.08,
+        DisplayName         = LightBulbs 12-Pack,
+        ReplaceOnDeplete    = LightBulbTwelvePackempty,
+        Icon                = LightBulbTwelvePack,
+        Tooltip             = Tooltip_LightBulbTwelvePack,
     }
-	
-		recipe Put Garbage Bags In Box
-		{
-			destroy Garbagebag=20,
-			
-			Result:MyGarbagebagbox,
-			Time:30,
-		}
-	
-	recipe Attach Canteens
+
+    item DoorHingesBox
     {
-    	MyCanteen=2,
-		Belt2/Sling,
-    	Result:MyStrappedcanteen,
-    	Time:30,
-		Category:Health,
+        Weight              = 0.5,
+        DisplayCategory     = Material,
+        Type                = Drainable,
+        UseDelta            = 0.125,
+        DisplayName         = Package of 8 Door Hinges,
+        ReplaceOnDeplete    = DoorHingesBoxempty,
+        Icon                = DoorHingesBox,
+        Tooltip             = Tooltip_DoorHingesBox,
     }
-	
-	recipe Reclaim Thread
-	{
-		Sheet=1,
 
-		Result:Thread=1,
-		Sound:PZ_ClothesRipping,
-		Time:300.0,
-		Category:Survivalist,
-	}
-	
-	recipe Reclaim Thread
-	{
-		RippedSheets=4,
+    item DoorknobsBox
+    {
+        Weight              = 0.8,
+        DisplayCategory     = Material,
+        Type                = Drainable,
+        UseDelta            = 0.25,
+        DisplayName         = Package of 4 Doorknobs,
+        ReplaceOnDeplete    = DoorknobsBoxempty,
+        Icon                = DoorknobsBox,
+        Tooltip             = Tooltip_DoorknobsBox,
+    }
 
-		Result:Thread=1,
-		Sound:PZ_ClothesRipping,
-		Time:300.0,
-		Category:Survivalist,
-	}
+    recipe Take a LightBulb From Pack
+    {
+        LightBulbSixPack/LightBulbTwelvePack,
 
-	recipe Twist Twine
-	{
-		Thread=4,
+        Result:LightBulb=1,
+        Time:30,
+    }
 
-		Result:Twine=1,
-		Time:240.0,
-		Category:Survivalist,
-	}
+        recipe Make LightBulb 6-Pack
+        {
+            destroy LightBulb=6,
+            
+            Result:LightBulbSixPack,
+            Time:10,
+        }
 
-	recipe Make Rope
-	{
-		Twine=6,
+        recipe Make LightBulb 12-Pack
+        {
+            destroy LightBulb=12,
 
-		Result:Rope,
-		Time:240.0,
-		Category:Survivalist,
-	}
+            Result:LightBulbTwelvePack,
+            Time:10,
+        }
 
-	recipe Make Rope
-	{
-		SheetRope=3,
+    recipe Take Hinge From Package
+    {
+        DoorHingesBox,
 
-		Result:Rope,
-		Time:90.0,
-		Category:Survivalist,
-	}
+        Result:Hinge=1,
+        Time:30,
+    }
 
-	recipe Make Wood Glue
-	{
-		Plank/UnusableWood,
-		keep [Recipe.GetItemTypes.Saw],
-		keep [Recipe.GetItemTypes.Hammer],
-		Charcoal,
-		[Recipe.GetItemTypes.StartFire],
-		Flour,
-		Water=2,
-		Vinegar=1,
-		
-		CanBeDoneFromFloor:true,
-		Result:Woodglue,
-		NeedToBeLearn:false,
-		Time:300,
-		Category:Survivalist,
-	}
+        recipe Make 8-Pack of Hinges
+        {
+            destroy Hinge=8,
+            
+            Result:DoorHingesBox,
+            Time:10,
+        }
 
-	recipe Make Super Glue
-	{
-		Plank/UnusableWood,
-		keep [Recipe.GetItemTypes.Saw],
-		keep [Recipe.GetItemTypes.Hammer],
-		Flour,
-		[Recipe.GetItemTypes.StartFire],
-		Water=2,
-		Glue=1,
-		Vinegar=1,
-		
-		CanBeDoneFromFloor:true,
-		Result:Superglue,
-		NeedToBeLearn:false,
-		Time:300,
-		Category:Survivalist,
-	}
+    recipe Take Doorknob From Package
+    {
+        DoorknobsBox,
 
-	recipe Break Shovel Into Trowel
-	{
-		destroy farming.Shovel,
-		keep [Recipe.GetItemTypes.Hammer],
+        Result:Doorknob=1,
+        Time:30,
+    }
 
-		Result:farming.HandShovel,
-		Sound:PZ_Hammer,
-		Time:120.0,
-		Category:Survivalist,
-	}
-	
-	recipe Make Hinges
-	{
-		ScrapMetal/SmallSheetMetal,
-		keep [Recipe.GetItemTypes.Screwdriver],
-		keep [Recipe.GetItemTypes.Hammer],
-		keep [Recipe.GetItemTypes.Saw],
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:Hinge=2,
-		Sound:PZ_Hammer,
-		Time:150.0,
-		Category:Survivalist,
-		SkillRequired:MetalWelding=2,
-	}
-	
-	recipe Make Bucket
-	{
-		BlowTorch=2,
-		ScrapMetal,
-		SheetMetal,
-		Wire=1,
-		Screws=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		keep [Recipe.GetItemTypes.Screwdriver],
-		keep [Recipe.GetItemTypes.Hammer],
-		keep [Recipe.GetItemTypes.WeldingMask],
+        recipe Make 4-Pack of Doorknobs
+        {
+            destroy Doorknob=4,
 
-		Result:BucketEmpty,
-		Sound:PZ_Hammer,
-		Time:150.0,
-		Category:Survivalist,
-		SkillRequired:MetalWelding=2,
-	}
+            Result:DoorknobsBox,
+            Time:10,
+        }
 
-	recipe Make Doorknob
-	{
+    recipe Take Garbage Bag From Box
+    {
+        MyGarbagebagbox,
 
-		BlowTorch=2,
-		ScrapMetal,
-		SmallSheetMetal,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		keep [Recipe.GetItemTypes.Screwdriver],
-		keep [Recipe.GetItemTypes.Hammer],		
+        Result:Garbagebag=1,
+        Time:10,
+    }
 
-		Result:Doorknob,
-		Sound:PZ_Hammer,
-		Time:150.0,
-		Category:Survivalist,
-		SkillRequired:MetalWelding=2,
-	}
+        recipe Put Garbage Bags In Box
+        {
+            destroy Garbagebag=20,
 
-	recipe Make Shovel
-	{
-		BlowTorch=2,
-		SheetMetal,
-		WoodenStick,
-		Screws=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		keep [Recipe.GetItemTypes.Screwdriver],
-		keep [Recipe.GetItemTypes.Hammer],		
+            Result:MyGarbagebagbox,
+            Time:30,
+        }
 
-		Result:farming.Shovel,
-		Sound:PZ_Hammer,
-		Time:150.0,
-		Category:Survivalist,
-		SkillRequired:MetalWelding=2,
-	}
+    recipe Make a Canteen
+    {
+        MyCanteen=2,
+        Belt2/Sling,
+        Result:MyStrappedcanteen,
+        Time:30,
+        Category:Health,
+    }
 
-	recipe Make Pipe Wrench 
-	{
-		BlowTorch=2,
-		WeldingRods=2,
-		SmallSheetMetal=2,
-		MetalBar=1,
-		ScrapMetal=5,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:PipeWrench,
-		Time:150.0,
-		Category:Welding,
-		SkillRequired:MetalWelding=2,
-	}
-	
-	recipe Make Lug Wrench 
-	{
-		BlowTorch=2,
-		WeldingRods=2,
-		SmallSheetMetal=1,
-		MetalBar=2,
-		ScrapMetal=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:LugWrench,
-		Time:150.0,
-		Category:Welding,
-		SkillRequired:MetalWelding=2;Mechanics=2,
-	}
-	
-	recipe Make Jack 
-	{
-		BlowTorch=2,
-		WeldingRods=2,
-		SmallSheetMetal=3,
-		MetalBar=3,
-		ScrapMetal=5,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:Jack,
-		Time:150.0,
-		Category:Welding,
-		SkillRequired:MetalWelding=2;Mechanics=2,
-	}
-	
-	recipe Make Wrench 
-	{
-		BlowTorch=2,
-		WeldingRods=2,
-		SmallSheetMetal=2,
-		MetalBar=1,
-		ScrapMetal=3,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:Wrench,
-		Time:150.0,
-		Category:Welding,
-		SkillRequired:MetalWelding=2,
-	}
+    recipe Reclaim Thread
+    {
+        Sheet=1,
 
-	recipe Make Bag of Gravel
-	{
-		EmptySandbag,
-		Stone=5,
-		keep [Recipe.GetItemTypes.Hammer],
+        Result:Thread=1,
+        Sound:PZ_ClothesRipping,
+        Time:300.0,
+        Category:Survivalist,
+    }
+    
+    recipe Reclaim Thread
+    {
+        RippedSheets=4,
 
-		Result:Gravelbag,
-		Time:200.0,
-		Category:Carpentry,
-	}
-	
-	recipe Make Bag of Sand
-	{
-		Gravelbag,
-		keep [Recipe.GetItemTypes.Hammer],
+        Result:Thread=1,
+        Sound:PZ_ClothesRipping,
+        Time:300.0,
+        Category:Survivalist,
+    }
 
-		Result:Sandbag,
-		Time:200.0,
-		Category:Carpentry,
-	}
+    recipe Twist Twine
+    {
+        Thread=4,
 
-	recipe Make Sack
-	{
-		Sheet,
+        Result:Twine=1,
+        Time:240.0,
+        Category:Survivalist,
+    }
+
+    recipe Make Rope
+    {
+        Twine=6,
+
+        Result:Rope,
+        Time:240.0,
+        Category:Survivalist,
+    }
+
+    recipe Make Rope
+    {
+        SheetRope=3,
+
+        Result:Rope,
+        Time:90.0,
+        Category:Survivalist,
+    }
+
+    recipe Make Wood Glue
+    {
+        Plank/UnusableWood,
+        keep [Recipe.GetItemTypes.Saw],
+        keep [Recipe.GetItemTypes.Hammer],
+        Charcoal,
+        [Recipe.GetItemTypes.StartFire],
+        Flour,
+        Water=2,
+        Vinegar=1,
+
+        CanBeDoneFromFloor:true,
+        Result:Woodglue,
+        NeedToBeLearn:false,
+        Time:300,
+        Category:Survivalist,
+    }
+
+    recipe Make Super Glue
+    {
+        Plank/UnusableWood,
+        keep [Recipe.GetItemTypes.Saw],
+        keep [Recipe.GetItemTypes.Hammer],
+        Flour,
+        [Recipe.GetItemTypes.StartFire],
+        Water=2,
+        Glue=1,
+        Vinegar=1,
+
+        CanBeDoneFromFloor:true,
+        Result:Superglue,
+        NeedToBeLearn:false,
+        Time:300,
+        Category:Survivalist,
+    }
+
+    recipe Convert Shovel into a Trowel
+    {
+        destroy farming.Shovel,
+        keep [Recipe.GetItemTypes.Hammer],
+
+        Result:farming.HandShovel,
+        Sound:PZ_Hammer,
+        Time:120.0,
+        Category:Survivalist,
+    }
+    
+    recipe Make a Set of Hinges
+    {
+        ScrapMetal/SmallSheetMetal,
+        keep [Recipe.GetItemTypes.Screwdriver],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:Hinge=2,
+        Sound:PZ_Hammer,
+        Time:150.0,
+        Category:Survivalist,
+        SkillRequired:MetalWelding=2,
+    }
+
+    recipe Make Bucket
+    {
+        BlowTorch=2,
+        ScrapMetal,
+        SheetMetal,
+        Wire=1,
+        Screws=2,
+        keep [Recipe.GetItemTypes.WeldingMask],
+        keep [Recipe.GetItemTypes.Screwdriver],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:BucketEmpty,
+        Sound:PZ_Hammer,
+        Time:150.0,
+        Category:Survivalist,
+        SkillRequired:MetalWelding=2,
+    }
+
+    recipe Make a Doorknob
+    {
+        BlowTorch=2,
+        ScrapMetal,
+        SmallSheetMetal,
+        keep [Recipe.GetItemTypes.WeldingMask],
+        keep [Recipe.GetItemTypes.Screwdriver],
+        keep [Recipe.GetItemTypes.Hammer],      
+
+        Result:Doorknob,
+        Sound:PZ_Hammer,
+        Time:150.0,
+        Category:Survivalist,
+        SkillRequired:MetalWelding=2,
+    }
+
+    recipe Make a Shovel
+    {
+        BlowTorch=2,
+        SheetMetal,
+        WoodenStick,
+        Screws=2,
+        keep [Recipe.GetItemTypes.WeldingMask],
+        keep [Recipe.GetItemTypes.Screwdriver],
+        keep [Recipe.GetItemTypes.Hammer],      
+
+        Result:farming.Shovel,
+        Sound:PZ_Hammer,
+        Time:150.0,
+        Category:Survivalist,
+        SkillRequired:MetalWelding=2,
+    }
+
+    recipe Make a Pipe Wrench 
+    {
+        BlowTorch=2,
+        WeldingRods=2,
+        SmallSheetMetal=2,
+        MetalBar=1,
+        ScrapMetal=5,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:PipeWrench,
+        Time:150.0,
+        Category:Welding,
+        SkillRequired:MetalWelding=2,
+    }
+
+    recipe Make a Lug Wrench 
+    {
+        BlowTorch=2,
+        WeldingRods=2,
+        SmallSheetMetal=1,
+        MetalBar=2,
+        ScrapMetal=2,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:LugWrench,
+        Time:150.0,
+        Category:Welding,
+        SkillRequired:MetalWelding=2;Mechanics=2,
+    }
+
+    recipe Make a Car Jack 
+    {
+        BlowTorch=2,
+        WeldingRods=2,
+        SmallSheetMetal=3,
+        MetalBar=3,
+        ScrapMetal=5,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:Jack,
+        Time:150.0,
+        Category:Welding,
+        SkillRequired:MetalWelding=2;Mechanics=2,
+    }
+
+    recipe Make a Wrench 
+    {
+        BlowTorch=2,
+        WeldingRods=2,
+        SmallSheetMetal=2,
+        MetalBar=1,
+        ScrapMetal=3,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:Wrench,
+        Time:150.0,
+        Category:Welding,
+        SkillRequired:MetalWelding=2,
+    }
+
+    recipe Make a Bag of Gravel
+    {
+        EmptySandbag,
+        Stone=5,
+        keep [Recipe.GetItemTypes.Hammer],
+
+        Result:Gravelbag,
+        Time:200.0,
+        Category:Carpentry,
+    }
+    
+    recipe Make a Bag of Sand
+    {
+        Gravelbag,
+        keep [Recipe.GetItemTypes.Hammer],
+
+        Result:Sandbag,
+        Time:200.0,
+        Category:Carpentry,
+    }
+
+    recipe Make a Sack
+    {
+        Sheet,
         keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle/Nails,
-		Thread=2,
+        Thread=2,
 
-		Result:EmptySandbag,
-		Sound:PZ_ClothesRipping,
-		Time:300.0,
-		Category:Survivalist,
-	}
+        Result:EmptySandbag,
+        Sound:PZ_ClothesRipping,
+        Time:300.0,
+        Category:Survivalist,
+    }
 
-	recipe Extract Gunpowder
-	{
-		Sparklers=1,
-		
-		Result:GunPowder=10,
-		Time:150.0,
-		Category:Carpentry,
-	}
+    recipe Extract Gunpowder
+    {
+        Sparklers=1,
+        
+        Result:GunPowder=10,
+        Time:150.0,
+        Category:Carpentry,
+    }
 
-	recipe Make Tarp
-	{
-		Garbagebag=2,
-		RippedSheets=4,
-		
-		Result:Tarp,
-		Time:200.0,
-		CanBeDoneFromFloor:false,
-		Sound:FixWithTape,
-		Category:Tailoring,
-	}
+    recipe Make a Tarp
+    {
+        Garbagebag=2,
+        RippedSheets=4,
+        
+        Result:Tarp,
+        Time:200.0,
+        CanBeDoneFromFloor:false,
+        Sound:FixWithTape,
+        Category:Tailoring,
+    }
 
-	recipe Make Garbage Bags from Tarp
-	{
-		keep Scissors,
-		Tarp,
-		
-		Result:Garbagebag=4,
-		Time:150.0,
-		Category:Survivalist,
-		CanBeDoneFromFloor:true,
-	}	
-	
-	recipe Make Garbage Bags
-	{
-		keep Scissors,
-		Plasticbag/GroceryBag1/GroceryBag2/GroceryBag3/GroceryBag4,
+    recipe Make Garbage Bags from Tarp
+    {
+        keep Scissors,
+        Tarp,
 
-		Result:Garbagebag,
-		Time:150.0,
-		Category:Recycling,
-		CanBeDoneFromFloor:true,
-	}
+        Result:Garbagebag=4,
+        Time:150.0,
+        Category:Survivalist,
+        CanBeDoneFromFloor:true,
+    }   
 
-	recipe Make Bullet Proof Vest
-	{
+    recipe Make a Garbage Bag
+    {
+        keep Scissors,
+        Plasticbag/GroceryBag1/GroceryBag2/GroceryBag3/GroceryBag4,
+
+        Result:Garbagebag,
+        Time:150.0,
+        Category:Recycling,
+        CanBeDoneFromFloor:true,
+    }
+
+    recipe Make a Bullet Proof Vest
+    {
         keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle/Nails,
-		keep Scissors,
-		Thread=2,
-		Sheet,
-		LeatherStrips=10,
-		SmallSheetMetal=4,
-		Button=5,
-		Glue=5,
-		
-		Result:Vest_BulletCivilian,
-		Time:600.0,
-		SkillRequired:MetalWelding=4;Tailoring=4,
-		Category:Tailoring,
-		OnGiveXP:Recipe.OnGiveXP.Tailoring20,
+        keep Scissors,
+        Thread=2,
+        Sheet,
+        LeatherStrips=10,
+        SmallSheetMetal=4,
+        Button=5,
+        Glue=5,
+
+        Result:Vest_BulletCivilian,
+        Time:600.0,
+        SkillRequired:MetalWelding=4;Tailoring=4,
+        Category:Tailoring,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring20,
     }
 
     recipe Carve Buttons from Wood
-	{
-		Plank,
-		keep [Recipe.GetItemTypes.SharpKnife],
-		
-		Result:Button=10,
-		Time:200.0,
-		SkillRequired:Woodwork=2,
-		Category:Carpentry,
-		OnGiveXP:Recipe.OnGiveXP.WoodWork2,
-	}
-
-    recipe Carve Buttons from Log
-	{
-		Log,
-		keep [Recipe.GetItemTypes.SharpKnife],
-		
-		Result:Button=30,
-		Time:400.0,
-		SkillRequired:Woodwork=2,
-		Category:Carpentry,
-		OnGiveXP:Recipe.OnGiveXP.WoodWork2,
-	}
-
-	recipe Make Welding Mask
-	{
-		SmallSheetMetal=4,
-		Nails=5,
-		Plank=1,
-		Glasses/Glasses_SafetyGoggles/Glasses_Shooting/Glasses_SkiGoggles/Glasses_Sun/Glasses_Aviators=1,
-		keep [Recipe.GetItemTypes.Hammer],
-		keep [Recipe.GetItemTypes.Saw],
-		
-		Result:WeldingMask,
-		Time:150.0,
-		Category:Welding,
-		Sound:BlowTorch,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding4,
-	}
-
-	recipe Scrap Jewelery
     {
-		keep [Recipe.GetItemTypes.Hammer],
-		Necklace_DogTag/Necklace_Gold/Necklace_GoldRuby/Necklace_GoldDiamond/Necklace_Silver/Necklace_SilverSapphire/Necklace_SilverCrucifix/Necklace_SilverDiamond/Necklace_Crucifix/Necklace_YingYang/Necklace_Pearl/NecklaceLong_Gold/NecklaceLong_GoldDiamond/NecklaceLong_Silver/NecklaceLong_SilverEmerald/NecklaceLong_SilverSapphire/NecklaceLong_SilverDiamond/NecklaceLong_Amber/NoseRing_Gold/NoseRing_Silver/NoseStud_Gold/NoseStud_Silver/Earring_LoopLrg_Gold/Earring_LoopLrg_Silver/Earring_LoopMed_Silver/Earring_LoopMed_Gold/Earring_LoopSmall_Silver_Both/Earring_LoopSmall_Gold_Both/Earring_LoopSmall_Gold_Top/Earring_LoopSmall_Silver_Top/Earring_Stud_Gold/Earring_Stud_Silver/Earring_Stone_Sapphire/Earring_Stone_Emerald/Earring_Stone_Ruby/Earring_Pearl/Earring_Dangly_Sapphire/Earring_Dangly_Emerald/Earring_Dangly_Ruby/Earring_Dangly_Diamond/Earring_Dangly_Pearl/Ring_Right_MiddleFinger_Gold/Ring_Left_MiddleFinger_Gold/Ring_Right_RingFinger_Gold/Ring_Left_RingFinger_Gold/Ring_Right_MiddleFinger_Silver/Ring_Left_MiddleFinger_Silver/Ring_Right_RingFinger_Silver/Ring_Left_RingFinger_Silver/Ring_Right_MiddleFinger_SilverDiamond/Ring_Left_MiddleFinger_SilverDiamond/Ring_Right_RingFinger_SilverDiamond/Ring_Left_RingFinger_SilverDiamond/Ring_Right_MiddleFinger_GoldRuby/Ring_Left_MiddleFinger_GoldRuby/Ring_Right_RingFinger_GoldRuby/Ring_Left_RingFinger_GoldRuby/Ring_Right_MiddleFinger_GoldDiamond/Ring_Left_MiddleFinger_GoldDiamond/Ring_Right_RingFinger_GoldDiamond/Ring_Left_RingFinger_GoldDiamond/Bracelet_BangleRightGold/Bracelet_BangleLeftGold/Bracelet_ChainRightGold/Bracelet_ChainLeftGold/Bracelet_BangleRightSilver/Bracelet_BangleLeftSilver/Bracelet_ChainRightSilver/Bracelet_ChainLeftSilver/BellyButton_DangleGold/BellyButton_DangleGoldRuby/BellyButton_DangleSilver/BellyButton_DangleSilverDiamond/BellyButton_RingGold/BellyButton_RingGoldDiamond/BellyButton_RingGoldRuby/BellyButton_RingSilver/BellyButton_RingSilverAmethyst/BellyButton_RingSilverDiamond/BellyButton_RingSilverRuby/BellyButton_StudGold/BellyButton_StudGoldDiamond/BellyButton_StudSilver/BellyButton_StudSilverDiamond,
+        Plank,
+        keep [Recipe.GetItemTypes.SharpKnife],
 
-		Result:ScrapMetal,
-		Time:150.0,
-		Category:Welding,
-		CanBeDoneFromFloor:false,
-		Sound:Hammering,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
-	}
-	
-	recipe Make Sheet
-	{
-		RippedSheets=4,
-		keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle/Nails,
-		Thread=2,
-		
-		Result:Sheet,
-		Time:180.0,
-		Category:Survivalist,
-	}
-
-	recipe Make Sheet
-	{
-		AlcoholRippedSheets=4,
-		keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle/Nails,
-		Thread=2,
-		
-		Result:Sheet,
-		Time:180.0,
-		Category:Survivalist,
-	}
-
-	recipe Make Sheet Rope
-	{
-		RippedSheets=4,
-		
-		Result:SheetRope,
-		Time:60.0,
-		Category:Survivalist,
-	}
-
-	recipe Make Disinfectant
-    {
-		Bleach;1,
-		Water;5,
-		PopBottleEmpty/WaterBottleEmpty,
-		
-		Result:Disinfectant,
-		Time:100.0,
-		Category:Survivalist,
-		CanBeDoneFromFloor: True,
+        Result:Button=10,
+        Time:200.0,
+        SkillRequired:Woodwork=2,
+        Category:Carpentry,
+        OnGiveXP:Recipe.OnGiveXP.WoodWork2,
     }
 
-	recipe Make Vinegar
-	{
-		WhiskeyFull/Wine/Wine2;10,
-		keep TinCanEmpty,
-		Water=10,
-		WaterBottleEmpty/PopBottleEmpty,
-		keep RippedSheets/DishCloth,
-		NeedToBeLearn:false,
-				
-		Result:Vinegar,
-		Time:600.0,
-		Category:Survivalist,
-		SkillRequired:Cooking=4, 
-	}
+    recipe Carve Buttons from Log
+    {
+        Log,
+        keep [Recipe.GetItemTypes.SharpKnife],
 
-	 recipe Make Peanut Butter
+        Result:Button=30,
+        Time:400.0,
+        SkillRequired:Woodwork=2,
+        Category:Carpentry,
+        OnGiveXP:Recipe.OnGiveXP.WoodWork2,
+    }
+
+    recipe Make a Welders Mask
+    {
+        SmallSheetMetal=4,
+        Nails=5,
+        Plank=1,
+        Glasses/Glasses_SafetyGoggles/Glasses_Shooting/Glasses_SkiGoggles/Glasses_Sun/Glasses_Aviators=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:WeldingMask,
+        Time:150.0,
+        Category:Welding,
+        Sound:BlowTorch,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding4,
+    }
+
+    recipe Scrap Jewelery
+    {
+        keep [Recipe.GetItemTypes.Hammer],
+        Necklace_DogTag/Necklace_Gold/Necklace_GoldRuby/Necklace_GoldDiamond/Necklace_Silver/Necklace_SilverSapphire/Necklace_SilverCrucifix/Necklace_SilverDiamond/Necklace_Crucifix/Necklace_YingYang/Necklace_Pearl/NecklaceLong_Gold/NecklaceLong_GoldDiamond/NecklaceLong_Silver/NecklaceLong_SilverEmerald/NecklaceLong_SilverSapphire/NecklaceLong_SilverDiamond/NecklaceLong_Amber/NoseRing_Gold/NoseRing_Silver/NoseStud_Gold/NoseStud_Silver/Earring_LoopLrg_Gold/Earring_LoopLrg_Silver/Earring_LoopMed_Silver/Earring_LoopMed_Gold/Earring_LoopSmall_Silver_Both/Earring_LoopSmall_Gold_Both/Earring_LoopSmall_Gold_Top/Earring_LoopSmall_Silver_Top/Earring_Stud_Gold/Earring_Stud_Silver/Earring_Stone_Sapphire/Earring_Stone_Emerald/Earring_Stone_Ruby/Earring_Pearl/Earring_Dangly_Sapphire/Earring_Dangly_Emerald/Earring_Dangly_Ruby/Earring_Dangly_Diamond/Earring_Dangly_Pearl/Ring_Right_MiddleFinger_Gold/Ring_Left_MiddleFinger_Gold/Ring_Right_RingFinger_Gold/Ring_Left_RingFinger_Gold/Ring_Right_MiddleFinger_Silver/Ring_Left_MiddleFinger_Silver/Ring_Right_RingFinger_Silver/Ring_Left_RingFinger_Silver/Ring_Right_MiddleFinger_SilverDiamond/Ring_Left_MiddleFinger_SilverDiamond/Ring_Right_RingFinger_SilverDiamond/Ring_Left_RingFinger_SilverDiamond/Ring_Right_MiddleFinger_GoldRuby/Ring_Left_MiddleFinger_GoldRuby/Ring_Right_RingFinger_GoldRuby/Ring_Left_RingFinger_GoldRuby/Ring_Right_MiddleFinger_GoldDiamond/Ring_Left_MiddleFinger_GoldDiamond/Ring_Right_RingFinger_GoldDiamond/Ring_Left_RingFinger_GoldDiamond/Bracelet_BangleRightGold/Bracelet_BangleLeftGold/Bracelet_ChainRightGold/Bracelet_ChainLeftGold/Bracelet_BangleRightSilver/Bracelet_BangleLeftSilver/Bracelet_ChainRightSilver/Bracelet_ChainLeftSilver/BellyButton_DangleGold/BellyButton_DangleGoldRuby/BellyButton_DangleSilver/BellyButton_DangleSilverDiamond/BellyButton_RingGold/BellyButton_RingGoldDiamond/BellyButton_RingGoldRuby/BellyButton_RingSilver/BellyButton_RingSilverAmethyst/BellyButton_RingSilverDiamond/BellyButton_RingSilverRuby/BellyButton_StudGold/BellyButton_StudGoldDiamond/BellyButton_StudSilver/BellyButton_StudSilverDiamond,
+
+        Result:ScrapMetal,
+        Time:150.0,
+        Category:Welding,
+        CanBeDoneFromFloor:false,
+        Sound:Hammering,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+    }
+
+    recipe Make a Sheet
+    {
+        RippedSheets=4,
+        keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle/Nails,
+        Thread=2,
+
+        Result:Sheet,
+        Time:180.0,
+        Category:Survivalist,
+    }
+
+    recipe Make a Sheet
+    {
+        AlcoholRippedSheets=4,
+        keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle/Nails,
+        Thread=2,
+
+        Result:Sheet,
+        Time:180.0,
+        Category:Survivalist,
+    }
+
+    recipe Make Sheet Rope
+    {
+        RippedSheets=4,
+
+        Result:SheetRope,
+        Time:60.0,
+        Category:Survivalist,
+    }
+
+    recipe Make some Disinfectant
+    {
+        Bleach;1,
+        Water;5,
+        PopBottleEmpty/WaterBottleEmpty,
+
+        Result:Disinfectant,
+        Time:100.0,
+        Category:Survivalist,
+        CanBeDoneFromFloor: True,
+    }
+
+    recipe Make some Vinegar
+    {
+        WhiskeyFull/Wine/Wine2;10,
+        keep TinCanEmpty,
+        Water=10,
+        WaterBottleEmpty/PopBottleEmpty,
+        keep RippedSheets/DishCloth,
+        NeedToBeLearn:false,
+
+        Result:Vinegar,
+        Time:600.0,
+        Category:Survivalist,
+        SkillRequired:Cooking=4, 
+    }
+
+    recipe Make some Vinegar
+    {
+        RedWine/RedWineAged/RedWineAgedFully/WineBoxSmall1/WineBoxSmall2/WineBoxSmall3/WhiteWine/WhiteWineAged/WhiteWineAgedFully/WineBoxSmall4/WineBoxSmall5/WineBoxSmall6/WildBerryWine/RosehipWine/PineappleWine/StrawberryWine/PeachWine/PearWine/BananaWine;10,
+        keep TinCanEmpty,
+        Water=10,
+        WaterBottleEmpty/PopBottleEmpty,
+        keep RippedSheets/DishCloth,
+        NeedToBeLearn:false,
+
+        Result:Vinegar,
+        Time:600.0,
+        Category:Survivalist,
+        SkillRequired:Cooking=4, 
+    }
+
+     recipe Make some Peanut Butter
      {
-		keep MortarPestle,
-		Peanuts=5,
-		OilVegetable=1,
-		Sugar=1,
-		
-		Result:PeanutButter=2,
-		Time:200.0,
-		Category:Cooking,
-		CanBeDoneFromFloor:true,
-		SkillRequired:PlantScavenging=10;Cooking=2,
-		OnGiveXP:Recipe.OnGiveXP.Cooking10,
-	}
+        keep MortarPestle,
+        Peanuts=5,
+        OilVegetable=1,
+        Sugar=1,
 
-	recipe Make Vinegar
-	{
-		RedWine/RedWineAged/RedWineAgedFully/WineBoxSmall1/WineBoxSmall2/WineBoxSmall3/WhiteWine/WhiteWineAged/WhiteWineAgedFully/WineBoxSmall4/WineBoxSmall5/WineBoxSmall6/WildBerryWine/RosehipWine/PineappleWine/StrawberryWine/PeachWine/PearWine/BananaWine;10,
-		keep TinCanEmpty,
-		Water=10,
-		WaterBottleEmpty/PopBottleEmpty,
-		keep RippedSheets/DishCloth,
-		NeedToBeLearn:false,
-				
-		Result:Vinegar,
-		Time:600.0,
-		Category:Survivalist,
-		SkillRequired:Cooking=4, 
-	}
+        Result:PeanutButter=2,
+        Time:200.0,
+        Category:Cooking,
+        CanBeDoneFromFloor:true,
+        SkillRequired:PlantScavenging=10;Cooking=2,
+        OnGiveXP:Recipe.OnGiveXP.Cooking10,
+    }
 
-	recipe Make Sugar
-	{
-		Carrots=10,
-		keep RippedSheets/DishCloth,
-		keep [Recipe.GetItemTypes.SharpKnife]/[Recipe.GetItemTypes.DullKnife],
-		WhiskeyFull/Wine/Wine2;10,
-		NeedToBeLearn:false,
-						
-		Result:Sugar,
-		Time:600.0,
-		Category:Survivalist,
-		SkillRequired:Cooking=4, 
-	}
+    recipe Make some Sugar
+    {
+        Carrots=10,
+        keep RippedSheets/DishCloth,
+        keep [Recipe.GetItemTypes.SharpKnife]/[Recipe.GetItemTypes.DullKnife],
+        WhiskeyFull/Wine/Wine2;10,
+        NeedToBeLearn:false,
 
-	recipe Make Sugar
-	{
-		Carrots=10,
-		keep RippedSheets/DishCloth,
-		keep [Recipe.GetItemTypes.SharpKnife]/[Recipe.GetItemTypes.DullKnife],
-		RedWine/RedWineAged/RedWineAgedFully/WineBoxSmall1/WineBoxSmall2/WineBoxSmall3/WhiteWine/WhiteWineAged/WhiteWineAgedFully/WineBoxSmall4/WineBoxSmall5/WineBoxSmall6/WildBerryWine/RosehipWine/PineappleWine/StrawberryWine/PeachWine/PearWine/BananaWine;10,
-		NeedToBeLearn:false,
-						
-		Result:Sugar,
-		Time:600.0,
-		Category:Survivalist,
-		SkillRequired:Cooking=4, 
-	}
+        Result:Sugar,
+        Time:600.0,
+        Category:Survivalist,
+        SkillRequired:Cooking=4,
+    }
 
-	recipe Dismantle Radio Transmitter
-	{
-		destroy Radio.RadioTransmitter,
-		keep [Recipe.GetItemTypes.Screwdriver],
-		
-		Result:ElectronicsScrap,
-		Time:30.0,	
-		OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
-		Category:Electrical,
-		AnimNode:Disassemble,
-		Prop1:Screwdriver,
-		Prop2:CDplayer,
-		Sound:Dismantle,		
-	}
+    recipe Make some Sugar
+    {
+        Carrots=10,
+        keep RippedSheets/DishCloth,
+        keep [Recipe.GetItemTypes.SharpKnife]/[Recipe.GetItemTypes.DullKnife],
+        RedWine/RedWineAged/RedWineAgedFully/WineBoxSmall1/WineBoxSmall2/WineBoxSmall3/WhiteWine/WhiteWineAged/WhiteWineAgedFully/WineBoxSmall4/WineBoxSmall5/WineBoxSmall6/WildBerryWine/RosehipWine/PineappleWine/StrawberryWine/PeachWine/PearWine/BananaWine;10,
+        NeedToBeLearn:false,
 
-	recipe Dismantle Radio Receiver
-	{
-		destroy Radio.RadioReceiver,
-		keep [Recipe.GetItemTypes.Screwdriver],
-		
-		Result:ElectronicsScrap,
-		Time:30.0,	
-		OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
-		Category:Electrical,
-		AnimNode:Disassemble,
-		Prop1:Screwdriver,
-		Prop2:CDplayer,
-		Sound:Dismantle,		
-	}
+        Result:Sugar,
+        Time:600.0,
+        Category:Survivalist,
+        SkillRequired:Cooking=4,
+    }
 
-	recipe Dismantle Receiver
-	{
-		destroy Receiver,
-		keep [Recipe.GetItemTypes.Screwdriver],
-		
-		Result:ElectronicsScrap,
-		Time:30.0,	
-		OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
-		Category:Electrical,
-		AnimNode:Disassemble,
-		Prop1:Screwdriver,
-		Prop2:CDplayer,
-		Sound:Dismantle,		
-	}
+    recipe Dismantle Radio Transmitter
+    {
+        destroy Radio.RadioTransmitter,
+        keep [Recipe.GetItemTypes.Screwdriver],
 
-	recipe Dismantle Remote Controller
-	{
-		destroy RemoteCraftedV1/RemoteCraftedV2/RemoteCraftedV3,
-		keep [Recipe.GetItemTypes.Screwdriver],
-		
-		Result:ElectronicsScrap,
-		Time:30.0,	
-		OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
-		Category:Electrical,
-		AnimNode:Disassemble,
-		Prop1:Screwdriver,
-		Prop2:CDplayer,
-		Sound:Dismantle,		
-	}
+        Result:ElectronicsScrap,
+        Time:30.0,  
+        OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
+        Category:Electrical,
+        AnimNode:Disassemble,
+        Prop1:Screwdriver,
+        Prop2:CDplayer,
+        Sound:Dismantle,
+    }
+
+    recipe Dismantle Radio Receiver
+    {
+        destroy Radio.RadioReceiver,
+        keep [Recipe.GetItemTypes.Screwdriver],
+
+        Result:ElectronicsScrap,
+        Time:30.0,  
+        OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
+        Category:Electrical,
+        AnimNode:Disassemble,
+        Prop1:Screwdriver,
+        Prop2:CDplayer,
+        Sound:Dismantle,
+    }
+
+    recipe Dismantle Receiver
+    {
+        destroy Receiver,
+        keep [Recipe.GetItemTypes.Screwdriver],
+
+        Result:ElectronicsScrap,
+        Time:30.0,  
+        OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
+        Category:Electrical,
+        AnimNode:Disassemble,
+        Prop1:Screwdriver,
+        Prop2:CDplayer,
+        Sound:Dismantle,
+    }
+
+    recipe Dismantle Remote Controller
+    {
+        destroy RemoteCraftedV1/RemoteCraftedV2/RemoteCraftedV3,
+        keep [Recipe.GetItemTypes.Screwdriver],
+
+        Result:ElectronicsScrap,
+        Time:30.0,  
+        OnGiveXP:Recipe.OnGiveXP.DismantleElectronics,
+        Category:Electrical,
+        AnimNode:Disassemble,
+        Prop1:Screwdriver,
+        Prop2:CDplayer,
+        Sound:Dismantle,
+    }
 
     recipe Dismantle Alarm Clock
     {
@@ -814,173 +775,173 @@ module Base
        Prop2:CDplayer,
     }
 
-	recipe Rip Belt into Strips
-	{
-		destroy Belt/Belt2,
-		keep [Recipe.GetItemTypes.Scissors],
-		
-		Result:LeatherStrips=2,
-		CanBeDoneFromFloor:true,
-		Time:100.0,	
-	}
-
-	recipe Rip Holster into Strips
-	{
-		destroy HolsterSimple,
-		keep [Recipe.GetItemTypes.Scissors],
-		
-		Result:LeatherStrips=4,
-		CanBeDoneFromFloor:true,
-		Time:100.0,	
-	}
-
-	recipe Rip Double Holster into Strips
-	{
-		destroy HolsterDouble,
-		keep [Recipe.GetItemTypes.Scissors],
-		
-		Result:LeatherStrips=5,
-		CanBeDoneFromFloor:true,
-		Time:100.0,	
-	}
-
-	recipe Convert Spear to Crafted Spear
-	{
-		destroy WoodenLance,
-		
-		Result:SpearCrafted,
-		CanBeDoneFromFloor:true,
-		Time:100.0,
-	}
-	
-	recipe Convert Spear to Sturdy Stick
-	{
-		destroy SpearCrafted,
-		
-		Result:WoodenStick,
-		CanBeDoneFromFloor:true,
-		Time:60.0,
-	}
-	
-	recipe Make Golf Club
-	{
-		MetalPipe=2,
-		ScrapMetal=2,
-		LeatherStrips=2,
-		Glue=2,
-		BlowTorch=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:Golfclub,
-		CanBeDoneFromFloor:true,
-		Sound:BlowTorch,
-		Time:300.0,
-		Category:Welding,
-		SkillRequired:MetalWelding=4,
-	}
-
-	recipe Make Sledgehammer
+    recipe Rip Belt into Strips
     {
-		BlowTorch=5,
-		WeldingRods=2,
-		ScrapMetal=20,
-		MetalPipe=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:Sledgehammer,
-		Time:600.0,
-		Category:Welding,
-		SkillRequired:MetalWelding=8,
-		CanBeDoneFromFloor:true,
-		Sound:BlowTorch,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding12,
-	}
+        destroy Belt/Belt2,
+        keep [Recipe.GetItemTypes.Scissors],
 
-	recipe Make Screwdriver
-	{
-		Screws=2,
-		ScrapMetal=5,
-		WoodenStick=1,
-		keep [Recipe.GetItemTypes.Hammer],
-		keep [Recipe.GetItemTypes.Saw],
-		
-		Result:Screwdriver,
-		Time:200.0,
-		Category:Tools,
-		OnGiveXP:Recipe.OnGiveXP.WoodWork3,
-	}
-	
-	recipe Make Scissors
-	{
-		Screws=1,
-		ScrapMetal=6,
-		WoodenStick=1,
-		keep [Recipe.GetItemTypes.Hammer],
-		
-		Result:Scissors,
-		Time:200.0,
-		Category:Tools,
-		OnGiveXP:Recipe.OnGiveXP.WoodWork3,
-	}	
-	
-	recipe Make Hammer
-	{
-		keep [Recipe.GetItemTypes.WeldingMask],
-		BlowTorch=2,
-		WeldingRods=1,
-		Nails=5,
-		MetalBar=2,
-		ScrapMetal=5,
-		WoodenStick=1,
-		
-		Result:Hammer,
-		Time:200.0,
-		Category:Welding,
-		SkillRequired:MetalWelding=5,
-	}
-	
-	recipe Break Spear
-	{
-		destroy SpearCrafted/WoodenStick,
-		
-		Result:Twigs=4,
-		CanBeDoneFromFloor:true,
-		Time:60.0,			
-	}
+        Result:LeatherStrips=2,
+        CanBeDoneFromFloor:true,
+        Time:100.0, 
+    }
 
-	recipe Break Tree Branch
-	{
-		destroy TreeBranch,
-		
-		Result:Twigs=4,
-		CanBeDoneFromFloor:true,
-		Time:60.0,			
-	}
+    recipe Rip Holster into Strips
+    {
+        destroy HolsterSimple,
+        keep [Recipe.GetItemTypes.Scissors],
 
-	recipe Make Roll of Nylon Mesh
-	{
-		destroy Boxers_Silk_Black/Boxers_Silk_Red/StockingsBlack/StockingsBlackTrans/StockingsBlackSemiTrans/TightsBlack/TightsBlackTrans/TightsBlackSemiTrans/StockingsWhite/Shirt_Jockey01/Shirt_Jockey02/Shirt_Jockey03/Shirt_Jockey04/Shirt_Jockey05/Shirt_Jockey06,
-		keep [Recipe.GetItemTypes.Scissors],
-		
-		Result:Greenfire.RollNylon,
-		SkillRequired:Tailoring=2,
-		CanBeDoneFromFloor:true,
-		Time:200.0,	
-	}
+        Result:LeatherStrips=4,
+        CanBeDoneFromFloor:true,
+        Time:100.0, 
+    }
 
-	recipe Make Grinder for Cannabis
-	{
-		ElectronicsScrap=2,
-		Radio.ElectricWire=2,
-		ScrapMetal=2,
-		SmallSheetMetal=1,
-		Screws=4,
-		keep [Recipe.GetItemTypes.Screwdriver],		
-		keep [Recipe.GetItemTypes.Scissors],
-		
-		Result:Greenfire.GFGrinder,
-		CanBeDoneFromFloor:true,
-		Time:400.0,		
-	}
+    recipe Rip Double Holster into Strips
+    {
+        destroy HolsterDouble,
+        keep [Recipe.GetItemTypes.Scissors],
+
+        Result:LeatherStrips=5,
+        CanBeDoneFromFloor:true,
+        Time:100.0, 
+    }
+
+    recipe Convert Spear to Crafted Spear
+    {
+        destroy WoodenLance,
+
+        Result:SpearCrafted,
+        CanBeDoneFromFloor:true,
+        Time:100.0,
+    }
+
+    recipe Convert Spear to Sturdy Stick
+    {
+        destroy SpearCrafted,
+        
+        Result:WoodenStick,
+        CanBeDoneFromFloor:true,
+        Time:60.0,
+    }
+
+    recipe Make a Golf Club
+    {
+        MetalPipe=2,
+        ScrapMetal=2,
+        LeatherStrips=2,
+        Glue=2,
+        BlowTorch=2,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:Golfclub,
+        CanBeDoneFromFloor:true,
+        Sound:BlowTorch,
+        Time:300.0,
+        Category:Welding,
+        SkillRequired:MetalWelding=4,
+    }
+
+    recipe Make a Sledgehammer
+    {
+        BlowTorch=5,
+        WeldingRods=2,
+        ScrapMetal=20,
+        MetalPipe=2,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:Sledgehammer,
+        Time:600.0,
+        Category:Welding,
+        SkillRequired:MetalWelding=8,
+        CanBeDoneFromFloor:true,
+        Sound:BlowTorch,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding12,
+    }
+
+    recipe Make a Screwdriver
+    {
+        Screws=2,
+        ScrapMetal=5,
+        WoodenStick=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:Screwdriver,
+        Time:200.0,
+        Category:Tools,
+        OnGiveXP:Recipe.OnGiveXP.WoodWork3,
+    }
+
+    recipe Make some Scissors
+    {
+        Screws=1,
+        ScrapMetal=6,
+        WoodenStick=1,
+        keep [Recipe.GetItemTypes.Hammer],
+
+        Result:Scissors,
+        Time:200.0,
+        Category:Tools,
+        OnGiveXP:Recipe.OnGiveXP.WoodWork3,
+    }   
+    
+    recipe Make a Hammer
+    {
+        keep [Recipe.GetItemTypes.WeldingMask],
+        BlowTorch=2,
+        WeldingRods=1,
+        Nails=5,
+        MetalBar=2,
+        ScrapMetal=5,
+        WoodenStick=1,
+
+        Result:Hammer,
+        Time:200.0,
+        Category:Welding,
+        SkillRequired:MetalWelding=5,
+    }
+
+    recipe Break Spear
+    {
+        destroy SpearCrafted/WoodenStick,
+
+        Result:Twigs=4,
+        CanBeDoneFromFloor:true,
+        Time:60.0,
+    }
+
+    recipe Break Tree Branch
+    {
+        destroy TreeBranch,
+
+        Result:Twigs=4,
+        CanBeDoneFromFloor:true,
+        Time:60.0,
+    }
+
+    recipe Make Roll of Nylon Mesh
+    {
+        destroy Boxers_Silk_Black/Boxers_Silk_Red/StockingsBlack/StockingsBlackTrans/StockingsBlackSemiTrans/TightsBlack/TightsBlackTrans/TightsBlackSemiTrans/StockingsWhite/Shirt_Jockey01/Shirt_Jockey02/Shirt_Jockey03/Shirt_Jockey04/Shirt_Jockey05/Shirt_Jockey06,
+        keep [Recipe.GetItemTypes.Scissors],
+
+        Result:Greenfire.RollNylon,
+        SkillRequired:Tailoring=2,
+        CanBeDoneFromFloor:true,
+        Time:200.0, 
+    }
+
+    recipe Make a Grinder for Cannabis
+    {
+        ElectronicsScrap=2,
+        Radio.ElectricWire=2,
+        ScrapMetal=2,
+        SmallSheetMetal=1,
+        Screws=4,
+        keep [Recipe.GetItemTypes.Screwdriver],
+        keep [Recipe.GetItemTypes.Scissors],
+
+        Result:Greenfire.GFGrinder,
+        CanBeDoneFromFloor:true,
+        Time:400.0,
+    }
 
 }

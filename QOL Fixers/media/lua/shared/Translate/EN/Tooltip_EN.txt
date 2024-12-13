@@ -1,13 +1,30 @@
 Tooltip_EN = {
-	Tooltip_FlukeysRules = "Server Rules. Required Reading!",
-	Tooltip_FlukeysInfo = "Server Info. Tips and Info!",
-	Tooltip_Extra_NewCondition = "New Condition",
-	Tooltip_FixGlassItems = "Used for making windshield repairs.",
-	Tooltip_BatteryCleaner = "Used to clean a car battery.",
-	Tooltip_UpholsteryKit = "Rugged Repair Kit for Upholstery.",
-	Tooltip_10EngineParts = "A box with 10 new engine parts.",
-	Tooltip_20EngineParts = "A box with 20 new engine parts.",
-	Tooltip_30EngineParts = "A box with 30 new engine parts.",
-	Tooltip_TubeRubberCement = "A tube of Rubber Cement for repairs.",
-	Tooltip_TubeSuperglue = "A tube of Superglue for repairs.",
+    Tooltip_FlukeysRules = "Server Rules. Required Reading!",
+    Tooltip_FlukeysInfo = "Server Info. Tips and Info!",
+    Tooltip_Extra_NewCondition = "New Condition",
+    Tooltip_FixGlassItems = "Used for making windshield repairs.",
+    Tooltip_BatteryCleaner = "Used to clean a car battery.",
+    Tooltip_UpholsteryKit = "Rugged Repair Kit for Upholstery.",
+    Tooltip_10EngineParts = "A box with 10 new engine parts.",
+    Tooltip_20EngineParts = "A box with 20 new engine parts.",
+    Tooltip_30EngineParts = "A box with 30 new engine parts.",
+    Tooltip_TubeRubberCement = "A tube of Rubber Cement for repairs.",
+    Tooltip_TubeSuperglue = "A tube of Superglue for repairs.",
+
+    Tooltip_SmallMetalSheetBox = "Pallet loaded with Small Metal Sheets.",
+    Tooltip_SmallMetalSheetStack = "Stack of Small Metal Sheets.",
+    Tooltip_MetalSheetBox = "Pallet loaded with Metal Sheets.",
+    Tooltip_MetalPipeBox = "Pallet loaded with Metal Pipes.",
+    Tooltip_MetalBarBox = "Pallet loaded with Metal Bars.",
+
+    Tooltip_MyGarbagebagbox = "Box containing 20 Garbage Bags.",
+    Tooltip_LightBulbSixPack = "Box containing 6 Light Bulbs.",
+    Tooltip_LightBulbTwelvePack = "Box containing 12 Light Bulbs.",
+
+    Tooltip_DoorHingesBox = "Package containing 8 Hinges."
+    Tooltip_DoorknobsBox = "Package containing 4 Doorknobs."
+
+    Tooltip_DozenJarsBox = "A box of 12 Jars.",
+
+    Tooltip_Brokenglass = "A shard of glass.",
 }

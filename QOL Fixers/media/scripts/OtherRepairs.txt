@@ -1,173 +1,173 @@
 module Base
 {
 
-	fixing Fix Kitchen Knife 
-	{
-	   Require : KitchenKnife,
-	   GlobalItem : BlowTorch=5,
+    fixing Fix Kitchen Knife 
+    {
+       Require : KitchenKnife,
+       GlobalItem : BlowTorch=5,
 
        Fixer : SmallSheetMetal=1;MetalWelding=2,
-	   Fixer : ScrapMetal=1;MetalWelding=2,
-	}
+       Fixer : ScrapMetal=1;MetalWelding=2,
+    }
 
-	fixing Fix Garden Hoe 
-	{
-	   Require : GardenHoe,
-	   GlobalItem : BlowTorch=5,
-	   ConditionModifier : 1.2,
-	   
-       Fixer : SmallSheetMetal=1;MetalWelding=2,
-	   Fixer : ScrapMetal=1;MetalWelding=2,
-	}
-
-	fixing Fix Rake 
-	{
-	   Require : Rake,
-	   GlobalItem : BlowTorch=5,
-	   ConditionModifier : 1.2,
-	   
-       Fixer : SmallSheetMetal=1;MetalWelding=2,
-	   Fixer : ScrapMetal=1;MetalWelding=2,
-	}
-
-	fixing Fix PickAxe 
-	{
-	   Require : PickAxe,
-	   GlobalItem : BlowTorch=5,
-	   ConditionModifier : 1.2,
-	   
-       Fixer : SmallSheetMetal=1;MetalWelding=2,
-	   Fixer : ScrapMetal=1;MetalWelding=2,
-	}
-
-	fixing Fix Garden Fork 
-	{
-	   Require : GardenFork,
-	   GlobalItem : BlowTorch=5,
-	   ConditionModifier : 1.2,
-	   
-       Fixer : SmallSheetMetal=1;MetalWelding=2,
-	   Fixer : ScrapMetal=1;MetalWelding=2,
-	}
-	
-	fixing Fix Axe 
-	{
-	   Require : Axe,
-	   GlobalItem : BlowTorch=5,
-	   ConditionModifier : 1.2,
-	   
-       Fixer : SmallSheetMetal=1;MetalWelding=2,
-	   Fixer : ScrapMetal=1;MetalWelding=2,
-	}
-
-	fixing Fix Hand Axe 
-	{
-	   Require : HandAxe,
-	   GlobalItem : BlowTorch=5,
-	   ConditionModifier : 1.2,
-	   
-       Fixer : SmallSheetMetal=1;MetalWelding=2,
-	   Fixer : ScrapMetal=1;MetalWelding=2,
-	}
-
-	fixing Fix Wood Axe 
-	{
-	   Require : WoodAxe,
-	   GlobalItem : BlowTorch=5,
-	   ConditionModifier : 1.2,
-	   
-       Fixer : SmallSheetMetal=1;MetalWelding=2,
-	   Fixer : ScrapMetal=1;MetalWelding=2,
-	}
-	
-	fixing Fix Hunting Knife 
-	{
-	   Require : HuntingKnife,
-	   GlobalItem : BlowTorch=5,
+    fixing Fix Garden Hoe 
+    {
+       Require : GardenHoe,
+       GlobalItem : BlowTorch=5,
+       ConditionModifier : 1.2,
 
        Fixer : SmallSheetMetal=1;MetalWelding=2,
-	   Fixer : ScrapMetal=1;MetalWelding=2,
-	}
-	
-	fixing Fix Hammer
-	{
-	   Require : Hammer,
-	   GlobalItem : BlowTorch=5,
+       Fixer : ScrapMetal=1;MetalWelding=2,
+    }
+
+    fixing Fix Rake 
+    {
+       Require : Rake,
+       GlobalItem : BlowTorch=5,
+       ConditionModifier : 1.2,
+
+       Fixer : SmallSheetMetal=1;MetalWelding=2,
+       Fixer : ScrapMetal=1;MetalWelding=2,
+    }
+
+    fixing Fix PickAxe 
+    {
+       Require : PickAxe,
+       GlobalItem : BlowTorch=5,
+       ConditionModifier : 1.2,
+
+       Fixer : SmallSheetMetal=1;MetalWelding=2,
+       Fixer : ScrapMetal=1;MetalWelding=2,
+    }
+
+    fixing Fix Garden Fork 
+    {
+       Require : GardenFork,
+       GlobalItem : BlowTorch=5,
+       ConditionModifier : 1.2,
+
+       Fixer : SmallSheetMetal=1;MetalWelding=2,
+       Fixer : ScrapMetal=1;MetalWelding=2,
+    }
+
+    fixing Fix Axe 
+    {
+       Require : Axe,
+       GlobalItem : BlowTorch=5,
+       ConditionModifier : 1.2,
+
+       Fixer : SmallSheetMetal=1;MetalWelding=2,
+       Fixer : ScrapMetal=1;MetalWelding=2,
+    }
+
+    fixing Fix Hand Axe 
+    {
+       Require : HandAxe,
+       GlobalItem : BlowTorch=5,
+       ConditionModifier : 1.2,
+
+       Fixer : SmallSheetMetal=1;MetalWelding=2,
+       Fixer : ScrapMetal=1;MetalWelding=2,
+    }
+
+    fixing Fix Wood Axe 
+    {
+       Require : WoodAxe,
+       GlobalItem : BlowTorch=5,
+       ConditionModifier : 1.2,
+
+       Fixer : SmallSheetMetal=1;MetalWelding=2,
+       Fixer : ScrapMetal=1;MetalWelding=2,
+    }
+
+    fixing Fix Hunting Knife 
+    {
+       Require : HuntingKnife,
+       GlobalItem : BlowTorch=5,
+
+       Fixer : SmallSheetMetal=1;MetalWelding=2,
+       Fixer : ScrapMetal=1;MetalWelding=2,
+    }
+
+    fixing Fix Hammer
+    {
+       Require : Hammer,
+       GlobalItem : BlowTorch=5,
 
        Fixer : ScrapMetal=1;MetalWelding=2,
-	}
-	
-	fixing Fix Screwdriver
-	{
-	   Require : Screwdriver,
-	   GlobalItem : BlowTorch=5,
+    }
+    
+    fixing Fix Screwdriver
+    {
+       Require : Screwdriver,
+       GlobalItem : BlowTorch=5,
 
        Fixer : ScrapMetal=1;MetalWelding=2,
-	}
-	
-	fixing Fix Crowbar
-	{
-	   Require : Crowbar,
-	   GlobalItem : BlowTorch=5,
+    }
+    
+    fixing Fix Crowbar
+    {
+       Require : Crowbar,
+       GlobalItem : BlowTorch=5,
 
        Fixer : ScrapMetal=1;MetalWelding=2,
-	}
-	
-	fixing Bastard Sword
-	{
-	   Require : BastardSword,
-	   GlobalItem : BlowTorch=5,
-	   ConditionModifier : 1.2,
+    }
+
+    fixing Bastard Sword
+    {
+       Require : BastardSword,
+       GlobalItem : BlowTorch=5,
+       ConditionModifier : 1.2,
 
        Fixer : SmallSheetMetal=1;MetalWelding=2,
-	   Fixer : ScrapMetal=1;MetalWelding=2,
-	}
-	
-	recipe Make Axe
-	{
-	   TreeBranch/Plank,
-	   SmallSheetMetal=3,
-	   BlowTorch=5,
-	   keep [Recipe.GetItemTypes.Saw],
+       Fixer : ScrapMetal=1;MetalWelding=2,
+    }
+
+    recipe Make Axe
+    {
+       TreeBranch/Plank,
+       SmallSheetMetal=3,
+       BlowTorch=5,
+       keep [Recipe.GetItemTypes.Saw],
        keep [Recipe.GetItemTypes.WeldingMask],
 
-	   Result:Axe,
-	   SkillRequired:Woodwork=2;MetalWelding=2,
-	   Sound:Hammering,
-	   Time:200.0,
-	   Category:Carpentry,
-	   OnGiveXP:Give10MWXP,
-	}
+       Result:Axe,
+       SkillRequired:Woodwork=2;MetalWelding=2,
+       Sound:Hammering,
+       Time:200.0,
+       Category:Carpentry,
+       OnGiveXP:Give10MWXP,
+    }
 
-	recipe Make Wood Axe
-	{
-	   TreeBranch/Plank,
-	   SmallSheetMetal=4,
-	   BlowTorch=5,
-	   keep [Recipe.GetItemTypes.Saw],
+    recipe Make Wood Axe
+    {
+       TreeBranch/Plank,
+       SmallSheetMetal=4,
+       BlowTorch=5,
+       keep [Recipe.GetItemTypes.Saw],
        keep [Recipe.GetItemTypes.WeldingMask],
 
-	   Result:WoodAxe,
-	   SkillRequired:Woodwork=4;MetalWelding=2,
-	   Sound:Hammering,
-	   Time:400.0,
-	   Category:Carpentry,
-	   OnGiveXP:Give10MWXP,
-	}
+       Result:WoodAxe,
+       SkillRequired:Woodwork=4;MetalWelding=2,
+       Sound:Hammering,
+       Time:400.0,
+       Category:Carpentry,
+       OnGiveXP:Give10MWXP,
+    }
 
-	recipe Make Hand Axe
-	{
-	   TreeBranch/Plank,
-	   SmallSheetMetal=2,
-	   BlowTorch=5,
-	   keep [Recipe.GetItemTypes.Saw],
+    recipe Make Hand Axe
+    {
+       TreeBranch/Plank,
+       SmallSheetMetal=2,
+       BlowTorch=5,
+       keep [Recipe.GetItemTypes.Saw],
        keep [Recipe.GetItemTypes.WeldingMask],
 
-	   Result:HandAxe,
-	   SkillRequired:Woodwork=4;MetalWelding=2,
-	   Sound:Hammering,
-	   Time:400.0,
-	   Category:Carpentry,
-	   OnGiveXP:Give10MWXP,
-	}
+       Result:HandAxe,
+       SkillRequired:Woodwork=4;MetalWelding=2,
+       Sound:Hammering,
+       Time:400.0,
+       Category:Carpentry,
+       OnGiveXP:Give10MWXP,
+    }
 }

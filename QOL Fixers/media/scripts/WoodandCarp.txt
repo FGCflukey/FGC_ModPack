@@ -3,468 +3,468 @@ module Base
 
 /************************ WOOD ORGANIZING ************************/
 
-	item Sawlumber
-	{
-		Weight			= 0.3,
-		Type			= Normal,
-		DisplayName		= Lumber Saw,
-		Icon			= Sawlumber,
-	}
+    item Sawlumber
+    {
+        Weight          = 0.3,
+        Type            = Normal,
+        DisplayName     = Lumber Saw,
+        Icon            = Sawlumber,
+    }
 
-	item Logstack1
-	{
-		Weight			= 1000.0,
-		Type 			= Normal,
-		DisplayName 	= Log Pile,
-		icon 			= Logstack1,
-		ScaleWorldIcon	= 0.5,
-	}
+    item Logstack1
+    {
+        Weight          = 1000.0,
+        Type            = Normal,
+        DisplayName     = Log Pile,
+        icon            = Logstack1,
+        ScaleWorldIcon  = 0.5,
+    }
 
-	item Logstack2
-	{
-		Weight			= 1000.0,
-		Type 			= Normal,
-		DisplayName 	= Log Pile,
-		icon 			= Logstack2,
-		ScaleWorldIcon	= 0.5,
-	}
+    item Logstack2
+    {
+        Weight          = 1000.0,
+        Type            = Normal,
+        DisplayName     = Log Pile,
+        icon            = Logstack2,
+        ScaleWorldIcon  = 0.5,
+    }
 
-	item Logstack3
-	{
-		Weight			= 1000.0,
-		Type 			= Normal,
-		DisplayName 	= Log Pile,
-		icon 			= Logstack3,
-		ScaleWorldIcon	= 0.5,
-	}
+    item Logstack3
+    {
+        Weight          = 1000.0,
+        Type            = Normal,
+        DisplayName     = Log Pile,
+        icon            = Logstack3,
+        ScaleWorldIcon  = 0.5,
+    }
 
-	item Logstack4
-	{
-		Weight			= 1000.0,
-		Type 			= Normal,
-		DisplayName		= Log Pile,
-		icon 			= Logstack4,
-		ScaleWorldIcon	= 0.5,
-	}
-	
-	item LogStacks4
-	{
-		Weight			= 12.0,
-		Type			= Normal,
-		DisplayName 	= Four-Log Stack,
-		icon 			= LogStacks4,
-		ScaleWorldIcon	= 1.0,
-	}
-	
-	item Lumberstack
-	{
-		Weight			= 12.0,
-		Type 			= Normal,
-		DisplayName 	= Lumber Stack,
-		icon 			= Lumberstack,
-		ScaleWorldIcon	= 1.0,
-	}
+    item Logstack4
+    {
+        Weight          = 1000.0,
+        Type            = Normal,
+        DisplayName     = Log Pile,
+        icon            = Logstack4,
+        ScaleWorldIcon  = 0.5,
+    }
+    
+    item LogStacks4
+    {
+        Weight          = 12.0,
+        Type            = Normal,
+        DisplayName     = Four-Log Stack,
+        icon            = LogStacks4,
+        ScaleWorldIcon  = 1.0,
+    }
+    
+    item Lumberstack
+    {
+        Weight          = 12.0,
+        Type            = Normal,
+        DisplayName     = Lumber Stack,
+        icon            = Lumberstack,
+        ScaleWorldIcon  = 1.0,
+    }
 
-	item Lumberbox
-	{
-		Weight			= 12.0,
-		Type 			= Normal,
-		DisplayName 	= Pallet of Lumber,
-		icon 			= Lumberbox,
-		ScaleWorldIcon	= 1.0,
-	}
+    item Lumberbox
+    {
+        Weight          = 12.0,
+        Type            = Normal,
+        DisplayName     = Pallet of Lumber,
+        icon            = Lumberbox,
+        ScaleWorldIcon  = 1.0,
+    }
 
-	item Logbox
-	{
-		Weight			= 12.0,
-		Type 			= Normal,
-		DisplayName		= Pallet of Logs,
-		icon 			= Logbox,
-		ScaleWorldIcon	= 1.0,
-	}
+    item Logbox
+    {
+        Weight          = 12.0,
+        Type            = Normal,
+        DisplayName     = Pallet of Logs,
+        icon            = Logbox,
+        ScaleWorldIcon  = 1.0,
+    }
 
-	item Woodenpallet
-	{
-		Weight			= 1.0,
-		Type 			= Normal,
-		DisplayName 	= Wooden Pallet,
-		icon 			= Woodenpallet,
-		ScaleWorldIcon	= 1.0,
-	}
+    item Woodenpallet
+    {
+        Weight          = 1.0,
+        Type            = Normal,
+        DisplayName     = Wooden Pallet,
+        icon            = Woodenpallet,
+        ScaleWorldIcon  = 1.0,
+    }
 
-	item StackofPallets
-	{
-		Weight			= 5.0,
-		Type			= Normal,
-		DisplayName		= Stack of Wooden Pallets,
-		Icon			= StackofPallets,
-		ScaleWorldIcon	= 1.0,
-	}
+    item StackofPallets
+    {
+        Weight          = 5.0,
+        Type            = Normal,
+        DisplayName     = Stack of Wooden Pallets,
+        Icon            = StackofPallets,
+        ScaleWorldIcon  = 1.0,
+    }
 
-	item Sawbuck
-	{
-		Weight			= 10,
-		Type 			= Normal,
-		DisplayName 	= Sawbuck,
-		icon 			= Sawbuck,
-		ScaleWorldIcon	= 1.5,
-	}
+    item Sawbuck
+    {
+        Weight          = 10,
+        Type            = Normal,
+        DisplayName     = Sawbuck,
+        icon            = Sawbuck,
+        ScaleWorldIcon  = 1.5,
+    }
 
 /************************ LOG PILES ************************/
 
-	recipe Make Log Pile
-	{
-		Log=5,
-		
-		Result:Logstack1,
-		Time:500.0,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-	}
+    recipe Make Log Pile
+    {
+        Log=5,
+        
+        Result:Logstack1,
+        Time:500.0,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+    }
 
-	recipe Add Logs to Pile
-	{
-		Log=5,
-		Logstack1,
-		
-		Result:Logstack2,
-		Time:500.0,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-	}
+    recipe Add Logs to Pile
+    {
+        Log=5,
+        Logstack1,
+        
+        Result:Logstack2,
+        Time:500.0,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+    }
 
-	recipe Add Logs to Pile
-	{
-		Log=5,
-		Logstack2,
-		
-		Result:Logstack3,
-		Time:500.0,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-	}
+    recipe Add Logs to Pile
+    {
+        Log=5,
+        Logstack2,
+        
+        Result:Logstack3,
+        Time:500.0,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+    }
 
-	recipe Add Logs to Pile
-	{
-		Log=5,
-		Logstack3,
-		
-		Result:Logstack4,
-		Time:500.0,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-	}
+    recipe Add Logs to Pile
+    {
+        Log=5,
+        Logstack3,
+        
+        Result:Logstack4,
+        Time:500.0,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+    }
 
-	recipe Remove Logs from Pile
-	{
-		Logstack4,
-		
-		Result:Logstack3,
-		Time:500.0,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-		OnCreate:GiveBack_Logs,
-	}
+    recipe Remove Logs from Pile
+    {
+        Logstack4,
+        
+        Result:Logstack3,
+        Time:500.0,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+        OnCreate:GiveBack_Logs,
+    }
 
-	recipe Remove Logs from Pile
-	{
-		Logstack3,
-		
-		Result:Logstack2,
-		Time:500.0,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-		OnCreate:GiveBack_Logs,
-	}
+    recipe Remove Logs from Pile
+    {
+        Logstack3,
+        
+        Result:Logstack2,
+        Time:500.0,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+        OnCreate:GiveBack_Logs,
+    }
 
-	recipe Remove Logs from Pile
-	{
-		Logstack2,
-		
-		Result:Logstack1,
-		Time:500.0,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-		OnCreate:GiveBack_Logs,
-	}
+    recipe Remove Logs from Pile
+    {
+        Logstack2,
+        
+        Result:Logstack1,
+        Time:500.0,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+        OnCreate:GiveBack_Logs,
+    }
 
-	recipe Remove Logs from Pile
-	{
-		Logstack1,
-		
-		Result:Log=5,
-		Time:500.0,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-	}
+    recipe Remove Logs from Pile
+    {
+        Logstack1,
+        
+        Result:Log=5,
+        Time:500.0,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+    }
 
 /************************ WOOD PALLETS ************************/
 
-	recipe Make Wooden Pallet
-	{
-		Plank=4,
-		Nails=4,
-		keep [Recipe.GetItemTypes.Hammer],
-		
-		Result:Woodenpallet,
-	   	Sound:Hammering,
-		Time:250.0,
-		Category:Carpentry,
-		SkillRequired:Woodwork=1,
-		CanBeDoneFromFloor:true,
-		OnGiveXP:Give5WoodworkXP,
-	}
-
-	recipe Recycle Wooden Pallet
-	{
-		Woodenpallet,
-		keep [Recipe.GetItemTypes.Hammer],
-	
-		Result:Plank=4,
-	   	Sound:Hammering,
-		Time:150.0,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-		SkillRequired:Woodwork=1,
-		OnCreate:GiveBack_Nails,
-	}
-
-	recipe Make Stack of Wooden Pallets
-	{
-		Woodenpallet=5,
-		Rope=2,
-
-		Result:StackofPallets,
-		Time:60.0,
-		CanBeDoneFromFloor:true,
-		Category:Carpentry,
-	}
-
-	recipe Un-Stack Wooden Pallets
-	{
-		StackofPallets,
-
-		Result:Woodenpallet=5,
-		Time:60.0,
-		CanBeDoneFromFloor:true,
-		Category:Carpentry,
-		OnCreate:GiveBack_TwoRope,
-	}
-	
-/************************ LUMBER STACKS ************************/	
-
-	recipe Pack Lumber Stack
-	{
-		Plank=12,
-		Rope,
-		
-		Result:Lumberstack,
-		Time:40.0,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-		OnGiveXP:Give5WoodworkXP,
-	}
-
-	recipe Unpack Lumber Stack
-	{
-		Lumberstack,
-		
-		Result:Plank=12,
-		Time:40.0,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-		OnCreate:GiveBack_OneRope,
-	}
-
-	recipe Pack Pallet of Lumber
-	{
-		Lumberstack=3,
-		Rope=2,
-		Woodenpallet,
-		
-		Result:Lumberbox,
-		Time:40.0,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-		OnGiveXP:Give5WoodworkXP,
-	}
-	
-	recipe Unpack Pallet of Lumber
-	{
-		Lumberbox,
-		
-		Result:Lumberstack=3,
-		Time:40.0,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-		OnGiveXP:Give5WoodworkXP,
-		OnCreate:GiveBack_RopeAndPallet,
-	}
-
-/************************ LOG PALLETS ************************/	
-	
-	recipe Make Four-Log Stack
-	{
-		Log=4,
-		Rope=2,
-		
-		Result:LogStacks4,
-		Time:40,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-	}
-
-	recipe Unpack Four-Log Stack
-	{
-		LogStacks4,
-		
-		Result:Log=4,
-		Time:40,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-		OnCreate:GiveBack_TwoRope,
-	}
-
-	recipe Pack Pallet of Logs
-	{
-		LogStacks4=3,
-		Rope=2,
-		Woodenpallet,
-		
-		Result:Logbox,
-		Time:40.0,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-		OnGiveXP:Give5WoodworkXP,
-	}
-
-	recipe Unpack Pallet of Logs
-	{
-		Logbox,
-		
-		Result:LogStacks4=3,
-		Time:40.0,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-		OnCreate:GiveBack_RopeAndPallet,
-	}
-
-
-/************************ WOODWORK TWEAKS ************************/		
-
-	recipe Make Sawbuck
-	{
-		Log=4,
-		Plank=8,
-		Nails=10,
-		keep [Recipe.GetItemTypes.Hammer],
-		keep [Recipe.GetItemTypes.Saw]/Sawlumber,
-		
-		Result:Sawbuck,
-	   	Sound:Hammering,
-		Time:300,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-		SkillRequired:Woodwork=2,
-		OnGiveXP:Give5WoodworkXP,
-	}
-
-
-	recipe Saw More Logs
-	{
-		Log,
-		keep Sawlumber,
-		
-		Result:Plank=4,
-		Sound:Sawing,
-		Time:180,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-		OnGiveXP:Recipe.OnGiveXP.SawLogs,
-		AnimNode:SawLog,
-		Prop1:GardenSaw,
-		Prop2:Log,
-	}
-
-	recipe Saw More Logs
-	{
-		Log,
-		keep [Recipe.GetItemTypes.Saw],
-		keep Sawbuck,
-		
-		Result:Plank=4,
-		Sound:Sawing,
-		Time:200,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-		OnGiveXP:Recipe.OnGiveXP.SawLogs,
-		AnimNode:SawLog,
-		Prop1:Source=2,
-		Prop2:Log,
-	}
-
-	recipe Saw Even More Logs
-	{
-		Log,
-		keep Sawlumber,
-		keep Sawbuck,
-		
-		Result:Plank=6,
-		Sound:Sawing,
-		Time:180,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-		OnGiveXP:Recipe.OnGiveXP.SawLogs,
-		AnimNode:SawLog,
-		Prop1:GardenSaw,
-		Prop2:Log,
-	}
-
-	recipe Make BaseBall Bat
-	{
-		Log,
-		keep [Recipe.GetItemTypes.Saw],
-        DuctTape=2,
-		
-		Result:BaseballBat=1,
-		Sound:Sawing,
-		Time:300,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-		SkillRequired:Woodwork=1,
-		OnGiveXP:Recipe.OnGiveXP.SawLogs,
-		AnimNode:SawLog,
-		Prop1:GardenSaw,
-		Prop2:Log,
-	}
-
-	recipe Make Plank from Scrap Wood
+    recipe Make Wooden Pallet
     {
-		UnusableWood=2,
-
-		Result:Plank,
-		Time:250.0,
-		Sound:Sawing,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-		OnGiveXP:Recipe.OnGiveXP.WoodWork5,
+        Plank=4,
+        Nails=4,
+        keep [Recipe.GetItemTypes.Hammer],
+        
+        Result:Woodenpallet,
+        Sound:Hammering,
+        Time:250.0,
+        Category:Carpentry,
+        SkillRequired:Woodwork=1,
+        CanBeDoneFromFloor:true,
+        OnGiveXP:Give5WoodworkXP,
     }
-	
-	recipe Make Some Bowls
-	{
-		Log,
-		keep [Recipe.GetItemTypes.Saw],
-		keep [Recipe.GetItemTypes.SharpKnife],
-		
-		Result:Bowl=6,
-		Sound:Sawing,
-		Time:400,
-		Category:Carpentry,
-		CanBeDoneFromFloor:true,
-		SkillRequired:Woodwork=1,
-		OnGiveXP:Recipe.OnGiveXP.SawLogs,
-		AnimNode:SawLog,
-		Prop1:GardenSaw,
-		Prop2:Log,		
-	}
+
+    recipe Recycle Wooden Pallet
+    {
+        Woodenpallet,
+        keep [Recipe.GetItemTypes.Hammer],
+    
+        Result:Plank=4,
+        Sound:Hammering,
+        Time:150.0,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+        SkillRequired:Woodwork=1,
+        OnCreate:GiveBack_Nails,
+    }
+
+    recipe Make Stack of Wooden Pallets
+    {
+        Woodenpallet=5,
+        Rope=2,
+
+        Result:StackofPallets,
+        Time:60.0,
+        CanBeDoneFromFloor:true,
+        Category:Carpentry,
+    }
+
+    recipe Un-Stack Wooden Pallets
+    {
+        StackofPallets,
+
+        Result:Woodenpallet=5,
+        Time:60.0,
+        CanBeDoneFromFloor:true,
+        Category:Carpentry,
+        OnCreate:GiveBack_TwoRope,
+    }
+    
+/************************ LUMBER STACKS ************************/   
+
+    recipe Pack Lumber Stack
+    {
+        Plank=12,
+        Rope,
+        
+        Result:Lumberstack,
+        Time:40.0,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+        OnGiveXP:Give5WoodworkXP,
+    }
+
+    recipe Unpack Lumber Stack
+    {
+        Lumberstack,
+        
+        Result:Plank=12,
+        Time:40.0,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+        OnCreate:GiveBack_OneRope,
+    }
+
+    recipe Pack Pallet of Lumber
+    {
+        Lumberstack=3,
+        Rope=2,
+        Woodenpallet,
+        
+        Result:Lumberbox,
+        Time:40.0,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+        OnGiveXP:Give5WoodworkXP,
+    }
+    
+    recipe Unpack Pallet of Lumber
+    {
+        Lumberbox,
+        
+        Result:Lumberstack=3,
+        Time:40.0,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+        OnGiveXP:Give5WoodworkXP,
+        OnCreate:GiveBack_RopeAndPallet,
+    }
+
+/************************ LOG PALLETS ************************/ 
+    
+    recipe Make Four-Log Stack
+    {
+        Log=4,
+        Rope=2,
+        
+        Result:LogStacks4,
+        Time:40,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+    }
+
+    recipe Unpack Four-Log Stack
+    {
+        LogStacks4,
+        
+        Result:Log=4,
+        Time:40,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+        OnCreate:GiveBack_TwoRope,
+    }
+
+    recipe Pack Pallet of Logs
+    {
+        LogStacks4=3,
+        Rope=2,
+        Woodenpallet,
+        
+        Result:Logbox,
+        Time:40.0,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+        OnGiveXP:Give5WoodworkXP,
+    }
+
+    recipe Unpack Pallet of Logs
+    {
+        Logbox,
+        
+        Result:LogStacks4=3,
+        Time:40.0,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+        OnCreate:GiveBack_RopeAndPallet,
+    }
+
+
+/************************ WOODWORK TWEAKS ************************/     
+
+    recipe Make Sawbuck
+    {
+        Log=4,
+        Plank=8,
+        Nails=10,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Saw]/Sawlumber,
+        
+        Result:Sawbuck,
+        Sound:Hammering,
+        Time:300,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+        SkillRequired:Woodwork=2,
+        OnGiveXP:Give5WoodworkXP,
+    }
+
+
+    recipe Saw More Logs
+    {
+        Log,
+        keep Sawlumber,
+        
+        Result:Plank=4,
+        Sound:Sawing,
+        Time:180,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+        OnGiveXP:Recipe.OnGiveXP.SawLogs,
+        AnimNode:SawLog,
+        Prop1:GardenSaw,
+        Prop2:Log,
+    }
+
+    recipe Saw More Logs
+    {
+        Log,
+        keep [Recipe.GetItemTypes.Saw],
+        keep Sawbuck,
+        
+        Result:Plank=4,
+        Sound:Sawing,
+        Time:200,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+        OnGiveXP:Recipe.OnGiveXP.SawLogs,
+        AnimNode:SawLog,
+        Prop1:Source=2,
+        Prop2:Log,
+    }
+
+    recipe Saw Even More Logs
+    {
+        Log,
+        keep Sawlumber,
+        keep Sawbuck,
+        
+        Result:Plank=6,
+        Sound:Sawing,
+        Time:180,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+        OnGiveXP:Recipe.OnGiveXP.SawLogs,
+        AnimNode:SawLog,
+        Prop1:GardenSaw,
+        Prop2:Log,
+    }
+
+    recipe Make BaseBall Bat
+    {
+        Log,
+        keep [Recipe.GetItemTypes.Saw],
+        DuctTape=2,
+        
+        Result:BaseballBat=1,
+        Sound:Sawing,
+        Time:300,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+        SkillRequired:Woodwork=1,
+        OnGiveXP:Recipe.OnGiveXP.SawLogs,
+        AnimNode:SawLog,
+        Prop1:GardenSaw,
+        Prop2:Log,
+    }
+
+    recipe Make Plank from Scrap Wood
+    {
+        UnusableWood=2,
+
+        Result:Plank,
+        Time:250.0,
+        Sound:Sawing,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+        OnGiveXP:Recipe.OnGiveXP.WoodWork5,
+    }
+    
+    recipe Make Some Bowls
+    {
+        Log,
+        keep [Recipe.GetItemTypes.Saw],
+        keep [Recipe.GetItemTypes.SharpKnife],
+        
+        Result:Bowl=6,
+        Sound:Sawing,
+        Time:400,
+        Category:Carpentry,
+        CanBeDoneFromFloor:true,
+        SkillRequired:Woodwork=1,
+        OnGiveXP:Recipe.OnGiveXP.SawLogs,
+        AnimNode:SawLog,
+        Prop1:GardenSaw,
+        Prop2:Log,      
+    }
 }

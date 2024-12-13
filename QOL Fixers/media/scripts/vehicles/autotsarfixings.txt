@@ -5,432 +5,432 @@ module Autotsar
         Base
     }
 
-	fixing Fix Motorbike Tire
-	{
-		Require : ATAMotoHarleyModernTire;ATAMotoHarleyNormalTire;ATAMotoHarleyOldTire;ATAMotoBMWModernTire;ATAMotoBMWNormalTire;ATAMotoBMWOldTire,
-		ConditionModifier : 1.2,
-
-		Fixer : Superglue=2; Tailoring=3;Mechanics=1,
-		Fixer : Rubbercement=2; Tailoring=3;Mechanics=1,
-	}
-	
-    fixing Fix Motorbike seat 2
+    fixing Fix Motorbike Tire
     {
-		Require : ATAMotoBMWSeat;ATAMotoBMWSeatCustom;ATAMotoHarleySeat;ATAMotoQuadSeat,
-		GlobalItem : UpholsteryKit=2,
-		ConditionModifier : 1.2,
+        Require : ATAMotoHarleyModernTire;ATAMotoHarleyNormalTire;ATAMotoHarleyOldTire;ATAMotoBMWModernTire;ATAMotoBMWNormalTire;ATAMotoBMWOldTire,
+        ConditionModifier : 1.2,
 
-		Fixer : LeatherStrips=2;Tailoring=2;Mechanics=2,
+        Fixer : Superglue=2; Tailoring=3;Mechanics=1,
+        Fixer : Rubbercement=2; Tailoring=3;Mechanics=1,
     }
 
-	fixing Motorbike Accessories
-	{
-		Require : ATAMotoBagBMW1;ATAMotoBagBMW2;ATAMotoHarleyBag;ATAMotoHarleyHolster,
-		GlobalItem : UpholsteryKit=2,
-		ConditionModifier : 1.2,
+    fixing Fix Motorbike seat 2
+    {
+        Require : ATAMotoBMWSeat;ATAMotoBMWSeatCustom;ATAMotoHarleySeat;ATAMotoQuadSeat,
+        GlobalItem : UpholsteryKit=2,
+        ConditionModifier : 1.2,
 
-		Fixer : LeatherStrips=2;Tailoring=2;Mechanics=2,
-	}
-	
-	fixing Mustang Bullbar
-	{
-		Require : ATAMustangBullbar3Item;ATAMustangBullbar1Item;ATAMustangBullbar2Item,
-		
-		GlobalItem : BlowTorch=2,
-		ConditionModifier : 1.2,
+        Fixer : LeatherStrips=2;Tailoring=2;Mechanics=2,
+    }
 
-		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
-		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
-	}
+    fixing Motorbike Accessories
+    {
+        Require : ATAMotoBagBMW1;ATAMotoBagBMW2;ATAMotoHarleyBag;ATAMotoHarleyHolster,
+        GlobalItem : UpholsteryKit=2,
+        ConditionModifier : 1.2,
 
-	fixing Mustang Window Protection
-	{
-		Require : ATAMustangProtectionWindowLeftItem;ATAMustangProtectionWindowRightItem;ATAMustangProtectionWindowFrontItem;ATAMustangProtectionWindowRearItem,
-		
-		GlobalItem : BlowTorch=2,
-		ConditionModifier : 1.2,
+        Fixer : LeatherStrips=2;Tailoring=2;Mechanics=2,
+    }
+    
+    fixing Mustang Bullbar
+    {
+        Require : ATAMustangBullbar3Item;ATAMustangBullbar1Item;ATAMustangBullbar2Item,
+        
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 1.2,
 
-		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
-		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
-	}
-	
-	fixing Jeep Bumper
-	{
-		Require : ATAJeepBumper1Item;ATAJeepBumper2Item;ATAJeepBumper3Item;ATAJeepBumper4Item,
-		
-		GlobalItem : BlowTorch=2,
-		ConditionModifier : 1.2,
+        Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+        Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+    }
 
-		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
-		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
-	}
+    fixing Mustang Window Protection
+    {
+        Require : ATAMustangProtectionWindowLeftItem;ATAMustangProtectionWindowRightItem;ATAMustangProtectionWindowFrontItem;ATAMustangProtectionWindowRearItem,
+        
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 1.2,
 
-	fixing Jeep Window Protection
-	{
-		Require : ATAJeepProtectionWindowItem;ATAJeepProtectionWindowFrontItem;ATAJeepProtectionWindowRearItem,
-		
-		GlobalItem : BlowTorch=2,
-		ConditionModifier : 1.2,
+        Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+        Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+    }
 
-		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
-		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
-	}
-	
-	fixing Jeep Roof Rack
-	{
-		Require : ATAJeepRoofBaseItem;ATAJeepInteractiveTrunkRoofRackItem,
-		
-		GlobalItem : BlowTorch=2,
-		ConditionModifier : 1.2,
+    fixing Jeep Bumper
+    {
+        Require : ATAJeepBumper1Item;ATAJeepBumper2Item;ATAJeepBumper3Item;ATAJeepBumper4Item,
+        
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 1.2,
 
-		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
-		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
-	}
+        Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+        Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+    }
 
-	fixing Jeep Trunk Wheel
-	{
-		Require : ATAJeepInteractiveTrunkWheelRackItem,
-		
-		GlobalItem : BlowTorch=2,
-		ConditionModifier : 1.2,
+    fixing Jeep Window Protection
+    {
+        Require : ATAJeepProtectionWindowItem;ATAJeepProtectionWindowFrontItem;ATAJeepProtectionWindowRearItem,
+        
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 1.2,
 
-		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
-		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
-	}
-	
-	fixing Truck Sleeper
-	{
-		Require : ATAPetyarbuiltProtectionSleeperItem,
-		
-		GlobalItem : BlowTorch=2,
-		ConditionModifier : 1.2,
+        Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+        Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+    }
+    
+    fixing Jeep Roof Rack
+    {
+        Require : ATAJeepRoofBaseItem;ATAJeepInteractiveTrunkRoofRackItem,
+        
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 1.2,
 
-		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
-		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
-	}	
+        Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+        Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+    }
 
-	fixing Truck Rear Wheel Protection
-	{
-		Require : ATAPetyarbuiltProtectionRearWheelsItem,
-		
-		GlobalItem : BlowTorch=2,
-		ConditionModifier : 1.2,
+    fixing Jeep Trunk Wheel
+    {
+        Require : ATAJeepInteractiveTrunkWheelRackItem,
+        
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 1.2,
 
-		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
-		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
-	}	
+        Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+        Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+    }
 
-	fixing Truck Gas Tank Protection
-	{
-		Require : ATAPetyarbuiltProtectionGasTankItem,
-		
-		GlobalItem : BlowTorch=2,
-		ConditionModifier : 1.2,
+    fixing Truck Sleeper
+    {
+        Require : ATAPetyarbuiltProtectionSleeperItem,
+        
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 1.2,
 
-		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
-		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
-	}
+        Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+        Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+    }   
 
-	fixing Truck Side Protection
-	{
-		Require : ATAPetyarbuiltProtectionSideItem,
-		
-		GlobalItem : BlowTorch=2,
-		ConditionModifier : 1.2,
+    fixing Truck Rear Wheel Protection
+    {
+        Require : ATAPetyarbuiltProtectionRearWheelsItem,
+        
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 1.2,
 
-		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
-		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
-	}
+        Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+        Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+    }   
 
-	fixing Truck Side Front Protection
-	{
-		Require : ATAPetyarbuiltProtectionSideFrontItem,
-		
-		GlobalItem : BlowTorch=2,
-		ConditionModifier : 1.2,
+    fixing Truck Gas Tank Protection
+    {
+        Require : ATAPetyarbuiltProtectionGasTankItem,
+        
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 1.2,
 
-		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
-		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
-	}
+        Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+        Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+    }
 
-	fixing Truck Side Top Protection
-	{
-		Require : ATAPetyarbuiltProtectionSideTopItem,
-		
-		GlobalItem : BlowTorch=2,
-		ConditionModifier : 1.2,
+    fixing Truck Side Protection
+    {
+        Require : ATAPetyarbuiltProtectionSideItem,
+        
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 1.2,
 
-		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
-		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
-	}
+        Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+        Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+    }
 
-	fixing Dodge Roof Rack
-	{
-		Require : ATADodgeRoofRackItem,
-		
-		GlobalItem : BlowTorch=2,
-		ConditionModifier : 1.2,
+    fixing Truck Side Front Protection
+    {
+        Require : ATAPetyarbuiltProtectionSideFrontItem,
+        
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 1.2,
 
-		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
-		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
-	}
+        Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+        Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+    }
 
-	fixing Dodge Window Rack
-	{
-		Require : ATADodgeWindowRackItem,
-		
-		GlobalItem : BlowTorch=2,
-		ConditionModifier : 1.2,
+    fixing Truck Side Top Protection
+    {
+        Require : ATAPetyarbuiltProtectionSideTopItem,
+        
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 1.2,
 
-		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
-		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
-	}
+        Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+        Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+    }
 
-	fixing Dodge Bullbar
-	{
-		Require : ATADodgeBullbar1Item;ATADodgeBullbar2Item;ATADodgeBullbar3Item,
-		
-		GlobalItem : BlowTorch=2,
-		ConditionModifier : 1.2,
+    fixing Dodge Roof Rack
+    {
+        Require : ATADodgeRoofRackItem,
+        
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 1.2,
 
-		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
-		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
-	}
+        Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+        Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+    }
 
-	fixing Dodge Window Protection
-	{
-		Require : ATADodgeProtectionWindowSideItem;ATADodgeProtectionWindowFrontItem,
-		
-		GlobalItem : BlowTorch=2,
-		ConditionModifier : 1.2,
+    fixing Dodge Window Rack
+    {
+        Require : ATADodgeWindowRackItem,
+        
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 1.2,
 
-		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
-		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
-	}
+        Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+        Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+    }
 
-	fixing Bus Roof Rack Box
-	{
-		Require : ATA_Bus_Roof_Rack;ATA_Bus_Roof_Box_Item,
-		
-		GlobalItem : BlowTorch=2,
-		ConditionModifier : 1.2,
+    fixing Dodge Bullbar
+    {
+        Require : ATADodgeBullbar1Item;ATADodgeBullbar2Item;ATADodgeBullbar3Item,
+        
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 1.2,
 
-		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
-		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
-	}
+        Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+        Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+    }
 
-	fixing Bus Bullbar
-	{
-		Require : ATA_Bus_Kengur_1_Item;ATA_Bus_Kengur_2_Item;ATA_Bus_Kengur_3_Item,
-		
-		GlobalItem : BlowTorch=2,
-		ConditionModifier : 1.2,
+    fixing Dodge Window Protection
+    {
+        Require : ATADodgeProtectionWindowSideItem;ATADodgeProtectionWindowFrontItem,
+        
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 1.2,
 
-		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
-		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
-	}
+        Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+        Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+    }
 
-	fixing Bus Door Protection
-	{
-		Require : ATA_Bus_Protection_door_Item;ATA_Bus_Protection_door_rear_Item,
-		
-		GlobalItem : BlowTorch=2,
-		ConditionModifier : 1.2,
+    fixing Bus Roof Rack Box
+    {
+        Require : ATA_Bus_Roof_Rack;ATA_Bus_Roof_Box_Item,
+        
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 1.2,
 
-		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
-		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
-	}
-	
-	fixing Bus Wheel Protection
-	{
-		Require : ATA_Bus_Protection_wheels_Item,
-		
-		GlobalItem : BlowTorch=2,
-		ConditionModifier : 1.2,
+        Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+        Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+    }
 
-		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
-		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
-	}
-	
-	fixing Bus Window Protection
-	{
-		Require : ATA_Bus_Protection_windows_front_Item;ATA_Bus_Protection_windows_right_Item;ATA_Bus_Protection_windows_left_Item,
-		
-		GlobalItem : BlowTorch=2,
-		ConditionModifier : 1.2,
+    fixing Bus Bullbar
+    {
+        Require : ATA_Bus_Kengur_1_Item;ATA_Bus_Kengur_2_Item;ATA_Bus_Kengur_3_Item,
+        
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 1.2,
 
-		Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
-		Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
-	}
+        Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+        Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+    }
 
-	recipe Convert Tire To BMW Tire
-	{
-		NormalTire1,
-		BlowTorch=2,
-		
-		Result:ATAMotoBMWNormalTire,
-		CanBeDoneFromFloor:true,
-		Category:Welding,
-		Time:500.0,
-	}
+    fixing Bus Door Protection
+    {
+        Require : ATA_Bus_Protection_door_Item;ATA_Bus_Protection_door_rear_Item,
+        
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 1.2,
 
-	recipe Convert Tire To BMW Tire
-	{
-		ModernTire1,
-		BlowTorch=2,
-		
-		Result:ATAMotoBMWModernTire,
-		CanBeDoneFromFloor:true,
-		Category:Welding,
-		Time:500.0,
-	}
+        Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+        Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+    }
 
-	recipe Convert Tire To BMW Tire
-	{
-		OldTire1,
-		BlowTorch=2,
-		
-		Result:ATAMotoBMWOldTire,
-		CanBeDoneFromFloor:true,
-		Category:Welding,
-		Time:500.0,
-	}
+    fixing Bus Wheel Protection
+    {
+        Require : ATA_Bus_Protection_wheels_Item,
+        
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 1.2,
 
-	recipe Convert Tire To Harley Tire
-	{
-		NormalTire1,
-		BlowTorch=2,
-		
-		Result:ATAMotoHarleyNormalTire,
-		CanBeDoneFromFloor:true,
-		Category:Welding,
-		Time:500.0,
-	}
+        Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+        Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+    }
 
-	recipe Convert Tire To Harley Tire
-	{
-		ModernTire1,
-		BlowTorch=2,
-		
-		Result:ATAMotoHarleyModernTire,
-		CanBeDoneFromFloor:true,
-		Category:Welding,
-		Time:500.0,
-	}
+    fixing Bus Window Protection
+    {
+        Require : ATA_Bus_Protection_windows_front_Item;ATA_Bus_Protection_windows_right_Item;ATA_Bus_Protection_windows_left_Item,
+        
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 1.2,
 
-	recipe Convert Tire To Harley Tire
-	{
-		OldTire1,
-		BlowTorch=2,
-		
-		Result:ATAMotoHarleyOldTire,
-		CanBeDoneFromFloor:true,
-		Category:Welding,
-		Time:500.0,
-	}
+        Fixer : SheetMetal; MetalWelding=6;Mechanics=6,
+        Fixer : SmallSheetMetal=2; MetalWelding=6;Mechanics=6,
+    }
 
-	recipe Make BMW Moto Bag Left-Side
-	{
-		destroy Handbag/Purse/Bag_Satchel,
-		destroy LeatherStrips=5,
-		Thread=5,
-		keep Scissors,
-		keep Needle,
-		
-		Result:ATAMotoBagBMW2,
-		CanBeDoneFromFloor:true,
-		Time:500.0,	
-	}
+    recipe Convert Tire To BMW Tire
+    {
+        NormalTire1,
+        BlowTorch=2,
+        
+        Result:ATAMotoBMWNormalTire,
+        CanBeDoneFromFloor:true,
+        Category:Welding,
+        Time:500.0,
+    }
 
-	recipe Make BMW Moto Bag Right-Side
-	{
-		destroy Handbag/Purse/Bag_Satchel,
-		destroy LeatherStrips=5,
-		Thread=5,
-		keep Scissors,
-		keep Needle,
-		
-		Result:ATAMotoBagBMW1,
-		CanBeDoneFromFloor:true,
-		Time:500.0,	
-	}	
+    recipe Convert Tire To BMW Tire
+    {
+        ModernTire1,
+        BlowTorch=2,
+        
+        Result:ATAMotoBMWModernTire,
+        CanBeDoneFromFloor:true,
+        Category:Welding,
+        Time:500.0,
+    }
 
-	recipe Make Harley Moto Bag Left-Side
-	{
-		destroy Handbag/Purse/Bag_Satchel,
-		destroy LeatherStrips=5,
-		Thread=5,
-		keep Scissors,
-		keep Needle,
-		
-		Result:ATAMotoHarleyBag,
-		CanBeDoneFromFloor:true,
-		Time:500.0,	
-	}	
+    recipe Convert Tire To BMW Tire
+    {
+        OldTire1,
+        BlowTorch=2,
+        
+        Result:ATAMotoBMWOldTire,
+        CanBeDoneFromFloor:true,
+        Category:Welding,
+        Time:500.0,
+    }
 
-	recipe Make Harley Moto Bag Holster
-	{
-		destroy Handbag/Purse/Bag_Satchel,
-		destroy LeatherStrips=5,
-		Thread=5,
-		keep Scissors,
-		keep Needle,
-		
-		Result:ATAMotoHarleyHolster,
-		CanBeDoneFromFloor:true,
-		Time:500.0,	
-	}	
+    recipe Convert Tire To Harley Tire
+    {
+        NormalTire1,
+        BlowTorch=2,
+        
+        Result:ATAMotoHarleyNormalTire,
+        CanBeDoneFromFloor:true,
+        Category:Welding,
+        Time:500.0,
+    }
 
-	recipe Recycle ATA Bullbars
-	{
-		destroy ATAMustangBullbar3Item/ATAMustangBullbar1Item/ATAMustangBullbar2Item/ATADodgeBullbar1Item/ATADodgeBullbar2Item/ATADodgeBullbar3Item/ATA_Bus_Kengur_1_Item/ATA_Bus_Kengur_2_Item/ATA_Bus_Kengur_3_Item,
-		BlowTorch=5,
-		keep WeldingMask,
-		
-		Result:MetalBar=4,
-		Time:150.0,
-		SkillRequired:MetalWelding=2,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-		Category:Welding,
-	}
+    recipe Convert Tire To Harley Tire
+    {
+        ModernTire1,
+        BlowTorch=2,
+        
+        Result:ATAMotoHarleyModernTire,
+        CanBeDoneFromFloor:true,
+        Category:Welding,
+        Time:500.0,
+    }
 
-	recipe Recycle ATA Window Armor
-	{
-		destroy ATAMustangProtectionWindowLeftItem/ATAMustangProtectionWindowRightItem/ATAMustangProtectionWindowFrontItem/ATAMustangProtectionWindowRearItem/ATAJeepProtectionWindowItem/ATAJeepProtectionWindowFrontItem/ATAJeepProtectionWindowRearItem/ATADodgeProtectionWindowSideItem/ATADodgeProtectionWindowFrontItem/ATA_Bus_Protection_windows_front_Item/ATA_Bus_Protection_windows_right_Item/ATA_Bus_Protection_windows_left_Item,
-		BlowTorch=5,
-		keep WeldingMask,
-		
-		Result:SheetMetal=2,
-		Time:150.0,
-		SkillRequired:MetalWelding=2,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-		Category:Welding,
-	}
+    recipe Convert Tire To Harley Tire
+    {
+        OldTire1,
+        BlowTorch=2,
+        
+        Result:ATAMotoHarleyOldTire,
+        CanBeDoneFromFloor:true,
+        Category:Welding,
+        Time:500.0,
+    }
 
-	recipe Recycle ATA Door Armor
-	{
-		destroy ATA_Bus_Protection_door_Item/ATA_Bus_Protection_door_rear_Item/ATAPetyarbuiltProtectionSideItem,
-		BlowTorch=5,
-		keep WeldingMask,
-		
-		Result:SheetMetal=2,
-		Time:150.0,
-		SkillRequired:MetalWelding=2,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-		Category:Welding,
-	}
+    recipe Make BMW Moto Bag Left-Side
+    {
+        destroy Handbag/Purse/Bag_Satchel,
+        destroy LeatherStrips=5,
+        Thread=5,
+        keep Scissors,
+        keep Needle,
+        
+        Result:ATAMotoBagBMW2,
+        CanBeDoneFromFloor:true,
+        Time:500.0, 
+    }
 
-	recipe Recycle ATA Truck Armor
-	{
-		destroy ATAPetyarbuiltProtectionSideTopItem/ATAPetyarbuiltProtectionSideFrontItem/ATAPetyarbuiltProtectionGasTankItem/ATAPetyarbuiltProtectionSideItem/ATAPetyarbuiltProtectionSleeperItem,
-		BlowTorch=5,
-		keep WeldingMask,
-		
-		Result:SheetMetal=2,
-		Time:150.0,
-		SkillRequired:MetalWelding=2,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
-		Category:Welding,
-	}
+    recipe Make BMW Moto Bag Right-Side
+    {
+        destroy Handbag/Purse/Bag_Satchel,
+        destroy LeatherStrips=5,
+        Thread=5,
+        keep Scissors,
+        keep Needle,
+        
+        Result:ATAMotoBagBMW1,
+        CanBeDoneFromFloor:true,
+        Time:500.0, 
+    }
+
+    recipe Make Harley Moto Bag Left-Side
+    {
+        destroy Handbag/Purse/Bag_Satchel,
+        destroy LeatherStrips=5,
+        Thread=5,
+        keep Scissors,
+        keep Needle,
+        
+        Result:ATAMotoHarleyBag,
+        CanBeDoneFromFloor:true,
+        Time:500.0, 
+    }
+
+    recipe Make Harley Moto Bag Holster
+    {
+        destroy Handbag/Purse/Bag_Satchel,
+        destroy LeatherStrips=5,
+        Thread=5,
+        keep Scissors,
+        keep Needle,
+        
+        Result:ATAMotoHarleyHolster,
+        CanBeDoneFromFloor:true,
+        Time:500.0, 
+    }
+
+    recipe Recycle ATA Bullbars
+    {
+        destroy ATAMustangBullbar3Item/ATAMustangBullbar1Item/ATAMustangBullbar2Item/ATADodgeBullbar1Item/ATADodgeBullbar2Item/ATADodgeBullbar3Item/ATA_Bus_Kengur_1_Item/ATA_Bus_Kengur_2_Item/ATA_Bus_Kengur_3_Item,
+        BlowTorch=5,
+        keep WeldingMask,
+        
+        Result:MetalBar=4,
+        Time:150.0,
+        SkillRequired:MetalWelding=2,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        Category:Welding,
+    }
+
+    recipe Recycle ATA Window Armor
+    {
+        destroy ATAMustangProtectionWindowLeftItem/ATAMustangProtectionWindowRightItem/ATAMustangProtectionWindowFrontItem/ATAMustangProtectionWindowRearItem/ATAJeepProtectionWindowItem/ATAJeepProtectionWindowFrontItem/ATAJeepProtectionWindowRearItem/ATADodgeProtectionWindowSideItem/ATADodgeProtectionWindowFrontItem/ATA_Bus_Protection_windows_front_Item/ATA_Bus_Protection_windows_right_Item/ATA_Bus_Protection_windows_left_Item,
+        BlowTorch=5,
+        keep WeldingMask,
+        
+        Result:SheetMetal=2,
+        Time:150.0,
+        SkillRequired:MetalWelding=2,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        Category:Welding,
+    }
+
+    recipe Recycle ATA Door Armor
+    {
+        destroy ATA_Bus_Protection_door_Item/ATA_Bus_Protection_door_rear_Item/ATAPetyarbuiltProtectionSideItem,
+        BlowTorch=5,
+        keep WeldingMask,
+        
+        Result:SheetMetal=2,
+        Time:150.0,
+        SkillRequired:MetalWelding=2,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        Category:Welding,
+    }
+
+    recipe Recycle ATA Truck Armor
+    {
+        destroy ATAPetyarbuiltProtectionSideTopItem/ATAPetyarbuiltProtectionSideFrontItem/ATAPetyarbuiltProtectionGasTankItem/ATAPetyarbuiltProtectionSideItem/ATAPetyarbuiltProtectionSleeperItem,
+        BlowTorch=5,
+        keep WeldingMask,
+        
+        Result:SheetMetal=2,
+        Time:150.0,
+        SkillRequired:MetalWelding=2,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding25,
+        Category:Welding,
+    }
 
 }

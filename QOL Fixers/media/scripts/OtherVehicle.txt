@@ -1,1073 +1,1073 @@
 module Base
 {
 
-	item BatteryCleaner
-	{
-        Weight				= 0.2,
-        Type	            = Drainable,
-        UseDelta	        = 0.02,
-        UseWhileEquipped	= FALSE,
-		DisplayName	        = Battery Cleaning Kit,
-		DisplayCategory 	= VehicleMaintenance,
-        Icon				= BatteryCleaner,
+    item BatteryCleaner
+    {
+        Weight              = 0.2,
+        Type                = Drainable,
+        UseDelta            = 0.02,
+        UseWhileEquipped    = FALSE,
+        DisplayName         = Battery Cleaning Kit,
+        DisplayCategory     = VehicleMaintenance,
+        Icon                = BatteryCleaner,
         cantBeConsolided    = TRUE,
-		Tooltip             = Tooltip_BatteryCleaner,
-	}
+        Tooltip             = Tooltip_BatteryCleaner,
+    }
 
     item BigGlassPanel
     {
-        Weight				= 1.5,
-        Type				= Normal,
-        DisplayName			= Big Glass Panel,
-		DisplayCategory 	= VehicleMaintenance,
-        Icon				= BigGlassPanel,
-		Tooltip 			= Tooltip_FixGlassItems,
+        Weight              = 1.5,
+        Type                = Normal,
+        DisplayName         = Big Glass Panel,
+        DisplayCategory     = VehicleMaintenance,
+        Icon                = BigGlassPanel,
+        Tooltip             = Tooltip_FixGlassItems,
     }
 
     item SmallGlassPanel
     {
-		DisplayCategory 	= VehicleMaintenance,
-        Weight				= 0.4,
-        Type				= Normal,
-        DisplayName			= Small Glass Panel,
-        Icon				= SmallGlassPanel,
-		Tooltip 			= Tooltip_FixGlassItems,
+        DisplayCategory     = VehicleMaintenance,
+        Weight              = 0.4,
+        Type                = Normal,
+        DisplayName         = Small Glass Panel,
+        Icon                = SmallGlassPanel,
+        Tooltip             = Tooltip_FixGlassItems,
     }
 
-	item Brokenglass
-	{
-        Weight				= 0.1,
-        Type				= Normal,
-		DisplayName	        = Broken Glass Shards,
-	    DisplayCategory 	= Material,
-        Icon				= Brokenglass,
-	}
+    item Brokenglass
+    {
+        Weight              = 0.1,
+        Type                = Normal,
+        DisplayName         = Broken Glass Shard,
+        DisplayCategory     = Material,
+        Icon                = Brokenglass,
+        Tooltip             = Tooltip_Brokenglass
+    }
 
-	item GlassCutter
-	{
-		MaxRange					= 0.8,
-		WeaponSprite				= GlassCutter,
-		MinAngle					= 0.65,
-		Type						= Weapon,
-		MinimumSwingTime			= 2,
-		SwingAmountBeforeImpact		= 0.02,
-		Categories					= SmallBlade,
-		Weight						= 0.3,
-		ConditionLowerChanceOneIn	= 1,
-		PushBackMod					= 0.3,
-		SubCategory					= Swinging,
-		AimingMod					= 0.8,
-		ConditionMax				= 3,
-		MaxHitCount					= 1,
-		IsAimedHandWeapon			= TRUE,
-		DoorDamage					= 1,
-		SwingAnim					= Bat,
-		DisplayName					= Glass Cutter,
-		MinRange					= 0.2,
-		SwingTime					= 2,
-		KnockdownMod				= 0,
-		Icon						= GlassCutter,
-		RunAnim						= Run_Weapon2,
-        IdleAnim					= Idle_Weapon2,
-		TreeDamage  				= 0,
-		EnduranceMod 				= 0.5,
-		MetalValue 					= 5,
-		CriticalChance				= 0,
-		MinDamage					= 0.1,
-        MaxDamage					= 0.1,
-		WeaponLength 				= 0.17,
-		AttachmentType 				= Screwdriver,
-        BreakSound					= BreakMetalItem,
- 	}
-	
-	recipe Gain Broken Glass Shards (Junk)
-	{
-		keep [Recipe.GetItemTypes.Hammer],
-		destroy Mirror/Mov_MirrorSmall/Cologne/Perfume/LightBulb/LightBulbBlue/LightBulbCyan/LightBulbGreen/LightBulbMagenta/LightBulbOrange/LightBulbPink/LightBulbPurple/LightBulbRed/LightBulbYellow/magnifyingglass/GlassTumbler/Glasses,
-	   
-		Result:Brokenglass=1,
-		Time:50.0,
-		Sound:PZ_Hammer,
-		Category:Carpentry,
-		NeedToBeLearn:false,
-		CanBeDoneFromFloor:true,
-	}
+    item GlassCutter
+    {
+        MaxRange                    = 0.8,
+        WeaponSprite                = GlassCutter,
+        MinAngle                    = 0.65,
+        Type                        = Weapon,
+        MinimumSwingTime            = 2,
+        SwingAmountBeforeImpact     = 0.02,
+        Categories                  = SmallBlade,
+        Weight                      = 0.3,
+        ConditionLowerChanceOneIn   = 1,
+        PushBackMod                 = 0.3,
+        SubCategory                 = Swinging,
+        AimingMod                   = 0.8,
+        ConditionMax                = 3,
+        MaxHitCount                 = 1,
+        IsAimedHandWeapon           = TRUE,
+        DoorDamage                  = 1,
+        SwingAnim                   = Bat,
+        DisplayName                 = Glass Cutter,
+        MinRange                    = 0.2,
+        SwingTime                   = 2,
+        KnockdownMod                = 0,
+        Icon                        = GlassCutter,
+        RunAnim                     = Run_Weapon2,
+        IdleAnim                    = Idle_Weapon2,
+        TreeDamage                  = 0,
+        EnduranceMod                = 0.5,
+        MetalValue                  = 5,
+        CriticalChance              = 0,
+        MinDamage                   = 0.1,
+        MaxDamage                   = 0.1,
+        WeaponLength                = 0.17,
+        AttachmentType              = Screwdriver,
+        BreakSound                  = BreakMetalItem,
+    }
 
-	recipe Gain Broken Glass Shards (Wall Mirrors)
-	{
-		keep [Recipe.GetItemTypes.Hammer],
-		destroy Moveables.walls_decoration_01_11/Moveables.walls_decoration_01_10/Moveables.walls_decoration_01_9/Moveables.walls_decoration_01_8/Moveables.walls_decoration_01_7/Moveables.walls_decoration_01_6/Moveables.walls_decoration_01_5/Moveables.walls_decoration_01_4/Moveables.walls_decoration_01_37/Moveables.walls_decoration_01_36,
-	   
-		Result:Brokenglass=3,
-		Time:50.0,
-		Sound:PZ_Hammer,
-		Category:Carpentry,
-		NeedToBeLearn:false,
-		CanBeDoneFromFloor:true,
-	}
-	
-	recipe Gain Broken Glass Shards (Bottles)
-	{
-		keep [Recipe.GetItemTypes.Hammer],
-		destroy EmptyJar/WineEmpty/WineEmpty2/WhiskeyEmpty/BeerEmpty/WhiskeyEmpty/RemouladeEmpty,
-	   
-		Result:Brokenglass=2,
-		Time:50.0,
-		Sound:PZ_Hammer,
-		Category:Carpentry,
-		NeedToBeLearn:false,
-		CanBeDoneFromFloor:true,
-	}
+    recipe Gain Broken Glass Shards (Junk)
+    {
+        keep [Recipe.GetItemTypes.Hammer],
+        destroy Mirror/Mov_MirrorSmall/Cologne/Perfume/LightBulb/LightBulbBlue/LightBulbCyan/LightBulbGreen/LightBulbMagenta/LightBulbOrange/LightBulbPink/LightBulbPurple/LightBulbRed/LightBulbYellow/magnifyingglass/GlassTumbler/Glasses,
 
-	recipe Gain Broken Glass Shards (Bottles)
-	{
-		keep [Recipe.GetItemTypes.Hammer],
-		destroy MarinaraEmpty/legourmet.Glass/legourmet.MargaritaGlass/legourmet.MartiniGlass/legourmet.VodkaEmpty/legourmet.WhiteRumEmpty/legourmet.WhiteTequilaEmpty/legourmet.WineEmpty3/legourmet.BeerBottleEmpty/legourmet.BeerBottleEmpty/legourmet.TripleSecEmpty/legourmet.AguaardienteEmpty/legourmet.GinebraEmpty/legourmet.RumEmpty,
+        Result:Brokenglass=1,
+        Time:50.0,
+        Sound:PZ_Hammer,
+        Category:Carpentry,
+        NeedToBeLearn:false,
+        CanBeDoneFromFloor:true,
+    }
 
-		Result:Brokenglass=2,
-		Time:50.0,
-		Sound:PZ_Hammer,
-		Category:Carpentry,
-		NeedToBeLearn:false,
-		CanBeDoneFromFloor:true,
-	}
-	
-	recipe Gain Broken Glass Shards (Broken Glass)
-	{
-		keep [Recipe.GetItemTypes.Hammer],
-		destroy Moveables.brokenglass_1_0/Moveables.brokenglass_1_1/Moveables.brokenglass_1_2/Moveables.brokenglass_1_3,
+    recipe Gain Broken Glass Shards (Wall Mirrors)
+    {
+        keep [Recipe.GetItemTypes.Hammer],
+        destroy Moveables.walls_decoration_01_11/Moveables.walls_decoration_01_10/Moveables.walls_decoration_01_9/Moveables.walls_decoration_01_8/Moveables.walls_decoration_01_7/Moveables.walls_decoration_01_6/Moveables.walls_decoration_01_5/Moveables.walls_decoration_01_4/Moveables.walls_decoration_01_37/Moveables.walls_decoration_01_36,
 
-		Result:Brokenglass=2,
-		Time:50.0,
-		Sound:PZ_Hammer,
-		Category:Carpentry,
-		NeedToBeLearn:false,
-		CanBeDoneFromFloor:true,	
-	}
-	
-	recipe Gain Broken Glass Shards (Large Mirror)
-	{
-		keep [Recipe.GetItemTypes.Hammer],
-		destroy Mov_MirrorTall/Mov_MirrorWood/Mov_MirrorLarge,
+        Result:Brokenglass=3,
+        Time:50.0,
+        Sound:PZ_Hammer,
+        Category:Carpentry,
+        NeedToBeLearn:false,
+        CanBeDoneFromFloor:true,
+    }
+    
+    recipe Gain Broken Glass Shards (Bottles)
+    {
+        keep [Recipe.GetItemTypes.Hammer],
+        destroy EmptyJar/WineEmpty/WineEmpty2/WhiskeyEmpty/BeerEmpty/WhiskeyEmpty/RemouladeEmpty,
 
-		Result:Brokenglass=4,
-		Time:50.0,
-		Sound:PZ_Hammer,
-		Category:Carpentry,
-		NeedToBeLearn:false,
-		CanBeDoneFromFloor:true,	
-	}
+        Result:Brokenglass=2,
+        Time:50.0,
+        Sound:PZ_Hammer,
+        Category:Carpentry,
+        NeedToBeLearn:false,
+        CanBeDoneFromFloor:true,
+    }
 
-	recipe Gain Broken Glass Shards (Windshield)
-	{
-		keep [Recipe.GetItemTypes.Hammer],
-		destroy Windshield1/Windshield2/Windshield3/RearWindshield1/RearWindshield2/RearWindshield3,
+    recipe Gain Broken Glass Shards (Bottles)
+    {
+        keep [Recipe.GetItemTypes.Hammer],
+        destroy MarinaraEmpty/legourmet.Glass/legourmet.MargaritaGlass/legourmet.MartiniGlass/legourmet.VodkaEmpty/legourmet.WhiteRumEmpty/legourmet.WhiteTequilaEmpty/legourmet.WineEmpty3/legourmet.BeerBottleEmpty/legourmet.BeerBottleEmpty/legourmet.TripleSecEmpty/legourmet.AguaardienteEmpty/legourmet.GinebraEmpty/legourmet.RumEmpty,
 
-		Result:Brokenglass=4,
-		Time:50.0,
-		Sound:PZ_Hammer,
-		Category:Carpentry,
-		NeedToBeLearn:false,
-		CanBeDoneFromFloor:true,
-	}
+        Result:Brokenglass=2,
+        Time:50.0,
+        Sound:PZ_Hammer,
+        Category:Carpentry,
+        NeedToBeLearn:false,
+        CanBeDoneFromFloor:true,
+    }
+    
+    recipe Gain Broken Glass Shards (Broken Glass)
+    {
+        keep [Recipe.GetItemTypes.Hammer],
+        destroy Moveables.brokenglass_1_0/Moveables.brokenglass_1_1/Moveables.brokenglass_1_2/Moveables.brokenglass_1_3,
 
-	recipe Gain Broken Glass Shards (Other Windshield)
-	{
-		keep [Recipe.GetItemTypes.Hammer],
-		destroy Windshield8/RearWindshield8/M998Windshield2/DG70Windshield3/DG70WindshieldRear3/R32Windshield3/R32WindshieldRear3/McLarenF1Windshield3/McLarenF1RearWindshield3/M911Windshield2/M911WindshieldRear2/U1550LWindshield2/U1550LRearWindow2/E150Windshield2/E150RearWindshield2/82JeepJ10Windshield2/89BroncoWindshieldRear2/89BroncoWindshield2/ECTO1Windshield2/ECTO1RearWindshield2/82JeepJ10WindshieldRear2/P19AWindshield2/88ChevyS10Windshield2/88ChevyS10WindshieldRear2/M151A2Windshield2/97BushWindshield2/97BushWindshieldRear2/KZ1Kwindshield3/93townCarWindshield1/93townCarRearWindshield1/90pierceArrowWindshield2/90pierceArrowRearWindshield2,
+        Result:Brokenglass=2,
+        Time:50.0,
+        Sound:PZ_Hammer,
+        Category:Carpentry,
+        NeedToBeLearn:false,
+        CanBeDoneFromFloor:true,
+    }
+    
+    recipe Gain Broken Glass Shards (Large Mirror)
+    {
+        keep [Recipe.GetItemTypes.Hammer],
+        destroy Mov_MirrorTall/Mov_MirrorWood/Mov_MirrorLarge,
 
-		Result:Brokenglass=4,
-		Time:50.0,
-		Sound:PZ_Hammer,
-		Category:Carpentry,
-		NeedToBeLearn:false,
-		CanBeDoneFromFloor:true,
-	}
+        Result:Brokenglass=4,
+        Time:50.0,
+        Sound:PZ_Hammer,
+        Category:Carpentry,
+        NeedToBeLearn:false,
+        CanBeDoneFromFloor:true,
+    }
 
-	recipe Gain Broken Glass Shards (Side Window)
-	{
-		keep [Recipe.GetItemTypes.Hammer],
-		destroy FrontWindow1/FrontWindow2/FrontWindow3/RearWindow1/RearWindow2/RearWindow3,
+    recipe Gain Broken Glass Shards (Windshield)
+    {
+        keep [Recipe.GetItemTypes.Hammer],
+        destroy Windshield1/Windshield2/Windshield3/RearWindshield1/RearWindshield2/RearWindshield3,
 
-		Result:Brokenglass=2,
-		Time:50.0,
-		Sound:PZ_Hammer,
-		Category:Carpentry,
-		NeedToBeLearn:false,
-		CanBeDoneFromFloor:true,	
-	}	
+        Result:Brokenglass=4,
+        Time:50.0,
+        Sound:PZ_Hammer,
+        Category:Carpentry,
+        NeedToBeLearn:false,
+        CanBeDoneFromFloor:true,
+    }
 
-	recipe Gain Broken Glass Shards (Other Side Window)
-	{
-		keep [Recipe.GetItemTypes.Hammer],
-		destroy FrontWindow8/RearWindow8/M998SideWindow2/DG70FrontSideWindow3/DG70RearSideWindow3/R32FrontSideWindow3/R32RearSideWindow3/McLarenF1SideWindow3/M911SideWindow2/U1550LWindow2/E150SideWindow2/82JeepJ10WindowSide2/89BroncoWindowSide2/89BroncoWindowSideRear2/ECTO1SideWindow2/P19ASideWindow2/88ChevyS10WindowSide2/M151A2SideWindow2/97BushFrontSideWindow2/97BushSideWindow2/93townCarFrontSideWindow1/93townCarMiddleSideWindow1/93townCarRearSideWindow1/93townCarSunRoof1/90pierceArrowSideWindow2,
+    recipe Gain Broken Glass Shards (Other Windshield)
+    {
+        keep [Recipe.GetItemTypes.Hammer],
+        destroy Windshield8/RearWindshield8/M998Windshield2/DG70Windshield3/DG70WindshieldRear3/R32Windshield3/R32WindshieldRear3/McLarenF1Windshield3/McLarenF1RearWindshield3/M911Windshield2/M911WindshieldRear2/U1550LWindshield2/U1550LRearWindow2/E150Windshield2/E150RearWindshield2/82JeepJ10Windshield2/89BroncoWindshieldRear2/89BroncoWindshield2/ECTO1Windshield2/ECTO1RearWindshield2/82JeepJ10WindshieldRear2/P19AWindshield2/88ChevyS10Windshield2/88ChevyS10WindshieldRear2/M151A2Windshield2/97BushWindshield2/97BushWindshieldRear2/KZ1Kwindshield3/93townCarWindshield1/93townCarRearWindshield1/90pierceArrowWindshield2/90pierceArrowRearWindshield2,
 
-		Result:Brokenglass=2,
-		Time:50.0,
-		Sound:PZ_Hammer,
-		Category:Carpentry,
-		NeedToBeLearn:false,
-		CanBeDoneFromFloor:true,	
-	}	
+        Result:Brokenglass=4,
+        Time:50.0,
+        Sound:PZ_Hammer,
+        Category:Carpentry,
+        NeedToBeLearn:false,
+        CanBeDoneFromFloor:true,
+    }
 
-	recipe Make Small Glass Panel
-	{
-		destroy Brokenglass=4,
-		BlowTorch=1,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:SmallGlassPanel,
-		Time: 120,
-		Category:Welding,
-		NeedToBeLearn:false,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
-		AnimNode:Disassemble,	
-	}
+    recipe Gain Broken Glass Shards (Side Window)
+    {
+        keep [Recipe.GetItemTypes.Hammer],
+        destroy FrontWindow1/FrontWindow2/FrontWindow3/RearWindow1/RearWindow2/RearWindow3,
 
-	recipe Make Big Glass Panel
-	{
-		destroy Brokenglass=8,
-		BlowTorch=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:BigGlassPanel,
-		Time: 120,
-		Category:Welding,
-		NeedToBeLearn:false,
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
-		AnimNode:Disassemble,	
-	}
-	
-	recipe Cut Glass Panel in Half
-	{
-		destroy BigGlassPanel,
-		keep GlassCutter,
-		
-		Result:SmallGlassPanel=2,
-		Time:150.0,
-		CanBeDoneFromFloor:true,
+        Result:Brokenglass=2,
+        Time:50.0,
+        Sound:PZ_Hammer,
+        Category:Carpentry,
+        NeedToBeLearn:false,
+        CanBeDoneFromFloor:true,
+    }   
+
+    recipe Gain Broken Glass Shards (Other Side Window)
+    {
+        keep [Recipe.GetItemTypes.Hammer],
+        destroy FrontWindow8/RearWindow8/M998SideWindow2/DG70FrontSideWindow3/DG70RearSideWindow3/R32FrontSideWindow3/R32RearSideWindow3/McLarenF1SideWindow3/M911SideWindow2/U1550LWindow2/E150SideWindow2/82JeepJ10WindowSide2/89BroncoWindowSide2/89BroncoWindowSideRear2/ECTO1SideWindow2/P19ASideWindow2/88ChevyS10WindowSide2/M151A2SideWindow2/97BushFrontSideWindow2/97BushSideWindow2/93townCarFrontSideWindow1/93townCarMiddleSideWindow1/93townCarRearSideWindow1/93townCarSunRoof1/90pierceArrowSideWindow2,
+
+        Result:Brokenglass=2,
+        Time:50.0,
+        Sound:PZ_Hammer,
+        Category:Carpentry,
+        NeedToBeLearn:false,
+        CanBeDoneFromFloor:true,
+    }   
+
+    recipe Make Small Glass Panel
+    {
+        destroy Brokenglass=4,
+        BlowTorch=1,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:SmallGlassPanel,
+        Time: 120,
+        Category:Welding,
+        NeedToBeLearn:false,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+        AnimNode:Disassemble,
+    }
+
+    recipe Make Big Glass Panel
+    {
+        destroy Brokenglass=8,
+        BlowTorch=2,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:BigGlassPanel,
+        Time: 120,
+        Category:Welding,
+        NeedToBeLearn:false,
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+        AnimNode:Disassemble,
+    }
+
+    recipe Cut Glass Panel in Half
+    {
+        destroy BigGlassPanel,
+        keep GlassCutter,
+
+        Result:SmallGlassPanel=2,
+        Time:150.0,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,		
-	}
+        OnGiveXP:Recipe.OnGiveXP.None,
+    }
 
     recipe Make Standard Front Car Door
     {
         SheetMetal=4,
-		BlowTorch=14,
-		WeldingRods=4,
-		MetalBar=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		
+        BlowTorch=14,
+        WeldingRods=4,
+        MetalBar=2,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:FrontCarDoor1,
         Time:2500.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Heavy-Duty Front Car Door
     {
         SheetMetal=6,
-		BlowTorch=16,
-		WeldingRods=4,
-		MetalBar=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		
+        BlowTorch=16,
+        WeldingRods=4,
+        MetalBar=2,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:FrontCarDoor2,
         Time:2500.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Sport Front Car Door
     {
         SheetMetal=3,
-		BlowTorch=12,
-		WeldingRods=3,
-		MetalBar=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		
+        BlowTorch=12,
+        WeldingRods=3,
+        MetalBar=2,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:FrontCarDoor3,
         Time:2500.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Standard Rear Car Door
     {
         SheetMetal=4,
-		BlowTorch=14,
-		WeldingRods=4,
-		MetalBar=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-	
+        BlowTorch=14,
+        WeldingRods=4,
+        MetalBar=2,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:RearCarDoor1,
         Time:2500.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Heavy-Duty Rear Car Door
     {
         SheetMetal=6,
-		BlowTorch=16,
-		WeldingRods=5,
-		MetalBar=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        BlowTorch=16,
+        WeldingRods=5,
+        MetalBar=2,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:RearCarDoor2,
         Time:2500.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Sport Rear Car Door
     {
         SheetMetal=3,
-		BlowTorch=12,
-		WeldingRods=3,
-		MetalBar=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        BlowTorch=12,
+        WeldingRods=3,
+        MetalBar=2,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:RearCarDoor3,
         Time:2500.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Standard Rear Car Double Door
     {
         SheetMetal=10,
-		BlowTorch=20,
-		WeldingRods=8,
-		MetalBar=4,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        BlowTorch=20,
+        WeldingRods=8,
+        MetalBar=4,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:RearCarDoorDouble1,
         Time:2500.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Heavy-Duty Rear Car Double Door
     {
         SheetMetal=12,
-		BlowTorch=25,
-		WeldingRods=10,
-		MetalBar=4,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        BlowTorch=25,
+        WeldingRods=10,
+        MetalBar=4,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:RearCarDoorDouble2,
         Time:2500.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Sport Rear Car Double Door
     {
         SheetMetal=12,
-		BlowTorch=25,
-		WeldingRods=6,
-		MetalBar=4,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        BlowTorch=25,
+        WeldingRods=6,
+        MetalBar=4,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:RearCarDoorDouble3,
         Time:2500.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Small Standard Gas Tank
     {
         SheetMetal=3,
-		SmallSheetMetal=2,
-		BlowTorch=6,
-		WeldingRods=2,
-		MetalPipe=1,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        SmallSheetMetal=2,
+        BlowTorch=6,
+        WeldingRods=2,
+        MetalPipe=1,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:SmallGasTank1,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
+
     recipe Make Small Heavy-Duty Gas Tank
     {
         SheetMetal=3,
-		SmallSheetMetal=2,
-		BlowTorch=6,
-		WeldingRods=2,
-		MetalPipe=1,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        SmallSheetMetal=2,
+        BlowTorch=6,
+        WeldingRods=2,
+        MetalPipe=1,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:SmallGasTank2,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
+
     recipe Make Small Sport Gas Tank
     {
         SheetMetal=3,
-		SmallSheetMetal=2,
-		BlowTorch=6,
-		WeldingRods=2,
-		MetalPipe=1,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        SmallSheetMetal=2,
+        BlowTorch=6,
+        WeldingRods=2,
+        MetalPipe=1,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:SmallGasTank3,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Standard Gas Tank
     {
         SheetMetal=4,
-		SmallSheetMetal=2,
-		BlowTorch=8,
-		WeldingRods=2,
-		MetalPipe=1,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        SmallSheetMetal=2,
+        BlowTorch=8,
+        WeldingRods=2,
+        MetalPipe=1,
+        keep [Recipe.GetItemTypes.WeldingMask],
+        
         Result:NormalGasTank1,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Standard Heavy-Duty Gas Tank
     {
         SheetMetal=4,
-		SmallSheetMetal=2,
-		BlowTorch=8,
-		WeldingRods=2,
-		MetalPipe=1,
-		keep [Recipe.GetItemTypes.WeldingMask],
-	
+        SmallSheetMetal=2,
+        BlowTorch=8,
+        WeldingRods=2,
+        MetalPipe=1,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:NormalGasTank2,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Standard Sport Gas Tank
     {
         SheetMetal=4,
-		SmallSheetMetal=2,
-		BlowTorch=8,
-		WeldingRods=2,
-		MetalPipe=1,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        SmallSheetMetal=2,
+        BlowTorch=8,
+        WeldingRods=2,
+        MetalPipe=1,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:NormalGasTank3,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Big Standard Gas Tank
     {
         SheetMetal=5,
-		SmallSheetMetal=3,
-		BlowTorch=10,
-		WeldingRods=3,
-		MetalPipe=1,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        SmallSheetMetal=3,
+        BlowTorch=10,
+        WeldingRods=3,
+        MetalPipe=1,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:BigGasTank1,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Big Heavy-Duty Gas Tank
     {
         SheetMetal=5,
-		SmallSheetMetal=3,
-		BlowTorch=10,
-		WeldingRods=3,
-		MetalPipe=1,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        SmallSheetMetal=3,
+        BlowTorch=10,
+        WeldingRods=3,
+        MetalPipe=1,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:BigGasTank2,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Big Sport Gas Tank
     {
         SheetMetal=5,
-		SmallSheetMetal=3,
-		BlowTorch=10,
-		WeldingRods=3,
-		MetalPipe=1,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        SmallSheetMetal=3,
+        BlowTorch=10,
+        WeldingRods=3,
+        MetalPipe=1,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:BigGasTank3,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Old Standard Car Muffler
     {
-		SmallSheetMetal=3,
-		BlowTorch=5,
-		WeldingRods=2,
-		MetalPipe=1,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        SmallSheetMetal=3,
+        BlowTorch=5,
+        WeldingRods=2,
+        MetalPipe=1,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:OldCarMuffler1,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Old Heavy-Duty Car Muffler
     {
-		SmallSheetMetal=3,
-		BlowTorch=5,
-		WeldingRods=2,
-		MetalPipe=1,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        SmallSheetMetal=3,
+        BlowTorch=5,
+        WeldingRods=2,
+        MetalPipe=1,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:OldCarMuffler2,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Old Sport Car Muffler
     {
-		SmallSheetMetal=3,
-		BlowTorch=5,
-		WeldingRods=2,
-		MetalPipe=1,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        SmallSheetMetal=3,
+        BlowTorch=5,
+        WeldingRods=2,
+        MetalPipe=1,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:OldCarMuffler3,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Average Standard Car Muffler
     {
-		SmallSheetMetal=4,
-		BlowTorch=5,
-		WeldingRods=3,
-		MetalPipe=1,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        SmallSheetMetal=4,
+        BlowTorch=5,
+        WeldingRods=3,
+        MetalPipe=1,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:NormalCarMuffler1,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Average Heavy-Duty Car Muffler
     {
-		SmallSheetMetal=4,
-		BlowTorch=5,
-		WeldingRods=3,
-		MetalPipe=1,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        SmallSheetMetal=4,
+        BlowTorch=5,
+        WeldingRods=3,
+        MetalPipe=1,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:NormalCarMuffler2,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Average Sport Car Muffler
     {
-		SmallSheetMetal=4,
-		BlowTorch=5,
-		WeldingRods=3,
-		MetalPipe=1,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        SmallSheetMetal=4,
+        BlowTorch=5,
+        WeldingRods=3,
+        MetalPipe=1,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:NormalCarMuffler3,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Performance Standard Car Muffler
     {
-		SmallSheetMetal=5,
-		BlowTorch=8,
-		WeldingRods=3,
-		MetalPipe=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        SmallSheetMetal=5,
+        BlowTorch=8,
+        WeldingRods=3,
+        MetalPipe=2,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:ModernCarMuffler1,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Performance Heavy-Duty Car Muffler
     {
-		SmallSheetMetal=5,
-		BlowTorch=8,
-		WeldingRods=3,
-		MetalPipe=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        SmallSheetMetal=5,
+        BlowTorch=8,
+        WeldingRods=3,
+        MetalPipe=2,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:ModernCarMuffler2,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Performance Sport Car Muffler
     {
-		SmallSheetMetal=5,
-		BlowTorch=8,
-		WeldingRods=3,
-		MetalPipe=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        SmallSheetMetal=5,
+        BlowTorch=8,
+        WeldingRods=3,
+        MetalPipe=2,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:ModernCarMuffler3,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Standard Car Hood
     {
-		SheetMetal=4,
-		BlowTorch=8,
-		WeldingRods=4,
-		MetalPipe=4,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        SheetMetal=4,
+        BlowTorch=8,
+        WeldingRods=4,
+        MetalPipe=4,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:EngineDoor1,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Heavy-Duty Car Hood
     {
-		SheetMetal=4,
-		BlowTorch=8,
-		WeldingRods=4,
-		MetalPipe=4,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        SheetMetal=4,
+        BlowTorch=8,
+        WeldingRods=4,
+        MetalPipe=4,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:EngineDoor2,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
-	
+    
     recipe Make Sport Car Hood
     {
-		SheetMetal=4,
-		BlowTorch=8,
-		WeldingRods=4,
-		MetalPipe=4,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        SheetMetal=4,
+        BlowTorch=8,
+        WeldingRods=4,
+        MetalPipe=4,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:EngineDoor3,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Standard Trunk Lid
     {
-		SheetMetal=4,
-		BlowTorch=8,
-		WeldingRods=4,
-		MetalPipe=4,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        SheetMetal=4,
+        BlowTorch=8,
+        WeldingRods=4,
+        MetalPipe=4,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:TrunkDoor1,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Heavy-Duty Trunk Lid
     {
-		SheetMetal=6,
-		BlowTorch=8,
-		WeldingRods=4,
-		MetalPipe=6,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        SheetMetal=6,
+        BlowTorch=8,
+        WeldingRods=4,
+        MetalPipe=6,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:TrunkDoor2,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Sport Trunk Lid
     {
-		SheetMetal=4,
-		BlowTorch=8,
-		WeldingRods=4,
-		MetalPipe=4,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
+        SheetMetal=4,
+        BlowTorch=8,
+        WeldingRods=4,
+        MetalPipe=4,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
         Result:TrunkDoor3,
         Time:2000.0,
-		SkillRequired:MetalWelding=10;Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:MetalWelding=10;Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Standard Windshield
     {
-		BigGlassPanel=2,
-		keep GlassCutter,
-		
+        BigGlassPanel=2,
+        keep GlassCutter,
+
         Result:Windshield1,
         Time:2000.0,
-		SkillRequired:Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Heavy-Duty Windshield
     {
-		BigGlassPanel=3,
-		keep GlassCutter,
-		
+        BigGlassPanel=3,
+        keep GlassCutter,
+
         Result:Windshield2,
         Time:2000.0,
-		SkillRequired:Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Sport Windshield
     {
-		BigGlassPanel=2,
-		keep GlassCutter,
-		
+        BigGlassPanel=2,
+        keep GlassCutter,
+
         Result:Windshield3,
         Time:2000.0,
-		SkillRequired:Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Standard Rear Windshield
     {
-		BigGlassPanel=2,
-		keep GlassCutter,
-		
+        BigGlassPanel=2,
+        keep GlassCutter,
+
         Result:RearWindshield1,
         Time:2000.0,
-		SkillRequired:Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Heavy-Duty Rear Windshield
     {
-		BigGlassPanel=3,
-		keep GlassCutter,
-		
+        BigGlassPanel=3,
+        keep GlassCutter,
+
         Result:RearWindshield2,
         Time:2000.0,
-		SkillRequired:Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Sport Rear Windshield
     {
-		BigGlassPanel=2,
-		keep GlassCutter,
-		
+        BigGlassPanel=2,
+        keep GlassCutter,
+
         Result:RearWindshield3,
         Time:2000.0,
-		SkillRequired:Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Standard Front Window
     {
-		SmallGlassPanel=2,
-		keep GlassCutter,
-		
+        SmallGlassPanel=2,
+        keep GlassCutter,
+
         Result:FrontWindow1,
         Time:2000.0,
-		SkillRequired:Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Heavy-Duty Front Window
     {
-		SmallGlassPanel=3,
-		keep GlassCutter,
-		
+        SmallGlassPanel=3,
+        keep GlassCutter,
+
         Result:FrontWindow2,
         Time:2000.0,
-		SkillRequired:Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Sport Front Window
     {
-		SmallGlassPanel=2,
-		keep GlassCutter,
-		
+        SmallGlassPanel=2,
+        keep GlassCutter,
+
         Result:FrontWindow3,
         Time:2000.0,
-		SkillRequired:Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Standard Rear Window
     {
-		SmallGlassPanel=2,
-		keep GlassCutter,
-		
+        SmallGlassPanel=2,
+        keep GlassCutter,
+
         Result:RearWindow1,
         Time:2000.0,
-		SkillRequired:Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Heavy-Duty Rear Window
     {
-		SmallGlassPanel=3,
-		keep GlassCutter,
-		
+        SmallGlassPanel=3,
+        keep GlassCutter,
+
         Result:RearWindow2,
         Time:2000.0,
-		SkillRequired:Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
     recipe Make Sport Rear Window
     {
-		SmallGlassPanel=2,
-		keep GlassCutter,
-		
+        SmallGlassPanel=2,
+        keep GlassCutter,
+
         Result:RearWindow3,
         Time:2000.0,
-		SkillRequired:Mechanics=10,
-		CanBeDoneFromFloor:true,
+        SkillRequired:Mechanics=10,
+        CanBeDoneFromFloor:true,
         Category:Mechanics,
-		OnGiveXP:Recipe.OnGiveXP.None,
+        OnGiveXP:Recipe.OnGiveXP.None,
     }
 
-	recipe Make Standard Regular Tire
-	{
-		keep LugWrench,    			
-		MetalBar=2,
-		OldTire1=2,
-		SmallSheetMetal=3,
-		MetalPipe=2,
-		Screws=12,
-		
-		Result:NormalTire1,
-		Time:600.0,
-		Category:Mechanics,
-		SkillRequired:MetalWelding=3,		
-		
-	}
-	
-	recipe Make Heavy Regular Tire
-	{
-		keep LugWrench,    			
-		MetalBar=2,
-		OldTire2=2,
-		SmallSheetMetal=3,
-		MetalPipe=2,
-		Screws=12,
-		
-		Result:NormalTire2,
-		Time:600.0,
-		Category:Mechanics,
-		SkillRequired:MetalWelding=3,		
-		
-	}
+    recipe Make Standard Regular Tire
+    {
+        keep LugWrench,
+        MetalBar=2,
+        OldTire1=2,
+        SmallSheetMetal=3,
+        MetalPipe=2,
+        Screws=12,
 
-	recipe Make Sport Regular Tire
-	{
-		keep LugWrench,    			
-		MetalBar=2,
-		OldTire3=2,
-		SmallSheetMetal=3,
-		MetalPipe=2,
-		Screws=12,
-		
-		Result:NormalTire3,
-		Time:600.0,
-		Category:Mechanics,
-		SkillRequired:MetalWelding=3,		
-		
-	}
-	
-	recipe Make Sport Performance Tire
-	{
-		keep LugWrench,    			
-		MetalBar=2,
-		NormalTire3=2,
-		SmallSheetMetal=3,
-		MetalPipe=2,
-		Screws=12,
-		
-		Result:ModernTire3,
-		Time:600.0,
-		Category:Mechanics,
-		SkillRequired:MetalWelding=4,		
-		
-	}
-	
-	recipe Make Heavy Performance Tire
-	{
-		keep LugWrench,    			
-		MetalBar=2,
-		NormalTire2=2,
-		SmallSheetMetal=3,
-		MetalPipe=2,
-		Screws=12,
-		
-		Result:ModernTire2,
-		Time:600.0,
-		Category:Mechanics,
-		SkillRequired:MetalWelding=4,		
-	}
-	
-	recipe Make Standard Performance Tire
-	{
-		keep LugWrench,    			
-		MetalBar=2,
-		NormalTire1=2,
-		SmallSheetMetal=3,
-		MetalPipe=2,
-		Screws=12,
-		
-		Result:ModernTire1,
-		Time:600.0,
-		Category:Mechanics,
-		SkillRequired:MetalWelding=4,		
-	}
+        Result:NormalTire1,
+        Time:600.0,
+        Category:Mechanics,
+        SkillRequired:MetalWelding=3,
+        
+    }
 
-	recipe Make Chain Protection for Car Tires
-	{
-		WeldingRods=4,
-		MetalBar=4,
-		SmallSheetMetal=2,
-		MetalPipe=2,
-		BlowTorch=5,
-		keep [Recipe.GetItemTypes.Hammer],
-		keep [Recipe.GetItemTypes.Screwdriver],
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:ATAProtectionWheelsChain,
-		Time:600.0,
-		Category:Mechanics,
-		SkillRequired:MetalWelding=4,		
-	}
+    recipe Make Heavy Regular Tire
+    {
+        keep LugWrench,
+        MetalBar=2,
+        OldTire2=2,
+        SmallSheetMetal=3,
+        MetalPipe=2,
+        Screws=12,
 
-	recipe Make Roof Lights for Car
-	{
-		MetalBar=2,
-		ScrapMetal=4,
-		Radio.ElectricWire=4,
-		Screws=8,
-		keep [Recipe.GetItemTypes.Hammer],
-		keep [Recipe.GetItemTypes.Screwdriver],
-		
-		Result:ATARoofLightItem,
-		Time:300.0,
-		Category:Mechanics,
-		SkillRequired:MetalWelding=4;Electricity=2,		
-	}
+        Result:NormalTire2,
+        Time:600.0,
+        Category:Mechanics,
+        SkillRequired:MetalWelding=3,
+        
+    }
+
+    recipe Make Sport Regular Tire
+    {
+        keep LugWrench,
+        MetalBar=2,
+        OldTire3=2,
+        SmallSheetMetal=3,
+        MetalPipe=2,
+        Screws=12,
+
+        Result:NormalTire3,
+        Time:600.0,
+        Category:Mechanics,
+        SkillRequired:MetalWelding=3,
+        
+    }
+
+    recipe Make Sport Performance Tire
+    {
+        keep LugWrench,
+        MetalBar=2,
+        NormalTire3=2,
+        SmallSheetMetal=3,
+        MetalPipe=2,
+        Screws=12,
+
+        Result:ModernTire3,
+        Time:600.0,
+        Category:Mechanics,
+        SkillRequired:MetalWelding=4,
+        
+    }
+
+    recipe Make Heavy Performance Tire
+    {
+        keep LugWrench,
+        MetalBar=2,
+        NormalTire2=2,
+        SmallSheetMetal=3,
+        MetalPipe=2,
+        Screws=12,
+
+        Result:ModernTire2,
+        Time:600.0,
+        Category:Mechanics,
+        SkillRequired:MetalWelding=4,
+    }
+
+    recipe Make Standard Performance Tire
+    {
+        keep LugWrench,
+        MetalBar=2,
+        NormalTire1=2,
+        SmallSheetMetal=3,
+        MetalPipe=2,
+        Screws=12,
+
+        Result:ModernTire1,
+        Time:600.0,
+        Category:Mechanics,
+        SkillRequired:MetalWelding=4,       
+    }
+
+    recipe Make Chain Protection for Car Tires
+    {
+        WeldingRods=4,
+        MetalBar=4,
+        SmallSheetMetal=2,
+        MetalPipe=2,
+        BlowTorch=5,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Screwdriver],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:ATAProtectionWheelsChain,
+        Time:600.0,
+        Category:Mechanics,
+        SkillRequired:MetalWelding=4,
+    }
+
+    recipe Make Roof Lights for Car
+    {
+        MetalBar=2,
+        ScrapMetal=4,
+        Radio.ElectricWire=4,
+        Screws=8,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.Screwdriver],
+
+        Result:ATARoofLightItem,
+        Time:300.0,
+        Category:Mechanics,
+        SkillRequired:MetalWelding=4;Electricity=2,
+    }
 
 }
