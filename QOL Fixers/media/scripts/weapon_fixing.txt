@@ -1,7 +1,7 @@
 module Base
 {
 
-	fixing Fix Pistol
+    fixing Fix Pistol
     {
        Require : Pistol,
 
@@ -9,201 +9,201 @@ module Base
        Fixer : FireKlean; Aiming=1,
     }
 
-		fixing Fix Pistol2
-		{
-		   Require : Pistol2,
+        fixing Fix Pistol2
+        {
+           Require : Pistol2,
 
-		   Fixer : CleaningKit=1; Aiming=2,
-		   Fixer : FireKlean; Aiming=1,
-		}
+           Fixer : CleaningKit=1; Aiming=2,
+           Fixer : FireKlean; Aiming=1,
+        }
 
-		fixing Fix Pistol3
-		{
-		   Require : Pistol3,
+        fixing Fix Pistol3
+        {
+           Require : Pistol3,
 
-		   Fixer : CleaningKit=1; Aiming=2,
-		   Fixer : FireKlean; Aiming=1,
-		}
+           Fixer : CleaningKit=1; Aiming=2,
+           Fixer : FireKlean; Aiming=1,
+        }
 
-	fixing Fix Revolver
-	{
-	   Require : Revolver,
+    fixing Fix Revolver
+    {
+       Require : Revolver,
 
-	   Fixer : CleaningKit=1; Aiming=2,
-	   Fixer : FireKlean; Aiming=1,
-	}
+       Fixer : CleaningKit=1; Aiming=2,
+       Fixer : FireKlean; Aiming=1,
+    }
 
-		fixing Fix Revolver_Short
-		{
-		   Require : Revolver_Short,
+        fixing Fix Revolver_Short
+        {
+           Require : Revolver_Short,
 
-		   Fixer : CleaningKit=1; Aiming=2,
-		   Fixer : FireKlean; Aiming=1,
-		}
-		
-		fixing Fix Revolver_Long
-		{
-		   Require : Revolver_Long,
+           Fixer : CleaningKit=1; Aiming=2,
+           Fixer : FireKlean; Aiming=1,
+        }
+        
+        fixing Fix Revolver_Long
+        {
+           Require : Revolver_Long,
 
-		   Fixer : CleaningKit=1; Aiming=2,
-		   Fixer : FireKlean; Aiming=1,
-		}
+           Fixer : CleaningKit=1; Aiming=2,
+           Fixer : FireKlean; Aiming=1,
+        }
 
-	fixing Fix Shotgun
-	{
-	   Require : Shotgun,
+    fixing Fix Shotgun
+    {
+       Require : Shotgun,
 
-	   Fixer : CleaningKit=1; Aiming=2,
-	   Fixer : FireKlean; Aiming=1,
-	}
+       Fixer : CleaningKit=1; Aiming=2,
+       Fixer : FireKlean; Aiming=1,
+    }
 
-		fixing Fix DoubleBarrelShotgun
-		{
-		   Require : DoubleBarrelShotgun,
+        fixing Fix DoubleBarrelShotgun
+        {
+           Require : DoubleBarrelShotgun,
 
-		   Fixer : CleaningKit=1; Aiming=2,
-		   Fixer : FireKlean; Aiming=1,
-		}
+           Fixer : CleaningKit=1; Aiming=2,
+           Fixer : FireKlean; Aiming=1,
+        }
 
-		fixing Fix DoubleBarrelShotgunSawnoff
-		{
-		   Require : DoubleBarrelShotgunSawnoff,
+        fixing Fix DoubleBarrelShotgunSawnoff
+        {
+           Require : DoubleBarrelShotgunSawnoff,
 
-		   Fixer : CleaningKit=1; Aiming=2,
-		   Fixer : FireKlean; Aiming=1,
-		}
+           Fixer : CleaningKit=1; Aiming=2,
+           Fixer : FireKlean; Aiming=1,
+        }
 
-		fixing Fix ShotgunSawnoff
-		{
-		   Require : ShotgunSawnoff,
+        fixing Fix ShotgunSawnoff
+        {
+           Require : ShotgunSawnoff,
 
-		   Fixer : CleaningKit=1; Aiming=2,
-		   Fixer : FireKlean; Aiming=1,
-		}
+           Fixer : CleaningKit=1; Aiming=2,
+           Fixer : FireKlean; Aiming=1,
+        }
 
-	fixing Fix AssaultRifle
-	{
-	   Require : AssaultRifle,
+    fixing Fix AssaultRifle
+    {
+       Require : AssaultRifle,
 
-	   Fixer : CleaningKit=1; Aiming=2,
-	   Fixer : FireKlean; Aiming=1,
-	}
+       Fixer : CleaningKit=1; Aiming=2,
+       Fixer : FireKlean; Aiming=1,
+    }
 
-		fixing Fix AssaultRifle2
-		{
-		   Require : AssaultRifle2,
+        fixing Fix AssaultRifle2
+        {
+           Require : AssaultRifle2,
 
-		   Fixer : CleaningKit=1; Aiming=2,
-		   Fixer : FireKlean; Aiming=1,
-		}
+           Fixer : CleaningKit=1; Aiming=2,
+           Fixer : FireKlean; Aiming=1,
+        }
 
-		fixing Fix VarmintRifle
-		{
-		   Require : VarmintRifle,
+        fixing Fix VarmintRifle
+        {
+           Require : VarmintRifle,
 
-		   Fixer : CleaningKit=1; Aiming=2,
-		   Fixer : FireKlean; Aiming=1,
-		}
+           Fixer : CleaningKit=1; Aiming=2,
+           Fixer : FireKlean; Aiming=1,
+        }
 
-		fixing Fix HuntingRifle
-		{
-		   Require : HuntingRifle,
+        fixing Fix HuntingRifle
+        {
+           Require : HuntingRifle,
 
-		   Fixer : CleaningKit=1; Aiming=2,
-		   Fixer : FireKlean; Aiming=1,
-		}
+           Fixer : CleaningKit=1; Aiming=2,
+           Fixer : FireKlean; Aiming=1,
+        }
 
 
-	fixing Fix OverlookFireAxe
-	{
-	   Require : OverlookFireAxe,	
-	   
-	   Fixer   : SheetMetal=1,MetalWelding=2,
-	   Fixer   : ScrapMetal=3,MetalWelding=2,
-	   Fixer   : OverlookFireAxe=1,
-	}
+    fixing Fix OverlookFireAxe
+    {
+       Require : OverlookFireAxe,   
+       
+       Fixer   : SheetMetal=1,MetalWelding=2,
+       Fixer   : ScrapMetal=3,MetalWelding=2,
+       Fixer   : OverlookFireAxe=1,
+    }
 
-	fixing Fix BatLeth
-	{
-	   Require : BatLeth,
-
-       Fixer : Woodglue=2; Woodwork=2,
-       Fixer : DuctTape=2,
-       Fixer : Glue=2,
-       Fixer : Scotchtape=4,
-	}
-
-	fixing Fix MekLeth
-	{
-	   Require : MekLeth,	
-	   
-	   Fixer   : SheetMetal=1,MetalWelding=2,
-	   Fixer   : ScrapMetal=3,MetalWelding=2,
-	   Fixer   : MekLeth=1,
-	}
-
-	fixing Fix AZZK Pistol
-	{
-	   Require : AZZK_pistol,
-
-	   Fixer : CleaningKit=1; Aiming=2,
-	   Fixer : FireKlean; Aiming=1,
-	}
-
-	fixing Fix Spikes Kukri
-	{
-	   Require : MonmouthWeapons.KukriMacheteSpike,	
-	   
-	   Fixer   : SheetMetal=1,MetalWelding=2,
-	   Fixer   : ScrapMetal=3,MetalWelding=2,
-	   Fixer   : MonmouthWeapons.KukriMacheteSpike=1,
-	}
-
-	fixing Fix PickAxeAmelora
-	{
-	   Require : MonmouthWeapons.PickAxeAmelora,	
-	   
-	   Fixer   : SheetMetal=1,MetalWelding=2,
-	   Fixer   : ScrapMetal=3,MetalWelding=2,
-	   Fixer   : MonmouthWeapons.PickAxeAmelora=1,
-	}
-
-	fixing Fix Toddy Hammer
-	{
-	   Require : MonmouthWeapons.Hammer_Toddy,
+    fixing Fix BatLeth
+    {
+       Require : BatLeth,
 
        Fixer : Woodglue=2; Woodwork=2,
        Fixer : DuctTape=2,
        Fixer : Glue=2,
        Fixer : Scotchtape=4,
-	}
+    }
 
-	fixing Fix SpearGungnir
-	{
-	   Require : MonmouthWeapons.SpearGungnir,
+    fixing Fix MekLeth
+    {
+       Require : MekLeth,   
+       
+       Fixer   : SheetMetal=1,MetalWelding=2,
+       Fixer   : ScrapMetal=3,MetalWelding=2,
+       Fixer   : MekLeth=1,
+    }
+
+    fixing Fix AZZK Pistol
+    {
+       Require : AZZK_pistol,
+
+       Fixer : CleaningKit=1; Aiming=2,
+       Fixer : FireKlean; Aiming=1,
+    }
+
+    fixing Fix Spikes Kukri
+    {
+       Require : MonmouthWeapons.KukriMacheteSpike, 
+       
+       Fixer   : SheetMetal=1,MetalWelding=2,
+       Fixer   : ScrapMetal=3,MetalWelding=2,
+       Fixer   : MonmouthWeapons.KukriMacheteSpike=1,
+    }
+
+    fixing Fix PickAxeAmelora
+    {
+       Require : MonmouthWeapons.PickAxeAmelora,    
+       
+       Fixer   : SheetMetal=1,MetalWelding=2,
+       Fixer   : ScrapMetal=3,MetalWelding=2,
+       Fixer   : MonmouthWeapons.PickAxeAmelora=1,
+    }
+
+    fixing Fix Toddy Hammer
+    {
+       Require : MonmouthWeapons.Hammer_Toddy,
 
        Fixer : Woodglue=2; Woodwork=2,
        Fixer : DuctTape=2,
        Fixer : Glue=2,
        Fixer : Scotchtape=4,
-	}
+    }
 
-	fixing Fix CrowbarScorpion
-	{
-	   Require : MonmouthWeapons.CrowbarScorpion,	
-	   
-	   Fixer   : SheetMetal=1,MetalWelding=2,
-	   Fixer   : ScrapMetal=3,MetalWelding=2,
-	   Fixer   : MonmouthWeapons.CrowbarScorpion=1,
-	}
+    fixing Fix SpearGungnir
+    {
+       Require : MonmouthWeapons.SpearGungnir,
 
-	fixing Fix AxeUnknown
-	{
-	   Require : MonmouthWeapons.AxeUnknown,	
-	   
-	   Fixer   : SheetMetal=1,MetalWelding=2,
-	   Fixer   : ScrapMetal=3,MetalWelding=2,
-	   Fixer   : MonmouthWeapons.AxeUnknown=1,
-	}
+       Fixer : Woodglue=2; Woodwork=2,
+       Fixer : DuctTape=2,
+       Fixer : Glue=2,
+       Fixer : Scotchtape=4,
+    }
+
+    fixing Fix CrowbarScorpion
+    {
+       Require : MonmouthWeapons.CrowbarScorpion,   
+       
+       Fixer   : SheetMetal=1,MetalWelding=2,
+       Fixer   : ScrapMetal=3,MetalWelding=2,
+       Fixer   : MonmouthWeapons.CrowbarScorpion=1,
+    }
+
+    fixing Fix AxeUnknown
+    {
+       Require : MonmouthWeapons.AxeUnknown,    
+       
+       Fixer   : SheetMetal=1,MetalWelding=2,
+       Fixer   : ScrapMetal=3,MetalWelding=2,
+       Fixer   : MonmouthWeapons.AxeUnknown=1,
+    }
 
 }

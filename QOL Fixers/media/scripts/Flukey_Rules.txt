@@ -1,26 +1,26 @@
 module FLUKEY
 {
-	item FlukeysRules
-	{
-		DisplayCategory = Literature,
-		Weight = 0.1,
-		Type = Map,
-		DisplayName = Flukeys Server Rules,
-		Icon = Flyer,
-		Tooltip = Tooltip_FlukeysRules,
-		Map = FLUKEY_rules,
-		WorldStaticModel = EvacuationFlyer,
-	}
-	
-	item FlukeysInfo
-	{
-		DisplayCategory = Literature,
-		Weight = 0.1,
-		Type = Map,
-		DisplayName = Flukeys Server Info,
-		Icon = Flyer,
-		Tooltip = Tooltip_FlukeysInfo,
-		Map = FLUKEY_info,
-		WorldStaticModel = EvacuationFlyer,
-	}
+    item FlukeysRules
+    {
+        DisplayCategory = Literature,
+        Weight = 0.1,
+        Type = Map,
+        DisplayName = Flukeys Server Rules,
+        Icon = Flyer,
+        Tooltip = Tooltip_FlukeysRules,
+        Map = FLUKEY_rules,
+        WorldStaticModel = EvacuationFlyer,
+    }
+
+    item FlukeysInfo
+    {
+        DisplayCategory = Literature,
+        Weight = 0.1,
+        Type = Map,
+        DisplayName = Flukeys Server Info,
+        Icon = Flyer,
+        Tooltip = Tooltip_FlukeysInfo,
+        Map = FLUKEY_info,
+        WorldStaticModel = EvacuationFlyer,
+    }
 }

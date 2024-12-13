@@ -3,264 +3,264 @@ module Base
 
     /************************ Some Vehicle Recipes ************************/
 
-		recipe Make DG70 RT Hood
-		{
-			EngineDoor3,
-			BlowTorch=2,
-			keep [Recipe.GetItemTypes.WeldingMask],
-			
-			Result:DG70RTEngineDoor,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}
+        recipe Make DG70 RT Hood
+        {
+            EngineDoor3,
+            BlowTorch=2,
+            keep [Recipe.GetItemTypes.WeldingMask],
 
-		recipe Make DG70 PD Hood
-		{
-			EngineDoor3,
-			BlowTorch=2,
-			keep [Recipe.GetItemTypes.WeldingMask],
-			
-			Result:DG70PDEngineDoor,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}
+            Result:DG70RTEngineDoor,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
 
-		recipe Make DG70 TA Hood
-		{
-			EngineDoor3,
-			BlowTorch=2,
-			keep [Recipe.GetItemTypes.WeldingMask],
-			
-			Result:DG70TAEngineDoor0,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}
+        recipe Make DG70 PD Hood
+        {
+            EngineDoor3,
+            BlowTorch=2,
+            keep [Recipe.GetItemTypes.WeldingMask],
 
-		recipe Make DG70 TA Black Hood
-		{
-			EngineDoor3,
-			BlowTorch=2,
-			keep [Recipe.GetItemTypes.WeldingMask],
-			
-			Result:DG70TAEngineDoor1,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}
+            Result:DG70PDEngineDoor,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
 
-		recipe Make DG70 Trunk Lid
-		{
-			TrunkDoor3,
-			BlowTorch=2,
-			keep [Recipe.GetItemTypes.WeldingMask],
-			
-			Result:DG70TrunkDoor3,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}
+        recipe Make DG70 TA Hood
+        {
+            EngineDoor3,
+            BlowTorch=2,
+            keep [Recipe.GetItemTypes.WeldingMask],
 
-		recipe Make DG70 Door
-		{
-			FrontCarDoor3,
-			BlowTorch=2,
-			keep [Recipe.GetItemTypes.WeldingMask],
-			
-			Result:DG70Door3,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}
+            Result:DG70TAEngineDoor0,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
 
-		recipe Make DG70 Seat
-		{
-			SportCarSeat3,
-			BlowTorch=2,
-			keep [Recipe.GetItemTypes.WeldingMask],
-			
-			Result:DodgeFrontSeat3,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}
+        recipe Make DG70 TA Black Hood
+        {
+            EngineDoor3,
+            BlowTorch=2,
+            keep [Recipe.GetItemTypes.WeldingMask],
 
-		recipe Make DG70 Rear Seat
-		{
-			SportCarSeat3,
-			BlowTorch=2,
-			keep [Recipe.GetItemTypes.WeldingMask],
-			
-			Result:DodgeRearSeat3,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}	
+            Result:DG70TAEngineDoor1,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
 
-		recipe Make DG70 Tire
-		{
-			ModernTire3,
-			
-			Result:DodgeRTtire3,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}	
+        recipe Make DG70 Trunk Lid
+        {
+            TrunkDoor3,
+            BlowTorch=2,
+            keep [Recipe.GetItemTypes.WeldingMask],
+
+            Result:DG70TrunkDoor3,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
+
+        recipe Make DG70 Door
+        {
+            FrontCarDoor3,
+            BlowTorch=2,
+            keep [Recipe.GetItemTypes.WeldingMask],
+
+            Result:DG70Door3,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
+
+        recipe Make DG70 Seat
+        {
+            SportCarSeat3,
+            BlowTorch=2,
+            keep [Recipe.GetItemTypes.WeldingMask],
+
+            Result:DodgeFrontSeat3,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
+
+        recipe Make DG70 Rear Seat
+        {
+            SportCarSeat3,
+            BlowTorch=2,
+            keep [Recipe.GetItemTypes.WeldingMask],
+
+            Result:DodgeRearSeat3,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
+
+        recipe Make DG70 Tire
+        {
+            ModernTire3,
+
+            Result:DodgeRTtire3,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
 
     /************************ R32 ************************/
 
-		recipe Make R32 Hood
-		{
-			EngineDoor3,
-			BlowTorch=2,
-			keep [Recipe.GetItemTypes.WeldingMask],
-			
-			Result:R32EngineDoor0,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}
+        recipe Make R32 Hood
+        {
+            EngineDoor3,
+            BlowTorch=2,
+            keep [Recipe.GetItemTypes.WeldingMask],
 
-		recipe Make R32 Trunk Lid
-		{
-			TrunkDoor3,
-			BlowTorch=2,
-			keep [Recipe.GetItemTypes.WeldingMask],
-			
-			Result:R32TrunkDoor3,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}
+            Result:R32EngineDoor0,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
 
-		recipe Make R32 Seat
-		{
-			SportCarSeat3,
-			
-			Result:R32FrontSeat3,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}
+        recipe Make R32 Trunk Lid
+        {
+            TrunkDoor3,
+            BlowTorch=2,
+            keep [Recipe.GetItemTypes.WeldingMask],
 
-		recipe Make R32 Rear Seat
-		{
-			SportCarSeat3,
-			
-			Result:R32RearSeat3,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}
+            Result:R32TrunkDoor3,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
 
-		recipe Make R32 Door
-		{
-			FrontCarDoor3,
-			BlowTorch=2,
-			keep [Recipe.GetItemTypes.WeldingMask],
-			
-			Result:R32Door3,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}
+        recipe Make R32 Seat
+        {
+            SportCarSeat3,
 
-		recipe Make R32 Stock Tire
-		{
-			ModernTire3,
-			
-			Result:R32Tire0,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}
+            Result:R32FrontSeat3,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
 
-		recipe Make R32 Performance Tire
-		{
-			ModernTire3,
-			
-			Result:R32Tire1,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}
+        recipe Make R32 Rear Seat
+        {
+            SportCarSeat3,
 
-		recipe Make R32 Slick Tire
-		{
-			ModernTire3,
-			
-			Result:R32Tire2,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}
+            Result:R32RearSeat3,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
+
+        recipe Make R32 Door
+        {
+            FrontCarDoor3,
+            BlowTorch=2,
+            keep [Recipe.GetItemTypes.WeldingMask],
+
+            Result:R32Door3,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
+
+        recipe Make R32 Stock Tire
+        {
+            ModernTire3,
+
+            Result:R32Tire0,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
+
+        recipe Make R32 Performance Tire
+        {
+            ModernTire3,
+
+            Result:R32Tire1,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
+
+        recipe Make R32 Slick Tire
+        {
+            ModernTire3,
+
+            Result:R32Tire2,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
 
 
     /************************ McLaren ************************/
 
-		recipe Make McLarenF1 Hood
-		{
-			EngineDoor3,
-			BlowTorch=2,
-			keep [Recipe.GetItemTypes.WeldingMask],
-			
-			Result:McLarenF1Hood3,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}
+        recipe Make McLarenF1 Hood
+        {
+            EngineDoor3,
+            BlowTorch=2,
+            keep [Recipe.GetItemTypes.WeldingMask],
 
-		recipe Make McLarenF1 Trunk Lid
-		{
-			TrunkDoor3,
-			BlowTorch=2,
-			keep [Recipe.GetItemTypes.WeldingMask],
-			
-			Result:McLarenF1TrunkDoor3,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}
+            Result:McLarenF1Hood3,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
+
+        recipe Make McLarenF1 Trunk Lid
+        {
+            TrunkDoor3,
+            BlowTorch=2,
+            keep [Recipe.GetItemTypes.WeldingMask],
+
+            Result:McLarenF1TrunkDoor3,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
 
 
 
@@ -269,138 +269,138 @@ module Base
 
     /************************ M998 ************************/
 
-	recipe Convert Tire to M998 RunFlat Tire
-	{
-		V100Tire2,
-		BlowTorch=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:V101Tire2,
-		CanBeDoneFromFloor:true,
-		Category:Welding,
-		Time:500.0,
-	}
+    recipe Convert Tire to M998 RunFlat Tire
+    {
+        V100Tire2,
+        BlowTorch=2,
+        keep [Recipe.GetItemTypes.WeldingMask],
 
-	recipe Convert Tire to RunFlat Tire
-	{
-		NormalTire2,
-		BlowTorch=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:V100Tire2,
-		CanBeDoneFromFloor:true,
-		Category:Welding,
-		Time:500.0,
-	}
+        Result:V101Tire2,
+        CanBeDoneFromFloor:true,
+        Category:Welding,
+        Time:500.0,
+    }
 
-	recipe Convert M998 RunFlat Tire to RunFlat Tire
-	{
-		V101Tire2,
-		BlowTorch=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:V100Tire2,
-		CanBeDoneFromFloor:true,
-		Category:Welding,
-		Time:500.0,
-	}
+    recipe Convert Tire to RunFlat Tire
+    {
+        NormalTire2,
+        BlowTorch=2,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:V100Tire2,
+        CanBeDoneFromFloor:true,
+        Category:Welding,
+        Time:500.0,
+    }
+
+    recipe Convert M998 RunFlat Tire to RunFlat Tire
+    {
+        V101Tire2,
+        BlowTorch=2,
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:V100Tire2,
+        CanBeDoneFromFloor:true,
+        Category:Welding,
+        Time:500.0,
+    }
 
     /************************ J10 and 80s Truck ************************/
 
 
 
     /************************ Bronco ************************/
-	
-	recipe Convert Tire To 80s Offroad Tire
-	{
-		OldTire2/NormalTire2/ModernTire2,
-		BlowTorch=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:80sOffroadTireA,
-		CanBeDoneFromFloor:true,
-		Category:Welding,
-		Time:500.0,
-	}
+    
+    recipe Convert Tire To 80s Offroad Tire
+    {
+        OldTire2/NormalTire2/ModernTire2,
+        BlowTorch=2,
+        keep [Recipe.GetItemTypes.WeldingMask],
 
-	recipe Convert Tire To E150 Tire
-	{
-		OldTire2/NormalTire2/ModernTire2,
-		BlowTorch=2,
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:E150Tire2,
-		CanBeDoneFromFloor:true,
-		Category:Welding,
-		Time:500.0,
-	}
+        Result:80sOffroadTireA,
+        CanBeDoneFromFloor:true,
+        Category:Welding,
+        Time:500.0,
+    }
 
-		recipe Make 89 Bronco Door
-		{
-			FrontCarDoor2,
-			BlowTorch=2,
-			keep [Recipe.GetItemTypes.WeldingMask],
-			
-			Result:89BroncoCarFrontDoor2,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}	
+    recipe Convert Tire To E150 Tire
+    {
+        OldTire2/NormalTire2/ModernTire2,
+        BlowTorch=2,
+        keep [Recipe.GetItemTypes.WeldingMask],
 
-		recipe Make 89 Bronco Hood
-		{
-			EngineDoor2,
-			BlowTorch=2,
-			keep [Recipe.GetItemTypes.WeldingMask],
-			
-			Result:89BroncoEngineDoor2,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}	
+        Result:E150Tire2,
+        CanBeDoneFromFloor:true,
+        Category:Welding,
+        Time:500.0,
+    }
 
-		recipe Make 89 Bronco Trunk Lid
-		{
-			TrunkDoor2,
-			BlowTorch=2,
-			keep [Recipe.GetItemTypes.WeldingMask],
-			
-			Result:89BroncoTrunkDoor2,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}
+        recipe Make 89 Bronco Door
+        {
+            FrontCarDoor2,
+            BlowTorch=2,
+            keep [Recipe.GetItemTypes.WeldingMask],
 
-		recipe Make 80s Pickup Front Seat
-		{
-			NormalCarSeat2,
-			keep [Recipe.GetItemTypes.Screwdriver],
-			
-			Result:80sPickupSeatFront2,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}
+            Result:89BroncoCarFrontDoor2,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
+
+        recipe Make 89 Bronco Hood
+        {
+            EngineDoor2,
+            BlowTorch=2,
+            keep [Recipe.GetItemTypes.WeldingMask],
+
+            Result:89BroncoEngineDoor2,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
+
+        recipe Make 89 Bronco Trunk Lid
+        {
+            TrunkDoor2,
+            BlowTorch=2,
+            keep [Recipe.GetItemTypes.WeldingMask],
+
+            Result:89BroncoTrunkDoor2,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
+
+        recipe Make 80s Pickup Front Seat
+        {
+            NormalCarSeat2,
+            keep [Recipe.GetItemTypes.Screwdriver],
+
+            Result:80sPickupSeatFront2,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
 
 
-		recipe Make 80s Pickup Rear Seat
-		{
-			NormalCarSeat2,
-			keep [Recipe.GetItemTypes.Screwdriver],
-			
-			Result:80sPickupSeatRear2,
-			Time:2000.0,
-			SkillRequired:Mechanics=10,
-			CanBeDoneFromFloor:true,
-			Category:Mechanics,
-			OnGiveXP:Recipe.OnGiveXP.None,
-		}
+        recipe Make 80s Pickup Rear Seat
+        {
+            NormalCarSeat2,
+            keep [Recipe.GetItemTypes.Screwdriver],
+
+            Result:80sPickupSeatRear2,
+            Time:2000.0,
+            SkillRequired:Mechanics=10,
+            CanBeDoneFromFloor:true,
+            Category:Mechanics,
+            OnGiveXP:Recipe.OnGiveXP.None,
+        }
 }

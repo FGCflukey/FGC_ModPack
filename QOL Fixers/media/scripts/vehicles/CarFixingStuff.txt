@@ -1,230 +1,231 @@
 module Base
 {
 
-	item Superglue
-	{
-		Type					= Drainable,
-		UseDelta				= 0.04,
-		UseWhileEquipped		= FALSE,
-		DisplayName				= Super Glue,
-		Icon					= Superglue,
-		Weight					= 0.1,
-		Tooltip             	= Tooltip_TubeSuperglue,
-	}
-
-	item Rubbercement
+    item Superglue
     {
-		Type	            	= Drainable,
-		UseDelta	        	= 0.04,
-		UseWhileEquipped		= FALSE,
-		DisplayName				= Rubber Cement,
-		Icon					= Rubbercement,
-		Weight					= 0.1,
-		Tooltip             	= Tooltip_TubeRubbercement,
+        Type                    = Drainable,
+        UseDelta                = 0.04,
+        UseWhileEquipped        = FALSE,
+        DisplayName             = Super Glue,
+        Icon                    = Superglue,
+        Weight                  = 0.1,
+        Tooltip                 = Tooltip_TubeSuperglue,
     }
 
-	item 10xSpareEngineParts
-	{
-		Weight    				= 2.0,
-		Type   					= Normal,
-		DisplayName     		= Small Box of Engine Parts,
-		icon 					= 10xSpareEngineParts,
-		Tooltip             	= Tooltip_10EngineParts,
-	}
+    item Rubbercement
+    {
+        Type                    = Drainable,
+        UseDelta                = 0.04,
+        UseWhileEquipped        = FALSE,
+        DisplayName             = Rubber Cement,
+        Icon                    = Rubbercement,
+        Weight                  = 0.1,
+        Tooltip                 = Tooltip_TubeRubbercement,
+    }
 
-	item 20xSpareEngineParts
-	{
-		Weight    				= 4.0,
-		Type   					= Normal,
-		DisplayName     		= Medium Box of Engine Parts,
-		icon 					= 20xSpareEngineParts,
-		Tooltip             	= Tooltip_20EngineParts,
-	}
+    item 10xSpareEngineParts
+    {
+        Weight                  = 2.0,
+        Type                    = Normal,
+        DisplayName             = Small Box of Engine Parts,
+        icon                    = 10xSpareEngineParts,
+        Tooltip                 = Tooltip_10EngineParts,
+    }
 
-	item 30xSpareEngineParts
-	{
-		Weight    				= 6.0,
-		Type   					= Normal,
-		DisplayName     		= Large Box of Engine Parts,
-		icon 					= 30xSpareEngineParts,
-		Tooltip             	= Tooltip_30EngineParts,
-	}
+    item 20xSpareEngineParts
+    {
+        Weight                  = 4.0,
+        Type                    = Normal,
+        DisplayName             = Medium Box of Engine Parts,
+        icon                    = 20xSpareEngineParts,
+        Tooltip                 = Tooltip_20EngineParts,
+    }
 
-	item UpholsteryKit
-	{
-		DisplayCategory     	= Material,
-        Type	            	= Drainable,
-        UseDelta	        	= 0.05,
-        UseWhileEquipped		= FALSE,
-		DisplayName	        	= Upholstery Repair Kit,
-        Icon					= CarSewingKit,
-        Weight					= 0.3,
-        cantBeConsolided    	= TRUE,
-        SurvivalGear        	= TRUE,
-		ReplaceOnDeplete		= Needle,
-		Tooltip             	= Tooltip_UpholsteryKit,
-	}
+    item 30xSpareEngineParts
+    {
+        Weight                  = 6.0,
+        Type                    = Normal,
+        DisplayName             = Large Box of Engine Parts,
+        icon                    = 30xSpareEngineParts,
+        Tooltip                 = Tooltip_30EngineParts,
+    }
+
+    item UpholsteryKit
+    {
+        DisplayCategory         = Material,
+        Type                    = Drainable,
+        UseDelta                = 0.05,
+        UseWhileEquipped        = FALSE,
+        DisplayName             = Upholstery Repair Kit,
+        Icon                    = CarSewingKit,
+        Weight                  = 0.3,
+        cantBeConsolided        = TRUE,
+        SurvivalGear            = TRUE,
+        ReplaceOnDeplete        = Needle,
+        Tooltip                 = Tooltip_UpholsteryKit,
+    }
 
     recipe Get Back Needle
     {
         destroy UpholsteryKit,
-		
+
         Result:Needle,
         Time:50.0,
         Category:Tailoring,
-		OnCreate:GetNeedle_OnCreate,
+        CanBeDoneFromFloor:true,
+        OnCreate:GetNeedle_OnCreate,
     }
 
     recipe Make Upholstery Repair Kit
     {
         Needle,
-		Twine=5,
-		
+        Twine=5,
+
         Result:UpholsteryKit,
         Time:50.0,
         Category:Tailoring,
     }
 
-	recipe Open Box of Engine Parts
-	{
-		destroy 10xSpareEngineParts,
+    recipe Open Box of Engine Parts
+    {
+        destroy 10xSpareEngineParts,
 
-		Result:EngineParts,
-		RemoveResultItem:true,
+        Result:EngineParts,
+        RemoveResultItem:true,
         CanBeDoneFromFloor:true,
-		OnCreate:Give10EngineParts_OnCreate,
-		Category:Welding,
-		Time:100.0,
-	}		
+        OnCreate:Give10EngineParts_OnCreate,
+        Category:Welding,
+        Time:100.0,
+    }
 
-	recipe Open Box of Engine Parts
-	{
-		destroy 20xSpareEngineParts,
+    recipe Open Box of Engine Parts
+    {
+        destroy 20xSpareEngineParts,
 
-		Result:EngineParts,
-		RemoveResultItem:true,
+        Result:EngineParts,
+        RemoveResultItem:true,
         CanBeDoneFromFloor:true,
-		OnCreate:Give20EngineParts_OnCreate,
-		Category:Welding,
-		Time:100.0,
-	}	
+        OnCreate:Give20EngineParts_OnCreate,
+        Category:Welding,
+        Time:100.0,
+    }
 
-	recipe Open Box of Engine Parts
-	{
-		destroy 30xSpareEngineParts,
+    recipe Open Box of Engine Parts
+    {
+        destroy 30xSpareEngineParts,
 
-		Result:EngineParts,
-		RemoveResultItem:true,
+        Result:EngineParts,
+        RemoveResultItem:true,
         CanBeDoneFromFloor:true,
-		OnCreate:Give30EngineParts_OnCreate,
-		Category:Welding,
-		Time:100.0,
-	}
+        OnCreate:Give30EngineParts_OnCreate,
+        Category:Welding,
+        Time:100.0,
+    }
 
-	recipe Pack a Box of 10x Engine Parts
-	{
-		EngineParts=10,
-		
-		Result:10xSpareEngineParts,
+    recipe Pack a Box of 10x Engine Parts
+    {
+        EngineParts=10,
+
+        Result:10xSpareEngineParts,
         CanBeDoneFromFloor:true,
-		Category:Welding,
-		Time:100.0,
-	}	
+        Category:Welding,
+        Time:100.0,
+    }
 
-	recipe Pack a Box of 20x Engine Parts
-	{
-		EngineParts=20,
-		
-		Result:20xSpareEngineParts,
+    recipe Pack a Box of 20x Engine Parts
+    {
+        EngineParts=20,
+
+        Result:20xSpareEngineParts,
         CanBeDoneFromFloor:true,
-		Category:Welding,
-		Time:100.0,
-	}
+        Category:Welding,
+        Time:100.0,
+    }
 
-	recipe Pack a Box of 30x Engine Parts
-	{
-		EngineParts=30,
-		
-		Result:30xSpareEngineParts,
+    recipe Pack a Box of 30x Engine Parts
+    {
+        EngineParts=30,
+
+        Result:30xSpareEngineParts,
         CanBeDoneFromFloor:true,
-		Category:Welding,
-		Time:100.0,
-	}	
-	
-	recipe Make Spare Engine Part
-	{
-		SkillRequired:MetalWelding=4,
-		BlowTorch=5,
-		ScrapMetal=4,
-		ElectronicsScrap=1,
-		WeldingRods=1,
-		keep [Recipe.GetItemTypes.Hammer],
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:EngineParts,
-		Time:500,
-		Category:Welding,
-		SkillRequired:MetalWelding=2,		
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
-		Sound:Hammering,
-		AnimNode:Disassemble,
-	}
-	
-	recipe Make Spare Engine Parts
-	{
-		SkillRequired:MetalWelding=4,
-		BlowTorch=5,
-		SheetMetal=1,
-		ElectronicsScrap=1,
-		WeldingRods=1,
-		keep [Recipe.GetItemTypes.Hammer],
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:EngineParts,
-		Time:500,
-		Category:Welding,
-		SkillRequired:MetalWelding=2,		
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
-		Sound:Hammering,
-		AnimNode:Disassemble,
-	}
+        Category:Welding,
+        Time:100.0,
+    }
 
-	recipe Make Spare Engine Parts
-	{
-		SkillRequired:MetalWelding=4,
-		BlowTorch=5,
-		SmallSheetMetal=2,
-		ElectronicsScrap=1,
-		WeldingRods=1,
-		keep [Recipe.GetItemTypes.Hammer],
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:EngineParts,
-		Time:500,
-		Category:Welding,
-		SkillRequired:MetalWelding=2,		
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
-		Sound:Hammering,
-		AnimNode:Disassemble,
-	}
-	
-	recipe Make Spare Engine Parts
-	{
-		SkillRequired:MetalWelding=4,
-		BlowTorch=5,
-		MetalBar=2,
-		ElectronicsScrap=1,
-		WeldingRods=1,
-		keep [Recipe.GetItemTypes.Hammer],
-		keep [Recipe.GetItemTypes.WeldingMask],
-		
-		Result:EngineParts,
-		Time:500,
-		Category:Welding,
-		SkillRequired:MetalWelding=2,		
-		OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
-		Sound:Hammering,
-		AnimNode:Disassemble,
-	}
+    recipe Make Spare Engine Part
+    {
+        SkillRequired:MetalWelding=4,
+        BlowTorch=5,
+        ScrapMetal=4,
+        ElectronicsScrap=1,
+        WeldingRods=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:EngineParts,
+        Time:500,
+        Category:Welding,
+        SkillRequired:MetalWelding=2,       
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+        Sound:Hammering,
+        AnimNode:Disassemble,
+    }
+    
+    recipe Make Spare Engine Parts
+    {
+        SkillRequired:MetalWelding=4,
+        BlowTorch=5,
+        SheetMetal=1,
+        ElectronicsScrap=1,
+        WeldingRods=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:EngineParts,
+        Time:500,
+        Category:Welding,
+        SkillRequired:MetalWelding=2,       
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+        Sound:Hammering,
+        AnimNode:Disassemble,
+    }
+
+    recipe Make Spare Engine Parts
+    {
+        SkillRequired:MetalWelding=4,
+        BlowTorch=5,
+        SmallSheetMetal=2,
+        ElectronicsScrap=1,
+        WeldingRods=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:EngineParts,
+        Time:500,
+        Category:Welding,
+        SkillRequired:MetalWelding=2,       
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+        Sound:Hammering,
+        AnimNode:Disassemble,
+    }
+
+    recipe Make Spare Engine Parts
+    {
+        SkillRequired:MetalWelding=4,
+        BlowTorch=5,
+        MetalBar=2,
+        ElectronicsScrap=1,
+        WeldingRods=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep [Recipe.GetItemTypes.WeldingMask],
+
+        Result:EngineParts,
+        Time:500,
+        Category:Welding,
+        SkillRequired:MetalWelding=2,       
+        OnGiveXP:Recipe.OnGiveXP.MetalWelding10,
+        Sound:Hammering,
+        AnimNode:Disassemble,
+    }
 
 }

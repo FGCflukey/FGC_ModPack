@@ -1,9 +1,9 @@
 module Base
 {
         model EvacuationFlyer
-	{
-		mesh = WorldItems/SheetOfPaper,
-		texture = WorldItems/EvacuationPaper,
-		scale = 0.02,
-	}
+    {
+        mesh = WorldItems/SheetOfPaper,
+        texture = WorldItems/EvacuationPaper,
+        scale = 0.02,
+    }
 }

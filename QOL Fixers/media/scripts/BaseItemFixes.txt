@@ -1,0 +1,81 @@
+module Base
+{
+
+    item DozenJarsBox
+    {
+        Weight              = 3.0,
+        Type                = Normal,
+        DisplayName         = 12x Jars Box,
+        Icon                = DozenJarsBox,
+        Tooltip             = Tooltip_DozenJarsBox,
+    }
+
+    recipe Make a Box of Jars
+    {
+        EmptyJar=6,
+        JarLid=6,
+        
+        Result:BoxOfJars,
+        NeedToBeLearn:false,
+        Time:90.0,
+        Category:Storage,
+    }
+    
+    recipe Make a 12-Pack of Jars
+    {
+        EmptyJar=12,
+        JarLid=12,
+        
+        Result:DozenJarsBox,
+        NeedToBeLearn:false,
+        Time:90.0,
+        Category:Storage,
+    }
+
+    recipe Open 12-Pack of Jars
+    {
+        destroy DozenJarsBox,
+        
+        Result:EmptyJar=12,
+        OnCreate:Give12JarLids_OnCreate,
+        NeedToBeLearn:false,
+        Time:90.0,
+        Category:Storage,
+    }
+
+    item BlowTorch
+    {
+        DisplayCategory     = Tool,
+        Weight              = 1.0,
+        Type                = Drainable,
+        UseWhileEquipped    = FALSE,
+        UseDelta            = 0.01,
+        DisplayName         = Propane Torch,
+        Icon                = BlowTorch,
+        MetalValue          = 20,
+        KeepOnDeplete       = true,
+        StaticModel         = BlowTorch,
+        WeightEmpty         = 0.3,
+        WorldStaticModel    = BlowtorchGround,
+        cantBeConsolided    = TRUE,
+    }
+
+    item PropaneTank
+    {
+        DisplayCategory     = Material,
+        Weight              = 10.0,
+        Type                = Drainable,
+        UseWhileEquipped    = FALSE,
+        UseDelta            = 0.02,
+        DisplayName         = Propane Tank,
+        Icon                = PropaneTank,
+        UseWorldItem        = TRUE,
+        ScaleWorldIcon      = 2.0,
+        WeightEmpty         = 5.0,
+        KeepOnDeplete       = true,
+        WorldStaticModel    = PropaneTank,
+        cantBeConsolided    = TRUE,
+    }
+
+}
+
